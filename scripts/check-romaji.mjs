@@ -22,6 +22,7 @@ const missing = [];
 const missingChantSegments = [];
 const leaking = [];
 const seenMissing = new Set();
+let pendingReadings = 0;
 
 for (const song of SONGS) {
   for (const [index, line] of (song.lyrics || []).entries()) {
@@ -29,6 +30,10 @@ for (const song of SONGS) {
     if (!source || !japaneseCharacters.test(source)) continue;
 
     const romaji = romajiByLine[source];
+    if (song.readingsStatus === "pending" && typeof romaji !== "string") {
+      pendingReadings += 1;
+      continue;
+    }
     if (typeof romaji !== "string") {
       if (!seenMissing.has(source)) {
         seenMissing.add(source);
@@ -79,6 +84,7 @@ for (const [song, guide] of Object.entries(JP_CHANT_GUIDES || {})) {
 
 const lyricCount = SONGS.reduce((count, song) => count + (song.lyrics || []).length, 0);
 console.log(`Checked ${SONGS.length} songs / ${lyricCount} lyric lines.`);
+if (pendingReadings) console.log(`${pendingReadings} Japanese lines have explicitly pending readings; reading controls must stay disabled for those songs.`);
 
 if (missing.length || missingChantSegments.length || leaking.length) {
   if (missing.length) {
@@ -95,5 +101,5 @@ if (missing.length || missingChantSegments.length || leaking.length) {
   }
   process.exitCode = 1;
 } else {
-  console.log("All Japanese lyric lines and chant segments have romaji, with no Japanese characters in those readings.");
+  console.log("All available romaji mappings are valid; missing readings remain explicitly pending.");
 }

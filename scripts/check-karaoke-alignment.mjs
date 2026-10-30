@@ -8,6 +8,56 @@ const sourceContext = { window: {} };
 vm.runInNewContext(source, sourceContext, { filename: "karaoke-sources.js" });
 const karaoke = sourceContext.window.KARAOKE_SOURCES;
 
+// Provider discovery must never accept another artist, a live edit, or a
+// similarly named track as the requested studio recording.
+{
+  const catalog = await import("../src/song-metadata.js");
+  const sample = catalog.SONGS.find(song => song.id === "Matsuri");
+  const calls = [];
+  const context = { URL, window: {
+    AbortController, setTimeout, clearTimeout,
+    async fetch(rawUrl) {
+      const url = new URL(rawUrl);
+      calls.push(url);
+      const amll = url.hostname === "api.amll.dev";
+      const title = url.searchParams.get(amll ? "musicName" : "track_name");
+      const candidates = title === "Matsuri" ? (amll ? [
+        { id: "correct", musicNames: ["まつり"], artistNames: ["藤井風"] },
+        { id: "wrong", musicNames: ["Matsuri"], artistNames: ["Another Artist"] },
+      ] : [
+        { id: 1, trackName: "まつり", artistName: "藤井風", syncedLyrics: "[00:01]Example" },
+        { id: 2, trackName: "Matsuri Live", artistName: "Fujii Kaze", syncedLyrics: "[00:01]Example" },
+        { id: 3, trackName: "Matsuri", artistName: "Another Artist", syncedLyrics: "[00:01]Example" },
+        { id: 4, trackName: "Matsuri", artistName: "Fujii Kaze", instrumental: true, syncedLyrics: "[00:01]Example" },
+      ]) : [];
+      return { ok: true, async json() { return amll ? { status: 200, data: { items: candidates } } : candidates; } };
+    }
+  } };
+  vm.runInNewContext(source, context);
+  const result = await context.window.KARAOKE_SOURCES.discover(sample);
+  assert(result.amll.state === "found" && result.amll.candidates.length === 1, "AMLL must require a matching artist and title");
+  assert(result.lrclib.state === "found" && result.lrclib.candidates.length === 1, "LRCLIB must reject covers, live edits and instrumental tracks");
+  assert(!JSON.stringify(result).includes("Example"), "Discovery must expose metadata without lyric text");
+  assert(calls.some(url => url.searchParams.get("track_name") === "まつり"), "Search must include the original Japanese title");
+  assert(calls.some(url => url.searchParams.get("track_name") === "Matsuri"), "Search must try the romanized alias after a miss");
+  context.window.fetch = async () => { throw new Error("fixture unavailable"); };
+  const unavailable = await context.window.KARAOKE_SOURCES.discover(sample);
+  assert(unavailable.amll.state === "error" && unavailable.lrclib.state === "error", "A provider error must remain distinct from a miss");
+  context.window.fetch = async rawUrl => {
+    const url = new URL(rawUrl);
+    let payload = {};
+    if (url.hostname === "api.amll.dev") payload = { status: 200, data: { items: [] } };
+    if (url.hostname === "lrclib.net") payload = [{
+      id: 5, trackName: "Matsuri", artistName: "Fujii Kaze",
+      ...(url.searchParams.get("track_name") === "Matsuri"
+        ? { syncedLyrics: "[00:01]Example" } : { plainLyrics: "Example" }),
+    }];
+    return { ok: true, async json() { return payload; } };
+  };
+  const loaded = await context.window.KARAOKE_SOURCES.load(sample);
+  assert(loaded && loaded.trackId === 5, "A plain-only alias must not prevent a later alias with synchronized lyrics from loading");
+}
+
 const furiganaSource = fs.readFileSync(new URL("../furigana.js", import.meta.url), "utf8");
 const furiganaContext = { window: {} };
 vm.runInNewContext(furiganaSource, furiganaContext, { filename: "furigana.js" });
@@ -112,21 +162,20 @@ function checkFixture(label, unitTexts, referenceTexts, expected){
 
 assert(karaoke && typeof karaoke.mapUnitsToReferenceTimings === "function",
   "KARAOKE_SOURCES.mapUnitsToReferenceTimings is unavailable");
-const reunionLine = "[wave]君に出会えるからまた夏で話そう";
-assert(/<ruby>夏<rt>ここ<\/rt><\/ruby>/u.test(furiganaByLine[reunionLine] || ""),
-  "Reunion: 夏 must keep the user-confirmed ここ reading");
+// Synthetic fixtures exercise the mapper independently of the current catalog.
+// Artist-specific reading corrections belong in the corresponding content data.
 
 checkFixture(
-  "satotte",
-  ["dōkou", "yori", "mo", "hitotsu", "omoi", ",", "satotte", "kure"],
-  ["do", "u", "ko", "u", "yo", "ri", "mo", "hito", "tsu", "omo", "i", ",", "sato", "っ", "て", "ku", "re"],
-  { unitIndex: 6, start: 112, end: 115 }
+  "sokuon",
+  ["kitte"],
+  ["き", "っ", "て"],
+  { unitIndex: 0, start: 100, end: 103 }
 );
 checkFixture(
-  "koko / hanasō",
-  ["kimi", "ni", "deaeru", "kara", "mata", "koko", "de", "hanasō"],
-  ["きみ", "に", "であ", "え", "る", "から", "また", "ここ", "で", "はな", "そ", "う"],
-  { unitIndex: 5, start: 107, end: 108 }
+  "grouped kana",
+  ["koko", "de", "hanasō"],
+  ["こ", "こ", "で", "はな", "そ", "う"],
+  { unitIndex: 0, start: 100, end: 102 }
 );
 checkFixture(
   "long vowel",
@@ -142,17 +191,28 @@ checkFixture(
 );
 checkFixture(
   "mixed punctuation and English",
-  ["kon'ya", "CHAINSAW", "40000", "km", "!"],
-  ["こ", "ん", "や", "CHAINSAW", "40000", "km", "!"],
+  ["kon'ya", "EXAMPLE", "42", "km", "!"],
+  ["こ", "ん", "や", "EXAMPLE", "42", "km", "!"],
   { unitIndex: 0, start: 100, end: 103 }
 );
 
 const failures = [];
 let lineCount = 0;
+let pendingReadingLines = 0;
 for (const song of SONGS) {
   for (const [index, line] of (song.lyrics || []).entries()) {
     lineCount += 1;
+    if (song.timingStatus === "preview") {
+      assert(Number.isFinite(line.sourceTime) && line.sourceTime >= 0 && line.time === line.sourceTime,
+        `${song.id}#${index}: preview must preserve the supplied LRC timestamp`);
+      assert(index === 0 || line.time >= song.lyrics[index - 1].time, `${song.id}: preview timestamps must be monotonic`);
+      assert(!song.timingAlignment, `${song.id}: preview must not claim verified video alignment`);
+    }
     const sourceText = textOf(line.jp);
+    if (song.readingsStatus === "pending" && /[\u3040-\u30ff\u3400-\u9fff]/u.test(sourceText)) {
+      pendingReadingLines += 1;
+      continue;
+    }
     const markup = furiganaByLine[sourceText] || sourceText;
     const romaji = typeof romajiByLine[sourceText] === "string"
       ? romajiByLine[sourceText]
@@ -182,12 +242,12 @@ for (const song of SONGS) {
 }
 
 console.log(`Checked ${SONGS.length} songs / ${lineCount} lyric lines.`);
-if (lineCount !== 1463) failures.push({ kind: "line-count", lineCount });
+if (pendingReadingLines) console.log(`${pendingReadingLines} lines retain pending readings; source timestamps are still validated.`);
 
 if (failures.length) {
   console.error(`Karaoke alignment failures: ${failures.length}`);
   failures.slice(0, 80).forEach(failure => console.error(JSON.stringify(failure)));
   process.exitCode = 1;
 } else {
-  console.log("All romaji units map to Japanese reference timing spans.");
+  console.log("Synthetic timing fixtures pass; all prepared romaji units map to reference timing spans.");
 }

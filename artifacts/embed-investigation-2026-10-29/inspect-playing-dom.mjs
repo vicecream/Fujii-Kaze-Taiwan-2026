@@ -1,0 +1,10 @@
+import {pathToFileURL} from 'node:url';
+const {chromium}=await import(pathToFileURL(process.argv[2]).href);
+const browser=await chromium.launch({channel:'msedge',headless:true});
+const page=await browser.newPage();
+await page.goto('http://localhost:4174/#/song/CasketGirl',{waitUntil:'domcontentloaded'});
+await page.waitForTimeout(5000);
+const frame=page.frames().find(f=>/youtube\.com\/embed\//.test(f.url()));
+console.log(JSON.stringify(await frame.locator('a[href]').evaluateAll(a=>a.map(e=>({class:e.className,href:e.href,text:e.textContent})).filter(e=>/youtube\.com|youtu\.be/.test(e.href)).slice(0,12)),null,2));
+console.log(JSON.stringify(await frame.locator('video').evaluateAll(v=>v.map(e=>({time:e.currentTime,paused:e.paused,duration:e.duration})))));
+await browser.close();

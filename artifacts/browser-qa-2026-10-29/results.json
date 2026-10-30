@@ -1,0 +1,534 @@
+{
+  "browser": "155.0.4283.62",
+  "checks": [
+    {
+      "name": "Home artist and preparation entry",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Collapsed information panels are inert",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Desktop home has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":1440,\"scrollWidth\":1440,\"overflow\":[]}"
+    },
+    {
+      "name": "Seat map loads on expansion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Guide has 19 songs in two albums",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Search has persistent label",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Romaji search finds まつり",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Search empty state is visible",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Title sort exposes pressed state",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "English hides Japanese readings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Pending content disables unavailable lyric controls",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Unsourced chant controls are hidden",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Pending original, translation and timing are explicit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Desktop player has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":1440,\"scrollWidth\":1440,\"overflow\":[]}"
+    },
+    {
+      "name": "Previous and next song navigation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Song picker moves focus inside dialog",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Song picker search filters to まつり",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Escape closes picker and restores focus",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Song picker clears previous search",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Japanese shows disabled pending reading control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Theme switches to dark",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Compact mode activates",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route CasketGirl",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route INeedUBack",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Hachiko",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route LoveLikeThis",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Prema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route ItAintOver",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route You",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route OkayGoodbye",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route ForeverYoung",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Matsuri",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route WorkinHard",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route NanNan",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Kirari",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Hana",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Garden",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Damn",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route ShinunogaEWa",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route Tabiji",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Catalog route MichiTeyuKu",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Setlist remains pending without spoiler gate",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Legacy link explains guide conversion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390px home has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":390,\"scrollWidth\":390,\"overflow\":[]}"
+    },
+    {
+      "name": "390px guide has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":390,\"scrollWidth\":390,\"overflow\":[]}"
+    },
+    {
+      "name": "Mobile search text is at least 16px",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "390px Japanese player has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":390,\"scrollWidth\":390,\"overflow\":[]}"
+    },
+    {
+      "name": "Mobile pending message clears control bar",
+      "pass": true,
+      "detail": "{\"status\":{\"top\":314.375,\"bottom\":476.546875},\"bar\":{\"top\":746,\"bottom\":844},\"height\":844}"
+    },
+    {
+      "name": "390px song picker has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":390,\"scrollWidth\":390,\"overflow\":[]}"
+    },
+    {
+      "name": "Theme survives reload",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "320px Japanese player has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":320,\"scrollWidth\":320,\"overflow\":[]}"
+    },
+    {
+      "name": "Landscape Japanese player has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":844,\"scrollWidth\":844,\"overflow\":[]}"
+    },
+    {
+      "name": "768px tablet player has no horizontal page overflow",
+      "pass": true,
+      "detail": "{\"width\":768,\"scrollWidth\":768,\"overflow\":[]}"
+    },
+    {
+      "name": "No application JavaScript exceptions",
+      "pass": true,
+      "detail": "[]"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "01-desktop-home",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/"
+    },
+    {
+      "name": "02-desktop-seat-map",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/"
+    },
+    {
+      "name": "03-desktop-guide",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/#/guide"
+    },
+    {
+      "name": "04-desktop-english-player",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/#/song/CasketGirl"
+    },
+    {
+      "name": "05-desktop-song-picker",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/#/song/CasketGirl"
+    },
+    {
+      "name": "06-desktop-japanese-dark",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "07-desktop-compact",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "08-desktop-pending-setlist",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "url": "http://127.0.0.1:4175/#/setlist"
+    },
+    {
+      "name": "09-mobile-home",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4175/"
+    },
+    {
+      "name": "10-mobile-guide",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4175/#/guide"
+    },
+    {
+      "name": "11-mobile-japanese-player",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "12-mobile-song-picker",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "13-mobile-japanese-dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "14-small-mobile-player",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "15-mobile-landscape-player",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    },
+    {
+      "name": "16-tablet-player",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "url": "http://127.0.0.1:4175/#/song/Matsuri"
+    }
+  ],
+  "pageErrors": [],
+  "consoleErrors": [],
+  "failedRequests": [
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/embed/establish_zw",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "observations": [
+    {
+      "step": "English player",
+      "text": "Casket Girl\n01.\nCasket Girl\n無法播放影片，請在下方開啟 YouTube。\n●\n歌詞整理中，可先聆聽官方影片。\n在 YouTube 觀看 ↗\n\n原文歌詞整理中 · 繁中翻譯整理中\n同步時間整理中\n\n先聆聽官方影片，歌詞將分批補齊。\n\n官方專輯與曲目資訊 ↗\nx0.25\nx0.5\nx0.75\nx1\nx1.25\nx1.5\nx2\nPiP\n簡潔\n原文\n中文\n卡拉OK\n自動捲動\n選擇預習歌曲\n19 首\n搜尋歌曲\n01\nCasket Girl\n目前播放\n02\nI Need U Back\n03\nHachikō\n04\nLove Like This\n05\nPrema\n06\nIt Ain’t Over\n07\nYou\n08\nOkay, Goodbye\n09\nForever Young\n10\nまつり (Matsuri)\n11\nWorkin’ Hard\n12\n何なんw (Nan-Nan)\n13\nきらり (Kirari)\n14\n花 (Hana)\n15\nガーデン (Garden)\n16\ndamn\n17\n死ぬのがいいわ (Shinunoga E-Wa)\n18\n旅路 (Tabiji)\n19\n満ちてゆく (Michi Teyu Ku / Overflowing)",
+      "videoStatus": "無法播放影片，請在下方開啟 YouTube。",
+      "rateDisabled": false,
+      "iframeCount": 1
+    }
+  ]
+}

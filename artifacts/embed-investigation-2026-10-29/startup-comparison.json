@@ -1,0 +1,139 @@
+[
+  {
+    "mode": "manual-play",
+    "responses": [],
+    "events": [
+      {
+        "error": 150
+      }
+    ],
+    "frameText": "無法播放這部影片\n無法播放這部影片\n在 YouTube 上觀看",
+    "video": [
+      {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "readyState": 0
+      }
+    ]
+  },
+  {
+    "mode": "ready-load",
+    "responses": [
+      {
+        "status": "UNPLAYABLE",
+        "reason": "無法播放這部影片",
+        "id": "ptiK8U4WlSc"
+      }
+    ],
+    "events": [
+      {
+        "error": 150
+      },
+      {
+        "state": 3
+      },
+      {
+        "error": 150
+      },
+      {
+        "state": -1
+      }
+    ],
+    "frameText": "無法播放這部影片\n無法播放這部影片\n在 YouTube 上觀看",
+    "video": [
+      {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "readyState": 0
+      }
+    ]
+  },
+  {
+    "mode": "manual-load",
+    "responses": [
+      {
+        "status": "UNPLAYABLE",
+        "reason": "無法播放這部影片",
+        "id": "ptiK8U4WlSc"
+      }
+    ],
+    "events": [
+      {
+        "error": 150
+      },
+      {
+        "state": 3
+      },
+      {
+        "error": 150
+      },
+      {
+        "state": -1
+      }
+    ],
+    "frameText": "無法播放這部影片\n無法播放這部影片\n在 YouTube 上觀看",
+    "video": [
+      {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "readyState": 0
+      }
+    ]
+  },
+  {
+    "mode": "ready-play",
+    "responses": [],
+    "events": [
+      {
+        "error": 150
+      }
+    ],
+    "frameText": "無法播放這部影片\n無法播放這部影片\n在 YouTube 上觀看",
+    "video": [
+      {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "readyState": 0
+      }
+    ]
+  },
+  {
+    "mode": "marumaru",
+    "responses": [],
+    "sourceConfig": [
+      "setAttribute(e,!0===t?\"\":t)})}function Ne(e){var i={},s=[\"autoplay\",\"controls\",\"playsinline\",\"loop\",\"muted\",\"default\",\"defaultMuted\"];if(e&&e.attributes&&0<e.attributes.length){var r=e.attributes;for(let t=r.length-1;0<=t;t--){var n=r[t].nam",
+      "previouslyActiveEl_=null)}handleKeyDown(e){if(this.trigger({type:\"modalKeydown\",originalEvent:e,target:this,bubbles:!0}),e.stopPropagation(),\"Escape\"===e.key&&this.closeable())e.preventDefault(),this.close();else if(\"Tab\"===e.key){var i",
+      " new URL(e,document.baseURI).href}function yi(e,t=window.location){return gi(e).origin!==t.origin}let _i=function(e){if(\"string\"==typeof e){e=/^(\\/?)([\\s\\S]*?)((?:\\.{1,2}|[^\\/]+?)(\\.([^\\.\\/\\?]+)))(?:[\\/]*|[\\?].*)$/.exec(e);if(e)return e",
+      "ow.vttjs.VTTCue(e.startTime,e.endTime,e.text),e)i in t||(t[i]=e[i]);t.id=e.id,t.originalCue_=e}var s=this.tech_.textTracks();for(let e=0;e<s.length;e++)s[e]!==this&&s[e].removeCue(t);this.cues_.push(t),this.cues.setCues_(this.cues_)}rem",
+      "oveCue(e){let t=this.cues_.length;for(;t--;){var i=this.cues_[t];if(i===e||i.originalCue_&&i.originalCue_===e){this.cues_.splice(t,1),this.cues.setCues_(this.cues_);break}}}}Fi.prototype.allowedEvents_={cuechange:\"cuechange\"};class q",
+      "e)?this.queuedHanders_.delete(e):this.cancelNamedAnimationFrame(e)}setPoster(){}playsinline(){}setPlaysinline(){}overrideNativeAudioTracks(e){}overrideNativeVideoTracks(e){}canPlayType(e){return\"\"}static canPlayType(e){return\"\"}static canPla",
+      "er_.off(\"keydown\",this.onKeyDown_),this.isListening_=!1}onKeyDown_(e){var t,i=e.originalEvent||e;[\"ArrowLeft\",\"ArrowRight\",\"ArrowUp\",\"ArrowDown\"].includes(i.key)?this.isPaused_||(i.preventDefault(),t=i.key.substring(5).toLowerCase(),thi",
+      "er_.crossOrigin():this.player_.options_.crossOrigin||this.player_.options_.crossorigin||null;null!==e&&\"anonymous\"!==e&&\"use-credentials\"!==e?this.player_.log.warn(`crossOrigin must be null,  \"anonymous\" or \"use-credentials\", given \"${e",
+      "ayer_.paused()?Yt(this.player_.play()):this.player_.pause())}}Bs.prototype.crossorigin=Bs.prototype.crossOrigin,g.registerComponent(\"PosterImage\",Bs);let Fs={monospace:\"monospace\",sansSerif:\"sans-serif\",serif:\"serif\",monospaceSansSerif:",
+      "ack(n.track),this.textTracks().addTrack(n.track),i||this.el_.hasAttribute(\"crossorigin\")||!yi(n.src)||(i=!0)):r.push(n))}for(let e=0;e<r.length;e++)this.el_.removeChild(r[e])}this.proxyNativeTracks_(),this.featuresNativeTextTracks&&i&&l",
+      ".warn(\"Text Tracks are being loaded from another origin but the crossorigin attribute isn't used.\\nThis may prevent text tracks from loading.\"),this.restoreMetadataTracksInIOSNativePlayer_(),(ve||ge)&&!0===e.nativeControlsFor",
+      "ictureInPicture=this.options_.disablePictureInPicture);var e,i=[\"loop\",\"muted\",\"playsinline\",\"autoplay\"];for(let e=0;e<i.length;e++){var s=i[e],r=this.options_[s];\"undefined\"!=typeof r&&(r?Ue(t,s,s):Be(t,s),t[s]=r)}return t}handleLateInit_(t",
+      "try{t.load()}catch(e){}}},[\"muted\",\"defaultMuted\",\"autoplay\",\"controls\",\"loop\",\"playsinline\"].forEach(function(e){b.prototype[e]=function(){return this.el_[e]||this.el_.hasAttribute(e)}}),[\"muted\",\"defaultMuted\",\"autoplay\",\"loop\",\"playsinlin",
+      "ns_.aspectRatio),this.crossOrigin(this.options_.crossOrigin||this.options_.crossorigin),t.getElementsByTagName(\"a\"));for(let e=0;e<o.length;e++){var l=o.item(e);Pe(l,\"vjs-hidden\"),l.setAttribute(\"hidden\",\"hidden\")}return t.initNetworkSt",
+      "options_.nativeControlsForTouch,playerId:this.id(),techId:this.id()+`_${s}_api`,playsinline:this.options_.playsinline,preload:this.options_.preload,loop:this.options_.loop,disablePictureInPicture:this.options_.disablePictureInPicture,muted:t",
+      "==typeof t?this.options_.autoplay:t,this.tech_&&this.techCall_(\"setAutoplay\",t)}playsinline(e){return void 0!==e&&(this.techCall_(\"setPlaysinline\",e),this.options_.playsinline=e),this.techGet_(\"playsinline\")}loop(e){if(void 0===e)return this",
+      "]=this[t.privateName]||new t.ListClass,this[t.privateName])}}),T.prototype.crossorigin=T.prototype.crossOrigin,T.players={};Zr=window.navigator;T.prototype.options_={techOrder:v.defaultTechOrder_,html5:{},enableSourceset:!0,inactivityTi",
+      "Request is deprecated, use onRequest instead.\"),i.add(t));var s=(!0===E.Vhs.xhr.original?E:E.Vhs).xhr,r=((e,i)=>{if(e&&e.size){let t=i;return e.forEach(e=>{t=e(t)}),t}})(i,e);i.delete(t);let l=s(r||e,function(e,t){var i,s,r,n;return i=o",
+      "s)},l.uri=e.uri,l.requestType=e.requestType,l.requestTime=Date.now(),l}return d.original=!0,d}function Lh(e){var t={};return e.byterange&&(t.Range=function(e){let t;return\"bytes=\"+e.offset+\"-\"+(t=\"bigint\"==typeof e.offset||\"bigint\"==typ",
+      "playlist&&(a.playlist=this.options_.playlist),\"undefined\"!=typeof this.options_.playsinline&&(a.playsinline=this.options_.playsinline),\"undefined\"!=typeof this.options_.rel&&(a.rel=this.options_.rel),\"undefined\"!=typeof this.options_.showinf"
+    ],
+    "frameText": "Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video\nFujii Kaze\nFujii Kaze\n555万位订阅者\n前往平台观看：",
+    "video": [
+      {
+        "time": 0,
+        "duration": null,
+        "paused": true,
+        "readyState": 0
+      }
+    ]
+  }
+]

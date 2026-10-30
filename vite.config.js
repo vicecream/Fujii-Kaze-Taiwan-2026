@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { cpSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { cpSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { homeHtml } from "./src/ui/home.js";
 
@@ -17,29 +17,24 @@ function prerenderHome(){
 }
 
 function copyRootStaticAssets(){
+  let buildAssetUrls = [];
   return {
     name: "copy-root-static-assets",
     apply: "build",
+    generateBundle(_options, bundle){
+      // Cache this build's graph, including lazy chunks. Retain public/assets
+      // for old cached HTML without downloading those obsolete entries again.
+      buildAssetUrls = Object.keys(bundle)
+        .filter(file => file.startsWith("assets/"))
+        .map(file => `./${file}`);
+    },
     closeBundle(){
       const outputDir = resolve("dist");
       ["CNAME", "sw.js", "manifest.json", "robots.txt", "sitemap.xml", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"]
         .forEach(file => cpSync(resolve(file), resolve(outputDir, file)));
       cpSync(resolve("images"), resolve(outputDir, "images"), { recursive: true });
 
-      const indexPath = resolve(outputDir, "index.html");
-      const indexHtml = readFileSync(indexPath, "utf8");
-      writeFileSync(indexPath, indexHtml);
-      const assetUrls = [...new Set([
-        ...[...indexHtml.matchAll(/(?:src|href)="(\.\/assets\/[^\"]+)"/g)].map(([, url]) => url),
-        ...[...indexHtml.matchAll(/url\((\.\/assets\/[^)]+)\)/g)].map(([, url]) => url),
-        // The homepage poster lives in the external CSS, not the HTML.
-        ...readdirSync(resolve(outputDir, "assets"))
-          .filter(file => /^poster-.*\.webp$/.test(file))
-          .map(file => `./assets/${file}`),
-        // Split lyrics and readings must also work on a first offline visit.
-        ...readdirSync(resolve(outputDir, "assets")).filter(file => file.endsWith(".js"))
-          .map(file => `./assets/${file}`)
-      ])];
+      const assetUrls = [...new Set(buildAssetUrls)];
       const serviceWorkerPath = resolve(outputDir, "sw.js");
       const serviceWorker = readFileSync(serviceWorkerPath, "utf8")
         .replace("const VITE_BUILD_ASSETS = [];", `const VITE_BUILD_ASSETS = ${JSON.stringify(assetUrls)};`);

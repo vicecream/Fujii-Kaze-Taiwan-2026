@@ -18,33 +18,13 @@ import {
   PIP_SVG,
   CLOSE_SVG,
   SUN_SVG,
-  MOON_SVG,
-  CHANT_VERSION_ICONS
+  MOON_SVG
 } from "./ui/icons.js";
 
-import {
-  SHOW_TIMELINE,
-  SHOW_SCHEDULE,
-  NOTICES,
-  VAWS_PICS,
-  PICS,
-  SONGS,
-  SONG_BPM,
-  SETLIST_TOKYO,
-  SEAT_VIEW,
-  SEAT_BLOCKS,
-  SEAT_GRADE,
-  SEAT_HINT,
-  SEAT_DIRS,
-  FLOOR_WAIT
-} from "./data.js";
-import {
-  CHANT_VERSIONS,
-  CHANT_DIFFERENCES,
-  DEFAULT_CHANT_VERSION,
-  JP_CHANT_GUIDES,
-  CHANT_REFERENCE_URL
-} from "./chant-guide.js";
+import { SITE, EVENT, NOTICES, PICS, SONGS, ALBUMS, SONG_BPM } from "./data.js";
+import { JP_CHANT_GUIDES } from "./chant-guide.js";
+import { showState, todayTimeline } from "./show-time.js";
+import { songCapabilities } from "./song-content.js";
 import { SONG_MARKS } from "./song-mark-metadata.js";
 import { loadFurigana, loadKaraokeSources, loadSongLyrics } from "./services/lazy-modules.js";
 import { loadJapaneseFontSubset } from "./services/japanese-font.js";
@@ -62,15 +42,14 @@ let syncTimer = null;
 let autoScrollEnabled = true;
 let venueMode = false;          // 단축모드 (첫 실행 때 저장값을 읽어 옴)
 const READING_MODES = ["kana", "romaji", "both"];
-const storedReadingMode = store("horo-reading");
+const storedReadingMode = store("kaze-reading");
 let readingMode = READING_MODES.includes(storedReadingMode) ? storedReadingMode : "kana";
-let showJapanese = store("horo-show-japanese") !== "0";
-let showChinese = store("horo-show-chinese") !== "0";
-const storedChantVersion = store("horo-chant-version");
-let chantVersion = storedChantVersion === "kr" ? "kr" : DEFAULT_CHANT_VERSION;
+let showJapanese = store("kaze-show-japanese") !== "0";
+let showChinese = store("kaze-show-chinese") !== "0";
+const chantVersion = "jp";
 let chantNotesExpanded = false;
 // 卡拉OK 預設關閉；若使用者曾手動選擇，則沿用保存的設定。
-let karaokeEnabled = store("horo-karaoke") === "1";
+let karaokeEnabled = store("kaze-karaoke") === "1";
 let lastActiveIdx = -1;
 let karaokeActiveLine = null;
 let karaokeTiming = null;       // 對齊到目前 YouTube 影片的真實逐字時間
@@ -99,9 +78,8 @@ const SYNC_INTERVAL_MS   = 100;
 /* 지금 폰에 깔려 있는 화면이 몇 번째 판인지 알려 주는 표시.
    새로 올렸는데 화면이 그대로일 때, 옛 판이 남아 있는지 바로 확인할 수 있다.
    sw.js 의 CACHE_VERSION 과 같이 올려 주세요. */
-const BUILD = "v1.11.1";
+const BUILD = "v2.0.0";
 
-const TRANSLATION_CREDIT_URL = "https://home.gamer.com.tw/profile/index.php?owner=tsukilsao319";
 const CC_BY_NC_SA_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 
 
@@ -194,7 +172,7 @@ const SCROLL_DURATION_MS = 260;
 const KARAOKE_TAIL_SEC   = 0.08;
 const KARAOKE_UNIT_BEATS  = 0.65;
 const PLAYBACK_RATE_OPTIONS = Object.freeze([0.25, 0.5, 0.75, 1, 1.25, 1.5, 2]);
-const PLAYBACK_RATE_STORAGE_KEY = "horo-playback-rate";
+const PLAYBACK_RATE_STORAGE_KEY = "kaze-playback-rate";
 const storedPlaybackRate = Number(store(PLAYBACK_RATE_STORAGE_KEY));
 let playbackRate = PLAYBACK_RATE_OPTIONS.includes(storedPlaybackRate)
   ? storedPlaybackRate
@@ -207,7 +185,7 @@ let songRenderToken = 0;
 let songKeyHandler = null;   // 곡 화면 키보드 단축키(← → Esc) 핸들러
 
 const themePreference = window.matchMedia("(prefers-color-scheme: dark)");
-const storedTheme = store("horo-theme");
+const storedTheme = store("kaze-theme");
 let currentTheme = storedTheme === "dark" ? "dark"
   : storedTheme === "light" ? "light"
   : themePreference.matches ? "dark" : "light";
@@ -226,8 +204,10 @@ function themeToggleHtml(extraClass = ""){
 function applyTheme(theme, save = false){
   currentTheme = theme;
   document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]').content = theme === "dark" ? "#151619" : "#f5f5f7";
-  if (save) store("horo-theme", theme);
+  const homeVisible = app.style.display !== "none" && Boolean(app.querySelector(".hero"));
+  document.querySelector('meta[name="theme-color"]').content = homeVisible
+    ? "#191c17" : theme === "dark" ? "#151619" : "#f5f5f7";
+  if (save) store("kaze-theme", theme);
   document.querySelectorAll("[data-theme-toggle]").forEach(button => {
     const label = theme === "dark" ? "淺色模式" : "深色模式";
     button.innerHTML = theme === "dark" ? SUN_SVG : MOON_SVG;
@@ -242,24 +222,8 @@ document.addEventListener("click", event => {
 });
 if (themePreference.addEventListener){
   themePreference.addEventListener("change", event => {
-    if (!store("horo-theme")) applyTheme(event.matches ? "dark" : "light");
+    if (!store("kaze-theme")) applyTheme(event.matches ? "dark" : "light");
   });
-}
-
-function chantVersionControlHtml(scope = "guide"){
-  const label = scope === "song" ? "這首歌的應援版" : "應援版";
-  return `
-    <div class="chant-version-control" data-chant-version-control="${scope}">
-      <span class="chant-version-control-label">${label}</span>
-      <div class="chant-version-segment" role="group" aria-label="${label}">
-        <button type="button" class="chant-version-option" data-chant-version="jp" aria-pressed="false">
-          <span>${CHANT_VERSIONS.jp.label}</span>
-        </button>
-        <button type="button" class="chant-version-option" data-chant-version="kr" aria-pressed="false">
-          <span>${CHANT_VERSIONS.kr.label}</span>
-        </button>
-      </div>
-    </div>`;
 }
 
 function chantGuideFor(song = currentSong, version = chantVersion){
@@ -267,58 +231,7 @@ function chantGuideFor(song = currentSong, version = chantVersion){
   return version === "jp" ? (JP_CHANT_GUIDES[song.id] || null) : null;
 }
 
-function chantVersionLabel(version = chantVersion){
-  return CHANT_VERSIONS[version]?.label || CHANT_VERSIONS.jp.label;
-}
-
-function chantVersionIcon(version = chantVersion){
-  return CHANT_VERSION_ICONS[version] || CHANT_VERSION_ICONS.jp;
-}
-
-function chantSourceInfoHtml(){
-  return `<span class="chant-source-info">
-    <b>應援版本說明</b>：預設為日本版，可用應援版本按鈕切換日本版／韓國版；切換後大合唱標記會同步更新。<br>
-    <a href="${CHANT_REFERENCE_URL}" target="_blank" rel="noopener">日本版參考：Canva《VAUNDY 應援教學》↗</a>
-  </span>`;
-}
-
-function applyChantVersionUi(){
-  document.querySelectorAll("[data-chant-version]").forEach(button => {
-    const active = button.dataset.chantVersion === chantVersion;
-    button.classList.toggle("active", active);
-    button.setAttribute("aria-pressed", active ? "true" : "false");
-  });
-  document.querySelectorAll("[data-chant-version-flag]").forEach(el => {
-    el.innerHTML = chantVersionIcon();
-  });
-  document.querySelectorAll("[data-chant-version-toggle]").forEach(button => {
-    const isKorea = chantVersion === "kr";
-    button.classList.toggle("active", isKorea);
-    button.setAttribute("aria-pressed", isKorea ? "true" : "false");
-    button.setAttribute("aria-label", `切換應援版本：目前${chantVersionLabel()}，點擊切換`);
-    button.title = "點擊切換日本版／韓國版";
-    const value = button.querySelector(".chant-version-value");
-    if (value) value.innerHTML = chantVersionIcon();
-  });
-}
-
-function renderChantVersionNote(song = currentSong){
-  const el = document.getElementById("chant-version-note");
-  if (!el) return;
-
-  if (chantVersion === "kr"){
-    el.innerHTML = `<b>${CHANT_VERSIONS.kr.label}</b>：使用韓國場應援標記。`;
-    return;
-  }
-
-  const guide = chantGuideFor(song, "jp");
-  if (!guide){
-    el.innerHTML = `<b>${CHANT_VERSIONS.jp.label}</b>：這首歌目前沒有獨立的日本版提示，暫沿用現有標記。`;
-    return;
-  }
-
-  el.innerHTML = `<b>${CHANT_VERSIONS.jp.label}</b>：歌詞旁的麥克風圖示就是日本版大合唱段落。`;
-}
+function chantVersionLabel(){ return "應援提示"; }
 
 function renderChantNotes(song = currentSong){
   const button = document.getElementById("chant-notes-toggle");
@@ -341,28 +254,6 @@ function renderChantNotes(song = currentSong){
 }
 
 document.addEventListener("click", event => {
-  const button = event.target.closest("[data-chant-version]");
-  if (!button) return;
-  const next = button.dataset.chantVersion;
-  if (next !== "jp" && next !== "kr") return;
-  setChantVersion(next);
-});
-
-document.addEventListener("click", event => {
-  const button = event.target.closest("[data-chant-version-toggle]");
-  if (!button) return;
-  event.preventDefault();
-  event.stopPropagation();
-  if (button.id === "guide-chant-version-btn") {
-    pendingVideoId = null;
-    if (player && typeof player.pauseVideo === "function") {
-      try { player.pauseVideo(); } catch(e){}
-    }
-  }
-  setChantVersion(chantVersion === "jp" ? "kr" : "jp");
-});
-
-document.addEventListener("click", event => {
   const button = event.target.closest("#chant-notes-toggle");
   if (!button || button.hidden) return;
   const panel = document.getElementById(button.getAttribute("aria-controls") || "chant-notes");
@@ -380,7 +271,7 @@ function router({ resetScroll = true } = {}){
   cancelJapaneseFontLoad();
   songListComplete = null;
   stopCountdown();
-  teardownSetlistReveal();
+
   const hash = location.hash.replace(/^#\/?/, "");
   let song = null;
   if (hash.startsWith("song/")) {
@@ -391,19 +282,22 @@ function router({ resetScroll = true } = {}){
     song = SONGS.find(s => s.id === id) || SONGS.find(s => s.id === raw) || null;
   }
 
-  if (song) {
+  if (hash.startsWith("song/") && !song) {
+    leaveSongView();
+    renderConvertedLink();
+  } else if (song) {
     renderSong(song);
   } else if (hash === "guide") {
     leaveSongView();
-    setSongFrom("guide");
+
     renderGuide();
   } else if (hash === "setlist") {
     leaveSongView();
     renderSetlist();
   } else {
     leaveSongView();
-    setSongFrom("guide");
-    resetSetlistSpoiler();   // 홈에 나온 순간 셋리스트는 처음 상태로
+
+
     renderHome();
   }
   if (resetScroll) window.scrollTo(0,0);
@@ -412,50 +306,6 @@ function router({ resetScroll = true } = {}){
 
 /* ---------------- HOME ---------------- */
 
-function seatBlockSvg(b){
-  if (b.grade === "w")     return `<polygon class="seat-wheel" points="${b.pts}"></polygon>`;
-  if (b.grade === "stage") return `<polygon class="seat-stage" points="${b.pts}"></polygon>`
-                                + `<text class="seat-stage-t" x="${b.x}" y="${b.y}">STAGE</text>`;
-  const fs = b.grade === "floor" ? 30 : 16;
-  return `<g class="seat-blk ${b.grade}" data-id="${b.id}" role="button" tabindex="0" aria-label="${b.id}區">`
-       + `<polygon points="${b.pts}"></polygon>`
-       + `<text x="${b.x}" y="${b.y}" font-size="${fs}">${b.id}</text>`
-       + `</g>`;
-}
-
-function seatMapSvg(){
-  // 휠체어석·무대는 구역 위에 겹쳐 그린다
-  const order = (g) => g === "w" || g === "stage" ? 1 : 0;
-  const list = SEAT_BLOCKS.slice().sort((a, b) => order(a.grade) - order(b.grade));
-  return `<svg class="seat-map" viewBox="-5 -5 ${SEAT_VIEW.w + 10} ${SEAT_VIEW.h + 10}"`
-       + ` role="img" aria-label="台北小巨蛋座位配置圖">`
-       + list.map(seatBlockSvg).join("")
-       + `</svg>`;
-}
-
-/* 고른 구역이 배치도에서 어디쯤인지 말로 알려 준다 —
-   무대가 한가운데라 '앞뒤'가 없으므로, 배치도 기준 여덟 방향으로 알려 준다. */
-function seatWhere(b){
-  const dx = b.x - SEAT_VIEW.cx, dy = b.y - SEAT_VIEW.cy;
-  const deg = (Math.atan2(dy, dx) * 180 / Math.PI + 450) % 360;   // 0 = 위쪽, 시계 방향
-  return "配置圖的" + SEAT_DIRS[Math.round(deg / 45) % 8];
-}
-
-
-function seatReadoutHtml(b){
-  const g = SEAT_GRADE[b.grade];
-  const wait = FLOOR_WAIT[b.id];
-  const tail = b.grade === "floor"
-    ? (wait
-        ? `入場前請依現場公告前往 <span class="hi">${wait}側站席等候區</span>。詳細位置請查看「公告・指南」中的場館地圖。`
-        : "這是環繞舞台的站席區域。入場順序請依演出當天現場指示。")
-    : `<span class="warn">A 排・B 排可能因安全欄杆而有些許視線遮擋。</span>`;
-  return `<span class="grade ${g.cls}">${g.label}</span><b>${escapeHtml(b.id)}區</b>・${seatWhere(b)}`
-       + `<br>${tail} <button type="button" class="seat-clear">取消選取</button>`;
-}
-
-/* 카드 안 내용이 바뀌면 펼쳐진 높이를 다시 잡아 준다.
-   (이걸 안 하면 구역을 눌렀을 때 늘어난 글이 카드 아래로 잘린다) */
 function refreshAccordion(el){
   const card = el && el.closest ? el.closest(".info-card") : null;
   if (!card || !card.classList.contains("open")) return;
@@ -470,7 +320,6 @@ function refreshAccordion(el){
    · 탭하면 전체화면으로 크게 볼 수 있어요.
    ───────────────────────────────────────────────────────────── */
 let noticeReady = [];   // 실제로 불러와진 공지들 (공지 · 안내 카드)
-let vawsReady   = [];   // VAWS 카드 안에 들어가는 사진들
 let viewList    = [];   // 크게 보기가 지금 넘기고 있는 목록
 let viewIdx     = 0;
 let noticeTrigger = null;
@@ -557,7 +406,7 @@ function songJapaneseFontText(song){
 /* 사진 목록을 받아 눌러서 크게 볼 수 있는 격자를 만든다.
    · 파일이 없는 칸은 조용히 사라진다 (깨지지 않음)
    · 다 불러오면 카드 높이를 다시 재고, 오프라인용으로도 저장해 둔다
-   같은 코드를 '공지 · 안내' 와 'VAWS 회원 티켓 카드' 두 곳에서 같이 쓴다. */
+   公告圖片載入後，重新計算卡片高度並準備離線快取。 */
 function buildPicGrid(grid, list, ready, emptyEl){
   if (!grid || grid.dataset.loaded === "1") return;
   grid.dataset.loaded = "1";
@@ -612,13 +461,7 @@ function setupNotices(){
                document.getElementById("notice-empty"));
 }
 
-function setupVawsPics(){
-  const grid = document.getElementById("vaws-grid");
-  if (!grid || grid.dataset.loaded === "1") return;
-  buildPicGrid(grid, VAWS_PICS, vawsReady, null);
-}
-
-/* 공지 이미지도 오프라인용으로 저장해 둔다 (공연장에서 데이터가 안 터져도 보이도록) */
+// Cache announcement images only after loading.
 function cachePicsForOffline(ready){
   if (!("serviceWorker" in navigator) || !ready.length) return;
   const urls = ready.map(n => n.src);
@@ -848,51 +691,6 @@ function setupChangelogModal(){
   });
 }
 
-function setupSeatMap(){
-  const svg = document.querySelector(".seat-map");
-  const out = document.getElementById("seat-readout");
-  if (!svg || !out) return;
-
-  const blocks = [...svg.querySelectorAll(".seat-blk")];
-
-  const show = (id, save) => {
-    blocks.forEach(el => el.classList.remove("selected"));
-    const b = id ? SEAT_BLOCKS.find(x => x.id === id) : null;
-    if (!b){
-      out.textContent = SEAT_HINT;
-      if (save) store("horo-seat", "");
-      refreshAccordion(out);
-      return;
-    }
-    const g = blocks.find(el => el.dataset.id === id);
-    if (g) g.classList.add("selected");
-    out.innerHTML = seatReadoutHtml(b);
-    if (save) store("horo-seat", id);
-    refreshAccordion(out);
-  };
-
-  svg.addEventListener("click", (e)=>{
-    const g = e.target.closest && e.target.closest(".seat-blk");
-    if (!g) return;
-    // 같은 구역을 다시 누르면 선택이 풀린다
-    show(g.classList.contains("selected") ? null : g.dataset.id, true);
-  });
-  svg.addEventListener("keydown", (e)=>{
-    if (e.key !== "Enter" && e.key !== " ") return;
-    const g = e.target.closest && e.target.closest(".seat-blk");
-    if (!g) return;
-    e.preventDefault();
-    show(g.classList.contains("selected") ? null : g.dataset.id, true);
-  });
-  out.addEventListener("click", (e)=>{
-    if (e.target.closest(".seat-clear")) show(null, true);
-  });
-
-  const saved = store("horo-seat");
-  if (saved && SEAT_BLOCKS.some(b => b.id === saved)) show(saved, false);
-  else out.textContent = SEAT_HINT;
-}
-
 function renderHome(){
   // Keep the built homepage in place while attaching its behavior.
   if (!canReuseHome || !app.querySelector(".hero")){
@@ -904,7 +702,7 @@ function renderHome(){
   document.getElementById("setlist-btn").addEventListener("click", ()=>{ location.hash = "#/setlist"; });
   setupAccordions();
   setupNoticeViewer();
-  setupSeatMap();
+
   setupHomeExtras();
   startCountdown();
 }
@@ -959,11 +757,12 @@ function setupOneAccordion(card){
       card.classList.add("open");
       btn.setAttribute("aria-expanded", "true");
       panel.querySelectorAll("img[data-src]").forEach(img => {
+        img.addEventListener("load", () => refreshAccordion(img), { once: true });
         img.src = img.dataset.src;
         delete img.dataset.src;
       });
       if (card.id === "notice-card") setupNotices();
-      if (card.id === "vaws-card") setupVawsPics();
+
       if (card.id === "way-card") setupAddressCopy();
       panel.style.maxHeight = panel.scrollHeight + "px";
       // 이후 내부 콘텐츠 크기 변화(폰트 로딩 등)에도 대응해 살짝 여유를 둠
@@ -978,449 +777,49 @@ function setupOneAccordion(card){
 
 /* ---------------- CHANT GUIDE (song list) ---------------- */
 function renderGuide(){
-  app.innerHTML = `
-    <div class="guide-page">
-      <div class="song-topbar">
-        <button class="back-btn" id="back-btn" aria-label="返回首頁" title="返回首頁">${BACK_SVG}</button>
-        ${themeToggleHtml()}
-      </div>
-
-      <section class="songs-section">
-        <div class="songs-head">
-          <h1>應援指南 無劇透</h1>
-          <p>選擇歌曲，搭配影片查看歌詞與大合唱重點</p>
-          <div class="song-legend">
-            <span class="legend-item"><span class="legend-icon chant">${INLINE_ICONS.mic}</span>大合唱 <b class="legend-num">12</b> 行</span>
-            <span class="legend-item"><span class="legend-icon clap">${INLINE_ICONS.clap}</span>拍手</span>
-            <span class="legend-item"><span class="legend-icon wave">${INLINE_ICONS.wave}</span>揮手</span>
-            <span class="legend-item"><span class="legend-icon jump">${INLINE_ICONS.jump}</span>跳躍</span>
-            <span class="legend-item"><span class="legend-icon spin">${INLINE_ICONS.spin}</span>轉臂</span>
-          </div>
-          <p class="song-legend-note">數字代表目前應援版本的大合唱歌詞行數。<br>切換歌曲時會依目前排序移動。<br>拍手・揮手提示會顯示在歌曲頁面。</p>
-        </div>
-        <details class="chant-source-details" id="guide-chant-source">
-          <summary>應援版本說明</summary>
-          <div id="guide-chant-source-content"></div>
-        </details>
-        <div class="song-search-sentinel" id="song-search-sentinel"></div>
-        <div class="song-search">
-          <label class="search-label" for="song-search-input">搜尋歌曲</label>
-          <div class="song-search-box">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
-            <input id="song-search-input" type="search" inputmode="search" autocomplete="off"
-                   placeholder="搜尋歌曲名稱・編號">
-            <button type="button" class="song-search-clear" id="song-search-clear" aria-label="清除">✕</button>
-          </div>
-        </div>
-        <div class="song-sorts" role="group" aria-label="歌曲清單排序">
-          <button class="song-sort" type="button" data-sort="default">預設</button>
-          <button class="song-sort" type="button" data-sort="title" id="sort-title">名稱</button>
-          <button class="song-sort" type="button" data-sort="chant" id="sort-chant">大合唱</button>
-        </div>
-        <div class="song-search-meta"><span id="song-count">共 ${SONGS.length} 首</span></div>
-        <p class="song-empty" id="song-empty" hidden><b>找不到歌曲</b>請輸入部分歌曲名稱或歌曲編號</p>
-        <ul class="song-list" id="song-list"></ul>
-      </section>
-
-      ${siteFooterHtml(BUILD)}
-    </div>
-  `;
-
+  app.innerHTML = `<div class="guide-page">
+    <div class="song-topbar"><button class="back-btn" id="back-btn" aria-label="返回首頁">${BACK_SVG}</button>${themeToggleHtml()}</div>
+    <section class="songs-section">
+      <div class="songs-head"><h1>歌曲預習</h1><p>19 首 · Prema ＋ 代表曲精選</p>
+        <p class="prep-disclaimer">依專輯分組，並非高雄場演出曲目或順序。<br>歌詞、翻譯與同步時間將分批補齊。</p></div>
+      <div class="song-search"><label class="search-label" for="song-search-input">搜尋歌曲</label><div class="song-search-box">
+        <input id="song-search-input" type="search" autocomplete="off" placeholder="搜尋歌名・羅馬字・編號">
+        <button type="button" class="song-search-clear" id="song-search-clear" aria-label="清除">✕</button></div></div>
+      <div class="song-sorts" role="group" aria-label="歌曲清單排序"><button class="song-sort" type="button" data-sort="default">依專輯</button><button class="song-sort" type="button" data-sort="title" id="sort-title">名稱</button></div>
+      <div class="song-search-meta"><span id="song-count">共 ${SONGS.length} 首</span></div>
+      <p class="song-empty" id="song-empty" hidden>找不到歌曲，請輸入部分歌名或編號。</p><ul class="song-list" id="song-list"></ul>
+      <p class="catalog-sources">曲目來源：<a href="${ALBUMS.prema.url}" target="_blank" rel="noopener">Prema</a> · <a href="${ALBUMS.best.url}" target="_blank" rel="noopener">Best of Fujii Kaze 2020–2024</a><br>查核：${EVENT.checkedAt}</p>
+    </section>${siteFooterHtml(BUILD)}</div>`;
   document.getElementById("back-btn").addEventListener("click", ()=>{ location.hash = "#/"; });
-  const sourceDetails = document.getElementById("guide-chant-source");
-  const sourceContent = document.getElementById("guide-chant-source-content");
-  sourceDetails?.addEventListener("toggle", ()=>{
-    if (!sourceDetails.open || !sourceContent || sourceContent.dataset.loaded === "1") return;
-    sourceContent.innerHTML = `${chantSourceInfoHtml()}
-      <section class="chant-differences" aria-labelledby="chant-differences-title">
-        <div class="chant-differences-head">
-          <h2 id="chant-differences-title">日本版／韓國版差異</h2>
-          <button type="button" class="chant-differences-current chant-version-current" id="guide-chant-version-btn" data-chant-version-toggle aria-pressed="false" aria-label="切換應援版本：目前${chantVersionLabel()}，點擊切換">
-            目前 <span data-chant-version-flag aria-hidden="true">${chantVersionIcon()}</span>
-          </button>
-        </div>
-        <ul>${CHANT_DIFFERENCES.map(item => `<li>${escapeHtml(item)}</li>`).join("")}</ul>
-        <p class="chant-differences-footnote">未列入日本版歌單的歌曲會暫沿用現有標記，現場仍以 Vaundy 與觀眾的即時引導為準。</p>
-      </section>`;
-    sourceContent.dataset.loaded = "1";
-    applyChantVersionUi();
-  });
-  applyChantVersionUi();
-
-  // 정렬 칩 — '떼창'은 다시 누르면 많은 순 ↔ 적은 순이 바뀐다
-  app.querySelectorAll(".song-sort").forEach(b=>{
-    b.addEventListener("click", ()=>{
-      const kind = b.dataset.sort;
-      // 같은 칩을 다시 누르면 순서가 뒤집힌다
-      if (kind === "chant")      songSort = (songSort === "chant-desc") ? "chant-asc" : "chant-desc";
-      else if (kind === "title") songSort = (songSort === "title")      ? "title-desc" : "title";
-      else                       songSort = kind;
-      store("horo-song-sort", songSort);
-      paintSongList({ eager: true });
-    });
-  });
-
+  app.querySelectorAll(".song-sort").forEach(button => button.addEventListener("click", ()=>{
+    const kind = button.dataset.sort;
+    songSort = kind === "title" && songSort === "title" ? "title-desc" : kind;
+    store("kaze-song-sort", songSort);
+    paintSongList({ eager: true });
+  }));
   setupSongSearch();
-  paintSongList();
+  paintSongList({ eager: true });
   scheduleJapaneseFontAfterInteraction(guideJapaneseFontText(), [500], "#/guide");
 }
 
-/* ---------------- SETLIST (스포일러) ----------------
-   보기 방식을 직접 고르기 전까지 목록 데이터를 화면에 넣지 않는다. */
-let setlistScrollHandler = null;
-
-/* ── 곡 화면에서 '뒤로'를 눌렀을 때 돌아갈 곳 ──────────────────
-   새로고침 뒤에는 셋리스트 맥락을 복원하지 않아 순서가 노출되지 않는다. */
-let songFrom = "guide";
-function setSongFrom(v){
-  songFrom = (v === "setlist") ? "setlist" : "guide";
-}
-function songBackHash(){ return songFrom === "setlist" ? "#/setlist" : "#/guide"; }
-
-function teardownSetlistReveal(){
-  if (setlistScrollHandler){
-    window.removeEventListener("scroll", setlistScrollHandler);
-    setlistScrollHandler = null;
-  }
-}
-
-function setlistTitle(entry){
-  const s = SONGS.find(x => x.id === entry.id);
-  return s ? s.title : (entry.title || entry.id);
-}
-
-/* 歌名通常是「中文譯名 (日文原題)」；只把括號內原題標成日文，
-   日文與中文歌詞都沿用台灣系統字體堆疊顯示。 */
-function renderSongTitle(title){
-  return escapeHtml(String(title ?? "")).replace(/\(([^()]*)\)/g,
-    (_, original) => `(<span lang="ja">${original}</span>)`);
-}
-
-/* ── 셋리스트 보기 상태 ──────────────────────────────────────
-   mode "order"  : 실제 공연 순서 (번호 있음, 토·일로 갈린 자리도 그대로)
-   mode "random" : 순서를 감추고 곡을 하나씩 섞어서 보여 줌
-                   (번호 없음, 토·일 구분도 없음 — 둘 다 순서 단서가 되므로)
-
-   보기 방식은 가림막을 걷기 '전에' 고른다. 스크롤만 내려도 목록이 드러나면
-   랜덤을 고르기 전에 실제 순서를 보게 되어 스포가 되기 때문이다.
-
-   섞은 순서는 저장해 둔다. 곡을 보고 뒤로 돌아와도 같은 화면이 다시 나오므로
-   실제 순서가 드러나지 않는다. */
-let setlistMode     = "random";
-let setlistShuffle  = null;   // 섞은 순서 (곡 키 배열)
-let setlistRevealed = false;  // 가림막을 이미 걷었는지 (이번 방문 동안)
-let setlistScrollY  = 0;      // 곡을 보러 가기 전 스크롤 위치
-
-/* 홈으로 나가면 셋리스트를 처음 상태로 되돌린다.
-   · 곡을 보러 갔다 '뒤로' 오는 건 보던 화면 그대로 (중간에 끊기면 불편하므로)
-   · 홈까지 나갔다가 다시 들어오면 → 스포주의 화면부터 다시
-   옆 사람에게 폰을 건네줬을 때 실수로 순서가 보이는 일을 막아 준다. */
-function resetSetlistSpoiler(){
-  setlistRevealed = false;
-  setlistScrollY  = 0;
-  setlistMode     = "random";
-}
-/* 셋리스트에서 곡을 눌러 들어갔을 때, 그 곡이 셋리스트의 몇 번째였는지.
-   이전/다음 곡이 셋리스트 순서를 그대로 따라가게 하려고 기억해 둔다. */
-let setlistPos = (()=>{
-  const n = parseInt(store("horo-set-pos"), 10);
-  return Number.isFinite(n) && n >= 0 ? n : -1;
-})();
-function setSetlistPos(i){
-  setlistPos = i;
-  store("horo-set-pos", String(i));
-}
-
-/* 토·일로 갈린 자리까지 풀어서 곡 하나하나를 낱개로 만든다.
-   랜덤에서는 이 낱개들을 통째로 섞기 때문에 "몇 번째 자리에서 곡이 갈렸는지"가
-   드러나지 않는다. */
-function setlistFlat(){
-  const out = [];
-  SETLIST_TOKYO.items.forEach(it =>
-    it.songs.forEach((e, i) => out.push({ key: it.n + ":" + i, id: e.id }))
-  );
-  return out;
-}
-
-function makeSetlistShuffle(){
-  const keys = setlistFlat().map(x => x.key);
-  for (let i = keys.length - 1; i > 0; i--){          // 피셔–예이츠 섞기
-    const j = Math.floor(Math.random() * (i + 1));
-    const t = keys[i]; keys[i] = keys[j]; keys[j] = t;
-  }
-  setlistShuffle = keys;
-  store("horo-set-shuffle2", JSON.stringify(keys));
-}
-
-function ensureSetlistShuffle(){
-  const flat = setlistFlat();
-  if (setlistShuffle && setlistShuffle.length === flat.length) return;
-  const saved = store("horo-set-shuffle2");
-  if (saved){
-    try {
-      const arr = JSON.parse(saved);
-      if (Array.isArray(arr) && arr.length === flat.length){
-        setlistShuffle = arr;
-        return;
-      }
-    } catch(e){ /* 저장값이 깨졌으면 새로 섞는다 */ }
-  }
-  makeSetlistShuffle();
-}
-
-function setlistRandomSongs(){
-  ensureSetlistShuffle();
-  const byKey = new Map(setlistFlat().map(x => [x.key, x]));
-  return setlistShuffle.map(k => byKey.get(k)).filter(Boolean);
-}
-
-/* 셋리스트 화면에 보이는 그대로의 곡 순서.
-   · 공연 순서 모드 → 실제 공연 순서 (토·일로 갈린 자리는 낱개로 풀어서)
-   · 랜덤 모드      → 그때 섞어 둔 바로 그 순서
-   가이드가 없는 곡은 눌러도 안 열리므로 빼 둔다. */
-function setlistNavList(){
-  const list = (setlistMode === "random") ? setlistRandomSongs() : setlistFlat();
-  return list.filter(x => SONGS.some(s => s.id === x.id));
-}
-
-/* 공연 순서 한 줄 — 번호 + 제목. 토·일로 갈린 자리는 둘을 묶어서 보여 준다. */
-function setlistRowHtml(item){
-  if (item.songs.length === 1){
-    const e = item.songs[0];
-    const exists = SONGS.some(s => s.id === e.id);
-    return `
-      <li class="set-item">
-        <button class="set-row" data-id="${escapeHtml(e.id)}" ${exists ? "" : "disabled"}>
-          <span class="set-num">${pad(item.n)}</span>
-          <span class="set-title">${renderSongTitle(setlistTitle(e))}</span>
-          <span class="set-go">${exists ? "›" : ""}</span>
-        </button>
-      </li>`;
-  }
-  return `
-    <li class="set-item">
-      <div class="set-split">
-        <div class="set-split-head">
-          <span class="set-num">${pad(item.n)}</span>
-          <span class="set-split-note">日期不同的歌曲</span>
-        </div>
-        ${item.songs.map(e=>{
-          const exists = SONGS.some(s => s.id === e.id);
-          return `
-          <button class="set-row sub" data-id="${escapeHtml(e.id)}" ${exists ? "" : "disabled"}>
-            <span class="day-chip ${e.day === "日" ? "sun" : ""}">${e.day}</span>
-            <span class="set-title">${renderSongTitle(setlistTitle(e))}</span>
-            <span class="set-go">${exists ? "›" : ""}</span>
-          </button>`;
-        }).join("")}
-      </div>
-    </li>`;
-}
-
-/* 랜덤 한 줄 — 번호도 날짜 표시도 없이 곡 제목만 */
-function setlistRandomRowHtml(x){
-  const exists = SONGS.some(s => s.id === x.id);
-  return `
-    <li class="set-item">
-      <button class="set-row" data-id="${escapeHtml(x.id)}" ${exists ? "" : "disabled"}>
-        <span class="set-num rand">♪</span>
-        <span class="set-title">${renderSongTitle(setlistTitle(x))}</span>
-        <span class="set-go">${exists ? "›" : ""}</span>
-      </button>
-    </li>`;
-}
-
-/* 목록만 다시 그린다 (보기 방식을 바꿀 때 화면 전체를 새로 그리지 않도록) */
-function paintSetlist(){
-  const listEl = document.getElementById("set-list");
-  if (!listEl) return;
-  const isOrder = setlistMode === "order";
-  const total = setlistFlat().length;
-
-  listEl.innerHTML = isOrder
-    ? SETLIST_TOKYO.items.map(setlistRowHtml).join("")
-    : setlistRandomSongs().map(setlistRandomRowHtml).join("");
-
-  const countEl = document.getElementById("setlist-count");
-  if (countEl) countEl.textContent = isOrder
-    ? `東京/首爾 ${SETLIST_TOKYO.items.length} 首・共 ${total} 首`
-    : `共 ${total} 首`;
-
-  const metaEl = document.getElementById("setlist-mode-meta");
-  if (metaEl) metaEl.textContent = isOrder ? "劇透" : "隨機";
-
-  const shufEl = document.getElementById("set-shuffle");
-  if (shufEl) shufEl.hidden = isOrder;
-
-  const desc = document.getElementById("setlist-desc");
-  if (desc) desc.innerHTML = isOrder
-    ? `${escapeHtml(SETLIST_TOKYO.dates)}<br>點選歌曲即可前往應援指南`
-    : `${escapeHtml(SETLIST_TOKYO.dates)}<br>目前將歌曲<b>打亂顯示，不公開演出順序</b>`;
-
-  const note = document.getElementById("setlist-note");
-  if (note) note.innerHTML = isOrder
-    ? `※ 這是整理自粉絲紀錄的非官方東京/首爾歌單，首爾場順序與東京場相同；台北場實際演出順序仍以官方公告為準。<br>
-       ※ 日期不同而有變化的曲目，已分為<b>六</b>・<b>日</b>。`
-    : `※ 這是整理自粉絲紀錄的非官方東京/首爾歌單，首爾場順序與東京場相同；台北場實際演出順序仍以官方公告為準。<br>
-       ※ 演出順序與日期差異曲目皆已隱藏。想查看完整內容，請在上方點選<b>演出順序</b>。`;
-
-  app.querySelectorAll(".set-mode").forEach(b=>{
-    const on = b.dataset.mode === setlistMode;
-    b.classList.toggle("active", on);
-    b.setAttribute("aria-pressed", on ? "true" : "false");
-  });
-
-  // 눌린 줄이 셋리스트의 몇 번째인지 같이 기억해 둔다 (이전/다음 곡용)
-  let pos = 0;
-  listEl.querySelectorAll(".set-row").forEach(btn=>{
-    if (btn.disabled) return;          // 가이드 없는 곡은 순서에서 뺀다
-    const myPos = pos++;
-    btn.addEventListener("click", ()=>{
-      const target = SONGS.find(s => s.id === btn.dataset.id);
-      if (!target) return;
-      setlistScrollY = window.scrollY;   // 돌아왔을 때 보던 자리로
-      setSongFrom("setlist");
-      setSetlistPos(myPos);
-      gotoSong(target);
-    });
-  });
-  scheduleJapaneseFontAfterInteraction(SETLIST_TOKYO.items
-    .map(entry => japaneseTitleText(setlistTitle(entry)))
-    .join(""), [500], "#/setlist");
-}
-
+// Albums are preparation material, not the opening show's setlist.
+function renderSongTitle(title){ return escapeHtml(String(title ?? "")); }
 function renderSetlist(){
-  app.innerHTML = `
-    <div class="setlist-page">
-      <div class="song-topbar">
-        <button class="back-btn" id="setlist-back-btn" aria-label="返回首頁" title="返回首頁">${BACK_SVG}</button>
-        <h1>歌單</h1>
-        ${themeToggleHtml()}
-      </div>
-
-      <section class="spoiler-hero">
-        <div class="spoiler-mark">${WARN_SVG}</div>
-        <h2 class="spoiler-title">劇透注意</h2>
-        <p class="spoiler-desc">
-          這個頁面包含<b>${SETLIST_TOKYO.label}的歌曲名稱與順序</b>。<br>
-          選擇查看方式前，不會顯示內容。
-        </p>
-        <button class="spoiler-safe" type="button" id="spoiler-safe">不看劇透，返回首頁</button>
-
-        <div class="spoiler-choice">
-          <button class="spoiler-open soft" type="button" data-mode="random">
-            <b>只看歌曲名稱<span class="tag">歌曲劇透</span></b>
-            <span>打亂顯示演出順序</span>
-          </button>
-          <button class="spoiler-open" type="button" data-mode="order">
-            <b>依演出順序查看<span class="tag">完整劇透</span></b>
-            <span>公開歌曲名稱與完整順序</span>
-          </button>
-        </div>
-      </section>
-
-      <section class="setlist-body" id="setlist-body" hidden inert>
-        <div class="setlist-head">
-          <h2>${escapeHtml(SETLIST_TOKYO.label)}歌單</h2>
-          <p id="setlist-desc"></p>
-        </div>
-
-        <div class="set-modes" role="group" aria-label="歌單查看方式">
-          <button class="set-mode" type="button" data-mode="order">演出順序<span class="set-mode-badge">劇透</span></button>
-          <button class="set-mode" type="button" data-mode="random">隨機順序</button>
-        </div>
-        <div class="set-order-confirm" id="set-order-confirm" role="group" aria-label="確認公開演出順序" hidden>
-          <p>演出順序將完整公開。</p>
-          <button type="button" id="set-order-cancel">取消</button>
-          <button type="button" id="set-order-reveal">公開順序</button>
-        </div>
-
-        <div class="set-shuffle" id="set-shuffle" hidden>
-          <span><b>已將順序打亂。</b>先看看有哪些歌曲，把順序留到演出當天揭曉吧。</span>
-          <button type="button" id="set-reshuffle">重新打亂</button>
-        </div>
-
-        <div class="setlist-meta">
-          <span id="setlist-count"></span>
-          <span id="setlist-mode-meta">劇透</span>
-        </div>
-
-        <ul class="set-list" id="set-list"></ul>
-
-        <p class="setlist-note" id="setlist-note"></p>
-      </section>
-    </div>
-  `;
-
-  document.getElementById("setlist-back-btn").addEventListener("click", ()=>{ location.hash = "#/"; });
-  document.getElementById("spoiler-safe").addEventListener("click", ()=>{ location.hash = "#/"; });
-
-  const body = document.getElementById("setlist-body");
-  const orderConfirm = document.getElementById("set-order-confirm");
-
-  /* 보기 방식을 고른 순간에만 목록 데이터를 만들고 표시한다. */
-  const reveal = (mode, smooth)=>{
-    setlistMode = (mode === "order") ? "order" : "random";
-    setlistRevealed = true;
-    paintSetlist();
-    body.hidden = false;
-    body.inert = false;
-    if (smooth !== false) body.scrollIntoView({ behavior:"smooth", block:"start" });
-  };
-
-  app.querySelectorAll(".spoiler-choice .spoiler-open").forEach(b=>{
-    b.addEventListener("click", ()=> reveal(b.dataset.mode));
-  });
-
-  // 이미 펼친 뒤 보기 방식을 바꿀 때
-  app.querySelectorAll(".set-mode").forEach(b=>{
-    b.addEventListener("click", ()=>{
-      if (b.dataset.mode === "order" && setlistMode !== "order"){
-        orderConfirm.hidden = false;
-        document.getElementById("set-order-cancel").focus();
-        return;
-      }
-      orderConfirm.hidden = true;
-      if (setlistMode === b.dataset.mode) return;
-      setlistMode = b.dataset.mode === "random" ? "random" : "order";
-      paintSetlist();
-    });
-  });
-  document.getElementById("set-order-cancel").addEventListener("click", ()=>{
-    orderConfirm.hidden = true;
-    app.querySelector('.set-mode[data-mode="order"]').focus();
-  });
-  document.getElementById("set-order-reveal").addEventListener("click", ()=>{
-    orderConfirm.hidden = true;
-    setlistMode = "order";
-    paintSetlist();
-    app.querySelector('.set-mode[data-mode="order"]').focus();
-  });
-  document.getElementById("set-reshuffle").addEventListener("click", ()=>{
-    makeSetlistShuffle();
-    paintSetlist();
-  });
-
-  /* 곱을 보고 '뒤로' 돌아온 경우 — 가림막과 스크롤 위치를 그대로 되살린다.
-     (보기 방식도 그대로라 실제 순서가 잠깐이라도 비치지 않는다)
-     홈까지 나갔다 온 경우에는 resetSetlistSpoiler() 가 이미 초기화해 둔다. */
-  if (setlistRevealed){
-    reveal(setlistMode, false);
-    if (setlistScrollY > 0){
-      const y = setlistScrollY;
-      // 글꼴·레이아웃이 늦게 잡히면 페이지가 짧아 위치가 잘리므로 몇 번 더 맞춘다
-      const restore = ()=>{
-        const max = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-        window.scrollTo(0, Math.min(y, max));
-      };
-      requestAnimationFrame(restore);
-      setTimeout(restore, 80);
-      setTimeout(restore, 260);
-    }
-  }
+  app.innerHTML = `<div class="guide-page"><div class="song-topbar"><button class="back-btn" id="pending-back" aria-label="返回首頁">${BACK_SVG}</button>${themeToggleHtml()}</div>
+    <section class="songs-section pending-page"><h1>高雄場歌單待確認</h1>
+    <p>本場為 Prema World Tour 首站，尚無已核實的本場演出歌單。</p><p>預習清單來自已發行專輯，不代表演出曲目或順序。</p>
+    <a class="info-book-link" href="#/guide">前往 19 首歌曲預習 →</a>
+    <p class="catalog-sources"><a href="${EVENT.ticketUrl}" target="_blank" rel="noopener">官方活動資訊 ↗</a> · 查核：${EVENT.checkedAt}</p>
+    </section>${siteFooterHtml(BUILD)}</div>`;
+  document.getElementById("pending-back").addEventListener("click", ()=>{ location.hash = "#/"; });
+}
+function renderConvertedLink(){
+  app.innerHTML = `<div class="guide-page"><section class="songs-section pending-page"><h1>本指南已轉換</h1>
+    <p>目前為藤井風高雄演唱會指南，原歌曲連結已不適用。</p>
+    <a class="info-book-link" href="#/guide">前往歌曲預習 →</a><a class="info-book-link" href="#/">返回首頁</a>
+    </section>${siteFooterHtml(BUILD)}</div>`;
 }
 
-/* 알약 안의 두 글자를 바꿔 준다. clock 을 비우면 왼쪽 글자만 크게 보인다. */
 function setPill(dday, clock, mode){
   const pill  = document.querySelector(".cd-pill");
   const dEl   = document.getElementById("cd-dday");
@@ -1448,66 +847,31 @@ function markShowRows(liveIdx, nextIdx){
 /* ── 今日的行程 ─────────────────────────────────────────────
    台北時間 기준으로 오늘이 공연날이면 카드가 나타나고,
    지금 어느 단계인지와 다음 단계까지 남은 시간을 1초마다 갱신한다. */
-function taipeiDateKey(d){
-  return new Intl.DateTimeFormat("en-CA", {
-    timeZone:"Asia/Taipei", year:"numeric", month:"2-digit", day:"2-digit"
-  }).format(d);
-}
-/* 台北日期 기준으로 두 시점이 며칠 차이인지 (오늘=0, 내일=1) */
-function taipeiDayGap(from, to){
-  const ymd = (t)=>{
-    const k = taipeiDateKey(new Date(t));
-    return Date.UTC(+k.slice(0,4), +k.slice(5,7) - 1, +k.slice(8,10));
-  };
-  return Math.max(0, Math.round((ymd(to) - ymd(from)) / 86400000));
-}
-
-let todayBuiltKey = null;
 function updateTodayCard(now){
   const card = document.getElementById("today-card");
   if (!card) return;
-  const key   = taipeiDateKey(new Date(now));
-  const steps = SHOW_TIMELINE[key];
-  if (!steps){ card.hidden = true; todayBuiltKey = null; return; }
-  card.hidden = false;
-
-  const times   = steps.map(v => new Date(`${key}T${v.t}:00+09:00`).getTime());
-  const nextIdx = times.findIndex(t => t > now);
-  const curIdx  = nextIdx === -1 ? steps.length - 1 : nextIdx - 1;
-
-  if (todayBuiltKey !== key){
-    todayBuiltKey = key;
-    const d = new Date(`${key}T12:00:00+09:00`);
-    const dow = ["日","一","二","三","四","五","六"][d.getDay()];
-    document.getElementById("today-title").textContent =
-      `今日演出・${Number(key.slice(5,7))}/${Number(key.slice(8,10))}（${dow}）`;
-  }
-  document.getElementById("today-list").innerHTML = steps.map((v,i)=>{
-    const cls = i < curIdx ? "past" : (i === curIdx ? "now" : "");
-    return `<li class="${cls}"><span class="t">${v.t}</span><span class="l">${escapeHtml(v.label)}</span></li>`;
-  }).join("");
-
-  const nowEl = document.getElementById("today-now");
-  if (nextIdx === -1){
-    nowEl.innerHTML = `<b>今天的演出已全部結束。</b>辛苦了！`;
-    return;
-  }
-  const diff = times[nextIdx] - now;
-  const h = Math.floor(diff/3600000), m = Math.floor(diff%3600000/60000), sec = Math.floor(diff%60000/1000);
-  const left = h > 0 ? `${h} 小時 ${pad(m)} 分 ${pad(sec)} 秒` : `${m} 分 ${pad(sec)} 秒`;
-  const cur  = curIdx >= 0 ? `<b>${escapeHtml(steps[curIdx].label)}</b>進行中<br>` : "";
-  nowEl.innerHTML = `${cur}距離${escapeHtml(steps[nextIdx].label)}還有 <span class="left">${left}</span>`;
+  const { steps, times, nextIndex, currentIndex } = todayTimeline(now);
+  card.hidden = !steps.length;
+  if (!steps.length) return;
+  document.getElementById("today-title").textContent = "今日演出 · 10/31（六）";
+  document.getElementById("today-list").innerHTML = steps.map((step,index)=>
+    `<li class="${index < currentIndex ? "past" : index === currentIndex ? "now" : ""}"><span class="t">${step.t}</span><span class="l">${step.label}</span></li>`).join("");
+  const status = document.getElementById("today-now");
+  if (nextIndex === -1){ status.textContent = "已開演 · 散場時間以現場安排為準"; return; }
+  const diff = times[nextIndex] - now;
+  const hours = Math.floor(diff / 3600000), minutes = Math.floor(diff % 3600000 / 60000), seconds = Math.floor(diff % 60000 / 1000);
+  const showStatus = showState(now).phase === "started" ? "已開演 · 實際散場以現場安排為準。" : "";
+  status.textContent = `${showStatus}距離${steps[nextIndex].label}還有 ${hours ? hours + " 小時 " : ""}${pad(minutes)} 分 ${pad(seconds)} 秒`;
 }
 
-/* ── 준비물 체크 · 주소 복사 · 공유 · 오프라인 상태 ───────────── */
 function setupHomeExtras(){
   // 分享按鈕位於首頁常駐內容，直接在初始化時接線。
   const shareBtn = document.getElementById("share-btn");
   if (shareBtn){
     shareBtn.addEventListener("click", async ()=>{
       const data = {
-        title: "VAUNDY \"HORO\" TAIPEI 應援指南",
-        text: "搭配影片查看各曲歌詞與大合唱、拍手、揮手重點",
+        title: SITE.title,
+        text: SITE.description,
         url: location.href.split("#")[0]
       };
       try {
@@ -1526,7 +890,7 @@ function setupAddressCopy(){
   if (!copyBtn || copyBtn.dataset.wired === "1") return;
   copyBtn.dataset.wired = "1";
   copyBtn.addEventListener("click", async ()=>{
-    const addr = "105037 臺北市松山區南京東路4段2號 台北小巨蛋 Taipei Arena";
+    const addr = EVENT.address + " " + EVENT.venue;
     try { await navigator.clipboard.writeText(addr); copyBtn.textContent = "已複製 ✓"; }
     catch(e){ copyBtn.textContent = addr; }
     setTimeout(()=>{ copyBtn.textContent = "複製地址"; }, 1600);
@@ -1575,7 +939,7 @@ function paintSongList({ eager = false } = {}){
       if (!btn || !ul.contains(btn)) return;
       const target = SONGS.find(x => x.id === btn.dataset.id);
       if (!target) return;
-      setSongFrom("guide");     // 여기서 들어왔으니 '뒤로'는 곡 목록으로
+
       gotoSong(target);
     });
     ul.addEventListener("focusin", ()=>songListComplete?.());
@@ -1589,7 +953,7 @@ function paintSongList({ eager = false } = {}){
       <li data-no="${songNo(s)}">
         <button class="song-row" data-id="${escapeHtml(s.id)}">
           <span class="song-num">${pad(songNo(s))}</span>
-          <span class="song-title">${renderSongTitle(s.title)}</span>
+          <span class="song-title">${songSort === "default" && (songNo(s) === 1 || songNo(s) === 10) ? `<span class="song-album-label">${ALBUMS[s.album].title}</span>` : ""}${renderSongTitle(s.title)}</span>
           ${includeMarks ? songMarksHtml(s) : '<span class="song-marks song-marks-placeholder" aria-hidden="true"></span>'}
         </button>
       </li>`).join("");
@@ -1717,48 +1081,20 @@ function setupSongSearch(){
 }
 
 function startCountdown(){
-  const shows = SHOW_SCHEDULE.map(v => ({
-    start: new Date(v.start).getTime(),
-    end:   new Date(v.end).getTime()
-  }));
-  const finalEnd = shows[shows.length - 1].end;
-
   function tick(){
-    const box = document.getElementById("countdown");
-    if (!box) { stopCountdown(); return; }
-
-    const now     = Date.now();
-    updateTodayCard(now);                                                  // 공연 당일이면 오늘 일정 갱신
-    const liveIdx = shows.findIndex(v => now >= v.start && now < v.end);   // 진행 중인 공연
-    const nextIdx = shows.findIndex(v => v.start > now);                   // 아직 시작 전인 첫 공연
-    markShowRows(liveIdx, nextIdx);
-
-    if (liveIdx !== -1){                 // 공연 진행 중 (토·일 모두)
-      setPill("現在", "直播中", "live");
-      return;
+    if (!document.getElementById("countdown")) { stopCountdown(); return; }
+    const now = Date.now(), state = showState(now);
+    updateTodayCard(now);
+    markShowRows(state.phase === "started" ? 0 : -1, state.phase === "upcoming" ? 0 : -1);
+    if (state.phase === "past"){ setPill("演出日期已過", "", "end"); stopCountdown(); }
+    else if (state.phase === "started"){ setPill("已開演", "", "live"); }
+    else {
+      const hours = Math.floor(state.remaining / 3600000), minutes = Math.floor(state.remaining % 3600000 / 60000), seconds = Math.floor(state.remaining % 60000 / 1000);
+      setPill(`D-${pad(state.days)}`, `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`, "count");
     }
-    if (nextIdx === -1){                 // 남은 공연 없음
-      if (now >= finalEnd){
-        setPill("結束", "", "end");
-        stopCountdown();
-      }
-      return;
-    }
-
-    const diff = shows[nextIdx].start - now;
-    // D-day 以台北日期計算剩餘天數。
-    // 남은 시간을 24로 나누면, 공연이 내일이어도 20시간 남았을 때 D-00 이 되어
-    // '오늘이 공연날'로 잘못 읽힌다. 날짜끼리 빼야 내일은 D-01 이 된다.
-    const d = taipeiDayGap(now, shows[nextIdx].start);
-    // 시:분:초는 시작까지 남은 전체 시간 (D-01 이면 24시간을 넘을 수 있다)
-    const h = Math.floor(diff/3600000);
-    const m = Math.floor(diff%3600000/60000);
-    const s = Math.floor(diff%60000/1000);
-    setPill(`D-${pad(d)}`, `${pad(h)}:${pad(m)}:${pad(s)}`, "count");
   }
-
   tick();
-  countdownTimer = setInterval(tick, 1000);
+  if (showState().phase !== "past") countdownTimer = setInterval(tick, 1000);
 }
 function stopCountdown(){ if(countdownTimer){ clearInterval(countdownTimer); countdownTimer=null; } }
 
@@ -1842,62 +1178,29 @@ let songShellBuilt = false;
    셋리스트에서 들어왔으면 전체 곡이 아니라 셋리스트에 있는 곡만,
    셋리스트 화면에서 보던 그 순서 그대로 보여 준다.
    (랜덤 모드면 섞여 있던 그 순서) */
-function sheetSongs(){
-  if (songFrom === "setlist"){
-    const list = setlistNavList();
-    if (list.length){
-      const out = list.map(x => SONGS.find(s => s.id === x.id)).filter(Boolean);
-      if (out.length) return out;
-    }
-  }
-  return sortedSongs();
-}
+function sheetSongs(){ return sortedSongs(); }
 
-/* 이전/다음 곡의 순서는 "어디서 들어왔는지"에 따라 달라진다.
-   · 셋리스트에서 들어왔으면 → 셋리스트에서 보던 그 순서 그대로
-     (공연 순서 모드면 공연 순서, 랜덤 모드면 섞여 있던 그 순서)
-   · 곡 목록에서 들어왔으면  → 곡 목록에서 고른 정렬 순서 */
 function songNeighbors(song){
-  if (songFrom === "setlist"){
-    const list = setlistNavList();
-    if (list.length){
-      let pos = setlistPos;
-      // 기억해 둔 자리가 어긋났으면(모드를 바꿨다거나) 곡으로 다시 찾는다
-      if (!(pos >= 0 && pos < list.length && list[pos].id === song.id))
-        pos = list.findIndex(x => x.id === song.id);
-      if (pos >= 0){
-        const pi = (pos - 1 + list.length) % list.length;
-        const ni = (pos + 1) % list.length;
-        const at = (i)=> SONGS.find(s => s.id === list[i].id) || song;
-        return { idx: pos, prev: at(pi), next: at(ni), pos, prevPos: pi, nextPos: ni };
-      }
-    }
-  }
   const list = sortedSongs();
-  const idx = list.findIndex(s => s.id === song.id);
-  if (idx < 0) return { idx: -1, prev: song, next: song };
+  const idx = list.findIndex(item => item.id === song.id);
   return {
     idx,
-    prev: list[(idx - 1 + list.length) % list.length],
-    next: list[(idx + 1) % list.length]
+    prev: list[(Math.max(0, idx) - 1 + list.length) % list.length],
+    next: list[(Math.max(0, idx) + 1) % list.length],
   };
 }
 
-/* 이전(-1) · 다음(+1) 곡으로 넘어간다.
-   셋리스트에서 들어온 경우에는 "지금 몇 번째인지"도 같이 옮겨 준다. */
 function goNeighbor(dir){
   if (!currentSong) return;
   const n = songNeighbors(currentSong);
   const target = dir < 0 ? n.prev : n.next;
-  const nextPos = dir < 0 ? n.prevPos : n.nextPos;
-  if (nextPos !== undefined) setSetlistPos(nextPos);
   gotoSong(target);
 }
 
 function buildSongShell(){
   if (songShellBuilt) return;
   songShellBuilt = true;
-  venueMode = store("horo-venue") === "1";   // 지난번 설정 그대로
+  venueMode = store("kaze-venue") === "1";   // 지난번 설정 그대로
 
   songView.innerHTML = `
     <div class="song-page" id="song-page">
@@ -1933,10 +1236,17 @@ function buildSongShell(){
                 <span class="karaoke-source-status" id="karaoke-source-status" role="status" aria-live="polite">
                   <span id="karaoke-source-status-text"></span>
                   <span class="lyrics-credit" id="lyrics-credit" hidden></span>
-                  ${chantSourceInfoHtml()}
+
                 </span>
               </details>
-              <div class="video-status" id="video-status" role="status">正在載入影片…</div>
+              <div class="video-status" id="video-status" role="status" aria-live="polite" aria-atomic="true">
+                <span id="video-status-text">正在載入播放器…</span>
+                <span class="video-status-actions">
+                  <button id="video-start" type="button" hidden>播放影片</button>
+                  <button id="video-retry" type="button" hidden>重新載入播放器</button>
+                  <a id="video-open" href="#" target="_blank" rel="noopener" hidden>在 YouTube 觀看 ↗</a>
+                </span>
+              </div>
             </div>
           </div>
 
@@ -1950,13 +1260,12 @@ function buildSongShell(){
             <span class="legend-item"><span class="legend-icon chant">${INLINE_ICONS.mic}</span>大合唱</span>
             <span class="legend-item"><span class="legend-icon clap">${INLINE_ICONS.clap}</span>拍手</span>
             <span class="legend-item"><span class="legend-icon wave">${INLINE_ICONS.wave}</span>揮手</span>
-            <button type="button" class="chant-notes-toggle" id="chant-notes-toggle" aria-expanded="false" aria-controls="chant-notes" title="查看這首歌的日本版應援提示" hidden>
+            <button type="button" class="chant-notes-toggle" id="chant-notes-toggle" aria-expanded="false" aria-controls="chant-notes" title="查看這首歌的已核實的應援提示" hidden>
               <span class="chant-notes-label">應援說明</span><span class="chant-notes-chevron" aria-hidden="true">${CHEVRON_SVG}</span>
             </button>
           </div>
           <div class="chant-notes-panel" id="chant-notes" hidden>
             <ul class="chant-notes-list" id="chant-notes-list"></ul>
-            <a href="${CHANT_REFERENCE_URL}" target="_blank" rel="noopener">Canva《VAUNDY 應援教學》↗</a>
           </div>
         </div>
 
@@ -1982,6 +1291,7 @@ function buildSongShell(){
           </div>
 
           <div class="lyrics-scroll">
+            <div class="song-content-status" id="song-content-status" role="status"></div>
             <p class="lyrics-hidden-message" role="status" aria-live="polite" hidden>歌詞已隱藏</p>
             <ul class="lyrics-list" id="lyrics-list"></ul>
           </div>
@@ -2004,11 +1314,6 @@ function buildSongShell(){
           <span class="chant-ico">${STATIC_MIC_SVG}</span>
           <span class="venue-label">只聽大合唱</span>
         </button>
-        <button class="venue-toggle chant-version-toggle" id="chant-version-btn" data-chant-version-toggle aria-pressed="false" aria-label="切換應援版本">
-          <span class="venue-label venue-label-desktop">應援版</span>
-          <span class="venue-label venue-label-mobile" aria-hidden="true">應援</span>
-          <span class="chant-version-value">${chantVersionIcon()}</span>
-        </button>
         <button class="venue-toggle" id="venue-btn" aria-label="開啟／關閉簡潔模式">
           <span class="venue-label">簡潔</span>
           <span class="venue-switch"><span class="venue-knob"></span></span>
@@ -2018,9 +1323,9 @@ function buildSongShell(){
           <span class="reading-value reading-value-desktop" id="reading-value">${readingModeLabel()}</span>
           <span class="reading-value reading-value-mobile" id="reading-value-mobile" aria-hidden="true">${readingModeShortLabel()}</span>
         </button>
-        <button class="venue-toggle display-toggle${showJapanese ? " active" : ""}" id="japanese-toggle" aria-pressed="${showJapanese ? "true" : "false"}" aria-label="切換日文歌詞：目前${showJapanese ? "顯示" : "隱藏"}">
-          <span class="venue-label venue-label-desktop">日文</span>
-          <span class="venue-label venue-label-mobile" aria-hidden="true">日</span>
+        <button class="venue-toggle display-toggle${showJapanese ? " active" : ""}" id="japanese-toggle" aria-pressed="${showJapanese ? "true" : "false"}" aria-label="切換原文歌詞：目前${showJapanese ? "顯示" : "隱藏"}">
+          <span class="venue-label venue-label-desktop">原文</span>
+          <span class="venue-label venue-label-mobile" aria-hidden="true">原</span>
           <span class="venue-switch"><span class="venue-knob"></span></span>
         </button>
         <button class="venue-toggle display-toggle${showChinese ? " active" : ""}" id="chinese-toggle" aria-pressed="${showChinese ? "true" : "false"}" aria-label="切換繁中翻譯：目前${showChinese ? "顯示" : "隱藏"}">
@@ -2078,7 +1383,9 @@ function buildSongShell(){
     });
   }
 
-  document.getElementById("song-back-btn").addEventListener("click", ()=>{ location.hash = songBackHash(); });
+  document.getElementById("song-back-btn").addEventListener("click", ()=>{ location.hash = "#/guide"; });
+  document.getElementById("video-start").addEventListener("click", togglePlayback);
+  document.getElementById("video-retry").addEventListener("click", retryVideo);
 
   // 이전/다음 곡 — 탭한 그 순간(사용자 제스처 안에서) 바로 재생을 시작시킨다
   document.getElementById("prev-song").addEventListener("click", ()=>{ goNeighbor(-1); });
@@ -2100,10 +1407,7 @@ function buildSongShell(){
     if (!target || (currentSong && target.id === currentSong.id)) return;
     // 셋리스트에서 들어온 경우, 목록 순서가 곧 셋리스트 순서이므로
     // 지금 몇 번째인지도 같이 옮겨 둔다 (이전/다음 곡이 이어지도록)
-    if (songFrom === "setlist"){
-      const pos = parseInt(item.dataset.pos, 10);
-      if (Number.isFinite(pos)) setSetlistPos(pos);
-    }
+
     gotoSong(target);
   });
 
@@ -2158,6 +1462,7 @@ function buildSongShell(){
   document.getElementById("lyrics-list").addEventListener("click", (e)=>{
     const btn = e.target.closest(".lyric-line");
     if (!btn) return;
+    if (!songCapabilities(currentSong).timed) return;
     seekTo(Number(btn.dataset.time));
     // 떼창만 듣기 중에는 탭한 자리에서 판단을 다시 하도록 잠깐 여유를 준다
     if (chantOnly){ chantDone = false; chantExpect(Number(btn.dataset.time)); }
@@ -2191,33 +1496,33 @@ function buildSongShell(){
 
   document.getElementById("venue-btn").addEventListener("click", (e)=>{
     venueMode = !venueMode;
-    store("horo-venue", venueMode ? "1" : "");
+    store("kaze-venue", venueMode ? "1" : "");
     applyVenueMode();
   });
 
   document.getElementById("reading-btn").addEventListener("click", ()=>{
     const current = READING_MODES.indexOf(readingMode);
     readingMode = READING_MODES[(current + 1) % READING_MODES.length];
-    store("horo-reading", readingMode);
+    store("kaze-reading", readingMode);
     updateReadingUi();
     repaintJapaneseReadings();
   });
 
   document.getElementById("japanese-toggle").addEventListener("click", ()=>{
     showJapanese = !showJapanese;
-    store("horo-show-japanese", showJapanese ? "1" : "0");
+    store("kaze-show-japanese", showJapanese ? "1" : "0");
     updateLyricDisplayUi();
   });
 
   document.getElementById("chinese-toggle").addEventListener("click", ()=>{
     showChinese = !showChinese;
-    store("horo-show-chinese", showChinese ? "1" : "0");
+    store("kaze-show-chinese", showChinese ? "1" : "0");
     updateLyricDisplayUi();
   });
 
   document.getElementById("karaoke-btn").addEventListener("click", ()=>{
     karaokeEnabled = !karaokeEnabled;
-    store("horo-karaoke", karaokeEnabled ? "1" : "0");
+    store("kaze-karaoke", karaokeEnabled ? "1" : "0");
     updateKaraokeUi();
   });
 
@@ -2268,55 +1573,6 @@ let chantWaitUntil  = 0;       // 여기까지도 못 가면 포기하고 그냥
 
 function currentChantBlocks(){ return chantBlocks(currentSong); }
 
-function repaintChantVersionLines(song = currentSong){
-  const list = document.getElementById("lyrics-list");
-  if (!list || !song || !Array.isArray(song.lyrics)) return;
-  list.querySelectorAll(".lyric-line").forEach(line => {
-    const index = Number(line.dataset.idx);
-    const lyric = song.lyrics[index];
-    if (!lyric) return;
-    const chantClass = chantLineClass(lyric, song);
-    line.classList.toggle("is-chant", chantClass.split(" ").includes("is-chant"));
-    line.classList.toggle("chant-partial", chantClass.split(" ").includes("chant-partial"));
-    line.classList.toggle("has-chant-segment", chantClass.split(" ").includes("has-chant-segment"));
-    const icons = line.querySelector(".lyric-icons");
-    if (icons) icons.innerHTML = lyricIconsHtml(lyric, song);
-  });
-}
-
-function setChantVersion(next){
-  if (next !== "jp" && next !== "kr" || next === chantVersion) {
-    applyChantVersionUi();
-    return;
-  }
-
-  chantVersion = next;
-  store("horo-chant-version", chantVersion);
-  songMarksCache.clear();
-  jpChantTimeCache.clear();
-  chantBlockCache.clear();
-  chantIdx = -1;
-  chantDone = false;
-  chantWantSec = null;
-  chantWaitUntil = 0;
-  applyChantVersionUi();
-
-  if (currentSong) {
-    repaintChantVersionLines(currentSong);
-    renderChantVersionNote(currentSong);
-    renderChantNotes(currentSong);
-    syncChantUi();
-    paintChantBar();
-    if (chantOnly && currentChantBlocks().length) jumpToChant(0);
-    else if (isSongViewActive()) updateLyricsSync(true);
-  }
-
-  if (document.getElementById("song-list")) paintSongList();
-}
-
-/* 화면(버튼·흐리게 처리)을 지금 상태에 맞춘다.
-   떼창이 아예 없는 곡에서는 흐리게 처리를 하지 않는다 — 안 그러면
-   가사 전체가 흐려져서 읽을 수가 없다. */
 function syncChantUi(){
   const page = document.getElementById("song-page");
   if (page) page.classList.toggle("chant-only", chantOnly && currentChantBlocks().length > 0);
@@ -2447,8 +1703,8 @@ function skipPart(d){
    (모바일은 사용자 제스처 안에서 시작한 재생만 소리를 허용하기 때문) */
 function gotoSong(song){
   if (!song) return;
-  playVideoFor(song.youtubeId);
   location.hash = `#/song/${song.id}`;
+  if (song.youtubeId) playVideoFor(song.youtubeId);
 }
 
 function isSongViewActive(){
@@ -2492,12 +1748,23 @@ function showSongLyricsLoadIssue(renderToken, message){
 
   item.append(copy, retry);
   list.replaceChildren(item);
+}
 
-  const status = document.getElementById("video-status");
-  if (status){
-    status.hidden = false;
-    status.textContent = message;
-  }
+function updateSongContentUi(song){
+  const caps = songCapabilities(song);
+  const page = document.getElementById("song-page");
+  page.classList.toggle("untimed-lyrics", !caps.timed);
+  const status = document.getElementById("song-content-status");
+  const preview = song.timingStatus === "preview";
+  status.innerHTML = `<p>${caps.hasOriginal ? (song.lyricsStatus === "partial" ? "原文歌詞部分整理" : song.lyricsStatus === "imported" ? "原文歌詞已匯入" : "原文歌詞已整理") : "原文歌詞整理中"} · ${caps.translationComplete ? "繁中翻譯已整理" : caps.hasTranslation ? "繁中翻譯部分整理" : "繁中翻譯整理中"}<br>${preview && caps.timed ? "LRC 時間試播・待校正" : caps.timed ? "同步時間已整理" : "同步時間整理中"}${song.readingsStatus === "pending" ? " · 日文讀音待整理" : ""}</p>
+    ${!caps.hasOriginal ? "<p>先聆聽官方影片，歌詞將分批補齊。</p>" : ""}
+    <a href="${song.sourceUrl}" target="_blank" rel="noopener">官方專輯與曲目資訊 ↗</a>`;
+  const notes = document.querySelector(".lyrics-note-copy");
+  if (notes) notes.textContent = preview && caps.timed ? "依 LRC 時間逐句試播；點歌詞跳轉，記下不同步的歌名與時間。" : caps.timed ? "點選歌詞跳至影片位置，歌詞隨影片同步。" : caps.hasOriginal ? "目前提供原文閱讀，同步時間整理中。" : "歌詞整理中，可先聆聽官方影片。";
+  document.getElementById("watch-on-yt").href = song.listenUrl;
+  document.querySelector(".lyrics-legend").hidden = !chantGuideFor(song);
+  document.getElementById("chant-btn").hidden = !chantGuideFor(song);
+  document.getElementById("autoscroll-btn").disabled = !caps.timed;
 }
 
 function renderSong(song){
@@ -2508,17 +1775,18 @@ function renderSong(song){
     currentSong = song;
     const { prev, next } = songNeighbors(song);
     const page = document.getElementById("song-page");
+    updateSongContentUi(song);
     document.getElementById("song-page-heading").textContent = song.title;
     document.getElementById("song-picker-number").textContent = `${pad(songNo(song))}.`;
     document.getElementById("song-picker-title").innerHTML = renderSongTitle(song.title);
     document.getElementById("prev-song").title = `上一首：${prev.title}`;
     document.getElementById("next-song").title = `下一首：${next.title}`;
     document.getElementById("lyrics-list").innerHTML = "";
-    document.getElementById("video-status").textContent = "正在載入歌詞…";
     page?.classList.remove("song-ready");
     songView.classList.remove("offstage");
     songView.inert = false;
     app.style.display = "none";
+    openSongVideo(song);
 
     const lyricsLoadTimer = window.setTimeout(() => {
       showSongLyricsLoadIssue(
@@ -2540,7 +1808,7 @@ function renderSong(song){
     return;
   }
 
-  loadFurigana().then(()=>{
+  if (song.language === "ja") loadFurigana().then(()=>{
     if (currentSong === song) repaintJapaneseReadings();
   });
 
@@ -2551,7 +1819,8 @@ function renderSong(song){
   karaokeTiming = null;
   // 떼창만 듣기는 곡을 옮겨도 켜진 채로 — 구간 번호만 새 곡 기준으로 다시
   chantIdx = -1; chantDone = false; chantWantSec = null; chantWaitUntil = 0;
-  startActiveGuard();          // 여러 줄이 켜지는 일이 없도록 지켜본다
+  if (songCapabilities(song).timed) startActiveGuard();
+  else stopActiveGuard();          // 여러 줄이 켜지는 일이 없도록 지켜본다
   hideTipPic();                 // 곡을 바꾸면 짤방도 초기화
   if (scrollRafId !== null) { cancelAnimationFrame(scrollRafId); scrollRafId = null; }
 
@@ -2568,15 +1837,15 @@ function renderSong(song){
   if (lyricsCredit) {
     const hasCredit = Boolean(song.translationCredit);
     if (hasCredit) {
-      const creditUrl = song.translationCreditUrl || TRANSLATION_CREDIT_URL;
+      const creditUrl = song.translationCreditUrl || song.sourceUrl;
       const creditLink = `<a href="${creditUrl}" target="_blank" rel="noopener">${escapeHtml(song.translationCredit)}</a>`;
-      const sourceLink = song.translationSourceUrl
+      const sourceLink = song.translationSourceUrl && song.translationSourceUrl !== creditUrl
         ? ` · <a href="${song.translationSourceUrl}" target="_blank" rel="noopener">出處</a>`
         : "";
       const licenseLink = song.translationLicenseUrl
         ? ` · <a href="${song.translationLicenseUrl}" target="_blank" rel="noopener">${escapeHtml(song.translationLicense || "授權")}</a>`
         : "";
-      lyricsCredit.innerHTML = `中譯歌詞作者：${creditLink}${sourceLink}${licenseLink}`;
+      lyricsCredit.innerHTML = `${song.translationCreditRole === "source" ? "中文譯詞來源" : "中譯歌詞作者"}：${creditLink}${sourceLink}${licenseLink}`;
     } else {
       lyricsCredit.innerHTML = "";
     }
@@ -2585,30 +1854,33 @@ function renderSong(song){
   // 어디서 들어왔는지에 따라 '뒤로' 버튼의 안내 글을 바꾼다
   const backBtn = document.getElementById("song-back-btn");
   if (backBtn){
-    const label = songFrom === "setlist" ? "返回歌單" : "返回歌曲清單";
+    const label = "返回歌曲預習";
     backBtn.title = label;
     backBtn.setAttribute("aria-label", label);
   }
   document.getElementById("prev-song").title = `上一首：${prev.title}`;
   document.getElementById("next-song").title = `下一首：${next.title}`;
   document.getElementById("watch-on-yt").href =
-    `https://www.youtube.com/watch?v=${encodeURIComponent(song.youtubeId)}`;
+    song.listenUrl;
 
+  const capabilities = songCapabilities(song);
+  updateSongContentUi(song);
   document.getElementById("lyrics-list").innerHTML = song.lyrics.map((l,i)=>`
     <li>
-      <button class="lyric-line ${chantLineClass(l, song)}" data-time="${l.time}" data-idx="${i}">
+      <${capabilities.timed ? "button" : "div"} class="lyric-line ${chantLineClass(l, song)}" data-time="${capabilities.timed ? l.time : ""}" data-idx="${i}">
         <span class="lyric-icons">${lyricIconsHtml(l, song)}</span>
         <span class="lyric-body">
-          <span class="lyric-jp" lang="ja">${renderJapaneseLyricLine(l, song)}</span>
-          <span class="lyric-romaji" lang="ja-Latn">${readingMode === "both" ? renderRomajiLyricLine(l, song) : ""}</span>
+          ${song.timingStatus === "preview" ? `<span class="lyric-timestamp">${formatPlaybackTime(l.time)}</span>` : ""}
+          <span class="lyric-jp" lang="${song.language || "ja"}">${song.language === "en" ? withIcons(l.jp) : renderJapaneseLyricLine(l, song)}</span>
+          <span class="lyric-romaji" lang="ja-Latn">${song.language === "ja" && readingMode === "both" ? renderRomajiLyricLine(l, song) : ""}</span>
           <span class="lyric-zh">${withIcons(l.tr || "")}</span>
         </span>
-      </button>
+      </${capabilities.timed ? "button" : "div"}>
     </li>`).join("");
   document.querySelectorAll("#lyrics-list .lyric-line").forEach(line => {
     markLyricChantSegments(line, song.lyrics[Number(line.dataset.idx)]);
   });
-  decorateKaraokeLines(song);
+  if (capabilities.timed) decorateKaraokeLines(song);
   setKaraokeSourceStatus("loading", "歌詞逐字時間：正在尋找開源時間碼…");
 
   document.getElementById("song-sheet-list").innerHTML = sheetSongs().map((s, i)=>`
@@ -2622,7 +1894,7 @@ function renderSong(song){
 
   const sheetTitle = document.getElementById("song-sheet-title");
   if (sheetTitle) sheetTitle.textContent =
-    songFrom === "setlist" ? "歌單歌曲" : "選擇歌曲";
+    "選擇預習歌曲";
 
   closeSongSheet();
   applySheetFilter();
@@ -2632,8 +1904,8 @@ function renderSong(song){
   songView.inert = false;
   app.style.display = "none";
 
-  applyChantVersionUi();
-  renderChantVersionNote(song);
+
+
   renderChantNotes(song);
   syncChantUi();                         // 떼창만 듣기 상태 반영
   paintChantBar();
@@ -2647,12 +1919,9 @@ function renderSong(song){
   const scroller = songView.querySelector(".lyrics-scroll");
   if (scroller) scroller.scrollTop = 0;
 
-  showVideoStatus();
-  loadYouTubeApi();
-  ensurePlayer();
-  ensurePlaying(song.youtubeId);
+  openSongVideo(song);
   loadKaraokeTiming(song);
-  scheduleJapaneseFontLoad(songJapaneseFontText(song), [400, 500, 700]);
+  if (song.language === "ja") scheduleJapaneseFontLoad(songJapaneseFontText(song), [400, 500, 700]);
 }
 
 /* 보이는 가사 줄에만 .in-view 를 붙여, 화면 밖 아이콘 애니메이션은 멈춰 둔다.
@@ -2733,10 +2002,12 @@ function updateReadingUi(){
   const label = readingModeLabel();
   const shortLabel = readingModeShortLabel();
   const page = document.getElementById("song-page");
-  if (page) page.classList.toggle("reading-both", readingMode === "both");
+  if (page) page.classList.toggle("reading-both", readingMode === "both" && songCapabilities(currentSong).readings);
   if (value) value.textContent = label;
   if (shortValue) shortValue.textContent = shortLabel;
   if (btn){
+    btn.hidden = currentSong?.language !== "ja";
+    btn.disabled = !songCapabilities(currentSong).readings;
     btn.classList.toggle("active", readingMode !== "kana");
     btn.setAttribute("aria-pressed", readingMode !== "kana" ? "true" : "false");
     btn.setAttribute("aria-label", `切換日文讀音：目前顯示${label}`);
@@ -2755,12 +2026,14 @@ function updateLyricDisplayUi(){
 
   const japaneseBtn = document.getElementById("japanese-toggle");
   if (japaneseBtn){
+    japaneseBtn.disabled = !songCapabilities(currentSong).hasOriginal;
     japaneseBtn.classList.toggle("active", showJapanese);
     japaneseBtn.setAttribute("aria-pressed", showJapanese ? "true" : "false");
-    japaneseBtn.setAttribute("aria-label", `切換日文歌詞：目前${showJapanese ? "顯示" : "隱藏"}`);
+    japaneseBtn.setAttribute("aria-label", `切換原文歌詞：目前${showJapanese ? "顯示" : "隱藏"}`);
   }
   const chineseBtn = document.getElementById("chinese-toggle");
   if (chineseBtn){
+    chineseBtn.disabled = !songCapabilities(currentSong).hasTranslation;
     chineseBtn.classList.toggle("active", showChinese);
     chineseBtn.setAttribute("aria-pressed", showChinese ? "true" : "false");
     chineseBtn.setAttribute("aria-label", `切換繁中翻譯：目前${showChinese ? "顯示" : "隱藏"}`);
@@ -2770,15 +2043,18 @@ function updateLyricDisplayUi(){
 }
 
 function updateKaraokeUi(){
+  const effectiveKaraoke = karaokeEnabled && songCapabilities(currentSong).timed && currentSong?.timingStatus !== "preview";
+  const timingButton = document.getElementById("karaoke-btn");
+  if (timingButton) timingButton.disabled = !songCapabilities(currentSong).timed || currentSong?.timingStatus === "preview";
   const page = document.getElementById("song-page");
   if (!page) return;
-  page.classList.toggle("karaoke-off", !karaokeEnabled);
+  page.classList.toggle("karaoke-off", !effectiveKaraoke);
 
   const btn = document.getElementById("karaoke-btn");
   if (btn){
-    btn.classList.toggle("active", karaokeEnabled);
-    btn.setAttribute("aria-pressed", karaokeEnabled ? "true" : "false");
-    btn.setAttribute("aria-label", `切換逐字卡拉OK高亮：目前${karaokeEnabled ? "開啟" : "關閉"}`);
+    btn.classList.toggle("active", effectiveKaraoke);
+    btn.setAttribute("aria-pressed", effectiveKaraoke ? "true" : "false");
+    btn.setAttribute("aria-label", `切換逐字卡拉OK高亮：目前${effectiveKaraoke ? "開啟" : "關閉"}`);
   }
 
   if (!karaokeEnabled){
@@ -2826,15 +2102,17 @@ function leaveSongView(){
   stopSyncTimer();
   stopActiveGuard();
   pendingVideoId = null;
+  clearTimeout(videoStatusTimer);
+  setVideoState("idle");
   closeSongSheet();
   hideTipPic();
   if (lyricObserver){ lyricObserver.disconnect(); lyricObserver = null; }
   releaseWakeLock();
   documentPip.close();
+  if (songShellBuilt) songView.classList.add("offstage");
   if (player && typeof player.pauseVideo === 'function') {
     try { player.pauseVideo(); } catch(e){}
   }
-  if (songShellBuilt) songView.classList.add("offstage");
   songView.inert = true;
   app.style.display = "";
 }
@@ -3061,6 +2339,8 @@ function readingModeShortLabel(mode = readingMode){
 }
 
 function renderJapaneseLine(str){
+  if (currentSong?.language === "en") return withIcons(str);
+  if (!songCapabilities(currentSong).readings) return withIcons(str);
   return readingMode === "romaji" ? renderRomajiLine(str) : renderKanaLine(str);
 }
 
@@ -3168,6 +2448,7 @@ function renderJapaneseLyricLine(line, song = currentSong){
 }
 
 function renderRomajiLyricLine(line, song = currentSong){
+  if (!songCapabilities(song).readings) return "";
   const source = line && line.jp || "";
   return renderChantAwareLine(source, line, song, text => renderRomajiLine(text, false), "romaji");
 }
@@ -3425,15 +2706,19 @@ function updateDocumentPipButton(){
 
 function togglePlayback(){
   if (!player || !playerReady) return;
+  if (!navigator.onLine){ updateVideoConnection(); return; }
   // 떼창을 마지막까지 들은 뒤라면 처음 구간부터 다시
   if (chantOnly && chantDone){ jumpToChant(0); return; }
   const state = (()=>{
     try { return player.getPlayerState(); } catch(e){ return -1; }
   })();
   try {
-    if (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING) player.pauseVideo();
-    else player.playVideo();
-  } catch(e){}
+    if (videoState !== "blocked" && (state === YT.PlayerState.PLAYING || state === YT.PlayerState.BUFFERING)) player.pauseVideo();
+    else {
+      setVideoState("loading", "正在開始播放…");
+      player.playVideo();
+    }
+  } catch(e){ setVideoState("error", "無法開始播放，請重試或在 YouTube 觀看。", true); }
   updateDocumentPip();
 }
 
@@ -3485,7 +2770,7 @@ function buildDocumentPipViewModel(activeIdx = lastActiveIdx){
     currentMarkup: documentPipLineMarkup(currentLine, true),
     nextMarkup: documentPipLineMarkup(nextLine, false),
     isPlaying: playerIsPlaying(),
-    canPlayPause: Boolean(player && playerReady
+    canPlayPause: Boolean(player && playerReady && !["error", "offline"].includes(videoState)
       && typeof player.playVideo === "function"
       && typeof player.pauseVideo === "function"),
     theme: currentTheme,
@@ -3494,7 +2779,10 @@ function buildDocumentPipViewModel(activeIdx = lastActiveIdx){
     readingMode,
     karaokeEnabled,
     iconBeatDuration: beatDuration,
-    status: playerReady ? "" : "正在等待影片播放器…"
+    status: !songCapabilities(currentSong).hasOriginal ? "歌詞整理中，可先聆聽官方影片。"
+      : !songCapabilities(currentSong).timed ? "同步時間整理中，目前提供原文閱讀。"
+      : currentSong?.timingStatus === "preview" ? "LRC 時間試播・待校正"
+      : playerReady ? "" : "正在等待影片播放器…"
   };
 }
 
@@ -3571,6 +2859,18 @@ function nextDisplayedLyricTime(song, index){
 }
 
 async function loadKaraokeTiming(song){
+  if (song?.timingStatus === "preview") {
+    ++karaokeLoadSeq;
+    karaokeTiming = null;
+    setKaraokeSourceStatus("preview", "LRC 逐行時間試播；影片待校正，尚無逐字時間。");
+    return;
+  }
+  if (!songCapabilities(song).timed){
+    ++karaokeLoadSeq;
+    karaokeTiming = null;
+    setKaraokeSourceStatus("pending", "同步時間整理中；目前提供官方影片與歌曲資訊。");
+    return;
+  }
   const seq = ++karaokeLoadSeq;
   karaokeTiming = null;
   setKaraokeSourceStatus("loading", "歌詞逐字時間：正在尋找開源時間碼…");
@@ -3621,6 +2921,9 @@ function karaokeRange(song, index){
   const line = lines[index];
   const start = Number(line && line.time);
   if (!Number.isFinite(start)) return null;
+  if (song.timingStatus === "preview" && Number.isFinite(line.endTime) && line.endTime > start) {
+    return { start, end: line.endTime };
+  }
 
   const timed = karaokeLineTiming(song, index);
   if (timed){
@@ -3877,7 +3180,7 @@ function clearKaraokeLine(line){
 }
 
 function updateKaraokeProgress(line, time){
-  if (!karaokeEnabled){
+  if (!karaokeEnabled || currentSong?.timingStatus === "preview"){
     clearKaraokeLine(karaokeActiveLine);
     karaokeActiveLine = null;
     return;
@@ -4146,7 +3449,7 @@ function songMarks(song){
    "default" 등록순 · "title" 가나다순 · "chant-desc/asc" 떼창 줄 수
    여기서 정한 순서를 곡 화면의 이전/다음 곡, 곡 목록 시트도 함께 따른다. */
 let songSort = (()=>{
-  const v = store("horo-song-sort");
+  const v = store("kaze-song-sort");
   return ["default","title","title-desc","chant-desc","chant-asc"].includes(v) ? v : "default";
 })();
 
@@ -4159,7 +3462,7 @@ function byTitle(a, b){
   // 한글 제목을 먼저, 그다음 영문·숫자 제목
   const ha = startsHangul(a.title) ? 0 : 1, hb = startsHangul(b.title) ? 0 : 1;
   if (ha !== hb) return ha - hb;
-  return String(a.title).localeCompare(String(b.title), "ko");
+  return String(a.title).localeCompare(String(b.title), "zh-Hant");
 }
 
 function sortedSongs(){
@@ -4211,6 +3514,13 @@ document.addEventListener("visibilitychange", ()=>{
    순간의 "재생 허가"가 유지되어 모바일에서도 소리가 바로 난다. */
 let playerReady   = false;
 let videoStatusTimer = null;
+let videoState = "idle";
+let videoLoadSeq = 0;
+let playerGeneration = 0;
+let requestedVideoId = null;
+let youtubeApiLoading = false;
+let youtubeApiAttempt = 0;
+let youtubeApiTimer = null;
 let currentVideoId = null;    // 플레이어에 올라가 있는 영상
 let pendingVideoId = null;    // 플레이어 준비 전에 눌린 곡
 let userVolume     = 100;     // 사용자가 마지막으로 맞춰 둔 볼륨(곡이 바뀌어도 유지)
@@ -4293,64 +3603,174 @@ function setPlaybackRate(rate){
   }
 }
 
-function showVideoStatus(){
+function setVideoState(state, message = "", canRetry = false){
+  clearTimeout(videoStatusTimer);
+  videoState = state;
   const status = document.getElementById("video-status");
   if (!status) return;
-  clearTimeout(videoStatusTimer);
-  status.hidden = playerReady;
-  if (playerReady) return;
-  status.textContent = "正在載入影片…";
-  videoStatusTimer = setTimeout(()=>{
-    if (!playerReady && status.isConnected) status.textContent = "影片連線延遲，請在下方開啟 YouTube。";
-  }, 8000);
+  status.dataset.state = state;
+  status.hidden = ["idle", "ready", "playing", "paused", "ended"].includes(state);
+  document.getElementById("video-status-text").textContent = message;
+  document.getElementById("video-retry").hidden = !canRetry;
+  document.getElementById("video-start").hidden = state !== "blocked" || !playerReady;
+  const external = document.getElementById("video-open");
+  external.hidden = !["error", "slow", "blocked"].includes(state);
+  external.href = (SONGS.find(song => song.youtubeId === requestedVideoId) || currentSong)?.listenUrl || "#";
+  status.closest(".video-frame").setAttribute("aria-busy", String(["loading-api", "loading", "buffering"].includes(state)));
+  updatePlayButton();
+  if (["loading", "buffering"].includes(state)){
+    const seq = videoLoadSeq;
+    videoStatusTimer = setTimeout(()=>{
+      if (seq !== videoLoadSeq || !isSongViewActive()) return;
+      setVideoState("slow", "影片載入較久，可點選影片播放，或重新載入播放器。", true);
+    }, 12000);
+  }
+}
+
+function openSongVideo(song){
+  if (!song.youtubeId) return;
+  ensurePlaying(song.youtubeId);
+  if (navigator.onLine && videoState !== "error") loadYouTubeApi();
+  const iframe = document.getElementById("yt-player");
+  if (iframe?.tagName === "IFRAME") iframe.title = `${song.title} · Fujii Kaze 官方影片播放器`;
+}
+
+function isVideoRouteRequested(){
+  const song = SONGS.find(item => item.youtubeId === requestedVideoId);
+  try { return !!song && decodeURIComponent(location.hash) === `#/song/${song.id}`; }
+  catch(e){ return false; }
+}
+
+function retryVideo(){
+  if (!isSongViewActive()) return;
+  const videoId = pendingVideoId || requestedVideoId || currentSong?.youtubeId;
+  if (!navigator.onLine){
+    setVideoState("offline", "目前離線，影片播放需要網路。連線後可重新載入播放器。");
+    return;
+  }
+  // Only an explicit retry replaces the iframe. Normal song changes reuse it.
+  ++playerGeneration;
+  ++videoLoadSeq;
+  stopSyncTimer();
+  clearInterval(volumeWatchTimer);
+  volumeWatchTimer = null;
+  try { player?.destroy(); } catch(e){}
+  player = null;
+  playerReady = false;
+  currentVideoId = null;
+  pendingVideoId = videoId;
+  requestedVideoId = videoId;
+  const frame = songView.querySelector(".video-frame");
+  frame.querySelector("#yt-player")?.remove();
+  const mount = document.createElement("div");
+  mount.id = "yt-player";
+  frame.prepend(mount);
+  if (!window.YT?.Player){
+    ++youtubeApiAttempt;
+    clearTimeout(youtubeApiTimer);
+    youtubeApiLoading = false;
+    document.querySelector("script[data-youtube-api]")?.remove();
+  }
+  setVideoState("loading-api", "正在重新載入播放器…");
+  loadYouTubeApi();
 }
 
 function ensurePlayer(){
-  if (player || !window.YT || !window.YT.Player) return;
+  if (player || !window.YT?.Player || !isSongViewActive() || !navigator.onLine) return;
   buildSongShell();                       // #yt-player 자리 확보
   if (!document.getElementById("yt-player")) return;
-  currentVideoId = (currentSong || SONGS[0]).youtubeId;
-  player = new YT.Player('yt-player', {
-    videoId: currentVideoId,
-    playerVars: {
-      'rel': 0,
-      'playsinline': 1,                   // iOS 에서 전체화면으로 튀지 않게
-      'modestbranding': 1,
-      'autoplay': 0                       // 홈 화면에서 멋대로 소리 나지 않도록
-    },
-    events: {
-      'onReady': onPlayerReady,
-      'onStateChange': onPlayerStateChange,
-      'onPlaybackRateChange': onPlayerPlaybackRateChange,
-      'onError': onPlayerError
-    }
-  });
+  currentVideoId = pendingVideoId || currentSong?.youtubeId;
+  if (!currentVideoId) return;
+  const generation = ++playerGeneration;
+  const relay = handler => event => {
+    if (generation === playerGeneration && event.target === player) handler(event);
+  };
+  setVideoState("loading", "正在載入播放器…");
+  try {
+    player = new YT.Player('yt-player', {
+      videoId: currentVideoId,
+      playerVars: {
+        'rel': 0,
+        'playsinline': 1,
+        'origin': location.origin,
+        'autoplay': 0
+      },
+      events: {
+        'onReady': relay(onPlayerReady),
+        'onStateChange': relay(onPlayerStateChange),
+        'onPlaybackRateChange': relay(onPlayerPlaybackRateChange),
+        'onAutoplayBlocked': relay(onPlayerAutoplayBlocked),
+        'onError': relay(onPlayerError)
+      }
+    });
+    const iframe = player.getIframe();
+    iframe.setAttribute("allow", "autoplay; encrypted-media; fullscreen; picture-in-picture");
+    iframe.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
+    iframe.title = `${currentSong?.title || "Fujii Kaze"} · 官方影片播放器`;
+  } catch(e){
+    setVideoState("error", "無法開啟播放器，請重新載入或在 YouTube 觀看。", true);
+  }
 }
 
 function onPlayerReady(){
   playerReady = true;
-  clearTimeout(videoStatusTimer);
-  const status = document.getElementById("video-status");
-  if (status) status.hidden = true;
-  try { player.unMute(); player.setVolume(userVolume); } catch(e){}
-  applyPlaybackRate();
   startVolumeWatch();
   updatePlaybackProgress();
-  if (pendingVideoId && isSongViewActive()) { // 歌曲頁仍在前景才執行排隊播放
-    const id = pendingVideoId;
+  if (isVideoRouteRequested() && navigator.onLine){
+    playVideoFor(pendingVideoId || requestedVideoId || currentSong?.youtubeId);
+  } else {
     pendingVideoId = null;
-    playVideoFor(id);
-  } else pendingVideoId = null;
+    try { player.pauseVideo(); } catch(e){}
+  }
   updateDocumentPip();
 }
 
-function onPlayerError(){
-  clearTimeout(videoStatusTimer);
-  const status = document.getElementById("video-status");
-  if (!status) return;
-  status.hidden = false;
-  status.textContent = "無法播放影片，請在下方開啟 YouTube。";
+function playerEventMatchesVideo(){
+  if (!isVideoRouteRequested()) return false;
+  try {
+    const id = new URL(player.getVideoUrl()).searchParams.get("v");
+    if (id && id !== requestedVideoId) return false;
+  } catch(e){}
+  return true;
 }
+
+function onPlayerAutoplayBlocked(){
+  if (!playerEventMatchesVideo() || !navigator.onLine || videoState === "error") return;
+  stopSyncTimer();
+  setVideoState("blocked", "瀏覽器需要你點選播放，才能開始聆聽。");
+}
+
+function onPlayerError(event){
+  if (!playerEventMatchesVideo()) return;
+  stopSyncTimer();
+  if (!navigator.onLine){ updateVideoConnection(); return; }
+  const code = Number(event.data);
+  const message = {
+    2: "影片網址無效，請在 YouTube 開啟官方影片。",
+    5: "影片暫時無法播放，請重試或在 YouTube 觀看。",
+    100: "影片目前無法使用，請在 YouTube 確認官方影片。",
+    101: "YouTube 無法在目前頁面播放這支影片，請在 YouTube 觀看。",
+    150: "YouTube 無法在目前頁面播放這支影片，請在 YouTube 觀看。",
+    153: "YouTube 無法確認播放器來源，請重試或在 YouTube 觀看。"
+  }[code] || "無法播放影片，請重試或在 YouTube 觀看。";
+  setVideoState("error", `${message}${code ? `（錯誤 ${code}）` : ""}`, ![2, 100, 101, 150].includes(code));
+}
+
+function updateVideoConnection(){
+  if (!isSongViewActive() || !currentSong) return;
+  if (!navigator.onLine){
+    pendingVideoId = requestedVideoId || currentSong.youtubeId;
+    stopSyncTimer();
+    try {
+      if (playerReady && [1, 3].includes(player.getPlayerState())) player.pauseVideo();
+    } catch(e){}
+    setVideoState("offline", "目前離線，影片播放需要網路。連線後可重新載入播放器。");
+  } else if (videoState === "offline"){
+    setVideoState("slow", "網路已恢復，可重新載入播放器繼續聆聽。", true);
+  }
+}
+window.addEventListener("online", updateVideoConnection);
+window.addEventListener("offline", updateVideoConnection);
 
 function onPlayerPlaybackRateChange(event){
   const actual = Number(event && event.data);
@@ -4384,33 +3804,39 @@ function startVolumeWatch(){
 /* 지정한 영상을 즉시 재생. 볼륨은 사용자가 맞춰 둔 값을 그대로 유지한다.
    사용자 탭 핸들러 안에서 부르면 모바일에서도 소리가 그대로 난다. */
 function playVideoFor(videoId){
-  if (!player || !playerReady) { pendingVideoId = videoId; return; }
+  if (!videoId) return;
+  requestedVideoId = videoId;
+  ++videoLoadSeq;
+  stopSyncTimer();
+  if (!navigator.onLine){
+    pendingVideoId = videoId;
+    setVideoState("offline", "目前離線，影片播放需要網路。連線後可重新載入播放器。");
+    return;
+  }
+  if (!player || !playerReady){
+    pendingVideoId = videoId;
+    setVideoState("loading-api", "正在載入播放器…");
+    return;
+  }
+  pendingVideoId = null;
+  setVideoState("loading", "正在載入影片…");
   try {
     if (userMuted) player.mute();         // 사용자가 꺼 뒀으면 계속 꺼 둠
     else           player.unMute();
     player.setVolume(userVolume);         // 100 으로 되돌리지 않음
-    if (currentVideoId === videoId) {
-      player.seekTo(0, true);
-      player.playVideo();
-    } else {
-      currentVideoId = videoId;
-      availablePlaybackRates = [];
-      playbackRateRestorePending = true;
-      updatePlaybackRateUi();
-      player.loadVideoById(videoId);      // loadVideoById 는 바로 재생까지 함
-    }
-  } catch(e){}
+    currentVideoId = videoId;
+    availablePlaybackRates = [];
+    playbackRateRestorePending = true;
+    updatePlaybackRateUi();
+    player.loadVideoById(videoId);
+  } catch(e){ setVideoState("error", "無法載入影片，請重試或在 YouTube 觀看。", true); }
 }
 
 /* 이미 그 곡이 재생 중이면 건드리지 않고, 아니면 재생시킨다.
    (곡을 탭 → 이미 playVideoFor 가 돌았으므로 여기서 다시 끊기지 않게) */
 function ensurePlaying(videoId){
-  if (!player || !playerReady) { pendingVideoId = videoId; return; }
-  if (currentVideoId === videoId) {
-    let st = -1;
-    try { st = player.getPlayerState(); } catch(e){}
-    if (st === YT.PlayerState.PLAYING || st === YT.PlayerState.BUFFERING) return;
-  }
+  // Rendering lyrics again must not restart or retry the current request.
+  if (requestedVideoId === videoId && videoState !== "idle") return;
   playVideoFor(videoId);
 }
 
@@ -4420,13 +3846,29 @@ function updatePlayButton(){
   if (!btn) return;
   let st = -1;
   try { st = player && player.getPlayerState(); } catch(e){}
-  const playing = (st === 1 || st === 3);   // PLAYING / BUFFERING
+  const playing = (st === 1 || st === 3) && !["blocked", "error", "offline", "idle"].includes(videoState);
   btn.innerHTML = playing ? PAUSE_SVG : PLAY_SVG;
   btn.classList.toggle("playing", playing);
   btn.setAttribute("aria-label", playing ? "暫停" : "播放");
+  btn.disabled = !playerReady || ["error", "offline"].includes(videoState);
 }
 
 function onPlayerStateChange(event) {
+  if (!isVideoRouteRequested()){
+    if ([1, 3].includes(event.data)) try { player.pauseVideo(); } catch(e){}
+    return;
+  }
+  if (!playerEventMatchesVideo()) return;
+  if (!navigator.onLine){
+    setVideoState("offline", "目前離線，影片播放需要網路。連線後可重新載入播放器。");
+    return;
+  }
+  if (videoState === "error" && event.data !== 1) return;
+  if (event.data === 1) setVideoState("playing");
+  else if (event.data === 2 && videoState !== "error") setVideoState("paused");
+  else if (event.data === 3 && videoState !== "error") setVideoState("buffering", "影片緩衝中，請稍候…");
+  else if (event.data === 5 && !["blocked", "error"].includes(videoState)) setVideoState("ready");
+  else if (event.data === 0) setVideoState("ended");
   updatePlayButton();
   updateDocumentPip();
   if (event.data === YT.PlayerState.PLAYING || event.data === YT.PlayerState.CUED) {
@@ -4509,13 +3951,15 @@ function stopActiveGuard(){
 
 function updateLyricsSync(force) {
   updatePlaybackProgress();
+  if (!songCapabilities(currentSong).timed) { updateDocumentPip(-1); return; }
   const list = document.getElementById("lyrics-list");
   if (!list) return;
   const lines = list.querySelectorAll(".lyric-line");
 
   const playerTime = getPlayerTime();
   // 실제 재생 위치보다 조금 앞선 시점을 기준으로 판단해 가사를 먼저 넘김
-  const cur = playerTime === null ? null : playerTime + LYRIC_LEAD_SEC;
+  const lyricLead = currentSong?.timingStatus === "preview" ? 0 : LYRIC_LEAD_SEC;
+  const cur = playerTime === null ? null : playerTime + lyricLead;
 
   // 떼창만 듣기 — 구간을 벗어났으면 다음 떼창으로 옮긴다
   chantOnlyTick(cur);
@@ -4534,14 +3978,17 @@ function updateLyricsSync(force) {
       }
       else break;                     // time 순서대로이므로 더 볼 필요 없음
     }
+    const activeLine = currentSong?.lyrics?.[activeIdx];
+    if (currentSong?.timingStatus === "preview" && Number.isFinite(activeLine?.endTime) && cur >= activeLine.endTime) activeIdx = -1;
   }
 
   const target = (activeIdx >= 0 && lines[activeIdx]) ? lines[activeIdx] : null;
   // line-level focus 與逐字 Karaoke 同時更新；後者不能等到 activeIdx 改變才刷新。
-  updateKaraokeProgress(target, cur === null ? null : cur - LYRIC_LEAD_SEC);
+  updateKaraokeProgress(target, cur === null ? null : cur - lyricLead);
 
   // 재생 위치를 못 읽었어도 군더더기 정리는 반드시 한다
-  pruneActiveLines(target);
+  if (currentSong?.timingStatus === "preview") lines.forEach(line => line.classList.toggle("active", line === target));
+  else pruneActiveLines(target);
   if (target && !target.classList.contains("active")) target.classList.add("active");
   syncTicks++;
   updateDocumentPip(activeIdx);
@@ -4669,7 +4116,7 @@ if (bannerX) bannerX.addEventListener("click", ()=>{
   else hideBanner();
 });
 
-const INSTALL_HINT_KEY = "horo-install-hint";
+const INSTALL_HINT_KEY = "kaze-install-hint";
 function isStandaloneApp(){
   return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
 }
@@ -4711,7 +4158,7 @@ async function clearDevServiceWorker(){
   if ("caches" in window){
     const keys = await caches.keys();
     await Promise.all(
-      keys.filter(key => key.startsWith("horo-guide-"))
+      keys.filter(key => key.startsWith("kaze-guide-") || key.startsWith("horo-guide-"))
           .map(key => caches.delete(key))
     );
   }
@@ -4802,21 +4249,52 @@ window.addEventListener("hashchange", router);
 // YouTube API는 실제로歌曲頁需要播放器時才載入，避免 Guide 首屏引入第三方工作。
 function loadYouTubeApi(){
   if (window.YT && window.YT.Player){
+    clearTimeout(youtubeApiTimer);
+    youtubeApiLoading = false;
     if (isSongViewActive()) ensurePlayer();
     return;
   }
-  if (document.querySelector("script[data-youtube-api]")) return;
+  if (!navigator.onLine || youtubeApiLoading) return;
+  youtubeApiLoading = true;
+  const attempt = ++youtubeApiAttempt;
+  setVideoState("loading-api", "正在連線 YouTube 播放器…");
   window.onYouTubeIframeAPIReady = ()=>{
+    if (attempt !== youtubeApiAttempt) return;
+    clearTimeout(youtubeApiTimer);
+    youtubeApiLoading = false;
     if (isSongViewActive()) ensurePlayer();
   };
+  document.querySelector("script[data-youtube-api]")?.remove();
   const script = document.createElement("script");
-  script.src = "https://www.youtube.com/iframe_api";
+  // Removing a script does not cancel its download. A retry needs its own URL
+  // so the browser cannot attach it to an older, still-stalled request.
+  script.src = `https://www.youtube.com/iframe_api${attempt > 1 ? `?retry=${attempt}` : ""}`;
   script.async = true;
   script.dataset.youtubeApi = "true";
+  const fail = ()=>{
+    if (attempt !== youtubeApiAttempt) return;
+    ++youtubeApiAttempt;
+    clearTimeout(youtubeApiTimer);
+    youtubeApiLoading = false;
+    script.remove();
+    if (isSongViewActive()) setVideoState(navigator.onLine ? "error" : "offline", navigator.onLine
+      ? "無法連線 YouTube 播放器，請重新載入或在 YouTube 觀看。"
+      : "目前離線，影片播放需要網路。", navigator.onLine);
+  };
+  script.onerror = fail;
+  youtubeApiTimer = setTimeout(fail, 12000);
   document.head.appendChild(script);
 }
 setupDebugBadge();
 setupChangelogModal();
 
-router({ resetScroll: false });
-document.documentElement.removeAttribute("data-initial-route");
+// YouTube rejects some embeds whose actual referrer is a raw loopback IP.
+// Change the page's real origin; never send a fabricated origin/referrer.
+const playbackPageUrl = new URL(location.href);
+if (["127.0.0.1", "[::1]"].includes(playbackPageUrl.hostname)){
+  playbackPageUrl.hostname = "localhost";
+  location.replace(playbackPageUrl.href);
+} else {
+  router({ resetScroll: false });
+  document.documentElement.removeAttribute("data-initial-route");
+}

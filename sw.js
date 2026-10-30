@@ -4,8 +4,8 @@
    ★ 가사나 화면을 고쳐서 다시 올릴 때는 아래 CACHE_VERSION 숫자를 꼭 올려 주세요.
      그래야 사람들 폰에 새 내용이 내려갑니다. (v1 → v2 → v3 …)
    ───────────────────────────────────────────────────────────── */
-const CACHE_VERSION = "v1.11.1";
-const CACHE_NAME    = `horo-guide-${CACHE_VERSION}`;
+const CACHE_VERSION = "v2.0.0";
+const CACHE_NAME    = `kaze-guide-${CACHE_VERSION}`;
 
 /* Vite production builds include the entry, split lyrics/readings, and CSS
    images so opening a song for the first time also works offline. */
@@ -21,7 +21,9 @@ const PRECACHE = [
   "./icon-512.png",
   "./icon-maskable-512.png",
   "./apple-touch-icon.png",
-  ...(VITE_BUILD_ASSETS.length ? [] : ["./images/poster.webp", "./images/setlist-bg.jpg"]),
+  "./images/prema-poster.jpg",
+  "./images/kaohsiung-stage-map.png",
+  "./images/kaohsiung-venue-map.jpg",
   ...VITE_BUILD_ASSETS
 ];
 
@@ -44,7 +46,7 @@ self.addEventListener("activate", (event) => {
   event.waitUntil((async () => {
     const keys = await caches.keys();
     await Promise.all(
-      keys.filter(k => k.startsWith("horo-guide-") && k !== CACHE_NAME)
+      keys.filter(k => (k.startsWith("kaze-guide-") || k.startsWith("horo-guide-")) && k !== CACHE_NAME)
           .map(k => caches.delete(k))          // 옛 버전 캐시 정리
     );
     await self.clients.claim();

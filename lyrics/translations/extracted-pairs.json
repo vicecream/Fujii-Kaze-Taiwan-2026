@@ -1,0 +1,3677 @@
+[
+  {
+    "id": "Damn",
+    "pdf": "(歌詞)damn.pdf",
+    "sha256": "ade68a8da4f7e982b1a32e72f006fbb6c1275f365235f6822a9731f66e69e3a4",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "まさかこんなに媚びてまうとは",
+        "translation": "不曾想過我會如此阿諛奉承",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "まさかこんなに惚れてまうとは",
+        "translation": "未曾想過我會如此迷戀",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "そいでこんなに拗らせるとはな",
+        "translation": "而且從未想過會演變得如此錯綜複雜",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "別にどうにでもなりゃいいのに",
+        "translation": "其實任由事態發展就行",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "別におれにはカンケーないのに",
+        "translation": "本來跟我毫不相關",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "まさかこんなに捉われるとはな",
+        "translation": "沒料到會如此念念不忘",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "だんだん遠くなったあなたへ (全部全部おれのせい)",
+        "translation": "獻給漸行漸遠的你 (所有一切都是我的錯)",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "だんだん離れてったあなたへ (責めてみても仕方ねえ)",
+        "translation": "獻給逐步離去的你 (責備別人也無濟於事)",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "だんだんバカになったこのおれ",
+        "translation": "我逐漸變得更加愚蠢",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "どうすりゃいい どうすればいい",
+        "translation": "該如何是好 還能怎麼辦",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "あぁ幸せってどんなだったけな…覚えてないや",
+        "translation": "啊 幸福到底是什麼感覺…我已經不記得了",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "どけ、そこどけおれが通る",
+        "translation": "閃開，從那邊讓開 我想要通過",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "やめ、それやめむしず走る",
+        "translation": "住手，不要那樣做 會讓我反胃",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "だめ、もうだめぜんぶ終る",
+        "translation": "不行，實在束手無策 全都完蛋了",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "分かりきったことやん、今さら",
+        "translation": "事到如今覺得十分顯而易見",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "完ペキとか無理やん、ハナから",
+        "translation": "打從一開始就不可能完美無缺",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "…別に何も期待してないけどな",
+        "translation": "…原先就不抱期待",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "だんだん好きになったあなたへ (ヘンな気持ち誰のせい)",
+        "translation": "獻給越來越喜歡的你 (有這種奇妙心情該怪誰)",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "だんだん赤くなった青さへ (責めてみても仕方ねえ)",
+        "translation": "獻給漸漸轉紅的青澀 (責備別人也無濟於事)",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "だんだんアホになったこのおれ",
+        "translation": "我逐漸變得更加痴傻",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "どうすりゃいい どうすればいい",
+        "translation": "該如何是好 還能怎麼辦",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "あぁ幸せって何色だったけな…覚えてないや",
+        "translation": "啊 幸福是什麼顏色來著…我已經不記得了",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "全て流すつもりだったのにどうした?",
+        "translation": "打算諸事放水流 怎麼了?",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "何もかも捨ててくと決めてどうした?",
+        "translation": "決定捨棄一切 怎麼了?",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "明日なんか来ると思わずにどうした?",
+        "translation": "不想著明天將到來 怎麼了?",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "全部まだまだこれからだから",
+        "translation": "全都現在才要開始",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "いつかあんたに辿り着くから",
+        "translation": "總有一天我會追趕上你",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "damn damn don't give a damn just love in my head",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "(hey little father won't u come with me)",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "we'll just dancing away from bullshits ahead",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "('kay it's okay yeah we gotta believe)",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "だんだん近くなったわたしへ",
+        "translation": "獻給慢慢靠近的我",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "どうしようか どこいこうか",
+        "translation": "應該怎麼做 該何去何從",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "あぁ幸せってどんなだったけな 思い出そうか",
+        "translation": "啊 幸福到底是什麼感覺 讓我們想起來吧",
+        "page": 4
+      },
+      {
+        "index": 34,
+        "original": "愛してくこの先ずっと",
+        "translation": "從今以後愛你一輩子",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "守ってく明日もずっと",
+        "translation": "明日之後也永世守護",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "i love me, and i will keep him in a",
+        "translation": "",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "safest fairest happiest place baby",
+        "translation": "",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "Hachiko",
+    "pdf": "(歌詞)Hachikō.pdf",
+    "sha256": "8849f09b26b1ed69022c8d4442abdb5dc0bdede003a44c5a4600e277a8a37711",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "Take you anywhere I'm ready",
+        "translation": "我已經準備好，帶你去任何地方",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "Give you anything I'm carefree",
+        "translation": "我對你毫無保留",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "Seems like I'm the only thing that you need",
+        "translation": "我似乎是你唯一所需",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "It's easy, not so hard to make you happy",
+        "translation": "要讓你快樂很容易，不難",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "While everybody's screamin' shoutin'",
+        "translation": "周圍喧囂紛擾",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "We're so chill out here just vibin'",
+        "translation": "我們放鬆到不行",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "Tryin' to spread this peacefulness with y'all",
+        "translation": "想和大家分享這份平靜",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "Our holiday's just getting started",
+        "translation": "我們的假期剛開始",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "Just be kind and open hearted",
+        "translation": "只要善良並敞開心扉",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "Feel the breeze and let God bless us all",
+        "translation": "感受微風與神的祝福",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "(Doko ni ikō Hachikō…)",
+        "translation": "(要去哪裡呢 八公…)",
+        "page": 1
+      },
+      {
+        "index": 11,
+        "original": "You've been patiently waiting for me",
+        "translation": "你耐心等著我",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "You've been patiently waiting for me",
+        "translation": "你耐心等著我",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "Doko ni ikō Hachikō",
+        "translation": "要去哪裡呢 八公",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "This time I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "Doko ni iko Hachiko",
+        "translation": "要去哪裡呢 八公",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "This time I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "You've been patiently waiting for me",
+        "translation": "你耐心等著我",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "Went through everything to reach you",
+        "translation": "我千辛萬苦才與你重逢",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "There' so many ways to please you",
+        "translation": "有許多方式能逗你開心",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "You can pick whatever you'd like to do",
+        "translation": "讓你隨心所欲",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "Anything that satisfies your soul",
+        "translation": "心滿意足",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "While everybody's screamin' shoutin'",
+        "translation": "周圍喧囂紛擾",
+        "page": 2
+      },
+      {
+        "index": 23,
+        "original": "We're so chill out here just vibin'",
+        "translation": "我們冷靜到不行",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "Tryin' to spread this peacefulness with y'all",
+        "translation": "想和大家分享這份平靜",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "Our holiday's just getting started",
+        "translation": "我們的假期剛開始",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "Just be kind and open hearted",
+        "translation": "只要善良並敞開心扉",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "Feel the breeze and let God bless us all",
+        "translation": "感受微風與神的祝福",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "(Doko ni ikō Hachikō…)",
+        "translation": "(要去哪裡呢 八公…)",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "You've been patiently waiting for me",
+        "translation": "你耐心等著我",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "You've been patiently waiting for me",
+        "translation": "你耐心等著我",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "Doko ni ikō Hachikō",
+        "translation": "要去哪裡呢 八公",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "This time I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 3
+      },
+      {
+        "index": 33,
+        "original": "Doko ni ikō Hachikō",
+        "translation": "要去哪裡呢 八公",
+        "page": 3
+      },
+      {
+        "index": 34,
+        "original": "This time I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 3
+      },
+      {
+        "index": 35,
+        "original": "You've been patiently waiting for me",
+        "translation": "你耐心等著我",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "Doko ni ikō Hachikō",
+        "translation": "要去哪裡呢 八公",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "This time I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "We don't need to rush, take it slow",
+        "translation": "不用著急，慢慢來",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "This time, I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "Doko ni ikō Hachikō",
+        "translation": "要去哪裡呢 八公",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "This time I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 4
+      },
+      {
+        "index": 42,
+        "original": "We don't need to rush, take it slow",
+        "translation": "不用著急，慢慢來",
+        "page": 4
+      },
+      {
+        "index": 43,
+        "original": "This time, I'll never let you go",
+        "translation": "這次我絕不放手",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "INeedUBack",
+    "pdf": "(歌詞)I+Need+U+Back.pdf",
+    "sha256": "8bcbb5ea77d113f7aa8afd424e7d2cce41cd8a1064bb39063cd1342c8014ba3d",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "Alright need his energy back (it's not a want)",
+        "translation": "有必要重拾活力 (並非渴求)",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "Alright I've been missin' u bad (it's been too long)",
+        "translation": "想你想到無法呼吸 (過了好久)",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "Alright alright I had enough",
+        "translation": "我受夠了",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "Enough with this apathy (apathy, yes)",
+        "translation": "受夠了無動於衷 (無動於衷)",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "How long have I gone astray (I don't see the light)",
+        "translation": "我迷失了多久 (看不見光)",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "My passion has died away (couldn't even fight)",
+        "translation": "熱情已消逝 (提不起勁)",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "Oh god please can we just go back",
+        "translation": "能不能夠回頭",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "go back to those brighter days",
+        "translation": "回到那些美好的日子",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "I wasn't right (oh) yeah I've been scandalous",
+        "translation": "我錯了，我聲名狼藉",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "I wasn't wise (oh) such an antagonist",
+        "translation": "不明智，我這種仇敵",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "It wasn't nice I know but I learned a lot",
+        "translation": "不夠真摯，但我學到教訓",
+        "page": 1
+      },
+      {
+        "index": 11,
+        "original": "baby, let me handle this again",
+        "translation": "寶貝，讓我再試一次",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "I need you back (yeah yeah)",
+        "translation": "我需要你回來 (yeah yeah)",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "Never wanted nothin' like I want you tell me you'll be mine",
+        "translation": "只想聽你說你屬於我",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "I need you back (yeah yeah)",
+        "translation": "我需要你回來 (yeah yeah)",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "Now is not the time to die I must be alive",
+        "translation": "不放棄，現在我要認真生活",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "na na na na na",
+        "translation": "",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "Now is not the time to die I'm alive",
+        "translation": "不放棄，現在的我認真生活",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "Where have u gone, I'm all alone",
+        "translation": "你在哪裡? 我剩下我自己",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "yes I've been, yes I've been here livin' on my own",
+        "translation": "我一直獨自生活在這裡",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "How can I go on, without u comin' home",
+        "translation": "沒有你，我該如何走下去?",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "I wasn't right (oh) yeah I've been scandalous",
+        "translation": "我錯了，我聲名狼藉",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "I wasn't wise (oh) such an antagonist",
+        "translation": "不明智，我這種仇敵",
+        "page": 2
+      },
+      {
+        "index": 23,
+        "original": "It wasn't nice I know but I learned a lot",
+        "translation": "不夠真摯，但我學到教訓",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "baby, let me handle this again",
+        "translation": "寶貝，讓我再試一次",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "Just once again",
+        "translation": "就再一次",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "I need you back, babe (yeah yeah)",
+        "translation": "寶貝，我需要你回來 (yeah yeah)",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "Never wanted nothin' like I want you tell me you'll be mine",
+        "translation": "只想聽你說你屬於我",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "I need you back (yeah yeah)",
+        "translation": "我需要你回來 (yeah yeah)",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "Now is not the time to die I must be alive",
+        "translation": "不放棄，現在我要認真生活",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "na na na na na",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "Now is not the time to die I'm alive",
+        "translation": "不放棄，現在的我認真生活",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "na na na na na",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 33,
+        "original": "Now is not the time to die I'm alive",
+        "translation": "不放棄，現在的我認真生活",
+        "page": 3
+      },
+      {
+        "index": 34,
+        "original": "yeah yeah yeah",
+        "translation": "",
+        "page": 3
+      },
+      {
+        "index": 35,
+        "original": "Need you back in my life",
+        "translation": "我要你回到我的生活",
+        "page": 3
+      },
+      {
+        "index": 36,
+        "original": "yeah yeah yeah",
+        "translation": "",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "Need you back I'm alive (I need you back)",
+        "translation": "我要你回來，我認真生活 (我需要你回來)",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "ItAintOver",
+    "pdf": "(歌詞)It+Ain't+Over.pdf",
+    "sha256": "2bb0732f7857a4d3faff210c8c7fc13be54990220dc91ff79c51c0f0e7c42c5d",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "if you were gone",
+        "translation": "如果你走了",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "I would not feel so sad",
+        "translation": "我不會如此感傷",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "cuz deep down I know",
+        "translation": "因為我心裡知道",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "no one will ever be gone",
+        "translation": "沒有人會真正走遠",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "you may say, this is the end",
+        "translation": "你或許會說這是終點",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "like I never was your friend",
+        "translation": "彷彿不曾有過你我之間",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "and you go so far away",
+        "translation": "你走得好遠",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "that's when you hear me say",
+        "translation": "然後聽到我的聲音",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "boy it ain't over",
+        "translation": "還沒結束",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "over, yet",
+        "translation": "未完",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "it ain't over",
+        "translation": "還沒結束",
+        "page": 1
+      },
+      {
+        "index": 11,
+        "original": "over, yet",
+        "translation": "未完",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "oh, we'll all go back to the same home",
+        "translation": "我們都會回到同一個家園",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "the deeper I dive",
+        "translation": "我越追尋",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "the more I'm sure",
+        "translation": "就越肯定",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "you're still by my side",
+        "translation": "你依舊在我身邊",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "wherever I go",
+        "translation": "如影隨形",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "my life's been good",
+        "translation": "走過美好人生",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "it's time to go",
+        "translation": "該走了",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "bye-bye my friend",
+        "translation": "再見，我的朋友",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "but you know, in time",
+        "translation": "但你明白，遲早",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "we all gon' realize",
+        "translation": "我們都會領悟",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "that it ain't over",
+        "translation": "還沒結束",
+        "page": 2
+      },
+      {
+        "index": 23,
+        "original": "over, yet",
+        "translation": "未完",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "it ain't over",
+        "translation": "還沒結束",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "over, yet",
+        "translation": "未完",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "oh, we'll all go back to the same home",
+        "translation": "我們都會回到同一個家園",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "and they say, nothing ever stays the same",
+        "translation": "人們說永恆不存在",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "but with faith, we find something that will never change",
+        "translation": "但信念能帶我們找到永恆",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "it ain't over",
+        "translation": "還沒結束",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "over, yet",
+        "translation": "未完",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "it ain't over",
+        "translation": "還沒結束",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "over, yet",
+        "translation": "未完",
+        "page": 3
+      },
+      {
+        "index": 33,
+        "original": "oh, we'll all go back to the same home",
+        "translation": "我們都會回到同一個家園",
+        "page": 3
+      },
+      {
+        "index": 34,
+        "original": "see you soon, we'll all go back to the same home",
+        "translation": "後會有期，我們都會回到同一個家園",
+        "page": 3
+      },
+      {
+        "index": 35,
+        "original": "home",
+        "translation": "家園",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "home",
+        "translation": "家園",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "LoveLikeThis",
+    "pdf": "(歌詞)Love+Like+This.pdf",
+    "sha256": "5d34ed5f875470311be1962f67540eb313505e2bfc0b81c50855cc2c4250b71b",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "Feeling",
+        "translation": "感覺",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "More than perfect, amazing",
+        "translation": "無與倫比",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "More than words can explain it's",
+        "translation": "言語，無法形容",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "Purest form of reality",
+        "translation": "這純粹的真實感",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "Divinity",
+        "translation": "神聖感",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "I've been",
+        "translation": "我啊",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "Suffering in this tiring",
+        "translation": "一直困於這世間",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "Crazy world like I'm drowning",
+        "translation": "疲憊又瘋狂 彷彿溺水無法自救",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "There's no way to escape I thought but",
+        "translation": "本以為無處可逃",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "Finally here I am",
+        "translation": "但終究抵達此等彼岸",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "I'll never find another love like this it's true",
+        "translation": "這般真愛難再尋 的確",
+        "page": 1
+      },
+      {
+        "index": 11,
+        "original": "I'll never find another love like this",
+        "translation": "這般真愛難再尋",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "Baby can you feel it too just like I do",
+        "translation": "寶貝 你是否與我同頻共感",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "(Who does paradise belong to)",
+        "translation": "(天堂究竟為誰存在)",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "I'll never find another love like this I know",
+        "translation": "這般真愛難再尋 我知道",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "I'll never find another love like this",
+        "translation": "這般真愛難再尋",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "Baby can I give it to you",
+        "translation": "寶貝 能否讓我奉上真心",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "Just like you do",
+        "translation": "如同你也真心愛我",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "Then we share it too",
+        "translation": "以後我們雙向奔赴",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "Thank you",
+        "translation": "謝謝你",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "Wherever I go I feel you",
+        "translation": "走到哪裡都彷彿有你相伴",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "Now I know",
+        "translation": "如今我深知",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "That I'll never love like this",
+        "translation": "這般真愛難再復",
+        "page": 2
+      },
+      {
+        "index": 23,
+        "original": "Sacred",
+        "translation": "聖潔",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "Sweet divine invitation",
+        "translation": "甜蜜的神聖邀請",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "To heal a heart that's been breaking",
+        "translation": "撫慰破碎心靈",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "Mend a soul that's been crying out",
+        "translation": "治癒嗚咽靈魂",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "Let me out",
+        "translation": "哀聲求放過",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "Now I am",
+        "translation": "如今",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "Falling softly colliding",
+        "translation": "我跌跌撞撞",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "Into your sweet silver lining",
+        "translation": "輕輕落入你的美麗銀輝",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "There's no way to escape from heaven",
+        "translation": "天堂無處可逃",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "Finally here we are",
+        "translation": "我們終於抵達此等彼岸",
+        "page": 3
+      },
+      {
+        "index": 33,
+        "original": "I'll never find another love like this it's true",
+        "translation": "這般真愛難再尋 的確",
+        "page": 3
+      },
+      {
+        "index": 34,
+        "original": "I'll never find another love like this",
+        "translation": "這般真愛難再尋",
+        "page": 3
+      },
+      {
+        "index": 35,
+        "original": "Baby can you feel it too just like I do",
+        "translation": "寶貝 你是否與我同頻共感",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "(Who does paradise belong to)",
+        "translation": "(天堂究竟為誰存在)",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "I'll never find another love like this I know",
+        "translation": "這般真愛難再尋 我知道",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "I'll never find another love like this",
+        "translation": "這般真愛難再尋",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "Baby can I give it to you",
+        "translation": "寶貝 能否讓我奉上真心",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "Just like you do",
+        "translation": "如同你也真心愛我",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "Then we share it too",
+        "translation": "以後我們雙向奔赴",
+        "page": 4
+      },
+      {
+        "index": 42,
+        "original": "Thank you",
+        "translation": "謝謝你",
+        "page": 4
+      },
+      {
+        "index": 43,
+        "original": "Wherever I go I feel you",
+        "translation": "走到哪裡都彷彿有你相伴",
+        "page": 4
+      },
+      {
+        "index": 44,
+        "original": "Now I know",
+        "translation": "如今我已明白",
+        "page": 4
+      },
+      {
+        "index": 45,
+        "original": "That I'll never love like this",
+        "translation": "這般真愛難再復",
+        "page": 4
+      },
+      {
+        "index": 46,
+        "original": "That I'll never love like this",
+        "translation": "這般真愛難再復",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "Prema",
+    "pdf": "(歌詞)Prema.pdf",
+    "sha256": "e8e297521cd3d224000222d1c8d86f5dfe95dffcd65dd2f5365fee0de0e3ffea",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "Prema",
+        "translation": "純愛",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "Don't u know that u are love itself",
+        "translation": "你不懂你與愛合一",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "You are love itself",
+        "translation": "與愛合一",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "Prema",
+        "translation": "純愛",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "Can't u see that u are god itself",
+        "translation": "你不懂你與神合一",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "You are god itself",
+        "translation": "與神合一",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "I don't lie",
+        "translation": "我不欺瞞",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "I'm all about the truth and",
+        "translation": "我崇尚真理",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "I don't hide",
+        "translation": "我不隱藏",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "Overwhelmingly I'm open",
+        "translation": "我敞開心房",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "I survived",
+        "translation": "我浴火重生",
+        "page": 1
+      },
+      {
+        "index": 11,
+        "original": "All the crazy things you gave",
+        "translation": "你創造的瘋狂",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "n every mess that was ever made",
+        "translation": "造成過的恐慌",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "You are mine",
+        "translation": "你屬於我",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "I call your name and you will",
+        "translation": "我呼喚你的名字，你就會",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "Be on time",
+        "translation": "及時出現",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "Living in this small world and its",
+        "translation": "世界雖渺小",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "Future's bright",
+        "translation": "未來卻閃耀",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "Brighter than my ceiling lights",
+        "translation": "亮度勝過燈泡",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "n sweeter than my mother's cream pie",
+        "translation": "甜蜜勝過糖糕",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "Follow my tender heart and I'll win",
+        "translation": "跟隨溫柔的心就能克服",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "No matter what pain I am in",
+        "translation": "不管多麼辛苦",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "With all your blessings I'll arise",
+        "translation": "你的祝福讓我振作",
+        "page": 2
+      },
+      {
+        "index": 23,
+        "original": "Open up my third eye",
+        "translation": "打開我的心眼",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "Prema",
+        "translation": "純愛",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "Don't u know that u are love itself",
+        "translation": "你不懂你與愛合一",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "You are love itself",
+        "translation": "與愛合一",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "Prema",
+        "translation": "純愛",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "Can't u see that u are god itself",
+        "translation": "你不懂你與神合一",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "You are god itself",
+        "translation": "與神合一",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "Finalized",
+        "translation": "已成定局",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "We got each other always",
+        "translation": "我們一直擁有彼此",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "Fantasized",
+        "translation": "目眩神迷",
+        "page": 3
+      },
+      {
+        "index": 33,
+        "original": "Surely knew we could do it",
+        "translation": "深知我們能做到",
+        "page": 3
+      },
+      {
+        "index": 34,
+        "original": "I decide",
+        "translation": "下定決心",
+        "page": 3
+      },
+      {
+        "index": 35,
+        "original": "Every day I meditate",
+        "translation": "我天天默念",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "And make every action a prayer",
+        "translation": "每個行動都是祈禱",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "Filling my heart with your affection",
+        "translation": "讓你的愛意充滿我心",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "Being your best friend is my devotion",
+        "translation": "奉獻所有與你交心",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "Calling your name is my surrender",
+        "translation": "我臣服，呼喚你的名字",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "Babe, I got your number",
+        "translation": "寶貝，我有你的電話",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "Filling my heart with your affection",
+        "translation": "讓你的愛意充滿我心",
+        "page": 4
+      },
+      {
+        "index": 42,
+        "original": "Being your best friend is my devotion",
+        "translation": "奉獻所有與你交心",
+        "page": 4
+      },
+      {
+        "index": 43,
+        "original": "Calling your name is my surrender",
+        "translation": "我臣服，呼喚你的名字",
+        "page": 4
+      },
+      {
+        "index": 44,
+        "original": "Babe, I got your number",
+        "translation": "寶貝，我有你的電話",
+        "page": 4
+      },
+      {
+        "index": 45,
+        "original": "Prema",
+        "translation": "純愛",
+        "page": 4
+      },
+      {
+        "index": 46,
+        "original": "Don't u know that I am love itself",
+        "translation": "你不懂我與愛合一",
+        "page": 4
+      },
+      {
+        "index": 47,
+        "original": "I am love itself",
+        "translation": "與愛合一",
+        "page": 5
+      },
+      {
+        "index": 48,
+        "original": "Prema",
+        "translation": "純愛",
+        "page": 5
+      },
+      {
+        "index": 49,
+        "original": "Can't u see that I am god itself",
+        "translation": "你不懂我與神合一",
+        "page": 5
+      },
+      {
+        "index": 50,
+        "original": "I am god itself",
+        "translation": "與神合一",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "WorkinHard",
+    "pdf": "(歌詞)Workin'+Hard.pdf",
+    "sha256": "8e589716c74f008fbd0ae6a8fa8d381cb3ce864ca80afc79e1e5ddeb82940131",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "掻っ攫った 圧巻でらした あらら 世は実に易し",
+        "translation": "一把拿下 那壓軸傑作 哎呀 真是輕而易舉的世界",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "信じ切った 安心し切った あたた 深き喜び",
+        "translation": "我徹底的相信了 徹底的安心了 這深刻地喜悅之情",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "戦うは なぎ倒すは か弱い己自身さ",
+        "translation": "戰場之上 必須戰勝的 正是那軟弱的自己",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "やり切って胸はって 綺麗に散るのさ〜",
+        "translation": "竭盡全力 抬頭挺胸 美麗地凋零而去",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "みんなほんまよーやるわ めっちゃがんばっとるわ",
+        "translation": "大家都很認真生活 日夜拼命地努力著",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "わしかて負けんよーにな ひそかに何かと努めるわ",
+        "translation": "絕對不想輸在這裡 我也正為了某件事默默努力著",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "なんも無くたっていいや 結果なんぞかったりーわ",
+        "translation": "即使是南柯一夢也罷 別再苦等任何結果",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "Better sit back",
+        "translation": "現在最好坐下放鬆",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "Take a deep breath",
+        "translation": "好好地深呼吸",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "And you'll know…",
+        "translation": "你就會明白…",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "You've been workin' hard workin' hard",
+        "translation": "你真的很努力了 一直都很努力",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "Maybe you don't understand",
+        "translation": "雖然你可能並不理解",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "But I know that you're workin' hard workin' hard",
+        "translation": "但我是知道你真的很努力 一直都很努力",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "Wish I could give you a hand",
+        "translation": "我總希望能幫上你的忙",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "Baby you've been workin' hard workin' hard",
+        "translation": "寶貝 你真的已經很努力 一直都很努力",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "Trust the process and be brave",
+        "translation": "相信這個過程且變得更堅強",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "You've been workin' hard",
+        "translation": "你已經非常認真努力",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "God you've been workin' hard",
+        "translation": "老天 你真的真的非常努力了",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "Let's sit back, time to relax",
+        "translation": "現在讓我們坐下 是時候放輕鬆了",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "鼓動に任せて自由に踊って",
+        "translation": "隨著節奏自由舞動",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "Bow down, show them respect",
+        "translation": "鞠個躬 向他們表示我的敬意",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "敵も味方もここにはねえから",
+        "translation": "這裡既沒有敵人也沒有夥伴",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "Sit back, time to relax",
+        "translation": "現在讓我們坐下 是時候放輕鬆了",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "鼓動に任せて自由に踊って",
+        "translation": "隨著節奏自由舞動",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "Bow down, show them respect",
+        "translation": "鞠個躬 向他們表示我的敬意",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "敵も味方もほんまはねえから",
+        "translation": "這裡既沒有敵人也沒有夥伴",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "みんなほんまよーやるわ めっちゃがんばっとるわ",
+        "translation": "大家都很認真生活 日夜拼命地努力著",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "わしかて負けんよーにな ひそかに何かと努めるわ",
+        "translation": "我絕對不會輸在這裡 我也正為了某件事默默努力著",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "なんも無くたっていいや 結果なんぞかったりーわ",
+        "translation": "就算一無所有也罷 別再苦等任何結果",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "Better sit back",
+        "translation": "現在最好坐下放鬆",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "Take a deep breath",
+        "translation": "好好地深呼吸",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "And you'll know…",
+        "translation": "你就會明白…",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "You've been workin' hard workin' hard",
+        "translation": "你真的很努力了 一直都很努力",
+        "page": 3
+      },
+      {
+        "index": 33,
+        "original": "Maybe you don't understand",
+        "translation": "雖然你可能並不理解",
+        "page": 3
+      },
+      {
+        "index": 34,
+        "original": "But I know that you're workin' hard workin' hard",
+        "translation": "但我是知道你真的很努力 一直都很努力",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "Wish I could give you a hand",
+        "translation": "我總希望能幫上你的忙",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "Baby you've been workin' hard workin' hard",
+        "translation": "寶貝 你真的已經很努力 一直都很努力",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "Trust the process and be brave",
+        "translation": "相信這個過程且變得更堅強",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "You've been workin' hard",
+        "translation": "你已經非常認真努力",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "God you've been workin' hard",
+        "translation": "老天 你真的真的非常努力了",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "All we gonna do is to make you happy",
+        "translation": "我們能做的只有使你快樂",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "All we gonna do is to make you lucky",
+        "translation": "我們能做的正是賦予你幸運",
+        "page": 4
+      },
+      {
+        "index": 42,
+        "original": "All we gonna do is",
+        "translation": "我們能做到的",
+        "page": 4
+      },
+      {
+        "index": 43,
+        "original": "All we gonna do is to make you make you feel alive",
+        "translation": "我們所能做到的是讓你有活著的感覺",
+        "page": 4
+      },
+      {
+        "index": 44,
+        "original": "What we gonna do is to make you feel good",
+        "translation": "我們現在要做的是讓你安心",
+        "page": 4
+      },
+      {
+        "index": 45,
+        "original": "What we gonna do is to make you feel ah",
+        "translation": "我們現在能做的是讓你感受",
+        "page": 4
+      },
+      {
+        "index": 46,
+        "original": "It's all about others",
+        "translation": "一切都關係到彼此",
+        "page": 5
+      },
+      {
+        "index": 47,
+        "original": "It's all about brothers",
+        "translation": "一切都關於到同伴",
+        "page": 5
+      },
+      {
+        "index": 48,
+        "original": "Together we can touch the sky",
+        "translation": "只要齊心協力我們就能觸碰到藍天",
+        "page": 5
+      },
+      {
+        "index": 49,
+        "original": "Cuz you've been workin' hard workin' hard",
+        "translation": "因為你真的很努力 真的很努力",
+        "page": 5
+      },
+      {
+        "index": 50,
+        "original": "Maybe you don't understand",
+        "translation": "雖然你可能並不理解",
+        "page": 5
+      },
+      {
+        "index": 51,
+        "original": "But I know that you're workin' hard workin' hard",
+        "translation": "但我知道你很努力 一直在努力",
+        "page": 5
+      },
+      {
+        "index": 52,
+        "original": "Wish I could give you a hand",
+        "translation": "我總希望能幫助到你",
+        "page": 5
+      },
+      {
+        "index": 53,
+        "original": "Baby you've been workin' hard workin' hard",
+        "translation": "寶貝 你真的很努力 一直在努力",
+        "page": 5
+      },
+      {
+        "index": 54,
+        "original": "Trust the process and be brave",
+        "translation": "相信這個過程且變得更堅強",
+        "page": 5
+      },
+      {
+        "index": 55,
+        "original": "You've been workin' hard",
+        "translation": "你已經非常認真努力",
+        "page": 5
+      },
+      {
+        "index": 56,
+        "original": "God you've been workin' hard",
+        "translation": "老天 你真的真的非常努力了",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "Kirari",
+    "pdf": "(歌詞)きらり.pdf",
+    "sha256": "fcba544c9a35dbbb115821dfc303ffd952bf284a4ce69e39c66405c75fb1ee0b",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "荒れ狂う季節の中を二人は一人きり さらり",
+        "translation": "在暴烈狂亂的季節 兩人都是單獨的個體 乾脆爽快",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "明け行く夕日の中を今夜も昼下がり さらり",
+        "translation": "在逐漸破曉的夕陽餘暉 今晚也轉為過午時分 毫無停滯",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "どれほど朽ち果てようと最後にゃ笑いたい",
+        "translation": "即便再怎麼腐朽消逝 都希望在最後露出笑容",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "何のために戦おうとも動機は愛がいい",
+        "translation": "無論是為了什麼而戰 都希望背後的動機是愛",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "新しい日々は探さずとも常に ここに",
+        "translation": "嶄新的日子縱使不去尋找 也依舊常伴身側",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "色々見てきたけれどこの瞳は永遠に きらり",
+        "translation": "即使見過世間百態 這雙眼眸仍永遠閃耀",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "あれほど生きてきたけど全ては夢みたい",
+        "translation": "雖然活了那麼久 卻全都像夢一場",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "あれもこれも魅力的でも私は君がいい",
+        "translation": "周遭萬物魅力橫溢 但你是我的唯一",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "どこにいたの 探してたよ",
+        "translation": "你之前身在何處 我找很久了",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "連れてって 連れてって",
+        "translation": "帶我走吧 帶我走吧",
+        "page": 2
+      },
+      {
+        "index": 10,
+        "original": "何もかも 捨ててくよ",
+        "translation": "我會為你捨棄一切",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "どこまでも どこまでも",
+        "translation": "隨你到任何地方 隨你到任何地方",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "荒れ狂う 季節の中も 群衆の中も",
+        "translation": "在暴烈狂亂的季節也好 熙來攘往的群眾中也罷",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "君とならば さらり さらり",
+        "translation": "只要和你在一起 就輕鬆暢達 心情輕快",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "新しい日々も 拙い過去も 全てがきらり",
+        "translation": "嶄新的日子以及拙劣的過去 全都璀璨閃耀",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "無くしてしまったものを振り返って ほろり",
+        "translation": "回首過往失去的種種 潸然淚下",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "時には途方に暮れてただ風に吹かれて ゆらり",
+        "translation": "有時走投無路 僅能任風吹襲 飄蕩搖晃",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "息せき切ってきたの 行き先は決めたの",
+        "translation": "氣喘吁吁地奔來 決定好目的地",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "迷わずに行きたいけど保証はしないよ",
+        "translation": "雖說想要毫不猶豫地出發 但也無法保證喲",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "何か分かったようで 何も分かってなくて",
+        "translation": "想避免迷失路途卻無法做出保證 好像明白了什麼",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "だけどそれが分かって本当に良かった",
+        "translation": "其實還是一頭霧水 不過很慶幸能得知那一點",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "新しい日々は探さずとも常に ここに",
+        "translation": "嶄新的日子縱使不去尋找 也依舊常伴身側",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "常にここに ここに",
+        "translation": "一直都在 就在身邊",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "色々見てきたけれどこの瞳は永遠に きらり",
+        "translation": "即使見過世間百態 這雙眼眸仍永遠閃耀",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "永遠に きらり",
+        "translation": "永遠閃耀 啊",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "生きてきたけど全ては夢みたい",
+        "translation": "雖然活了那麼久 卻全都像夢一場",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "あれもこれも魅力的でも私は君がいい",
+        "translation": "周遭萬物魅力橫溢 但你是我的唯一",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "どこにいたの 探してたよ",
+        "translation": "你之前身在何處 我找很久了",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "連れてって 連れてって",
+        "translation": "帶我走吧 帶我走吧",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "何もかも 捨ててくよ",
+        "translation": "我會為你捨棄一切",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "どこまでも どこまでも",
+        "translation": "隨你到任何地方 隨你到任何地方",
+        "page": 4
+      },
+      {
+        "index": 31,
+        "original": "荒れ狂う 季節の中も 群衆の中も",
+        "translation": "在暴烈狂亂的季節也好 熙來攘往的群眾中也罷",
+        "page": 4
+      },
+      {
+        "index": 32,
+        "original": "君とならば さらり さらり",
+        "translation": "只要和你在一起 就輕鬆暢達 心情輕快",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "新しい日々も 拙い過去も 全てがきらり",
+        "translation": "嶄新的日子 以及拙劣的過去 全都璀璨閃耀",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "Matsuri",
+    "pdf": "(歌詞)まつり.pdf",
+    "sha256": "abc41ab0bc2dbddd36a96e8eb4d8be653bb28e96729742f92c618c38b8ee87e1",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "愛しか感じたくもない",
+        "translation": "我只想感受到愛",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "もう何の分け隔てもない",
+        "translation": "不再有任何偏見",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "まとめてかかってきなさい",
+        "translation": "全都給我放馬過來吧",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "今なら全て受け止めるから",
+        "translation": "因為如今的我能接納一切",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "で、一体何がほしいわけ",
+        "translation": "所以你到底想要什麼?",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "誰に勝ちたいわけ",
+        "translation": "你究竟想贏過誰?",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "なかなか気づけんよね",
+        "translation": "我了解這實在難以察覺",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "何もかも既に持ってるのにね",
+        "translation": "其實我們早已擁有一切",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "花祭り 夏祭り",
+        "translation": "浴佛慶典、夏日慶典",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "何でも好きに選びな",
+        "translation": "隨心所欲地做選擇",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "あなたの心の中咲かせな (えいっ)",
+        "translation": "使其在你心中盛開綻放 (欸)",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "秋祭り 冬休み",
+        "translation": "秋季慶典、冬日假期",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "その閉じた心 今こじ開けな",
+        "translation": "現在就撬開你那緊閉的心扉吧",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "あっけーな ラッセーラ",
+        "translation": "敞開吧 出來吧",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "祭り 祭り",
+        "translation": "慶典 慶典",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "毎日愛しき何かの",
+        "translation": "每一天皆為惹人憐愛的",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "祭り 祭り",
+        "translation": "慶典 慶典",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "あれもこれもが大当たり",
+        "translation": "生活點滴全都像中大獎",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "比べるものは何もない",
+        "translation": "任何事都無須比較",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "勝ちや負けとか一切ない ない ない",
+        "translation": "所有一切也無輸贏之分 沒必要，真沒必要",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "何も知ったこっちゃない",
+        "translation": "我什麼都不在乎",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "好きにしてください",
+        "translation": "想怎麼做都隨你高興",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "何も知ったこっちゃない",
+        "translation": "我什麼都不在乎",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "好きにしてください",
+        "translation": "想怎麼做都隨你高興",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "僕が激しく泣いたせいで",
+        "translation": "都怪我嚎啕大哭",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "君が派手に笑ったせいで",
+        "translation": "都怪你捧腹大笑",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "夏の暑さ身体を焦がして",
+        "translation": "炎炎酷暑灼燒身軀",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "冬の厳しさ骨身に沁みた",
+        "translation": "冷冬嚴寒滲入骨髓",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "真っ平らに生きられたら",
+        "translation": "若我能平穩地活著",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "真っ直ぐにそこへ行けたかな",
+        "translation": "是否就能直達此地?",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "っしゃ今なら遅くはねーから",
+        "translation": "好吧，當下重新開始還不算太遲",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "っしゃ っしゃ っしゃ っしゃ",
+        "translation": "好吧、好吧、好吧、好吧",
+        "page": 4
+      },
+      {
+        "index": 32,
+        "original": "花祭り 夏祭り",
+        "translation": "浴佛慶典、夏日慶典",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "生まれゆくもの死にゆくもの",
+        "translation": "新生抑或死亡",
+        "page": 4
+      },
+      {
+        "index": 34,
+        "original": "全てが同時の出来事",
+        "translation": "全都在同時進行",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "秋祭り 冬休み",
+        "translation": "秋季慶典、冬日假期",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "みな抱きしめたら踊りなさいな",
+        "translation": "將一切擁入懷中起舞吧",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "祭り 祭り",
+        "translation": "慶典 慶典",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "毎日愛しき何かの",
+        "translation": "每一天皆為惹人憐愛的",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "祭り 祭り",
+        "translation": "慶典 慶典",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "あれもこれもが有り難し",
+        "translation": "萬事萬物皆值得感激",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "苦しむことは何もない",
+        "translation": "讓人煎熬的事不復存在",
+        "page": 5
+      },
+      {
+        "index": 42,
+        "original": "肩落とすこた一切ない ない ない",
+        "translation": "也完全不必垂頭喪氣 沒必要，真沒必要",
+        "page": 5
+      },
+      {
+        "index": 43,
+        "original": "祭り 祭り",
+        "translation": "慶典 慶典",
+        "page": 5
+      },
+      {
+        "index": 44,
+        "original": "毎日愛しき何かの",
+        "translation": "每一天皆為惹人憐愛的",
+        "page": 5
+      },
+      {
+        "index": 45,
+        "original": "祭り 祭り",
+        "translation": "慶典 慶典",
+        "page": 5
+      },
+      {
+        "index": 46,
+        "original": "あれもこれもが有り難し",
+        "translation": "萬事萬物皆值得感激",
+        "page": 5
+      },
+      {
+        "index": 47,
+        "original": "苦しむことは何もない",
+        "translation": "讓人煎熬的事不復存在",
+        "page": 5
+      },
+      {
+        "index": 48,
+        "original": "肩落とすこた一切ない ない ない",
+        "translation": "也完全不必垂頭喪氣 沒必要，真沒必要",
+        "page": 5
+      },
+      {
+        "index": 49,
+        "original": "何も知ったこっちゃない",
+        "translation": "我什麼都不在乎",
+        "page": 5
+      },
+      {
+        "index": 50,
+        "original": "好きにしてください",
+        "translation": "想怎麼做都隨你高興",
+        "page": 5
+      },
+      {
+        "index": 51,
+        "original": "何も知ったこっちゃない",
+        "translation": "我什麼都不在乎",
+        "page": 5
+      },
+      {
+        "index": 52,
+        "original": "何にせよめでたい",
+        "translation": "歸根結柢可喜可賀",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "id": "Garden",
+    "pdf": "(歌詞)ガーデン.pdf",
+    "sha256": "81423b4dad649707619066f8ba74f5991b8014bfbe8aedb3572fc323930f4a13",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "鳥は春を告げて 私は恋をして",
+        "translation": "鳥兒宣告春天的來臨 我陷入了戀情之中",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "素敵な温度だけ 触れさせて この肌で",
+        "translation": "唯有這份美好的溫暖 務必讓我用肌膚觸碰",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "雲は夏を帯びて 私は目を閉じて",
+        "translation": "雲朵帶著夏天的氣息 我把眼睛給閉上",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "綺麗な時間だけ 追いかけて 尽きるまで",
+        "translation": "只追逐美好的時光 直到最後一刻到來",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "花は咲いては枯れ あなたに心奪われ",
+        "translation": "花朵會盛開並枯萎 你奪走了我的心",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "それでも守り続けたくて",
+        "translation": "縱使如此我仍想持續",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "私のガーデン 果てるまで",
+        "translation": "守護我的花園直到生命的盡頭",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "人は出会い別れ 失くしてはまた手に入れ",
+        "translation": "人會相遇並離別 失去後重新尋獲",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "それでも守り続けたくて",
+        "translation": "縱使如此我仍想持續",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "私のガーデン 果てるまで",
+        "translation": "守護我的花園直到生命的盡頭",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "夜が秋を呼んで 私は旅に出て",
+        "translation": "黑夜呼喚秋天來拜訪 我就此踏上了旅途",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "素敵な出会いだけ 待っていて その日まで",
+        "translation": "但願等在前方的是美妙邂逅 直至那一天為止",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "だから冬よおいで 私を抱きしめて",
+        "translation": "所以冬天快來我身邊 將我緊緊抱在懷裡",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "その手の温もりで 生きさせて 溶けるまで",
+        "translation": "用那雙手的溫暖 讓我活下去以至融化",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "花は咲いては枯れ あなたに心奪われ",
+        "translation": "花朵會盛開並枯萎 你奪走了我的心",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "それでも守り続けたくて",
+        "translation": "縱使如此我仍想持續",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "私のガーデン 果てるまで",
+        "translation": "守護我的花園直到生命的盡頭",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "人は出会い別れ 失くしてはまた手に入れ",
+        "translation": "人會相遇並離別 失去後重新尋獲",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "それでも守り続けたくて",
+        "translation": "縱使如此我仍想持續",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "私のガーデン 果てるまで",
+        "translation": "守護我的花園直到生命的盡頭",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "季節に身を置いて 流れに身を任せ",
+        "translation": "置身於季節之中 選擇順其自然",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "なるようになるだけ 受け入れて そのままで",
+        "translation": "任由事態自然發展 接受一切本來的樣子",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "流した涙だけ ふりまいた愛だけ",
+        "translation": "過去流下的淚水 曾不吝播撒的愛",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "豊かになる庭で 掴んだ手 解き放て 空の果て",
+        "translation": "使花園變得生機蓬勃 放開緊抓的手 並伸向天際",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "花は咲いては枯れ あなたに心奪われ",
+        "translation": "花朵會盛開並枯萎 你奪走了我的心",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "それでも守り続けたくて",
+        "translation": "縱使如此我仍想持續",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "ガーデン 果てるまで",
+        "translation": "守護我的花園直到生命的盡頭",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "人は出会い別れ 失くしてはまた手に入れ",
+        "translation": "人會相遇並離別 失去後重新尋獲",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "それでも守り続けたくて",
+        "translation": "縱使如此我仍想持續",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "私のガーデン 果てるまで",
+        "translation": "守護我的花園直到生命的盡頭",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "NanNan",
+    "pdf": "(歌詞)何なんw.pdf",
+    "sha256": "58a901c7a0a6d3013af0c6ecd0245af2eb0056f8430168aaa0b77e5c125776e7",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "あんたのその歯にはさがった青さ粉に",
+        "translation": "你那卡在牙縫裡的青海苔",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "ふれるべきか否かで少し悩んでる",
+        "translation": "我正煩惱著該不該提醒你呢",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "口にしない方がいい真実もあるから",
+        "translation": "因為有些真相不說出口比較好",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "…知らない方が良かったなんて言わないで居て",
+        "translation": "…別說什麼「早知道就不要知道了」",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "何があってもずっと大好きなのに",
+        "translation": "明明無論發生什麼事我都一直最喜歡你",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "どんなときも ここにいるのに",
+        "translation": "明明無論什麼時候我都會在這裡",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "近すぎて 見えなくて ムシされて",
+        "translation": "卻因為太近而看不見 被視而不見",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "雨の中一人行くあんた",
+        "translation": "一個人走在雨中的你",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "心の中でささやくのよ そっちに行ってはダメと",
+        "translation": "我在心底輕聲呢喃 「不可以往那邊走」",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "聞かないフリ続けるあんた",
+        "translation": "卻繼續假裝沒聽見的你",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "勢いにまかせて 肥溜めへとダイブ",
+        "translation": "順著那股勁頭 一頭栽進糞坑裡",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "それは何なん",
+        "translation": "那是什麼啦",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "先がけてワシは言うたが",
+        "translation": "我早就先跟你說過了",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "それならば何なん",
+        "translation": "那如果是這樣又算什麼",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "何で何も聞いてくれんかったん",
+        "translation": "為什麼什麼都不聽我說",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "その顔は何なんw",
+        "translation": "那張臉是什麼啦w",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "花咲く町の角誓った",
+        "translation": "在開滿花的街角發誓過的",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "あの時の笑顔は何なん",
+        "translation": "那時的笑容是什麼",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "あの時の涙は何じゃったん",
+        "translation": "那時的眼淚又是什麼",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "たまには大胆に攻めたら良い",
+        "translation": "偶爾大膽進攻一下也好",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "時には慎重に歩めば良い",
+        "translation": "有時候謹慎地前進也好",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "真実なんてもんはとっくのとうに",
+        "translation": "所謂真相這種東西 老早就",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "知っていることを知らないだけでしょう",
+        "translation": "不過是假裝不知道早已知道的事罷了",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "あれほど刻んだ後悔も",
+        "translation": "就連那刻骨銘心的後悔",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "くり返す毎日の中で かき消されていくのね",
+        "translation": "也在日復一日的循環中 逐漸被抹去了呢",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "真っさらになった決意を胸に",
+        "translation": "懷抱著全新的決心",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "あんたは堂々と また肥溜めへとダイブ",
+        "translation": "你卻又堂堂正正地 再次跳進糞坑裡",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "それは何なん",
+        "translation": "那是什麼啦",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "先がけてワシは言うたが",
+        "translation": "我早就先跟你說過了",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "それならば何なん",
+        "translation": "那如果是這樣又算什麼",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "何で何も聞いてくれんかったん",
+        "translation": "為什麼什麼都不聽我說",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "その顔は何なんw",
+        "translation": "那張臉是什麼啦w",
+        "page": 4
+      },
+      {
+        "index": 32,
+        "original": "花咲く町の角誓った",
+        "translation": "在開滿花的街角發誓過的",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "あの時の笑顔は何なん",
+        "translation": "那時的笑容是什麼",
+        "page": 4
+      },
+      {
+        "index": 34,
+        "original": "あの時の涙は何じゃったん",
+        "translation": "那時的眼淚又是什麼",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "神様たすけて、やばめ やばめ やばめ やばめ",
+        "translation": "神明啊 救救我，不妙 不妙 不妙 不妙",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "足元照らして、やばめ やばめ やばめ やばめ",
+        "translation": "照亮我的腳下，不妙 不妙 不妙 不妙",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "目を閉じてみて 心の耳すまして",
+        "translation": "閉上眼睛試試看 用心傾聽",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "優しい気持ちで",
+        "translation": "懷著溫柔的心情",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "答えを聴いて もう歌わせないで",
+        "translation": "聽聽答案吧 別再讓我唱了",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "裏切りのブルース",
+        "translation": "背叛的藍調",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "それは「何なんw」",
+        "translation": "那是「什麼啦w」",
+        "page": 5
+      },
+      {
+        "index": 42,
+        "original": "…ワシは言うたが",
+        "translation": "…我早就說過了",
+        "page": 5
+      },
+      {
+        "index": 43,
+        "original": "それならば何なん",
+        "translation": "那如果是這樣又算什麼",
+        "page": 5
+      },
+      {
+        "index": 44,
+        "original": "何で聞いてくれんかったん",
+        "translation": "為什麼不聽我說",
+        "page": 5
+      },
+      {
+        "index": 45,
+        "original": "何なん 何なん 何なん",
+        "translation": "什麼啦 什麼啦 什麼啦",
+        "page": 5
+      },
+      {
+        "index": 46,
+        "original": "あの時の笑顔は何なん",
+        "translation": "那時的笑容是什麼",
+        "page": 5
+      },
+      {
+        "index": 47,
+        "original": "あの時の涙は何じゃったん",
+        "translation": "那時的眼淚又是什麼",
+        "page": 5
+      },
+      {
+        "index": 48,
+        "original": "何なん",
+        "translation": "什麼啦",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "id": "Tabiji",
+    "pdf": "(歌詞)旅路.pdf",
+    "sha256": "0cdec5ec5f43b1c0022781b178fdc0ea4777fc50d4bc52cb9a705d29583967eb",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "あの日のことは 忘れてね 幼すぎて 知らなかった",
+        "translation": "你忘記那一天的事吧 當時過於年少而懵懂無知",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "恥ずかしくて 消えたいけど もう大丈夫 旅路は続く",
+        "translation": "感到羞恥 想就此消失 但已經沒問題了 旅途依然持續著",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "あの日のことは 忘れるね みんなだって 彷徨ってた",
+        "translation": "我會忘卻那一天的事 大家過去也曾經歷過彷徨",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "この宇宙が 教室なら 隣同士 学びは続く",
+        "translation": "如果這片宇宙是教室 相鄰的我們會繼續學習",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "果てしないと思えても いつか終わりがくると",
+        "translation": "即使看似永無止境 遲早會迎來終結",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "知らなかった 昨日までより 優しくなれる気がした",
+        "translation": "比起毫不知情的過去 感覺如今能變得更溫柔",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "あーあ 僕らはまだ先の長い旅の中で",
+        "translation": "啊 我們仍然在漫長旅途之中",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "誰かを愛したり 忘れたり 色々あるけど",
+        "translation": "有時愛著某人 有時遺忘某人 雖然遭逢各種狀況",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "あーあ いつの間にかこの日さえも懐かしんで",
+        "translation": "啊 在不知不覺間 連今天這樣的日子也會令人懷念",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "全てを笑うだろう 全てを愛すだろう",
+        "translation": "屆時便能笑看世間一切 愛著周遭的一切吧",
+        "page": 2
+      },
+      {
+        "index": 10,
+        "original": "お元気ですか この町は相変わらず青春です",
+        "translation": "你過得好嗎 這座城鎮一如既往 青春洋溢",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "誰もがみな走ってます まだ見えない旅路の先へ",
+        "translation": "所有人都在奔跑著 朝向還看不到終點的旅途",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "お元気ですか 僕たちはいつになれど少年です",
+        "translation": "你過得好嗎 我們無論過多久 都還是少年",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "心の奥底ではいつも 永遠を求めています",
+        "translation": "在內心深處 總是在渴望著永恆",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "果てしないと思ってた ものがここには無いけど",
+        "translation": "曾經認為永無止盡的事物 即便不存在於此",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "目にしてきた 手に触れてきた 全てに意味はあるから",
+        "translation": "然而那些親眼瞧見的一切 親手觸碰的一切 全都具有意義",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "あーあ 僕らはまだ先の長い旅の中で",
+        "translation": "啊 我們仍然在漫長旅途之中",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "何かを愛したり 忘れたり 色々あるけど",
+        "translation": "有時愛著某物 有時遺忘某物 雖然遭逢各種狀況",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "あーあ これからまた色んな愛を受けとって",
+        "translation": "啊 從今以後 我又會得到各式各樣的愛",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "あなたに返すだろう 永遠なる光のなか",
+        "translation": "然後反饋於你吧 將在永恆的光芒之中",
+        "page": 3
+      },
+      {
+        "index": 20,
+        "original": "全てを愛すだろう",
+        "translation": "愛著周遭的一切吧",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "ShinunogaEWa",
+    "pdf": "(歌詞)死ぬのがいいわ.pdf",
+    "sha256": "39500e7fb1c469bbe0b948b46b412b6153a12e5667960beabd3c2e3298d93d6f",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "指切りげんまん ホラでも吹いたら",
+        "translation": "打勾勾 我若是誇大其辭",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "針でもなんでも 飲ませていただき Monday",
+        "translation": "就讓我吞下細針或所有一切 Monday",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "It doesn't matter if it's Sunday",
+        "translation": "就算是星期天也可以",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "鏡よ鏡よ この世で一番",
+        "translation": "魔鏡啊魔鏡 這世上",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "変わることのない 愛をくれるのは だれ",
+        "translation": "能給我最堅貞不渝愛情的人是誰",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "No need to ask cause it's my darling",
+        "translation": "毫無疑問 是我的darling",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "わたしの最後はあなたがいい",
+        "translation": "希望你是我的最後一位",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "あなたとこのままおサラバするより",
+        "translation": "與其就這樣跟你分手",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "三度の飯よりあんたがいいのよ",
+        "translation": "與其選擇一日三餐我更渴望你",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "あんたとこのままおサラバするよか",
+        "translation": "就這樣跟你分手真的好嗎",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "それでも時々 浮つくMy Heart",
+        "translation": "儘管如此偶爾還是不忠誠的My heart",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "死んでも治らな治してみせます baby",
+        "translation": "就算死都無法治好 我也會治癒給你看 baby",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "Yeah I ain't nothin but ya baby",
+        "translation": "我心裡只有你 baby",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "失って初めて気がつくなんて",
+        "translation": "失去後才第一次懂得珍惜",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "そんなダサいこと もうしたないのよ Goodbye",
+        "translation": "再也不想做出如此老掉牙的事 Goodbye",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "Oh Don't you ever say ByeBye",
+        "translation": "你永遠不要跟我說拜拜",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "Eh",
+        "translation": "",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "わたしの最後はあなたがいい",
+        "translation": "希望你是我的最後一位",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "あなたとこのままおサラバするより",
+        "translation": "與其就這樣跟你分手",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "三度の飯よりあんたがいいのよ",
+        "translation": "與其選擇一日三餐我更渴望你",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "あんたとこのままおサラバするよか",
+        "translation": "就這樣跟你分手真的好嗎",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "わたしの最後はあなたがいい",
+        "translation": "希望你是我的最後一位",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "あなたとこのままおサラバするより",
+        "translation": "與其就這樣跟你分手",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 3
+      },
+      {
+        "index": 32,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "三度の飯よりあんたがいいのよ",
+        "translation": "與其選擇一日三餐我更渴望你",
+        "page": 4
+      },
+      {
+        "index": 34,
+        "original": "あんたとこのままおサラバするよか",
+        "translation": "就這樣跟你分手真的好嗎",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "死ぬのがいいわ",
+        "translation": "我寧可去死",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "それでも時々浮つくMy Heart",
+        "translation": "儘管如此偶爾還是不忠誠的My heart",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "そんなダサいのは もう要らないのよ byebye",
+        "translation": "再也無須繼續如此老掉牙的事 byebye",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "I'll always stick wit ya my baby.",
+        "translation": "我永遠守著你 我的baby",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "MichiTeyuKu",
+    "pdf": "(歌詞)満ちてゆく.pdf",
+    "sha256": "de9b079715e18b9a9739f332b065b34206cb4184bc61f40a60b8c8ae68628f74",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "走り出した午後も",
+        "translation": "無論是奔波勞碌的下午",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "重ね合う日々も",
+        "translation": "還是我們所共度的時日",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "避けがたく全て終わりが来る",
+        "translation": "全都會面臨不可避免的終結",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "あの日のきらめきも",
+        "translation": "無論是那天的閃耀光輝",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "淡いときめきも",
+        "translation": "還是曾有過的些許心動",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "あれもこれもどこか置いてくる",
+        "translation": "通通都會被我們遺留在某處",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "それで良かったと",
+        "translation": "那樣就行了",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "これで良かったと",
+        "translation": "這麼做就好",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "健やかに笑い合える日まで",
+        "translation": "直到活得安康的我們 相視而笑的日子到來",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "明けてゆく空も暮れてゆく空も",
+        "translation": "不管天空是迎來黎明或黃昏",
+        "page": 2
+      },
+      {
+        "index": 10,
+        "original": "僕らは超えてゆく",
+        "translation": "相信我們都能攜手跨越",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "変わりゆくものは仕方がないねと",
+        "translation": "面對無常之物 正視自身的無能為力",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "手を放す、軽くなる、満ちてゆく",
+        "translation": "選擇放手，落得一身輕，逐漸被填滿",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "満ちてゆく",
+        "translation": "逐漸被填滿",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "手にした瞬間に 無くなる喜び",
+        "translation": "得到的當下喜悅便消失",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "そんなものばかり追いかけては",
+        "translation": "那卻是我們一昧在追尋的",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "無駄にしてた“愛”という言葉",
+        "translation": "過去誤用了「愛」這個詞彙",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "今なら本当の意味が分かるのかな",
+        "translation": "如今我們了解它真正的涵義嗎",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "愛される為に 愛すのは悲劇",
+        "translation": "為愛而愛注定是場悲劇",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "カラカラな心にお恵みを",
+        "translation": "求恩惠之雨降於乾枯的心上",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "晴れてゆく空も荒れてゆく空も",
+        "translation": "不管天上是晴空萬里或狂風暴雨",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "僕らは愛でてゆく",
+        "translation": "相信我們都能賞景怡情",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "何もないけれど全て差し出すよ",
+        "translation": "即使一無所有 我仍願奉獻一切",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "手を放す、軽くなる、満ちてゆく",
+        "translation": "選擇放手，落得一身輕，逐漸被填滿",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "開け放つ胸の光",
+        "translation": "解放心中的光芒",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "闇を照らし道を示す",
+        "translation": "替我們照亮黑暗並指明道路",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "やがて生死を超えて繋がる",
+        "translation": "終將超越生死 連結彼此",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "共に手を放す、軽くなる、満ちてゆく",
+        "translation": "一同選擇放手，落得一身輕，逐漸被填滿",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "晴れてゆく空も荒れてゆく空も",
+        "translation": "不管天上是晴空萬里或狂風暴雨",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "僕らは愛でてゆく",
+        "translation": "相信我們都能賞景怡情",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "何もないけれど全て差し出すよ",
+        "translation": "即使一無所有 我仍願奉獻一切",
+        "page": 4
+      },
+      {
+        "index": 31,
+        "original": "手を放す、軽くなる、満ちてゆく",
+        "translation": "選擇放手，落得一身輕，逐漸被填滿",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "Hana",
+    "pdf": "(歌詞)花.pdf",
+    "sha256": "abb23dcbb6c8b5ffdbb120f42e8e6860214473e6b3850f980e4737012effad97",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "枯れていく 今この瞬間も",
+        "translation": "逐漸凋萎 連此時此刻也不例外",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "咲いている 全ては溶けていく",
+        "translation": "開得茂盛 萬物漸漸交融在一起",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "何が出来るのだろうか",
+        "translation": "我能做些什麼",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "誰を生きようかな",
+        "translation": "我該活得像誰",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "みんな儚い みんな尊い",
+        "translation": "我們的人生苦短 皆為寶貴的存在",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "しわしわに萎れた花束 小わきに抱えて",
+        "translation": "把一束皺巴巴的枯萎花束夾在手臂下",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "永遠に変わらぬ輝き 探してた",
+        "translation": "找尋永不黯淡的光輝",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "僕らを信じてみた 僕らを感じてた",
+        "translation": "選擇相信你和我 感受到了你和我",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "咲かせにいくよ 内なる花を",
+        "translation": "我要動身去綻放 內心的花朵",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "さりげなく 思いを込めてみる",
+        "translation": "若無其事地 懷抱自己的心願",
+        "page": 2
+      },
+      {
+        "index": 10,
+        "original": "やむを得ず 祈りを込めていく",
+        "translation": "無可奈何地 注入自己的祈願",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "いつまで迷うんだろうか",
+        "translation": "不知道還會迷失多久",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "いつかは分かるよな",
+        "translation": "我確信總有一天會得到答案",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "誰もが一人 全ては一つ",
+        "translation": "大家皆是孤身一人 全即是一",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "色々な姿や形に 惑わされるけど",
+        "translation": "即使被各種外貌和形狀所迷惑",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "いつの日か 全てがかわいく思えるさ",
+        "translation": "在未來仍會覺得全都惹人憐愛",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "わたしは何になろうか どんな色がいいかな",
+        "translation": "我會成為什麼樣子 想染上怎樣的色彩",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "探しにいくよ 内なる花を",
+        "translation": "我要動身去探尋 內心的花朵",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "しわしわに萎れた花束 小わきに抱えて",
+        "translation": "把一束皺巴巴的枯萎花束夾在手臂下",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "永遠に変わらぬ輝き 探してた",
+        "translation": "找尋永不黯淡的光輝",
+        "page": 3
+      },
+      {
+        "index": 20,
+        "original": "僕らを信じてみた 僕らを感じてた",
+        "translation": "選擇相信你和我 感受到了你和我",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "咲かせにいくよ 内なる花を",
+        "translation": "我要動身去綻放 內心的花朵",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "探しにいくよ 内なる花を",
+        "translation": "我要動身去探尋 內心的花朵",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "my flower's here",
+        "translation": "我的花朵就在這裡",
+        "page": 3
+      }
+    ]
+  }
+]

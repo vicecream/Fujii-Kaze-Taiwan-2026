@@ -1,229 +1,52 @@
-/* Metadata needed by the guide list; full lyrics load only on song pages. */
-export const SONGS = [
-  {
-    "id": "Tokimeki",
-    "title": "心動 (Tokimeki)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "-_PKhPMXMDY"
-  },
-  {
-    "id": "KaijuNoHanauta",
-    "title": "怪獸之花歌 (怪獣の花唄)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "UM9XNpgrqVk"
-  },
-  {
-    "id": "CHAINSAWBLOOD",
-    "title": "CHAINSAW BLOOD",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "FL1QjjkZVm4"
-  },
-  {
-    "id": "KoikazeniNosete",
-    "title": "乘著戀愛感冒 (恋風邪にのせて)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "1FIhcdocT-k"
-  },
-  {
-    "id": "Odoriko",
-    "title": "舞者 (踊り子)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "7HgJIAUtICU"
-  },
-  {
-    "id": "HadakaNoYusha",
-    "title": "裸身勇者 (裸の勇者)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "FT0GKCuSaW0"
-  },
-  {
-    "id": "Fukakouryoku",
-    "title": "不可幸力 (不可幸力)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "Gbz2C2gQREI"
-  },
-  {
-    "id": "Reunion",
-    "title": "重逢 (再会)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "WcaSSvtHFeM"
-  },
-  {
-    "id": "hanaurana",
-    "title": "花占卜 (花占い)",
-    "translationCredit": "Smiecj",
-    "translationCreditUrl": "https://smiecj.com/2022/12/30/vaundy-hanauranai/",
-    "translationSourceUrl": "https://smiecj.com/2022/12/30/vaundy-hanauranai/",
-    "translationLicense": "CC BY-NC-SA 4.0",
-    "translationLicenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "youtubeId": "onhBN0qkUcE"
-  },
-  {
-    "id": "Yobigoe",
-    "title": "呼喚聲 (呼び声)",
-    "translationCredit": "藍色小樹熊",
-    "translationCreditUrl": "https://bluekokomurmur.com/lyrics/vaundy-yobigoe/",
-    "translationSourceUrl": "https://bluekokomurmur.com/lyrics/vaundy-yobigoe/",
-    "youtubeId": "CI2x2aSi8aI"
-  },
-  {
-    "id": "Tomoshibi",
-    "title": "燈火 (灯火)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "nrLZ-vTiQa4"
-  },
-  {
-    "id": "HowdoIknow'",
-    "title": "我怎麼會知道呢 (僕にはどうしてわかるんだろう)",
-    "translationCredit": "藍色小樹熊",
-    "translationCreditUrl": "https://bluekokomurmur.com/lyrics/vaundy-boku-niwa-doshite-wakarundarou/",
-    "translationSourceUrl": "https://bluekokomurmur.com/lyrics/vaundy-boku-niwa-doshite-wakarundarou/",
-    "youtubeId": "x4aWXNWPrtY"
-  },
-  {
-    "id": "Shiwaawase'",
-    "title": "皺褶相合 (しわあわせ)",
-    "youtubeId": "JwmGruvGt_I"
-  },
-  {
-    "id": "Homunculus",
-    "title": "人造小人 (ホムンクルス)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "ZhUa0CumyxQ"
-  },
-  {
-    "id": "soramimi",
-    "title": "soramimi",
-    "youtubeId": "Jh_0EW6G3gQ"
-  },
-  {
-    "id": "TokyoFlash",
-    "title": "東京 Flash (東京フラッシュ)",
-    "translationCredit": "雨音子",
-    "translationCreditUrl": "https://ameotoko1997.blog.fc2.com/blog-entry-375.html",
-    "translationSourceUrl": "https://ameotoko1997.blog.fc2.com/blog-entry-375.html",
-    "youtubeId": "SIuF37EWaLU"
-  },
-  {
-    "id": "NakiJizo",
-    "title": "哭泣地藏 (泣き地蔵)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "XQTM2M5iD_I"
-  },
-  {
-    "id": "napori",
-    "title": "napori",
-    "youtubeId": "ZeIGVnkYX04"
-  },
-  {
-    "id": "Backlight",
-    "title": "逆光 (逆光)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "RhDxXvn6YaQ"
-  },
-  {
-    "id": "NEOJAPAN",
-    "title": "NEO JAPAN",
-    "youtubeId": "QC6gd_b1nz8"
-  },
-  {
-    "id": "ZuttoLoveSong",
-    "title": "一直都是情歌 (ずっとラブソング)",
-    "youtubeId": "wriTi0J_-1A"
-  },
-  {
-    "id": "Iseijin'",
-    "title": "偉生人 (偉生人)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "aDaWuvpB_Kw"
-  },
-  {
-    "id": "ZERO",
-    "title": "ZERO",
-    "youtubeId": "Fs7MW0rx9Cw"
-  },
-  {
-    "id": "SonnaBitternaHanashi)",
-    "title": "那樣的 bitter 故事 (そんなbitterな話)",
-    "youtubeId": "V-gxqhWEbxI"
-  },
-  {
-    "id": "Fujin",
-    "title": "風神 (風神)",
-    "youtubeId": "yiU0I0tvt6s"
-  },
-  {
-    "id": "Jonetsu",
-    "title": "常熱 (常熱)",
-    "translationCredit": "Oblivionis",
-    "translationCreditUrl": "https://home.gamer.com.tw/artwork.php?sn=5830053",
-    "translationSourceUrl": "https://home.gamer.com.tw/artwork.php?sn=5830053",
-    "youtubeId": "fxtQ4Dsmqo0"
-  },
-  {
-    "id": "Kagero",
-    "title": "陽炎 (かげろう)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "gY-7i-T76o0"
-  },
-  {
-    "id": "IdeagaAfureteNemurenai",
-    "title": "理念滿溢而無法入睡 (イデアが溢れて眠れない)",
-    "youtubeId": "0u_zA8BJG6A"
-  },
-  {
-    "id": "flyaway",
-    "title": "飛翔之時 (飛ぶ時)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "ARj1adoUoEU"
-  },
-  {
-    "id": "mabuta",
-    "title": "眼瞼 (まぶた)",
-    "translationCredit": "巴哈姆特的月勳",
-    "youtubeId": "fjx_uy5eD8g"
-  },
-  {
-    "id": "Hitomibore",
-    "title": "為瞳孔著迷 (瞳惚れ)",
-    "youtubeId": "XEEXE8Ei5SA"
-  },
-  {
-    "id": "SekainoHimitsu",
-    "title": "世界的秘密 (世界の秘密)",
-    "translationCredit": "Smiecj",
-    "translationCreditUrl": "https://smiecj.com/2023/05/07/vaundy-sekainohimitu/",
-    "translationSourceUrl": "https://smiecj.com/2023/05/07/vaundy-sekainohimitu/",
-    "translationLicense": "CC BY-NC-SA 4.0",
-    "translationLicenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "youtubeId": "xFoTFCHU70s"
-  },
-  {
-    "id": "Wasuremono",
-    "title": "遺忘之物 (忘れ物)",
-    "youtubeId": "tQq8C7irREk"
-  },
-  {
-    "id": "Timeparadox",
-    "title": "時間悖論 (タイムパラドックス)",
-    "translationCredit": "藍色小樹熊",
-    "translationCreditUrl": "https://bluekokomurmur.com/lyrics/vaundy-taimu-paradokkusu/",
-    "translationSourceUrl": "https://bluekokomurmur.com/lyrics/vaundy-taimu-paradokkusu/",
-    "youtubeId": "ewhRE-BvJCg"
-  },
-  {
-    "id": "TodomenoIchigeki",
-    "title": "最後一擊 (トドメの一撃)",
-    "translationCredit": "Smiecj",
-    "translationCreditUrl": "https://smiecj.com/2023/10/08/vaundy-todome/",
-    "translationSourceUrl": "https://smiecj.com/2023/10/08/vaundy-todome/",
-    "translationLicense": "CC BY-NC-SA 4.0",
-    "translationLicenseUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    "youtubeId": "7xRWOylrLfI"
-  },
-  {
-    "id": " Kimagure",
-    "title": "任性 (気まぐれ)",
-    "youtubeId": "uYyfD5A-w8Q"
-  }
+export const ALBUMS = Object.freeze({
+  prema: { title: "Prema", url: "https://fujiikaze.com/music/prema/", language: "en" },
+  best: { title: "Best of Fujii Kaze 2020–2024", url: "https://fujiikaze.com/music/best_of_fujii_kaze_2020-2024/", language: "ja" },
+});
+// Album order is for preparation, never the show order.
+// IDs checked against the official archive / artist channel on 2026-10-27.
+const tracks = [
+  ["CasketGirl", "Casket Girl", "prema", "gFOu5r-OuQ4"],
+  ["INeedUBack", "I Need U Back", "prema", "ud0lMojStCs"],
+  ["Hachiko", "Hachikō", "prema", "OodEsjZ88TQ"],
+  ["LoveLikeThis", "Love Like This", "prema", "RoY_ZoWe-eI"],
+  ["Prema", "Prema", "prema", "UJgPpzZcxGU"],
+  ["ItAintOver", "It Ain’t Over", "prema", "BKFxq3D_dGU"],
+  ["You", "You", "prema", "s4UW__ysPEM"],
+  ["OkayGoodbye", "Okay, Goodbye", "prema", "EAtRDZQLsgk"],
+  ["ForeverYoung", "Forever Young", "prema", "tU953HcYdxU"],
+  ["Matsuri", "まつり (Matsuri)", "best", "NwOvu-j_WjY"],
+  ["WorkinHard", "Workin’ Hard", "best", "88wHgiUAKoI"],
+  ["NanNan", "何なんw (Nan-Nan)", "best", "Nt6ZwuVzOS4"],
+  ["Kirari", "きらり (Kirari)", "best", "TcLLpZBWsck"],
+  ["Hana", "花 (Hana)", "best", "SfPkl7lol7g"],
+  ["Garden", "ガーデン (Garden)", "best", "53rIic2lvKc"],
+  ["Damn", "damn", "best", "yP7K2lXr6GA"],
+  ["ShinunogaEWa", "死ぬのがいいわ (Shinunoga E-Wa)", "best", "lRVJuPI5IXI"],
+  ["Tabiji", "旅路 (Tabiji)", "best", "29p8FvT_puU"],
+  ["MichiTeyuKu", "満ちてゆく (Michi Teyu Ku / Overflowing)", "best", "ptiK8U4WlSc"],
 ];
+// Provider spellings are separate from the titles shown in the guide.
+const KARAOKE_TITLES = {
+  Hachiko: ["Hachikō", "Hachiko"],
+  ItAintOver: ["It Ain't Over"],
+  WorkinHard: ["Workin' Hard", "Workin Hard"],
+  OkayGoodbye: ["Okay, Goodbye", "Okay Goodbye"],
+  Matsuri: ["まつり", "Matsuri"],
+  NanNan: ["何なんw", "Nan-Nan", "Nan Nan"],
+  Kirari: ["きらり", "Kirari"],
+  Hana: ["花", "Hana"],
+  Garden: ["ガーデン", "Garden"],
+  ShinunogaEWa: ["死ぬのがいいわ", "Shinunoga E-Wa"],
+  Tabiji: ["旅路", "Tabiji"],
+  MichiTeyuKu: ["満ちてゆく", "Michi Teyu Ku (Overflowing)", "Michi Teyu Ku", "Overflowing"],
+};
+export const SONGS = tracks.map(([id, title, album, youtubeId]) => ({
+  id, title, album, youtubeId, artist: "Fujii Kaze",
+  language: ALBUMS[album].language, sourceUrl: ALBUMS[album].url,
+  karaokeTitle: id === "MichiTeyuKu" ? "Michi Teyu Ku (Overflowing)" : undefined,
+  karaokeTitles: KARAOKE_TITLES[id] || [title],
+  karaokeArtists: ["Fujii Kaze", "藤井風", "藤井 風"],
+  videoSourceUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
+  listenUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
+  lyricsStatus: "pending", translationStatus: "pending", timingStatus: "pending",
+}));

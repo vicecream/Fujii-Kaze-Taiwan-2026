@@ -1,0 +1,270 @@
+{
+  "checks": [
+    {
+      "name": "Light video status contrast >= 4.5:1",
+      "pass": false,
+      "detail": "{\"hidden\":false,\"color\":\"rgb(100, 100, 107)\",\"background\":\"rgb(0, 0, 0)\",\"font\":\"14px\",\"text\":\"無法播放影片，請在下方開啟 YouTube。\",\"ratio\":3.58}"
+    },
+    {
+      "name": "Sync info target meets project 40px size",
+      "pass": false,
+      "detail": "{\"x\":338,\"y\":86,\"width\":28,\"height\":28}"
+    },
+    {
+      "name": "Shift+Tab wraps within song dialog",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Tab wraps back to song dialog close",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Keyboard focus indicator is visible",
+      "pass": true,
+      "detail": "{\"outline\":\"solid\",\"width\":\"2px\"}"
+    },
+    {
+      "name": "Playback speed selection updates accessible label",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Playback speed selection survives song change",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Dark video status contrast >= 4.5:1",
+      "pass": true,
+      "detail": "8.98"
+    },
+    {
+      "name": "320px note text and YouTube link do not overlap",
+      "pass": false,
+      "detail": "{\"textRight\":212,\"textTop\":249,\"textBottom\":265,\"linkLeft\":198.875,\"linkTop\":248,\"linkBottom\":266,\"linkRight\":304,\"text\":\"歌詞整理中，可先聆聽官方影片。\",\"gap\":-13.125}"
+    },
+    {
+      "name": "Production service worker controls page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Cached song shell opens offline",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "Offline banner explains video requires network",
+      "pass": true,
+      "detail": "目前處於離線狀態。仍可查看歌詞與應援提示，但無法播放影片。"
+    },
+    {
+      "name": "All 19 songs are navigable offline",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "observations": [
+    {
+      "name": "Sync info target",
+      "size": {
+        "x": 338,
+        "y": 86,
+        "width": 28,
+        "height": 28
+      }
+    },
+    {
+      "name": "320px song title",
+      "width": 104,
+      "text": "10.\nまつり (Matsuri)",
+      "visibleTitleWidth": 44.765625
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "11-mobile-japanese-player",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "17-mobile-keyboard-focus",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "13-mobile-japanese-dark",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "14-small-mobile-player",
+      "viewport": {
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "name": "18-mobile-offline",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "errors": [],
+  "failedRequests": [
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/api/stats/qoe",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "url": "https://www.youtube.com/generate_204",
+      "error": "net::ERR_INTERNET_DISCONNECTED"
+    },
+    {
+      "url": "https://www.youtube.com/youtubei/v1/log_event",
+      "error": "net::ERR_INTERNET_DISCONNECTED"
+    },
+    {
+      "url": "https://www.youtube.com/iframe_api",
+      "error": "net::ERR_INTERNET_DISCONNECTED"
+    }
+  ],
+  "cacheBeforeOffline": [
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/index.html",
+      "status": 200,
+      "type": "text/html; charset=utf-8"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/manifest.json",
+      "status": 200,
+      "type": "application/json"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/icon-512.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/icon-192.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/icon-maskable-512.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/apple-touch-icon.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/images/prema-poster.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/images/kaohsiung-stage-map.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/apple-touch-icon-DXunuXyL.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/icon-192-D45WndcG.png",
+      "status": 200,
+      "type": "image/png"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/prema-poster-BEMkoFRh.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/index-Dr1fVA_Q.css",
+      "status": 200,
+      "type": "text/css"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/index-D7JX3zIh.js",
+      "status": 200,
+      "type": "text/javascript"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/furigana-corrections-CD3mxXMq.js",
+      "status": 200,
+      "type": "text/javascript"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/song-lyrics-BRer8buY.js",
+      "status": 200,
+      "type": "text/javascript"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/furigana-Dvt41uxz.js",
+      "status": 200,
+      "type": "text/javascript"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/CHANGELOG-CnPmiSv7.js",
+      "status": 200,
+      "type": "text/javascript"
+    },
+    {
+      "name": "kaze-guide-v2.0.0",
+      "url": "http://127.0.0.1:4176/assets/karaoke-sources-B0J1Cttp.js",
+      "status": 200,
+      "type": "text/javascript"
+    }
+  ]
+}

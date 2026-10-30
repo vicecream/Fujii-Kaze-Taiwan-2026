@@ -42,8 +42,3 @@ export const PIP_SVG        = '<svg viewBox="0 0 24 24" fill="none" stroke="curr
 export const CLOSE_SVG      = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
 export const SUN_SVG        = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.8"/><path d="M12 2.5v2.1M12 19.4v2.1M4.7 4.7l1.5 1.5M17.8 17.8l1.5 1.5M2.5 12h2.1M19.4 12h2.1M4.7 19.3l1.5-1.5M17.8 6.2l1.5-1.5"/></svg>';
 export const MOON_SVG       = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.2 15.1A8.5 8.5 0 0 1 8.9 3.8 8.5 8.5 0 1 0 20.2 15.1z"/></svg>';
-
-export const CHANT_VERSION_ICONS = Object.freeze({
-  jp: '<svg class="chant-version-flag chant-version-flag-jp" viewBox="0 0 24 16" role="img" aria-label="日本版"><rect x="1" y="1" width="22" height="14" rx="2" fill="#fff" stroke="currentColor" stroke-opacity=".45"/><circle cx="12" cy="8" r="4" fill="#bc002d"/></svg>',
-  kr: '<svg class="chant-version-flag chant-version-flag-kr" viewBox="0 0 24 16" role="img" aria-label="韓國版"><rect x="1" y="1" width="22" height="14" rx="2" fill="#fff" stroke="currentColor" stroke-opacity=".45"/><path d="M12 4a4 4 0 0 1 0 8v-4a2 2 0 0 0 0-4Z" fill="#cd2e3a"/><path d="M12 12a4 4 0 0 1 0-8v4a2 2 0 0 0 0 4Z" fill="#0047a0"/><path d="M4 4h3m-3 1.5h3M17 10.5h3m-3 1.5h3" stroke="#141414" stroke-width="1" stroke-linecap="round"/></svg>'
-});

@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-29T08:39:23.676Z",
+  "note": "Metadata only. No lyric text is saved. Video alignment remains unverified.",
+  "records": [
+    {
+      "songId": "CasketGirl",
+      "id": 34071868,
+      "state": "error",
+      "httpStatus": 503
+    },
+    {
+      "songId": "You",
+      "id": 39063308,
+      "state": "error",
+      "httpStatus": 503
+    },
+    {
+      "songId": "OkayGoodbye",
+      "id": 33609447,
+      "state": "error",
+      "httpStatus": 503
+    },
+    {
+      "songId": "ForeverYoung",
+      "id": 24040288,
+      "state": "error",
+      "httpStatus": 503
+    }
+  ]
+}

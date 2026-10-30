@@ -1,0 +1,76 @@
+[
+  {
+    "label": "guide",
+    "url": "http://127.0.0.1:4174/#/song/MichiTeyuKu",
+    "playerResponses": [
+      {
+        "status": 200,
+        "playability": {
+          "status": "UNPLAYABLE",
+          "reason": "無法播放這部影片"
+        },
+        "videoId": "ptiK8U4WlSc",
+        "title": "Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video"
+      }
+    ],
+    "failures": [],
+    "title": "Fujii Kaze Prema World Tour — 高雄演唱會指南",
+    "iframes": [
+      {
+        "src": "https://www.youtube.com/embed/ptiK8U4WlSc?rel=0&playsinline=1&origin=http%3A%2F%2F127.0.0.1%3A4174&autoplay=0&enablejsapi=1&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A4174%2F%23%2Fsong%2FMichiTeyuKu&aoriginsup=1&vf=6",
+        "allow": "autoplay; encrypted-media; fullscreen; picture-in-picture",
+        "referrer": "strict-origin-when-cross-origin",
+        "title": "Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video"
+      }
+    ],
+    "scripts": [
+      "https://www.youtube.com/s/player/096efeec/www-widgetapi.vflset/www-widgetapi.js",
+      "https://www.youtube.com/iframe_api"
+    ],
+    "configSnippets": [
+      "rameborder=\"0\" allowfullscreen=\"\" allow=\"autoplay; encrypted-media; fullscreen; picture-in-picture\" referrerpolicy=\"strict-origin-when-cross-origin\" title=\"Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/ptiK8U4Wl"
+    ],
+    "visibleState": "這支影片不允許嵌入播放，請在 YouTube 觀看。（錯誤 150）\n在 YouTube 觀看 ↗",
+    "frames": [
+      {
+        "url": "https://www.youtube.com/embed/ptiK8U4WlSc?rel=0&playsinline=1&origin=http%3A%2F%2F127.0.0.1%3A4174&autoplay=0&enablejsapi=1&widgetid=1&forigin=http%3A%2F%2F127.0.0.1%3A4174%2F%23%2Fsong%2FMichiTeyuKu&aoriginsup=1&vf=6",
+        "text": "無法播放這部影片\n無法播放這部影片\n在 YouTube 上觀看"
+      }
+    ]
+  },
+  {
+    "label": "marumaru",
+    "url": "https://www.marumaru-x.com/japanese-song/play-wzrv48xlr3",
+    "playerResponses": [],
+    "failures": [],
+    "title": "満ちてゆく - 藤井風 | 中文 歌詞 Lyrics | 唱歌學日語 | marumaru",
+    "iframes": [
+      {
+        "src": "https://www.youtube.com/embed/ptiK8U4WlSc?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=zh&wmode=transparent&cc_load_policy=1&enablejsapi=1&origin=https%3A%2F%2Fwww.marumaru-x.com&widgetid=1&forigin=https%3A%2F%2Fwww.marumaru-x.com%2Fjapanese-song%2Fplay-wzrv48xlr3&aoriginsup=1&vf=6",
+        "allow": "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share",
+        "referrer": "strict-origin-when-cross-origin",
+        "title": "Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video"
+      }
+    ],
+    "scripts": [
+      "https://www.youtube.com/s/player/096efeec/www-widgetapi.vflset/www-widgetapi.js",
+      "https://www.youtube.com/iframe_api",
+      "https://www.marumaru-x.com/system/jquery/moment/moment.min.js",
+      "https://www.marumaru-x.com/system/jquery/moment/locale/zh-tw.js",
+      "https://www.marumaru-x.com/system/jquery/jquery-last.min.js",
+      "https://www.marumaru-x.com/system/js/common.js?v=20260222",
+      "https://www.marumaru-x.com/js/mr-jp-song-detail.js?v=20260429-2",
+      "https://www.marumaru-x.com/jquery/videojs/lang/zh-TW.min.js"
+    ],
+    "configSnippets": [
+      "ccelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" title=\"Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video\" width=\"640\" height=\"360\" src=\"https://www.youtube.com/embed/ptiK8U4Wl",
+      "    <div class=\"mr-alert green mb-1 size-14\">影片來源：<a href=\"https://youtu.be/ptiK8U4WlSc\" target=\"_blank\">https://youtu.be/ptiK8U4WlSc</a></div>"
+    ],
+    "frames": [
+      {
+        "url": "https://www.youtube.com/embed/ptiK8U4WlSc?controls=0&modestbranding=1&rel=0&showinfo=0&loop=0&fs=0&hl=zh&wmode=transparent&cc_load_policy=1&enablejsapi=1&origin=https%3A%2F%2Fwww.marumaru-x.com&widgetid=1&forigin=https%3A%2F%2Fwww.marumaru-x.com%2Fjapanese-song%2Fplay-wzrv48xlr3&aoriginsup=1&vf=6",
+        "text": "Fujii Kaze - Michi Teyu Ku (Overflowing) / Official Video\nFujii Kaze\nFujii Kaze\n555万位订阅者\n前往平台观看："
+      }
+    ]
+  }
+]

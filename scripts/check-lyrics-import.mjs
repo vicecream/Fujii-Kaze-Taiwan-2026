@@ -1,0 +1,78 @@
+import assert from "node:assert/strict";
+import fs from "node:fs/promises";
+import os from "node:os";
+import path from "node:path";
+import { pathToFileURL } from "node:url";
+import { SONGS } from "../src/song-metadata.js";
+import { prepareSong, importSongs } from "./import-song-lyrics.mjs";
+
+const song = SONGS.find(item => item.id === "Prema");
+const entry = {
+  id: song.id, file: "sample.lrc", sourceUrl: "https://example.com/user-supplied-text",
+  usageBasis: "Synthetic verification fixture written for this test.", complete: true,
+};
+const text = "[00:01.00]Example first line\n[00:03.50]Example second line";
+const reading = prepareSong(entry, text, song);
+assert.deepEqual(reading.lyrics, [{ jp: "Example first line", sourceTime: 1, sourceEnd: 3.5 }, { jp: "Example second line", sourceTime: 3.5 }]);
+assert.equal(reading.timingStatus, "pending", "Audio timestamps alone must not enable video sync");
+const alignedEntry = { ...entry, alignment: { youtubeId: song.youtubeId, offsetSeconds: 2.5, checkedAt: "2026-10-29" } };
+const aligned = prepareSong(alignedEntry, text, song);
+assert.deepEqual(aligned.lyrics.map(line => line.time), [3.5, 6]);
+assert.equal(aligned.timingStatus, "ready");
+assert.equal(aligned.translationStatus, "pending");
+const preview = prepareSong({ ...entry, timingMode: "preview" }, text + "\n[00:05.00] ", song);
+assert.equal(preview.timingStatus, "preview");
+assert.deepEqual(preview.lyrics.map(line => line.time), [1, 3.5]);
+assert.deepEqual(preview.lyrics.map(line => line.endTime), [3.5, 5]);
+assert.equal(preview.timingAlignment, undefined);
+assert.equal(preview.timingPreview.youtubeId, song.youtubeId);
+assert.throws(() => prepareSong({ ...alignedEntry, timingMode: "preview" }, text, song), /separate/);
+const paired = prepareSong({ ...entry, pairedRomaji: true, timingMode: "preview" }, "[00:01]日本語\n[00:01]nihongo\n[00:03]Example", song);
+assert.equal(paired.lyrics.length, 2);
+assert.equal(paired.lyrics[0].providedRomaji, "nihongo");
+assert.equal(prepareSong({ ...entry, complete: false }, text, song).lyricsStatus, "partial");
+assert.throws(() => prepareSong({ ...entry, usageBasis: "" }, text, song), /usageBasis/);
+assert.throws(() => prepareSong({ ...alignedEntry, alignment: { ...alignedEntry.alignment, youtubeId: "wrong" } }, text, song), /YouTube/);
+assert.throws(() => prepareSong({ ...alignedEntry, alignment: { ...alignedEntry.alignment, offsetSeconds: -10 } }, text, song), /before zero/);
+assert.throws(() => prepareSong(entry, "[offset:500]\n" + text, song), /offset/);
+assert.throws(() => prepareSong(entry, "[00:01.00]<script>Example</script>", song), /plain text/);
+assert.throws(() => prepareSong(entry, "No timestamps", song), /synced LRC/);
+const provider = prepareSong({ ...entry, file: "sample.json" }, JSON.stringify({ syncedLyrics: text }), song);
+assert.deepEqual(provider.lyrics.map(({ sourceEnd, ...line }) => line), reading.lyrics.map(({ sourceEnd, ...line }) => line));
+
+// End-to-end preview must not change the content files.
+const contentFiles = ["src/song-lyrics.js", "src/furigana-corrections.js"];
+const originals = await Promise.all(contentFiles.map(file => fs.readFile(file, "utf8")));
+const fixtureDir = await fs.mkdtemp(path.join(os.tmpdir(), "kaze-lyrics-import-"));
+await fs.writeFile(path.join(fixtureDir, entry.file), text, "utf8");
+const manifest = path.join(fixtureDir, "manifest.json");
+await fs.writeFile(manifest, JSON.stringify({ songs: [alignedEntry] }), "utf8");
+await importSongs(manifest);
+for (const [index, file] of contentFiles.entries()) assert.equal(await fs.readFile(file, "utf8"), originals[index]);
+await fs.mkdir(path.join(fixtureDir, "src"));
+await importSongs(manifest, { write: true, root: pathToFileURL(`${fixtureDir}${path.sep}`) });
+const written = await fs.readFile(path.join(fixtureDir, "src/song-lyrics.js"), "utf8");
+assert.match(written, /"time": 3.5/);
+assert.match(written, /user-supplied-text/);
+assert.match(written, /"lyricsStatus": "ready"/);
+assert.equal(await fs.readFile("src/song-lyrics.js", "utf8"), originals[0], "Writing in a fixture directory must not modify real content");
+const jaEntry = { ...entry, id: "Matsuri", file: "japanese.lrc" };
+await fs.writeFile(path.join(fixtureDir, jaEntry.file), "[00:01.00]日本語", "utf8");
+await fs.writeFile(manifest, JSON.stringify({ songs: [alignedEntry, jaEntry] }), "utf8");
+await assert.rejects(importSongs(manifest, { write: true, root: pathToFileURL(`${fixtureDir}${path.sep}`) }), /supply romaji/);
+assert.equal(await fs.readFile(path.join(fixtureDir, "src/song-lyrics.js"), "utf8"), written, "An invalid second song must prevent all writes");
+jaEntry.readings = { furigana: { "日本語": "<ruby>日本語<rt>にほんご</rt></ruby>" }, romaji: { "日本語": "nihongo" } };
+await fs.writeFile(manifest, JSON.stringify({ songs: [alignedEntry, jaEntry] }), "utf8");
+await importSongs(manifest, { write: true, root: pathToFileURL(`${fixtureDir}${path.sep}`) });
+assert.match(await fs.readFile(path.join(fixtureDir, "src/furigana-corrections.js"), "utf8"), /nihongo/);
+const mixed = await fs.readFile(path.join(fixtureDir, "src/song-lyrics.js"), "utf8");
+assert.match(mixed, /"Prema"/);
+assert.match(mixed, /"Matsuri"/);
+await fs.unlink(path.join(fixtureDir, jaEntry.file));
+await fs.unlink(path.join(fixtureDir, "src/furigana-corrections.js"));
+await fs.unlink(path.join(fixtureDir, "src/song-lyrics.js"));
+await fs.rmdir(path.join(fixtureDir, "src"));
+await fs.unlink(manifest);
+await fs.unlink(path.join(fixtureDir, entry.file));
+await fs.rmdir(fixtureDir);
+console.log("PASS local lyric import: video alignment, source metadata, pending states, invalid files, non-mutating preview and writing in an isolated fixture directory.");

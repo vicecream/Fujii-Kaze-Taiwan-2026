@@ -19,8 +19,8 @@
 (function (root) {
   "use strict";
 
-  const CACHE_VERSION = "v2";
-  const CACHE_PREFIX = "horo-karaoke-";
+  const CACHE_VERSION = "v3";
+  const CACHE_PREFIX = "kaze-karaoke-";
   const DEFAULT_WORKER = "https://lyrics.txw.qzz.io";
   const AMLL_API = "https://api.amll.dev";
   const LRCLIB_API = "https://lrclib.net/api";
@@ -308,6 +308,7 @@
   }
 
   function sourceTitle(song) {
+    if (song && Array.isArray(song.karaokeTitles) && song.karaokeTitles.length) return String(song.karaokeTitles[0]);
     if (song && song.karaokeTitle) return String(song.karaokeTitle);
     const title = String(song && song.title || "");
     const matches = [...title.matchAll(/\(([^()]*)\)/g)];
@@ -315,7 +316,26 @@
   }
 
   function sourceArtist(song) {
-    return String(song && (song.artist || song.karaokeArtist) || "Vaundy");
+    return String(song && (song.artist || song.karaokeArtist) || "Fujii Kaze");
+  }
+
+  function sourceTitles(song) {
+    return [...new Set([sourceTitle(song), ...((song && song.karaokeTitles) || [])])];
+  }
+
+  function sourceArtists(song) {
+    return [...new Set([sourceArtist(song), ...((song && song.karaokeArtists) || [])])];
+  }
+
+  function normaliseSearch(value) {
+    return String(value || "").normalize("NFKD").replace(/\p{M}/gu, "")
+      .toLowerCase().replace(/[\s\p{P}\p{S}]/gu, "");
+  }
+
+  function matchesSong(titles, artists, song) {
+    if (!Array.isArray(titles) || !Array.isArray(artists)) return false;
+    return titles.some(title => sourceTitles(song).some(wanted => normaliseSearch(title) === normaliseSearch(wanted)))
+      && artists.some(artist => sourceArtists(song).some(wanted => normaliseSearch(artist) === normaliseSearch(wanted)));
   }
 
   function estimatedSongDuration(song) {
@@ -328,6 +348,7 @@
   function scoreLrclibCandidate(candidate, song, options) {
     if (!candidate || candidate.instrumental) return -Infinity;
     if (!candidate.lyricsfile && !candidate.syncedLyrics) return -Infinity;
+    if (!matchesSong([candidate.trackName || candidate.name], [candidate.artistName], song)) return -Infinity;
     const wantedTitle = normaliseText(sourceTitle(song));
     const candidateTitle = normaliseText(candidate.trackName || candidate.name || "");
     const wantedArtist = normaliseText(sourceArtist(song));
@@ -356,7 +377,7 @@
 
   async function fetchWorker(song, options) {
     const base = String((options && options.workerUrl) || DEFAULT_WORKER).replace(/\/$/, "");
-    const trackId = encodeURIComponent(`horo-${String(song && song.id || "song")}`);
+    const trackId = encodeURIComponent(`kaze-${String(song && song.id || "song")}`);
     const url = new URL(`${base}/lyrics/${trackId}`);
     url.searchParams.set("track_name", sourceTitle(song));
     url.searchParams.append("artist_name", sourceArtist(song));
@@ -374,22 +395,61 @@
     return timed;
   }
 
+  async function searchProvider(song, provider, options) {
+    let failed = false;
+    const queries = sourceTitles(song).map(title => ({ title }));
+    if (provider === "lrclib") queries.push({ title: sourceTitle(song), keyword: true });
+    for (const { title, keyword } of queries) {
+      const url = new URL(provider === "amll" ? `${AMLL_API}/v1/lyrics/search` : `${LRCLIB_API}/search`);
+      if (keyword) url.searchParams.set("q", `${sourceArtist(song)} ${title}`);
+      else {
+        url.searchParams.set(provider === "amll" ? "musicName" : "track_name", title);
+        url.searchParams.set(provider === "amll" ? "artistName" : "artist_name", sourceArtist(song));
+      }
+      if (provider === "amll") url.searchParams.set("pageSize", "10");
+      const search = await fetchJson(url.toString(), { timeoutMs: (options && options.timeoutMs) || 7000 });
+      // Preserve a service failure as an error, distinct from an empty result.
+      if (search == null) { failed = true; continue; }
+      const items = provider === "amll"
+        ? (search.status === 200 && Array.isArray(search.data && search.data.items) ? search.data.items : null)
+        : (Array.isArray(search) ? search : null);
+      if (!items) { failed = true; continue; }
+      const matches = items.filter(candidate => provider === "amll"
+        ? matchesSong(candidate.musicNames || [], candidate.artistNames || [], song)
+        : matchesSong([candidate.trackName || candidate.name], [candidate.artistName], song) && !candidate.instrumental
+          && (!(options && options.syncedOnly) || candidate.lyricsfile || candidate.syncedLyrics));
+      if (matches.length) return matches;
+    }
+    return failed ? null : [];
+  }
+
+  // Discovery deliberately exposes only source metadata, never lyric text.
+  async function discover(song, options) {
+    const [amll, lrclib] = await Promise.all([
+      searchProvider(song, "amll", options), searchProvider(song, "lrclib", options)
+    ]);
+    return {
+      amll: {
+        state: amll === null ? "error" : amll.length ? "found" : "miss",
+        candidates: (amll || []).map(item => ({
+          id: item.id, titles: item.musicNames, artists: item.artistNames,
+          url: `${AMLL_API}/v1/lyrics/get?id=${encodeURIComponent(item.id)}`
+        }))
+      },
+      lrclib: {
+        state: lrclib === null ? "error" : lrclib.length ? "found" : "miss",
+        candidates: (lrclib || []).map(item => ({
+          id: item.id, title: item.trackName, artist: item.artistName, album: item.albumName,
+          duration: item.duration, hasSyncedLyrics: Boolean(item.lyricsfile || item.syncedLyrics),
+          url: `${LRCLIB_API}/get/${encodeURIComponent(item.id)}`
+        }))
+      }
+    };
+  }
+
   async function fetchAmll(song, options) {
-    const url = new URL(`${AMLL_API}/v1/lyrics/search`);
-    url.searchParams.set("musicName", sourceTitle(song));
-    url.searchParams.set("artistName", sourceArtist(song));
-    url.searchParams.set("pageSize", "10");
-    const search = await fetchJson(url.toString(), { timeoutMs: (options && options.timeoutMs) || 7000 });
-    const items = search && search.status === 200 && search.data && Array.isArray(search.data.items)
-      ? search.data.items : [];
-    const wantedTitle = normaliseText(sourceTitle(song));
-    const wantedArtist = normaliseText(sourceArtist(song));
-    const item = items.find((candidate) => {
-      const titles = Array.isArray(candidate.musicNames) ? candidate.musicNames : [];
-      const artists = Array.isArray(candidate.artistNames) ? candidate.artistNames : [];
-      return titles.some((title) => normaliseText(title) === wantedTitle)
-        && artists.some((artist) => normaliseText(artist).includes(wantedArtist) || wantedArtist.includes(normaliseText(artist)));
-    }) || items[0];
+    const items = await searchProvider(song, "amll", options);
+    const item = items && items[0];
     if (!item) return null;
 
     const lyricUrl = new URL(`${AMLL_API}/v1/lyrics/get`);
@@ -402,12 +462,7 @@
   }
 
   async function fetchLrclib(song, options) {
-    const url = new URL(`${LRCLIB_API}/search`);
-    url.searchParams.set("track_name", sourceTitle(song));
-    url.searchParams.set("artist_name", sourceArtist(song));
-    const search = await fetchJson(url.toString(), {
-      timeoutMs: (options && options.timeoutMs) || 7000
-    });
+    const search = await searchProvider(song, "lrclib", { ...options, syncedOnly: true });
     if (!Array.isArray(search)) return null;
 
     const candidates = search
@@ -939,6 +994,7 @@
     parseLrclibSyncedLyrics,
     parseTtml,
     normaliseBeautifulLyrics,
+    discover,
     load,
     alignToLocalLyrics,
     mapUnitsToWords,

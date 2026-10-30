@@ -1,14 +1,14 @@
 {
-  "name": "Vaundy 應援指南",
-  "short_name": "Vaundy 應援指南",
-  "description": "VAUNDY ASIA ARENA TOUR 2026 \"HORO\" 台北演出應援指南 — 歌詞、大合唱、拍手與揮手重點",
+  "name": "藤井風高雄演唱會指南",
+  "short_name": "藤井風高雄指南",
+  "description": "藤井風 10/31 高雄演唱會非官方指南：演出、交通與歌曲預習。",
   "lang": "zh-Hant-TW",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#170504",
-  "theme_color": "#2a0a06",
+  "background_color": "#191c17",
+  "theme_color": "#191c17",
   "icons": [
     {
       "src": "./icon-192.png",
@@ -28,5 +28,6 @@
       "type": "image/png",
       "purpose": "maskable"
     }
-  ]
+  ],
+  "id": "./"
 }

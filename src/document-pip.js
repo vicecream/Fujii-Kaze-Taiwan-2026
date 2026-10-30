@@ -152,7 +152,7 @@ export function createDocumentPip({
     const nextMarkup = lyricsHidden ? "" : String(model.nextMarkup || "");
     const currentEmptyMessage = lyricsHidden
       ? "歌詞已隱藏"
-      : (currentMarkup ? "" : "等待第一句…");
+      : (currentMarkup ? "" : model.status || "等待第一句…");
 
     const theme = model.theme === "light" ? "light" : "dark";
     documentRef.documentElement.dataset.theme = theme;

@@ -1,0 +1,1758 @@
+{
+  "checkedAt": "2026-10-29T08:40:20.287Z",
+  "architecture": "https://github.com/watain666/Vaundy-Taiwan-2026/blob/main/karaoke-sources.js",
+  "note": "Source candidates only. No lyric text is saved. Video alignment and permission to use text remain unverified.",
+  "songs": [
+    {
+      "id": "CasketGirl",
+      "title": "Casket Girl",
+      "youtubeId": "gFOu5r-OuQ4",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:21.153Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34071868,
+              "title": "Casket Girl",
+              "artist": "Fujii Kaze",
+              "album": "Billboard JAPAN Hot 100 (2025-09-24)",
+              "duration": 245,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34071868"
+            },
+            {
+              "id": 34133309,
+              "title": "Casket Girl",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 4,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34133309"
+            },
+            {
+              "id": 24255433,
+              "title": "Casket Girl",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 245.185306,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24255433"
+            },
+            {
+              "id": 32918716,
+              "title": "Casket Girl",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 186,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32918716"
+            },
+            {
+              "id": 38170090,
+              "title": "Casket Girl",
+              "artist": "Fujii Kaze",
+              "album": "",
+              "duration": 264,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38170090"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:21.153Z"
+        }
+      }
+    },
+    {
+      "id": "INeedUBack",
+      "title": "I Need U Back",
+      "youtubeId": "ud0lMojStCs",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:22.088Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 24709697,
+              "title": "I Need U Back",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 186,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24709697"
+            },
+            {
+              "id": 33295667,
+              "title": "I Need U Back",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 263,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33295667"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:22.088Z"
+        }
+      }
+    },
+    {
+      "id": "Hachiko",
+      "title": "Hachikō",
+      "youtubeId": "OodEsjZ88TQ",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:22.561Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34564033,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "夏の朝にききたいおしゃれな洋楽",
+              "duration": 271,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34564033"
+            },
+            {
+              "id": 33358675,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 1832,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33358675"
+            },
+            {
+              "id": 36750467,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "16 jt x ditonton",
+              "duration": 298,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36750467"
+            },
+            {
+              "id": 34293041,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Billboard JAPAN Hot 100 (2025-10-01)",
+              "duration": 270,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34293041"
+            },
+            {
+              "id": 33839328,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 4,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33839328"
+            },
+            {
+              "id": 24709636,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 270,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24709636"
+            },
+            {
+              "id": 22487216,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Hachikō",
+              "duration": 270.528,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/22487216"
+            },
+            {
+              "id": 26226691,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Videos",
+              "duration": 297.061,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/26226691"
+            },
+            {
+              "id": 33242940,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Top J-Pop",
+              "duration": 270,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33242940"
+            },
+            {
+              "id": 38093871,
+              "title": "Hachikō",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Songs",
+              "duration": 298,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38093871"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:22.561Z"
+        }
+      }
+    },
+    {
+      "id": "LoveLikeThis",
+      "title": "Love Like This",
+      "youtubeId": "RoY_ZoWe-eI",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:24.801Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34439698,
+              "title": "Love Like This",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Videos",
+              "duration": 269,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34439698"
+            },
+            {
+              "id": 33886679,
+              "title": "Love Like This",
+              "artist": "Fujii Kaze",
+              "album": "Billboard JAPAN Hot 100 (2025-10-29)",
+              "duration": 260,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33886679"
+            },
+            {
+              "id": 24919896,
+              "title": "Love Like This",
+              "artist": "Fujii Kaze",
+              "album": "Love Like This",
+              "duration": 268.260136,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24919896"
+            },
+            {
+              "id": 23816202,
+              "title": "Love Like This",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 260.778413,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/23816202"
+            },
+            {
+              "id": 23812688,
+              "title": "Love Like This",
+              "artist": "Fujii Kaze",
+              "album": "Love Like This",
+              "duration": 261,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/23812688"
+            },
+            {
+              "id": 38140602,
+              "title": "Love Like This",
+              "artist": "Fujii Kaze",
+              "album": "Prema (2025)",
+              "duration": 261,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38140602"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:33.457Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:24.801Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "Prema",
+      "title": "Prema",
+      "youtubeId": "UJgPpzZcxGU",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:25.138Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 36493441,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": null,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36493441"
+            },
+            {
+              "id": 24517270,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 262.840104,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24517270"
+            },
+            {
+              "id": 26450801,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 273.936,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/26450801"
+            },
+            {
+              "id": 25364340,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "null",
+              "duration": 263,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/25364340"
+            },
+            {
+              "id": 29339467,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "New Music Friday",
+              "duration": 263,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/29339467"
+            },
+            {
+              "id": 32700249,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 231,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32700249"
+            },
+            {
+              "id": 38560601,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze",
+              "duration": 263,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38560601"
+            },
+            {
+              "id": 38858120,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 254,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38858120"
+            },
+            {
+              "id": 38527969,
+              "title": "Prema",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 259,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38527969"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:25.138Z"
+        }
+      }
+    },
+    {
+      "id": "ItAintOver",
+      "title": "It Ain’t Over",
+      "youtubeId": "BKFxq3D_dGU",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:26.092Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 24025678,
+              "title": "It Ain't Over",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 299.492833,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24025678"
+            },
+            {
+              "id": 28647001,
+              "title": "It Ain't Over",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 312,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/28647001"
+            },
+            {
+              "id": 32716051,
+              "title": "It Ain't Over",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 245,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32716051"
+            },
+            {
+              "id": 38140601,
+              "title": "It Ain't Over",
+              "artist": "Fujii Kaze",
+              "album": "Prema (2025)",
+              "duration": 300,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38140601"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:26.092Z"
+        }
+      }
+    },
+    {
+      "id": "You",
+      "title": "You",
+      "youtubeId": "s4UW__ysPEM",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:27.509Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 23969296,
+              "title": "You",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 281.766667,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/23969296"
+            },
+            {
+              "id": 29267822,
+              "title": "You",
+              "artist": "Fujii Kaze",
+              "album": "4:42",
+              "duration": 282,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/29267822"
+            },
+            {
+              "id": 39402018,
+              "title": "You",
+              "artist": "Fujii Kaze",
+              "album": "unknown",
+              "duration": 281,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/39402018"
+            },
+            {
+              "id": 39063308,
+              "title": "You",
+              "artist": "Fujii Kaze",
+              "album": "You",
+              "duration": 294,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/39063308"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:36.893Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:27.509Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "OkayGoodbye",
+      "title": "Okay, Goodbye",
+      "youtubeId": "EAtRDZQLsgk",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:28.302Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 33609447,
+              "title": "Okay, Goodbye",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 299,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33609447"
+            },
+            {
+              "id": 35853773,
+              "title": "Okay, Goodbye",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 4,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35853773"
+            },
+            {
+              "id": 24029989,
+              "title": "Okay, Goodbye",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 231,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24029989"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:28.302Z"
+        }
+      }
+    },
+    {
+      "id": "ForeverYoung",
+      "title": "Forever Young",
+      "youtubeId": "tU953HcYdxU",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:29.027Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 24040288,
+              "title": "Forever Young",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 353.671837,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24040288"
+            },
+            {
+              "id": 24028141,
+              "title": "Forever Young",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 354,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24028141"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:37.830Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:29.027Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "Matsuri",
+      "title": "まつり (Matsuri)",
+      "youtubeId": "NwOvu-j_WjY",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:29.627Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 24520972,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 674,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520972"
+            },
+            {
+              "id": 22643348,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "J-Pop 輕旅行",
+              "duration": 225.92,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/22643348"
+            },
+            {
+              "id": 3429466,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "まつり",
+              "duration": 226,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/3429466"
+            },
+            {
+              "id": 3429465,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 226,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/3429465"
+            },
+            {
+              "id": 12492714,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 226,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/12492714"
+            },
+            {
+              "id": 10123541,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 248,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/10123541"
+            },
+            {
+              "id": 39087020,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "まつり",
+              "duration": 249,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/39087020"
+            },
+            {
+              "id": 39020552,
+              "title": "まつり",
+              "artist": "Fujii Kaze",
+              "album": "Matsuri",
+              "duration": 225,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/39020552"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:29.627Z"
+        }
+      }
+    },
+    {
+      "id": "WorkinHard",
+      "title": "Workin’ Hard",
+      "youtubeId": "88wHgiUAKoI",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:31.042Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 36735093,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "29 M de vues",
+              "duration": 262,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36735093"
+            },
+            {
+              "id": 35795585,
+              "title": "workin hard",
+              "artist": "fujii kaze",
+              "album": "best of fujii kaze 20202024",
+              "duration": 240,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35795585"
+            },
+            {
+              "id": 24520833,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 379,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520833"
+            },
+            {
+              "id": 4046708,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Workin' Hard - Single",
+              "duration": 239,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046708"
+            },
+            {
+              "id": 4046709,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Workin' Hard",
+              "duration": 239,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046709"
+            },
+            {
+              "id": 7281637,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze",
+              "duration": 261,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/7281637"
+            },
+            {
+              "id": 28003666,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 242,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/28003666"
+            },
+            {
+              "id": 12072870,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "null",
+              "duration": 240,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/12072870"
+            },
+            {
+              "id": 12400390,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 240,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/12400390"
+            },
+            {
+              "id": 10123504,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Workin' Hard",
+              "duration": 260,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/10123504"
+            },
+            {
+              "id": 32265733,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 242,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32265733"
+            },
+            {
+              "id": 32995628,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin’ Good”",
+              "duration": 380,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32995628"
+            },
+            {
+              "id": 33016962,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin' Good”",
+              "duration": 379,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33016962"
+            },
+            {
+              "id": 37734116,
+              "title": "Workin' Hard",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 239,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/37734116"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:39.113Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:31.042Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "NanNan",
+      "title": "何なんw (Nan-Nan)",
+      "youtubeId": "Nt6ZwuVzOS4",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:31.396Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34590072,
+              "title": "何なんw",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 328,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34590072"
+            },
+            {
+              "id": 34311353,
+              "title": "何なんw",
+              "artist": "Fujii Kaze",
+              "album": "何なんw",
+              "duration": 319,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34311353"
+            },
+            {
+              "id": 24520994,
+              "title": "何なんw",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 507,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520994"
+            },
+            {
+              "id": 8346846,
+              "title": "何なんw",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 321,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8346846"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:31.396Z"
+        }
+      }
+    },
+    {
+      "id": "Kirari",
+      "title": "きらり (Kirari)",
+      "youtubeId": "TcLLpZBWsck",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:32.456Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 36882434,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin' Good”",
+              "duration": 255,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36882434"
+            },
+            {
+              "id": 35689221,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Billboard JAPAN Hot 100 (2025-04-09)",
+              "duration": 231,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35689221"
+            },
+            {
+              "id": 21058923,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "きらり",
+              "duration": 227.9,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/21058923"
+            },
+            {
+              "id": 22182228,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Kirari Remixes (Asia Edition)",
+              "duration": 240,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/22182228"
+            },
+            {
+              "id": 24520662,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 255,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520662"
+            },
+            {
+              "id": 22642957,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "J-Pop 輕旅行",
+              "duration": 231.882,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/22642957"
+            },
+            {
+              "id": 2695044,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Kirari Remixes (Asia Edition)",
+              "duration": 232,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/2695044"
+            },
+            {
+              "id": 4970473,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Kirari Remixes (Asia Edition)",
+              "duration": 228,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4970473"
+            },
+            {
+              "id": 4970162,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Jamie's Japanese Playlist (⛩️)",
+              "duration": 232,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4970162"
+            },
+            {
+              "id": 8256135,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Kirari Remixes",
+              "duration": 232,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8256135"
+            },
+            {
+              "id": 27513628,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Kirari Remixes (Asia Edition)",
+              "duration": 236.930612,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/27513628"
+            },
+            {
+              "id": 10961594,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "きらり",
+              "duration": 231.882,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/10961594"
+            },
+            {
+              "id": 11508668,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 227,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/11508668"
+            },
+            {
+              "id": 31300796,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 231,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/31300796"
+            },
+            {
+              "id": 14510544,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 232,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/14510544"
+            },
+            {
+              "id": 38684076,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "Kirari",
+              "duration": 240,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38684076"
+            },
+            {
+              "id": 38512029,
+              "title": "きらり",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 186,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38512029"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:41.655Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:32.456Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "Hana",
+      "title": "花 (Hana)",
+      "youtubeId": "SfPkl7lol7g",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:34.543Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 35192364,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 250,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35192364"
+            },
+            {
+              "id": 33849366,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin' Good”",
+              "duration": 348,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33849366"
+            },
+            {
+              "id": 24520601,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 256,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520601"
+            },
+            {
+              "id": 31183752,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 247,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/31183752"
+            },
+            {
+              "id": 32920233,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "花",
+              "duration": 250,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32920233"
+            },
+            {
+              "id": 15825300,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "花",
+              "duration": 247,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/15825300"
+            },
+            {
+              "id": 34587162,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "Pre Prema",
+              "duration": 262,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34587162"
+            },
+            {
+              "id": 36261250,
+              "title": "花",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 198,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36261250"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:34.543Z"
+        }
+      }
+    },
+    {
+      "id": "Garden",
+      "title": "ガーデン (Garden)",
+      "youtubeId": "53rIic2lvKc",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:35.379Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 35850484,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 298,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35850484"
+            },
+            {
+              "id": 20946392,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 229,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/20946392"
+            },
+            {
+              "id": 1899416,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 229,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/1899416"
+            },
+            {
+              "id": 7227836,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "Top Japan 2023",
+              "duration": 229,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/7227836"
+            },
+            {
+              "id": 27214167,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "Billboard Japan Hot 100 Singles Chart",
+              "duration": 229,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/27214167"
+            },
+            {
+              "id": 31982281,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin’ Good”",
+              "duration": 295,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/31982281"
+            },
+            {
+              "id": 38543253,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 2,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38543253"
+            },
+            {
+              "id": 38221968,
+              "title": "Garden",
+              "artist": "Fujii Kaze",
+              "album": "Garden",
+              "duration": 229,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38221968"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:35.379Z"
+        }
+      }
+    },
+    {
+      "id": "Damn",
+      "title": "damn",
+      "youtubeId": "yP7K2lXr6GA",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:36.068Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34591127,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 273,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34591127"
+            },
+            {
+              "id": 34375084,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Videos",
+              "duration": 272,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34375084"
+            },
+            {
+              "id": 36178226,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "53 mln wyświetleń",
+              "duration": 273,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36178226"
+            },
+            {
+              "id": 36106928,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 110,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36106928"
+            },
+            {
+              "id": 36684381,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 144,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36684381"
+            },
+            {
+              "id": 36424984,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "damn",
+              "duration": 273,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36424984"
+            },
+            {
+              "id": 36546289,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "Singles & Unmatched",
+              "duration": 272,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36546289"
+            },
+            {
+              "id": 35584736,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 4,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35584736"
+            },
+            {
+              "id": 24520866,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 289,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520866"
+            },
+            {
+              "id": 4046720,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "damn",
+              "duration": 259,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046720"
+            },
+            {
+              "id": 1899424,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 259,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/1899424"
+            },
+            {
+              "id": 28752827,
+              "title": "Damn",
+              "artist": "Fujii Kaze",
+              "album": "Top J-Pop (Playlist)",
+              "duration": 259,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/28752827"
+            },
+            {
+              "id": 26292651,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 239.59364963265034,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/26292651"
+            },
+            {
+              "id": 11917118,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 260,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/11917118"
+            },
+            {
+              "id": 12072886,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "null",
+              "duration": 260,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/12072886"
+            },
+            {
+              "id": 29981650,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin’ Good”",
+              "duration": 289,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/29981650"
+            },
+            {
+              "id": 38560149,
+              "title": "damn",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze",
+              "duration": 259,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38560149"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:43.318Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:36.068Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "ShinunogaEWa",
+      "title": "死ぬのがいいわ (Shinunoga E-Wa)",
+      "youtubeId": "lRVJuPI5IXI",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:37.683Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 36888268,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Videos",
+              "duration": 186,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36888268"
+            },
+            {
+              "id": 34643976,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 254,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34643976"
+            },
+            {
+              "id": 35203405,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 260,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35203405"
+            },
+            {
+              "id": 35338498,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": null,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35338498"
+            },
+            {
+              "id": 35241968,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "Greatest",
+              "duration": 186,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35241968"
+            },
+            {
+              "id": 36127987,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": null,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36127987"
+            },
+            {
+              "id": 35995085,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "MADE",
+              "duration": 219,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35995085"
+            },
+            {
+              "id": 36295111,
+              "title": "Shinunoga E-wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 152,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36295111"
+            },
+            {
+              "id": 34096848,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HELP NEVER",
+              "duration": 191,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34096848"
+            },
+            {
+              "id": 34120616,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 168,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34120616"
+            },
+            {
+              "id": 33934649,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 105,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33934649"
+            },
+            {
+              "id": 34289073,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "Tokyo Moon",
+              "duration": 185,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34289073"
+            },
+            {
+              "id": 34295533,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "Top Trending Romania - Vara 2022",
+              "duration": 185,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34295533"
+            },
+            {
+              "id": 35715290,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 257,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35715290"
+            },
+            {
+              "id": 35392227,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 196,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35392227"
+            },
+            {
+              "id": 35451858,
+              "title": "shinunoga e wa",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze",
+              "duration": 200,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35451858"
+            },
+            {
+              "id": 18407729,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Videos",
+              "duration": 189,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/18407729"
+            },
+            {
+              "id": 17865695,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "unknown",
+              "duration": 185,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/17865695"
+            },
+            {
+              "id": 21695208,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 185.573333,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/21695208"
+            },
+            {
+              "id": 8571228,
+              "title": "Shinunoga E-Wa",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 181,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8571228"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:44.409Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:37.683Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "Tabiji",
+      "title": "旅路 (Tabiji)",
+      "youtubeId": "29p8FvT_puU",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:38.912Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 35676924,
+              "title": "旅路",
+              "artist": "Fujii Kaze",
+              "album": "Best of Fujii Kaze 2020-2024",
+              "duration": 277,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35676924"
+            },
+            {
+              "id": 24520887,
+              "title": "旅路",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 271,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520887"
+            },
+            {
+              "id": 25476677,
+              "title": "旅路",
+              "artist": "Fujii Kaze",
+              "album": "旅路",
+              "duration": 91,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/25476677"
+            },
+            {
+              "id": 10552393,
+              "title": "旅路",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 277,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/10552393"
+            },
+            {
+              "id": 10747116,
+              "title": "旅路",
+              "artist": "Fujii Kaze",
+              "album": "旅路",
+              "duration": 277,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/10747116"
+            },
+            {
+              "id": 10123687,
+              "title": "旅路",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 290,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/10123687"
+            }
+          ],
+          "checkedAt": "2026-10-29T06:21:33.457Z",
+          "lastAttempt": {
+            "state": "error",
+            "checkedAt": "2026-10-29T08:40:38.912Z"
+          }
+        }
+      }
+    },
+    {
+      "id": "MichiTeyuKu",
+      "title": "満ちてゆく (Michi Teyu Ku / Overflowing)",
+      "youtubeId": "ptiK8U4WlSc",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-29T08:40:39.429Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34384143,
+              "title": "満ちてゆく",
+              "artist": "Fujii Kaze",
+              "album": "Pre Prema",
+              "duration": 362,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34384143"
+            },
+            {
+              "id": 36060814,
+              "title": "満ちてゆく",
+              "artist": "Fujii Kaze",
+              "album": "CITY POP RADIO - LOVE TUNE -",
+              "duration": 311,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36060814"
+            },
+            {
+              "id": 32342913,
+              "title": "満ちてゆく",
+              "artist": "Fujii Kaze",
+              "album": "Michi Teyu Ku (Overflowing)",
+              "duration": 311,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32342913"
+            },
+            {
+              "id": 32266410,
+              "title": "満ちてゆく",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 315,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32266410"
+            },
+            {
+              "id": 30423403,
+              "title": "満ちてゆく",
+              "artist": "Fujii Kaze",
+              "album": "満ちてゆく",
+              "duration": 311,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/30423403"
+            },
+            {
+              "id": 39252830,
+              "title": "満ちてゆく",
+              "artist": "Fujii Kaze",
+              "album": "満ちてゆく",
+              "duration": 362,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/39252830"
+            }
+          ],
+          "checkedAt": "2026-10-29T08:40:39.429Z"
+        }
+      }
+    }
+  ]
+}

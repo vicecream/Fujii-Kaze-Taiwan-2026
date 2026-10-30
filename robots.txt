@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vaundy.tiaui.co/sitemap.xml
+Sitemap: https://kaze.tiaui.co/sitemap.xml

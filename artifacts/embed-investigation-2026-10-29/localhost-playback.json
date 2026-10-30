@@ -1,0 +1,17 @@
+{
+  "before": {
+    "state": "playing",
+    "message": ""
+  },
+  "after": {
+    "state": "playing",
+    "media": [
+      {
+        "time": 5.246525,
+        "duration": 361.761,
+        "paused": false,
+        "readyState": 4
+      }
+    ]
+  }
+}

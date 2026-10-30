@@ -1,0 +1,40 @@
+{
+  "url": "https://www.marumaru-x.com/japanese-song/play-wzrv48xlr3",
+  "wrapper": "embed-responsive-item video-js vjs-paused vjs-fill player-dimensions vjs-controls-enabled vjs-workinghover vjs-v8 vjs-user-active vjs-youtube",
+  "apiSnippet": "new YT.Player(this.options_.techId,e)}onPlayerApiChange(){this.ytPlayer.getOption(\"captions\",\"tracklist\");onYouTubeApiChange()}onPlayerReady(){this.options_.muted&&this.ytPlayer.mute();var a=this.ytPlayer.getAvailablePlaybackRates();1<a.len",
+  "controls": [
+    {
+      "name": "播放视频",
+      "title": "播放视频",
+      "visible": true
+    },
+    {
+      "name": "隐藏播放器控件",
+      "title": "",
+      "visible": true
+    },
+    {
+      "name": null,
+      "title": "",
+      "visible": true
+    },
+    {
+      "name": "Close",
+      "title": "",
+      "visible": true
+    },
+    {
+      "name": "分享",
+      "title": "",
+      "visible": true
+    }
+  ],
+  "media": {
+    "time": 1.014335,
+    "paused": false,
+    "duration": 361.761,
+    "readyState": 4
+  },
+  "videoId": "ptiK8U4WlSc",
+  "origin": "https://www.marumaru-x.com"
+}

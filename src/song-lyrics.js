@@ -1,1829 +1,10439 @@
-/* Song lyrics stay out of the guide entry chunk and load on song pages. */
-
-export const SONGS = [
-  {
-    id: "Tokimeki",
-    title: "心動 (Tokimeki)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "-_PKhPMXMDY", // ← 실제 유튜브 영상 ID로 교체
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]目に映るのは 確かなときめきで光る魔法", tag: "clap" }],                                                             tr: "映照在我的雙眼裡的東西　是確實的　讓人感到Tokimeki且發著光芒的魔法" },
-      { time: 9, jp: [{ text: "[clap]思い当たるのは 誰かの 涙が落ちる音", tag: "clap" }],                                                             tr: "我所想起的是　他人的　落淚的聲音" },
-      /* ↓↓ 짤방 예시 — 이 세 줄 동안 손 흔들기 사진이 가사 위에 떠 있습니다.
-            다른 줄에도 똑같이  pic: "이름"  만 붙이면 됩니다. ↓↓ */
-      { time: 17, jp: [{ text: "[wave]Hu Hu Hu Ya Ya x3", tag: "chant" }],                                                            tr: [{ text: "Hu Hu Hu Ya Ya x3", tag: "chant" }] },
-      { time: 22.5, jp: "[wave]それは、軽やかな魔法",                tr: "那是道、讓人感到輕鬆的魔法" },
-      { time: 26.5, jp: [{ text: "Hu Hu Hu Ya Ya x2", tag: "chant" }],                tr: "Hu Hu Hu Ya Ya x2" },
-      { time: 29,  jp: "[wave]美しいほど 止まらぬCRY",                                  tr: "美得讓人動容　停止不了的CRY"},
-      { time: 33, jp: [{ text: "[wave]DA-DADADADA", tag: "chant" }],                tr: "DA-DADADADA", pic: "wave_dada" },
-      { time: 35, jp: "Just dancing tonight",                tr: "Just dancing tonight" },
-      { time: 38, jp: [{ text: "[wave](DA-DA-DA)", tag: "chant" }],                tr: "(DA-DA-DA)" },
-      { time: 41, jp: "涙流して笑えばいいさ",                tr: "就這麼喜極而泣吧" },
-      { time: 44, jp: [{ text: "[wave]見えぬ未来も 悪くは" }, { text: "ないぜ", tag: "chant" }, { text: " (ないぜ)" }],                tr: "就算是看不見的未來　也一點都不糟糕啊" },
-      { time: 49, jp: [{ text: "[wave]DA-DADADADA", tag: "chant" }],                tr: "DA-DADADADA", pic: "wave_dada" },
-      { time: 51, jp: "Just dancing tonight",                tr: "Just dancing tonight" },
-      { time: 54, jp: [{ text: "[wave](DA-DA-DA)", tag: "chant" }],                tr: "(DA-DA-DA)" },
-      { time: 57, jp: "あくびしてる暇なんかないぜ",                tr: "我們可沒有打呵欠的空閒啊" },
-      { time: 59.5, jp: "[wave]ほら、ほらもっと聞かせて",                tr: "來吧、來吧 再讓我聽見更多吧" },
-      { time: 63.5, jp: [{ text: "Hu Hu Hu Hu Hu", tag: "chant" }],                tr: "Hu Hu Hu Hu Hu" },
-      { time: 73, jp: [{ text: "[clap]聞こえてるのは 確かな ときめきで歌う魔法", tag: "clap" }],                                                             tr: "我所聽見的是　確實的　靠Tokimeki歌唱的魔法" },
-      { time: 81, jp: [{ text: "[clap]思い当たるのは 誰かの 鼻歌のイントロ", tag: "clap" }],                                                             tr: "我所想起的是　他人所　哼唱而出的Intro" },
-      { time: 89, jp: [{ text: "[wave] Hu Hu Hu Ya Ya x3", tag: "chant" }],                                                            tr: [{ text: "Hu Hu Hu Ya Ya x3", tag: "chant" }] },
-      { time: 95, jp: "[wave]それは、鮮やかな魔法",                tr: "那是道、鮮明的魔法" },
-      { time: 99, jp: [{ text: "Hu Hu Hu Ya Ya x2", tag: "chant" }],                tr: "Hu Hu Hu Ya Ya x2" },
-      { time: 101,  jp: "[wave]聞こえてるのは",                                  tr: "我所聽見的是" },
-      { time: 105, jp: [{ text: "[wave]DA-DADADADA", tag: "chant" }],                tr: "DA-DADADADA", pic: "wave_dada"},
-      { time: 107, jp: "Just dancing tonight",                tr: "Just dancing tonight" },
-      { time: 110, jp: [{ text: "[wave](DA-DA-DA)", tag: "chant" }],                tr: "(DA-DA-DA)" },
-      { time: 113, jp: "涙流して笑えばいいさ",                tr: "就這麼喜極而泣吧" },
-      { time: 115.9, jp: [{ text: "[wave]見えぬ未来も 悪くは" }, { text: "ないぜ", tag: "chant" }, { text: " (ないぜ)" }],                tr: "就算是看不見的未來　也一點都不糟糕啊" },
-      { time: 121, jp: [{ text: "[wave]DA-DADADADA", tag: "chant" }],                tr: "DA-DADADADA", pic: "wave_dada"},
-      { time: 123, jp: "Just dancing tonight",                tr: "Just dancing tonight" },
-      { time: 126, jp: [{ text: "[wave](DA-DA-DA)", tag: "chant" }],                tr: "(DA-DA-DA)" },
-      { time: 129, jp: "あくびしてる暇なんかないぜ",                tr: "我們可沒有打呵欠的空閒啊" },
-      { time: 131.5, jp: "[wave]ほら、ほらもっと聞かせて",                tr: "來吧、來吧 再讓我聽見更多吧" },
-      { time: 134.5, jp: [{ text: "Hu Hu Hu Hu", tag: "chant" }],                tr: "Hu Hu Hu Hu" },
-      { time: 137, jp: [{ text: "途切れない 悲しみは点で 線を描いてるようだ", tag: "clap" }],                                                             tr: "不斷湧上心頭的　悲傷　就像是靠點、來描繪出線一樣" },
-      { time: 145, jp: [{ text: "震え出す その線のせいで 動き出して", tag: "clap" }, { text: "しまうの", tag: "chant" }, { text: " (しまうの)" }],                                                             tr: "我因為那條　開始顫抖的線　而開始行動" },
-      { time: 153, jp: [{ text: "[wave]Du Du Du Ya Ya x2", tag: "chant" }],                                                             tr: [{ text: "Du Du Du Ya Ya x2", tag: "chant" }] },
-      { time: 157.5, jp: "[wave]止まれないのは",                tr: "之所以我無法停止" },
-      { time: 159.5, jp: [{ text: "[wave]ときめきのせい", tag: "chant" }],                tr: "都是Tokimeki的錯" },
-      { time: 161, jp: [{ text: "[wave]DA-DADADADA", tag: "chant" }],                tr: "DA-DADADADA", pic: "wave_dada"},
-      { time: 163, jp: "Just dancing tonight",                tr: "Just dancing tonight" },
-      { time: 166, jp: [{ text: "[wave](DA-DA-DA)", tag: "chant" }],                tr: "(DA-DA-DA)" },
-      { time: 169, jp: "涙流して笑えばいいさ",                tr: "就這麼喜極而泣吧" },
-      { time: 172, jp: [{ text: "[wave]見えぬ未来も 悪くは" }, { text: "ないぜ", tag: "chant" }, { text: " (ないぜ)" }],                tr: "就算是看不見的未來　也一點都不糟糕啊" },
-      { time: 177, jp: [{ text: "[wave]DA-DADADADA", tag: "chant" }],                tr: "DA-DADADADA", pic: "wave_dada"},
-      { time: 179, jp: "Just dancing tonight",                tr: "Just dancing tonight" },
-      { time: 182, jp: [{ text: "[wave](DA-DA-DA)", tag: "chant" }],                tr: "(DA-DA-DA)" },
-      { time: 185, jp: "あくびしてる暇なんかないぜ",                tr: "我們可沒有打呵欠的空閒啊" },
-      { time: 187.5, jp: "[wave]ほら、ほらもっと聞かせて",                tr: "來吧、來吧 再讓我聽見更多吧" },
-      { time: 191.5, jp: [{ text: "Hu Hu Hu Hu Hu", tag: "chant" }],                tr: "Hu Hu Hu Hu Hu" },
+// Imported from user-supplied local files; source and alignment are recorded per song.
+import { SONGS } from "./song-metadata.js";
+const prepared = {
+  "CasketGirl": {
+    "lyricsStatus": "imported",
+    "translationStatus": "pending",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Mm-hmm, mm-hmm",
+        "sourceTime": 24.52,
+        "sourceEnd": 31.99,
+        "time": 24.52,
+        "endTime": 31.99
+      },
+      {
+        "jp": "Oh, wake up bro, she'll come alive",
+        "sourceTime": 31.99,
+        "sourceEnd": 35.47,
+        "time": 31.99,
+        "endTime": 35.47
+      },
+      {
+        "jp": "You better watch out, baby",
+        "sourceTime": 35.47,
+        "sourceEnd": 38.72,
+        "time": 35.47,
+        "endTime": 38.72
+      },
+      {
+        "jp": "You better watch out, baby",
+        "sourceTime": 38.72,
+        "sourceEnd": 40.24,
+        "time": 38.72,
+        "endTime": 40.24
+      },
+      {
+        "jp": "Oh, she's about to wreck your life",
+        "sourceTime": 40.24,
+        "sourceEnd": 43.36,
+        "time": 40.24,
+        "endTime": 43.36
+      },
+      {
+        "jp": "You better watch out, baby",
+        "sourceTime": 43.36,
+        "sourceEnd": 45.61,
+        "time": 43.36,
+        "endTime": 45.61
+      },
+      {
+        "jp": "You better watch out, buddy",
+        "sourceTime": 45.61,
+        "sourceEnd": 48.02,
+        "time": 45.61,
+        "endTime": 48.02
+      },
+      {
+        "jp": "I just wanted to be free",
+        "sourceTime": 48.02,
+        "sourceEnd": 53.25,
+        "time": 48.02,
+        "endTime": 53.25
+      },
+      {
+        "jp": "And be happy endlessly",
+        "sourceTime": 53.25,
+        "sourceEnd": 56.31,
+        "time": 53.25,
+        "endTime": 56.31
+      },
+      {
+        "jp": "Somethin' always drags me down",
+        "sourceTime": 56.31,
+        "sourceEnd": 60.54,
+        "time": 56.31,
+        "endTime": 60.54
+      },
+      {
+        "jp": "Wanna run away, but I can't",
+        "sourceTime": 60.54,
+        "sourceEnd": 63.92,
+        "time": 60.54,
+        "endTime": 63.92
+      },
+      {
+        "jp": "Casket girl, you came to lay my body down",
+        "sourceTime": 63.92,
+        "sourceEnd": 69.07,
+        "time": 63.92,
+        "endTime": 69.07
+      },
+      {
+        "jp": "There's nothin' you can do, you're already dead",
+        "sourceTime": 69.07,
+        "sourceEnd": 71.81,
+        "time": 69.07,
+        "endTime": 71.81
+      },
+      {
+        "jp": "Fast or slow, just so you know them gorgeous eyes",
+        "sourceTime": 71.81,
+        "sourceEnd": 77.24,
+        "time": 71.81,
+        "endTime": 77.24
+      },
+      {
+        "jp": "Are my demise",
+        "sourceTime": 77.24,
+        "sourceEnd": 79.63,
+        "time": 77.24,
+        "endTime": 79.63
+      },
+      {
+        "jp": "Casket girl, you came to make me go insane",
+        "sourceTime": 79.63,
+        "sourceEnd": 84.14,
+        "time": 79.63,
+        "endTime": 84.14
+      },
+      {
+        "jp": "How can we not survive? It's such a shame",
+        "sourceTime": 84.14,
+        "sourceEnd": 87.61,
+        "time": 84.14,
+        "endTime": 87.61
+      },
+      {
+        "jp": "Use me up, can't get enough of all her lies",
+        "sourceTime": 87.61,
+        "sourceEnd": 93.15,
+        "time": 87.61,
+        "endTime": 93.15
+      },
+      {
+        "jp": "It can't be right",
+        "sourceTime": 93.15,
+        "sourceEnd": 94.89,
+        "time": 93.15,
+        "endTime": 94.89
+      },
+      {
+        "jp": "Oh, casket girl (oh, lookin' for this girl)",
+        "sourceTime": 94.89,
+        "sourceEnd": 98.9,
+        "time": 94.89,
+        "endTime": 98.9
+      },
+      {
+        "jp": "Casket girl (ay, lookin' for a this girl)",
+        "sourceTime": 98.9,
+        "sourceEnd": 102.89,
+        "time": 98.9,
+        "endTime": 102.89
+      },
+      {
+        "jp": "Casket girl (oh, lookin' for this girl)",
+        "sourceTime": 102.89,
+        "sourceEnd": 106.59,
+        "time": 102.89,
+        "endTime": 106.59
+      },
+      {
+        "jp": "Oh, casket girl (ay, lookin' for a this girl)",
+        "sourceTime": 106.59,
+        "sourceEnd": 110.16,
+        "time": 106.59,
+        "endTime": 110.16
+      },
+      {
+        "jp": "Oh, wake up bro, it's just a dream",
+        "sourceTime": 110.16,
+        "sourceEnd": 114.04,
+        "time": 110.16,
+        "endTime": 114.04
+      },
+      {
+        "jp": "You better watch out, baby",
+        "sourceTime": 114.04,
+        "sourceEnd": 116.6,
+        "time": 114.04,
+        "endTime": 116.6
+      },
+      {
+        "jp": "You better watch out, baby",
+        "sourceTime": 116.6,
+        "sourceEnd": 118.65,
+        "time": 116.6,
+        "endTime": 118.65
+      },
+      {
+        "jp": "Life is a game, we play it as a team",
+        "sourceTime": 118.65,
+        "sourceEnd": 122.52,
+        "time": 118.65,
+        "endTime": 122.52
+      },
+      {
+        "jp": "We gotta make it, baby",
+        "sourceTime": 122.52,
+        "sourceEnd": 124.7,
+        "time": 122.52,
+        "endTime": 124.7
+      },
+      {
+        "jp": "We gotta make it 'til the end",
+        "sourceTime": 124.7,
+        "sourceEnd": 127.36,
+        "time": 124.7,
+        "endTime": 127.36
+      },
+      {
+        "jp": "Just when I see the sunrise",
+        "sourceTime": 127.36,
+        "sourceEnd": 132.22,
+        "time": 127.36,
+        "endTime": 132.22
+      },
+      {
+        "jp": "And lie around at midnight (ooh)",
+        "sourceTime": 132.22,
+        "sourceEnd": 135.72,
+        "time": 132.22,
+        "endTime": 135.72
+      },
+      {
+        "jp": "You'll come back at any time",
+        "sourceTime": 135.72,
+        "sourceEnd": 139.85,
+        "time": 135.72,
+        "endTime": 139.85
+      },
+      {
+        "jp": "I'll be cryin', fightin' for my life",
+        "sourceTime": 139.85,
+        "sourceEnd": 142.18,
+        "time": 139.85,
+        "endTime": 142.18
+      },
+      {
+        "jp": "Casket girl, you came to lay my body down",
+        "sourceTime": 142.18,
+        "sourceEnd": 147.25,
+        "time": 142.18,
+        "endTime": 147.25
+      },
+      {
+        "jp": "There's nothin' you can do, you're already dead",
+        "sourceTime": 147.25,
+        "sourceEnd": 150.49,
+        "time": 147.25,
+        "endTime": 150.49
+      },
+      {
+        "jp": "Fast or slow, just so you know them gorgeous eyes",
+        "sourceTime": 150.49,
+        "sourceEnd": 155.65,
+        "time": 150.49,
+        "endTime": 155.65
+      },
+      {
+        "jp": "Are my demise",
+        "sourceTime": 155.65,
+        "sourceEnd": 157.84,
+        "time": 155.65,
+        "endTime": 157.84
+      },
+      {
+        "jp": "Casket girl, you came to make me go insane",
+        "sourceTime": 157.84,
+        "sourceEnd": 162.99,
+        "time": 157.84,
+        "endTime": 162.99
+      },
+      {
+        "jp": "How can we not survive? It's such a shame",
+        "sourceTime": 162.99,
+        "sourceEnd": 166.1,
+        "time": 162.99,
+        "endTime": 166.1
+      },
+      {
+        "jp": "Use me up, can't get enough of all her lies",
+        "sourceTime": 166.1,
+        "sourceEnd": 171.35,
+        "time": 166.1,
+        "endTime": 171.35
+      },
+      {
+        "jp": "It can't be right",
+        "sourceTime": 171.35,
+        "sourceEnd": 173.24,
+        "time": 171.35,
+        "endTime": 173.24
+      },
+      {
+        "jp": "There's gotta be a way to make it better (ah)",
+        "sourceTime": 173.24,
+        "sourceEnd": 176.62,
+        "time": 173.24,
+        "endTime": 176.62
+      },
+      {
+        "jp": "Try a little love and grow together (ah)",
+        "sourceTime": 176.62,
+        "sourceEnd": 180.54,
+        "time": 176.62,
+        "endTime": 180.54
+      },
+      {
+        "jp": "Whoa, whoa",
+        "sourceTime": 180.54,
+        "sourceEnd": 184.27,
+        "time": 180.54,
+        "endTime": 184.27
+      },
+      {
+        "jp": "'Nough of delusion",
+        "sourceTime": 184.27,
+        "sourceEnd": 186.46,
+        "time": 184.27,
+        "endTime": 186.46
+      },
+      {
+        "jp": "Let's get out of the hole and find a way",
+        "sourceTime": 186.46,
+        "sourceEnd": 190.06,
+        "time": 186.46,
+        "endTime": 190.06
+      },
+      {
+        "jp": "To make it better",
+        "sourceTime": 190.06,
+        "sourceEnd": 192.31,
+        "time": 190.06,
+        "endTime": 192.31
+      },
+      {
+        "jp": "Try a little love yourself together",
+        "sourceTime": 192.31,
+        "sourceEnd": 195.86,
+        "time": 192.31,
+        "endTime": 195.86
+      },
+      {
+        "jp": "Whoa, whoa",
+        "sourceTime": 195.86,
+        "sourceEnd": 200.01,
+        "time": 195.86,
+        "endTime": 200.01
+      },
+      {
+        "jp": "High time for freedom",
+        "sourceTime": 200.01,
+        "sourceEnd": 202.8,
+        "time": 200.01,
+        "endTime": 202.8
+      },
+      {
+        "jp": "Why don't we both come outta, casket girl?",
+        "sourceTime": 202.8,
+        "sourceEnd": 205.87,
+        "time": 202.8,
+        "endTime": 205.87
+      },
+      {
+        "jp": "Casket girl, we got some kinda freedom",
+        "sourceTime": 205.87,
+        "sourceEnd": 209.18,
+        "time": 205.87,
+        "endTime": 209.18
+      },
+      {
+        "jp": "Casket girl, we got some kinda freedom",
+        "sourceTime": 209.18,
+        "sourceEnd": 212.67,
+        "time": 209.18,
+        "endTime": 212.67
+      },
+      {
+        "jp": "Casket girl, we got some kinda freedom",
+        "sourceTime": 212.67,
+        "sourceEnd": 216.52,
+        "time": 212.67,
+        "endTime": 216.52
+      },
+      {
+        "jp": "Ho-o-ow about we both come outta, casket girl?",
+        "sourceTime": 216.52,
+        "sourceEnd": 221.92,
+        "time": 216.52,
+        "endTime": 221.92
+      }
     ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/34071868",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/34071868",
+    "timingPreview": {
+      "youtubeId": "gFOu5r-OuQ4",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable"
   },
-  {
-    id: "KaijuNoHanauta",
-    title: "怪獸之花歌 (怪獣の花唄)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "UM9XNpgrqVk",
-    lyrics: [
-     // 中文翻譯參考：月勳，https://home.gamer.com.tw/artwork.php?sn=5348608
-     { time: 8, jp: [{ text: "[clap]思い出すのは 君の歌", tag: "clap" }],                                                             tr: "我所想起的是你的歌" },
-     { time: 11.5, jp: [{ text: "[clap]会話よりも鮮明だ", tag: "clap" }],                                                             tr: "比起我們之間的對話還要鮮明" },
-     { time: 15, jp: [{ text: "[clap]どこに行ってしまったの いつも探すんだよ", tag: "chant" }],                                                             tr: "你去了哪裡呢　我總是在尋找著你啊" },
-     { time: 21.5, jp: [{ text: "[clap]思い出すのは 君の歌", tag: "clap" }],                                                             tr: "我所想起的是你的歌" },
-     { time: 24.5, jp: [{ text: "[clap]歌い笑う顔が鮮明だ", tag: "clap" }],                                                             tr: "你那笑著唱歌的臉十分鮮明" },
-     { time: 28, jp: [{ text: "[clap]君に似合うんだよ ずっと見ていたいよ", tag: "chant" }],                                                             tr: "很適合你啊　我想一直注視著你啊" },
-     { time: 34, jp: [{ text: "[clap]でも最後に見たいのは", tag: "clap" }],                                                             tr: "但是我想在最後看見的事物" },
-     { time: 37.5, jp: [{ text: "[clap]きっともう君の夢の中", tag: "clap" }],                                                             tr: "一定存在於你的夢中" },
-     { time: 40.5, jp: [{ text: "[clap]もう一度 また", tag: "clap" }],                tr: "再一次" },
-     { time: 42.5, jp: [{ text: "[clap]聞かせてくれよ 聞きたいんだ", tag: "clap" }],                tr: "讓我聽聽吧　我想聽聽啊" },
-     { time: 46.5, jp: [{ text: "もっと", tag: "chant" }],                tr: "更加地" },
-     { time: 47.5, jp: [{ text: "[wave]騒げ怪獣の歌", tag: "chant" }],                tr: "吵鬧起來吧 怪獸之歌" },
-     { time: 52, jp: [{ text: "[wave]まだ消えない 夢の歌唱えて", tag: "chant" }],                tr: "歌頌著仍然不會消失的　夢想之歌吧" },
-     { time: 58.5, jp: [{ text: "[wave]君がいつも", tag: "chant" }],                tr: "你總是" },
-     { time: 60.5, jp: "歌う怪獣の歌",                tr: "唱著的怪獸之歌" },
-     { time: 64.5, jp: [{ text: "[wave]まだ消えない 口ずさんでしまうよ", tag: "chant" }],                tr: "仍然不會消失　你如此哼唱著啊" },
-     { time: 72.5, jp: [{ text: "[clap]思い出すのは 君がいた", tag: "clap" }],                                                             tr: "我想起的是　你" },
-     { time: 76, jp: [{ text: "[clap]ギター持ってる 君がいた", tag: "clap" }],                                                             tr: "拿著吉他的　你" },
-     { time: 79, jp: [{ text: "[clap]忘れられないんだよ", tag: "clap" }],                                                             tr: "我無法忘記啊"},
-     { time: 82, jp: [{ text: "[clap]だから僕が歌うよ", tag: "clap" }],                                                             tr: "所以我將高聲歌唱"},
-     { time: 85.5, jp: [{ text: "[clap]でも最後に見たいのは", tag: "clap" }],                                                             tr: "但是我想在最後看見的事物" },
-     { time: 88.5, jp: [{ text: "[clap]きっともう君の夢の中", tag: "clap" }],                                                             tr: "一定存在於你的夢中" },
-     { time: 91.5, jp: [{ text: "[clap]もう一度 また", tag: "clap" }],                tr: "再一次" },
-     { time: 93.5, jp: [{ text: "[clap]聞かせてくれよ 聞きたいんだ", tag: "clap" }],                tr: "讓我聽聽吧　我想聽聽啊" },
-     { time: 97.5, jp: [{ text: "もっと", tag: "chant" }],                tr: "更加地" },
-     { time: 98.5, jp: [{ text: "[wave]騒げ怪獣の歌", tag: "chant" }],                tr: "吵鬧起來吧 怪獸之歌" },
-     { time: 103, jp: [{ text: "[wave]まだ消えない 夢の歌唱えて", tag: "chant" }],                tr: "歌頌著仍然不會消失的　夢想之歌吧" },
-     { time: 110, jp: [{ text: "[wave]君がいつも", tag: "chant" }],                tr: "你總是" },
-     { time: 112, jp: "歌う怪獣の歌",                tr: "唱著的怪獸之歌" },
-     { time: 116, jp: [{ text: "[wave]まだ消えない 口ずさんでしまうよ", tag: "chant" }],                tr: "仍然不會消失　你如此哼唱著啊" },
-     { time: 123.5, jp: [{ text: "[clap]落ちてく過去は鮮明で", tag: "chant" }],                                                             tr: "逐漸剝落的過去十分鮮明" },
-     { time: 127, jp: [{ text: "[clap]見せたい未来は繊細で", tag: "chant" }],                                                             tr: "我想讓你看見的未來十分纖細" },
-     { time: 130, jp: [{ text: "[clap]すぎてく日々には鈍感な君へ", tag: "chant" }],                                                             tr: "在流逝而過的日子裡獻給遲鈍的你" },
-     { time: 137, jp: [{ text: "[clap]落ちてく過去は鮮明で", tag: "chant" }],                                                             tr: "逐漸剝落的過去十分鮮明" },
-     { time: 140, jp: [{ text: "[clap]見せたい未来は繊細で", tag: "chant" }],                                                             tr: "我想讓你看見的未來十分纖細" },
-     { time: 143, jp: [{ text: "[clap]すぎてく日々には鈍感な君へ", tag: "chant" }],                                                             tr: "在流逝而過的日子裡獻給遲鈍的你" },
-     { time: 146.5, jp: [{ text: "[wave]ねぇ、もっと", tag: "chant" }],                                                             tr: "吶、更加地" },
-     { time: 150, jp: [{ text: "[wave]騒げ怪獣の歌", tag: "chant" }],                tr: "吵鬧起來吧 怪獸之歌" },
-     { time: 154, jp: [{ text: "[wave]まだ消えない 夢の歌唱えて", tag: "chant" }],                tr: "歌頌著仍然不會消失的　夢想之歌吧" },
-     { time: 161, jp: [{ text: "[wave]君がいつも", tag: "chant" }],                tr: "你總是" },
-     { time: 163, jp: "歌う怪獣の歌",                tr: "唱著的怪獸之歌" },
-     { time: 167, jp: [{ text: "[wave]まだ消えない 口ずさんでしまうよ", tag: "chant" }],                tr: "仍然不會消失　你如此哼唱著啊" },
-     { time: 171.5, jp: "ねぇ 僕ら",                tr: "吶　我們啊" },
-     { time: 175.5, jp: [{ text: "[wave]眠れない夜に", tag: "chant" }],                tr: "朝著無法入睡的夜晚" },
-     { time: 177, jp: "手を伸ばして",                tr: "伸出手" },
-     { time: 178.5, jp: [{ text: "[wave]眠らない夜を", tag: "chant" }],                tr: "不眠之夜" },
-     { time: 180, jp: "また伸ばして",                tr: "再次伸出手" },
-     { time: 182, jp: [{ text: "[wave]眠くないまだね", tag: "chant" }],                tr: "睡不著呢" },
-     { time: 185, jp: "そんな日々でいたいのにな 懲りずに",                tr: "我仍然想待在那種日子裡啊　不長記性地" },
-     { time: 188.5, jp: [{ text: "[wave]眠れない夜に", tag: "chant" }],                tr: "朝著無法入睡的夜晚" },
-     { time: 190, jp: "手を伸ばして",                tr: "伸出手" },
-     { time: 191.5, jp: [{ text: "[wave]眠らない夜を", tag: "chant" }],                tr: "不眠之夜" },
-     { time: 193, jp: "また伸ばして",                tr: "再次伸出手" },
-     { time: 195, jp: [{ text: "[wave]眠くないまだね", tag: "chant" }],                tr: "睡不著呢" },
-     { time: 198, jp: "そんな夜に歌う 怪獣の歌",                tr: "在那種夜晚裡歌唱著　怪獸之歌" },
-     { time: 201, jp: [{ text: "[wave]落ちてく過去は鮮明で", tag: "chant" }],                                                             tr: "逐漸剝落的過去十分鮮明" },
-     { time: 203.5, jp: [{ text: "[wave]見せたい未来は繊細で", tag: "chant" }],                                                             tr: "我想讓你看見的未來十分纖細" },
-     { time: 206.5, jp: [{ text: "[wave]すぎてく日々には鈍感な君へ", tag: "chant" }],                                                             tr: "在流逝而過的日子裡獻給遲鈍的你" },
-     { time: 213.5, jp: [{ text: "[wave]落ちてく過去は鮮明で", tag: "chant" }],                                                             tr: "逐漸剝落的過去十分鮮明" },
-     { time: 216.5, jp: [{ text: "[wave]見せたい未来は繊細で", tag: "chant" }],                                                             tr: "我想讓你看見的未來十分纖細" },
-     { time: 219.5, jp: [{ text: "[wave]すぎてく日々には鈍感な君へ", tag: "chant" }],                                                             tr: "在流逝而過的日子裡獻給遲鈍的你" },
-
-
+  "INeedUBack": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Alright need his energy back (It's not a want)",
+        "sourceTime": 24.98,
+        "sourceEnd": 29.17,
+        "time": 24.98,
+        "endTime": 29.17,
+        "tr": "有必要重拾活力 (並非渴求)",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Alright I've been missin' u bad (It's been too long)",
+        "sourceTime": 29.17,
+        "sourceEnd": 33.24,
+        "time": 29.17,
+        "endTime": 33.24,
+        "tr": "想你想到無法呼吸 (過了好久)",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Alright alright I had enough",
+        "sourceTime": 33.24,
+        "sourceEnd": 37.36,
+        "time": 33.24,
+        "endTime": 37.36,
+        "tr": "我受夠了",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Enough with this apathy (Apathy, yes)",
+        "sourceTime": 37.36,
+        "sourceEnd": 41.45,
+        "time": 37.36,
+        "endTime": 41.45,
+        "tr": "受夠了無動於衷 (無動於衷)",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "How long have I gone astray (I don't see the light)",
+        "sourceTime": 41.45,
+        "sourceEnd": 45.51,
+        "time": 41.45,
+        "endTime": 45.51,
+        "tr": "我迷失了多久 (看不見光)",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "My passion has died away (Couldn't even fight)",
+        "sourceTime": 45.51,
+        "sourceEnd": 49.64,
+        "time": 45.51,
+        "endTime": 49.64,
+        "tr": "熱情已消逝 (提不起勁)",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Oh god please can we just go back",
+        "sourceTime": 49.64,
+        "sourceEnd": 53.79,
+        "time": 49.64,
+        "endTime": 53.79,
+        "tr": "能不能夠回頭",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "go back to those brighter days",
+        "sourceTime": 53.79,
+        "sourceEnd": 56.57,
+        "time": 53.79,
+        "endTime": 56.57,
+        "tr": "回到那些美好的日子",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I wasn't right yeah I've been scandalous (Oh)",
+        "sourceTime": 56.57,
+        "sourceEnd": 60.66,
+        "time": 56.57,
+        "endTime": 60.66,
+        "tr": "我錯了，我聲名狼藉",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I wasn't wise such an antagonist (Oh)",
+        "sourceTime": 60.66,
+        "sourceEnd": 64.71,
+        "time": 60.66,
+        "endTime": 64.71,
+        "tr": "不明智，我這種仇敵",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It wasn't nice I know but I learned a lot",
+        "sourceTime": 64.71,
+        "sourceEnd": 68.61,
+        "time": 64.71,
+        "endTime": 68.61,
+        "tr": "不夠真摯，但我學到教訓",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "baby, let me handle this again",
+        "sourceTime": 68.61,
+        "sourceEnd": 72.93,
+        "time": 68.61,
+        "endTime": 72.93,
+        "tr": "寶貝，讓我再試一次",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I need you back (Yeah yeah)",
+        "sourceTime": 72.93,
+        "sourceEnd": 76.8,
+        "time": 72.93,
+        "endTime": 76.8,
+        "tr": "我需要你回來 (yeah yeah)",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Never wanted nothin' like I want you tell me you'll be mine",
+        "sourceTime": 76.8,
+        "sourceEnd": 81.17,
+        "time": 76.8,
+        "endTime": 81.17,
+        "tr": "只想聽你說你屬於我",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I need you back (Yeah yeah)",
+        "sourceTime": 81.17,
+        "sourceEnd": 85,
+        "time": 81.17,
+        "endTime": 85,
+        "tr": "我需要你回來 (yeah yeah)",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Now is not the time to die I must be alive",
+        "sourceTime": 85,
+        "sourceEnd": 89.1,
+        "time": 85,
+        "endTime": 89.1,
+        "tr": "不放棄，現在我要認真生活",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "na na na na na na na na na na na",
+        "sourceTime": 89.1,
+        "sourceEnd": 92.2,
+        "time": 89.1,
+        "endTime": 92.2
+      },
+      {
+        "jp": "na na na na na",
+        "sourceTime": 92.2,
+        "sourceEnd": 93.78,
+        "time": 92.2,
+        "endTime": 93.78
+      },
+      {
+        "jp": "Now is not the time to die I'm alive",
+        "sourceTime": 93.78,
+        "sourceEnd": 98.65,
+        "time": 93.78,
+        "endTime": 98.65,
+        "tr": "不放棄，現在的我認真生活",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Where have u gone, I'm all alone",
+        "sourceTime": 98.65,
+        "sourceEnd": 101.64,
+        "time": 98.65,
+        "endTime": 101.64,
+        "tr": "你在哪裡? 我剩下我自己",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "yes I've been, yes I've been here livin' on my own",
+        "sourceTime": 101.64,
+        "sourceEnd": 106.08,
+        "time": 101.64,
+        "endTime": 106.08,
+        "tr": "我一直獨自生活在這裡",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "How can I go on, without u comin' home",
+        "sourceTime": 106.08,
+        "sourceEnd": 113.96,
+        "time": 106.08,
+        "endTime": 113.96,
+        "tr": "沒有你，我該如何走下去?",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I wasn't right yeah I've been scandalous (Oh)",
+        "sourceTime": 113.96,
+        "sourceEnd": 118.04,
+        "time": 113.96,
+        "endTime": 118.04,
+        "tr": "我錯了，我聲名狼藉",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I wasn't wise such an antagonist (Oh)",
+        "sourceTime": 118.04,
+        "sourceEnd": 123.53,
+        "time": 118.04,
+        "endTime": 123.53,
+        "tr": "不明智，我這種仇敵",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I know but I learned a lot",
+        "sourceTime": 123.53,
+        "sourceEnd": 126.05,
+        "time": 123.53,
+        "endTime": 126.05,
+        "tr": "不夠真摯，但我學到教訓",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "reviewed-fuller-pdf-line"
+      },
+      {
+        "jp": "baby, let me handle this again",
+        "sourceTime": 126.05,
+        "sourceEnd": 130.35,
+        "time": 126.05,
+        "endTime": 130.35,
+        "tr": "寶貝，讓我再試一次",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Just once again",
+        "sourceTime": 130.35,
+        "sourceEnd": 132.43,
+        "time": 130.35,
+        "endTime": 132.43,
+        "tr": "就再一次",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I need you back, babe (Yeah yeah)",
+        "sourceTime": 132.43,
+        "sourceEnd": 136.25,
+        "time": 132.43,
+        "endTime": 136.25,
+        "tr": "寶貝，我需要你回來 (yeah yeah)",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Never wanted nothin' like I want you tell me you'll be mine",
+        "sourceTime": 136.25,
+        "sourceEnd": 140.62,
+        "time": 136.25,
+        "endTime": 140.62,
+        "tr": "只想聽你說你屬於我",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I need you back (Yeah yeah)",
+        "sourceTime": 140.62,
+        "sourceEnd": 144.49,
+        "time": 140.62,
+        "endTime": 144.49,
+        "tr": "我需要你回來 (yeah yeah)",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Now is not the time to die I must be alive",
+        "sourceTime": 144.49,
+        "sourceEnd": 148.56,
+        "time": 144.49,
+        "endTime": 148.56,
+        "tr": "不放棄，現在我要認真生活",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "na na na na na na na na na na na",
+        "sourceTime": 148.56,
+        "sourceEnd": 151.73,
+        "time": 148.56,
+        "endTime": 151.73
+      },
+      {
+        "jp": "na na na na na",
+        "sourceTime": 151.73,
+        "sourceEnd": 153.24,
+        "time": 151.73,
+        "endTime": 153.24
+      },
+      {
+        "jp": "Now is not the time to die I'm alive",
+        "sourceTime": 153.24,
+        "sourceEnd": 156.8,
+        "time": 153.24,
+        "endTime": 156.8,
+        "tr": "不放棄，現在的我認真生活",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "na na na na na na na na na na na",
+        "sourceTime": 156.8,
+        "sourceEnd": 159.9,
+        "time": 156.8,
+        "endTime": 159.9
+      },
+      {
+        "jp": "na na na na na",
+        "sourceTime": 159.9,
+        "sourceEnd": 161.45,
+        "time": 159.9,
+        "endTime": 161.45
+      },
+      {
+        "jp": "Now is not the time to die I'm alive",
+        "sourceTime": 161.45,
+        "sourceEnd": 165.53,
+        "time": 161.45,
+        "endTime": 165.53,
+        "tr": "不放棄，現在的我認真生活",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "yeah yeah yeah",
+        "sourceTime": 165.53,
+        "sourceEnd": 170.67,
+        "time": 165.53,
+        "endTime": 170.67
+      },
+      {
+        "jp": "Need you back in my life",
+        "sourceTime": 170.67,
+        "sourceEnd": 173.75,
+        "time": 170.67,
+        "endTime": 173.75,
+        "tr": "我要你回到我的生活",
+        "translationRef": [
+          35
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "yeah yeah yeah",
+        "sourceTime": 173.75,
+        "sourceEnd": 178.78,
+        "time": 173.75,
+        "endTime": 178.78
+      },
+      {
+        "jp": "Need you back I'm alive (I need you back)",
+        "sourceTime": 178.78,
+        "sourceEnd": 182.87,
+        "time": 178.78,
+        "endTime": 182.87,
+        "tr": "我要你回來，我認真生活 (我需要你回來)",
+        "translationRef": [
+          37
+        ],
+        "translationMapping": "exact-source-text"
+      }
     ],
-  },
-  {
-    id: "CHAINSAWBLOOD",
-    title: "CHAINSAW BLOOD",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "FL1QjjkZVm4",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 19, jp: [{ text: "[clap]急ぐ雑踏も軽くcrackな視点", tag: "clap" }],                                                             tr: "就連著急不已的腳步聲也變得輕快的crack視角" },
-      { time: 22.5, jp: [{ text: "[clap]居ても泣いても立てぬflatな視点", tag: "clap" }],                                                             tr: "無論是存在還是哭泣都無法維持的flat視角" },
-      { time: 25.5, jp: [{ text: "[clap]弾む鼓動は刻むclap無しで", tag: "clap" }],                                                             tr: "高漲的心跳沒有刻畫下的clap" },
-      { time: 29, jp: [{ text: "[clap]忘れたいほど怒るchain回して", tag: "clap" }],                                                             tr: "越想遺忘便會更加轉動起憤怒的chain" },
-      { time: 32.5, jp: [{ text: "[wave]Hu Hu Hu Hu  Hu Hu Hu Hu Hu", tag: "chant" }],                                                             tr: "Hu Hu Hu Hu  Hu Hu Hu Hu Hu" },
-      { time: 35.5, jp: "全てをかき消してengine音",                tr: "將一切抹消殆盡吧engine聲" },
-      { time: 38, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }],                tr: "Hu-Hu-Hu-Hu" },
-      { time: 40, jp: "[wave]舌鳴らし今 錆び付け黒く",                tr: "此刻咋舌吧　生鏽地發黑" },
-      { time: 43, jp: [{ text: "CHAINSAW BLOOD", tag: "chant" }],                tr: "CHAINSAW BLOOD" },
-      { time: 45.5, jp: "[jump]血がたぎってもう煮立ってもう やめれない",                                  tr: "血液沸騰 已經開始熱得冒泡　無法住手" ,pic:"wave_jump" },
-      { time: 48.5, jp: "[jump]砕ききっても穿っても止まぬ",                tr: "即使全數粉碎還是貫穿也無法停止" ,pic:"wave_jump"},
-      { time: 51.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }],  pic:"wave_chain"     },
-      { time: 54.5, jp: "[jump]Tell me why cry? Tell me why",                tr: "Tell me why cry? Tell me why",pic:"wave_jump" },
-      { time: 57, jp: [{ text: "CHAINSAW BLOOD", tag: "chant" }],                tr: "CHAINSAW BLOOD" },
-      { time: 58.5, jp: "[jump]血がたぎってもう煮立ってもう 止まれない",                                  tr: "血液沸騰 已經開始熱得冒泡　無法停止",pic:"wave_jump" },
-      { time: 61.5, jp: "[jump]血を喰らうたび悪夢また よぎる",                tr: "每當啜取血液是惡夢便會再次　在腦袋裡閃現而過" ,pic:"wave_jump"},
-      { time: 64.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }], pic:"wave_chain"},
-      { time: 68, jp: "[jump]Tell me why cry? Tell me why you grinning?",                                  tr: "Tell me why cry? Tell me why you grinning?" ,pic:"wave_jump"},
-      { time: 69, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 84, jp: [{ text: "[clap]妄想に侵された 右脳操作不能機能の相殺法に", tag: "clap" }],                                                             tr: "被妄想侵害　在無法操作右腦功能的相殺法中" },
-      { time: 88.5, jp: [{ text: "[clap]使った愛の手！", tag: "clap" }],                tr: "使用的愛的招數！！" },
-      { time: 89.5, jp: [{ text: "(ハイッ ハイッ)", tag: "chant" }],                tr: "(哈伊！哈伊！)" },
-      { time: 90, jp: [{ text: "[clap]笑かしたbadなschemeを食ってしまう紳士", tag: "clap" }],                                                             tr: "不小心吃下惹人發笑的bad的scheme的紳士" },
-      { time: 92.5, jp: [{ text: "[clap]フワァと立ちくらみ言葉を有し", tag: "clap" }],                                                             tr: "擁有突然姿勢性昏厥的詞彙" },
-      { time: 94, jp: [{ text: "[wave]CHAINSAW is 使える愛の手", tag: "chant" }],                tr: "CHAINSAW is 能派上用場的愛的手段" },
-      { time: 96, jp: "(あ？なんだって？)",                tr: "啊？你說什麼？" },
-      { time: 97.5, jp: [{ text: "[wave]見える雑踏は軽くcrackな始点", tag: "chant" }],                                                             tr: "看見的腳步聲是輕快的crack起點" },
-      { time: 100.5, jp: [{ text: "[wave]居ても泣いても立てぬflatな始点", tag: "chant" }],                                                             tr: "無論是存在還是哭泣都無法維持的flat起點" },
-      { time: 104, jp: [{ text: "[wave]弾む鼓動は歪むclean toneで", tag: "chant" }],                                                             tr: "高漲的心跳是扭曲的clean tone" },
-      { time: 107.5, jp: [{ text: "[wave]忘れたいから早くchain回して", tag: "chant" }],                                                             tr: "因為想就此遺忘所以快點轉動chain吧" },
-      { time: 111, jp: [{ text: "[wave]Hu Hu Hu Hu  Hu Hu Hu Hu Hu", tag: "chant" }],                                                             tr: "Hu Hu Hu Hu  Hu Hu Hu Hu Hu" },
-      { time: 114, jp: "全てをかき消してengine音",                tr: "將一切抹消殆盡吧engine聲" },
-      { time: 116.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }],                tr: "Hu-Hu-Hu-Hu" },
-      { time: 118.5, jp: "[wave]歯軋りで、ほら 焼き付く赤く",                tr: "咬牙切齒、你瞧　燒灼得赤紅" },
-      { time: 121.5, jp: [{ text: "CHAINSAW BLOOD", tag: "chant" }],                tr: "CHAINSAW BLOOD" },
-      { time: 123.5, jp: "[jump]血がたぎってもう煮立ってもう やめれない",                                  tr: "血液沸騰 已經開始熱得冒泡　無法住手",pic:"wave_jump" },
-      { time: 127, jp: "[jump]砕ききっても穿っても止まぬ",                tr: "即使全數粉碎還是貫穿也無法停止",pic:"wave_jump" },
-      { time: 129.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }], pic:"wave_chain"},
-      { time: 133, jp: "[jump]Tell me why cry? Tell me why",                tr: "Tell me why cry? Tell me why" ,pic:"wave_jump"},
-      { time: 135.5, jp: [{ text: "CHAINSAW BLOOD", tag: "chant" }],                tr: "CHAINSAW BLOOD" },
-      { time: 136.5, jp: "[jump]血がたぎってもう煮立ってもう 止まれない",                                  tr: "血液沸騰 已經開始熱得冒泡　無法停止",pic:"wave_jump" },
-      { time: 140, jp: "[jump]血を喰らうたび悪夢また よぎる",                tr: "每當啜取血液是惡夢便會再次　在腦袋裡閃現而過",pic:"wave_jump" },
-      { time: 142.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }], pic:"wave_chain"},
-      { time: 146, jp: "[jump]Tell me why cry? Tell me why",                                  tr: "Tell me why cry? Tell me why" ,pic:"wave_jump"},
-      { time: 149.5, jp: [{ text: "[clap]轟いたbad news 平和目論む悪魔のpartyで", tag: "clap" }],                                                             tr: "轟鳴著的的bad news　必須得在籌畫和平的惡魔的party裡" },
-      { time: 156.5, jp: [{ text: "[clap]須くengineかき鳴らした", tag: "clap" }],                tr: "彈撥起engine" },
-      { time: 159.5, jp: [{ text: "CHAINSAW BLOOD", tag: "chant" }],                tr: "CHAINSAW BLOOD" },
-      { time: 164.5, jp: "[jump]血がたぎってもう煮立ってもう やめれない",                                  tr: "血液沸騰 已經開始熱得冒泡　無法住手" ,pic:"wave_jump"},
-      { time: 168, jp: "[jump]砕ききっても穿っても止まぬ",                tr: "即使全數粉碎還是貫穿也無法停止" ,pic:"wave_jump"},
-      { time: 170.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }], pic:"wave_chain"},
-      { time: 174, jp: "[jump]Tell me why cry? Tell me why",                tr: "Tell me why cry? Tell me why" ,pic:"wave_jump"},
-      { time: 176.5, jp: [{ text: "CHAINSAW BLOOD", tag: "chant" }],                tr: "CHAINSAW BLOOD" },
-      { time: 177.5, jp: "[jump]血がたぎってもう煮立ってもう 止まれない",                                  tr: "血液沸騰 已經開始熱得冒泡　無法停止" ,pic:"wave_jump"},
-      { time: 180.5, jp: "[jump]血を喰らうたび悪夢また よぎる ",                tr: "每當啜取血液是惡夢便會再次　在腦袋裡閃現而過" ,pic:"wave_jump"},
-      { time: 183.5, jp: [{ text: "[wave]Hu-Hu-Hu-Hu", tag: "chant" }], pic:"wave_chain"},
-      { time: 187, jp: "[jump]Tell me why cry? Tell me why you grinning?",                                  tr: "Tell me why cry? Tell me why you grinning?" ,pic:"wave_jump"},
-
-    ],
-  },
-  {
-    id: "KoikazeniNosete",
-    title: "乘著戀愛感冒 (恋風邪にのせて)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "1FIhcdocT-k",
-    lyrics: [
-      { time: 19, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 37.5, jp: [{ text: "[clap]変わりゆく景色 窓越しに覗いた", tag: "clap" }],                                                             tr: "不斷變幻的景色　隔著窗戶悄悄窺探" },
-      { time: 42, jp: [{ text: "[clap]懐かしい風が呼んできた どっかで", tag: "clap" }],                                                             tr: "懷念的微風將其呼喚而來　在某處" },
-      { time: 48.5, jp: [{ text: "[clap]見えない 互いを互いに 合図して そっと", tag: "clap" }],                                                             tr: "那無法被看見的　彼此向著對方　下達了暗號" },
-      { time: 53.5, jp: [{ text: "[clap]二人 目をそらして気付いたの ", tag: "clap" }],                                                             tr: "輕輕地 我們兩人　在移開視線的瞬間 才猛然察覺" },
-      { time: 60.5, jp: [{ text: "[wave]くだらない" }, { text: "愛で", tag: "chant" }, { text: " 僕たちはいつも笑っている " }],                tr: "用著微不足道的愛　我們總是這樣笑著" },
-      { time: 68.5, jp: [{ text: "[wave]思い出す" }, { text: "日々が", tag: "chant" }, { text: "  僕たちを悲しませるの ねぇ" }],                tr: "那些浮現腦海的歲月　卻又讓我們感到悲傷　吶" },
-      { time: 77, jp: [{ text: "[wave]くだらない" }, { text: "愛で", tag: "chant" }, { text: " 僕たちはいつも笑っていた " }],                tr: "用著微不足道的愛　我們總是這樣笑著" },
-      { time: 85, jp: [{ text: "[wave]繰り返す" }, { text: "日々が", tag: "chant" }, { text: "  僕たちを振り向かせるの ねぇ" }],                tr: "不斷重複循環的日子　讓我們忍不住回過頭去" },
-      { time: 93.5, jp: "[wave]そっと二人 魔法を唱えるの 恋風邪にのせて",                tr: "吶 輕輕地 我們兩人　許下了魔法　乘著這場戀愛感冒" },
-      { time: 107, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 118.5, jp: [{ text: "[clap]混ざりゆく景色 雨越しに覗いた", tag: "clap" }],                                                             tr: "漸漸交融的景色　隔著雨水悄悄窺探" },
-      { time: 123.5, jp: [{ text: "[clap]暖かい風が呼んできた どっかで", tag: "clap" }],                                                             tr: "溫暖的微風將其呼喚而來　在某處" },
-      { time: 129.5, jp: [{ text: "[clap]消えない 互いを互いに 合図して そっと", tag: "clap" }],                                                             tr: "那不會消逝的　彼此向著對方　下達了暗號" },
-      { time: 135.5, jp: [{ text: "[clap]二人 目を凝らして気付いたの", tag: "clap" }],                                                             tr: "輕輕地 我們兩人　在凝視著彼此的瞬間 才猛然察覺" },
-      { time: 142, jp: [{ text: "[wave]くだらない" }, { text: "愛で", tag: "chant" }, { text: " 僕たちはいつも笑っている " }],                tr: "用著微不足道的愛　我們總是這樣笑著" },
-      { time: 150, jp: [{ text: "[wave]思い出す" }, { text: "日々が", tag: "chant" }, { text: "  僕たちを悲しませるの ねぇ" }],                tr: "那些浮現腦海的歲月　卻又讓我們感到悲傷　吶" },
-      { time: 158.5, jp: [{ text: "[wave]くだらない" }, { text: "愛で", tag: "chant" }, { text: " 僕たちはいつも笑っていた " }],                tr: "用著微不足道的愛　我們總是這樣笑著" },
-      { time: 166.5, jp: [{ text: "[wave]繰り返す" }, { text: "日々が", tag: "chant" }, { text: "  僕たちを振り向かせるの ねぇ" }],                tr: "不斷重複循環的日子　讓我們忍不住回過頭去" },
-      { time: 175, jp: "[wave]そっと二人 魔法を唱えるの",                tr: "吶 輕輕地 我們兩人　許下了魔法" },
-      { time: 183.5, jp: [{ text: "[clap]言葉が深める惑星の夜に今", tag: "clap" }],                                                             tr: "在言語讓彼此情意加深 行星運轉的深夜裡" },
-      { time: 190, jp: [{ text: "[clap]あなたを探して 答えた", tag: "clap" }],                                                             tr: "此刻我正尋找著　並回答了你" },
-      { time: 194, jp: [{ text: "[clap]「心枯れるまで、共に笑っていよう」", tag: "clap" }],                                                             tr: "「直到心靈枯竭為止、讓我們一起笑著走下去吧」" },
-      { time: 199, jp: [{ text: "[clap]やっと二人 目を合わせて気付いたの", tag: "clap" }],                                                             tr: "終於 我們兩人　在目光交會的瞬間 才真正明白" },
-      { time: 209.5, jp: [{ text: "[wave]くだらない" }, { text: "愛で", tag: "chant" }, { text: " 僕たちはいつも笑っている " }],                tr: "用著微不足道的愛　我們總是這樣笑著" },
-      { time: 217, jp: [{ text: "[wave]思い出す" }, { text: "日々が", tag: "chant" }, { text: "  僕たちを悲しませるの ねぇ" }],                tr: "那些浮現腦海的歲月　卻又讓我們感到悲傷　吶" },
-      { time: 225.5, jp: [{ text: "[wave]くだらない" }, { text: "愛で", tag: "chant" }, { text: " 僕たちはいつも笑っていた " }],                tr: "用著微不足道的愛　我們總是這樣笑著" },
-      { time: 233.5, jp: [{ text: "[wave]繰り返す" }, { text: "日々が", tag: "chant" }, { text: "  僕たちを振り向かせるの ねぇ" }],                tr: "不斷重複循環的日子　讓我們忍不住回過頭去" },
-      { time: 242, jp: "[wave]そっと二人 魔法を唱えるの 恋風邪にのせて",                tr: "吶 輕輕地 我們兩人　許下了魔法　乘著這場戀愛感冒" },
-    ],
-  },
-  {
-    id: "Odoriko",
-    title: "舞者 (踊り子)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "7HgJIAUtICU",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 18.5, jp: [{ text: "[clap]ねぇ、どっかに置いてきたような", tag: "clap" }],                                                             tr: "吶、雖然我想起了一兩件" },
-      { time: 24, jp: [{ text: "[clap]事が一つ二つ浮いているけど", tag: "clap" }],                                                             tr: "我不知不覺遺忘的事情" },
-      { time: 31, jp: [{ text: "[clap]ねぇ、ちゃんと拾っておこう", tag: "clap" }],                                                             tr: "吶、就讓我們好好地撿起來吧" },
-      { time: 36.5, jp: [{ text: "[clap]はじけて忘れてしまう前に", tag: "clap" }],                                                             tr: "在它綻開並忘記之前" },
-      { time: 43, jp: "[spin]回り出した あの子と僕の未来が",                                                             tr: "開始轉動的 那孩子與我的未來", pic: "wave_turn" },
-      { time: 49.5, jp: "[spin]止まりどっかで またやり直せたら",                                                             tr: "已經停止 要是我能在其他地方重頭來過的話" , pic: "wave_turn"},
-      { time: 55.5, jp: "[spin]回り出した あの子と僕が被害者",                                                             tr: "開始轉動的 那孩子與我裝出了" , pic: "wave_turn"},
-      { time: 62, jp: "[spin]づらでどっかを また練り歩けたらな",                                                             tr: "被害者的模樣 要是我能在地方地方緩步前進的話", pic: "wave_turn" },
-      { time: 68, jp: [{ text: "とぅるるる とぅるるる とぅるる x 4", tag: "chant" }],                                                             tr: "嘟嚕嚕嚕嚕 嘟嚕嚕嚕嚕 嘟嚕嚕x4" },
-      { time: 80, jp: [{ text: "[clap]あのね、私あなたに会ったの", tag: "clap" }],                                                             tr: "那個啊、我見到了你啊" },
-      { time: 85.5, jp: [{ text: "[clap]夢の中に置いてきたけどね", tag: "clap" }],                                                             tr: "雖然我將你留在了夢裡呢" },
-      { time: 92, jp: [{ text: "[clap]ねぇ、どうして私が好きなの", tag: "clap" }],                                                             tr: "吶、為什麼你喜歡我呢" },
-      { time: 98, jp: [{ text: "[clap]一度しか会ったことがないのにね", tag: "clap" }],                                                             tr: "明明我們只有見過一次面呢" },
-      { time: 104.5, jp: [{ text: "[clap]思いを蹴って 二人でしてんだ", tag: "clap" }],                                                             tr: "我們一起　踢開了感受" },
-      { time: 107.5, jp: [{ text: "[clap]壊れない愛を歌う 言葉を二人に課して", tag: "clap" }],                                                             tr: "歌頌出不會壞掉（忘記）的愛情吧　我們賦予雙方言語" },
-      { time: 112, jp: [{ text: "[clap]誓いをたてんだ 忘れない愛を歌うようにね", tag: "clap" }],                                                             tr: "並就此發誓　只願我們將會歌頌出不會忘記的愛情" },
-      { time: 116.5, jp: "[spin]回り出した あの子と僕の未来が",                                                             tr: "開始轉動的 那孩子與我的未來", pic: "wave_turn" },
-      { time: 122.5, jp: "[spin]止まりどっかで またやり直せたら",                                                             tr: "已經停止 要是我能在其他地方重頭來過的話" , pic: "wave_turn"},
-      { time: 129, jp: "[spin]回り出した あの子と僕が被害者",                                                             tr: "開始轉動的 那孩子與我裝出了" , pic: "wave_turn"},
-      { time: 135, jp: "[spin]づらでどっかを また練り歩けたらな",                                                             tr: "被害者的模樣 要是我能在地方地方緩步前進的話" , pic: "wave_turn"},
-      { time: 141, jp: [{ text: "とぅるるる とぅるるる とぅるる x 8", tag: "chant" }],                                                             tr: "嘟嚕嚕嚕嚕 嘟嚕嚕嚕嚕 嘟嚕嚕x8" },
-      { time: 168.5, jp: "[spin]回り出した あの子と僕の未来が",                                                             tr: "開始轉動的 那孩子與我的未來", pic: "wave_turn" },
-      { time: 175, jp: "[spin]止まりどっかで またやり直せたら",                                                             tr: "已經停止 要是我能在其他地方重頭來過的話" , pic: "wave_turn"},
-      { time: 181, jp: "[spin]回り出した あの子と僕が被害者",                                                             tr: "開始轉動的 那孩子與我裝出了" , pic: "wave_turn"},
-      { time: 187, jp: "[spin]づらでどっかを また練り歩けたらな",                                                             tr: "被害者的模樣 要是我能在地方地方緩步前進的話", pic: "wave_turn" },
-      { time: 193, jp: [{ text: "[spin]時代に乗って僕たちは 変わらず愛に生きるだろう", tag: "chant" }],                                                             tr: "乘上了時代的我們　將會一成不變地活在愛裡吧" , pic: "wave_turn"},
-      { time: 199.5, jp: [{ text: "[spin]僕らが散って残るのは 変わらぬ愛の歌なんだろうな", tag: "chant" }],                                                             tr: "我們所散落在地的　應該是一成不變的情歌呢" , pic: "wave_turn"},
-      { time: 205.5, jp: [{ text: "[spin]時代に乗って僕たちは 変わらず愛に生きるだろう", tag: "chant" }],                                                             tr: "乘上了時代的我們　將會一成不變地活在愛裡吧" , pic: "wave_turn"},
-      { time: 211.5, jp: [{ text: "[spin]僕らが散って残るのは 変わらぬ愛の歌なんだろうな", tag: "chant" }],                                                             tr: "我們所散落在地的　應該是一成不變的情歌呢", pic: "wave_turn" },
-      { time: 218, jp: [{ text: "とぅるるる とぅるるる とぅるる x 4", tag: "chant" }],                                                             tr: "嘟嚕嚕嚕嚕 嘟嚕嚕嚕嚕 嘟嚕嚕x4" },
-    ],
-  },
-  {
-    id: "HadakaNoYusha",
-    title: "裸身勇者 (裸の勇者)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "FT0GKCuSaW0",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]誰かが変な涙を 飲み込んで 呑み込んでいる", tag: "clap" }],                                                             tr: "某人在此刻吞下了淚水。" },
-      { time: 11, jp: "力が伴う 悪意振り解いて",                                                             tr: "帶有力量　解開惡意" },
-      { time: 17, jp: "耳は聞こえちゃいない だが勇者は今",                                                             tr: "耳朵無法聽到聲音　但是勇者此刻" },
-      { time: 23, jp: "力は要らない 身に任せて 小さなこの手は今",                                                             tr: "不需要力量　交付給身軀吧　小小的這雙手在此刻" },
-      { time: 34.5, jp: [{ text: "[wave]" }, { text: "愛して", tag: "chant" }, { text: "しまった全部全部 降りかかった呪いも全部" }],                tr: "深愛著　全部　降臨的詛咒也好" },
-      { time: 46, jp: "[wave]もう愛してしまった想いを全部 守れるほどの光を",                                                             tr: "已經　深愛不已的思念　全部　宛如能守護一切的光芒" },
-      { time: 59.5, jp: [{ text: "[clap]何処からか舞った悲しみが 飛び交って 飛び交っている", tag: "clap" }],                                                             tr: "從某處而來的　悲傷再次交錯亂飛著。" },
-      { time: 71, jp: [{ text: "[clap]失って また失って 膝をつき 息をしている", tag: "clap" }],                                                             tr: "失去、再次失去、雙膝跪下　正在呼吸著。" },
-      { time: 82, jp: [{ text: "それは涙と対になって 悲しみと力となって", tag: "chant" }],                tr: "那　與淚水成雙成對　悲傷化作力量" },
-      { time: 89, jp: "愛しさが何かを壊していく",                                                             tr: "憐愛之處漸漸地破壞了什麼" },
-      { time: 94, jp: [{ text: "そこは涙と対になって 滾りが溢れかえって", tag: "chant" }],                tr: "那裡　與淚水成雙成對　情緒的高漲滿溢而出" },
-      { time: 100, jp: "この全てを背負った手を",                                                             tr: "背負所有一切的手" },
-      { time: 105, jp: [{ text: "愛して", tag: "chant" }, { text: "しまった全部全部 降りかかった呪いも全部" }],                tr: "深愛著　全部　降臨的詛咒也好" },
-      { time: 116.5, jp: "もう愛してしまった思いを全部守れるほどの光を",                                                             tr: "已經　深愛不已的思念　全部　宛如能守護一切的光芒" },
-      { time: 129, jp: [{ text: "[clap]誰もが求めた剣はこの誰かが残してった鈍が", tag: "clap" }],                                                             tr: "任何人追求的劍　因為生鏽而無法使用　這個由某人留下的不鋒利、" },
-      { time: 141, jp: [{ text: "[clap]この誰かが残してった鈍が闇を裂いてしまう前に", tag: "clap" }],                                                             tr: "這個由某人留下的不鋒利、　在撕裂黑暗之前" },
-      { time: 152, jp: [{ text: "[wave]" }, { text: "愛して", tag: "chant" }, { text: "しまった全部全部 降りかかった呪いも全部" }],                tr: "深愛著　全部　降臨的詛咒也好" },
-      { time: 164, jp: "[wave]もう愛してしまった想いを全部 守れるほどの光を",                                                             tr: "已經　深愛不已的思念　全部　宛如能守護一切的光芒" },
-      { time: 176, jp: [{ text: "[wave]力が伴う悪意振り解いて耳は聞こえちゃいない", tag: "chant" }],                                                             tr: "帶有力量　解開惡意　耳朵無法聽到聲音" },
-      { time: 185, jp: [{ text: "[wave]だが勇者は今力はいらない身に任せて", tag: "chant" }],                                                             tr: "但是勇者此刻　不需要力量　交付給身軀吧" },
-      { time: 194, jp: "[wave]カゲは迫る「お前はなんだ」と",                                                             tr: "影子緊迫而來　「你怎麼樣呢」" },
-
-
-
-    ],
-  },
-  {
-    id: "Fukakouryoku",
-    title: "不可幸力 (不可幸力)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "Gbz2C2gQREI",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 19, jp: [{ text: "[clap]どこにいっても", tag: "clap" }], tr: "不管去到哪裡" },
-      { time: 20.5, jp: "行き詰まりそして息道理を", tr: "都是死路一條 接著就這麼將" },
-      { time: 23, jp: [{ text: "[clap]そのままどっかに出すくだり", tag: "clap" }],                                                             tr: "呼吸的道理 拋棄在某個地方的事項" },
-      { time: 25, jp: [{ text: "[clap]そんな劣等も葛藤もみんな持ってる", tag: "chant" }], tr: "每個人都擁有那種自卑感與內心糾葛" },
-      { time: 28.5, jp: [{ text: "その理由は同じ", tag: "chant" }], tr: "而理由都是一樣的" },
-      { time: 30.5, jp: [{ text: "[clap]なんでもかんでも欲しがる世界じゃない？", tag: "clap" }],                                                             tr: "這不是一個什麼都想要的世界嗎？" },
-      { time: 32.5, jp: [{ text: "[clap]また回る世界に飲まれている", tag: "chant" }], tr: "我再次被轉動的世界吞噬" },
-      { time: 35, jp: [{ text: "それも理由は同じ", tag: "chant" }], tr: "就連那份理由也是一樣的" },
-      { time: 37, jp: [{ text: "[clap]膨らんだ、妄想、幻想、真相を、いやあれを探してる", tag: "clap" }],                                                             tr: "我尋找著膨脹的妄想、幻想、真相、不 我尋找著那個東西" },
-      { time: 41.5, jp: [{ text: "[clap]", tag: "clap" }, { text: "あれ、なに", tag: "chant" }, { text: "、わからないよ", tag: "clap" }],                 tr: "奇怪、什麼、我不明白啊" },
-      { time: 46.5, jp: [{ text: "[clap]", tag: "clap" }, { text: "それ、なに", tag: "chant" }, { text: "、甘い理想に", tag: "clap" }], tr: "那是、什麼、我沉溺在" },
-      { time: 52.5, jp: "落ちる", tr: "甜蜜的理想之中" },
-      { time: 54, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 55.5, jp: "[wave]みんな心の中までイカレちまっている",                 tr: "大家的內心已經變得瘋狂" },
-      { time: 59, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 61, jp: "[wave]そんな世界にみんなで寄り添いあっている",                 tr: "大家都在那樣的世界裡依偎著彼此" },
-      { time: 64, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 66, jp: "[wave]みんな心の中から弱って朽ちていく",                 tr: "大家從心裡開始變得脆弱且逐漸枯萎" },
-      { time: 69.5, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 71, jp: "[wave]そんな世界だから皆慰めあっている",                 tr: "正是因為是那樣子的世界 所以大家都在安慰著彼此" },
-      { time: 85, jp: [{ text: "[clap]", tag: "clap" }, { text: "あれ、なに", tag: "chant" }, { text: "、わからないよ", tag: "clap" }],                 tr: "奇怪、什麼、我不明白啊" },
-      { time: 90.5, jp: [{ text: "[clap]", tag: "clap" }, { text: "それ、なに", tag: "chant" }, { text: "、辛い日々に", tag: "clap" }], tr: "那是、什麼、我在難受不已的日子裡" },
-      { time: 96, jp: "沈む", tr: "沉淪" },
-      { time: 97.5, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 99, jp: "[wave]みんな心の中までイカレちまっている",                 tr: "大家的內心已經變得瘋狂" },
-      { time: 102.5, jp: [{ text: "w[wave]elcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 104.5, jp: "[wave]そんな世界にみんなで寄り添いあっている",                 tr: "大家都在那樣的世界裡依偎著彼此" },
-      { time: 108, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 109.5, jp: "[wave]みんな心の中から弱って朽ちていく",                 tr: "大家從心裡開始變得脆弱且逐漸枯萎" },
-      { time: 113, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 114.5, jp: "[wave]そんな世界だから皆慰めあっている",                 tr: "正是因為是那樣子的世界 所以大家都在安慰著彼此" },
-      { time: 121.5, jp: "[wave]愛で",                 tr: "靠愛情" },
-      { time: 123,   jp: "[wave]揺れる世界の中で僕達は",                 tr: "待在動盪世界裡的我們" },
-      { time: 128.5, jp: "[wave]キスをしあって生きている",                 tr: "親吻著彼此並活了下去" },
-      { time: 133, jp: "[wave]揺れる世界の中を僕達は",                 tr: "我們在動盪世界裡" },
-      { time: 139, jp: "手を取り合っている",                 tr: "緊緊握著彼此的手" },
-      { time: 142.5, jp: "[wave]なぁなんて美しい世界だ", tr: "喂、這個世界還真是美麗呢" },
-      { time: 145.5, jp: "僕ら何度裏切りあっていても", tr: "不管我們多少次背叛彼此" },
-      { time: 148, jp: "[wave]まぁなんとか手を取り合うんだ",                 tr: "哎呀、我們也能勉勉強強牽起彼此的手呢" },
-      { time: 150, jp: "[wave]まるで恋愛映画のラストシーンのような",                 tr: "就像是愛情電影的最後一幕戲一樣" },
-      { time: 154.5, jp: [{ text: "[wave]" }, { text: "愛で", tag: "chant" }],                 tr: "「靠愛情」" },
-      { time: 156,   jp: [{ text: "[wave]靡く世界の中で僕達は", tag: "chant" }],                 tr: "我們在這個屈從的世界裡" },
-      { time: 161.5, jp: "[wave]キスをしあって生きている",                 tr: "親吻著彼此並活了下去" },
-      { time: 166, jp: [{ text: "[wave]靡く世界の中を僕達は", tag: "chant" }],                                                     tr: "我們在這個屈從的世界裡" },
-      { time: 172, jp: [{ text: "目を合わせあって生きる", tag: "chant" }],                                                     tr: "對望著彼此並活下去" },
-      { time: 176.5, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 178.5, jp: "[wave]みんな心の中までイカレちまっている",                 tr: "大家的內心已經變得瘋狂" },
-      { time: 181.5, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 183.5, jp: "[wave]そんな世界にみんなで寄り添いあっている",                 tr: "大家都在那樣的世界裡依偎著彼此" },
-      { time: 187, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 188.5, jp: "[wave]みんな心の中から弱って朽ちていく",                 tr: "大家從心裡開始變得脆弱且逐漸枯萎" },
-      { time: 192, jp: [{ text: "[wave]welcome to the dirty night", tag: "chant" }],                 tr: "welcome to the dirty night" },
-      { time: 193.5, jp: "[wave]そんな世界だから皆慰めあっている",                 tr: "正是因為是那樣子的世界 所以大家都在安慰著彼此" },
-    ],
-  },
-  {
-    id: "Reunion",
-    title: "重逢 (再会)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "WcaSSvtHFeM",
-    lyrics: [
-      { time: 20.5, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 40, jp: [{ text: "[clap]one more time もう少しで起こすよmagic", tag: "chant" }],                 tr: "再差一點點就能喚醒了啊 magic" },
-      { time: 46.5, jp: [{ text: "[clap]超TRY 光を貸してbody", tag: "chant" }],                 tr: "超 TRY　把光芒借給我吧 body" },
-      { time: 51.5, jp: [{ text: "[clap]どうにかしてでも一つ願い、聞いてくれ", tag: "clap" }],                 tr: "無論如何　聽聽我這、唯一一個願望吧" },
-      { time: 58, jp: [{ text: "[clap]どうこうよりも一つ想い、悟ってくれ", tag: "clap" }],                 tr: "比起這樣那樣的理論　去體悟這、唯一一份心思吧" },
-      { time: 66, jp: [{ text: "[clap]宇宙一の悲しみと霧覚める静けさと", tag: "clap" }],                 tr: "伴隨著全宇宙第一的悲傷　霧氣散去般的靜謐" },
-      { time: 72.5, jp: [{ text: "[clap]僕の心拍でもしもしもし", tag: "clap" }],                 tr: "以及我的心跳　如果" },
-      { time: 77, jp: [{ text: "[wave]もしもここからまた出会えるのなら", tag: "chant" }],                 tr: "如果從今以後　我們還能夠再次相遇的話" },
-      { time: 81, jp: "[wave]この先は一瞬も一寸の隅も",                 tr: "往後的日子　哪怕是一瞬間 哪怕是極微小的角落" },
-      { time: 88, jp: [{ text: "[wave]忘れず全部覚えておこう", tag: "chant" }],                 tr: "我都不會忘記 全部銘記在心" },
-      { time: 91.5, jp: "[wave]目を閉じあうたびまぶたで久しく",                 tr: "每當彼此閉上雙眼　就能在眼簾深處" },
-      { time: 97.5, jp: [{ text: "[wave]君に出会えるからまた夏で話そう", tag: "chant" }],                 tr: "與久違的你相見　所以讓我們夏天再聊吧" },
-      { time: 117, jp: [{ text: "[clap]one more night もう少しで起こすよmagic", tag: "chant" }],                 tr: "再差一點點就能喚醒了啊 magic" },
-      { time: 123, jp: [{ text: "[clap]超HIGHもうすでに力んでるマジ", tag: "chant" }],                 tr: "超HIGH　說真的 我現在就已經使出渾身解數了" },
-      { time: 128, jp: [{ text: "[clap]どう見たってもう無謀のコース蠱毒みたいだね", tag: "clap" }],                 tr: "無論怎麼看　這無謀的航程都像蠱毒一樣呢" },
-      { time: 135, jp: [{ text: "[clap]どうこうよりも秘匿の情を掘りおこしてくれ", tag: "clap" }],                 tr: "比起這樣那樣的論調　去挖出那隱匿深藏的情感吧" },
-      { time: 143, jp: [{ text: "[clap]宇宙一の快感と咳き込める重圧と", tag: "clap" }],                 tr: "伴隨著全宇宙第一的快感　讓人嗆咳般的重壓" },
-      { time: 149.5, jp: [{ text: "[clap]僕の情熱でもしもしもし", tag: "clap" }],                 tr: "以及我的熱情　如果" },
-      { time: 194, jp: "黄泉の果て繋ぐ呪文と航路の",                 tr: "如果我根本不知道" },
-      { time: 200, jp: "在処など僕が知らなかったら",                 tr: "那連接黃泉盡頭的咒語與航線何在的話" },
-      { time: 206, jp: [{ text: "[clap]ねぇ君はそれでも、胸の奥僕の 何かの", tag: "clap" }],                 tr: "你是否依然會尋找著、我胸口深處" },
-      { time: 212.5, jp: [{ text: "[clap]在処をそれでも、探すだろうかねぇ、もしも", tag: "clap" }],                 tr: "關於某個、屬於我事物的位置呢　吶、如果" },
-      { time: 225, jp: [{ text: "[wave]もしもここからまた出会えるのなら", tag: "chant" }],                 tr: "如果從今以後　我們還能夠再次相遇的話" },
-      { time: 229, jp: "[wave]これまでの一瞬も一寸の隅も",                 tr: "過往的歲月　哪怕是一瞬間 哪怕是極微小的角落" },
-      { time: 236, jp: [{ text: "[wave]忘れず全部覚えておこう", tag: "chant" }],                 tr: "我都不會忘記 全部銘記在心" },
-      { time: 239.5, jp: "[wave]目を閉じあうたびまぶたで久しく",                 tr: "每當彼此閉上雙眼　就能在眼簾深處" },
-      { time: 245.5, jp: [{ text: "[wave]君に出会えるからまた夏で話そう", tag: "chant" }],                 tr: "與久違的你相見　所以讓我們夏天再聊吧" },
-
-
-
-
-
-    ],
-  },
-  {
-    id: "hanaurana",
-    title: "花占卜 (花占い)",
-    translationCredit: "Smiecj",
-    translationCreditUrl: "https://smiecj.com/2022/12/30/vaundy-hanauranai/",
-    translationSourceUrl: "https://smiecj.com/2022/12/30/vaundy-hanauranai/",
-    translationLicense: "CC BY-NC-SA 4.0",
-    translationLicenseUrl: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    youtubeId: "onhBN0qkUcE",
-    lyrics: [
-      { time: 1.5, jp: [{ text: "[clap]街の夕焼けに溶けた", tag: "clap" }], tr: "融化在夕陽街角下的" },
-      { time: 4.5, jp: "僕たちはまだニ人だろうか", tr: "依然是你我二人對吧" },
-      { time: 8, jp: [{ text: "[clap]風が吹く僕たちを乗せて", tag: "clap" }],                 tr: "乘著陣陣拂過的晚風" },
-      { time: 12, jp: [{ text: "[clap]ニ人でちぎった花に", tag: "clap" }], tr: "放飛一片片摘落的花瓣" },
-      { time: 15.5, jp: "願いを込めて", tr: "就讓我們一起把願望寄託其中吧" },
-      { time: 32.5, jp: [{ text: "[clap]願うなら", tag: "clap" }], tr: "能許下願望的話" },
-      { time: 34.5, jp: "僕たちを出会うよりも", tr: "希望我們能在相遇之前" },
-      { time: 37.5, jp: "ずっと遠くに", tr: "更不知曉對方" },
-      { time: 40, jp: [{ text: "[clap]叶うなら", tag: "clap" }], tr: "願望能實現的話" },
-      { time: 42, jp: "僕たちの運命さえも", tr: "希望我們能夠逃脫命運" },
-      { time: 44.5, jp: "もっと遠くに", tr: "更加遠離彼此" },
-      { time: 46.5, jp: [{ text: "なんて笑って吐いて捨てては", tag: "chant" }],                 tr: "就這樣笑著，嘆息著，無數次想放下，但又忍不住撿起" },
-      { time: 50, jp: "君を思い出す", tr: "都是因為想起了你" },
-      { time: 52, jp: "そんな思いを", tr: "帶著這種丟不掉的思念" },
-      { time: 53.5, jp: [{ text: "抱いて抱えて悶えた先には", tag: "chant" }],                 tr: "擁抱著，揹負著，無數次想解脫，但總是為此悶悶不樂" },
-      { time: 57.5, jp: "いつも君がいる", tr: "都是因為身邊一直有你在" },
-      { time: 59.5, jp: "そんな事より", tr: "比起那些事" },
-      { time: 61, jp: [{ text: "[clap]恋路の果てには何がある", tag: "clap" }], tr: "「戀愛之路的盡頭會是什麼呢」" },
-      { time: 66, jp: "くだらない話をニ人で", tr: "這種無關緊要的話題　兩個人一起" },
-      { time: 71, jp: "しよう", tr: "開始聊起吧" },
-      { time: 74, jp: "[wave]僕達の千年の恋は", tr: "我們之間漫長的戀愛", pic: "wave_rl" },
-      { time: 77, jp: "相槌で折れる花のようだ", tr: "就像順勢折斷的花朵一樣", pic: "wave_rl" },
-      { time: 81, jp: "[wave]僕達は千年後もまだ", tr: "漫長的戀愛過後　我們一定也會像現在這樣", pic: "wave_rl" },
-      { time: 84.5, jp: "同じ様にまってんだ", tr: "一直等待彼此下去的吧", pic: "wave_rl" },
-      { time: 88, jp: "笑っちゃうよね", tr: "真是讓人見笑了", pic: "wave_rl" },
-      { time: 96.5, jp: [{ text: "[clap]貴方と以外", tag: "clap" }], tr: "除了你以外" },
-      { time: 98.5, jp: "もう何処にも行けない", tr: "我已經無處可去" },
-      { time: 101, jp: [{ text: "[clap]波の中で", tag: "clap" }], tr: "交融在這片海浪之中" },
-      { time: 103, jp: "混じり合わない", tr: "卻無法相融" },
-      { time: 105, jp: "日々の中で", tr: "即使就在這樣的日常之中" },
-      { time: 107, jp: [{ text: "[clap]2人がたっている", tag: "clap" }], tr: "我們也能彼此留下印記" },
-      { time: 109, jp: "永劫を", tr: "直到永遠" },
-      { time: 110.5, jp: [{ text: "なんて笑って吐いて捨てては", tag: "chant" }],                 tr: "就這樣笑著，嘆息著，無數次想放下，但又忍不住撿起" },
-      { time: 114.5, jp: "君を思い出す", tr: "都是因為想起了你" },
-      { time: 116.5, jp: "そんな思いを", tr: "帶著這種丟不掉的思念" },
-      { time: 118, jp: [{ text: "抱いて抱えて悶えた先には", tag: "chant" }],                 tr: "擁抱著，揹負著，無數次想解脫，但總是為此悶悶不樂" },
-      { time: 121.5, jp: "いつも君がいる", tr: "都是因為身邊一直有你在" },
-      { time: 123.5, jp: "そんな事より", tr: "比起那些事" },
-      { time: 125, jp: [{ text: "[clap]願いは君との先にある", tag: "clap" }], tr: "先不說這些了　我有一個願望，關於和你一起的未來" },
-      { time: 130, jp: "たわいない話を2人で", tr: "讓我們就這個不起眼的話題" },
-      { time: 134, jp: "しよう", tr: "開始談談吧" },
-      { time: 138, jp: "[wave]僕達の千年の恋は", tr: "我們之間漫長的戀愛", pic: "wave_rl" },
-      { time: 141.5, jp: "相槌で折れる花のようだ", tr: "就像順勢折斷的花朵一樣", pic: "wave_rl" },
-      { time: 145, jp: "[wave]僕達は千年後もまだ", tr: "漫長的戀愛過後　我們一定也會像現在這樣", pic: "wave_rl" },
-      { time: 149, jp: "同じ様にまってんだ", tr: "一直等待彼此下去的吧", pic: "wave_rl" },
-      { time: 152, jp: "笑っちゃうよね", tr: "真是讓人見笑了", pic: "wave_rl" },
-      { time: 160, jp: [{ text: "[clap] " }, { text: "何年経っても妄想が", tag: "chant" }], tr: "經過許久，希望慢慢變成了妄想" },
-      { time: 161.5, jp: "根を張って", tr: "就像是爭相擴張的樹根" },
-      { time: 163, jp: [{ text: "[clap]" }, { text: "もうこんなに", tag: "chant" }], tr: "已經如此" },
-      { time: 164.5, jp: "溢れ出している", tr: "快要冒出來似的" },
-      { time: 166.5, jp: [{ text: "[clap]願いは", tag: "clap" }], tr: "我的願望" },
-      { time: 168, jp: [{ text: "花が散るほど", tag: "chant" }], tr: "也如花瓣散落那般" },
-      { time: 170, jp: [{ text: "溢れ出していく", tag: "clap" }], tr: "漫天飛舞" },
-      { time: 171.5, jp: "花占う恋歌",                 tr: "這就是花占卜之情歌" },
-      { time: 173.5, jp: [{ text: "[wave]僕達の千年の恋は", tag: "chant" }], tr: "我們之間漫長的戀愛", pic: "wave_rl" },
-      { time: 176, jp: [{ text: "相槌で咲く", tag: "chant" }], tr: "就像爭相盛開", pic: "wave_rl" },
-      { time: 178.5, jp: [{ text: "花のように", tag: "chant" }], tr: "的花朵那般", pic: "wave_rl" },
-      { time: 181, jp: "[wave]僕達は千年後もまだ", tr: "就這樣經過千年之後", pic: "wave_rl" },
-      { time: 183.5, jp: "同じように", tr: "我們仍會像現在一樣", pic: "wave_rl" },
-      { time: 185.5, jp: "[wave]ちぎって", tr: "拾起飄散的花瓣", pic: "wave_rl" },
-      { time: 187, jp: "また笑っていたいよね", tr: "真希望能再次笑著", pic: "wave_rl" },
-      { time: 188.5, jp: [{ text: "[wave]何年経っても妄想が", tag: "chant" }], tr: "經過多年也變成了妄想的希望", pic: "wave_rl" },
-      { time: 190, jp: [{ text: "根を張って", tag: "chant" }], tr: "就像是那頑強擴張的樹根", pic: "wave_rl" },
-      { time: 191.5, jp: [{ text: "[wave]もうこんなに", tag: "chant" }], tr: "已經如此", pic: "wave_rl" },
-      { time: 193, jp: [{ text: "溢れ出している", tag: "chant" }], tr: "快要忍不住冒出來似的", pic: "wave_rl" },
-      { time: 194.5, jp: "[wave]願えば",                 tr: "我的願望啊" , pic: "wave_rl"},
-      { time: 196, jp: [{ text: "[wave]何年経っても妄想が", tag: "chant" }], tr: "經過多年也變成了妄想的希望", pic: "wave_rl" },
-      { time: 197.5, jp: [{ text: "根を張って", tag: "chant" }], tr: "就像是那頑強擴張的樹根", pic: "wave_rl" },
-      { time: 198.5, jp: [{ text: "[wave]もうこんなに", tag: "chant" }], tr: "已經如此", pic: "wave_rl" },
-      { time: 200, jp: [{ text: "溢れ出していく", tag: "chant" }], tr: "不斷滿溢而出", pic: "wave_rl" },
-
-
-    ],
-  },
-  {
-    id: "Yobigoe",
-    title: "呼喚聲 (呼び声)",
-    translationCredit: "藍色小樹熊",
-    translationCreditUrl: "https://bluekokomurmur.com/lyrics/vaundy-yobigoe/",
-    translationSourceUrl: "https://bluekokomurmur.com/lyrics/vaundy-yobigoe/",
-    youtubeId: "CI2x2aSi8aI",
-    lyrics: [
-      { time: 1, jp: [{ text: "[clap]この惑星の真ん中で", tag: "clap" }],                 tr: "在這顆星球的正中央" },
-      { time: 8.5, jp: [{ text: "[clap]時折り描いた暗闇照らす何か", tag: "clap" }],                 tr: "偶爾描繪出的　是照亮黑暗的某種存在" },
-      { time: 12.5, jp: [{ text: "[clap]この部屋を立ち籠めている何か", tag: "clap" }],                 tr: "瀰漫在這房間裡的某種氣息" },
-      { time: 17, jp: [{ text: "[clap]それは紅色の記憶のような", tag: "chant" }],                tr: "彷彿是深紅色的記憶" },
-      { time: 24.5, jp: [{ text: "[clap]空いた穴を埋めていくような何か", tag: "clap" }],                tr: "像是要填補空洞般的某種存在" },
-      { time: 28.5, jp: [{ text: "[clap]天井のしみ無数の何か", tag: "clap" }],                 tr: "天花板上的汙漬　無數個說不清的「什麼」" },
-      { time: 32.5, jp: [{ text: "[wave]「この夢が覚めたら」", tag: "chant" }],                tr: "「如果這個夢醒來了」" },
-      { time: 36, jp: "[wave]逃げ出してしまうかこのまま",                tr: "我會不會就這樣逃走　就這樣逃走" },
-      { time: 41, jp: [{ text: "[wave]「この夢が覚めたら」", tag: "chant" }],                tr: "「如果這個夢醒來了」" },
-      { time: 44.5, jp: "[wave]寂しくなるよだからいつまでも",                tr: "一定會變得很寂寞　所以想讓它永遠延續下去" },
-      { time: 49, jp: [{ text: "今 チェンジ", tag: "chant" }],                tr: "此刻 Change" },
-      { time: 50.5, jp: [{ text: "[wave]どんな夜も" }, { text: "輝いて", tag: "chant" }, { text: "消" }],                tr: "Change　無論是怎樣的夜" },
-      { time: 54.5, jp: [{ text: "[wave]えないものに 手を伸ばして", tag: "chant" }],                tr: "都要伸手去觸碰那閃耀且不會熄滅的光" },
-      { time: 58.5, jp: "[wave]僕らまだ不確かな未来歌えるよ",                tr: "我們仍能為那尚未確定的未來歌唱" },
-      { time: 63.5, jp: [{ text: "チェンジ", tag: "chant" }],                tr: "Change" },
-      { time: 64.5, jp: [{ text: "[wave]どんな日々も" }, { text: "輝いて", tag: "chant" }],                tr: "Change　無論是怎樣的日子" },
-      { time: 68, jp: [{ text: "[wave]消えてくものさ、手を伸ばして", tag: "chant" }],                tr: "發光的事物終會消散　所以伸出手吧"  },
-      { time: 72.5, jp: "[wave]僕らまだ不確かな未来歌えるよ",                tr: "我們仍能為那尚未確定的未來歌唱" },
-      { time: 75, jp: [{ text: "チェンジ", tag: "chant" }],                tr: "Change" },
-      { time: 78.5, jp: [{ text: "[wave]ほら待ってるよ 「" }, { text: "今チェンジ", tag: "chant" }, { text: "」" }],                 tr: "看吧，我們正在等待「現在就改變」"  },
-      { time: 91.5, jp: [{ text: "[clap]この惑星の真ん中で", tag: "clap" }],                 tr: "在這顆星球的正中央" },
-      { time: 98.5, jp: [{ text: "[clap]差し詰め、希望に似た溢れる何か", tag: "clap" }],                 tr: "此刻湧現的　像是希望般的某種東西"  },
-      { time: 103, jp: [{ text: "[clap]余さず描いた立ち籠めていた何か", tag: "clap" }],                 tr: "毫不保留地描繪出曾瀰漫其中的某種存在" },
-      { time: 107, jp: [{ text: "[clap]まだ紅色幕開け前か", tag: "chant" }],                tr: "仍舊是深紅色　是開幕前的序曲嗎" },
-      { time: 115, jp: [{ text: "[clap]隙間風たどりここまで来ていた", tag: "clap" }],                 tr: "循著縫隙的風一路來到這裡" },
-      { time: 118.5, jp: [{ text: "[clap]明白だが、まだ知らない何か", tag: "clap" }],                 tr: "明明清晰　卻仍是尚未真正認識的某種存在" },
-      { time: 122.5, jp: "[wave]これじゃ 不安だらけ勘違いだらけ",                 tr: "這樣下去　滿是焦慮　滿是誤解" },
-      { time: 127.5, jp: "[wave]独りよがりじゃないか",                 tr: "不就是自作多情嗎"},
-      { time: 130.5, jp: "[wave]でも 震えてる",                 tr: "可是　顫抖的聲音" },
-      { time: 133.5, jp: "[wave]声武者震いは「今チェンジ」",                 tr: "那並不是恐懼　而是上場前的戰慄　「現在就改變」"},
-      { time: 136, jp: "[wave]このままこの続きを",                 tr: "就這樣　繼續走向接下來的篇章" },
-      { time: 139, jp: [{ text: "今 チェンジ", tag: "chant" }],                 tr: "此刻 Change" },
-      { time: 140, jp: [{ text: "[wave]どんな夜も輝いて", tag: "chant" }],                 tr: "Change　無論是怎樣的夜" },
-      { time: 144, jp: [{ text: "[wave]消えないものに手を伸ばして", tag: "chant" }],                 tr: "都要伸手去觸碰那閃耀且不會熄滅的光" },
-      { time: 148, jp: "[wave]僕らまだ不確かな未来歌えるよ",                 tr: "我們仍能為那尚未確定的未來歌唱" },
-      { time: 153.5, jp: [{ text: "チェンジ", tag: "chant" }],                 tr: "Change" },
-      { time: 166.5, jp: [{ text: "[wave]「この夢が覚めたら」", tag: "chant" }],                tr: "「當這個夢醒來時」" },
-      { time: 170.5, jp: "[wave]呼び声はもう覚えた",                tr: "那呼喚的聲音我已牢牢記住了" },
-      { time: 175, jp: [{ text: "[wave]「この夢が覚めたら」", tag: "chant" }],                tr: "「當這個夢醒來時」" },
-      { time: 178.5, jp: "[wave]呼び声はもう覚えた",                tr: "我會再次歌唱" },
-      { time: 181.5, jp: [{ text: "今 チェンジ x 4", tag: "chant" }],                tr: "Change ×4" },
-      { time: 184, jp: [{ text: "[clap]どんな夜も輝いて", tag: "chant" }],                 tr: "Change　無論是怎樣的夜" },
-      { time: 188, jp: [{ text: "[clap]消えないものに手を伸ばして", tag: "chant" }],                 tr: "都要伸手去觸碰那閃耀且不會熄滅的光" },
-      { time: 192, jp: [{ text: "[clap]僕ら今確かに、見上げているはず", tag: "clap" }],                 tr: "此刻的我們　確實正仰望著前方" },
-      { time: 197, jp: [{ text: "[wave]今 " }, { text: "チェンジ", tag: "chant" }, { text: "どんな時も" }, { text: "輝いて", tag: "chant" }],                 tr: "此刻　Change　無論什麼時候" },
-      { time: 202.5, jp: [{ text: "[wave]消えないものに手を", tag: "chant" }],                 tr: "都要伸手去觸碰那閃耀且不會熄滅的光" },
-      { time: 206.5, jp: "[wave]伸ばして僕ら今確かに、未来歌えるよ",                 tr: "此刻的我們　確實能歌唱未來" },
-      { time: 211.5, jp: [{ text: "チェンジ", tag: "chant" }],                 tr: "Change" },
-      { time: 212, jp: "[wave]どんな夜も Ah~",                 tr: "無論怎樣的夜 Ah~" },
-      { time: 218.5, jp: [{ text: "今チェンジ x 5", tag: "chant" }],                 tr: "Change ×5" },
-
-
-    ],
-  },
-  {
-    id: "Tomoshibi",
-    title: "燈火 (灯火)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "nrLZ-vTiQa4",
-    lyrics: [
-      { time: 10, jp: [{ text: "[clap]単調な足音にメロディーを乗せたら", tag: "clap" }],                 tr: "要是能在單調的腳步聲中　乘上旋律的話" },
-      { time: 19, jp: [{ text: "[clap]感情が淘汰してく自尊心と僕の悲哀を", tag: "clap" }],                 tr: "感情將會慢慢淘汰　自尊心與我的悲哀" },
-      { time: 27.5, jp: [{ text: "[clap]見えない見えないものを見えてる見えてる「本当」に", tag: "clap" }],                 tr: "將看不見的看不見的事物　放在看得見的看得見的「真實」裡" },
-      { time: 32, jp: [{ text: "[clap]見えない見えない本当を見えてる見えてる感動に", tag: "clap" }],                 tr: "將看不見的看不見的真實　放在看得見的看得見的感動裡" },
-      { time: 36, jp: [{ text: "[clap]探した僕の運命と揺るぎない世界の歌", tag: "clap" }],                 tr: "尋找的我的命運和　穩固的世界之歌" },
-      { time: 40, jp: [{ text: "[clap]そんな場所に僕たちはいつまでも生きている", tag: "clap" }],                 tr: "我們無論何時都在這種地方裡　活著" },
-      { time: 44.5, jp: [{ text: "[clap]交わした天の約束を裏切られたとしても", tag: "clap" }],                 tr: "即使背叛了　交換的命運約定" },
-      { time: 49, jp: [{ text: "[clap]そんなことに僕たちは気付かずに生きていくだけだけ", tag: "clap" }],                 tr: "我們也僅僅只是沒有注意到那種事　而活下去而已" },
-      { time: 63, jp: [{ text: "[clap]完璧な理想郷など僕らにはあり得はしないから", tag: "clap" }],                 tr: "完美的理想鄉之類的　對我們來說根本不可能存在啊" },
-      { time: 71, jp: [{ text: "[clap]見えない見えないものを見えてる見えてる「本当」に", tag: "clap" }],                 tr: "將看不見的看不見的事物　放在看得見的看得見的「真實」裡" },
-      { time: 75.5, jp: [{ text: "[clap]見えない見えない本当を見えてる見えてる感動に", tag: "clap" }],                 tr: "將看不見的看不見的真實　放在看得見的看得見的感動裡" },
-      { time: 79.5, jp: [{ text: "[clap]探した僕の運命と揺るぎない世界の歌", tag: "clap" }],                 tr: "尋找的我的命運和　穩固的世界之歌" },
-      { time: 83.5, jp: [{ text: "[clap]そんな場所に僕たちはいつまでも生きている", tag: "clap" }],                 tr: "我們無論何時都在這種地方裡　活著" },
-      { time: 88, jp: [{ text: "[clap]交わした天の約束を裏切られたとしても", tag: "clap" }],                 tr: "即使背叛了　交換的命運約定" },
-      { time: 92, jp: [{ text: "[clap]そんなことに僕たちは気付かずに生きていくだけ", tag: "clap" }],                 tr: "我們也僅僅只是沒有注意到那種事　而活下去而已" },
-      { time: 105.5, jp: [{ text: "[clap]揺るぎないね僕たちは何度も声を上げて", tag: "clap" }],                 tr: "不會動搖呢 我們　好幾次提高聲量" },
-      { time: 110, jp: [{ text: "[clap]ありもしない滑走路羽を広げ走る", tag: "clap" }],                 tr: "不可能存在的跑道　張開翅膀奔跑著" },
-      { time: 114.5, jp: [{ text: "[clap]揺るぎはしないよ僕たちは何度も声を上げて", tag: "clap" }],                 tr: "不會動搖啊 我們　好幾次提高聲量" },
-      { time: 118.5, jp: [{ text: "[clap]何度も声を上げて何度も声を上げて", tag: "clap" }],                 tr: "好幾次提高聲量" },
-      { time: 121, jp: [{ text: "ねぇ", tag: "chant" }],                 tr: "吶" },
-      { time: 123.5, jp: "[wave]どうしようどこへ行こうか僕が今惨憺と声に出して",                 tr: "怎麼辦　該去哪裡呢　我此刻悲慘地發出聲音" },
-      { time: 131, jp: [{ text: "[wave]また見えない地図を僕は必死に探して歩いている", tag: "chant" }],                 tr: "我拼命地尋找著　再次看不見的地圖而行走著" },
-      { time: 140, jp: [{ text: "[wave]けどまだ", tag: "chant" }],                 tr: "但是仍然" },
-      { time: 142, jp: "どうしようここにいようか",                 tr: "怎麼辦　待在這裡吧" },
-      { time: 144, jp: "[wave]いつかまた目が見え始めるまで",                 tr: "直到總有一天眼睛再次能夠看見為止" },
-      { time: 148.5, jp: "[wave]まだ見えない未来を僕ら灯火で照らしていくから",                 tr: "我們將會　用燈火照亮　依舊看不見的未來" },
-      { time: 158, jp: [{ text: "[wave]探した僕の運命と揺るぎない世界の歌", tag: "chant" }],                 tr: "尋找的我的命運和　穩固的世界之歌" },
-      { time: 162, jp: [{ text: "[wave]そんな場所に僕たちはいつまでも生きている", tag: "chant" }],                 tr: "我們無論何時都在這種地方裡　活著" },
-      { time: 166.5, jp: [{ text: "[wave]交わした天の約束を裏切られたとしても", tag: "chant" }],                 tr: "即使背叛了　交換的命運約定" },
-      { time: 171, jp: [{ text: "[wave]そんなことに僕たちは気付かずに生きていくだけ", tag: "chant" }],                 tr: "我們也僅僅只是沒有注意到那種事　而活下去而已" },
-
-    ],
-  },
-  {
-    id: "HowdoIknow'",
-    title: "我怎麼會知道呢 (僕にはどうしてわかるんだろう)",
-    translationCredit: "藍色小樹熊",
-    translationCreditUrl: "https://bluekokomurmur.com/lyrics/vaundy-boku-niwa-doshite-wakarundarou/",
-    translationSourceUrl: "https://bluekokomurmur.com/lyrics/vaundy-boku-niwa-doshite-wakarundarou/",
-    youtubeId: "x4aWXNWPrtY",
-    lyrics: [
-      { time: 28, jp: "今晩は降りる駅を変え僕の心に咲いていた",                 tr: "今晚我換了車站下車" },
-      { time: 34, jp: "小さなプライドの行方を探したずっと気づけなかったんだ",                 tr: "尋找那在我心中綻放的小小自尊的去向　我一直沒察覺到" },
-      { time: 43, jp: "僕の心がどうにもあの聴きなれたリリックで",                 tr: "我的心不知為何　在聽見那熟悉的歌詞時" },
-      { time: 48, jp: "涙を流し出すまで今どうにか言い訳探して",                 tr: "忍不住流下了眼淚　現在我試圖尋找藉口" },
-      { time: 58.5, jp: "目をそらしてみようがきっと僕以上に",                 tr: "嘗試移開視線　但我知道　比起現在的我、過去的我、甚至比我更" },
-      { time: 64.5, jp: "僕以前に僕よりも僕のことつくってる",                 tr: "深刻地塑造著我" },
-      { time: 75, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 80, jp: "[wave]迷える日々がこれとない味のエッセイ",                 tr: "那些迷惘的日子　就像一篇別具風味的散文" },
-      { time: 87, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 91.5, jp: "[wave]挫折の日々は色づくため全部モノクロ",                 tr: "那些挫折的日子是為了染上色彩　而一切最初都是黑白的" },
-      { time: 102, jp: "今晩は歩く道を変え僕の心に撒いていた",                 tr: "今晚我改變了走的道路" },
-      { time: 108, jp: "小さなプライドの香りを辿ったが",                 tr: "沿著我心中灑下的小小自尊的香氣走去" },
-      { time: 113.5, jp: "時は真夏荒天と海神蒼炎際立つ",                 tr: "那時是盛夏　狂風暴雨與海神交會　湛藍火焰分外鮮明" },
-      { time: 117.5, jp: "骨相青に溶けモノクロは焦シアン蒼白へ",                 tr: "骨骼的輪廓融入青色之中　黑白逐漸焦灼成蒼藍與蒼白" },
-      { time: 122.5, jp: "言葉足らずでいつも見失うの",                 tr: "總是因為言語不足而迷失方向" },
-      { time: 127, jp: "悲しみは言い訳の数で目を閉ざしてみようが",                 tr: "即使試著閉上雙眼　用無數的藉口掩飾悲傷　但始終──" },
-      { time: 136, jp: "ずっと僕以上に 僕以前に 僕よりも",                 tr: "比起現在的我、過去的我、甚至比我更" },
-      { time: 141.5, jp: "僕のことつくってるまぶたに映った映画",                 tr: "深刻地塑造著我　映照在我眼簾上的電影" },
-      { time: 149, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 154, jp: "[wave]全てのことが走馬灯、胸に残っている",                 tr: "所有的一切　像走馬燈般在胸口留下痕跡" },
-      { time: 161, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 166, jp: "[wave]全てのことが色で満ちていたモノクロ",                 tr: "所有的一切　原本單調的黑白　早已充滿色彩" },
-      { time: 185.5, jp: "あの港から光を手繰ってここまで来たんだ",                 tr: "從那港口拉住一道光　我就這樣走到了這裡" },
-      { time: 195, jp: "じっと鼓動を聞いていた",                 tr: "靜靜地　聆聽著心跳" },
-      { time: 199, jp: "「僕たちは、翡翠の軌跡を生きている」",                 tr: "「我們正在活在翡翠色的軌跡上」" },
-      { time: 208, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 213.5, jp: "[wave]全てのことが走馬灯、胸に残っている",                 tr: "所有的一切　就像走馬燈般在胸口留下痕跡" },
-      { time: 220, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 225, jp: "[wave]全てのことがまるで明くる前のよう",                 tr: "所有的一切　就像天亮前的那一刻" },
-      { time: 232, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 237, jp: "[wave]全ての日々がこれとない味のエッセイ",                 tr: "所有的日子　都是獨一無二風味的散文" },
-      { time: 244, jp: [{ text: "[wave]僕にはどうしてわかるんだろう", tag: "chant" }],                 tr: "到底是怎麼明白的呢" },
-      { time: 249, jp: "[wave]全ての景色が思い出すためのモノクロ",                 tr: "所有的景色　原來都是為了讓我回想的黑白畫面" },
-
-
-    ],
-  },
-  {
-    id: "Shiwaawase'",
-    title: "皺褶相合 (しわあわせ)",
-    youtubeId: "JwmGruvGt_I",
-    lyrics: [
-      { time: 35, jp: "僕の時価総額400円の心臓と",                 tr: "心臟科，市值400日圓" },
-      { time: 41, jp: "絵に描いたような君の綺麗な心臓を",                 tr: "你美麗如畫的心" },
-      { time: 48, jp: "合わせてできたしわの数が僕達の未来の価値だ",                 tr: "皺紋的總數是我們未來的價值" },
-      { time: 59, jp: "残された時間が少ないのなら",                 tr: "如果剩下的時間不多" },
-      { time: 62, jp: "崩れてく時間が増えてくのなら零さないようにあわせて",                 tr: "如果折疊時間增加，請進行調整，以免溢出。" },
-      { time: 71, jp: "変わらない 変われないよ 僕ら今もしっかり握っている",                 tr: "它不會改變，它不會改變，我們仍然牢牢掌握在手中" },
-      { time: 83, jp: "ちぎれない ちぎらないよ 僕ら今もしっかり繋いでる手",                 tr: "它不能被撕裂，不能被撕裂，我們仍然堅定地握住它。" },
-      { time: 107.5, jp: "僕の一生分なり続けている心拍と",                 tr: "我終生的心跳" },
-      { time: 113, jp: "透き通るような君の綺麗な一拍を",                 tr: "你美麗的心跳就像你肚子裡的反射" },
-      { time: 120, jp: "合わせてできた波の数だけ僕達は揺らめきあってた",                 tr: "我們被聚集在一起的波浪數量所震撼" },
-      { time: 131, jp: "過ぎていく時が早すぎるのなら",                 tr: "出行太快了嗎？" },
-      { time: 134, jp: "有り余る隙間が悲しいのなら零さないようにあわせて",                 tr: "如果你對剩餘的時間感到難過，請小心不要灑出來。" },
-      { time: 143, jp: "変わらない 変われないよ 僕ら今もしっかり握っている",                 tr: "它不會改變，它不會改變，我們仍然牢牢掌握在手中" },
-      { time: 154.5, jp: "ちぎれない ちぎらないよ 僕ら今もしっかり繋いでる",                 tr: "它不能被撕裂，不能被撕裂，所以我們仍然緊緊抓住" },
-      { time: 167, jp: [{ text: "重なるひびを僕達は流るるひびも僕達は", tag: "chant" }],                 tr: "重疊的日子是流動的日子，我們" },
-      { time: 173.5, jp: [{ text: "思い出すこともなくなって", tag: "chant" }],                 tr: "我沒有什麼好想的。" },
-      { time: 176, jp: [{ text: "しまうんだろう しまうんだろうって", tag: "chant" }],                 tr: "我會消滅它，我會消滅它" },
-      { time: 179, jp: [{ text: "重なるひびを僕達は流るるひびも僕達は", tag: "chant" }],                 tr: "重疊的日子是流動的日子，我們" },
-      { time: 185, jp: [{ text: "思い出すこともなくなってそんな しわあわせで", tag: "chant" }],                 tr: "沒什麼好想的，所以我把皺紋和幸福搭配起來" },
-      { time: 192.5, jp: "変わらない 変われないよ 僕ら今もしっかり握っている",                 tr: "它不會改變，它不會改變，我們仍然牢牢掌握在手中" },
-      { time: 204.5, jp: "ちぎれない ちぎらないよ 僕ら今もしっかり繋いでる手",                 tr: "它不能被撕裂，不能被撕裂，我們仍然堅定地握住它。" },
-      { time: 218, jp: "溢れ出す願い込めて僕らは",                 tr: "懷著滿滿的願望，我們" },
-      { time: 223.5, jp: "今から君の見てる方へと",                 tr: "從今往後，朝著你所在的方向" },
-      { time: 229, jp: "やるせない夢が覚めた頃に",                 tr: "從悲傷的夢中醒來時" },
-      { time: 236, jp: "また しわをあわせて",                 tr: "再次起皺。" },
-      { time: 241, jp: [{ text: "重なるひびを僕達は流るるひびも僕達は", tag: "chant" }], },
-      { time: 246, jp: [{ text: "思い出すこともなくなって しまうんだろう しまうんだろうって", tag: "chant" }], },
-      { time: 252.5, jp: [{ text: "重なるひびを僕達は流るるひびも僕達は", tag: "chant" }], },
-      { time: 258.5, jp: [{ text: "思い出すこともなくなって しまうんだろう しまうんだろうって", tag: "chant" }], },
-      { time: 264.5, jp: [{ text: "重なるひびを僕達は流るるひびも僕達は", tag: "chant" }], },
-      { time: 270.5, jp: [{ text: "思い出すこともなくなって しまうんだろう しまうんだろうって", tag: "chant" }], },
-
-
-    ],
-  },
-  {
-    id: "Homunculus",
-    title: "人造小人 (ホムンクルス)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "ZhUa0CumyxQ",
-    lyrics: [
-      { time: 8, jp: [{ text: "[wave]Oh-yeah, yeah-yeah-yeah x 3", tag: "chant" }], },
-      { time: 27, jp: [{ text: "[wave]ホムンクルス!", tag: "chant" }], },
-      { time: 46, jp: [{ text: "[clap]せっかくだからそうね、肩でも揉んでダーリン", tag: "clap" }],                 tr: "「既然這是一個難得的機會、便來給我按摩肩膀吧 親愛的」" },
-      { time: 52, jp: [{ text: "[clap]小さくても次第にグツグツ煮立って終いにゃ それを鼓舞する", tag: "clap" }],                 tr: "即使微不足道 那東西也會逐漸沸騰並在最終　激勵人心" },
-      { time: 59, jp: [{ text: "[wave]イチ・ニー・サン起爆上等Alright", tag: "chant" }],                 tr: "一、二、三、準備引爆 alright" },
-      { time: 62.5, jp: [{ text: "[wave]ヨン で開幕起爆、解放万歳", tag: "chant" }],                 tr: "隨著 四的到來、開始爆炸、解放萬歲" },
-      { time: 65.5, jp: [{ text: "[wave]サン・ニー・イチ・ハイ‼ 起爆、障壁崩壊", tag: "chant" }],                 tr: "三、二、一、好的、開始爆炸、障礙崩壞" },
-      { time: 68.5, jp: "[wave]行くぜ喝采気は満ちた",                 tr: "向前進吧喝采、幹勁滿滿" },
-      { time: 70.5, jp: "あれは",                 tr: "那是" },
-      { time: 72, jp: [{ text: "ホムンクルス!", tag: "chant" }],                 tr: "荷姆克魯斯" },
-      { time: 73, jp: "[wave]目覚めたる不穏に晴れ、濁す不確かの到来",                 tr: "覺醒於動盪之中　清澈、混濁　不確定性的到來" },
-      { time: 77, jp: [{ text: "ホムンクルス!", tag: "chant" }],                 tr: "荷姆克魯斯" },
-      { time: 79, jp: "[wave]風の目の方に歩き出す脱、言念、且つ自暴論",                 tr: "邁步前往　風眼的方向 擺脫、虛無主義、還有自爆言論Zaporozhye （ Zaporozhye ） Ron " },
-      { time: 85, jp: [{ text: "[wave]Oh-oh, Oh-oh, Oh-oh Oh-yeah, yeah-yeah-yeah", tag: "chant" }], },
-      { time: 96, jp: [{ text: "[clap]ギリ奪取いきりたつ一時run away", tag: "clap" }],                 tr: "勉強抓住 興奮起來 瞬間 run away" },
-      { time: 99, jp: [{ text: "[clap]今肩でも揉むよダーリン", tag: "clap" }],                 tr: "現在我會為你按摩肩膀啊 親愛的" },
-      { time: 102, jp: [{ text: "[clap]ニキビ Flash迷走→帰結無事誤解のway", tag: "clap" }],                 tr: "青春痘 flash 迷航 歸結　誤解了道路 way" },
-      { time: 105.5, jp: [{ text: "[clap]feeling 脱線 but まだこんなんじゃ懲りない", tag: "clap" }],                 tr: "Feeling 脫離常軌 but 這樣依舊學不到任何教訓" },
-      { time: 109.5, jp: [{ text: "[wave]イチ・ニー・サン起爆上等Alright", tag: "chant" }],                 tr: "一、二、三、準備引爆 alright" },
-      { time: 112.5, jp: [{ text: "[wave]ヨン で開幕起爆、解放万歳", tag: "chant" }],                 tr: "隨著 四的到來、開始爆炸、解放萬歲" },
-      { time: 115.5, jp: [{ text: "[wave]サン・ニー・イチ・ハイ‼ 起爆、障壁崩壊", tag: "chant" }],                 tr: "三、二、一、好的、開始爆炸、障礙崩壞" },
-      { time: 119, jp: "[wave]行くぜ喝采俺が来た",                 tr: "向前進吧喝采 我來了" },
-      { time: 120.5, jp: "これが",                 tr: "這就是" },
-      { time: 122, jp: [{ text: "ホムンクルス!", tag: "chant" }],                 tr: "荷姆克魯斯" },
-      { time: 123, jp: "[wave]目覚めたる不穏に晴れ、濁す不確かの到来",                 tr: "覺醒於動盪之中　清澈、混濁　不確定性的到來" },
-      { time: 127, jp: [{ text: "ホムンクルス!", tag: "chant" }],                 tr: "荷姆克魯斯" },
-      { time: 129, jp: "[clap]風の目の方に歩き出す脱、言念、且つ自暴論",                 tr: "邁步前往　風眼的方向 擺脫、虛無主義、還有自爆言論Zaporozhye （ Zaporozhye ） Ron" },
-      { time: 146.5, jp: [{ text: "[clap]どうして心満たして振り払おうとしているんだろう", tag: "clap" }],                 tr: "為什麼你正在打算滿足內心　並將其抖落呢" },
-      { time: 155, jp: [{ text: "[clap]ねぇ痛いでしょて、参ってしまうほど", tag: "clap" }],                 tr: "吶 這很痛苦對吧　話說、我深愛著你到" },
-      { time: 161, jp: "[wave]あなたを愛してしまったって、このままが美しいと",                 tr: "讓人就此投降的地步　話說、就這麼" },
-      { time: 170, jp: "[wave]飾ったままで、言霊をもう一度希望抱くほどの未来",                 tr: "裝飾起美麗吧　因次、再一次施展出言靈吧　我看見了懷抱著希望的未來" },
-      { time: 179.5, jp: "[wave]そこに見たんだよ",                 tr: "就在那裡啊" },
-      { time: 181.5, jp: [{ text: "[wave]確かめ合うかより", tag: "chant" }],                 tr: "比起確認彼此" },
-      { time: 183.5, jp: "大切で",                 tr: "還要重要" },
-      { time: 187.5, jp: [{ text: "[wave]思い合えるより", tag: "chant" }],                 tr: "比起能想法一致" },
-      { time: 189, jp: "温かくて",                 tr: "還要溫暖" },
-      { time: 190.5, jp: [{ text: "[wave]振り剥がせるかより", tag: "chant" }],                 tr: "比起是否能掙脫" },
-      { time: 193, jp: "愚かに、浸ってしまうほど",                 tr: "愚蠢到、沉浸其中的地步" },
-      { time: 196.5, jp: [{ text: "[wave]時に歩み合うかより", tag: "chant" }],                 tr: "時而 彼此一同邁開步伐" },
-      { time: 198, jp: "大切で",                 tr: "還要重要" },
-      { time: 200, jp: [{ text: "[wave]抱きしめ合えるより", tag: "chant" }],                 tr: "比起能緊緊擁抱彼此" },
-      { time: 203, jp: "温かく思う未来を見たいんだよ",                 tr: "還要溫暖　我想看看我所思念的未來啊" },
-      { time: 209, jp: [{ text: "[wave]Oh-yeah, yeah-yeah-yeah x 3", tag: "chant" }], },
-      { time: 227.5, jp: [{ text: "[wave]ホムンクルス!", tag: "chant" }], },
-
-    ],
-  },
-  {
-    id: "soramimi",
-    title: "soramimi",
-    youtubeId: "Jh_0EW6G3gQ",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 16.5, jp: [{ text: "[clap]今日も愉快だね叶えたい想像に塞いだ目", tag: "chant" }],                 tr: "今天也很愉快，眼睛被我想要實現的想像力擋住了" },
-      { time: 20.5, jp: [{ text: "[clap]だいたいそんなもん理不尽がお決まりの世界だもん", tag: "chant" }],                 tr: "有點像這樣，在這個世界裡，荒謬是顯而易見的" },
-      { time: 24.5, jp: [{ text: "[clap]で、まぁいいかな", tag: "chant" }],                 tr: "所以，好吧，我想這沒關係。" },
-      { time: 26, jp: [{ text: "[clap]このくらいがちょうどいいかなって", tag: "clap" }],                 tr: "我在想這會不會很完美" },
-      { time: 28, jp: [{ text: "[clap]自分にも周りの人にもバレないように手を抜いて", tag: "chant" }],                 tr: "為了避免被我和我周圍的人看到" },
-      { time: 39, jp: [{ text: "[clap]今日も愉快だね支えたいと君に伝えた日", tag: "chant" }],                 tr: "今天是一個有趣的日子，我告訴你我想支持你" },
-      { time: 43, jp: [{ text: "[clap]だいたいそんなもん振られるくらいが僕らしいんだもん", tag: "chant" }],                 tr: "有點像這樣，就像我與眾不同" },
-      { time: 46.5, jp: [{ text: "[clap]で、まぁいいから", tag: "chant" }],                 tr: "好吧" },
-      { time: 48, jp: [{ text: "[clap]そのエロい体を貸してくれ", tag: "clap" }],                 tr: "借我那淘氣的身體" },
-      { time: 50, jp: [{ text: "[clap]誰も知らないミッドナイト携帯越しのタッグファイト", tag: "clap" }],                 tr: "半夜在電話之外的標籤戰" },
-      { time: 54, jp: [{ text: "[clap]散々だな後悔はないけど", tag: "chant" }],                 tr: "一團糟，沒有遺憾" },
-      { time: 57.5, jp: [{ text: "[clap]先天的だ過敏なこの衝動", tag: "chant" }],                 tr: "與生俱來，這種敏感的衝動" },
-      { time: 61.5, jp: [{ text: "[clap]珍回答だ僕は気にしないけど", tag: "chant" }],                 tr: "就算答錯了，我也不在乎" },
-      { time: 65, jp: [{ text: "[clap]1発打ったこのビートを鳴らしてよさぁ", tag: "chant" }],                 tr: "讓我們回應一下這一拍" },
-      { time: 70, jp: [{ text: "[wave](jump) Distance This Dance? x 2", tag: "chant" }],  pic: "wave_jump"},
-      { time: 94.5, jp: [{ text: "[clap]今日も愉快だねでも何もかもが不快だね", tag: "chant" }],                 tr: "今天也很愉快，但一切都很不愉快。" },
-      { time: 98, jp: [{ text: "[clap]だいたいそんなもん自己満たちが踊る世界だもん", tag: "chant" }],                 tr: "粗略地說，這是一個自我滿足的人跳舞的世界" },
-      { time: 102, jp: [{ text: "[clap]で、まぁいいかな", tag: "chant" }],                 tr: "所以，好吧，我想這沒關係。" },
-      { time: 103.5, jp: [{ text: "[clap]このくらいがちょうどいいかなって", tag: "clap" }],                 tr: "我在想這會不會很完美" },
-      { time: 105.5, jp: [{ text: "[clap]自分にも周りの人にもバレないように利を振って", tag: "chant" }],                 tr: "為了避免被我和我周圍的人看到" },
-      { time: 116.5, jp: [{ text: "[clap]今日も愉快だね刺さった枯れ木に注いだ火", tag: "chant" }],                 tr: "今天又好玩了，火焰倒在被刺幹的木頭上。" },
-      { time: 120.5, jp: [{ text: "[clap]だいたいこんなもん世間は許しちゃくれやせんよ", tag: "chant" }],                 tr: "世人不會輕易原諒" },
-      { time: 124, jp: [{ text: "[clap]ぁあ、まぁいいからそんなことはどうでもいいからって?", tag: "chant" }],                 tr: "啊，沒關係，因為沒關係，你說呢？" },
-      { time: 128, jp: [{ text: "大炎上 x 5", tag: "chant" }],                 tr: "大火x 5" },
-      { time: 131.5, jp: [{ text: "[clap]散々だな後悔はないけど", tag: "chant" }],                 tr: "一團糟，沒有遺憾" },
-      { time: 135.5, jp: [{ text: "[clap]先天的だ過敏なこの衝動", tag: "chant" }],                 tr: "與生俱來，這種敏感的衝動" },
-      { time: 139, jp: [{ text: "[clap]珍回答だ僕は気にしないけど", tag: "chant" }],                 tr: "就算答錯了，我也不在乎" },
-      { time: 142.5, jp: [{ text: "[clap]1発打ったこのビートを鳴らしてよさぁ", tag: "chant" }],                 tr: "讓我們回應一下這一拍" },
-      { time: 147.5, jp: [{ text: "[wave](jump) Distance This Dance? x 4", tag: "chant" }],  pic: "wave_jump"},
-
-    ],
-  },
-  {
-    id: "TokyoFlash",
-    title: "東京 Flash (東京フラッシュ)",
-    translationCredit: "雨音子",
-    translationCreditUrl: "https://ameotoko1997.blog.fc2.com/blog-entry-375.html",
-    translationSourceUrl: "https://ameotoko1997.blog.fc2.com/blog-entry-375.html",
-    youtubeId: "SIuF37EWaLU",
-    lyrics: [
-      { time: 22.5, jp: "相槌がうまくなったんだ",                 tr: "變得擅長附和他人了呢" },
-      { time: 26, jp: [{ text: "できてるできてる", tag: "chant" }],                 tr: "有辦到嗎？　有辦到嗎？" },
-      { time: 30, jp: "ぁあ、君もうまいね合図なしで攻撃してきたんだ",                 tr: "啊啊、你口才也不賴嘛　沒先約好就一起打了過來" },
-      { time: 37.5, jp: [{ text: "わるくないわるくない", tag: "chant" }],                 tr: "倒還不壞　倒還不壞" },
-      { time: 40, jp: "あぁ、もういいのかい",                 tr: "啊啊、這樣就夠了嗎" },
-      { time: 42, jp: [{ text: "STAYまだここにいてね君の", tag: "chant" }],                 tr: "STAY繼續待在這裡好嗎　你那" },
-      { time: 47, jp: [{ text: "FAKEの笑顔をみせてよみせてよ", tag: "chant" }],                 tr: "FAKE的笑容　就讓我看看嘛　會像" },
-      { time: 52, jp: [{ text: "STAGE4の癌にかかっているみたいかい", tag: "chant" }],                 tr: "STAGE4的癌症患者一樣慘澹嗎？" },
-      { time: 57, jp: [{ text: "AGEごしの性愛者でいいの", tag: "chant" }],                 tr: "AGE年資豐富的性經驗者就夠了" },
-      { time: 63, jp: [{ text: "[wave]東京フラッシュ君の目が覚めたら", tag: "chant" }],                 tr: "東京Flash　要是你醒過來" },
-      { time: 69, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就離開吧　就離開吧" },
-      { time: 72, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 73, jp: [{ text: "[wave]東京フラッシュ君と手を繋いだら", tag: "chant" }],                 tr: "東京Flash　若是牽起你的手" },
-      { time: 79, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就逃走吧　就逃走吧" },
-      { time: 82, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 82.5, jp: [{ text: "[wave]東京フラッシュ", tag: "chant" }],                 tr: "東京Flash" },
-      { time: 103.5, jp: "断崖絶壁で愛していた",                 tr: "曾在險惡絕境中愛過" },
-      { time: 107, jp: [{ text: "できてるできてる", tag: "chant" }],                 tr: "做得好嗎？　做得好嗎？" },
-      { time: 110.5, jp: "あぁ今日も深いね断片的で単純ストーリーだ",                 tr: "啊啊　今天也如此深刻　如今只剩情節單純的些許片段罷了" },
-      { time: 118, jp: [{ text: "わるくないわるくない", tag: "chant" }],                 tr: "倒也不壞　倒也不壞" },
-      { time: 121, jp: "あぁ、もういいよ",                 tr: "啊啊、已經夠了" },
-      { time: 123, jp: [{ text: "STAYまだここにいてね君の", tag: "chant" }],                 tr: "STAY繼續待在這裡好嗎　你那" },
-      { time: 128, jp: [{ text: "FAKEの笑顔をみせてよみせてよ", tag: "chant" }],                 tr: "FAKE的笑容　就讓我看看嘛　會像" },
-      { time: 133, jp: [{ text: "STAGE4の癌にかかっているみたいかい", tag: "chant" }],                 tr: "STAGE4的癌症患者一樣慘澹嗎？" },
-      { time: 137.5, jp: [{ text: "AGEごしの性愛者でいいの", tag: "chant" }],                 tr: "AGE年資豐富的性經驗者就夠了" },
-      { time: 143.5, jp: [{ text: "[wave]東京フラッシュ君の目が覚めたら", tag: "chant" }],                 tr: "東京Flash　要是你醒過來" },
-      { time: 150, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就離開吧　就離開吧" },
-      { time: 153, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 153.5, jp: [{ text: "[wave]東京フラッシュ君と手を繋いだら", tag: "chant" }],                 tr: "東京Flash　若是牽起你的手" },
-      { time: 159.5, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就逃走吧　就逃走吧" },
-      { time: 162, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 163.5, jp: [{ text: "[wave]東京フラッシュ", tag: "chant" }],                 tr: "東京Flash" },
-      { time: 174.5, jp: "もうやめにしようかなんで思うんだあぁでも",                 tr: "也曾想過乾脆就放棄算了　啊啊 可是" },
-      { time: 183.5, jp: "君の笑顔や仕草がまたほらクセになってんだ",                 tr: "你的一顰一笑一舉一動　卻總又讓我上癮" },
-      { time: 195, jp: [{ text: "[wave]東京フラッシュ君の目が覚めたら", tag: "chant" }],                 tr: "東京Flash　要是你醒過來" },
-      { time: 201.5, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就離開吧　就離開吧" },
-      { time: 204, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 205, jp: [{ text: "[wave]東京フラッシュ君と手を繋いだら", tag: "chant" }],                 tr: "東京Flash　若是牽起你的手" },
-      { time: 211, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就逃走吧　就逃走吧" },
-      { time: 214, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 215, jp: [{ text: "[wave]東京フラッシュ君の目が覚めたら", tag: "chant" }],                 tr: "東京Flash　要是你醒過來" },
-      { time: 221, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就離開吧　就離開吧" },
-      { time: 224, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 225, jp: [{ text: "[wave]東京フラッシュ君と手を繋いだら", tag: "chant" }],                 tr: "東京Flash　若是牽起你的手" },
-      { time: 230.5, jp: [{ text: "[wave]どこへ行こうどこへ行こう", tag: "chant" }],                 tr: "就逃走吧　就逃走吧" },
-      { time: 233, jp: "変わらないよ",                 tr: "一切都會和以前一樣" },
-      { time: 234.5, jp: [{ text: "[wave]東京フラッシュ", tag: "chant" }],                 tr: "東京Flash" },
-    ],
-  },
-  {
-    id: "NakiJizo",
-    title: "哭泣地藏 (泣き地蔵)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "XQTM2M5iD_I",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 16, jp: [{ text: "[clap]僕たちは少数の利益のためのピラミッド", tag: "clap" }],                 tr: "我們是為了少數利益而存在的管理層級" },
-      { time: 19.5, jp: [{ text: "[clap]ねぇ感想はあぁ、聞かないよ", tag: "clap" }],                 tr: "吶 你的感想是什麼？　啊啊、我才不會聽呢" },
-      { time: 21.5, jp: [{ text: "[clap]さも幸せかのよなその笑顔", tag: "clap" }],                 tr: "看似幸福的你的笑臉" },
-      { time: 23.5, jp: [{ text: "もう精一杯をもう一回 ねぇ神様もういいだろって", tag: "chant" }],                 tr: "已經再次竭盡全力了　「吶 神明大人 已經夠了吧」" },
-      { time: 27.5, jp: [{ text: "ねぇもう一回を精一杯", tag: "chant" }],                 tr: "已經再次竭盡全力了" },
-      { time: 29.5, jp: "ねぇ苦難と努力の洗脳でしたっけ?",                 tr: "吶 這是苦難與努力的洗腦嗎？" },
-      { time: 39.5, jp: [{ text: "[wave]あぁもう何回目の最後の警告?", tag: "chant" }],                 tr: "啊啊 我受夠了　這是第幾次的最後一次警告？" },
-      { time: 42.5, jp: "[wave]じゃあここらで 祈り繋いどく？",                 tr: "那麼我要先在這裡　連繫起祈禱嗎？" },
-      { time: 44.5, jp: "[wave]感動も何もない自暴自棄の中で",                 tr: "這在毫無感動的自暴自棄之中" },
-      { time: 48.5, jp: "[wave]何回目の愛のお買い得？",                 tr: "是第幾次的便宜賣愛？" },
-      { time: 50.5, jp: "[wave]じゃあここらで 心繋いどく？",                 tr: "那麼我要先在這裡　連繫起內心嗎？" },
-      { time: 52.5, jp: "[wave]感覚が落とした僕は泣き地蔵",                 tr: "遺失感覺的我是哭泣地藏Jijo Bodhisattva" },
-      { time: 58, jp: [{ text: "[clap]あぁ 私たちに流れるこの血は", tag: "clap" }],                 tr: "啊啊　在我們體內流動的這些血" },
-      { time: 60, jp: [{ text: "[clap]惨憺たる日々を彩るためか", tag: "clap" }],                 tr: "是為了點綴悽慘的日子嗎" },
-      { time: 62.5, jp: [{ text: "[clap]たぎり出したこの命の種は", tag: "clap" }],                 tr: "開始激動起來的這顆生命之種" },
-      { time: 64.5, jp: [{ text: "[clap]考えるほどに断崖絶壁だ", tag: "clap" }],                 tr: "越是思考越容易處於極度危險狀態之中" },
-      { time: 66.5, jp: "相容れぬだろうこのままここは",                 tr: "真是格格不入對吧　這樣下去的話這裡" },
-      { time: 70.5, jp: "知らぬ仏より馴染みの地獄で",                 tr: "比起遠親　還不如進鄰的地獄" },
-      { time: 81.5, jp: [{ text: "[wave]あぁもう何回目の最後の警告?", tag: "chant" }],                 tr: "啊啊 我受夠了　這是第幾次的最後一次警告？" },
-      { time: 84.5, jp: "[wave]じゃあここらで 祈り繋いどく？",                 tr: "那麼我要先在這裡　連繫起祈禱嗎？" },
-      { time: 86.5, jp: "[wave]感動も何もない自暴自棄の中で",                 tr: "這在毫無感動的自暴自棄之中" },
-      { time: 90.5, jp: "[wave]何回目の愛のお買い得？",                 tr: "是第幾次的便宜賣愛？" },
-      { time: 92.5, jp: "[wave]じゃあここらで 心繋いどく？",                 tr: "那麼我要先在這裡　連繫起內心嗎？" },
-      { time: 94.5, jp: "[wave]感覚が落とした僕は泣き地蔵",                 tr: "遺失感覺的我是哭泣地藏Jijo Bodhisattva" },
-      { time: 107, jp: "[wave]僕もずっと笑う夢を見ていたい",                 tr: "我也想要永遠　夢見露出微笑的夢" },
-      { time: 115.5, jp: "[wave]でもずっと願うほどの夢じゃなかった気がして",                 tr: "但是我卻覺得　這不是我所期望的夢" },
-      { time: 124.5, jp: [{ text: "[wave]何回目の最後の警告?", tag: "chant" }],                 tr: "這是第幾次的最後一次警告？" },
-      { time: 126.5, jp: [{ text: "[wave]じゃあここらで 祈り繋いどく？", tag: "chant" }],                 tr: "那麼我要先在這裡　連繫起祈禱嗎？" },
-      { time: 128.5, jp: "[wave]感動も何もない自暴自棄の中で",                 tr: "這在毫無感動的自暴自棄之中" },
-      { time: 132.5, jp: [{ text: "[wave]何回目の愛のお買い得？", tag: "chant" }],                 tr: "是第幾次的便宜賣愛？" },
-      { time: 134.5, jp: [{ text: "[wave]じゃあここらで 心繋いどく？", tag: "chant" }],                 tr: "那麼我要先在這裡　連繫起內心嗎？" },
-      { time: 136.5, jp: "[wave]感覚が落とした僕は泣き地蔵",                 tr: "遺失感覺的我是哭泣地藏Jijo Bodhisattva" },
-
-    ],
-  },
-   {
-    id: "napori",
-    title: "napori",
-    youtubeId: "ZeIGVnkYX04",
-    lyrics: [
-      { time: 15, jp: "ろくな音楽もなくてそんなひびをまた2人で",                 tr: "再一次，那些沒有適當音樂的日子" },
-      { time: 23, jp: "僕ら指にラブソングで今夜も二人で歩いてこ",                 tr: "我們今晚帶著一首情歌走路吧" },
-      { time: 30, jp: [{ text: "2人になって 君を待って思い出したんだ思い出したんだ", tag: "chant" }],                 tr: "今晚，我們一起走的時候，有兩個人在等你。" },
-      { time: 36, jp: [{ text: "僕が 大人になって思い出すのは君じゃないかな", tag: "chant" }],                 tr: "我想知道我成年後會不會記得你" },
-      { time: 43.5, jp: [{ text: "あれは縁そっと flight", tag: "chant" }],                 tr: "這是一趟非常輕微的航班" },
-      { time: 47, jp: "僕ら互いの指を絡めあってもう",                 tr: "我們用手指互相纏繞" },
-      { time: 52, jp: [{ text: "Napori ずっといたいよ", tag: "chant" }],                 tr: "Napori我想永遠待在這裡" },
-      { time: 55, jp: "ここで見つめあって互いに安堵する",                 tr: "在這裡看著彼此，讓彼此放心" },
-      { time: 60, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 65, jp: "絡めあっていく",                 tr: "清盤" },
-      { time: 67, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 73, jp: "当然こんな夜にはコーヒーがいいだろ",                 tr: "當然，在這樣的夜晚喝咖啡會很好" },
-      { time: 77.5, jp: "そんな僕の横でハイボールを1口",                 tr: "然後，在我旁邊，咬一口高球" },
-      { time: 81, jp: "もう なんて言うんだろそう君見てると",                 tr: "如果我像我知道該說甚麼一樣看著你" },
-      { time: 85, jp: "酒入ってなくても酔いが回るんだな",                 tr: "你不必喝酒就喝醉了。" },
-      { time: 89, jp: [{ text: "音になって 大人になって思い出したんだ", tag: "chant" }],                 tr: "聲音響起，我成年後回來了。" },
-      { time: 95, jp: [{ text: "君が 大人になって思い出すのは ぼくじゃないかな", tag: "chant" }],                 tr: "我不認為我是你成年後會想到的人" },
-      { time: 102.5, jp: [{ text: "いずれ縁そっと flight", tag: "chant" }],                 tr: "終有一天，緣分會悄悄 flight" },
-      { time: 106, jp: "僕ら互いの指を絡めあってもう",                 tr: "我們用手指互相纏繞" },
-      { time: 111, jp: [{ text: "Napori ずっといたいよ", tag: "chant" }],                 tr: "Napori我想永遠待在這裡" },
-      { time: 114, jp: "ここで見つめあって互いに安堵する",                 tr: "在這裡看著彼此，讓彼此放心" },
-      { time: 119, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 124, jp: "絡めあっていく",                 tr: "清盤" },
-      { time: 126.5, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 149, jp: [{ text: "君と 縁そっと flight", tag: "chant" }],                 tr: "與您共乘一趟非常輕微的航班" },
-      { time: 152.5, jp: "僕ら互いの指を絡めあってもう",                 tr: "我們用手指互相纏繞" },
-      { time: 157, jp: [{ text: "Napori ずっといたいよ", tag: "chant" }],                 tr: "Napori我想永遠待在這裡" },
-      { time: 160, jp: "ここで見つめあって互いに安堵する",                 tr: "在這裡看著彼此，讓彼此放心" },
-      { time: 165, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 170, jp: "絡めあっていく",                 tr: "清盤" },
-      { time: 172.5, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 177.5, jp: "二人はキスをする",                 tr: "你們兩個在接吻" },
-      { time: 180, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-      { time: 185, jp: "絡めあっていく",                 tr: "清盤" },
-      { time: 187, jp: [{ text: "Oh right x 3", tag: "chant" }], },
-    ],
-  },
-  {
-    id: "Backlight",
-    title: "逆光 (逆光)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "RhDxXvn6YaQ",
-    lyrics: [
-      { time: 27.5, jp: [{ text: "[clap]散々な思い出は悲しみを穿つほど", tag: "clap" }],                 tr: "悽慘的回憶就像是穿過悲傷一樣" },
-      { time: 34, jp: [{ text: "[clap]やるせない恨みはアイツのために置いてきたのさ", tag: "clap" }],                 tr: "我為了那傢伙而加無法解悶的怨恨　而置之不理" },
-      { time: 41, jp: [{ text: "[clap]あんたらわかっちゃないだろ", tag: "clap" }],                 tr: "你們並沒有明白" },
-      { time: 42.5, jp: [{ text: "[clap]本当に傷む孤独を今だけ箍外してきて", tag: "clap" }],                 tr: "真正腐敗的孤獨對吧　唯有此刻解開束縛吧" },
-      { time: 46.5, jp: "[wave]怒りよ今悪党ぶっ飛ばしてそりゃあ愛ある罰だ",                 tr: "憤怒啊 在此刻　打飛壞人們吧　那是充滿愛的懲罰啊" },
-      { time: 53.5, jp: [{ text: "[wave]もう眠くは" }, { text: "ないやないやないや", tag: "chant" }],                 tr: "我已經不想睡了啊　不想睡了啊 不想睡了啊" },
-      { time: 56.5, jp: [{ text: "[wave]もう悲しく" }, { text: "ないさないさ", tag: "chant" }],                 tr: "我已經不會感到悲傷了啊　不會了啊" },
-      { time: 59, jp: "[wave]そう 怒りよ今 悪党蹴り飛ばして そりゃあ愛への罰だ",                 tr: "是的　憤怒啊 在此刻　踢飛壞人們吧　那是獻給愛的懲罰啊" },
-      { time: 66.5, jp: [{ text: "[wave]もう眠くは" }, { text: "ないな ないなないな", tag: "chant" }],                 tr: "我已經不想睡了啊　不想睡了啊 不想睡了啊" },
-      { time: 70, jp: [{ text: "[wave]もう悲しく" }, { text: "ないさないさ", tag: "chant" }, { text: " 逆光よ" }],                 tr: "我已經不會感到寂寞了啊　不會了啊　逆光啊" },
-      { time: 87, jp: [{ text: "[clap]惨憺たる結末は美しさを纏うほど", tag: "clap" }],                 tr: "悲慘的結局就像是纏繞起美好一樣" },
-      { time: 93.5, jp: [{ text: "[clap]限りなく、体温に近い 「赤」に彩られていた", tag: "clap" }],                 tr: "不止盡地、靠近體溫　被點綴起了「赤紅」" },
-      { time: 100.5, jp: [{ text: "[clap]散漫な視界でも美しさがわかるほど", tag: "clap" }],                 tr: "就像是即使是那渙散的視野也能明白美好一樣" },
-      { time: 107, jp: [{ text: "[clap]焼き付ける光を背に受ける 「赤」に気を取られている", tag: "clap" }],                 tr: "背對著銘刻於心的光芒　被「赤紅」吸引了注意" },
-      { time: 114.5, jp: [{ text: "[clap]もつれてしまった心は 解っている今でも", tag: "clap" }],                 tr: "即使我在此刻搞清楚了　變得錯綜複雜的內心" },
-      { time: 121, jp: [{ text: "[clap]ほつれてしまった。 言葉が焦っている。", tag: "clap" }],                 tr: "那顆心卻還是綻開了。　話語正著急不已。" },
-      { time: 126, jp: "[wave]怒りよ今悪党ぶっ飛ばしてそりゃあ愛ある罰だ",                 tr: "憤怒啊 在此刻　打飛壞人們吧　那是充滿愛的懲罰啊" },
-      { time: 132.5, jp: [{ text: "[wave]もう眠くは" }, { text: "ないやないやないや", tag: "chant" }],                 tr: "我已經不想睡了啊　不想睡了啊 不想睡了啊" },
-      { time: 136, jp: [{ text: "[wave]もう悲しく" }, { text: "ないさないさ", tag: "chant" }],                 tr: "我已經不會感到悲傷了啊　不會了啊" },
-      { time: 139, jp: "[wave]そう 怒りよ今 悪党蹴り飛ばして そりゃあ愛への罰だ",                 tr: "是的　憤怒啊 在此刻　踢飛壞人們吧　那是獻給愛的懲罰啊" },
-      { time: 146, jp: [{ text: "[wave]もう眠くは" }, { text: "ないな ないなないな", tag: "chant" }],                 tr: "我已經不想睡了啊　不想睡了啊 不想睡了啊" },
-      { time: 149.5, jp: [{ text: "[wave]もう悲しく" }, { text: "ないさないさ", tag: "chant" }, { text: " 逆光よ" }],                 tr: "我已經不會感到寂寞了啊　不會了啊　逆光啊" },
-      { time: 166.5, jp: [{ text: "[clap]もう、怒り願った言葉は 崩れ、へたってしまったが", tag: "clap" }],                 tr: "雖然憤怒地祈願的話語　已經變得分崩離析、精疲力盡" },
-      { time: 173, jp: [{ text: "[clap]今でも未練たらしくしている。あぁ、何度も放った言葉が", tag: "clap" }],                 tr: "但如此卻依舊依依不捨。　「啊啊、如果我好幾次說出的話語" },
-      { time: 183.5, jp: [{ text: "[clap]届き、解っているのなら なんて、夢見が苦しいから", tag: "clap" }],                 tr: "能傳達出去、並能得到理解的話」　做夢真是令人感到痛苦不已呢" },
-      { time: 193.5, jp: "[wave]もう怒りよ今悪党ぶっ飛ばしてそりゃあ愛ある罰だ",                 tr: "憤怒啊 在此刻　打飛壞人們吧　那是充滿愛的懲罰啊" },
-      { time: 200.5, jp: [{ text: "[wave]もう眠くは" }, { text: "ないやないやないや", tag: "chant" }],                 tr: "我已經不想睡了啊　不想睡了啊 不想睡了啊" },
-      { time: 204, jp: [{ text: "[wave]もう悲しく" }, { text: "ないさないさ", tag: "chant" }],                 tr: "我已經不會感到悲傷了啊　不會了啊" },
-      { time: 207, jp: "[wave]そう 怒りよ今 悪党蹴り飛ばして そりゃあ愛への罰だ",                 tr: "是的　憤怒啊 在此刻　踢飛壞人們吧　那是獻給愛的懲罰啊" },
-      { time: 214, jp: [{ text: "[wave]もう眠くは" }, { text: "ないな ないなないな", tag: "chant" }],                 tr: "我已經不想睡了啊　不想睡了啊 不想睡了啊" },
-      { time: 217, jp: [{ text: "[wave]もう悲しく" }, { text: "ないさないさ", tag: "chant" }, { text: " 逆光よ" }],                 tr: "我已經不會感到寂寞了啊　不會了啊　逆光啊" },
-    ],
-  },
-  {
-    id: "NEOJAPAN",
-    title: "NEO JAPAN",
-    youtubeId: "QC6gd_b1nz8",
-    lyrics: [
-      { time: 30, jp: "ある日気づいた、根付いた 岸辺の球根 根回し手回し",                 tr: "我意識到有一天，為根深蒂固的海濱蛋根前話做準備" },
-      { time: 34.5, jp: "足りぬと、税の倍増 を総称は心の保証と",                 tr: "如果還不夠，加倍徵稅的一般名稱是作為心靈的保證。" },
-      { time: 39, jp: "干渉と化した暴行 その日気づいた、ありゃ代打",                 tr: "我意識到在幹擾轉化的攻擊當天，它是一個替代品" },
-      { time: 43.5, jp: "そりゃないなぁ 口回りのいい、いいラッパー",                 tr: "不是一個會用嘴說話的饒舌歌手" },
-      { time: 47, jp: "その角のないリリックに踊らされ",                 tr: "彈奏那些柔和的歌詞" },
-      { time: 49.5, jp: "後はポップなアッパーで煽るだけ",                 tr: "它只是鼓勵你背後有一首令人興奮的流行歌曲。" },
-      { time: 52, jp: "彼の拝んだ未来は 霧がかってないか",                 tr: "他想要的未來是Kiri Kattenaika。" },
-      { time: 59.5, jp: "ちりも積もらないな 気持ちよくなって",                 tr: "完全沒有，我感覺好多了" },
-      { time: 65, jp: "前が見えてないな 世紀末までのらりくらり",                 tr: "我看不到前面，直到本世紀末我還是空的" },
-      { time: 71, jp: [{ text: "きっと彼はアキラが好きなだけ", tag: "chant" }],                 tr: "他一定只是喜歡アキラ而已" },
-      { time: 74.5, jp: "僕らは向かうNEO JAPAN 霧がかりの 薔薇でも大丈夫さ",                 tr: "如果我們走向新的日本霧玫瑰" },
-      { time: 83.5, jp: "Ohふらりふらり 僕らは集うNEO JAPAN",                 tr: "交錯交錯我們聚集在新日本" },
-      { time: 89.5, jp: "言いがかりも ここなら大丈夫さ",                 tr: "如果你是這裡的採集者，沒關係。" },
-      { time: 95.5, jp: [{ text: " ディストピア x 6", tag: "chant" }],                 tr: "反烏託邦x 6" },
-      { time: 107, jp: "否 気づかぬが仏、みな身につけるわ",                 tr: "忽視的否認，但佛陀，都附著在身體上" },
-      { time: 110, jp: "自動で 手掴み、刷り込み、他動作動、Flow",                 tr: "自動手柄印記、其他操作、流動" },
-      { time: 114, jp: "気にせず無能へイカ クセェのが個性で",                 tr: "沒關係，無能，烏賊的氣味是個體的" },
-      { time: 118, jp: "今 妄想厨から逃走中 にでたヴァンパイア",                 tr: "吸血鬼正在逃避妄想" },
-      { time: 123, jp: "もう漫才や 皆Ang Pang Men もう散々だ",                 tr: "現在是喜劇，每個人都是超人，現在一團糟" },
-      { time: 128.5, jp: "まだ足らない そこに財源 おつり合わんね",                 tr: "這還不夠，所以那裡的資金不正確。" },
-      { time: 132.5, jp: "「あぁ、まだ検討中」目立たんね けつ拭き命令",                 tr: "[啊，仍在審核中]我無法脫穎而出過度處理訂單" },
-      { time: 136.5, jp: "「おしりグロいね 「ああ！まだ清掃中」",                 tr: "噁心，啊，還在打掃" },
-      { time: 139.5, jp: "見当たらない 底の最低 数が合わんね 「ああ」",                 tr: "我看不到，底部的地下室數量不符，啊" },
-      { time: 145, jp: "間に合わんね 民衆のサイレン その合図で",                 tr: "我遲到了人們的警笛聲聽到那聲音" },
-      { time: 150.5, jp: "僕らは向かうNEO JAPAN 霧がかりの 薔薇でも大丈夫さ",                 tr: "如果我們走向新的日本霧玫瑰" },
-      { time: 160, jp: "Ohふらりふらり 僕らは集うNEO JAPAN",                 tr: "交錯交錯我們聚集在新日本" },
-      { time: 166, jp: "言いがかりも ここなら大丈夫さ",                 tr: "如果你是這裡的採集者，沒關係。" },
-      { time: 172.5, jp: "彼の拝んだ未来は 霧がかってないか",                 tr: "他想要的未來是Kiri Kattenaika。" },
-      { time: 179, jp: "ちりも積もらないな 気持ちよくなって",                 tr: "完全沒有，我感覺好多了" },
-      { time: 185, jp: "前が見えてないな 世紀末までのらりくらり",                 tr: "我看不到前面，直到本世紀末我還是空的" },
-      { time: 191.5, jp: [{ text: "きっと彼はアキラが好きなだけ", tag: "chant" }],                 tr: "他一定只是喜歡アキラ而已" },
-      { time: 194.5, jp: "僕らは向かうNEO JAPAN 霧がかりの 薔薇でも大丈夫さ",                 tr: "如果我們走向新的日本霧玫瑰" },
-      { time: 204, jp: "Ohふらりふらり 僕らは集うNEO JAPAN",                 tr: "交錯交錯我們聚集在新日本" },
-      { time: 209.5, jp: "言いがかりも ここなら大丈夫さ",                 tr: "如果你是這裡的採集者，沒關係。" },
-      { time: 216, jp: [{ text: "ディストピア x 6", tag: "chant" }],                 tr: "反烏託邦x 6" },
-
-
-    ],
-  },
-  {
-    id: "ZuttoLoveSong",
-    title: "一直都是情歌 (ずっとラブソング)",
-    youtubeId: "wriTi0J_-1A",
-    lyrics: [
-      { time: 14, jp: "いつかこの街ごと 消えてなくなること",                 tr: "總有一天，這整個村莊都會消失" },
-      { time: 20.5, jp: "知ってても 最後まで待てるよ oh...",                 tr: "我知道，但我會等到最後哦" },
-      { time: 27.5, jp: "だけど時折その 凍る心を溶かす口実を",                 tr: "但有時候有一個藉口可以融化那顆冰冷的心" },
-      { time: 36, jp: "考えてみてるよ 「ずっとラブソング」",                 tr: "我在想“情歌”" },
-      { time: 42, jp: "あの日から消えない思い出のメロディと",                 tr: "回憶的旋律不會從那天消失" },
-      { time: 47, jp: "このバラバラに散る言葉を集めて",                 tr: "我會收集這些分散的馬匹" },
-      { time: 51, jp: "やっと飛ばせそうだ",                 tr: "我想我終於可以讓他飛了" },
-      { time: 53, jp: "[wave]だから今夜",                 tr: "所以今晚" },
-      { time: 55, jp: [{ text: "キャトルミューティレイション", tag: "chant" }],                 tr: "Cattle Mutilation" },
-      { time: 56.5, jp: [{ text: "[wave]あなたの心奪う 超Nice", tag: "chant" }],                 tr: "能吸引你注意力的蠟燭不錯" },
-      { time: 60, jp: "[wave]な言葉で紡がれた 希望を",                 tr: " 希望由一個字組成 " },
-      { time: 63.5, jp: [{ text: "[wave]隠さないラブソングがBGMさ", tag: "chant" }],                 tr: "我不隱藏的情歌是BGM" },
-      { time: 67.5, jp: [{ text: "[wave]" }, { text: "キャトルミューティレイション", tag: "chant" }],                 tr: "切割牲畜" },
-      { time: 70, jp: [{ text: "[wave]あなたの心奪う 超Nice", tag: "chant" }],                 tr: "能吸引你注意力的蠟燭不錯" },
-      { time: 73, jp: "[wave]な笑顔で紡がれた 希望を",                 tr: " 由一個微笑組成的希望 " },
-      { time: 76.5, jp: "[wave]隠さないラブソングを 僕に歌ってくれ",                 tr: "唱一首你沒有隱藏的愛情歌曲" },
-      { time: 87, jp: "もしもDopeでFunkyな 隕石が",                 tr: "如果是Dope和Funky的隕石" },
-      { time: 91, jp: "この街に落ちて来るっていう事 君に教えたなら Oh...",                 tr: "如果我告訴你我會掉進這個小鎮" },
-      { time: 100, jp: "それに導入はもうすでに出来ていて",                 tr: "輸入已經放入其中" },
-      { time: 104, jp: "あとは、あなたの心の鼓動に",                 tr: "現在只是隨著你心跳加速" },
-      { time: 109, jp: "合わせていくだけだよ 「ずっとラブソング」",                 tr: "我只是相應地向前邁進，一直都是《情歌》。" },
-      { time: 115, jp: "あの日から消えない 思い出のサンプルと",                 tr: "自那天以來沒有消失的記憶樣本" },
-      { time: 120, jp: "このバラバラに散る愛を集めて",                 tr: "通過收集這分散的愛之角" },
-      { time: 124, jp: "やっと飛ばせそうだ",                 tr: "我想我終於可以讓他飛了" },
-      { time: 127, jp: "怒るのは後にしてくれよBaby",                 tr: "如果你生氣了，待會再做，寶貝。" },
-      { time: 133, jp: "今日は僕の人生で1番の転機なのさ",                 tr: "今天是我人生中最大的轉變" },
-      { time: 140.5, jp: "ここまでの悲しみや苦しみ全部",                 tr: "到目前為止所有的悲傷和痛苦" },
-      { time: 146.5, jp: [{ text: "Oh この瞬間のため 抱きしめるための", tag: "chant" }],                 tr: "擁抱這一刻" },
-      { time: 150, jp: [{ text: "「ずっとラブソング」さ", tag: "chant" }],                 tr: "它一直都是一首情歌。" },
-      { time: 152, jp: "[wave]だから今夜",                 tr: "所以今晚" },
-      { time: 154, jp: [{ text: "キャトルミューティレイション", tag: "chant" }],                 tr: "Cattle Mutilation" },
-      { time: 156, jp: [{ text: "[wave]あなたの心奪う 超Nice", tag: "chant" }],                 tr: "能吸引你注意力的蠟燭不錯" },
-      { time: 160, jp: "[wave]な言葉で紡がれた 希望を",                 tr: " 希望由一個字組成 " },
-      { time: 162.5, jp: [{ text: "[wave]隠さないラブソングがBGMさ", tag: "chant" }],                 tr: "我不隱藏的情歌是BGM" },
-      { time: 167, jp: [{ text: "[wave]" }, { text: "キャトルミューティレイション", tag: "chant" }],                 tr: "切割牲畜" },
-      { time: 169, jp: [{ text: "[wave]あなたの心奪う 超Nice", tag: "chant" }],                 tr: "能吸引你注意力的蠟燭不錯" },
-      { time: 172.5, jp: "[wave]な笑顔で紡がれた 希望を",                 tr: " 由一個微笑組成的希望 " },
-      { time: 176, jp: "[wave]隠さないラブソングを 僕に歌ってくれ",                 tr: "唱一首你沒有隱藏的愛情歌曲" },
-      { time: 183, jp: "oh yeah~ 「ずっとラブソング」~",                 tr: "哦耶~ “一直都是情歌”" },
-
-    ],
-  },
-  {
-    id: "Iseijin'",
-    title: "偉生人 (偉生人)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "aDaWuvpB_Kw",
-    lyrics: [
-      { time: 2, jp: "理想郷探した 誰より早く",                 tr: "尋找著理想國度　比任何人都要快" },
-      { time: 8.5, jp: "間違いなく辿り着くために",                 tr: "只為了能毫無差錯地抵達" },
-      { time: 14, jp: [{ text: "[wave]ha wha wha yeah yeah x 4", tag: "chant" }], },
-      { time: 25, jp: [{ text: "[clap]僕ら昔は灯台の下を探す子供のまま生きてた", tag: "clap" }],                 tr: "過去的我們像是在燈塔底下摸索的孩子般活著" },
-      { time: 30.5, jp: [{ text: "[clap]今もそんなに変わってないみたいだ", tag: "clap" }],                 tr: "現在似乎也沒有太大的改變" },
-      { time: 33, jp: [{ text: "ふふふ", tag: "chant" }],                 tr: "呵呵呵" },
-      { time: 36, jp: [{ text: "[clap]そんな僕らは何千と違う心に穴を開けて生きてた", tag: "clap" }],                 tr: "那樣的我們曾穿透了數千個不同的心靈活了下來" },
-      { time: 42, jp: [{ text: "[clap]実はそんなに変わってないんだって ああそうだ", tag: "clap" }],                 tr: "其實好像也沒有真的改變多少呢　啊啊 是啊" },
-      { time: 47, jp: [{ text: "[wave]" }, { text: "先生", tag: "chant" }, { text: "ここにあるものじゃ" }],                 tr: "老師 僅憑這裡擁有的東西" },
-      { time: 50.5, jp: [{ text: "[wave]" }, { text: "全然", tag: "chant" }, { text: "足りなかったような 悲しみが未来を" }],                 tr: "似乎完全不夠用啊　悲傷正逐步構築著" },
-      { time: 56.5, jp: [{ text: "[wave]そう、作っているって", tag: "chant" }],                 tr: "沒錯、建構著未來" },
-      { time: 59, jp: [{ text: "[wave]" }, { text: "先生", tag: "chant" }, { text: "ここにあるものじゃ" }],                 tr: "老師 僅憑這裡擁有的東西" },
-      { time: 61.5, jp: [{ text: "[wave]" }, { text: "全然", tag: "chant" }, { text: "足りなかったような 愛しさと未来を" }],                 tr: "似乎完全不夠用啊　帶上這份眷戀與未來" },
-      { time: 67.5, jp: [{ text: "[wave]もう、笑っていこうぜ", tag: "chant" }],                 tr: "我們、就笑著向前走吧" },
-      { time: 70.5, jp: "[clap]子供の頃は世界を守って精一杯 ただ、めいっぱいだった",                 tr: "小時候 光是守護自己的世界就已竭盡全力　就只是、拼盡了全力" },
-      { time: 82, jp: "[clap]でっかくなったが変わることが苦しいなら やめてたのに",                 tr: "雖然長大了 但如果改變是如此痛苦　明明放棄就好了" },
-      { time: 92.5, jp: [{ text: "[clap]「胸にいっぱいの葛藤と愛しさでまだ", tag: "chant" }],                 tr: "「心中懷抱著滿滿的葛藤與愛意 我們依然" },
-      { time: 96.5, jp: [{ text: "[clap]変わることができてた」", tag: "chant" }],                 tr: "能夠不斷改變」" },
-      { time: 98.5, jp: "[clap]ずっとそんなに苦しまなくたって もういいよ",                 tr: "其實一直以來都不必讓自己那麼痛苦的" },
-      { time: 104, jp: [{ text: "[wave]" }, { text: "先生", tag: "chant" }, { text: "ここにあるものじゃ" }],                 tr: "老師 僅憑這裡擁有的東西" },
-      { time: 106.5, jp: [{ text: "[wave]" }, { text: "全然", tag: "chant" }, { text: "足りなかったような 愛しさと未来を" }],                 tr: "似乎完全不夠用啊　帶上這份眷戀與未來" },
-      { time: 113, jp: [{ text: "[wave]もう、笑っていこうぜ", tag: "chant" }],                 tr: "我們、就笑著向前走吧" },
-      { time: 115.5, jp: [{ text: "[wave]Wha wha wha yeah yeah x 3 True True True", tag: "chant" }], },
-      { time: 127, jp: [{ text: "[wave]Wha wha wha yeah yeah x 4", tag: "chant" }], },
-      { time: 138, jp: "[wave]理想郷目指した 誰より早く",                 tr: "以理想國度為目標　比任何人都要快" },
-      { time: 144, jp: "[wave]間違いなく 自分のために",                 tr: "毫無差錯地　為了我自己" },
-      { time: 149.5, jp: "[wave]そこから根差した 誰より高く",                 tr: "從那裡深植下根基" },
-      { time: 155, jp: "[wave]幸せ目指した だからさ",                 tr: "以幸福為目標　所以說啊" },
-      { time: 159.5, jp: "ねぇどうだい",                 tr: "吶 你覺得如何呢" },
-      { time: 161.5, jp: [{ text: "[wave]" }, { text: "先生", tag: "chant" }, { text: "ここにあるものじゃ" }],                 tr: "老師 僅憑這裡擁有的東西" },
-      { time: 163, jp: [{ text: "[wave]" }, { text: "全然", tag: "chant" }, { text: "足りなかったような 悲しみが未来を" }],                 tr: "似乎完全不夠用啊　悲傷正逐步構築著" },
-      { time: 169.5, jp: [{ text: "[wave]そう、作っているって", tag: "chant" }],                 tr: "沒錯、建構著未來" },
-      { time: 171.5, jp: [{ text: "[wave]" }, { text: "先生", tag: "chant" }, { text: "ここにあるものじゃ" }],                 tr: "老師 僅憑這裡擁有的東西" },
-      { time: 174.5, jp: [{ text: "[wave]" }, { text: "全然", tag: "chant" }, { text: "足りなかったような 愛しさと未来を" }],                 tr: "似乎完全不夠用啊　帶上這份眷戀與未來" },
-      { time: 180.5, jp: [{ text: "[wave]もう、笑っていこうぜ", tag: "chant" }],                 tr: "我們、就笑著向前走吧" },
-      { time: 183, jp: [{ text: "[wave]Wha wha wha yeah yeah x 3", tag: "chant" }],                 tr: "Wha wha wha yeah yeah x 3"},
-      { time: 186, jp: "もう、笑っていこうぜ",                 tr: "我們、就笑著向前走吧"},
-      { time: 192, jp: "[wave]ああもうつかれちまったろ",                 tr: "啊啊 已經累壞了吧" },
-      { time: 194.5, jp: [{ text: "[wave]Wha wha wha yeah yeah x 3", tag: "chant" }],                 tr: "Wha wha wha yeah yeah x 3"},
-      { time: 198, jp: "もう、笑っていこうぜ",                 tr: "我們、就笑著向前走吧"},
-
-
-    ],
-  },
-  {
-    id: "ZERO",
-    title: "ZERO",
-    youtubeId: "Fs7MW0rx9Cw",
-    lyrics: [
-      { time: 24, jp: "Hate His fire picks are hailing down",           tr: "憎恨祂的火焰傾瀉而下" },
-      { time: 31, jp: "Ain't been caught in night",           tr: "晚上捉不到" },
-      { time: 35.5, jp: "But when we caught, then blow them down",           tr: "但如果我們被抓住，我們會炸毀它們。" },
-      { time: 39, jp: "Oh, yeah You're ready now",           tr: "準備好了嗎？" },
-      { time: 41.5, jp: "It's gonna rot in the cells",           tr: "準備在細胞中腐爛" },
-      { time: 44.5, jp: "It's gonna rot in your brain now",           tr: "你的大腦也在腐爛。" },
-      { time: 48, jp: [{ text: "Na Na Na Na Na Na Na", tag: "chant" }], },
-      { time: 51, jp: "Saw them talking about",           tr: "我看到他們在說話。" },
-      { time: 53.5, jp: "It's gonna rock and then rain down",           tr: "要下雨來搖晃" },
-      { time: 57, jp: [{ text: "Na Na Na Na Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 62.5, jp: "Put out a hand to dance now? Who want?",           tr: "你為什麼不伸出手來跳舞？怎麼樣？" },
-      { time: 68, jp: [{ text: "Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 71.5, jp: "Put out a hand to dance now?",           tr: "你為什麼不伸出手來跳舞？" },
-      { time: 76, jp: "The world drags you down",           tr: "世界會拖累你" },
-      { time: 97, jp: "Hate I've drawn him about a thousand times",           tr: "討厭我畫了大約一千次" },
-      { time: 104, jp: "Let me call them Mana",           tr: "我把它叫做法力。" },
-      { time: 108, jp: "I'm broken and they don't fall down",           tr: "我做完了，但他們還沒倒下" },
-      { time: 112, jp: "Oh, you'll tell me inside",           tr: "噢，你在心裡告訴我" },
-      { time: 114.5, jp: "You got it rocking around",           tr: "你在搖晃它" },
-      { time: 117.5, jp: "It's gonna rot in your brain now",           tr: "你的大腦也在腐爛。" },
-      { time: 121, jp: [{ text: "Na Na Na Na Na Na Na", tag: "chant" }], },
-      { time: 124.5, jp: "Saw them walking around",           tr: "我看到他們四處走動。" },
-      { time: 126.5, jp: "It's gonna rock and then rain down",           tr: "要下雨來搖晃" },
-      { time: 130, jp: [{ text: "Na Na Na Na Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 135.5, jp: "Put out a hand to dance now? Who want",           tr: "你為什麼不伸出手來跳舞？怎麼樣？" },
-      { time: 141, jp: [{ text: "Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 145, jp: "Put out a hand to dance now?",           tr: "你為什麼不伸出手來跳舞？" },
-      { time: 149, jp: "The world drags you down",           tr: "世界會拖累你" },
-      { time: 152, jp: "Oh, baby There's so many around",           tr: "周圍有很多人。" },
-      { time: 156, jp: "So it's been taxing",           tr: "所以你厭倦了它。" },
-      { time: 158, jp: "You loving something new",           tr: "你愛上了新事物" },
-      { time: 161, jp: "Hold me badly to be buddy",           tr: "擁抱我很難成為朋友" },
-      { time: 165, jp: "You want me? Hey, rock with me You, give",           tr: "你想要我嗎？跟我一起搖滾，你，我" },
-      { time: 168, jp: [{ text: "Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 172, jp: "Put out a hand to dance now? Who want",           tr: "你為什麼不伸出手來跳舞？怎麼樣？" },
-      { time: 178, jp: [{ text: "Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 181, jp: "Put out a hand to dance now?",           tr: "你為什麼不伸出手來跳舞？" },
-      { time: 185.5, jp: "The world drags",           tr: "世界會拖累你" },
-      { time: 187, jp: [{ text: "Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 190.5, jp: "Put out a hand to dance now? Who want",           tr: "你為什麼不伸出手來跳舞？怎麼樣？" },
-      { time: 196, jp: [{ text: "Na Na Na Hey, Now", tag: "chant" }], },
-      { time: 200, jp: "Put out a hand to dance now?",           tr: "你為什麼不伸出手來跳舞？" },
-      { time: 204, jp: "The world drags you down",           tr: "世界會拖累你" },
-
-    ],
-  },
-  {
-    id: "SonnaBitternaHanashi)",
-    title: "那樣的 bitter 故事 (そんなbitterな話)",
-    youtubeId: "V-gxqhWEbxI",
-    lyrics: [
-      { time: 19.5, jp: "思い出すようなmidnight",                 tr: "我覺得午夜會想起來" },
-      { time: 22, jp: "苦い思い出もblueも",                 tr: "既不是痛苦的想法，也不是藍色的" },
-      { time: 25, jp: "僕ら離れても案外",                 tr: "令人驚訝的是，即使我們在很遠的地方" },
-      { time: 27, jp: "隠し持ってる 言い合ったよね good night",                 tr: "我們留著它，我們互相交談，晚安" },
-      { time: 33, jp: "そんな退屈なflowも",                 tr: "即使是如此無聊的流程" },
-      { time: 36, jp: "僕らここまで案外 うまくやってたよね",                 tr: "我們一路走到現在，意外地做得還不錯吧" },
-      { time: 40.5, jp: [{ text: "こんなことじゃあ 出会わなきゃよかったな", tag: "chant" }],                 tr: "如果我沒有這樣遇見她，不是更好嗎？" },
-      { time: 46, jp: [{ text: "そんなことじゃあ ラブコメみたいなくだりで", tag: "chant" }],                 tr: "如果是這樣，像愛情喜劇這樣的短語" },
-      { time: 51.5, jp: "間違えて運命の誰かに会って",                 tr: "我不小心遇到了命中注定的人" },
-      { time: 57.5, jp: "恋しちゃうような甘みだが",                 tr: "您一定會喜歡的甜味" },
-      { time: 62.5, jp: "[wave]ほろ苦い、そう苦い 僕たちの望む愛やらの出口は",                 tr: "我們想要的苦澀，非常苦澀，像愛一樣的出口" },
-      { time: 73.5, jp: [{ text: "[wave]消えることも 見えることも", tag: "chant" }],                 tr: "消失的東西，你看到的東西" },
-      { time: 79, jp: "[wave]忘れることもできぬように",                 tr: "我想我甚至忘不了" },
-      { time: 84, jp: "[wave]ほろ苦い、そう苦い 僕たちの思う愛やらの未来は",                 tr: "像我們想要的愛一樣痛苦，非常痛苦的未來" },
-      { time: 95, jp: [{ text: "[wave]消えることも 見えることも", tag: "chant" }],                 tr: "消失的東西，你看到的東西" },
-      { time: 100.5, jp: "[wave]忘れることもできぬように",                 tr: "我想我甚至忘不了​" },
-      { time: 106, jp: "[wave]愛おしいのさ",                 tr: "太可悲了。​" },
-      { time: 118, jp: "それはもちろんhot and black",                 tr: "那當然是 hot and black" },
-      { time: 120, jp: "颯爽と火傷しな でも会話はまだ続けるぜ",                 tr: "他被燒傷了，但談話仍在繼續。" },
-      { time: 127.5, jp: "思い出してるそのgood time",                 tr: "我會想到的好時機" },
-      { time: 130.5, jp: "酔っ払ってたよ、そのflowは",                 tr: "它喝醉了，水流" },
-      { time: 133, jp: "僕ら近くても案外 隠し持ってたよね",                 tr: "我們離得很近，但出乎意料的是，我們把它關得很近。" },
-      { time: 138, jp: [{ text: "こんなことじゃあ 出会わなきゃよかったな", tag: "chant" }],                 tr: "如果我沒有這樣遇見她，不是更好嗎？" },
-      { time: 143, jp: [{ text: "そんなことじゃあ ラブコメみたいな2人を", tag: "chant" }],                 tr: "兩個喜歡愛情喜劇的人" },
-      { time: 148.5, jp: "間違えて運命の何かが繋いで",                 tr: "錯誤地與命運有關​" },
-      { time: 154.5, jp: "恋していたような甘さだが",                 tr: "這就是我喜歡的甜味。" },
-      { time: 159.5, jp: "[wave]ほろ苦い、そう苦い 僕たちの望む愛やらの入口は",                 tr: "我們想要的苦澀，非常苦澀，像愛一樣的入口" },
-      { time: 170.5, jp: [{ text: "[wave]消えることも 見えることも", tag: "chant" }],                 tr: "消失的東西，你看到的東西" },
-      { time: 176, jp: "[wave]忘れることもできぬほどに​",                 tr: "以至於我甚至不能忘記" },
-      { time: 181, jp: "[wave]苦すぎるから​",                 tr: "因為實在太苦了" },
-      { time: 205, jp: "癖になった、その苦味は​",                 tr: "它已經成為一種習慣，那種痛苦" },
-      { time: 209, jp: "甘さなど「いいから」と置いてきたよ​",                 tr: "甜味之類的，就說著「算了」留在身後" },
-      { time: 216, jp: "濃い刺激食らった その味蕾が​",                 tr: "被刺激的味蕾" },
-      { time: 220, jp: [{ text: "いうんだよ これはそう​", tag: "chant" }],                 tr: "​跟我說說吧。" },
-      { time: 224, jp: "[wave]ほろ苦い、あぁ苦い 僕たちの望む愛やらの出口は",                 tr: "痛苦，啊，我們想要的痛苦，愛情般的出口" },
-      { time: 235.5, jp: [{ text: "[wave]消えることも 見えることも", tag: "chant" }],                 tr: "消失的東西，你看到的東西" },
-      { time: 240.5, jp: "[wave]忘れることもできぬように",                 tr: "我想我甚至都忘不了。​" },
-      { time: 246, jp: "[wave]ほろ苦い、もう苦い 僕たちの思う愛やらの未来は",                 tr: "像我們想像的愛一樣痛苦，更痛苦的未來" },
-      { time: 257, jp: [{ text: "[wave]消えることも 見えることも", tag: "chant" }],                 tr: "消失的東西，你看到的東西" },
-      { time: 262, jp: "[wave]忘れることもできぬゆえに​",                 tr: "因為我甚至忘不了​​" },
-      { time: 267, jp: "[wave]愛おしいのさ​",                 tr: "太可悲了。​​ " },
-
-    ],
-  },
-  {
-    id: "Fujin",
-    title: "風神 (風神)",
-    youtubeId: "yiU0I0tvt6s",
-    lyrics: [
-      { time: 13, jp: [{ text: "[clap]よりも 「救いたい」 と悲劇を気取ってた", tag: "clap" }],                 tr: "我扮演這場悲劇是因為我比其他任何人都更想拯救它。" },
-      { time: 23, jp: [{ text: "[clap]面倒よりも それが砕いても、煮込んでも", tag: "clap" }],                 tr: "而不是麻煩，即使它被砸碎或煮沸，" },
-      { time: 30, jp: [{ text: "[clap]食べれない故に", tag: "clap" }],                 tr: "正因為無法吞食" },
-      { time: 32, jp: [{ text: "大脳の意思では", tag: "chant" }],                 tr: "隨著大腦的意志" },
-      { time: 36, jp: "静観がキメの一手なんだって",                 tr: "雖然這次航行是最棒的" },
-      { time: 41.5, jp: [{ text: "だが、心臓が言うには", tag: "chant" }],                 tr: "但那顆心說" },
-      { time: 46, jp: "芽吹けば栄養さ",                 tr: "如果它發芽，那就是滋養…" },
-      { time: 50.5, jp: [{ text: "[wave]この先も誰かを想うたび", tag: "chant" }],                 tr: "每當我想到未來的某個人" },
-      { time: 55.5, jp: [{ text: "[wave]風纏い擦り傷が絶えないだろう", tag: "chant" }],                 tr: "微風會彎曲，打噴嚏不會停止。" },
-      { time: 60.5, jp: [{ text: "[wave]だがやがてこの風、受けるたびに", tag: "chant" }],                 tr: "但不久之後，每當這股風吹來" },
-      { time: 65.5, jp: "[wave]その、変え難い ぬくい痛みに",                 tr: "到那不變的溫暖" },
-      { time: 70, jp: [{ text: "[wave]報われていたい はず...", tag: "chant" }],                 tr: "他本來希望獲得獎勵。 " },
-      { time: 91.5, jp: [{ text: "[clap]ジリジリ 頬つたって痛いよ", tag: "clap" }],                 tr: "一路上多刺的臉頰疼痛" },
-      { time: 95.5, jp: [{ text: "[clap]芽吹いた ヒラヒラ 喉元つたって", tag: "clap" }],                 tr: "鼻甲沿鼻甲喉嚨發芽" },
-      { time: 101.5, jp: [{ text: "[clap]吸い込み 肺が痛いよ", tag: "clap" }],                 tr: "吸入會傷害肺部" },
-      { time: 106, jp: "[clap]でもね トクトク あたたかいね",                 tr: "但它很暖和" },
-      { time: 110.5, jp: [{ text: "それが 大脳の意思では", tag: "chant" }],                 tr: "大腦就是這麼想的" },
-      { time: 115, jp: "食わず嫌いがキメの一手だったって",                 tr: "有先入為主的觀念是一個好主意。" },
-      { time: 121, jp: [{ text: "また、心臓が言うには", tag: "chant" }],                 tr: "再一次，心臟說" },
-      { time: 125, jp: "君もそう、風神さ",                 tr: "你也是，毛毛" },
-      { time: 129.5, jp: [{ text: "[wave]この先も誰かを想うたび", tag: "chant" }],                 tr: "每當我想到未來的某個人" },
-      { time: 134.5, jp: [{ text: "[wave]風纏い擦り傷が絶えないだろう", tag: "chant" }],                 tr: "微風會彎曲，打噴嚏不會停止。" },
-      { time: 139.5, jp: [{ text: "[wave]だがやがてこの風、受けるたびに", tag: "chant" }],                 tr: "但不久之後，每當這股風吹來" },
-      { time: 144.5, jp: "[wave]その、変え難い ぬくい痛みに",                 tr: "到那不變的溫暖" },
-      { time: 149.5, jp: [{ text: "[wave]報われていたい はず...", tag: "chant" }],                 tr: "他本來希望獲得獎勵。 " },
-      { time: 160, jp: "もしもこの世の隙間に",                 tr: "如果在這個世界的鴻溝裡" },
-      { time: 165, jp: "愛を少し分けられたなら",                 tr: "如果我能分享一點愛" },
-      { time: 170, jp: "それでこのぬくもりに",                 tr: "如果是這樣，在這種溫暖中" },
-      { time: 175, jp: "隙間風も 凪ぐだろうか",                 tr: "吹過間隙的風可以被靜音嗎？" },
-      { time: 179.5, jp: [{ text: "[wave]僕が、誰かを想うたび", tag: "chant" }],                 tr: "每當我想到某人" },
-      { time: 184, jp: [{ text: "[wave]風纏い擦り傷が絶えないだろう", tag: "chant" }],                 tr: "微風會彎曲，打噴嚏不會停止。" },
-      { time: 189, jp: [{ text: "[wave]だがやがてこの風、受けるたびに", tag: "chant" }],                 tr: "但不久之後，每當這股風吹來" },
-      { time: 194, jp: "[wave]その、変え難い ぬくい痛みに",                 tr: "到那不變的溫暖" },
-      { time: 198.5, jp: [{ text: "[wave]拭われて あなたを想うたびに", tag: "chant" }],                 tr: "每次傷口被擦除，我都會想起你" },
-      { time: 203.5, jp: [{ text: "[wave]風纏い擦り傷が絶えないだろう", tag: "chant" }],                 tr: "微風會彎曲，打噴嚏不會停止。" },
-      { time: 208.5, jp: [{ text: "[wave]だがやがてこの風、受けるたびに", tag: "chant" }],                 tr: "但不久之後，每當這股風吹來" },
-      { time: 214, jp: "[wave]その、変え難い ぬくい痛みに",                 tr: "到那不變的溫暖" },
-      { time: 218.5, jp: [{ text: "[wave]救われていた はず だから", tag: "chant" }],                 tr: "他一定是得救了。" },
-    ],
-  },
-  {
-    id: "Jonetsu",
-    title: "常熱 (常熱)",
-    translationCredit: "Oblivionis",
-    translationCreditUrl: "https://home.gamer.com.tw/artwork.php?sn=5830053",
-    translationSourceUrl: "https://home.gamer.com.tw/artwork.php?sn=5830053",
-    youtubeId: "fxtQ4Dsmqo0",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 29, jp: [{ text: "[clap]太陽系をちょうど抜けたあたりで", tag: "clap" }],                 tr: "在一脫離太陽系的時候" },
-      { time: 36.5, jp: [{ text: "[clap]思い出した", tag: "clap" }],                 tr: "回想了起來" },
-      { time: 42, jp: [{ text: "[clap]何億年もループを抜けない旅を", tag: "clap" }],                 tr: "像是經歷了一場" },
-      { time: 49, jp: [{ text: "[clap]してたような", tag: "clap" }],                 tr: "輪迴了幾億年無法結束的旅行" },
-      { time: 53, jp: [{ text: "[clap]動悸に気づき出した。", tag: "clap" }],                 tr: "查覺到了心跳的變化時" },
-      { time: 56.5, jp: [{ text: "[clap]そのころには、視界にはもう靄がかかっていく", tag: "clap" }],                 tr: "視線已經被薄霧所侵襲" },
-      { time: 64, jp: [{ text: "[clap]正気を取り戻した。", tag: "clap" }],                 tr: "取回了意識時"  },
-      { time: 69, jp: [{ text: "[clap]そのころには、その機体はすでに止まっている。", tag: "clap" }],                 tr: "這個機體已經停止了" },
-      { time: 77.5, jp: [{ text: "[wave]いつだって君のことは", tag: "chant" }],                 tr: "你總是" },
-      { time: 80.5, jp: [{ text: "[wave] 底なしで触れてたいな", tag: "chant" }],                 tr: "都想要更深刻的與你接觸" },
-      { time: 83.5, jp: [{ text: "[wave]平熱も上がるような毎日をあげるから", tag: "chant" }],                 tr: "給予你能讓體溫上升的每一天" },
-      { time: 89.5, jp: [{ text: "[wave]もうどうしたって君の心が", tag: "chant" }],                 tr: "不管如何" },
-      { time: 93, jp: [{ text: "[wave]溶け出して、焦るほどの", tag: "chant" }],                 tr: "能讓你的心溶解" },
-      { time: 96, jp: [{ text: "[wave]常熱を その鼓動に毎日あげるから」", tag: "chant" }],                 tr: "著急的這份熱情　會每天給你這種心動" },
-      { time: 103.5, jp: [{ text: "[clap]海底圏がちょうど見えたあたりで", tag: "clap" }],                 tr: "在一看見海底層的時候" },
-      { time: 111, jp: [{ text: "[clap]思い出した", tag: "clap" }],                 tr: "回想了起來"  },
-      { time: 116, jp: [{ text: "[clap]何重圧も肌に溶ける", tag: "clap" }],                 tr: "多少壓力滲透進肌膚" },
-      { time: 120.5, jp: [{ text: "[clap]血圧が上がるような", tag: "clap" }],                 tr: "像是上升的血壓般" },
-      { time: 127, jp: "ぁ～あ 言葉が溶け出していくぅ",                 tr: "ah～Ah　言語融化了出來" },
-      { time: 132, jp: "血圧乱して またもう指先痺れだし",                 tr: "混亂了血壓　指尖都已經被麻痺了" },
-      { time: 139, jp: [{ text: "[clap]この動悸に気づき出した。", tag: "clap" }],                 tr: "查覺到了心跳的變化時" },
-      { time: 143, jp: [{ text: "[clap]そのころには、視界にはもう靄がかかっていく", tag: "clap" }],                 tr: "視線已經被薄霧所侵襲" },
-      { time: 151, jp: [{ text: "[clap]正気を取り戻した。", tag: "clap" }],                 tr: "取回了意識時" },
-      { time: 155.5, jp: [{ text: "[clap]そのころには、その液体はすでに上がっている。", tag: "clap" }],                 tr: "眼淚已經奪眶而出" },
-      { time: 164, jp: [{ text: "[wave]いつだって君のことは", tag: "chant" }],                 tr: "你總是" },
-      { time: 167, jp: [{ text: "[wave] 底なしで触れてたいな", tag: "chant" }],                 tr: "都想要更深刻的與你接觸" },
-      { time: 170, jp: [{ text: "[wave]平熱も上がるような毎日をあげるから", tag: "chant" }],                 tr: "給予你能讓體溫上升的每一天" },
-      { time: 176, jp: [{ text: "[wave]もうどうしたって君の心が", tag: "chant" }],                 tr: "不管如何" },
-      { time: 179.5, jp: [{ text: "[wave]溶け出して、焦るほどの", tag: "chant" }],                 tr: "能讓你的心溶解" },
-      { time: 182.5, jp: [{ text: "[wave]常熱を その鼓動に毎日あげるから」", tag: "chant" }],                 tr: "著急的這份熱情　會每天給你這種心動" },
-      { time: 189, jp: [{ text: "[clap]ぁ～あ 言葉が溶け出していくぅ", tag: "clap" }],                 tr: "ah~Ah　言語融化了出來" },
-      { time: 194, jp: [{ text: "[clap]脳圧満たして またもう夢見心地さ", tag: "clap" }],                 tr: "充斥在腦中　就像進入夢中一樣" },
-      { time: 201.5, jp: [{ text: "[wave]いつだって君のことは", tag: "chant" }],                 tr: "你總是" },
-      { time: 204.5, jp: [{ text: "[wave] 底なしで触れてたいな", tag: "chant" }],                 tr: "都想要更深刻的與你接觸" },
-      { time: 207.5, jp: [{ text: "[wave]平熱も上がるような毎日をあげるから", tag: "chant" }],                 tr: "給予你能讓體溫上升的每一天" },
-      { time: 213.5, jp: [{ text: "[wave]もうどうしたって君の心が", tag: "chant" }],                 tr: "不管如何" },
-      { time: 217, jp: [{ text: "[wave]溶け出して、焦るほどの", tag: "chant" }],                 tr: "能讓你的心溶解" },
-      { time: 220, jp: [{ text: "[wave]常熱を その鼓動に毎日あげるから」", tag: "chant" }],                 tr: "著急的這份熱情　會每天給你這種心動" },
-      { time: 226, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-
-    ],
-  },
-  {
-    id: "Kagero",
-    title: "陽炎 (かげろう)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "gY-7i-T76o0",
-    lyrics: [
-      { time: 10, jp: "焼かれて逃げ水追いかけては 追いつけない。",                 tr: "受著炙烤追逐著海市蜃樓　卻怎樣也追不上。" },
-      { time: 17, jp: [{ text: "おどけた魂が俺に魅せる幻。", tag: "chant" }],                 tr: "那滑稽嬉鬧的靈魂展示給我的幻象。" },
-      { time: 32, jp: "肩透かしで避けてた矢尻じゃ 突き抜けない。",                 tr: "靠著落空閃避的箭鏃　無法徹底穿透。" },
-      { time: 39, jp: "おどけた魂が どれも",                 tr: "那滑稽嬉鬧的靈魂　無論哪一個" },
-      { time: 42.5, jp: [{ text: "揺れる言葉 揺れる影や 揺れる心を", tag: "chant" }],                 tr: "那搖曳的言語　搖曳的背影　以及那搖曳的心" },
-      { time: 50, jp: [{ text: "許すのならば", tag: "chant" }],                 tr: "如果都能寬恕的話" },
-      { time: 53.5, jp: [{ text: "[wave]この涙誰のために流せばいい", tag: "chant" }],                 tr: "這滴眼淚究竟該為誰而流才好" },
-      { time: 61, jp: "[wave]ベランダに落ちた鳥か 芽吹いた花か",                 tr: "是掉落在陽台上的鳥兒嗎　還是剛發芽的花朵"},
-      { time: 67, jp: [{ text: "[wave]忘れてたあの日憧れた僕か", tag: "chant" }],                 tr: "抑或是早已被遺忘 那一天曾心生嚮往的我呢" },
-      { time: 72.5, jp: [{ text: "[wave]この涙何のために流せばいい", tag: "chant" }],                 tr: "這滴眼淚究竟又是為了什麼而流" },
-      { time: 80, jp: "[wave]目にかかる砂煙が 魅せてった熱か",                 tr: "是籠罩在眼前的沙塵　所展現出的那股熾熱嗎" },
-      { time: 86, jp: [{ text: "[wave]今こそ啸いてくれ かげろう", tag: "chant" }],                 tr: "事到如今就請對我吹噓大話吧　海市蜃樓" },
-      { time: 94, jp: "焚き付け織火光る童は 追いつけない。",                 tr: "被點燃的餘燼中發光的孩童　怎麼樣也追不上。" },
-      { time: 101, jp: [{ text: "おどけた魂が俺を帰せる幻。", tag: "chant" }],                 tr: "那滑稽嬉鬧的靈魂是能讓我歸去的幻象。" },
-      { time: 116, jp: "膨張し、呼吸止まる肩から 鳴り止まない。",                 tr: "從急劇膨脹、呼吸驟停的肩膀處　久久響個不停。" },
-      { time: 123, jp: "おどけた魂の 声が",                 tr: "那滑稽嬉鬧靈魂的　聲響" },
-      { time: 126.5, jp: [{ text: "揺れる言葉 揺れる影や 揺れる心が", tag: "chant" }],                 tr: "若那搖曳的言語　搖曳的背影　以及搖曳的心" },
-      { time: 134, jp: [{ text: "呼び声ならば", tag: "chant" }],                 tr: "是呼喚我的聲音的話" },
-      { time: 137.5, jp: [{ text: "[wave]この涙誰のために流せばいい", tag: "chant" }],                 tr: "這滴眼淚究竟該為誰而流才好" },
-      { time: 145, jp: "[wave]ベランダに落ちた鳥か 芽吹いた花か",                 tr: "是掉落在陽台上的鳥兒嗎　還是剛發芽的花朵" },
-      { time: 151, jp: [{ text: "[wave]忘れてたあの日憧れた僕か", tag: "chant" }],                 tr: "抑或是早已被遺忘 那一天曾心生嚮往的我呢" },
-      { time: 156.5, jp: [{ text: "[wave]この涙何のために流せばいい", tag: "chant" }],                 tr: "這滴眼淚究竟又是為了什麼而流" },
-      { time: 164, jp: "[wave]目にかかる砂煙が 魅せてった熱か",                 tr: "是籠罩在眼前的沙塵　所展現出的那股熾熱嗎" },
-      { time: 170, jp: [{ text: "[wave]今こそ啸いてくれ かげろう", tag: "chant" }],                 tr: "事到如今就請對我吹噓大話吧　海市蜃樓" },
-      { time: 184.5, jp: "進めばいつか この先でまた",                 tr: "只要繼續前行 總有一天　在未來的盡頭" },
-      { time: 189, jp: "奇跡を待つのだろう",                 tr: "我們又會去等待奇蹟吧" },
-      { time: 193, jp: "ただ この熱がまた",                 tr: "只是　這股熾熱將再次" },
-      { time: 196.5, jp: "向かい風を抜けて",                 tr: "穿透逆風" },
-      { time: 200.5, jp: [{ text: "[wave]笑う魂ならば", tag: "chant" }],                 tr: "若那是會心一笑的靈魂的話" },
-      { time: 204.5, jp: [{ text: "[wave]この涙誰のために流せばいい", tag: "chant" }],                 tr: "這滴眼淚究竟該為誰而流才好" },
-      { time: 212, jp: "[wave]ベランダに落ちた烏が 咲かせた花か",                 tr: "是掉落在陽台上的鳥兒嗎　所讓它綻放的花朵嗎" },
-      { time: 218, jp: [{ text: "[wave]湧き上がるこれまでの僕達か", tag: "chant" }],                 tr: "還是胸中湧現 一路走來的我們呢" },
-      { time: 224, jp: [{ text: "[wave]この涙何のために流せばいい", tag: "chant" }],                 tr: "這滴眼淚究竟又是為了什麼而流" },
-      { time: 231, jp: "[wave]目にかかる砂煙が 魅せてった熱よ",                 tr: "籠罩在眼前的沙塵　所展現出的那股熾熱啊" },
-      { time: 237, jp: [{ text: "[wave]今こそ啸いてくれ かげろう", tag: "chant" }],                 tr: "事到如今就請對我吹噓大話吧　海市蜃樓" },
-
-    ],
-  },
-  {
-    id: "IdeagaAfureteNemurenai",
-    title: "理念滿溢而無法入睡 (イデアが溢れて眠れない)",
-    youtubeId: "0u_zA8BJG6A",
-    lyrics: [
-      { time: 20.5, jp: "そこはかとなく 嫌いが勝つようになったね",                 tr: "出於某種原因，不喜歡的感覺浮出水面。" },
-      { time: 25, jp: "でも僕だけが いる世界が少し好きになった",                 tr: "但我變得有點喜歡一個只有我一個人的世界。" },
-      { time: 29.5, jp: "言葉が 瞳閉じた僕の脳、宙を舞い",                 tr: "在我閉上眼睛的大腦中，一匹馬漂浮在空中" },
-      { time: 34, jp: "ととのえない 僕の脳になんか聞こえてきた",                 tr: "它雜亂無章，我聽到腦袋裡有東西" },
-      { time: 40, jp: "「全てを失ったその後で",                 tr: "失去一切之後" },
-      { time: 49, jp: "この先は終わらない旅をしよう」",                 tr: "一起踏上永無止境的旅程吧" },
-      { time: 54, jp: "君がそう言うから",                 tr: "因為這就是你所說的" },
-      { time: 61, jp: [{ text: "胸が ドキドキしだしたよ！", tag: "chant" }],                 tr: "我的心開始砰砰直跳！" },
-      { time: 66.5, jp: [{ text: "[wave]この 偶然の先、必然の先、言葉は光すらも超えて", tag: "chant" }],                 tr: "超越這種巧合，超越必然性，甚至超越文字的光芒。" },
-      { time: 75.5, jp: [{ text: "[wave]この 天井の先、星々の先、宇宙の先、銀河を超えて", tag: "chant" }],                 tr: "超越這個天花板，超越星星，超越宇宙，超越銀河系" },
-      { time: 84.5, jp: "[wave]間違いなく残るでしょう",                 tr: "一定會留下來吧" },
-      { time: 87, jp: "[wave]袖伸ばして未来を待とう",                 tr: "捲起袖子，等待未來吧" },
-      { time: 89, jp: "[wave]僕の瞼流る 軌道はいつも同じ",                 tr: "流過我的眼瞼，軌跡總是相同" },
-      { time: 93.5, jp: "[wave]このイデアが描くでしょう",                 tr: "這個理念將描繪出來吧" },
-      { time: 96, jp: "[wave]靴を履いて未来を待とう",                 tr: "穿上鞋子，等待未來" },
-      { time: 98, jp: "[wave]まだ、イデアが溢れて眠れない",                 tr: "然而，想法溢出，我無法入睡" },
-      { time: 103, jp: "そこはかとなく 愛が何かわかる気がして",                 tr: "出於某種原因，我以為我知道什麼是愛。" },
-      { time: 107, jp: "でも僕だけが わかることなんだってわかったんだ",                 tr: "但後來我發現我是唯一知道的人。" },
-      { time: 112, jp: "言葉が 聞き取れぬほどの閃光に",                 tr: "一瞬間，你甚至聽不到" },
-      { time: 116.5, jp: "今僕だけが 見える速度まで加速していた",                 tr: "我正在加速到現在只能看到的速度。" },
-      { time: 122, jp: "「あとはそう、この旅の中で」",                 tr: "而且，在這段旅程中..." },
-      { time: 127.5, jp: "君がそう言うから",                 tr: "因為這就是你所說的" },
-      { time: 134, jp: [{ text: "胸が ドキドキしだしたよ！", tag: "chant" }],                 tr: "我的心開始砰砰直跳！" },
-      { time: 139.5, jp: [{ text: "[wave]この 偶然の先、必然の先、言葉は光すらも超えて", tag: "chant" }],                 tr: "超越這種巧合，超越必然性，甚至超越文字的光芒。" },
-      { time: 148.5, jp: [{ text: "[wave]この 天井の先、星々の先、宇宙の先、銀河を超えて", tag: "chant" }],                 tr: "超越這個天花板，超越星星，超越宇宙，超越銀河系" },
-      { time: 158, jp: [{ text: "[wave]イデアが溢れて眠れない x 4", tag: "chant" }],                                                     },
-      { time: 176, jp: "忘れないでおこう",                 tr: "別忘了" },
-      { time: 177.5, jp: [{ text: "晴天と、この校舎に流れたあの曲を", tag: "chant" }],                 tr: "晴朗的天空和這位老師共鳴的歌聲" },
-      { time: 180.5, jp: [{ text: "「時は、光をとらえた情景の", tag: "chant" }],                 tr: "時間，光明正典" },
-      { time: 183, jp: [{ text: "掴みあぐねた、淡い一瞬と", tag: "chant" }],                 tr: "一個我沒抓住的微弱時刻" },
-      { time: 185.5, jp: "忘れないでおこう",                 tr: "別忘了" },
-      { time: 187, jp: [{ text: "公転と、僕の軌跡が生み出す人生を", tag: "chant" }],                 tr: "軌道，我的軌跡創造的生命" },
-      { time: 189.5, jp: "忘れないでおこう",                 tr: "別忘了" },
-      { time: 194, jp: [{ text: "[wave]この 偶然の先、必然の先、言葉は光すらも超えて", tag: "chant" }],                 tr: "超越這種巧合，超越必然性，甚至超越文字的光芒。" },
-      { time: 203, jp: [{ text: "[wave]この 天井の先、星々の先、宇宙の先、銀河を超えて", tag: "chant" }],                 tr: "超越這個天花板，超越星星，超越宇宙，超越銀河系" },
-      { time: 212, jp: [{ text: "[wave]この 偶然の光、必然の光、運命は秩序を超えて", tag: "chant" }],                 tr: "機會之光，必然之光，命運超越秩序。" },
-      { time: 221.5, jp: [{ text: "[wave]この 天井の光、星々の光、宇宙の光、銀河を超えて", tag: "chant" }],                 tr: "天花板的光芒，星星的光芒，宇宙的光芒，超越星系" },
-      { time: 231, jp: "[wave]間違いなく残るでしょう",                 tr: "一定會留下來吧" },
-      { time: 233, jp: "[wave]袖伸ばして未来を待とう",                 tr: "捲起袖子，等待未來吧" },
-      { time: 235, jp: "[wave]僕の瞼流る 軌道はいつも同じ",                 tr: "流過我的眼瞼，軌跡總是相同" },
-      { time: 239.5, jp: "[wave]このイデアが描くでしょう",                 tr: "這個理念將描繪出來吧" },
-      { time: 242.5, jp: "[wave]靴を履いて未来を待とう",                 tr: "穿上鞋子，等待未來" },
-      { time: 244.5, jp: "[wave]まだ、イデアが溢れて眠れない",                 tr: "然而，想法溢出，我無法入睡" },
-      { time: 250, jp: [{ text: "[wave]イデアが溢れて眠れない x 4", tag: "chant" }],                                                     },
-
-    ],
-  },
-  {
-    id: "flyaway",
-    title: "飛翔之時 (飛ぶ時)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "ARj1adoUoEU",
-    lyrics: [
-      { time: 0, jp: "[wave]",                                                             },
-      { time: 19.5, jp: [{ text: "[clap]痛みの数だけ", tag: "clap" }],                 tr: "經歷過多少痛楚" },
-      { time: 26, jp: [{ text: "[clap]それは、僕の静脈を通り", tag: "clap" }],                 tr: "它們便會、穿過我的靜脈" },
-      { time: 33, jp: [{ text: "[clap]心臓を突破して 忘れた頃、到達 脳に", tag: "clap" }],                 tr: "突破心臟　在早已遺忘之際、抵達了　大腦" },
-      { time: 44, jp: [{ text: "[wave]まぁ辛くはないが この小さな、この小さな", tag: "chant" }],                 tr: "哎呀 倒也談不上有多辛苦　但這極其微小、極其微小的" },
-      { time: 49.5, jp: "[wave]うらみわびの隙間風は 許してくれ",                 tr: "怨恨與悲愁所吹入的門縫風　還請原諒我吧" },
-      { time: 58, jp: [{ text: "[wave](jump)この不甲斐ない", tag: "chant" }],                 tr: "這般窩囊的" , pic: "wave_jump"},
-      { time: 61, jp: [{ text: "[wave](jump)僕の言葉も涙も全部", tag: "chant" }],                 tr: "我的言語與眼淚 這所有的全部" , pic: "wave_jump"},
-      { time: 65, jp: "[wave](jump)気分次第で生えた羽だって",                 tr: "哪怕是憑著心情隨興生出的翅膀" , pic: "wave_jump"},
-      { time: 68.5, jp: [{ text: "[wave](jump)今は背で受けておくよ全部", tag: "chant" }],                 tr: "如今我也會用後背將它們全盤接納" , pic: "wave_jump"},
-      { time: 71.5, jp: [{ text: "[wave](jump)それじゃまた", tag: "chant" }],                 tr: "那麼再見了", pic: "wave_jump" },
-      { time: 75, jp: "[wave](jump)ここに置いていくから全部",                 tr: "我會把這一切全都留在此處" , pic: "wave_jump"},
-      { time: 78.5, jp: "[wave](jump)怖くない この空へ",                 tr: "別害怕　朝向這片天空" , pic: "wave_jump"},
-      { time: 82, jp: "[wave](jump)風に靡く羽に ほら従って",                 tr: "順應著那　隨風飄揚的羽翼吧", pic: "wave_jump" },
-      { time: 87, jp: [{ text: "[wave]Woah-oh, woah-oh", tag: "chant" }],                                                     },
-      { time: 93.5, jp: [{ text: "[wave]Woah-oh, ah, ah, ah, ah", tag: "chant" }],                                                     },
-      { time: 100.5, jp: [{ text: "[clap]言葉の数だけ", tag: "clap" }],                 tr: "說出口過多少言語" },
-      { time: 107, jp: [{ text: "[clap]それは、あなたの神経を通り", tag: "clap" }],                 tr: "它們便會、穿過你的神經" },
-      { time: 114, jp: [{ text: "[clap]脳幹を突破して 忘れた頃、到達 瞳に", tag: "clap" }],                 tr: "突破腦幹　在早已遺忘之際、抵達了　雙眼" },
-      { time: 125.5, jp: "[wave]されどイメージしたのは",                 tr: "然而在我腦海中描繪出的景象" },
-      { time: 129, jp: "[wave]光飛び散った最中",                 tr: "卻是在光芒肆意四散的當口" },
-      { time: 133, jp: "[wave]当てはないことを 許してくれ",                 tr: "對於那毫無頭緒的事物　還請原諒我吧" },
-      { time: 139, jp: [{ text: "[wave](jump)この不甲斐ない", tag: "chant" }],                 tr: "這般窩囊的" , pic: "wave_jump"},
-      { time: 142.5, jp: [{ text: "[wave](jump)僕の言葉も涙も全部", tag: "chant" }],                 tr: "我的言語與眼淚 這所有的全部" , pic: "wave_jump"},
-      { time: 146, jp: "[wave](jump)向かい風受けた羽だって",                 tr: "哪怕是頂著逆風咆哮的翅膀" , pic: "wave_jump"},
-      { time: 150, jp: [{ text: "[wave](jump)今は背で受けておくよ全部", tag: "chant" }],                 tr: "如今我也會用後背將它們全盤接納", pic: "wave_jump"},
-      { time: 152.5, jp: [{ text: "[wave](jump)それじゃまた", tag: "chant" }],                 tr: "那麼再見了", pic: "wave_jump" },
-      { time: 155.5, jp: "[wave](jump)ここに置いていくから全部",                 tr: "我會把這一切全都留在此處" , pic: "wave_jump"},
-      { time: 159.5, jp: "[wave](jump)怖くない この空へ",                 tr: "別害怕　朝向這片天空" , pic: "wave_jump"},
-      { time: 163, jp: "[wave](jump)風に靡く羽に",                 tr: "順應著那" , pic: "wave_jump"},
-      { time: 173, jp: [{ text: "その鬱蒼としげる兵糧と退路", tag: "chant" }],                 tr: "那茂密鬱蔥的兵糧與退路" },
-      { time: 176, jp: [{ text: "眼前が正解じゃ無いよ", tag: "chant" }],                 tr: "眼前所見可不一定就是正確答案啊" },
-      { time: 177.5, jp: [{ text: "擦り切れる突風が解廊", tag: "chant" }],                 tr: "磨損消耗的突風通往出口" },
-      { time: 179, jp: "僕の運命に 僕がすれ違ってしまう前に",                 tr: "在我的命運降臨之前　在我與自己擦肩而過之前" },
-      { time: 186.5, jp: [{ text: "[wave](jump)この不甲斐ない", tag: "chant" }],                 tr: "這般窩囊的" , pic: "wave_jump" },
-      { time: 189.5, jp: [{ text: "[wave](jump)僕の言葉も涙も全部", tag: "chant" }],                 tr: "我的言語與眼淚 這所有的全部" , pic: "wave_jump" },
-      { time: 193, jp: "[wave](jump)気分次第で生えた羽だって",                 tr: "哪怕是憑著心情隨興生出的翅膀" , pic: "wave_jump" },
-      { time: 197, jp: [{ text: "[wave](jump)でも僕の翼だよ全部", tag: "chant" }],                 tr: "但那全都是屬於我的羽翼啊" , pic: "wave_jump" },
-      { time: 200, jp: [{ text: "[wave](jump)それじゃまた", tag: "chant" }],                 tr: "那麼再見了" , pic: "wave_jump" },
-      { time: 203, jp: "[wave](jump)ずっと忘れない 軒並み全部",                 tr: "我永遠都不會忘記　這所有的點點滴滴" , pic: "wave_jump" },
-      { time: 207, jp: "[wave](jump)怖くない、この夜空で 明日を目指す",                 tr: "別害怕、在這片夜空之下　以明日為目標" , pic: "wave_jump" },
-      { time: 211.5, jp: "[wave](jump)朝焼けに ほら、連なって",                 tr: "朝向那片朝霞　看吧、相連著向前飛去" , pic: "wave_jump" },
-      { time: 215, jp: [{ text: "[wave]Woah-oh, woah-oh", tag: "chant" }],                                                     },
-      { time: 222, jp: [{ text: "[wave]Woah-oh, ah, ah, ah, ah", tag: "chant" }],     },
-      { time: 229, jp: [{ text: "[wave]Woah-oh, woah-oh", tag: "chant" }],                                                     },
-      { time: 235.5, jp: [{ text: "[wave]Woah-oh, ah, ah, ah, ah", tag: "chant" }],     },
-    ],
-  },
-  {
-    id: "mabuta",
-    title: "眼瞼 (まぶた)",
-    translationCredit: "巴哈姆特的月勳",
-    youtubeId: "fjx_uy5eD8g",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],                                                             },
-      { time: 19.5, jp: [{ text: "[clap]あなたが今も", tag: "clap" }],                 tr: "因為現在的你" },
-      { time: 23.5, jp: [{ text: "[clap]口をはにかみ、涙流すから", tag: "clap" }],                 tr: "依然害羞矜持地抿著嘴、流著眼淚" },
-      { time: 28, jp: [{ text: "[clap]放つ言葉も 血が滲んでる", tag: "clap" }],                 tr: "連你吐露出的話語　都滲著血跡" },
-      { time: 35, jp: "きっと",                 tr: "那一定是" },
-      { time: 37, jp: "日々の蟠りが香るにおいで",                 tr: "散發著日常心中積鬱的氣味" },
-      { time: 43, jp: "つーんと",                 tr: "令人鼻尖發酸" },
-      { time: 45.5, jp: "刺すような悲しみが瞳を刺してる",                 tr: "那如刺一般的悲傷正刺痛著雙眼" },
-      { time: 52, jp: "もしも",                 tr: "如果" },
-      { time: 53.5, jp: "その手取れど悲しみが消えぬなら",                 tr: "即使牽起你的手 悲傷依然無法消散的話" },
-      { time: 64, jp: "忘れて 瞼が疲れるほど",                 tr: "就請將它遺忘吧　直到眼皮感到疲憊為止" },
-      { time: 68.5, jp: [{ text: "[wave]僕ら 目を閉じあうことで", tag: "chant" }],                 tr: "我們　或許能透過彼此閉上雙眼" },
-      { time: 72, jp: "[wave]少しずつわかるようになるかもね",                 tr: "一點一滴地開始互相理解了吧" },
-      { time: 77.5, jp: [{ text: "[wave]背を向け合うほどね", tag: "chant" }],                 tr: "就像彼此背對著背那樣" },
-      { time: 80.5, jp: "[wave]確かめ合い 生きてる",                 tr: "相互確認著　活著" },
-      { time: 86, jp: [{ text: "[wave]La La La La La La x 8", tag: "chant" }],                                                             },
-      { time: 103, jp: [{ text: "[clap]あなたが今も", tag: "clap" }],                 tr: "因為現在的你" },
-      { time: 107, jp: [{ text: "[clap]苦しそうに、爪を噛むから", tag: "clap" }],                 tr: "依然看似痛苦地，咬著手指甲" },
-      { time: 111, jp: [{ text: "[clap]放つ言葉は まきつき根を張った", tag: "clap" }],                 tr: "你吐露出的話語　宛如糾纏盤繞般深植下了根" },
-      { time: 118.5, jp: "それは",                 tr: "那簡直就像是" },
-      { time: 120.5, jp: [{ text: "針の先に指先が触れるような", tag: "chant" }],                 tr: "指尖觸碰到針尖上一樣" },
-      { time: 127, jp: "つーんと",                 tr: "令人鼻尖發酸" },
-      { time: 129, jp: "刺すような寂しさが瞳を刺してる",                 tr: "那如刺一般的寂寞正刺痛著雙眼" },
-      { time: 135, jp: "もしも",                 tr: "如果" },
-      { time: 137, jp: "濡れているせいで霜が着き始めたら",                 tr: "因為浸溼的緣故而開始凝結霜雪的話。" },
-      { time: 147.5, jp: "流して 瞼が疲れるほど",                 tr: "就讓它流淌而過吧　直到眼皮感到疲憊為止" },
-      { time: 152, jp: [{ text: "[wave]僕ら 目を閉じあうことで", tag: "chant" }],                 tr: "我們　或許能透過彼此閉上雙眼" },
-      { time: 156, jp: "[wave]少しずつわかるようになるかもね",                 tr: "一點一滴地開始互相理解了吧" },
-      { time: 161, jp: [{ text: "[wave]背を向け合うほどね", tag: "chant" }],                 tr: "就像彼此背對著背那樣" },
-      { time: 164, jp: "[wave]確かめ合い 生きてる",                 tr: "相互確認著　活著" },
-      { time: 185, jp: "もしも",                 tr: "如果" },
-      { time: 187, jp: "枯れ果てたせいで香りだし痛むなら",                 tr: "因為乾枯殆盡而散發香氣並隱隱作痛的話" },
-      { time: 197.5, jp: "思い出して 瞼が疲れるまで",                 tr: "便請回想起來吧　直到眼皮感到疲憊為止" },
-      { time: 202, jp: [{ text: "[wave]僕ら 目を閉じあうことで", tag: "chant" }],                 tr: "我們　或許能透過彼此閉上雙眼" },
-      { time: 206, jp: "[wave]少しずつわかるようになるかもね",                 tr: "一點一滴地開始互相理解了吧" },
-      { time: 211, jp: [{ text: "[wave]背を向け合うほどね", tag: "chant" }],                 tr: "就像彼此背對著背那樣" },
-      { time: 214, jp: "[wave]確かめ合い 生きてる",                 tr: "相互確認著　活著" },
-      { time: 218.5, jp: [{ text: "[wave]僕ら 目を閉じあうことで", tag: "chant" }],                 tr: "我們　或許能透過彼此閉上雙眼" },
-      { time: 222.5, jp: "[wave]背伸びせずに疲れないで済むかもね",                 tr: "或許就不必逞強 也不必感到疲憊了吧" },
-      { time: 228, jp: [{ text: "[wave]背で受け合う先で", tag: "chant" }],                 tr: "在用背影相互承受的彼端" },
-      { time: 231, jp: "[wave]見つめ合い 生きられる",                 tr: "相視凝望　活下去" },
-      { time: 236.5, jp: [{ text: "[wave]La La La La La La x 8", tag: "chant" }],                                                             },
-
-    ],
-  },
-  {
-    id: "Hitomibore",
-    title: "為瞳孔著迷 (瞳惚れ)",
-    youtubeId: "XEEXE8Ei5SA",
-    lyrics: [
-      { time: 0, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 20.5, jp: [{ text: "[clap]さりげなく時は", tag: "clap" }],                 tr: "時間，彷彿什麼都不是。" },
-      { time: 25, jp: [{ text: "[clap]あの日まで流れ、着いた", tag: "clap" }],                 tr: "一路流淌，終於抵達那一天" },
-      { time: 29.5, jp: [{ text: "[clap]鈍い足取りは", tag: "clap" }],                 tr: "緩慢步伐" },
-      { time: 34, jp: [{ text: "[clap]甘い香りに誘われて", tag: "clap" }],                 tr: "被甜美的香味所吸引" },
-      { time: 38.5, jp: [{ text: "[clap]突き刺す音で体が揺れる", tag: "clap" }],                 tr: "我被刺傷的聲音嚇壞了。" },
-      { time: 45, jp: [{ text: "[clap]予感がした", tag: "clap" }],                 tr: "我有預感。" },
-      { time: 47, jp: [{ text: "[clap]まるで出会うことを知ってたかのように", tag: "clap" }],                 tr: "就好像他們知道他們會見面一樣" },
-      { time: 54.5, jp: "[wave]今虜になっていく",                 tr: "馬上成為囚犯" },
-      { time: 56.5, jp: "[wave]それはトキメクパッションで",                 tr: "那是令人心動的熱情" },
-      { time: 58.5, jp: "[wave]滑り込んで、瞳奪っていく",                 tr: "走近一點，他搶走了他的眼睛" },
-      { time: 61, jp: "[wave]ほらまだ眩しいよ",                 tr: "聽著，你還是讓人眼花繚亂。" },
-      { time: 63, jp: "[wave]あれ、虜になっていく",                 tr: "哎呀，我們去囚禁吧。" },
-      { time: 65, jp: "[wave]あの魅惑のパッションに",                 tr: "以那種迷人的方式" },
-      { time: 67.5, jp: "[wave]滑り込んできた小悪魔も",                 tr: "稍微接近的邪靈" },
-      { time: 69.5, jp: "[wave]ほら、踊り出して もう ",                 tr: "聽著，是時候開始跳舞了" },
-      { time: 72, jp: "[wave]それは、目まぐるしく笑い",                 tr: "那是笑得眼花繚亂" },
-      { time: 76, jp: "[wave]目を塞いでも、また思い出すように",                 tr: "彷彿還在腦海中想著擋住雪" },
-      { time: 81, jp: "[wave]眩暈がするほど強い光",                 tr: "光線強到足以暈眩" },
-      { time: 84.5, jp: "[wave]言葉足らずの",                 tr: "無需解釋。" },
-      { time: 87, jp: "[wave]それは瞳惚れ",                 tr: "那是為瞳孔著迷" },
-      { time: 90, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 99.5, jp: [{ text: "[clap]あの日から時は", tag: "clap" }],                 tr: "從那天起，時間是" },
-      { time: 104, jp: [{ text: "[clap]重くなり止まり出した", tag: "clap" }],                 tr: "它變得沉重，開始停下來。" },
-      { time: 108, jp: [{ text: "[clap]迷う秒針はあの日の魔法に惑わされ", tag: "clap" }],                 tr: "流浪的秒針被當天的魔法所佔據" },
-      { time: 116.5, jp: [{ text: "[clap]きっと 心がもたないね", tag: "chant" }],                 tr: "心一定撐不住吧" },
-      { time: 119, jp: [{ text: "[clap]煮詰まり思いが噴き出て", tag: "clap" }],                 tr: "我昏昏欲睡的心跳了起來。" },
-      { time: 122.5, jp: [{ text: "[clap]しまいそうなほど", tag: "clap" }],                 tr: "在某種程度上，" },
-      { time: 125.5, jp: [{ text: "[clap]見間違いじゃないね", tag: "chant" }],                 tr: "您看起來沒錯" },
-      { time: 128, jp: [{ text: "[clap]迷う秒針が焦って", tag: "clap" }],                 tr: "流浪的秒針變得焦躁不安" },
-      { time: 131, jp: [{ text: "[clap]巻き戻り出す前に", tag: "clap" }],                 tr: "在你回去之前" },
-      { time: 134.5, jp: [{ text: "[clap]背けるたびに体が揺れる", tag: "clap" }],                 tr: "每次我轉身，我的身體都會顫抖" },
-      { time: 141, jp: [{ text: "[clap]予感がした", tag: "clap" }],                 tr: "我有預感。" },
-      { time: 143, jp: [{ text: "[clap]それは逃げることを知ってたかのように", tag: "clap" }],                 tr: "它彷彿早已知道如何逃離" },
-      { time: 150.5, jp: "[wave]また虜になっていく",                 tr: "再次成為囚犯" },
-      { time: 152.5, jp: "[wave]それはトキメクパッションで",                 tr: "那是令人心動的熱情" },
-      { time: 155, jp: "[wave]滑り込んで、瞳奪っていく",                 tr: "走近一點，他搶走了他的眼睛" },
-      { time: 157, jp: "[wave]ほらまだ眩しいよ",                 tr: "聽著，你還是讓人眼花繚亂。" },
-      { time: 159, jp: "[wave]あれ、虜になっていく",                 tr: "哎呀，我們去囚禁吧。" },
-      { time: 161, jp: "[wave]あの魅惑のパッションに",                 tr: "以那種迷人的方式" },
-      { time: 163.5, jp: "[wave]滑り込んできた小悪魔も",                 tr: "稍微接近的邪靈" },
-      { time: 165.5, jp: "[wave]ほら、踊り出して もう",                 tr: "聽著，是時候開始跳舞了" },
-      { time: 185.5, jp: "その瞳放つ、風邪で体が痺れる",                 tr: "那雙眼睛綻放的光，讓身體因風而麻痺" },
-      { time: 193.5, jp: "予感がした",                 tr: "我有預感。" },
-      { time: 195.5, jp: "振り返れば時が進んでく",                 tr: "如果你回頭看，時間會流逝" },
-      { time: 201, jp: "落ちるように",                 tr: "喜歡摔倒" },
-      { time: 204, jp: "[wave]今虜になっていく",                 tr: "馬上成為囚犯" },
-      { time: 206, jp: "[wave]それはトキメクパッションで",                 tr: "那是令人心動的熱情" },
-      { time: 208, jp: "[wave]滑り込んで、瞳奪っていく",                 tr: "走近一點，他搶走了他的眼睛" },
-      { time: 210.5, jp: "[wave]ほらまだ眩しいよ",                 tr: "聽著，你還是讓人眼花繚亂。" },
-      { time: 213, jp: "[wave]あれ、虜になっていく",                 tr: "哎呀，我們去囚禁吧。" },
-      { time: 215, jp: "[wave]あの魅惑のパッションに",                 tr: "以那種迷人的方式" },
-      { time: 217, jp: "[wave]滑り込んできた小悪魔も",                 tr: "稍微接近的邪靈" },
-      { time: 219, jp: "[wave]ほら、踊り出して もう",                 tr: "聽著，是時候開始跳舞了" },
-      { time: 222, jp: "[wave]それは、目まぐるしく笑い",                 tr: "那是笑得眼花繚亂" },
-      { time: 225.5, jp: "[wave]目を塞いでも、また思い出すように",                 tr: "彷彿還在腦海中想著擋住雪" },
-      { time: 230.5, jp: "[wave]眩暈がするほど強い光",                 tr: "光線強到足以暈眩" },
-      { time: 234, jp: "[wave]言葉足らずの",                 tr: "無需解釋。" },
-      { time: 236.5, jp: "[wave]それは瞳惚れ",                 tr: "那是為瞳孔著迷" },
-    ],
-  },
-  {
-    id: "SekainoHimitsu",
-    title: "世界的秘密 (世界の秘密)",
-    translationCredit: "Smiecj",
-    translationCreditUrl: "https://smiecj.com/2023/05/07/vaundy-sekainohimitu/",
-    translationSourceUrl: "https://smiecj.com/2023/05/07/vaundy-sekainohimitu/",
-    translationLicense: "CC BY-NC-SA 4.0",
-    translationLicenseUrl: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    youtubeId: "xFoTFCHU70s",
-    lyrics: [
-      { time: 14, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 27, jp: [{ text: "[clap]きっと僕ら何かに追われてる", tag: "clap" }],                 tr: "一直在被什麼推著前進的我們" },
-      { time: 30.5, jp: [{ text: "[clap]漠然としてるけど", tag: "clap" }],                 tr: "有時也會陷入迷茫" },
-      { time: 32.5, jp: [{ text: "[clap]四六時中グダグダと チクチクが流れる", tag: "clap" }],                 tr: "即使這樣，也會選擇無所事事地度過一天　任由不安的聲音拂過耳邊" },
-      { time: 36.5, jp: [{ text: "[clap]波に乗せて ネットサーフィン", tag: "clap" }],                 tr: "跟著網路的節奏　思想隨波逐流" },
-      { time: 39.5, jp: [{ text: "[clap]何か、これはあーだこーだ言って 古臭いな", tag: "clap" }],                 tr: "我們總是說著「啊，這不就是那個啥嗎　早就過氣了呀」" },
-      { time: 42.5, jp: [{ text: "[clap]それはそれで、なんだかんだ言って 新しいな", tag: "clap" }],                 tr: "「咦，快看那個那個　有點新意哦」" },
-      { time: 45.5, jp: [{ text: "[clap]そんな無駄な繰り返しを、また繰り返して", tag: "clap" }],                 tr: "就這樣無聊的對話，重複來重複去" },
-      { time: 48.5, jp: [{ text: "[clap]僕ら、生きていくうちに", tag: "clap" }],                 tr: "我們就是按這種方式生活的吧" },
-      { time: 51.5, jp: [{ text: "[clap]I'm sorry 気づいちゃったよ x 2", tag: "clap" }],                 tr: "I am sorry　我注意到了　I am sorry　我發現了" },
-      { time: 62, jp: [{ text: "[clap]世界のこと", tag: "clap" }],                 tr: "關於世界的事情" },
-      { time: 63.5, jp: [{ text: "[clap]ステップだけ x 2 置いてきちゃってよ", tag: "clap" }],                 tr: "唯有前進，唯有前進，放下內心的煩惱" },
-      { time: 69, jp: [{ text: "[clap]僕ら、涙に合わせて", tag: "clap" }],                 tr: "我們啊，就是這樣　感動落淚　感同身受" },
-      { time: 72.5, jp: [{ text: "[clap]リズムに乗っている はず", tag: "clap" }],                 tr: "才能跟著旋律，悠然起舞吧" },
-      { time: 75.5, jp: [{ text: "[clap]ステップだけ x 2 置いてきちゃっても", tag: "clap" }],                 tr: "唯有向前，唯有向前，釋放內心的負擔" },
-      { time: 81, jp: [{ text: "[clap]僕ら、笑顔の数だけ", tag: "clap" }],                 tr: "我們啊，就是這樣　無憂無慮　無數次歡笑" },
-      { time: 84.5, jp: [{ text: "[clap]ブレイクできるはず だから", tag: "clap" }],                 tr: "才能瞭解自己，突破瓶頸吧　所以啊" },
-      { time: 87.5, jp: [{ text: "[clap]I'm sorry 気づいちゃっても", tag: "clap" }],                 tr: "I am sorry　即使是注意到了" },
-      { time: 93.5, jp: [{ text: "[clap]I'm sorry 忘れといてよ", tag: "clap" }],                 tr: "I am sorry　還是把它忘了吧" },
-      { time: 99.5, jp: [{ text: "[clap]今日どっかで悪者が死んだらしい", tag: "clap" }],                 tr: "今天好像在哪裡有「壞人」離開了世界" },
-      { time: 102.5, jp: [{ text: "[clap]でもたくさんの命が救われたらしい", tag: "clap" }],                 tr: "但也有很多人的生命因此得救了" },
-      { time: 105.5, jp: [{ text: "[clap]正義と倫理と命を天秤にかけて", tag: "clap" }],                 tr: "我們總是端量著正義、倫理和生命的天平" },
-      { time: 110, jp: [{ text: "[clap]量った声明で", tag: "clap" }],                 tr: "然後說出自己的見解" },
-      { time: 111.5, jp: [{ text: "[clap]難しいことはもう分からない けれど", tag: "clap" }],                 tr: "複雜點的東西我也說不準　然而" },
-      { time: 115, jp: [{ text: "[clap]実は僕らが悪者だったかもしれない", tag: "clap" }],                 tr: "我們是否也曾經站在了壞人那一邊呢" },
-      { time: 119, jp: [{ text: "[clap]なんて考えると", tag: "clap" }],                 tr: "有時也這麼想著" },
-      { time: 120.5, jp: [{ text: "[clap]彼の気持ちが分かるかもしれない", tag: "clap" }],                 tr: "也許就能理解那個人的心情了吧" },
-      { time: 123.5, jp: [{ text: "[clap]I'm sorry 気づいちゃったよ x 2", tag: "clap" }],                 tr: "I am sorry　我注意到了哦　I am sorry　我發現了哦" },
-      { time: 134, jp: [{ text: "[clap]自分のこと", tag: "clap" }],                 tr: "關於自己的秘密" },
-      { time: 135.5, jp: [{ text: "[clap]ステップだけ x 2 置いてきちゃってよ", tag: "clap" }],                 tr: "唯有前進，唯有前進，放下內心的煩惱" },
-      { time: 140.5, jp: [{ text: "[clap]僕ら、涙に合わせて", tag: "clap" }],                 tr: "我們啊，就是這樣　感動落淚　感同身受" },
-      { time: 144.5, jp: [{ text: "[clap]リズムに乗っている はず", tag: "clap" }],                 tr: "才能跟著旋律，悠然起舞吧　那麼" },
-      { time: 147.5, jp: [{ text: "[clap]ステップだけ x 2 置いてきちゃっても", tag: "clap" }],                 tr: "唯有向前，唯有向前，釋放內心的負擔" },
-      { time: 153, jp: [{ text: "[clap]僕ら、笑顔の数だけ", tag: "clap" }],                 tr: "我們啊，就是這樣　無憂無慮　無數次歡笑" },
-      { time: 156.5, jp: [{ text: "[clap]ブレイクできるはず そうだろ？", tag: "clap" }],                 tr: "才能突破自己，創造未來　就是這樣的吧？" },
-      { time: 160, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 171.5, jp: [{ text: "[clap]探してた未来に追いついて", tag: "clap" }],                 tr: "向著曾經憧憬的未來追尋而去" },
-      { time: 174.5, jp: [{ text: "[clap]その時初めて気づいたんだ", tag: "clap" }],                 tr: "到那時，才終於發覺" },
-      { time: 177.5, jp: [{ text: "[clap]これが良い事か悪い事か", tag: "clap" }],                 tr: "這種追求，到底是不是個好事呢" },
-      { time: 180.5, jp: [{ text: "[clap]これが「世界の秘密」ってやつか", tag: "clap" }],                 tr: "這其實就是所謂的「世界的秘密」吧" },
-      { time: 184, jp: [{ text: "[clap]ステップだけ x 2 置いてきちゃってよ", tag: "clap" }],                 tr: "唯有前進，唯有前進，放下內心的煩惱" },
-      { time: 189, jp: [{ text: "[clap]僕ら、涙に合わせて", tag: "clap" }],                 tr: "我們啊，就是這樣　感動落淚　感同身受" },
-      { time: 192.5, jp: [{ text: "[clap]リズムに乗っている はず", tag: "clap" }],                 tr: "才能跟著旋律，悠然起舞吧　那麼" },
-      { time: 196, jp: [{ text: "[clap]ステップだけ x2 置いてきちゃっても", tag: "clap" }],                 tr: "唯有向前，唯有向前，釋放內心的負擔" },
-      { time: 201, jp: [{ text: "[clap]僕ら、笑顔の数だけ", tag: "clap" }],                 tr: "我們啊，就是這樣　無憂無慮　無數次歡笑" },
-      { time: 204.5, jp: [{ text: "[clap]ブレイクできるはず そうだろ？", tag: "clap" }],                 tr: "才能突破自己，創造未來　就是這樣的吧？" },
-      { time: 208, jp: [{ text: "[clap]ステップだけ x 4", tag: "chant" }],                 tr: "唯有前進 ×4" },
-    ],
-  },
-  {
-    id: "Wasuremono",
-    title: "遺忘之物 (忘れ物)",
-    youtubeId: "tQq8C7irREk",
-    lyrics: [
-      { time: 15.5, jp: "僕らはきっと",                 tr: "我們一定會" },
-      { time: 17.5, jp: "そこらにある物じゃ 足りなかった",                 tr: "光是去那裡是不夠的。" },
-      { time: 24.5, jp: "僕らはずっと",                 tr: "我們繼續" },
-      { time: 27, jp: "近くの愛をそっと 拾いあってた",                 tr: "我正在拾取附近的愛情" },
-      { time: 32, jp: "凛として何もないアルバムを覗いた",                 tr: "我凝視著空無一物的相簿" },
-      { time: 39, jp: "笑ったふりして",                 tr: "假裝笑" },
-      { time: 42, jp: "[wave]帰ろうか",                 tr: "我應該回去嗎？" },
-      { time: 45, jp: "[wave]笑ったふりして ここで",                 tr: "我也把我所有的回憶都放在這裡和這裡" },
-      { time: 51, jp: "[wave]泣けるシーンが来た数だけ ほら",                 tr: " 看看讓我流淚的場景數量。" },
-      { time: 57.5, jp: "[wave]忘れ物してんだって",                 tr: "有些事情我忘了。" },
-      { time: 70.5, jp: "僕らはきっと",                 tr: "我們一定會" },
-      { time: 72.5, jp: "涙をそっと拾う 余暇はなかった",                 tr: "我無法承擔眼淚汪汪地撿起它" },
-      { time: 77.5, jp: "だから僕らはずっと",                 tr: "因此，我們將繼續" },
-      { time: 81.5, jp: "互いの幸福を 睨みあっている",                 tr: "他們互相盯著對方尋求幸福。" },
-      { time: 87, jp: "凛として凍りつき",                 tr: "凍死" },
-      { time: 89.5, jp: "傷み出した心が放った",                 tr: "破碎的心吐了出來。" },
-      { time: 96, jp: "「時として、許しあうこと がそもそもの罪だ」",                 tr: "有時候，原諒是錯誤的。" },
-      { time: 103, jp: "諦めもついた",                 tr: "我辭職了。" },
-      { time: 106, jp: "[wave]帰ろうか",                 tr: "我應該回去嗎？" },
-      { time: 109, jp: "[wave]笑ったふりして ここで",                 tr: "我也把我所有的回憶都放在這裡和這裡" },
-      { time: 115, jp: "[wave]泣けるシーンが来た数だけ ほら",                 tr: " 看看讓我流淚的場景數量。" },
-      { time: 121, jp: "[wave]忘れ物してんだって",                 tr: "有些事情我忘了。" },
-      { time: 125, jp: "時が過ぎとも",                 tr: "隨著時間的推移" },
-      { time: 129.5, jp: "「それ」は切れぬ、碇となる",                 tr: "它變成一個牢不可破的錨" },
-      { time: 134, jp: "忘れていいよ 忘れていいよ",                 tr: "忘了也好，忘了也好" },
-      { time: 138.5, jp: "でもね、そう辛い時は",                 tr: "儘管如此，當它那麼困難時" },
-      { time: 146, jp: "立ち止まって 泣いてもいいぜ",                 tr: "停下來哭也沒關係" },
-      { time: 151.5, jp: "[wave]帰ろうか",                 tr: "我應該回去嗎？" },
-      { time: 154.5, jp: "[wave]思い出よ全部ここにおいで あぁ ここで",                 tr: "所有的回憶，聚集在這裡，啊，這裡" },
-      { time: 160.5, jp: "[wave]泣けるシーンが来た数だけ",                 tr: " 盡可能多的眼淚有場景" },
-      { time: 166, jp: "[wave]まぁ、拾っても最後に笑えんなら",                 tr: "好吧，就算你把它撿起來，看看你最後能不能笑出來。" },
-      { time: 173.5, jp: "[wave]ほら ぎゅっと掴め忘れ物",                 tr: "看看你緊緊抓住的東西，然後忘記" },
-    ],
-  },
-   {
-    id: "Timeparadox",
-    title: "時間悖論 (タイムパラドックス)",
-    translationCredit: "藍色小樹熊",
-    translationCreditUrl: "https://bluekokomurmur.com/lyrics/vaundy-taimu-paradokkusu/",
-    translationSourceUrl: "https://bluekokomurmur.com/lyrics/vaundy-taimu-paradokkusu/",
-    youtubeId: "ewhRE-BvJCg",
-    lyrics: [
-      { time: 11.5, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 24.5, jp: [{ text: "[clap]あのね君と出会ったことを今でも", tag: "clap" }],                 tr: "你知道嗎，和你相遇的那一刻" },
-      { time: 31.5, jp: [{ text: "[clap]ずっと覚えているけど", tag: "clap" }],                 tr: "我現在仍然記得很清楚" },
-      { time: 36, jp: [{ text: "[clap]でもね それは ずっと先の未来の話を", tag: "clap" }],                 tr: "但是呢，那就像是在旁邊看著" },
-      { time: 43.5, jp: [{ text: "[clap]横で見てるみたいなの", tag: "clap" }],                 tr: "遙遠未來的故事一樣" },
-      { time: 48, jp: [{ text: "[clap]もしも君の願い一つ叶うとする", tag: "clap" }],                 tr: "如果能讓你的一個願望成真" },
-      { time: 56.5, jp: [{ text: "[clap]未来変えるとする いや", tag: "clap" }],                 tr: "我選擇改變未來　不，你知道嗎" },
-      { time: 59.5, jp: [{ text: "[clap]あのね僕のポケットの未来を覗いて", tag: "clap" }],                 tr: "偷看了一下我口袋裡的未來" },
-      { time: 67, jp: [{ text: "[clap]きっと笑ってくれるから", tag: "clap" }],                 tr: "我相信你一定會笑的" },
-      { time: 71, jp: [{ text: "[clap]これは いつか この先出会うあなたの", tag: "clap" }],                 tr: "因為這是　為了讓在未來相遇的你" },
-      { time: 78.5, jp: [{ text: "[clap]痛み一つ拭う魔法", tag: "clap" }],                 tr: "擦去痛苦的一種魔法" },
-      { time: 83.5, jp: [{ text: "[clap]僕らの抱えてる魔法には", tag: "clap" }],                 tr: "我們所擁有的魔法總是" },
-      { time: 89, jp: [{ text: "[clap]いつも一つ小さな秘密があって", tag: "clap" }],                 tr: "藏著一個小小的秘密" },
-      { time: 95, jp: [{ text: "[clap]どうしても一人じゃ使えないのさ", tag: "clap" }],                 tr: "無論如何都無法獨自使用的" },
-      { time: 103.5, jp: [{ text: "[clap]だから聞いて", tag: "clap" }],                 tr: "所以，請聽我說" },
-      { time: 106, jp: [{ text: "[clap]ねぇ あのね君のポケットの未来を覗いて", tag: "clap" }],                 tr: "吶，你知道嗎　偷看了一下你口袋裡的未來" },
-      { time: 114, jp: [{ text: "[clap]きっと笑ってくれるから", tag: "clap" }],                 tr: "我相信你一定會笑的" },
-      { time: 118, jp: [{ text: "[clap]これは いつか この先出会うあなたの", tag: "clap" }],                 tr: "因為這是　為了讓在未來相遇的你" },
-      { time: 125.5, jp: [{ text: "[clap]痛み一つ拭う魔法", tag: "clap" }],                 tr: "擦去痛苦的一種魔法" },
-      { time: 130, jp: [{ text: "[clap]ねぇ ほら しまっておきなよ", tag: "clap" }],                 tr: "吶，聽著　把它好好收起來" },
-      { time: 136, jp: [{ text: "[clap]どうしても拭えない痛みが", tag: "clap" }],                 tr: "有些疼痛是無論如何都無法撫平的" },
-      { time: 142, jp: [{ text: "[clap]君を襲いかかる時がくるさ", tag: "clap" }],                 tr: "當痛楚襲來時" },
-      { time: 147.5, jp: [{ text: "[clap]そんなときは君もその魔法の力を", tag: "clap" }],                 tr: "那時候　試著把你的那股魔法的力量" },
-      { time: 156, jp: [{ text: "[clap]唱えてみて", tag: "clap" }],                 tr: "詠唱出來吧" },
-      { time: 158.5, jp: [{ text: "[clap]ねぇ あのね僕のポケットの未来の君はね", tag: "clap" }],                 tr: "吶，你知道嗎，我口袋裡的未來的你" },
-      { time: 166, jp: [{ text: "[clap]いつも笑ってるんだよ", tag: "clap" }],                 tr: "總是笑著" },
-      { time: 171, jp: [{ text: "[clap]だから君のポケットの未来の僕もね", tag: "clap" }],                 tr: "所以，希望你口袋裡的未來的我也" },
-      { time: 178, jp: [{ text: "[clap]笑っててほしいから", tag: "clap" }],                 tr: "能保持微笑" },
-      { time: 182.5, jp: [{ text: "[clap]ねぇ 笑っててほしいから", tag: "clap" }],                 tr: "因為希望看到你笑" },
-      { time: 188.5, jp: [{ text: "[clap]ねぇ 笑っててくれよ", tag: "clap" }],                 tr: "所以，請繼續笑吧" },
-
-
-    ],
-  },
-  {
-    id: "TodomenoIchigeki",
-    title: "最後一擊 (トドメの一撃)",
-    translationCredit: "Smiecj",
-    translationCreditUrl: "https://smiecj.com/2023/10/08/vaundy-todome/",
-    translationSourceUrl: "https://smiecj.com/2023/10/08/vaundy-todome/",
-    translationLicense: "CC BY-NC-SA 4.0",
-    translationLicenseUrl: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
-    youtubeId: "7xRWOylrLfI",
-    lyrics: [
-      { time: 7, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 26.5, jp: [{ text: "[clap]視界に目前映る深い真紅", tag: "clap" }],                 tr: "飄入眼中的，是那抹深邃的暗紅" },
-      { time: 36, jp: [{ text: "[clap]この先およそ 40000km", tag: "clap" }],                 tr: "在我們前方，彷彿還有四萬公里的漫漫長路" },
-      { time: 46, jp: "後ろに迫る互いの傷が",                 tr: "緊緊追隨著我們，曾經給彼此的傷害" },
-      { time: 51, jp: "迷う道をさらに迷わせてく",                 tr: "讓原本就迷茫的前途，更加撲朔迷離" },
-      { time: 56, jp: "見えず匂わぬ、違えぬ未来が",                 tr: "看不見摸不著　彼此截然不同的未來" },
-      { time: 60.5, jp: "背中を突いた！",                 tr: "突然衝向我的後背" },
-      { time: 62, jp: [{ text: "[wave]だから", tag: "chant" }],                 tr: "所以啊" },
-      { time: 63.5, jp: [{ text: "[wave]今日の夜は隣にいさせて", tag: "chant" }],                 tr: "今晚就待在我身邊吧　讓我在你身邊" },
-      { time: 73, jp: [{ text: "[wave]今夜だけは本気だからね", tag: "chant" }],                 tr: "這份認真只限今夜哦　接受這份真心吧" },
-      { time: 82, jp: "[wave]こっちにきてもっと",                 tr: "再過來一點" },
-      { time: 84.5, jp: [{ text: "[wave]祈りあった未来とて", tag: "chant" }],                 tr: "一同期待的未來，但" },
-      { time: 87, jp: [{ text: "[wave]道が違うのよ アナタ", tag: "chant" }],                 tr: "路途些許不同的你哦" },
-      { time: 94, jp: [{ text: "[wave]互いの殺意で", tag: "chant" }],                 tr: "就讓我們帶上對彼此的殺意" },
-      { time: 96.5, jp: [{ text: "[wave]トドメ喰らっちゃうね", tag: "chant" }],                 tr: "使出致命一擊，相迎對方吧" },
-      { time: 101, jp: "[wave]やっぱりやめとくわ",                 tr: "想想還是算了吧" },
-      { time: 104, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 122, jp: "行く、万年の困難が待つ道",                 tr: "出發吧，前方等待著的是萬年荊棘之路" },
-      { time: 124.5, jp: "内、四千は光死ぬ常闇",                 tr: "仔細看，還有那千年都未曾照亮的地獄" },
-      { time: 127, jp: "さらに続き、絶えぬ更地",                 tr: "再繼續，只會是無窮無盡的荒地" },
-      { time: 129, jp: "そこに現れた",                 tr: "未曾想，這裡竟然出現了" },
-      { time: 130.5, jp: "心見透かすちっぽけな魂",                 tr: "看透我們內心的一隻微小靈魂" },
-      { time: 133, jp: "それは散らばるミクロ砂金",                 tr: "那是無數細散的沙子" },
-      { time: 135, jp: "手のひらに集め",                 tr: "在手中凝聚" },
-      { time: 136.5, jp: "密度高め万年を照らす光の矢を放つ、穿つ",                 tr: "放出了足以照亮萬年天空的光芒，穿透內心" },
-      { time: 142.5, jp: "こういうのとか そういうのとか",                 tr: "這樣的微微小事　那樣的絲絲溫馨" },
-      { time: 152, jp: "偽物じゃできないよね",                 tr: "憑虛偽之物，可是做不到的哦" },
-      { time: 155, jp: [{ text: "[wave]だから", tag: "chant" }],                 tr: "所以啊" },
-      { time: 159.5, jp: [{ text: "[wave]今日の夜は隣にいさせて", tag: "chant" }],                 tr: "今晚就待在我身邊吧　讓我在你身邊" },
-      { time: 169, jp: [{ text: "[wave]今夜だけは本気だからね", tag: "chant" }],                 tr: "我的認真只限今夜哦　接受這份真心吧" },
-      { time: 178, jp: "[wave]こっちにきてもっと",                 tr: "再過來一點" },
-      { time: 180.5, jp: [{ text: "[wave]祈りあった未来とて", tag: "chant" }],                 tr: "一同期待的未來，但" },
-      { time: 183, jp: [{ text: "[wave]道が違うのよ アナタ", tag: "chant" }],                 tr: "路途些許不同的你哦" },
-      { time: 190, jp: [{ text: "[wave]互いの殺意で", tag: "chant" }],                 tr: "就讓我們帶上對彼此的殺意" },
-      { time: 192.5, jp: [{ text: "[wave]トドメ喰らっちゃうね", tag: "chant" }],                 tr: "使出致命一擊，相迎對方吧" },
-      { time: 197, jp: "[wave]やっぱりやめとくわ",                 tr: "想想還是算了吧" },
-      { time: 200, jp: [{ text: "[clap]", tag: "clap" }],              },
-      { time: 219, jp: "もしもどこまでも続くなら",                 tr: "如果啊，我們之間的故事，不管怎樣都會繼續下去" },
-      { time: 228, jp: "せめて今日の一度だけ",                 tr: "哪怕只有今宵佳日，也盡情地依靠我吧！" },
-      { time: 236, jp: [{ text: "[wave]今日の夜はワタシにさせて", tag: "chant" }],                 tr: "今晚就陪在我身邊吧！" },
-      { time: 246, jp: [{ text: "[wave]今夜だけはワタシに守らせて", tag: "chant" }],                 tr: "哪怕只有今夜，也讓我好好守護你吧！" },
-      { time: 256, jp: [{ text: "[wave]今日の夜が明けたころに", tag: "chant" }],                 tr: "如此美妙之夜啊！" },
-      { time: 262, jp: [{ text: "[wave]待ち合わせね", tag: "chant" }],                 tr: "到破曉之時，我們繼續約會吧" },
-      { time: 265, jp: [{ text: "[wave]明日の夜も守れますように", tag: "chant" }],                 tr: "只為明夜，也能一直守護著你" },
-      { time: 274, jp: "[wave]こっちにきてもっと",                 tr: "再靠近我一點吧！" },
-      { time: 276.5, jp: [{ text: "[wave]祈りあった未来とて", tag: "chant" }],                 tr: "一同期待的未來，但" },
-      { time: 279, jp: [{ text: "[wave]道が違うのよ アナタ", tag: "chant" }],                 tr: "路途些許不同的你" },
-      { time: 286, jp: [{ text: "[wave]互いの殺意で", tag: "chant" }],                 tr: "親愛的你啊　帶上對彼此的殺意" },
-      { time: 288.5, jp: [{ text: "[wave]トドメ喰らっちゃうね", tag: "chant" }],                 tr: "用致命一擊迎接對方吧！" },
-      { time: 293.5, jp: "[wave]ワタシにさせて",                 tr: "一切都交給我吧" },
-      { time: 295.5, jp: [{ text: "[wave]祈りあった未来とて", tag: "chant" }],                 tr: "一同期待的未來，但" },
-      { time: 298, jp: [{ text: "[wave]道が違うのよ アナタ", tag: "chant" }],                 tr: "路途些許不同的你" },
-      { time: 305, jp: [{ text: "[wave]互いの殺意で", tag: "chant" }],                 tr: "親愛的你啊" },
-      { time: 307.5, jp: [{ text: "[wave]トドメ喰らっちゃうね", tag: "chant" }],                 tr: "帶上對彼此的殺意，用致命一擊迎接對方吧！" },
-      { time: 312, jp: [{ text: "[wave]やっぱりやめとくわ", tag: "chant" }],                 tr: "想想還是算了吧" },
-    ],
-  },
-  {
-    id: " Kimagure",
-    title: "任性 (気まぐれ)",
-    youtubeId: "uYyfD5A-w8Q",
-    lyrics: [
-      { time: 4.5, jp: "むせるほど、猛烈な",                 tr: "令人嘆為觀止，兇猛" },
-      { time: 10.5, jp: "時間が経っている",                 tr: "因為時間在流逝" },
-      { time: 15, jp: "喉の奥、堤防は",                 tr: "在喉嚨內，堤防" },
-      { time: 21, jp: "苔が詰まって そのドキドキを 忘れぬよう",                 tr: "別忘了敲打聲，因為苔蘚充滿了它。" },
-      { time: 29.5, jp: "記憶の波に 紛れぬよう",                 tr: "避免被記憶的浪潮沖走" },
-      { time: 34, jp: "君の気まぐれに、そっと肩を寄せ",                 tr: "順著你的任性，輕輕靠近你的肩膀" },
-      { time: 39.5, jp: "二人あせばむ時間を詩にしよう。",                 tr: "讓我們把你們兩個汗流浹背的時間寫成一首詩" },
-      { time: 45, jp: "ひゅるり 首元、風の音",                 tr: "風的聲音觸及旋轉的脖子的頸背" },
-      { time: 50.5, jp: "今、涼しさを感じている。",                 tr: "現在，我感覺很好。" },
-      { time: 56, jp: "君の気まぐれで、ふわぁっと咲く花と",                 tr: "花朵隨心所欲地綻放" },
-      { time: 61, jp: "そこで鳴り止まぬ蝉を詩にしよう。",                 tr: "讓我們把一隻不停哭泣的蟬變成一首詩吧。" },
-      { time: 66.5, jp: "ひゅるり 指先、触れる音",                 tr: "指尖抽搐觸碰的聲音" },
-      { time: 72, jp: "まだ、愛しさを感じているまま。",                 tr: "儘管如此，感覺還是很可愛。" },
-      { time: 80, jp: "かがむほど、強烈な",                 tr: "蜷縮起來，緊張" },
-      { time: 86, jp: "時間が経っている",                 tr: "因為時間在流逝" },
-      { time: 90.5, jp: "筋残る、乳酸は",                 tr: "肌肉中剩餘的乳酸" },
-      { time: 97, jp: "溜まり溜まって そのドキドキが",                 tr: "堆積起來，堆積起來，砰的一聲"  },
-      { time: 102, jp: "薄れぬよう",                 tr: "別讓它褪色" },
-      { time: 105, jp: "豪雨に打たれ 錆びれぬよう",                 tr: "避免大雨和銹蝕" },
-      { time: 109.5, jp: "君の気まぐれに、そっと肩を寄せ",                 tr: "順著你的任性，輕輕靠近你的肩膀" },
-      { time: 115, jp: "二人あせばむ時間を詩にしよう。",                 tr: "讓我們把你們兩個汗流浹背的時間寫成一首詩" },
-      { time: 120.5, jp: "ひゅるり 首元、風の音",                 tr: "風的聲音觸及旋轉的脖子的頸背" },
-      { time: 126, jp: "今、涼しさを感じているから",                 tr: "現在，我感覺很好。" },
-      { time: 153.5, jp: "このドキドキが 途切れぬよう",                 tr: "願這份悸動不會中斷" },
-      { time: 158.5, jp: "明日もその先も 歌えるよう",                 tr: "這樣我就可以唱明天和接下來的歌" },
-      { time: 163.5, jp: "君の気まぐれに、そっと肩を寄せ",                 tr: "順著你的任性，輕輕靠近你的肩膀" },
-      { time: 169, jp: "二人あせばむ時間を詩にしよう。",                 tr: "讓我們把你們兩個汗流浹背的時間寫成一首詩" },
-      { time: 174, jp: "ひゅるり 首元、風の音",                 tr: "風的聲音觸及旋轉的脖子的頸背" },
-      { time: 180, jp: "今、涼しさを感じている。",                 tr: "現在，我感覺很好。" },
-      { time: 185, jp: "君の気まぐれで、ふわぁっと咲く花を",                 tr: "隨心所欲綻放鮮花" },
-      { time: 190.5, jp: "時を止めまたそれを詩にしよう。",                 tr: "讓我們停止計時，讓它再次成為一首詩。" },
-      { time: 196, jp: "ひゅるり 指先、触れる音",                 tr: "指尖觸碰的聲音" },
-      { time: 202, jp: "まだ、愛しさを感じていたいから。",                 tr: "因為我還是想感覺可愛。" },
-
-
-    ],
-  },
-];
-
-/* jp／tr 可以用分段物件與 tag:"chant" 標出合唱段。
-   假名、羅馬拼音與逐字歌詞都以整行字串查表，所以這裡把分段串回
-   原本的字串，分段另存在 jpSegments／trSegments，只給畫面標色使用。 */
-const joinLyricSegments = (segments) => segments
-  .map(seg => typeof seg === "string" ? seg : seg && seg.text || "")
-  .join("");
-
-SONGS.forEach(song => {
-  (song.lyrics || []).forEach(line => {
-    if (Array.isArray(line.jp)){
-      line.jpSegments = line.jp;
-      line.jp = joinLyricSegments(line.jp);
+    "lyricsSourceUrl": "https://lrclib.net/tracks/24709697",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/24709697",
+    "timingPreview": {
+      "youtubeId": "ud0lMojStCs",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5w3jln9",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5w3jln9",
+    "translationProvenance": {
+      "file": "(歌詞)I+Need+U+Back.pdf",
+      "sha256": "8bcbb5ea77d113f7aa8afd424e7d2cce41cd8a1064bb39063cd1342c8014ba3d",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
     }
-    if (Array.isArray(line.tr)){
-      line.trSegments = line.tr;
-      line.tr = joinLyricSegments(line.tr);
+  },
+  "Hachiko": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Take you anywhere I'm ready",
+        "sourceTime": 39.8,
+        "sourceEnd": 44.16,
+        "time": 39.8,
+        "endTime": 44.16,
+        "tr": "我已經準備好，帶你去任何地方",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Give you anything I'm carefree",
+        "sourceTime": 44.16,
+        "sourceEnd": 48.56,
+        "time": 44.16,
+        "endTime": 48.56,
+        "tr": "我對你毫無保留",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Seems like I'm the only thing that you need",
+        "sourceTime": 48.56,
+        "sourceEnd": 52.11,
+        "time": 48.56,
+        "endTime": 52.11,
+        "tr": "我似乎是你唯一所需",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It's easy, not so hard to make you happy",
+        "sourceTime": 52.11,
+        "sourceEnd": 55.69,
+        "time": 52.11,
+        "endTime": 55.69,
+        "tr": "要讓你快樂很容易，不難",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "While everybody's screamin' shoutin'",
+        "sourceTime": 56.63,
+        "sourceEnd": 58.92,
+        "time": 56.63,
+        "endTime": 58.92,
+        "tr": "周圍喧囂紛擾",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "We're so chill out here just vibin'",
+        "sourceTime": 58.92,
+        "sourceEnd": 61.11,
+        "time": 58.92,
+        "endTime": 61.11,
+        "tr": "我們放鬆到不行",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Tryin' to spread this peacefulness with y'all",
+        "sourceTime": 61.11,
+        "sourceEnd": 64.3,
+        "time": 61.11,
+        "endTime": 64.3,
+        "tr": "想和大家分享這份平靜",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Our holiday's just getting started",
+        "sourceTime": 65.34,
+        "sourceEnd": 67.63,
+        "time": 65.34,
+        "endTime": 67.63,
+        "tr": "我們的假期剛開始",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Just be kind and open hearted",
+        "sourceTime": 67.63,
+        "sourceEnd": 69.81,
+        "time": 67.63,
+        "endTime": 69.81,
+        "tr": "只要善良並敞開心扉",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Feel the breeze and let God bless us all",
+        "sourceTime": 69.81,
+        "sourceEnd": 73.21,
+        "time": 69.81,
+        "endTime": 73.21,
+        "tr": "感受微風與神的祝福",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 74.26,
+        "sourceEnd": 76.35,
+        "time": 74.26,
+        "endTime": 76.35,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 76.35,
+        "sourceEnd": 78.57,
+        "time": 76.35,
+        "endTime": 78.57,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 78.57,
+        "sourceEnd": 80.75,
+        "time": 78.57,
+        "endTime": 80.75,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 80.75,
+        "sourceEnd": 82.52,
+        "time": 80.75,
+        "endTime": 82.52,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "You've been patiently waiting for me",
+        "sourceTime": 82.87,
+        "sourceEnd": 91.69,
+        "time": 82.87,
+        "endTime": 91.69,
+        "tr": "你耐心等著我",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been patiently waiting for me",
+        "sourceTime": 91.69,
+        "sourceEnd": 100.39,
+        "time": 91.69,
+        "endTime": 100.39,
+        "tr": "你耐心等著我",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 100.39,
+        "sourceEnd": 102.59,
+        "time": 100.39,
+        "endTime": 102.59,
+        "tr": "(要去哪裡呢 八公…)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time I'll never let you go",
+        "sourceTime": 102.59,
+        "sourceEnd": 104.74,
+        "time": 102.59,
+        "endTime": 104.74,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 104.74,
+        "sourceEnd": 106.97,
+        "time": 104.74,
+        "endTime": 106.97,
+        "tr": "(要去哪裡呢 八公…)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time I'll never let you go",
+        "sourceTime": 106.97,
+        "sourceEnd": 109.15,
+        "time": 106.97,
+        "endTime": 109.15,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been patiently waiting for me",
+        "sourceTime": 109.15,
+        "sourceEnd": 117.79,
+        "time": 109.15,
+        "endTime": 117.79,
+        "tr": "你耐心等著我",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Went through everything to reach you",
+        "sourceTime": 135.81,
+        "sourceEnd": 140.15,
+        "time": 135.81,
+        "endTime": 140.15,
+        "tr": "我千辛萬苦才與你重逢",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "There' so many ways to please you",
+        "sourceTime": 140.15,
+        "sourceEnd": 144.55,
+        "time": 140.15,
+        "endTime": 144.55,
+        "tr": "有許多方式能逗你開心",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You can pick whatever you'd like to do",
+        "sourceTime": 144.55,
+        "sourceEnd": 148.26,
+        "time": 144.55,
+        "endTime": 148.26,
+        "tr": "讓你隨心所欲",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Anything that satisfies your soul",
+        "sourceTime": 148.26,
+        "sourceEnd": 151.92,
+        "time": 148.26,
+        "endTime": 151.92,
+        "tr": "心滿意足",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "While everybody's screamin' shoutin'",
+        "sourceTime": 152.67,
+        "sourceEnd": 154.96,
+        "time": 152.67,
+        "endTime": 154.96,
+        "tr": "周圍喧囂紛擾",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "We're so chill out here just vibin'",
+        "sourceTime": 154.96,
+        "sourceEnd": 157.14,
+        "time": 154.96,
+        "endTime": 157.14,
+        "tr": "我們放鬆到不行",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Tryin' to spread this peacefulness with y'all",
+        "sourceTime": 157.14,
+        "sourceEnd": 160.19,
+        "time": 157.14,
+        "endTime": 160.19,
+        "tr": "想和大家分享這份平靜",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Our holiday's just getting started",
+        "sourceTime": 161.43,
+        "sourceEnd": 163.62,
+        "time": 161.43,
+        "endTime": 163.62,
+        "tr": "我們的假期剛開始",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Just be kind and open hearted",
+        "sourceTime": 163.62,
+        "sourceEnd": 165.81,
+        "time": 163.62,
+        "endTime": 165.81,
+        "tr": "只要善良並敞開心扉",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Feel the breeze and let God bless us all",
+        "sourceTime": 165.81,
+        "sourceEnd": 169.67,
+        "time": 165.81,
+        "endTime": 169.67,
+        "tr": "感受微風與神的祝福",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 170.27,
+        "sourceEnd": 172.41,
+        "time": 170.27,
+        "endTime": 172.41,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 172.41,
+        "sourceEnd": 174.59,
+        "time": 172.41,
+        "endTime": 174.59,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 174.59,
+        "sourceEnd": 176.78,
+        "time": 174.59,
+        "endTime": 176.78,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 176.78,
+        "sourceEnd": 178.68,
+        "time": 176.78,
+        "endTime": 178.68,
+        "tr": "要去哪裡呢 八公",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "You've been patiently waiting for me",
+        "sourceTime": 178.94,
+        "sourceEnd": 187.73,
+        "time": 178.94,
+        "endTime": 187.73,
+        "tr": "你耐心等著我",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been patiently waiting for me",
+        "sourceTime": 187.73,
+        "sourceEnd": 196.37,
+        "time": 187.73,
+        "endTime": 196.37,
+        "tr": "你耐心等著我",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 196.37,
+        "sourceEnd": 198.53,
+        "time": 196.37,
+        "endTime": 198.53,
+        "tr": "(要去哪裡呢 八公…)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time I'll never let you go",
+        "sourceTime": 198.53,
+        "sourceEnd": 200.71,
+        "time": 198.53,
+        "endTime": 200.71,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 200.71,
+        "sourceEnd": 202.97,
+        "time": 200.71,
+        "endTime": 202.97,
+        "tr": "(要去哪裡呢 八公…)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time I'll never let you go",
+        "sourceTime": 202.97,
+        "sourceEnd": 205.12,
+        "time": 202.97,
+        "endTime": 205.12,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been patiently waiting for me",
+        "sourceTime": 205.12,
+        "sourceEnd": 213.52,
+        "time": 205.12,
+        "endTime": 213.52,
+        "tr": "你耐心等著我",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 231.32,
+        "sourceEnd": 233.52,
+        "time": 231.32,
+        "endTime": 233.52,
+        "tr": "(要去哪裡呢 八公…)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time I'll never let you go",
+        "sourceTime": 233.52,
+        "sourceEnd": 235.65,
+        "time": 233.52,
+        "endTime": 235.65,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "We don't need to rush, take it slow",
+        "sourceTime": 235.65,
+        "sourceEnd": 237.83,
+        "time": 235.65,
+        "endTime": 237.83,
+        "tr": "不用著急，慢慢來",
+        "translationRef": [
+          38
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time, I'll never let you go",
+        "sourceTime": 237.83,
+        "sourceEnd": 239.92,
+        "time": 237.83,
+        "endTime": 239.92,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Doko ni ikō Hachikō",
+        "sourceTime": 240.06,
+        "sourceEnd": 242.2,
+        "time": 240.06,
+        "endTime": 242.2,
+        "tr": "(要去哪裡呢 八公…)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time I'll never let you go",
+        "sourceTime": 242.2,
+        "sourceEnd": 244.38,
+        "time": 242.2,
+        "endTime": 244.38,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "We don't need to rush, take it slow",
+        "sourceTime": 244.38,
+        "sourceEnd": 246.54,
+        "time": 244.38,
+        "endTime": 246.54,
+        "tr": "不用著急，慢慢來",
+        "translationRef": [
+          38
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "This time, I'll never let you go",
+        "sourceTime": 246.54,
+        "sourceEnd": 248.83,
+        "time": 246.54,
+        "endTime": 248.83,
+        "tr": "這次我絕不放手",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/24709636",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/24709636",
+    "timingPreview": {
+      "youtubeId": "OodEsjZ88TQ",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-pynpv14pnd",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-pynpv14pnd",
+    "translationProvenance": {
+      "file": "(歌詞)Hachikō.pdf",
+      "sha256": "8849f09b26b1ed69022c8d4442abdb5dc0bdede003a44c5a4600e277a8a37711",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
     }
-  });
-});
-
-export { SONGS as SONG_LYRICS };
-
+  },
+  "LoveLikeThis": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Feeling",
+        "sourceTime": 33.63,
+        "sourceEnd": 35.71,
+        "time": 33.63,
+        "endTime": 35.71,
+        "tr": "感覺",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "More than perfect, amazing",
+        "sourceTime": 35.71,
+        "sourceEnd": 39.59,
+        "time": 35.71,
+        "endTime": 39.59,
+        "tr": "無與倫比",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "More than words can explain it's",
+        "sourceTime": 39.59,
+        "sourceEnd": 43.87,
+        "time": 39.59,
+        "endTime": 43.87,
+        "tr": "言語，無法形容",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Purest form of reality",
+        "sourceTime": 43.87,
+        "sourceEnd": 47.83,
+        "time": 43.87,
+        "endTime": 47.83,
+        "tr": "這純粹的真實感",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Divinity",
+        "sourceTime": 47.83,
+        "sourceEnd": 50.19,
+        "time": 47.83,
+        "endTime": 50.19,
+        "tr": "神聖感",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I've been",
+        "sourceTime": 50.19,
+        "sourceEnd": 52.15,
+        "time": 50.19,
+        "endTime": 52.15,
+        "tr": "我啊",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Suffering in this tiring",
+        "sourceTime": 52.15,
+        "sourceEnd": 56.31,
+        "time": 52.15,
+        "endTime": 56.31,
+        "tr": "一直困於這世間",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Crazy world like I'm drowning",
+        "sourceTime": 56.31,
+        "sourceEnd": 60.47,
+        "time": 56.31,
+        "endTime": 60.47,
+        "tr": "疲憊又瘋狂 彷彿溺水無法自救",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "There's no way to escape I thought but",
+        "sourceTime": 60.47,
+        "sourceEnd": 64.75,
+        "time": 60.47,
+        "endTime": 64.75,
+        "tr": "本以為無處可逃",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Finally here I am",
+        "sourceTime": 64.75,
+        "sourceEnd": 67.19,
+        "time": 64.75,
+        "endTime": 67.19,
+        "tr": "但終究抵達此等彼岸",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this, it's true",
+        "sourceTime": 67.19,
+        "sourceEnd": 71.31,
+        "time": 67.19,
+        "endTime": 71.31,
+        "tr": "這般真愛難再尋 的確",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this",
+        "sourceTime": 71.31,
+        "sourceEnd": 75.07,
+        "time": 71.31,
+        "endTime": 75.07,
+        "tr": "這般真愛難再尋",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, can you feel it too?",
+        "sourceTime": 75.07,
+        "sourceEnd": 77.67,
+        "time": 75.07,
+        "endTime": 77.67,
+        "tr": "寶貝 你是否與我同頻共感",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "Just like I do",
+        "sourceTime": 77.67,
+        "sourceEnd": 80.67,
+        "time": 77.67,
+        "endTime": 80.67,
+        "tr": "寶貝 你是否與我同頻共感",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "(Who does paradise belong to?)",
+        "sourceTime": 80.67,
+        "sourceEnd": 83.87,
+        "time": 80.67,
+        "endTime": 83.87,
+        "tr": "(天堂究竟為誰存在)",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this, I know",
+        "sourceTime": 83.87,
+        "sourceEnd": 87.9,
+        "time": 83.87,
+        "endTime": 87.9,
+        "tr": "這般真愛難再尋 我知道",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this",
+        "sourceTime": 87.9,
+        "sourceEnd": 91.63,
+        "time": 87.9,
+        "endTime": 91.63,
+        "tr": "這般真愛難再尋",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, can I give it to you?",
+        "sourceTime": 91.63,
+        "sourceEnd": 94.75,
+        "time": 91.63,
+        "endTime": 94.75,
+        "tr": "寶貝 能否讓我奉上真心",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Just likе you do",
+        "sourceTime": 94.75,
+        "sourceEnd": 97.07,
+        "time": 94.75,
+        "endTime": 97.07,
+        "tr": "如同你也真心愛我",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Then we share it too",
+        "sourceTime": 97.07,
+        "sourceEnd": 100.35,
+        "time": 97.07,
+        "endTime": 100.35,
+        "tr": "以後我們雙向奔赴",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Thank you",
+        "sourceTime": 100.35,
+        "sourceEnd": 102.19,
+        "time": 100.35,
+        "endTime": 102.19,
+        "tr": "謝謝你",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Whеrever I go I feel you",
+        "sourceTime": 102.19,
+        "sourceEnd": 107.99,
+        "time": 102.19,
+        "endTime": 107.99,
+        "tr": "走到哪裡都彷彿有你相伴",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Now I know",
+        "sourceTime": 107.99,
+        "sourceEnd": 109.91,
+        "time": 107.99,
+        "endTime": 109.91,
+        "tr": "如今我深知",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "That I'll never love like this",
+        "sourceTime": 109.91,
+        "sourceEnd": 129.63,
+        "time": 109.91,
+        "endTime": 129.63,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Sacred",
+        "sourceTime": 129.63,
+        "sourceEnd": 131.35,
+        "time": 129.63,
+        "endTime": 131.35,
+        "tr": "聖潔",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Sweet, divine invitation",
+        "sourceTime": 131.35,
+        "sourceEnd": 135.55,
+        "time": 131.35,
+        "endTime": 135.55,
+        "tr": "甜蜜的神聖邀請",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "To heal a heart that's been breaking",
+        "sourceTime": 135.55,
+        "sourceEnd": 139.71,
+        "time": 135.55,
+        "endTime": 139.71,
+        "tr": "撫慰破碎心靈",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Mend a soul that's been crying out",
+        "sourceTime": 139.71,
+        "sourceEnd": 144.03,
+        "time": 139.71,
+        "endTime": 144.03,
+        "tr": "治癒嗚咽靈魂",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Let me out",
+        "sourceTime": 144.03,
+        "sourceEnd": 146.23,
+        "time": 144.03,
+        "endTime": 146.23,
+        "tr": "哀聲求放過",
+        "translationRef": [
+          27
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Now I am",
+        "sourceTime": 146.23,
+        "sourceEnd": 148.24,
+        "time": 146.23,
+        "endTime": 148.24,
+        "tr": "如今",
+        "translationRef": [
+          28
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Falling softly, colliding",
+        "sourceTime": 148.24,
+        "sourceEnd": 152.31,
+        "time": 148.24,
+        "endTime": 152.31,
+        "tr": "我跌跌撞撞",
+        "translationRef": [
+          29
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Into your sweet silver lining",
+        "sourceTime": 152.31,
+        "sourceEnd": 156.36,
+        "time": 152.31,
+        "endTime": 156.36,
+        "tr": "輕輕落入你的美麗銀輝",
+        "translationRef": [
+          30
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "There's no way to escape from heaven",
+        "sourceTime": 156.36,
+        "sourceEnd": 160.52,
+        "time": 156.36,
+        "endTime": 160.52,
+        "tr": "天堂無處可逃",
+        "translationRef": [
+          31
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Finally, here we are",
+        "sourceTime": 160.52,
+        "sourceEnd": 162.99,
+        "time": 160.52,
+        "endTime": 162.99,
+        "tr": "我們終於抵達此等彼岸",
+        "translationRef": [
+          32
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this, it's true",
+        "sourceTime": 162.99,
+        "sourceEnd": 167.19,
+        "time": 162.99,
+        "endTime": 167.19,
+        "tr": "這般真愛難再尋 的確",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this",
+        "sourceTime": 167.19,
+        "sourceEnd": 170.95,
+        "time": 167.19,
+        "endTime": 170.95,
+        "tr": "這般真愛難再尋",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, can you feel it too?",
+        "sourceTime": 170.95,
+        "sourceEnd": 173.59,
+        "time": 170.95,
+        "endTime": 173.59,
+        "tr": "寶貝 你是否與我同頻共感",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "Just like I do",
+        "sourceTime": 173.59,
+        "sourceEnd": 176.72,
+        "time": 173.59,
+        "endTime": 176.72,
+        "tr": "寶貝 你是否與我同頻共感",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "(Who does paradise belong to?)",
+        "sourceTime": 176.72,
+        "sourceEnd": 179.95,
+        "time": 176.72,
+        "endTime": 179.95,
+        "tr": "(天堂究竟為誰存在)",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this, I know",
+        "sourceTime": 179.95,
+        "sourceEnd": 183.99,
+        "time": 179.95,
+        "endTime": 183.99,
+        "tr": "這般真愛難再尋 我知道",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I'll never find another love like this",
+        "sourceTime": 183.99,
+        "sourceEnd": 187.75,
+        "time": 183.99,
+        "endTime": 187.75,
+        "tr": "這般真愛難再尋",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, can I give it to you?",
+        "sourceTime": 187.75,
+        "sourceEnd": 190.63,
+        "time": 187.75,
+        "endTime": 190.63,
+        "tr": "寶貝 能否讓我奉上真心",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "(Ju-ju-ju) Just like you do",
+        "sourceTime": 190.63,
+        "sourceEnd": 193.2,
+        "time": 190.63,
+        "endTime": 193.2,
+        "tr": "如同你也真心愛我",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Then we share it too",
+        "sourceTime": 193.2,
+        "sourceEnd": 196.39,
+        "time": 193.2,
+        "endTime": 196.39,
+        "tr": "以後我們雙向奔赴",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Thank you",
+        "sourceTime": 196.39,
+        "sourceEnd": 198.19,
+        "time": 196.39,
+        "endTime": 198.19,
+        "tr": "謝謝你",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Wherever I go, I feel you",
+        "sourceTime": 198.19,
+        "sourceEnd": 203.79,
+        "time": 198.19,
+        "endTime": 203.79,
+        "tr": "走到哪裡都彷彿有你相伴",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Now I know",
+        "sourceTime": 203.79,
+        "sourceEnd": 206.12,
+        "time": 203.79,
+        "endTime": 206.12,
+        "tr": "如今我深知",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "That I'll never love like this",
+        "sourceTime": 206.12,
+        "sourceEnd": 219.47,
+        "time": 206.12,
+        "endTime": 219.47,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "That I'll never love like this (This)",
+        "sourceTime": 219.47,
+        "sourceEnd": 235.43,
+        "time": 219.47,
+        "endTime": 235.43,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          46
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never love like this",
+        "sourceTime": 235.43,
+        "sourceEnd": 236.68,
+        "time": 235.43,
+        "endTime": 236.68,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never, never love like this",
+        "sourceTime": 236.68,
+        "sourceEnd": 238.87,
+        "time": 236.68,
+        "endTime": 238.87,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never love like this",
+        "sourceTime": 238.87,
+        "sourceEnd": 240.59,
+        "time": 238.87,
+        "endTime": 240.59,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never, never, never love like this",
+        "sourceTime": 240.59,
+        "sourceEnd": 242.99,
+        "time": 240.59,
+        "endTime": 242.99,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never love like this",
+        "sourceTime": 242.99,
+        "sourceEnd": 244.4,
+        "time": 242.99,
+        "endTime": 244.4,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never, never love like this",
+        "sourceTime": 244.4,
+        "sourceEnd": 247.12,
+        "time": 244.4,
+        "endTime": 247.12,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never love like this",
+        "sourceTime": 247.12,
+        "sourceEnd": 248.52,
+        "time": 247.12,
+        "endTime": 248.52,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never, never, never love like this",
+        "sourceTime": 248.52,
+        "sourceEnd": 251.27,
+        "time": 248.52,
+        "endTime": 251.27,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never love like this",
+        "sourceTime": 251.27,
+        "sourceEnd": 253.36,
+        "time": 251.27,
+        "endTime": 253.36,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Never, never love like this...",
+        "sourceTime": 253.36,
+        "sourceEnd": 256.37,
+        "time": 253.36,
+        "endTime": 256.37,
+        "tr": "這般真愛難再復",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/23816202",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/23816202",
+    "timingPreview": {
+      "youtubeId": "RoY_ZoWe-eI",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-v7n3k09zok",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-v7n3k09zok",
+    "translationProvenance": {
+      "file": "(歌詞)Love+Like+This.pdf",
+      "sha256": "5d34ed5f875470311be1962f67540eb313505e2bfc0b81c50855cc2c4250b71b",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "Prema": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Prema, don't you know that you are love itself?",
+        "sourceTime": 21.34,
+        "sourceEnd": 27.55,
+        "time": 21.34,
+        "endTime": 27.55,
+        "tr": "純愛／你不懂你與愛合一",
+        "translationRef": [
+          0,
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You are love itself",
+        "sourceTime": 27.55,
+        "sourceEnd": 31.72,
+        "time": 27.55,
+        "endTime": 31.72,
+        "tr": "與愛合一",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Prema, can't you see that you are god itself?",
+        "sourceTime": 31.72,
+        "sourceEnd": 36.78,
+        "time": 31.72,
+        "endTime": 36.78,
+        "tr": "純愛／你不懂你與神合一",
+        "translationRef": [
+          3,
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You are god itself",
+        "sourceTime": 36.78,
+        "sourceEnd": 41.29,
+        "time": 36.78,
+        "endTime": 41.29,
+        "tr": "與神合一",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I don't lie, I'm all about the truth and",
+        "sourceTime": 41.29,
+        "sourceEnd": 45.71,
+        "time": 41.29,
+        "endTime": 45.71,
+        "tr": "我不欺瞞／我崇尚真理",
+        "translationRef": [
+          6,
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I don't hide, overwhelmingly I'm open",
+        "sourceTime": 45.71,
+        "sourceEnd": 50.54,
+        "time": 45.71,
+        "endTime": 50.54,
+        "tr": "我不隱藏／我敞開心房",
+        "translationRef": [
+          8,
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I survived all the crazy things you gave",
+        "sourceTime": 50.54,
+        "sourceEnd": 53.9,
+        "time": 50.54,
+        "endTime": 53.9,
+        "tr": "我浴火重生／你創造的瘋狂",
+        "translationRef": [
+          10,
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "And every mess that was ever made, made",
+        "sourceTime": 53.9,
+        "sourceEnd": 59.68,
+        "time": 53.9,
+        "endTime": 59.68,
+        "tr": "造成過的恐慌",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "You are mine, I call your name and you will",
+        "sourceTime": 59.68,
+        "sourceEnd": 64.47,
+        "time": 59.68,
+        "endTime": 64.47,
+        "tr": "你屬於我／我呼喚你的名字，你就會",
+        "translationRef": [
+          13,
+          14
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Be on time, living in this small world and its",
+        "sourceTime": 64.47,
+        "sourceEnd": 69.47,
+        "time": 64.47,
+        "endTime": 69.47,
+        "tr": "及時出現／世界雖渺小",
+        "translationRef": [
+          15,
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Future's bright, brighter than my ceiling lights",
+        "sourceTime": 69.47,
+        "sourceEnd": 73.67,
+        "time": 69.47,
+        "endTime": 73.67,
+        "tr": "未來卻閃耀／亮度勝過燈泡",
+        "translationRef": [
+          17,
+          18
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "And sweeter than my mother's cream pie",
+        "sourceTime": 73.67,
+        "sourceEnd": 78.73,
+        "time": 73.67,
+        "endTime": 78.73,
+        "tr": "甜蜜勝過糖糕",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Huh, follow my tender heart and I'll win",
+        "sourceTime": 78.73,
+        "sourceEnd": 84.01,
+        "time": 78.73,
+        "endTime": 84.01,
+        "tr": "跟隨溫柔的心就能克服",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "No matter what pain I am in",
+        "sourceTime": 84.01,
+        "sourceEnd": 88.73,
+        "time": 84.01,
+        "endTime": 88.73,
+        "tr": "不管多麼辛苦",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "With all your blessings I'll arise",
+        "sourceTime": 88.73,
+        "sourceEnd": 94.9,
+        "time": 88.73,
+        "endTime": 94.9,
+        "tr": "你的祝福讓我振作",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Open up my third eye",
+        "sourceTime": 94.9,
+        "sourceEnd": 97.22,
+        "time": 94.9,
+        "endTime": 97.22,
+        "tr": "打開我的心眼",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Prema, don't you know that you are love itself?",
+        "sourceTime": 97.22,
+        "sourceEnd": 103.03,
+        "time": 97.22,
+        "endTime": 103.03,
+        "tr": "純愛／你不懂你與愛合一",
+        "translationRef": [
+          0,
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You are love itself",
+        "sourceTime": 103.03,
+        "sourceEnd": 107.05,
+        "time": 103.03,
+        "endTime": 107.05,
+        "tr": "與愛合一",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Prema, can't you see that you are god itself?",
+        "sourceTime": 107.05,
+        "sourceEnd": 112.55,
+        "time": 107.05,
+        "endTime": 112.55,
+        "tr": "純愛／你不懂你與神合一",
+        "translationRef": [
+          27,
+          28
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "You are god itself",
+        "sourceTime": 112.55,
+        "sourceEnd": 116.92,
+        "time": 112.55,
+        "endTime": 116.92,
+        "tr": "與神合一",
+        "translationRef": [
+          29
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Prema, ay yeah",
+        "sourceTime": 116.92,
+        "sourceEnd": 122.13,
+        "time": 116.92,
+        "endTime": 122.13,
+        "tr": "純愛",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "repeated-pdf-title-refrain"
+      },
+      {
+        "jp": "Prema, ay yeah, ooh (ayy)",
+        "sourceTime": 126.27,
+        "sourceEnd": 135.38,
+        "time": 126.27,
+        "endTime": 135.38,
+        "tr": "純愛",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "repeated-pdf-title-refrain"
+      },
+      {
+        "jp": "Finalized, we got each other always",
+        "sourceTime": 135.38,
+        "sourceEnd": 140.16,
+        "time": 135.38,
+        "endTime": 140.16,
+        "tr": "已成定局／我們一直擁有彼此",
+        "translationRef": [
+          30,
+          31
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Fantasized, surely knew we could do it",
+        "sourceTime": 140.16,
+        "sourceEnd": 144.79,
+        "time": 140.16,
+        "endTime": 144.79,
+        "tr": "目眩神迷／深知我們能做到",
+        "translationRef": [
+          32,
+          33
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "I decide every day I meditate",
+        "sourceTime": 144.79,
+        "sourceEnd": 149.57,
+        "time": 144.79,
+        "endTime": 149.57,
+        "tr": "下定決心／我天天默念",
+        "translationRef": [
+          34,
+          35
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "And make every action a prayer",
+        "sourceTime": 149.57,
+        "sourceEnd": 155.66,
+        "time": 149.57,
+        "endTime": 155.66,
+        "tr": "每個行動都是祈禱",
+        "translationRef": [
+          36
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Filling my heart with your affection",
+        "sourceTime": 155.66,
+        "sourceEnd": 159.99,
+        "time": 155.66,
+        "endTime": 159.99,
+        "tr": "讓你的愛意充滿我心",
+        "translationRef": [
+          37
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Being your best friend is my devotion",
+        "sourceTime": 159.99,
+        "sourceEnd": 164.84,
+        "time": 159.99,
+        "endTime": 164.84,
+        "tr": "奉獻所有與你交心",
+        "translationRef": [
+          38
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Calling your name is my surrender",
+        "sourceTime": 164.84,
+        "sourceEnd": 170.83,
+        "time": 164.84,
+        "endTime": 170.83,
+        "tr": "我臣服，呼喚你的名字",
+        "translationRef": [
+          39
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Babe, I got your number",
+        "sourceTime": 170.83,
+        "sourceEnd": 174.92,
+        "time": 170.83,
+        "endTime": 174.92,
+        "tr": "寶貝，我有你的電話",
+        "translationRef": [
+          40
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Hello, can I talk to you now?",
+        "sourceTime": 182.63,
+        "sourceEnd": 185.68,
+        "time": 182.63,
+        "endTime": 185.68
+      },
+      {
+        "jp": "Okay, cool",
+        "sourceTime": 188.88,
+        "sourceEnd": 190.78,
+        "time": 188.88,
+        "endTime": 190.78
+      },
+      {
+        "jp": "I love you, bye",
+        "sourceTime": 190.78,
+        "sourceEnd": 193.75,
+        "time": 190.78,
+        "endTime": 193.75
+      },
+      {
+        "jp": "Filling my heart with your affection",
+        "sourceTime": 193.75,
+        "sourceEnd": 198.56,
+        "time": 193.75,
+        "endTime": 198.56,
+        "tr": "讓你的愛意充滿我心",
+        "translationRef": [
+          41
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Being your best friend is my devotion",
+        "sourceTime": 198.56,
+        "sourceEnd": 202.95,
+        "time": 198.56,
+        "endTime": 202.95,
+        "tr": "奉獻所有與你交心",
+        "translationRef": [
+          38
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Calling your name is my surrender",
+        "sourceTime": 202.95,
+        "sourceEnd": 208.84,
+        "time": 202.95,
+        "endTime": 208.84,
+        "tr": "我臣服，呼喚你的名字",
+        "translationRef": [
+          39
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Babe, I got your number",
+        "sourceTime": 208.84,
+        "sourceEnd": 211.41,
+        "time": 208.84,
+        "endTime": 211.41,
+        "tr": "寶貝，我有你的電話",
+        "translationRef": [
+          40
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Prema, don't you know that I am, love itself",
+        "sourceTime": 211.41,
+        "sourceEnd": 217.36,
+        "time": 211.41,
+        "endTime": 217.36,
+        "tr": "純愛／你不懂我與愛合一",
+        "translationRef": [
+          45,
+          46
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I am, love itself",
+        "sourceTime": 217.36,
+        "sourceEnd": 221.11,
+        "time": 217.36,
+        "endTime": 221.11,
+        "tr": "與愛合一",
+        "translationRef": [
+          47
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Prema, can't you see that I am god itself",
+        "sourceTime": 221.11,
+        "sourceEnd": 226.57,
+        "time": 221.11,
+        "endTime": 226.57,
+        "tr": "純愛／你不懂我與神合一",
+        "translationRef": [
+          48,
+          49
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "I am god itself",
+        "sourceTime": 226.57,
+        "sourceEnd": 230.93,
+        "time": 226.57,
+        "endTime": 230.93,
+        "tr": "與神合一",
+        "translationRef": [
+          50
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Prema, ay, yeah",
+        "sourceTime": 230.93,
+        "sourceEnd": 237.14,
+        "time": 230.93,
+        "endTime": 237.14,
+        "tr": "純愛",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "repeated-pdf-title-refrain"
+      },
+      {
+        "jp": "Prema, ay, yeah (ay)",
+        "sourceTime": 239.88,
+        "sourceEnd": 243.92,
+        "time": 239.88,
+        "endTime": 243.92,
+        "tr": "純愛",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "repeated-pdf-title-refrain"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/24517270",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/24517270",
+    "timingPreview": {
+      "youtubeId": "UJgPpzZcxGU",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-evr8434pnm",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-evr8434pnm",
+    "translationProvenance": {
+      "file": "(歌詞)Prema.pdf",
+      "sha256": "e8e297521cd3d224000222d1c8d86f5dfe95dffcd65dd2f5365fee0de0e3ffea",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "ItAintOver": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "If you were gone",
+        "sourceTime": 25.5,
+        "sourceEnd": 30.09,
+        "time": 25.5,
+        "endTime": 30.09,
+        "tr": "如果你走了",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I would not feel so sad",
+        "sourceTime": 30.09,
+        "sourceEnd": 37.08,
+        "time": 30.09,
+        "endTime": 37.08,
+        "tr": "我不會如此感傷",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "'Cause deep down I know",
+        "sourceTime": 37.08,
+        "sourceEnd": 41.96,
+        "time": 37.08,
+        "endTime": 41.96,
+        "tr": "因為我心裡知道",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "No one will ever be gone",
+        "sourceTime": 41.96,
+        "sourceEnd": 47.29,
+        "time": 41.96,
+        "endTime": 47.29,
+        "tr": "沒有人會真正走遠",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You may say, this is the end",
+        "sourceTime": 49.4,
+        "sourceEnd": 54.83,
+        "time": 49.4,
+        "endTime": 54.83,
+        "tr": "你或許會說這是終點",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Like I never was your friend",
+        "sourceTime": 54.83,
+        "sourceEnd": 61.35,
+        "time": 54.83,
+        "endTime": 61.35,
+        "tr": "彷彿不曾有過你我之間",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "And you go so far away",
+        "sourceTime": 61.35,
+        "sourceEnd": 66.47,
+        "time": 61.35,
+        "endTime": 66.47,
+        "tr": "你走得好遠",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "That's when you hear me say",
+        "sourceTime": 66.47,
+        "sourceEnd": 70.5,
+        "time": 66.47,
+        "endTime": 70.5,
+        "tr": "然後聽到我的聲音",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Boy it ain't over",
+        "sourceTime": 70.5,
+        "sourceEnd": 75.08,
+        "time": 70.5,
+        "endTime": 75.08,
+        "tr": "還沒結束",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Over, yet",
+        "sourceTime": 75.08,
+        "sourceEnd": 82.8,
+        "time": 75.08,
+        "endTime": 82.8,
+        "tr": "未完",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It ain't over",
+        "sourceTime": 82.8,
+        "sourceEnd": 86.9,
+        "time": 82.8,
+        "endTime": 86.9,
+        "tr": "還沒結束",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Over, yet",
+        "sourceTime": 86.9,
+        "sourceEnd": 94.47,
+        "time": 86.9,
+        "endTime": 94.47,
+        "tr": "未完",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Oh, we'll all go back to the same home",
+        "sourceTime": 94.47,
+        "sourceEnd": 105.35,
+        "time": 94.47,
+        "endTime": 105.35,
+        "tr": "我們都會回到同一個家園",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "The deeper I dive",
+        "sourceTime": 115.45,
+        "sourceEnd": 121.39,
+        "time": 115.45,
+        "endTime": 121.39,
+        "tr": "我越追尋",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "The more I'm sure",
+        "sourceTime": 121.39,
+        "sourceEnd": 127.49,
+        "time": 121.39,
+        "endTime": 127.49,
+        "tr": "就越肯定",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You're still by my side",
+        "sourceTime": 127.49,
+        "sourceEnd": 133.04,
+        "time": 127.49,
+        "endTime": 133.04,
+        "tr": "你依舊在我身邊",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Wherever I go",
+        "sourceTime": 133.04,
+        "sourceEnd": 139.1,
+        "time": 133.04,
+        "endTime": 139.1,
+        "tr": "如影隨形",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "My life's been good",
+        "sourceTime": 139.1,
+        "sourceEnd": 142.17,
+        "time": 139.1,
+        "endTime": 142.17,
+        "tr": "走過美好人生",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It's time to go",
+        "sourceTime": 142.17,
+        "sourceEnd": 145.39,
+        "time": 142.17,
+        "endTime": 145.39,
+        "tr": "該走了",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Bye-bye my friend",
+        "sourceTime": 145.39,
+        "sourceEnd": 151.27,
+        "time": 145.39,
+        "endTime": 151.27,
+        "tr": "再見，我的朋友",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "But you know, in time",
+        "sourceTime": 151.27,
+        "sourceEnd": 156.59,
+        "time": 151.27,
+        "endTime": 156.59,
+        "tr": "但你明白，遲早",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "We all gon' realize",
+        "sourceTime": 156.59,
+        "sourceEnd": 160.45,
+        "time": 156.59,
+        "endTime": 160.45,
+        "tr": "我們都會領悟",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "That it ain't over",
+        "sourceTime": 160.45,
+        "sourceEnd": 164.81,
+        "time": 160.45,
+        "endTime": 164.81,
+        "tr": "還沒結束",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Over, yet",
+        "sourceTime": 164.81,
+        "sourceEnd": 172.81,
+        "time": 164.81,
+        "endTime": 172.81,
+        "tr": "未完",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It ain't over",
+        "sourceTime": 172.81,
+        "sourceEnd": 176.99,
+        "time": 172.81,
+        "endTime": 176.99,
+        "tr": "還沒結束",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Over, yet",
+        "sourceTime": 176.99,
+        "sourceEnd": 184.22,
+        "time": 176.99,
+        "endTime": 184.22,
+        "tr": "未完",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Oh, we'll all go back to the same home",
+        "sourceTime": 184.22,
+        "sourceEnd": 194.12,
+        "time": 184.22,
+        "endTime": 194.12,
+        "tr": "我們都會回到同一個家園",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "And they say, nothing ever stays the same",
+        "sourceTime": 194.12,
+        "sourceEnd": 202.9,
+        "time": 194.12,
+        "endTime": 202.9,
+        "tr": "人們說永恆不存在",
+        "translationRef": [
+          27
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "But with faith, we find something that will never change",
+        "sourceTime": 202.9,
+        "sourceEnd": 215.63,
+        "time": 202.9,
+        "endTime": 215.63,
+        "tr": "但信念能帶我們找到永恆",
+        "translationRef": [
+          28
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Oh",
+        "sourceTime": 220.34,
+        "sourceEnd": 224.04,
+        "time": 220.34,
+        "endTime": 224.04
+      },
+      {
+        "jp": "It ain't over",
+        "sourceTime": 238.86,
+        "sourceEnd": 242.7,
+        "time": 238.86,
+        "endTime": 242.7,
+        "tr": "還沒結束",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Over, yet",
+        "sourceTime": 242.7,
+        "sourceEnd": 250.82,
+        "time": 242.7,
+        "endTime": 250.82,
+        "tr": "未完",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It ain't over",
+        "sourceTime": 250.82,
+        "sourceEnd": 254.82,
+        "time": 250.82,
+        "endTime": 254.82,
+        "tr": "還沒結束",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Over, yet",
+        "sourceTime": 254.82,
+        "sourceEnd": 262.56,
+        "time": 254.82,
+        "endTime": 262.56,
+        "tr": "未完",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Oh, we'll all go back to the same home",
+        "sourceTime": 262.56,
+        "sourceEnd": 271.72,
+        "time": 262.56,
+        "endTime": 271.72,
+        "tr": "我們都會回到同一個家園",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "See you soon, we'll all go back to the same home",
+        "sourceTime": 275.03,
+        "sourceEnd": 284.47,
+        "time": 275.03,
+        "endTime": 284.47,
+        "tr": "後會有期，我們都會回到同一個家園",
+        "translationRef": [
+          34
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Home",
+        "sourceTime": 284.47,
+        "sourceEnd": 287.81,
+        "time": 284.47,
+        "endTime": 287.81,
+        "tr": "家園",
+        "translationRef": [
+          35
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Home",
+        "sourceTime": 287.81,
+        "sourceEnd": 292.99,
+        "time": 287.81,
+        "endTime": 292.99,
+        "tr": "家園",
+        "translationRef": [
+          35
+        ],
+        "translationMapping": "exact-source-text"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/24025678",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/24025678",
+    "timingPreview": {
+      "youtubeId": "BKFxq3D_dGU",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-evr84xwdnm",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-evr84xwdnm",
+    "translationProvenance": {
+      "file": "(歌詞)It+Ain't+Over.pdf",
+      "sha256": "2bb0732f7857a4d3faff210c8c7fc13be54990220dc91ff79c51c0f0e7c42c5d",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "You": {
+    "lyricsStatus": "imported",
+    "translationStatus": "pending",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Baby, you don't have to sit and cry",
+        "sourceTime": 24.16,
+        "sourceEnd": 27.3,
+        "time": 24.16,
+        "endTime": 27.3
+      },
+      {
+        "jp": "It's Heartbreaking not to see you smile",
+        "sourceTime": 27.3,
+        "sourceEnd": 30.99,
+        "time": 27.3,
+        "endTime": 30.99
+      },
+      {
+        "jp": "Make me wonder why you hurt",
+        "sourceTime": 30.99,
+        "sourceEnd": 35.07,
+        "time": 30.99,
+        "endTime": 35.07
+      },
+      {
+        "jp": "So, so bad",
+        "sourceTime": 35.07,
+        "sourceEnd": 37.59,
+        "time": 35.07,
+        "endTime": 37.59
+      },
+      {
+        "jp": "Baby now you're here with me",
+        "sourceTime": 37.59,
+        "sourceEnd": 40.28,
+        "time": 37.59,
+        "endTime": 40.28
+      },
+      {
+        "jp": "I'll be patient, tell me what you're feeling",
+        "sourceTime": 40.28,
+        "sourceEnd": 43.83,
+        "time": 40.28,
+        "endTime": 43.83
+      },
+      {
+        "jp": "You could never be alone",
+        "sourceTime": 43.83,
+        "sourceEnd": 47.42,
+        "time": 43.83,
+        "endTime": 47.42
+      },
+      {
+        "jp": "The pain won't last",
+        "sourceTime": 47.42,
+        "sourceEnd": 51.18,
+        "time": 47.42,
+        "endTime": 51.18
+      },
+      {
+        "jp": "Oh, all you need, all you need is right there in your soul",
+        "sourceTime": 51.18,
+        "sourceEnd": 60.06,
+        "time": 51.18,
+        "endTime": 60.06
+      },
+      {
+        "jp": "And nobody can break you anymore",
+        "sourceTime": 60.06,
+        "sourceEnd": 66.45,
+        "time": 60.06,
+        "endTime": 66.45
+      },
+      {
+        "jp": "No matter how they try",
+        "sourceTime": 66.45,
+        "sourceEnd": 69.76,
+        "time": 66.45,
+        "endTime": 69.76
+      },
+      {
+        "jp": "Just take a look inside, you'll find",
+        "sourceTime": 69.76,
+        "sourceEnd": 73.12,
+        "time": 69.76,
+        "endTime": 73.12
+      },
+      {
+        "jp": "You're perfectly divine",
+        "sourceTime": 73.12,
+        "sourceEnd": 76.56,
+        "time": 73.12,
+        "endTime": 76.56
+      },
+      {
+        "jp": "You are the infinite sun and the moon",
+        "sourceTime": 76.56,
+        "sourceEnd": 80.78,
+        "time": 76.56,
+        "endTime": 80.78
+      },
+      {
+        "jp": "I can see all the stars honor you",
+        "sourceTime": 80.78,
+        "sourceEnd": 84.16,
+        "time": 80.78,
+        "endTime": 84.16
+      },
+      {
+        "jp": "Shining brighter than all of the lights",
+        "sourceTime": 84.16,
+        "sourceEnd": 87.35,
+        "time": 84.16,
+        "endTime": 87.35
+      },
+      {
+        "jp": "I can see, I can see in your eyes",
+        "sourceTime": 87.35,
+        "sourceEnd": 90.24,
+        "time": 87.35,
+        "endTime": 90.24
+      },
+      {
+        "jp": "Everything that you want is in you",
+        "sourceTime": 90.24,
+        "sourceEnd": 93.54,
+        "time": 90.24,
+        "endTime": 93.54
+      },
+      {
+        "jp": "And everything that you've been waiting for, It's in you",
+        "sourceTime": 93.54,
+        "sourceEnd": 96.81,
+        "time": 93.54,
+        "endTime": 96.81
+      },
+      {
+        "jp": "Don't you ever forget",
+        "sourceTime": 96.81,
+        "sourceEnd": 98.38,
+        "time": 96.81,
+        "endTime": 98.38
+      },
+      {
+        "jp": "In this world, there's no one else but you",
+        "sourceTime": 98.38,
+        "sourceEnd": 104.55,
+        "time": 98.38,
+        "endTime": 104.55
+      },
+      {
+        "jp": "But you",
+        "sourceTime": 104.55,
+        "sourceEnd": 107.7,
+        "time": 104.55,
+        "endTime": 107.7
+      },
+      {
+        "jp": "It's you",
+        "sourceTime": 107.7,
+        "sourceEnd": 110.63,
+        "time": 107.7,
+        "endTime": 110.63
+      },
+      {
+        "jp": "It's all you",
+        "sourceTime": 110.63,
+        "sourceEnd": 113.78,
+        "time": 110.63,
+        "endTime": 113.78
+      },
+      {
+        "jp": "Baby, you are made of love",
+        "sourceTime": 113.78,
+        "sourceEnd": 116.72,
+        "time": 113.78,
+        "endTime": 116.72
+      },
+      {
+        "jp": "And that's what this universe is made of",
+        "sourceTime": 116.72,
+        "sourceEnd": 120.27,
+        "time": 116.72,
+        "endTime": 120.27
+      },
+      {
+        "jp": "I can see the God in you",
+        "sourceTime": 120.27,
+        "sourceEnd": 123.75,
+        "time": 120.27,
+        "endTime": 123.75
+      },
+      {
+        "jp": "How beautiful it is",
+        "sourceTime": 123.75,
+        "sourceEnd": 126.76,
+        "time": 123.75,
+        "endTime": 126.76
+      },
+      {
+        "jp": "Baby, if you just believe",
+        "sourceTime": 126.76,
+        "sourceEnd": 129.32,
+        "time": 126.76,
+        "endTime": 129.32
+      },
+      {
+        "jp": "You can change your whole reality",
+        "sourceTime": 129.32,
+        "sourceEnd": 132.86,
+        "time": 129.32,
+        "endTime": 132.86
+      },
+      {
+        "jp": "Make yourself a promise now",
+        "sourceTime": 132.86,
+        "sourceEnd": 136.83,
+        "time": 132.86,
+        "endTime": 136.83
+      },
+      {
+        "jp": "And soon you'll see",
+        "sourceTime": 136.83,
+        "sourceEnd": 140.12,
+        "time": 136.83,
+        "endTime": 140.12
+      },
+      {
+        "jp": "Oh",
+        "sourceTime": 140.12,
+        "sourceEnd": 142.84,
+        "time": 140.12,
+        "endTime": 142.84
+      },
+      {
+        "jp": "All you need, all you need is right there in your soul",
+        "sourceTime": 142.84,
+        "sourceEnd": 149.41,
+        "time": 142.84,
+        "endTime": 149.41
+      },
+      {
+        "jp": "And nobody can't break you anymore",
+        "sourceTime": 149.41,
+        "sourceEnd": 155.9,
+        "time": 149.41,
+        "endTime": 155.9
+      },
+      {
+        "jp": "No matter how they try",
+        "sourceTime": 155.9,
+        "sourceEnd": 159.01,
+        "time": 155.9,
+        "endTime": 159.01
+      },
+      {
+        "jp": "Just take a look inside, you'll find",
+        "sourceTime": 159.01,
+        "sourceEnd": 162.83,
+        "time": 159.01,
+        "endTime": 162.83
+      },
+      {
+        "jp": "You're perfectly divine",
+        "sourceTime": 162.83,
+        "sourceEnd": 166.03,
+        "time": 162.83,
+        "endTime": 166.03
+      },
+      {
+        "jp": "You are the infinite sun and the moon",
+        "sourceTime": 166.03,
+        "sourceEnd": 170.2,
+        "time": 166.03,
+        "endTime": 170.2
+      },
+      {
+        "jp": "I can see all the stars honor you",
+        "sourceTime": 170.2,
+        "sourceEnd": 173.59,
+        "time": 170.2,
+        "endTime": 173.59
+      },
+      {
+        "jp": "Shining brighter than all of the lights",
+        "sourceTime": 173.59,
+        "sourceEnd": 176.58,
+        "time": 173.59,
+        "endTime": 176.58
+      },
+      {
+        "jp": "I can see, I can see in your eyes",
+        "sourceTime": 176.58,
+        "sourceEnd": 179.85,
+        "time": 176.58,
+        "endTime": 179.85
+      },
+      {
+        "jp": "Everything that you want is in you",
+        "sourceTime": 179.85,
+        "sourceEnd": 182.9,
+        "time": 179.85,
+        "endTime": 182.9
+      },
+      {
+        "jp": "And everything that you've been waiting for, It's in you",
+        "sourceTime": 182.9,
+        "sourceEnd": 186.33,
+        "time": 182.9,
+        "endTime": 186.33
+      },
+      {
+        "jp": "Don't you ever forget",
+        "sourceTime": 186.33,
+        "sourceEnd": 188.04,
+        "time": 186.33,
+        "endTime": 188.04
+      },
+      {
+        "jp": "In this world, there's no one else but you",
+        "sourceTime": 188.04,
+        "sourceEnd": 194.19,
+        "time": 188.04,
+        "endTime": 194.19
+      },
+      {
+        "jp": "Ain't nobody but you, oh, yeah",
+        "sourceTime": 196.47,
+        "sourceEnd": 204.8,
+        "time": 196.47,
+        "endTime": 204.8
+      },
+      {
+        "jp": "Inside, inside you",
+        "sourceTime": 204.8,
+        "sourceEnd": 207.89,
+        "time": 204.8,
+        "endTime": 207.89
+      },
+      {
+        "jp": "Inside, inside you",
+        "sourceTime": 207.89,
+        "sourceEnd": 211.1,
+        "time": 207.89,
+        "endTime": 211.1
+      },
+      {
+        "jp": "Inside, inside you",
+        "sourceTime": 211.1,
+        "sourceEnd": 214.5,
+        "time": 211.1,
+        "endTime": 214.5
+      },
+      {
+        "jp": "You, you, you",
+        "sourceTime": 214.5,
+        "sourceEnd": 217.47,
+        "time": 214.5,
+        "endTime": 217.47
+      },
+      {
+        "jp": "You are the infinite sun and the moon",
+        "sourceTime": 217.47,
+        "sourceEnd": 222.25,
+        "time": 217.47,
+        "endTime": 222.25
+      },
+      {
+        "jp": "I can see all the stars honor you",
+        "sourceTime": 222.25,
+        "sourceEnd": 225.49,
+        "time": 222.25,
+        "endTime": 225.49
+      },
+      {
+        "jp": "Shining brighter than all of the lights",
+        "sourceTime": 225.49,
+        "sourceEnd": 228.59,
+        "time": 225.49,
+        "endTime": 228.59
+      },
+      {
+        "jp": "I can see, I can see in your eyes",
+        "sourceTime": 228.59,
+        "sourceEnd": 231.83,
+        "time": 228.59,
+        "endTime": 231.83
+      },
+      {
+        "jp": "Everything that you want is in you",
+        "sourceTime": 231.83,
+        "sourceEnd": 234.91,
+        "time": 231.83,
+        "endTime": 234.91
+      },
+      {
+        "jp": "And everything that you've been waiting for, It's in you",
+        "sourceTime": 234.91,
+        "sourceEnd": 238.06,
+        "time": 234.91,
+        "endTime": 238.06
+      },
+      {
+        "jp": "Don't you ever forget",
+        "sourceTime": 238.06,
+        "sourceEnd": 239.79,
+        "time": 238.06,
+        "endTime": 239.79
+      },
+      {
+        "jp": "In this world, there's no one else but you",
+        "sourceTime": 239.79,
+        "sourceEnd": 246.47,
+        "time": 239.79,
+        "endTime": 246.47
+      },
+      {
+        "jp": "It's you",
+        "sourceTime": 246.47,
+        "sourceEnd": 249.6,
+        "time": 246.47,
+        "endTime": 249.6
+      },
+      {
+        "jp": "It's you",
+        "sourceTime": 249.6,
+        "sourceEnd": 252.55,
+        "time": 249.6,
+        "endTime": 252.55
+      },
+      {
+        "jp": "It's all you",
+        "sourceTime": 252.55,
+        "sourceEnd": 255.6,
+        "time": 252.55,
+        "endTime": 255.6
+      },
+      {
+        "jp": "It's you",
+        "sourceTime": 255.6,
+        "sourceEnd": 259.21,
+        "time": 255.6,
+        "endTime": 259.21
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/39063308",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/39063308",
+    "timingPreview": {
+      "youtubeId": "s4UW__ysPEM",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable"
+  },
+  "OkayGoodbye": {
+    "lyricsStatus": "imported",
+    "translationStatus": "pending",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Well, I guess today is the perfect day",
+        "sourceTime": 11.28,
+        "sourceEnd": 13.89,
+        "time": 11.28,
+        "endTime": 13.89
+      },
+      {
+        "jp": "Gonna find me a really good life",
+        "sourceTime": 13.89,
+        "sourceEnd": 16.36,
+        "time": 13.89,
+        "endTime": 16.36
+      },
+      {
+        "jp": "'Cause yesterday was the darkest day",
+        "sourceTime": 16.36,
+        "sourceEnd": 18.94,
+        "time": 16.36,
+        "endTime": 18.94
+      },
+      {
+        "jp": "Now that I gotta see the sunrise",
+        "sourceTime": 18.94,
+        "sourceEnd": 21.53,
+        "time": 18.94,
+        "endTime": 21.53
+      },
+      {
+        "jp": "Be the best man I could ever be",
+        "sourceTime": 21.53,
+        "sourceEnd": 24.75,
+        "time": 21.53,
+        "endTime": 24.75
+      },
+      {
+        "jp": "Each day's a precious gift to me",
+        "sourceTime": 24.75,
+        "sourceEnd": 27.37,
+        "time": 24.75,
+        "endTime": 27.37
+      },
+      {
+        "jp": "God lights my way",
+        "sourceTime": 27.37,
+        "sourceEnd": 28.96,
+        "time": 27.37,
+        "endTime": 28.96
+      },
+      {
+        "jp": "So that I can always feel I'm okay",
+        "sourceTime": 28.96,
+        "sourceEnd": 32.39,
+        "time": 28.96,
+        "endTime": 32.39
+      },
+      {
+        "jp": "Oh, I'ma take a ride with me",
+        "sourceTime": 32.39,
+        "sourceEnd": 35.38,
+        "time": 32.39,
+        "endTime": 35.38
+      },
+      {
+        "jp": "Got my own energy",
+        "sourceTime": 35.38,
+        "sourceEnd": 38.23,
+        "time": 35.38,
+        "endTime": 38.23
+      },
+      {
+        "jp": "Baby, I realized that I am all I need",
+        "sourceTime": 38.23,
+        "sourceEnd": 41.77,
+        "time": 38.23,
+        "endTime": 41.77
+      },
+      {
+        "jp": "Oh, yeah, I'ma take ride with me",
+        "sourceTime": 41.77,
+        "sourceEnd": 45.6,
+        "time": 41.77,
+        "endTime": 45.6
+      },
+      {
+        "jp": "Stop playin' with me",
+        "sourceTime": 45.6,
+        "sourceEnd": 47.57,
+        "time": 45.6,
+        "endTime": 47.57
+      },
+      {
+        "jp": "I'll never love again unless it's true",
+        "sourceTime": 47.57,
+        "sourceEnd": 51.38,
+        "time": 47.57,
+        "endTime": 51.38
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 51.38,
+        "sourceEnd": 53.11,
+        "time": 51.38,
+        "endTime": 53.11
+      },
+      {
+        "jp": "Okay, goodbye",
+        "sourceTime": 53.11,
+        "sourceEnd": 56.07,
+        "time": 53.11,
+        "endTime": 56.07
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 56.07,
+        "sourceEnd": 58.21,
+        "time": 56.07,
+        "endTime": 58.21
+      },
+      {
+        "jp": "Okay, alright",
+        "sourceTime": 58.21,
+        "sourceEnd": 61.15,
+        "time": 58.21,
+        "endTime": 61.15
+      },
+      {
+        "jp": "Gonna be free at last",
+        "sourceTime": 61.15,
+        "sourceEnd": 63.35,
+        "time": 61.15,
+        "endTime": 63.35
+      },
+      {
+        "jp": "Okay, goodbye",
+        "sourceTime": 63.35,
+        "sourceEnd": 66.66,
+        "time": 63.35,
+        "endTime": 66.66
+      },
+      {
+        "jp": "I think it's very nice",
+        "sourceTime": 66.66,
+        "sourceEnd": 73.07,
+        "time": 66.66,
+        "endTime": 73.07
+      },
+      {
+        "jp": "And I'm thankful for the way you blessed my life",
+        "sourceTime": 73.07,
+        "sourceEnd": 77.17,
+        "time": 73.07,
+        "endTime": 77.17
+      },
+      {
+        "jp": "Baby ain't coming back, baby ain't coming back",
+        "sourceTime": 77.17,
+        "sourceEnd": 88.15,
+        "time": 77.17,
+        "endTime": 88.15
+      },
+      {
+        "jp": "So I guess it's time to go with a flow",
+        "sourceTime": 88.15,
+        "sourceEnd": 90.78,
+        "time": 88.15,
+        "endTime": 90.78
+      },
+      {
+        "jp": "Had to get the weight off my chest (my chest)",
+        "sourceTime": 90.78,
+        "sourceEnd": 93.38,
+        "time": 90.78,
+        "endTime": 93.38
+      },
+      {
+        "jp": "We don't have to fuss and fight anymore",
+        "sourceTime": 93.38,
+        "sourceEnd": 95.89,
+        "time": 93.38,
+        "endTime": 95.89
+      },
+      {
+        "jp": "I just wanna wish you the best (the best)",
+        "sourceTime": 95.89,
+        "sourceEnd": 98.24,
+        "time": 95.89,
+        "endTime": 98.24
+      },
+      {
+        "jp": "We were so good",
+        "sourceTime": 98.24,
+        "sourceEnd": 99.94,
+        "time": 98.24,
+        "endTime": 99.94
+      },
+      {
+        "jp": "And we tried the best we could",
+        "sourceTime": 99.94,
+        "sourceEnd": 102.99,
+        "time": 99.94,
+        "endTime": 102.99
+      },
+      {
+        "jp": "Let's just leave the rest",
+        "sourceTime": 102.99,
+        "sourceEnd": 104.66,
+        "time": 102.99,
+        "endTime": 104.66
+      },
+      {
+        "jp": "God lights our way",
+        "sourceTime": 104.66,
+        "sourceEnd": 106.52,
+        "time": 104.66,
+        "endTime": 106.52
+      },
+      {
+        "jp": "He's gonna take care of us anyway",
+        "sourceTime": 106.52,
+        "sourceEnd": 109.18,
+        "time": 106.52,
+        "endTime": 109.18
+      },
+      {
+        "jp": "Oh, I'ma take a ride with me",
+        "sourceTime": 109.18,
+        "sourceEnd": 112.63,
+        "time": 109.18,
+        "endTime": 112.63
+      },
+      {
+        "jp": "Got my own energy",
+        "sourceTime": 112.63,
+        "sourceEnd": 115.47,
+        "time": 112.63,
+        "endTime": 115.47
+      },
+      {
+        "jp": "Baby, I realized",
+        "sourceTime": 115.47,
+        "sourceEnd": 116.81,
+        "time": 115.47,
+        "endTime": 116.81
+      },
+      {
+        "jp": "That I am all I need (yes, we got all we need)",
+        "sourceTime": 116.81,
+        "sourceEnd": 118.98,
+        "time": 116.81,
+        "endTime": 118.98
+      },
+      {
+        "jp": "Oh, yeah, I'ma take a ride w me",
+        "sourceTime": 118.98,
+        "sourceEnd": 122.74,
+        "time": 118.98,
+        "endTime": 122.74
+      },
+      {
+        "jp": "Go play with me",
+        "sourceTime": 122.74,
+        "sourceEnd": 124.67,
+        "time": 122.74,
+        "endTime": 124.67
+      },
+      {
+        "jp": "I never gonna love again unless it's true",
+        "sourceTime": 124.67,
+        "sourceEnd": 128.77,
+        "time": 124.67,
+        "endTime": 128.77
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 128.77,
+        "sourceEnd": 131.11,
+        "time": 128.77,
+        "endTime": 131.11
+      },
+      {
+        "jp": "Okay, goodbye",
+        "sourceTime": 131.11,
+        "sourceEnd": 133.9,
+        "time": 131.11,
+        "endTime": 133.9
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 133.9,
+        "sourceEnd": 136.23,
+        "time": 133.9,
+        "endTime": 136.23
+      },
+      {
+        "jp": "Okay, alright",
+        "sourceTime": 136.23,
+        "sourceEnd": 138.93,
+        "time": 136.23,
+        "endTime": 138.93
+      },
+      {
+        "jp": "Gonna be free at last",
+        "sourceTime": 138.93,
+        "sourceEnd": 141.37,
+        "time": 138.93,
+        "endTime": 141.37
+      },
+      {
+        "jp": "Okay, goodbye",
+        "sourceTime": 141.37,
+        "sourceEnd": 144.22,
+        "time": 141.37,
+        "endTime": 144.22
+      },
+      {
+        "jp": "I think it's very nice",
+        "sourceTime": 144.22,
+        "sourceEnd": 150.33,
+        "time": 144.22,
+        "endTime": 150.33
+      },
+      {
+        "jp": "And I'm thankful for the way you blessed my life",
+        "sourceTime": 150.33,
+        "sourceEnd": 154.55,
+        "time": 150.33,
+        "endTime": 154.55
+      },
+      {
+        "jp": "Baby ain't",
+        "sourceTime": 154.55,
+        "sourceEnd": 156.73,
+        "time": 154.55,
+        "endTime": 156.73
+      },
+      {
+        "jp": "Coming back, coming back",
+        "sourceTime": 156.73,
+        "sourceEnd": 158.9,
+        "time": 156.73,
+        "endTime": 158.9
+      },
+      {
+        "jp": "Coming back and I'm never",
+        "sourceTime": 158.9,
+        "sourceEnd": 161.8,
+        "time": 158.9,
+        "endTime": 161.8
+      },
+      {
+        "jp": "Coming back, coming back",
+        "sourceTime": 161.8,
+        "sourceEnd": 163.9,
+        "time": 161.8,
+        "endTime": 163.9
+      },
+      {
+        "jp": "Coming back, I'm gone forever",
+        "sourceTime": 163.9,
+        "sourceEnd": 166.36,
+        "time": 163.9,
+        "endTime": 166.36
+      },
+      {
+        "jp": "Take anything from me",
+        "sourceTime": 166.36,
+        "sourceEnd": 169.37,
+        "time": 166.36,
+        "endTime": 169.37
+      },
+      {
+        "jp": "No, I don't even care",
+        "sourceTime": 169.37,
+        "sourceEnd": 170.93,
+        "time": 169.37,
+        "endTime": 170.93
+      },
+      {
+        "jp": "'Cause I'm thankful for the way you blessed my life",
+        "sourceTime": 170.93,
+        "sourceEnd": 175.44,
+        "time": 170.93,
+        "endTime": 175.44
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 175.44,
+        "sourceEnd": 177.44,
+        "time": 175.44,
+        "endTime": 177.44
+      },
+      {
+        "jp": "Okay, goodbye",
+        "sourceTime": 177.44,
+        "sourceEnd": 180.23,
+        "time": 177.44,
+        "endTime": 180.23
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 180.23,
+        "sourceEnd": 182.48,
+        "time": 180.23,
+        "endTime": 182.48
+      },
+      {
+        "jp": "Okay, alright",
+        "sourceTime": 182.48,
+        "sourceEnd": 185.29,
+        "time": 182.48,
+        "endTime": 185.29
+      },
+      {
+        "jp": "Gonna be free at last",
+        "sourceTime": 185.29,
+        "sourceEnd": 187.7,
+        "time": 185.29,
+        "endTime": 187.7
+      },
+      {
+        "jp": "Okay, goodbye",
+        "sourceTime": 187.7,
+        "sourceEnd": 190.64,
+        "time": 187.7,
+        "endTime": 190.64
+      },
+      {
+        "jp": "I think it's very nice",
+        "sourceTime": 190.64,
+        "sourceEnd": 196.8,
+        "time": 190.64,
+        "endTime": 196.8
+      },
+      {
+        "jp": "And I'm thankful for the way you blessed my life",
+        "sourceTime": 196.8,
+        "sourceEnd": 201.88,
+        "time": 196.8,
+        "endTime": 201.88
+      },
+      {
+        "jp": "And I'm thankful for the way you blessed my life",
+        "sourceTime": 201.88,
+        "sourceEnd": 207.07,
+        "time": 201.88,
+        "endTime": 207.07
+      },
+      {
+        "jp": "Yes, I'm thankful for the way you blessed my life",
+        "sourceTime": 207.07,
+        "sourceEnd": 211.57,
+        "time": 207.07,
+        "endTime": 211.57
+      },
+      {
+        "jp": "Baby ain't coming back",
+        "sourceTime": 211.57,
+        "sourceEnd": 213.03,
+        "time": 211.57,
+        "endTime": 213.03
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/33609447",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/33609447",
+    "timingPreview": {
+      "youtubeId": "EAtRDZQLsgk",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable"
+  },
+  "ForeverYoung": {
+    "lyricsStatus": "imported",
+    "translationStatus": "pending",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Baby, this night, I'll remember",
+        "sourceTime": 57.75,
+        "sourceEnd": 61.41,
+        "time": 57.75,
+        "endTime": 61.41
+      },
+      {
+        "jp": "You gave me all the light when I surrendered",
+        "sourceTime": 61.41,
+        "sourceEnd": 65.58,
+        "time": 61.41,
+        "endTime": 65.58
+      },
+      {
+        "jp": "You let me know",
+        "sourceTime": 65.58,
+        "sourceEnd": 68.51,
+        "time": 65.58,
+        "endTime": 68.51
+      },
+      {
+        "jp": "That I know nothing at all",
+        "sourceTime": 68.51,
+        "sourceEnd": 73.37,
+        "time": 68.51,
+        "endTime": 73.37
+      },
+      {
+        "jp": "Summer has come, worry's over",
+        "sourceTime": 73.37,
+        "sourceEnd": 77.09,
+        "time": 73.37,
+        "endTime": 77.09
+      },
+      {
+        "jp": "It took a long time, but I got wiser",
+        "sourceTime": 77.09,
+        "sourceEnd": 81.3,
+        "time": 77.09,
+        "endTime": 81.3
+      },
+      {
+        "jp": "I'll take you home",
+        "sourceTime": 81.3,
+        "sourceEnd": 84.18,
+        "time": 81.3,
+        "endTime": 84.18
+      },
+      {
+        "jp": "Life feels so incredible",
+        "sourceTime": 84.18,
+        "sourceEnd": 89.21,
+        "time": 84.18,
+        "endTime": 89.21
+      },
+      {
+        "jp": "We were children, oh, so long ago",
+        "sourceTime": 89.21,
+        "sourceEnd": 93.04,
+        "time": 89.21,
+        "endTime": 93.04
+      },
+      {
+        "jp": "But we still got a long, long way to go",
+        "sourceTime": 93.04,
+        "sourceEnd": 96.92,
+        "time": 93.04,
+        "endTime": 96.92
+      },
+      {
+        "jp": "Come on over, let's go higher",
+        "sourceTime": 96.92,
+        "sourceEnd": 101.01,
+        "time": 96.92,
+        "endTime": 101.01
+      },
+      {
+        "jp": "Takes forever just to learn who we are",
+        "sourceTime": 101.01,
+        "sourceEnd": 104.68,
+        "time": 101.01,
+        "endTime": 104.68
+      },
+      {
+        "jp": "Don't you be scared, we're together",
+        "sourceTime": 104.68,
+        "sourceEnd": 108.51,
+        "time": 104.68,
+        "endTime": 108.51
+      },
+      {
+        "jp": "39, 60 or whatever",
+        "sourceTime": 108.51,
+        "sourceEnd": 112.26,
+        "time": 108.51,
+        "endTime": 112.26
+      },
+      {
+        "jp": "As long as we're here",
+        "sourceTime": 112.26,
+        "sourceEnd": 115.36,
+        "time": 112.26,
+        "endTime": 115.36
+      },
+      {
+        "jp": "We're forever young (young)",
+        "sourceTime": 115.36,
+        "sourceEnd": 120.15,
+        "time": 115.36,
+        "endTime": 120.15
+      },
+      {
+        "jp": "We can be born again and again",
+        "sourceTime": 120.15,
+        "sourceEnd": 123.85,
+        "time": 120.15,
+        "endTime": 123.85
+      },
+      {
+        "jp": "'Cause every single day's your birthday, baby",
+        "sourceTime": 123.85,
+        "sourceEnd": 127.78,
+        "time": 123.85,
+        "endTime": 127.78
+      },
+      {
+        "jp": "As long as we're here",
+        "sourceTime": 127.78,
+        "sourceEnd": 131.02,
+        "time": 127.78,
+        "endTime": 131.02
+      },
+      {
+        "jp": "Be forever young (young), my love",
+        "sourceTime": 131.02,
+        "sourceEnd": 140.22,
+        "time": 131.02,
+        "endTime": 140.22
+      },
+      {
+        "jp": "Oh, yeah",
+        "sourceTime": 140.22,
+        "sourceEnd": 143.33,
+        "time": 140.22,
+        "endTime": 143.33
+      },
+      {
+        "jp": "I'm just a boy who strives for eternity",
+        "sourceTime": 152.94,
+        "sourceEnd": 160.79,
+        "time": 152.94,
+        "endTime": 160.79
+      },
+      {
+        "jp": "And we're just kids with infinite energy (energy)",
+        "sourceTime": 160.79,
+        "sourceEnd": 167.54,
+        "time": 160.79,
+        "endTime": 167.54
+      },
+      {
+        "jp": "I know we're gonna know the truth eventually",
+        "sourceTime": 167.54,
+        "sourceEnd": 175.21,
+        "time": 167.54,
+        "endTime": 175.21
+      },
+      {
+        "jp": "We are more than we think we are, so have some dignity, ayy, ayy, ayy",
+        "sourceTime": 175.21,
+        "sourceEnd": 182.83,
+        "time": 175.21,
+        "endTime": 182.83
+      },
+      {
+        "jp": "We were children, oh, so long ago",
+        "sourceTime": 182.83,
+        "sourceEnd": 186.84,
+        "time": 182.83,
+        "endTime": 186.84
+      },
+      {
+        "jp": "But we still got a long, long way to go",
+        "sourceTime": 186.84,
+        "sourceEnd": 190.79,
+        "time": 186.84,
+        "endTime": 190.79
+      },
+      {
+        "jp": "Come on over, let's go higher",
+        "sourceTime": 190.79,
+        "sourceEnd": 194.68,
+        "time": 190.79,
+        "endTime": 194.68
+      },
+      {
+        "jp": "Takes forever just to learn who we are",
+        "sourceTime": 194.68,
+        "sourceEnd": 198.36,
+        "time": 194.68,
+        "endTime": 198.36
+      },
+      {
+        "jp": "Don't you be scared, we're together",
+        "sourceTime": 198.36,
+        "sourceEnd": 202.19,
+        "time": 198.36,
+        "endTime": 202.19
+      },
+      {
+        "jp": "39, 60 or whatever",
+        "sourceTime": 202.19,
+        "sourceEnd": 205.83,
+        "time": 202.19,
+        "endTime": 205.83
+      },
+      {
+        "jp": "As long as we're here",
+        "sourceTime": 205.83,
+        "sourceEnd": 209.07,
+        "time": 205.83,
+        "endTime": 209.07
+      },
+      {
+        "jp": "We're forever young (young)",
+        "sourceTime": 209.07,
+        "sourceEnd": 213.86,
+        "time": 209.07,
+        "endTime": 213.86
+      },
+      {
+        "jp": "We can be born again and again",
+        "sourceTime": 213.86,
+        "sourceEnd": 217.56,
+        "time": 213.86,
+        "endTime": 217.56
+      },
+      {
+        "jp": "'Cause every single day's your birthday, baby",
+        "sourceTime": 217.56,
+        "sourceEnd": 221.44,
+        "time": 217.56,
+        "endTime": 221.44
+      },
+      {
+        "jp": "As long as we're here",
+        "sourceTime": 221.44,
+        "sourceEnd": 224.56,
+        "time": 221.44,
+        "endTime": 224.56
+      },
+      {
+        "jp": "Be forever young (young)",
+        "sourceTime": 224.56,
+        "sourceEnd": 230.15,
+        "time": 224.56,
+        "endTime": 230.15
+      },
+      {
+        "jp": "Baby, let me give you my heart, give you my all, they're no longer mine",
+        "sourceTime": 230.15,
+        "sourceEnd": 237.21,
+        "time": 230.15,
+        "endTime": 237.21
+      },
+      {
+        "jp": "You've come and saved me countless times",
+        "sourceTime": 237.21,
+        "sourceEnd": 241.17,
+        "time": 237.21,
+        "endTime": 241.17
+      },
+      {
+        "jp": "From you, I got nothing to hide",
+        "sourceTime": 241.17,
+        "sourceEnd": 245.87,
+        "time": 241.17,
+        "endTime": 245.87
+      },
+      {
+        "jp": "Lonely in the pouring rain, but it was your grace all over me",
+        "sourceTime": 245.87,
+        "sourceEnd": 253.11,
+        "time": 245.87,
+        "endTime": 253.11
+      },
+      {
+        "jp": "Can I go back again? Child again?",
+        "sourceTime": 253.11,
+        "sourceEnd": 257.78,
+        "time": 253.11,
+        "endTime": 257.78
+      },
+      {
+        "jp": "We could do it all over again",
+        "sourceTime": 257.78,
+        "sourceEnd": 260.76,
+        "time": 257.78,
+        "endTime": 260.76
+      },
+      {
+        "jp": "Don't you be scared, we're together",
+        "sourceTime": 260.76,
+        "sourceEnd": 264.61,
+        "time": 260.76,
+        "endTime": 264.61
+      },
+      {
+        "jp": "39, 60 or whatever",
+        "sourceTime": 264.61,
+        "sourceEnd": 268.33,
+        "time": 264.61,
+        "endTime": 268.33
+      },
+      {
+        "jp": "As long as we're here",
+        "sourceTime": 268.33,
+        "sourceEnd": 271.41,
+        "time": 268.33,
+        "endTime": 271.41
+      },
+      {
+        "jp": "We're forever young, young, young, young",
+        "sourceTime": 271.41,
+        "sourceEnd": 276.17,
+        "time": 271.41,
+        "endTime": 276.17
+      },
+      {
+        "jp": "We can be born again and again",
+        "sourceTime": 276.17,
+        "sourceEnd": 279.99,
+        "time": 276.17,
+        "endTime": 279.99
+      },
+      {
+        "jp": "'Cause every single day's your birthday, baby",
+        "sourceTime": 279.99,
+        "sourceEnd": 283.9,
+        "time": 279.99,
+        "endTime": 283.9
+      },
+      {
+        "jp": "As long as we're here",
+        "sourceTime": 283.9,
+        "sourceEnd": 287.09,
+        "time": 283.9,
+        "endTime": 287.09
+      },
+      {
+        "jp": "Be forever young (young), my love",
+        "sourceTime": 287.09,
+        "sourceEnd": 292.63,
+        "time": 287.09,
+        "endTime": 292.63
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/24040288",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/24040288",
+    "timingPreview": {
+      "youtubeId": "tU953HcYdxU",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "not-applicable"
+  },
+  "Matsuri": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Yeah",
+        "sourceTime": 4.83,
+        "sourceEnd": 6.07,
+        "time": 4.83,
+        "endTime": 6.07
+      },
+      {
+        "jp": "愛しか感じたくもない",
+        "sourceTime": 25.22,
+        "sourceEnd": 30.28,
+        "time": 25.22,
+        "endTime": 30.28,
+        "tr": "我只想感受到愛",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "もう何の分け隔てもない",
+        "sourceTime": 30.28,
+        "sourceEnd": 35.17,
+        "time": 30.28,
+        "endTime": 35.17,
+        "tr": "不再有任何偏見",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "まとめてかかってきなさい",
+        "sourceTime": 35.17,
+        "sourceEnd": 39.14,
+        "time": 35.17,
+        "endTime": 39.14,
+        "tr": "全都給我放馬過來吧",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "今なら全て受け止めるから",
+        "sourceTime": 39.14,
+        "sourceEnd": 45.06,
+        "time": 39.14,
+        "endTime": 45.06,
+        "tr": "因為如今的我能接納一切",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "で、一体何がほしいわけ yeah",
+        "sourceTime": 45.06,
+        "sourceEnd": 50.01,
+        "time": 45.06,
+        "endTime": 50.01,
+        "tr": "所以你到底想要什麼?",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "誰に勝ちたいわけ hey, yeah, yeah",
+        "sourceTime": 50.01,
+        "sourceEnd": 54.96,
+        "time": 50.01,
+        "endTime": 54.96,
+        "tr": "你究竟想贏過誰?",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "なかなか気づけんよね yeah",
+        "sourceTime": 54.96,
+        "sourceEnd": 59.18,
+        "time": 54.96,
+        "endTime": 59.18,
+        "tr": "我了解這實在難以察覺",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何もかも既に持ってるのにね hey, yeah",
+        "sourceTime": 59.18,
+        "sourceEnd": 64.76,
+        "time": 59.18,
+        "endTime": 64.76,
+        "tr": "其實我們早已擁有一切",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "花祭り 夏祭り",
+        "sourceTime": 64.76,
+        "sourceEnd": 69.55,
+        "time": 64.76,
+        "endTime": 69.55,
+        "tr": "浴佛慶典、夏日慶典",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何でも好きに選びな",
+        "sourceTime": 69.55,
+        "sourceEnd": 71.44,
+        "time": 69.55,
+        "endTime": 71.44,
+        "tr": "隨心所欲地做選擇",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あなたの心の中咲かせな (えいっ)",
+        "sourceTime": 71.44,
+        "sourceEnd": 74.64,
+        "time": 71.44,
+        "endTime": 74.64,
+        "tr": "使其在你心中盛開綻放 (欸)",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "秋祭り 冬休み",
+        "sourceTime": 74.64,
+        "sourceEnd": 78.91,
+        "time": 74.64,
+        "endTime": 78.91,
+        "tr": "秋季慶典、冬日假期",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "その閉じた心 今こじ開けな",
+        "sourceTime": 78.91,
+        "sourceEnd": 82.48,
+        "time": 78.91,
+        "endTime": 82.48,
+        "tr": "現在就撬開你那緊閉的心扉吧",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あっけーな ラッセーラ",
+        "sourceTime": 82.48,
+        "sourceEnd": 84.34,
+        "time": 82.48,
+        "endTime": 84.34,
+        "tr": "敞開吧 出來吧",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "祭り 祭り",
+        "sourceTime": 84.34,
+        "sourceEnd": 86.79,
+        "time": 84.34,
+        "endTime": 86.79,
+        "tr": "慶典 慶典",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "毎日愛しき何かの",
+        "sourceTime": 86.79,
+        "sourceEnd": 89.33,
+        "time": 86.79,
+        "endTime": 89.33,
+        "tr": "每一天皆為惹人憐愛的",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "祭り 祭り",
+        "sourceTime": 89.33,
+        "sourceEnd": 91.78,
+        "time": 89.33,
+        "endTime": 91.78,
+        "tr": "慶典 慶典",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれもこれもが大当たり",
+        "sourceTime": 91.78,
+        "sourceEnd": 94.31,
+        "time": 91.78,
+        "endTime": 94.31,
+        "tr": "生活點滴全都像中大獎",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "比べるものは何もない",
+        "sourceTime": 94.31,
+        "sourceEnd": 96.86,
+        "time": 94.31,
+        "endTime": 96.86,
+        "tr": "任何事都無須比較",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "勝ちや負けとか一切ない",
+        "sourceTime": 96.86,
+        "sourceEnd": 99.85,
+        "time": 96.86,
+        "endTime": 99.85,
+        "tr": "所有一切也無輸贏之分",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "ない ない",
+        "sourceTime": 99.85,
+        "sourceEnd": 106.56,
+        "time": 99.85,
+        "endTime": 106.56,
+        "tr": "沒必要，真沒必要",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "何も知ったこっちゃない",
+        "sourceTime": 106.56,
+        "sourceEnd": 111.32,
+        "time": 106.56,
+        "endTime": 111.32,
+        "tr": "我什麼都不在乎",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "好きにしてください",
+        "sourceTime": 111.32,
+        "sourceEnd": 116.45,
+        "time": 111.32,
+        "endTime": 116.45,
+        "tr": "想怎麼做都隨你高興",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何も知ったこっちゃない",
+        "sourceTime": 116.45,
+        "sourceEnd": 121.23,
+        "time": 116.45,
+        "endTime": 121.23,
+        "tr": "我什麼都不在乎",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "好きにしてください",
+        "sourceTime": 121.23,
+        "sourceEnd": 124.12,
+        "time": 121.23,
+        "endTime": 124.12,
+        "tr": "想怎麼做都隨你高興",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "僕が激しく泣いたせいで",
+        "sourceTime": 124.12,
+        "sourceEnd": 126.64,
+        "time": 124.12,
+        "endTime": 126.64,
+        "tr": "都怪我嚎啕大哭",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "君が派手に笑ったせいで",
+        "sourceTime": 126.64,
+        "sourceEnd": 129,
+        "time": 126.64,
+        "endTime": 129,
+        "tr": "都怪你捧腹大笑",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "夏の暑さ身体を焦がして",
+        "sourceTime": 129,
+        "sourceEnd": 131.41,
+        "time": 129,
+        "endTime": 131.41,
+        "tr": "炎炎酷暑灼燒身軀",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "冬の厳しさ骨身に沁みた",
+        "sourceTime": 131.41,
+        "sourceEnd": 133.91,
+        "time": 131.41,
+        "endTime": 133.91,
+        "tr": "冷冬嚴寒滲入骨髓",
+        "translationRef": [
+          27
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "真っ平らに生きられたら",
+        "sourceTime": 133.91,
+        "sourceEnd": 136.32,
+        "time": 133.91,
+        "endTime": 136.32,
+        "tr": "若我能平穩地活著",
+        "translationRef": [
+          28
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "真っ直ぐにそこへ行けたかな",
+        "sourceTime": 136.32,
+        "sourceEnd": 139.03,
+        "time": 136.32,
+        "endTime": 139.03,
+        "tr": "是否就能直達此地?",
+        "translationRef": [
+          29
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "っしゃ今なら遅くはねーから",
+        "sourceTime": 139.03,
+        "sourceEnd": 141.5,
+        "time": 139.03,
+        "endTime": 141.5,
+        "tr": "好吧，當下重新開始還不算太遲",
+        "translationRef": [
+          30
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "っしゃ っしゃ っしゃ っしゃ",
+        "sourceTime": 141.5,
+        "sourceEnd": 143.68,
+        "time": 141.5,
+        "endTime": 143.68,
+        "tr": "好吧、好吧、好吧、好吧",
+        "translationRef": [
+          31
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "花祭り 夏祭り",
+        "sourceTime": 143.68,
+        "sourceEnd": 148.67,
+        "time": 143.68,
+        "endTime": 148.67,
+        "tr": "浴佛慶典、夏日慶典",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "生まれゆくもの死にゆくもの全てが同時の出来事",
+        "sourceTime": 148.67,
+        "sourceEnd": 153.85,
+        "time": 148.67,
+        "endTime": 153.85,
+        "tr": "新生抑或死亡／全都在同時進行",
+        "translationRef": [
+          33,
+          34
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "秋祭り 冬休み",
+        "sourceTime": 153.85,
+        "sourceEnd": 158.11,
+        "time": 153.85,
+        "endTime": 158.11,
+        "tr": "秋季慶典、冬日假期",
+        "translationRef": [
+          35
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "みな抱きしめたら踊りなさいな さいな",
+        "sourceTime": 158.11,
+        "sourceEnd": 163.43,
+        "time": 158.11,
+        "endTime": 163.43,
+        "tr": "將一切擁入懷中起舞吧",
+        "translationRef": [
+          36
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "祭り 祭り",
+        "sourceTime": 163.43,
+        "sourceEnd": 166.04,
+        "time": 163.43,
+        "endTime": 166.04,
+        "tr": "慶典 慶典",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "毎日愛しき何かの",
+        "sourceTime": 166.04,
+        "sourceEnd": 168.56,
+        "time": 166.04,
+        "endTime": 168.56,
+        "tr": "每一天皆為惹人憐愛的",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "祭り 祭り",
+        "sourceTime": 168.56,
+        "sourceEnd": 171.09,
+        "time": 168.56,
+        "endTime": 171.09,
+        "tr": "慶典 慶典",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれもこれもが有り難し",
+        "sourceTime": 171.09,
+        "sourceEnd": 173.58,
+        "time": 171.09,
+        "endTime": 173.58,
+        "tr": "萬事萬物皆值得感激",
+        "translationRef": [
+          40
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "苦しむことは何もない",
+        "sourceTime": 173.58,
+        "sourceEnd": 175.9,
+        "time": 173.58,
+        "endTime": 175.9,
+        "tr": "讓人煎熬的事不復存在",
+        "translationRef": [
+          41
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "肩落とすこた一切ない",
+        "sourceTime": 175.9,
+        "sourceEnd": 178.99,
+        "time": 175.9,
+        "endTime": 178.99,
+        "tr": "也完全不必垂頭喪氣",
+        "translationRef": [
+          42
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "ない ない (oh)",
+        "sourceTime": 178.99,
+        "sourceEnd": 183.26,
+        "time": 178.99,
+        "endTime": 183.26,
+        "tr": "沒必要，真沒必要",
+        "translationRef": [
+          42
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "祭り 祭り",
+        "sourceTime": 183.26,
+        "sourceEnd": 185.64,
+        "time": 183.26,
+        "endTime": 185.64,
+        "tr": "慶典 慶典",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "毎日愛しき何かの",
+        "sourceTime": 185.64,
+        "sourceEnd": 188.39,
+        "time": 185.64,
+        "endTime": 188.39,
+        "tr": "每一天皆為惹人憐愛的",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "祭り 祭り (ooh)",
+        "sourceTime": 188.39,
+        "sourceEnd": 190.79,
+        "time": 188.39,
+        "endTime": 190.79,
+        "tr": "慶典 慶典",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれもこれもが有り難し",
+        "sourceTime": 190.79,
+        "sourceEnd": 193.13,
+        "time": 190.79,
+        "endTime": 193.13,
+        "tr": "萬事萬物皆值得感激",
+        "translationRef": [
+          40
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "苦しむことは何もない",
+        "sourceTime": 193.13,
+        "sourceEnd": 195.7,
+        "time": 193.13,
+        "endTime": 195.7,
+        "tr": "讓人煎熬的事不復存在",
+        "translationRef": [
+          41
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "肩落とすこた一切ない",
+        "sourceTime": 195.7,
+        "sourceEnd": 198.86,
+        "time": 195.7,
+        "endTime": 198.86,
+        "tr": "也完全不必垂頭喪氣",
+        "translationRef": [
+          48
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "ない (ない) ない (ない)",
+        "sourceTime": 198.86,
+        "sourceEnd": 205.49,
+        "time": 198.86,
+        "endTime": 205.49,
+        "tr": "沒必要，真沒必要",
+        "translationRef": [
+          48
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "何も知ったこっちゃない",
+        "sourceTime": 205.49,
+        "sourceEnd": 210.37,
+        "time": 205.49,
+        "endTime": 210.37,
+        "tr": "我什麼都不在乎",
+        "translationRef": [
+          49
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "好きにしてください",
+        "sourceTime": 210.37,
+        "sourceEnd": 215.49,
+        "time": 210.37,
+        "endTime": 215.49,
+        "tr": "想怎麼做都隨你高興",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何も知ったこっちゃない",
+        "sourceTime": 215.49,
+        "sourceEnd": 220.24,
+        "time": 215.49,
+        "endTime": 220.24,
+        "tr": "我什麼都不在乎",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何にせよめでたい",
+        "sourceTime": 220.24,
+        "sourceEnd": 222.1,
+        "time": 220.24,
+        "endTime": 222.1,
+        "tr": "歸根結柢可喜可賀",
+        "translationRef": [
+          52
+        ],
+        "translationMapping": "exact-source-text"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/12492714",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/12492714",
+    "timingPreview": {
+      "youtubeId": "NwOvu-j_WjY",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5wx0wn9",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5wx0wn9",
+    "translationProvenance": {
+      "file": "(歌詞)まつり.pdf",
+      "sha256": "abc41ab0bc2dbddd36a96e8eb4d8be653bb28e96729742f92c618c38b8ee87e1",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "WorkinHard": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "掻っ攫った 圧巻でらした あらら 世は実に易し",
+        "sourceTime": 21.92,
+        "sourceEnd": 27.27,
+        "time": 21.92,
+        "endTime": 27.27,
+        "tr": "一把拿下 那壓軸傑作 哎呀 真是輕而易舉的世界",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "信じ切った 安心し切った あたた 深き喜び",
+        "sourceTime": 27.27,
+        "sourceEnd": 32.52,
+        "time": 27.27,
+        "endTime": 32.52,
+        "tr": "我徹底的相信了 徹底的安心了 這深刻地喜悅之情",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "戦うは なぎ倒すは か弱い己自身さ",
+        "sourceTime": 32.52,
+        "sourceEnd": 37.85,
+        "time": 32.52,
+        "endTime": 37.85,
+        "tr": "戰場之上 必須戰勝的 正是那軟弱的自己",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "やり切って胸はって 綺麗に散るのさー",
+        "sourceTime": 37.85,
+        "sourceEnd": 43.28,
+        "time": 37.85,
+        "endTime": 43.28,
+        "tr": "竭盡全力 抬頭挺胸 美麗地凋零而去",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "みんなほんまよーやるわ めっちゃがんばっとるわ",
+        "sourceTime": 43.28,
+        "sourceEnd": 48.33,
+        "time": 43.28,
+        "endTime": 48.33,
+        "tr": "大家都很認真生活 日夜拼命地努力著",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "わしかて負けんよーにな ひそかに何かと努めるわ",
+        "sourceTime": 48.33,
+        "sourceEnd": 53.99,
+        "time": 48.33,
+        "endTime": 53.99,
+        "tr": "絕對不想輸在這裡 我也正為了某件事默默努力著",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "なんも無くたっていいや 結果なんぞかったりーわ",
+        "sourceTime": 53.99,
+        "sourceEnd": 58.65,
+        "time": 53.99,
+        "endTime": 58.65,
+        "tr": "即使是南柯一夢也罷 別再苦等任何結果",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Better sit back",
+        "sourceTime": 58.65,
+        "sourceEnd": 60.06,
+        "time": 58.65,
+        "endTime": 60.06,
+        "tr": "現在最好坐下放鬆",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Take a deep breath",
+        "sourceTime": 60.06,
+        "sourceEnd": 61.31,
+        "time": 60.06,
+        "endTime": 61.31,
+        "tr": "好好地深呼吸",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "And you'll know-know-know, know-know-know, know-know-know-know",
+        "sourceTime": 61.31,
+        "sourceEnd": 63.98,
+        "time": 61.31,
+        "endTime": 63.98,
+        "tr": "你就會明白…",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "You've been workin' hard, workin' hard",
+        "sourceTime": 63.98,
+        "sourceEnd": 66.88,
+        "time": 63.98,
+        "endTime": 66.88,
+        "tr": "你真的很努力了 一直都很努力",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Maybe you don't understand",
+        "sourceTime": 66.88,
+        "sourceEnd": 68.89,
+        "time": 66.88,
+        "endTime": 68.89,
+        "tr": "雖然你可能並不理解",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "But I know that you're workin' hard, workin' hard",
+        "sourceTime": 68.89,
+        "sourceEnd": 72.11,
+        "time": 68.89,
+        "endTime": 72.11,
+        "tr": "但我是知道你真的很努力 一直都很努力",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Wish I could give you a hand",
+        "sourceTime": 72.11,
+        "sourceEnd": 74.3,
+        "time": 72.11,
+        "endTime": 74.3,
+        "tr": "我總希望能幫上你的忙",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, you've been workin' hard, workin' hard",
+        "sourceTime": 74.3,
+        "sourceEnd": 78.33,
+        "time": 74.3,
+        "endTime": 78.33,
+        "tr": "寶貝 你真的已經很努力 一直都很努力",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Trust the process and be brave",
+        "sourceTime": 78.33,
+        "sourceEnd": 79.89,
+        "time": 78.33,
+        "endTime": 79.89,
+        "tr": "相信這個過程且變得更堅強",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been workin' hard",
+        "sourceTime": 79.89,
+        "sourceEnd": 82.26,
+        "time": 79.89,
+        "endTime": 82.26,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "God, you've been workin' hard",
+        "sourceTime": 82.26,
+        "sourceEnd": 85.62,
+        "time": 82.26,
+        "endTime": 85.62,
+        "tr": "老天 你真的真的非常努力了",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 85.62,
+        "sourceEnd": 90.93,
+        "time": 85.62,
+        "endTime": 90.93,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 90.93,
+        "sourceEnd": 96.15,
+        "time": 90.93,
+        "endTime": 96.15,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 96.15,
+        "sourceEnd": 101.7,
+        "time": 96.15,
+        "endTime": 101.7,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 101.7,
+        "sourceEnd": 106.51,
+        "time": 101.7,
+        "endTime": 106.51,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "Let's sit back, time to relax",
+        "sourceTime": 106.51,
+        "sourceEnd": 109.44,
+        "time": 106.51,
+        "endTime": 109.44,
+        "tr": "現在讓我們坐下 是時候放輕鬆了",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "鼓動に任せて自由に踊って",
+        "sourceTime": 109.44,
+        "sourceEnd": 112.1,
+        "time": 109.44,
+        "endTime": 112.1,
+        "tr": "隨著節奏自由舞動",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Bow down, show them respect",
+        "sourceTime": 112.1,
+        "sourceEnd": 114.84,
+        "time": 112.1,
+        "endTime": 114.84,
+        "tr": "鞠個躬 向他們表示我的敬意",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "敵も味方もここにはねえから",
+        "sourceTime": 114.84,
+        "sourceEnd": 117.42,
+        "time": 114.84,
+        "endTime": 117.42,
+        "tr": "這裡既沒有敵人也沒有夥伴",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Sit back, time to relax",
+        "sourceTime": 117.42,
+        "sourceEnd": 120.17,
+        "time": 117.42,
+        "endTime": 120.17,
+        "tr": "現在讓我們坐下 是時候放輕鬆了",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "鼓動に任せて自由に踊って",
+        "sourceTime": 120.17,
+        "sourceEnd": 122.71,
+        "time": 120.17,
+        "endTime": 122.71,
+        "tr": "隨著節奏自由舞動",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Bow down, show them respect",
+        "sourceTime": 122.71,
+        "sourceEnd": 125.43,
+        "time": 122.71,
+        "endTime": 125.43,
+        "tr": "鞠個躬 向他們表示我的敬意",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "敵も味方もほんまはねえから",
+        "sourceTime": 125.43,
+        "sourceEnd": 128.32,
+        "time": 125.43,
+        "endTime": 128.32,
+        "tr": "這裡既沒有敵人也沒有夥伴",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "みんなほんまよーやるわ めっちゃがんばっとるわ",
+        "sourceTime": 128.32,
+        "sourceEnd": 133.43,
+        "time": 128.32,
+        "endTime": 133.43,
+        "tr": "大家都很認真生活 日夜拼命地努力著",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "わしかて負けんよーにな ひそかに何かと努めるわ",
+        "sourceTime": 133.43,
+        "sourceEnd": 139.11,
+        "time": 133.43,
+        "endTime": 139.11,
+        "tr": "絕對不想輸在這裡 我也正為了某件事默默努力著",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "なんも無くたっていいや 結果なんぞかったりーわ",
+        "sourceTime": 139.11,
+        "sourceEnd": 144.04,
+        "time": 139.11,
+        "endTime": 144.04,
+        "tr": "即使是南柯一夢也罷 別再苦等任何結果",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Better sit back",
+        "sourceTime": 144.04,
+        "sourceEnd": 145.18,
+        "time": 144.04,
+        "endTime": 145.18,
+        "tr": "現在最好坐下放鬆",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Take a deep breath",
+        "sourceTime": 145.18,
+        "sourceEnd": 146.4,
+        "time": 145.18,
+        "endTime": 146.4,
+        "tr": "好好地深呼吸",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Then you'll know-know-know, know-know-know, know-know-know-know",
+        "sourceTime": 146.4,
+        "sourceEnd": 149.19,
+        "time": 146.4,
+        "endTime": 149.19,
+        "tr": "你就會明白…",
+        "translationRef": [
+          31
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "You've been workin' hard, workin' hard",
+        "sourceTime": 149.19,
+        "sourceEnd": 152.28,
+        "time": 149.19,
+        "endTime": 152.28,
+        "tr": "你真的很努力了 一直都很努力",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Maybe you don't understand",
+        "sourceTime": 152.28,
+        "sourceEnd": 154.15,
+        "time": 152.28,
+        "endTime": 154.15,
+        "tr": "雖然你可能並不理解",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "But I know that you're workin' hard, workin' hard",
+        "sourceTime": 154.15,
+        "sourceEnd": 157.54,
+        "time": 154.15,
+        "endTime": 157.54,
+        "tr": "但我是知道你真的很努力 一直都很努力",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Wish I could give you a hand",
+        "sourceTime": 157.54,
+        "sourceEnd": 159.69,
+        "time": 157.54,
+        "endTime": 159.69,
+        "tr": "我總希望能幫上你的忙",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, you've been, workin' hard, workin' hard",
+        "sourceTime": 159.69,
+        "sourceEnd": 163.54,
+        "time": 159.69,
+        "endTime": 163.54,
+        "tr": "寶貝 你真的已經很努力 一直都很努力",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Trust the process and be brave",
+        "sourceTime": 163.54,
+        "sourceEnd": 165.41,
+        "time": 163.54,
+        "endTime": 165.41,
+        "tr": "相信這個過程且變得更堅強",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been workin' hard",
+        "sourceTime": 165.41,
+        "sourceEnd": 167.69,
+        "time": 165.41,
+        "endTime": 167.69,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "God, you've been workin' hard",
+        "sourceTime": 167.69,
+        "sourceEnd": 170.75,
+        "time": 167.69,
+        "endTime": 170.75,
+        "tr": "老天 你真的真的非常努力了",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "All we gonna do is to make you happy",
+        "sourceTime": 170.75,
+        "sourceEnd": 173.42,
+        "time": 170.75,
+        "endTime": 173.42,
+        "tr": "我們能做的只有使你快樂",
+        "translationRef": [
+          40
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "All we gonna do is to make you lucky",
+        "sourceTime": 173.42,
+        "sourceEnd": 176.02,
+        "time": 173.42,
+        "endTime": 176.02,
+        "tr": "我們能做的正是賦予你幸運",
+        "translationRef": [
+          41
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "All we gonna do is",
+        "sourceTime": 176.02,
+        "sourceEnd": 177.64,
+        "time": 176.02,
+        "endTime": 177.64,
+        "tr": "我們能做到的",
+        "translationRef": [
+          42
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "All we gonna do is to make you make you feel alive",
+        "sourceTime": 177.64,
+        "sourceEnd": 181.48,
+        "time": 177.64,
+        "endTime": 181.48,
+        "tr": "我們所能做到的是讓你有活著的感覺",
+        "translationRef": [
+          43
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "What we gonna do is to make you feel good",
+        "sourceTime": 181.48,
+        "sourceEnd": 184.04,
+        "time": 181.48,
+        "endTime": 184.04,
+        "tr": "我們現在要做的是讓你安心",
+        "translationRef": [
+          44
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "What we gonna do is to make you feel, ah",
+        "sourceTime": 184.04,
+        "sourceEnd": 186.78,
+        "time": 184.04,
+        "endTime": 186.78,
+        "tr": "我們現在能做的是讓你感受",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It's all about others, it's all about brothers",
+        "sourceTime": 186.78,
+        "sourceEnd": 189.44,
+        "time": 186.78,
+        "endTime": 189.44,
+        "tr": "一切都關係到彼此／一切都關於到同伴",
+        "translationRef": [
+          46,
+          47
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Together we can touch the sky",
+        "sourceTime": 189.44,
+        "sourceEnd": 191.74,
+        "time": 189.44,
+        "endTime": 191.74,
+        "tr": "只要齊心協力我們就能觸碰到藍天",
+        "translationRef": [
+          48
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "'Cause You've been workin' hard, workin' hard",
+        "sourceTime": 191.74,
+        "sourceEnd": 194.99,
+        "time": 191.74,
+        "endTime": 194.99,
+        "tr": "因為你真的很努力 真的很努力",
+        "translationRef": [
+          49
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Maybe you don't understand",
+        "sourceTime": 194.99,
+        "sourceEnd": 196.79,
+        "time": 194.99,
+        "endTime": 196.79,
+        "tr": "雖然你可能並不理解",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "But I know that you're workin' hard, workin' hard",
+        "sourceTime": 196.79,
+        "sourceEnd": 200.25,
+        "time": 196.79,
+        "endTime": 200.25,
+        "tr": "但我是知道你真的很努力 一直都很努力",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Wish I could give you a hand",
+        "sourceTime": 200.25,
+        "sourceEnd": 202.44,
+        "time": 200.25,
+        "endTime": 202.44,
+        "tr": "我總希望能幫上你的忙",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Baby, you've been workin' hard, workin' hard",
+        "sourceTime": 202.44,
+        "sourceEnd": 206.11,
+        "time": 202.44,
+        "endTime": 206.11,
+        "tr": "寶貝 你真的已經很努力 一直都很努力",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Trust the process and be brave",
+        "sourceTime": 206.11,
+        "sourceEnd": 207.93,
+        "time": 206.11,
+        "endTime": 207.93,
+        "tr": "相信這個過程且變得更堅強",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "You've been workin' hard",
+        "sourceTime": 207.93,
+        "sourceEnd": 210.46,
+        "time": 207.93,
+        "endTime": 210.46,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "God, you've been workin' hard",
+        "sourceTime": 210.46,
+        "sourceEnd": 213.85,
+        "time": 210.46,
+        "endTime": 213.85,
+        "tr": "老天 你真的真的非常努力了",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 213.85,
+        "sourceEnd": 218.85,
+        "time": 213.85,
+        "endTime": 218.85,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 218.85,
+        "sourceEnd": 221.47,
+        "time": 218.85,
+        "endTime": 221.47,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 224.2,
+        "sourceEnd": 226.86,
+        "time": 224.2,
+        "endTime": 226.86,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "(Workin' hard, workin' hard)",
+        "sourceTime": 229.76,
+        "sourceEnd": 232.3,
+        "time": 229.76,
+        "endTime": 232.3,
+        "tr": "你已經非常認真努力",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/12400390",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/12400390",
+    "timingPreview": {
+      "youtubeId": "88wHgiUAKoI",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-lvnw1950o7",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-lvnw1950o7",
+    "translationProvenance": {
+      "file": "(歌詞)Workin'+Hard.pdf",
+      "sha256": "8e589716c74f008fbd0ae6a8fa8d381cb3ce864ca80afc79e1e5ddeb82940131",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "NanNan": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "あんたのその歯に はさがった青さ粉に",
+        "sourceTime": 57.34,
+        "sourceEnd": 63.38,
+        "time": 57.34,
+        "endTime": 63.38,
+        "tr": "你那卡在牙縫裡的青海苔",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "ふれるべきか否かで少し悩んでる",
+        "sourceTime": 63.38,
+        "sourceEnd": 69.04,
+        "time": 63.38,
+        "endTime": 69.04,
+        "tr": "我正煩惱著該不該提醒你呢",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "口にしない方がいい真実もあるから",
+        "sourceTime": 69.04,
+        "sourceEnd": 78.78,
+        "time": 69.04,
+        "endTime": 78.78,
+        "tr": "因為有些真相不說出口比較好",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "知らない方が良かったなんて言わないで居て",
+        "sourceTime": 78.78,
+        "sourceEnd": 85.14,
+        "time": 78.78,
+        "endTime": 85.14,
+        "tr": "…別說什麼「早知道就不要知道了」",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何があってもずっと大好きなのに",
+        "sourceTime": 85.14,
+        "sourceEnd": 90.34,
+        "time": 85.14,
+        "endTime": 90.34,
+        "tr": "明明無論發生什麼事我都一直最喜歡你",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "どんなときも ここにいるのに",
+        "sourceTime": 90.34,
+        "sourceEnd": 95.19,
+        "time": 90.34,
+        "endTime": 95.19,
+        "tr": "明明無論什麼時候我都會在這裡",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "近すぎて 見えなくて ムシされて",
+        "sourceTime": 95.19,
+        "sourceEnd": 101.69,
+        "time": 95.19,
+        "endTime": 101.69,
+        "tr": "卻因為太近而看不見 被視而不見",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "雨の中一人行くあんた",
+        "sourceTime": 101.69,
+        "sourceEnd": 105.55,
+        "time": 101.69,
+        "endTime": 105.55,
+        "tr": "一個人走在雨中的你",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "心の中でささやくのよ そっちに行ってはダメと",
+        "sourceTime": 105.55,
+        "sourceEnd": 111.94,
+        "time": 105.55,
+        "endTime": 111.94,
+        "tr": "我在心底輕聲呢喃 「不可以往那邊走」",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "聞かないフリ続けるあんた",
+        "sourceTime": 111.94,
+        "sourceEnd": 116.11,
+        "time": 111.94,
+        "endTime": 116.11,
+        "tr": "卻繼續假裝沒聽見的你",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "勢いにまかせて 肥溜めへとダイブ",
+        "sourceTime": 116.11,
+        "sourceEnd": 121.83,
+        "time": 116.11,
+        "endTime": 121.83,
+        "tr": "順著那股勁頭 一頭栽進糞坑裡",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それは 何なん",
+        "sourceTime": 121.83,
+        "sourceEnd": 124.46,
+        "time": 121.83,
+        "endTime": 124.46,
+        "tr": "那是什麼啦",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "先がけてワシは言うたが",
+        "sourceTime": 124.46,
+        "sourceEnd": 127.05,
+        "time": 124.46,
+        "endTime": 127.05,
+        "tr": "我早就先跟你說過了",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それならば 何なん",
+        "sourceTime": 127.05,
+        "sourceEnd": 129.55,
+        "time": 127.05,
+        "endTime": 129.55,
+        "tr": "那如果是這樣又算什麼",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何で何も聞いてくれんかったん",
+        "sourceTime": 129.55,
+        "sourceEnd": 132.3,
+        "time": 129.55,
+        "endTime": 132.3,
+        "tr": "為什麼什麼都不聽我說",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "その顔は何なんw",
+        "sourceTime": 132.3,
+        "sourceEnd": 134.96,
+        "time": 132.3,
+        "endTime": 134.96,
+        "tr": "那張臉是什麼啦w",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "花咲く町の角誓った",
+        "sourceTime": 134.96,
+        "sourceEnd": 138.1,
+        "time": 134.96,
+        "endTime": 138.1,
+        "tr": "在開滿花的街角發誓過的",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの時の笑顔は何なん",
+        "sourceTime": 138.1,
+        "sourceEnd": 140.99,
+        "time": 138.1,
+        "endTime": 140.99,
+        "tr": "那時的笑容是什麼",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの時の涙は何じゃったん",
+        "sourceTime": 140.99,
+        "sourceEnd": 144.47,
+        "time": 140.99,
+        "endTime": 144.47,
+        "tr": "那時的眼淚又是什麼",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "たまには大胆に攻めたら良い",
+        "sourceTime": 144.47,
+        "sourceEnd": 149.78,
+        "time": 144.47,
+        "endTime": 149.78,
+        "tr": "偶爾大膽進攻一下也好",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "時には慎重に歩めばいい",
+        "sourceTime": 149.78,
+        "sourceEnd": 155.07,
+        "time": 149.78,
+        "endTime": 155.07,
+        "tr": "有時候謹慎地前進也好",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "真実なんてもんはとっくのとうに",
+        "sourceTime": 155.07,
+        "sourceEnd": 160.42,
+        "time": 155.07,
+        "endTime": 160.42,
+        "tr": "所謂真相這種東西 老早就",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "知っていることを知らないだけでしょう",
+        "sourceTime": 160.42,
+        "sourceEnd": 165.42,
+        "time": 160.42,
+        "endTime": 165.42,
+        "tr": "不過是假裝不知道早已知道的事罷了",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれほど刻んだ後悔も",
+        "sourceTime": 165.42,
+        "sourceEnd": 169.67,
+        "time": 165.42,
+        "endTime": 169.67,
+        "tr": "就連那刻骨銘心的後悔",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "くり返す毎日の中で かき消されていくのね",
+        "sourceTime": 169.67,
+        "sourceEnd": 176.16,
+        "time": 169.67,
+        "endTime": 176.16,
+        "tr": "也在日復一日的循環中 逐漸被抹去了呢",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "真っさらになった決意を胸に",
+        "sourceTime": 176.16,
+        "sourceEnd": 180.44,
+        "time": 176.16,
+        "endTime": 180.44,
+        "tr": "懷抱著全新的決心",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あんたは堂々と また肥溜めへとダイブ",
+        "sourceTime": 180.44,
+        "sourceEnd": 185.86,
+        "time": 180.44,
+        "endTime": 185.86,
+        "tr": "你卻又堂堂正正地 再次跳進糞坑裡",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それは何なん",
+        "sourceTime": 185.86,
+        "sourceEnd": 188.31,
+        "time": 185.86,
+        "endTime": 188.31,
+        "tr": "那是什麼啦",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "先がけてワシは言うたが",
+        "sourceTime": 188.31,
+        "sourceEnd": 190.96,
+        "time": 188.31,
+        "endTime": 190.96,
+        "tr": "我早就先跟你說過了",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それならば 何なん",
+        "sourceTime": 190.96,
+        "sourceEnd": 193.58,
+        "time": 190.96,
+        "endTime": 193.58,
+        "tr": "那如果是這樣又算什麼",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何で何も聞いてくれんかったん",
+        "sourceTime": 193.58,
+        "sourceEnd": 196.36,
+        "time": 193.58,
+        "endTime": 196.36,
+        "tr": "為什麼什麼都不聽我說",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "その顔は 何なんw",
+        "sourceTime": 196.36,
+        "sourceEnd": 199.05,
+        "time": 196.36,
+        "endTime": 199.05,
+        "tr": "那張臉是什麼啦w",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "花咲く町の角誓った",
+        "sourceTime": 199.05,
+        "sourceEnd": 202.13,
+        "time": 199.05,
+        "endTime": 202.13,
+        "tr": "在開滿花的街角發誓過的",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの時の笑顔は何なん",
+        "sourceTime": 202.13,
+        "sourceEnd": 204.94,
+        "time": 202.13,
+        "endTime": 204.94,
+        "tr": "那時的笑容是什麼",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの時の涙は何じゃったん",
+        "sourceTime": 204.94,
+        "sourceEnd": 209.24,
+        "time": 204.94,
+        "endTime": 209.24,
+        "tr": "那時的眼淚又是什麼",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "神様たすけて やばめ やばめ やばめ やばめ",
+        "sourceTime": 214.1,
+        "sourceEnd": 220.41,
+        "time": 214.1,
+        "endTime": 220.41,
+        "tr": "神明啊 救救我，不妙 不妙 不妙 不妙",
+        "translationRef": [
+          35
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "足元照らして やばめ やばめ やばめ やばめ",
+        "sourceTime": 224.88,
+        "sourceEnd": 229.24,
+        "time": 224.88,
+        "endTime": 229.24,
+        "tr": "照亮我的腳下，不妙 不妙 不妙 不妙",
+        "translationRef": [
+          36
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "目を閉じてみて 心の耳すまして 優しい気持ちで",
+        "sourceTime": 229.24,
+        "sourceEnd": 240.39,
+        "time": 229.24,
+        "endTime": 240.39,
+        "tr": "閉上眼睛試試看 用心傾聽／懷著溫柔的心情",
+        "translationRef": [
+          37,
+          38
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "答えを聴いて もう歌わせないで",
+        "sourceTime": 240.39,
+        "sourceEnd": 246.93,
+        "time": 240.39,
+        "endTime": 246.93,
+        "tr": "聽聽答案吧 別再讓我唱了",
+        "translationRef": [
+          39
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "裏切りのブルース",
+        "sourceTime": 246.93,
+        "sourceEnd": 252.58,
+        "time": 246.93,
+        "endTime": 252.58,
+        "tr": "背叛的藍調",
+        "translationRef": [
+          40
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それは 「何なんw」",
+        "sourceTime": 252.58,
+        "sourceEnd": 255.51,
+        "time": 252.58,
+        "endTime": 255.51,
+        "tr": "那是「什麼啦w」",
+        "translationRef": [
+          41
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "... ワシは言うたが",
+        "sourceTime": 255.51,
+        "sourceEnd": 257.66,
+        "time": 255.51,
+        "endTime": 257.66,
+        "tr": "…我早就說過了",
+        "translationRef": [
+          42
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それならば何なん",
+        "sourceTime": 257.66,
+        "sourceEnd": 260.95,
+        "time": 257.66,
+        "endTime": 260.95,
+        "tr": "那如果是這樣又算什麼",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何で聞いてくれんかったん",
+        "sourceTime": 260.95,
+        "sourceEnd": 263.87,
+        "time": 260.95,
+        "endTime": 263.87,
+        "tr": "為什麼不聽我說",
+        "translationRef": [
+          44
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何なん 何なん 何なん",
+        "sourceTime": 263.87,
+        "sourceEnd": 269.12,
+        "time": 263.87,
+        "endTime": 269.12,
+        "tr": "什麼啦 什麼啦 什麼啦",
+        "translationRef": [
+          45
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの時の笑顔は何なん",
+        "sourceTime": 269.12,
+        "sourceEnd": 271.65,
+        "time": 269.12,
+        "endTime": 271.65,
+        "tr": "那時的笑容是什麼",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの時の涙は何じゃったん",
+        "sourceTime": 271.65,
+        "sourceEnd": 274.53,
+        "time": 271.65,
+        "endTime": 274.53,
+        "tr": "那時的眼淚又是什麼",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何なん",
+        "sourceTime": 274.53,
+        "sourceEnd": 275.23,
+        "time": 274.53,
+        "endTime": 275.23,
+        "tr": "什麼啦",
+        "translationRef": [
+          48
+        ],
+        "translationMapping": "exact-source-text"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/8346846",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/8346846",
+    "timingPreview": {
+      "youtubeId": "Nt6ZwuVzOS4",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-wzrv4zxwr3",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-wzrv4zxwr3",
+    "translationProvenance": {
+      "file": "(歌詞)何なんw.pdf",
+      "sha256": "58a901c7a0a6d3013af0c6ecd0245af2eb0056f8430168aaa0b77e5c125776e7",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "Kirari": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "荒れ狂う 季節の中を",
+        "sourceTime": 0.98,
+        "sourceEnd": 4.16,
+        "time": 0.98,
+        "endTime": 4.16,
+        "tr": "在暴烈狂亂的季節",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "二人は一人きり さらり",
+        "sourceTime": 4.16,
+        "sourceEnd": 9.18,
+        "time": 4.16,
+        "endTime": 9.18,
+        "tr": "兩人都是單獨的個體 乾脆爽快",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "明け行く夕日の中を",
+        "sourceTime": 9.18,
+        "sourceEnd": 12.24,
+        "time": 9.18,
+        "endTime": 12.24,
+        "tr": "在逐漸破曉的夕陽餘暉",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "今夜も昼下がり さらり",
+        "sourceTime": 12.24,
+        "sourceEnd": 17.28,
+        "time": 12.24,
+        "endTime": 17.28,
+        "tr": "今晚也轉為過午時分 毫無停滯",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "どれほど朽ち果てようと 最後にゃ笑いたい",
+        "sourceTime": 17.28,
+        "sourceEnd": 24.12,
+        "time": 17.28,
+        "endTime": 24.12,
+        "tr": "即便再怎麼腐朽消逝 都希望在最後露出笑容",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何のために",
+        "sourceTime": 24.12,
+        "sourceEnd": 26.55,
+        "time": 24.12,
+        "endTime": 26.55,
+        "tr": "無論是為了什麼而戰",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "戦おうとも動機は愛がいい あぁ",
+        "sourceTime": 26.55,
+        "sourceEnd": 34.46,
+        "time": 26.55,
+        "endTime": 34.46,
+        "tr": "都希望背後的動機是愛",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "新しい日々は 探さずとも常に ここに（ここに）",
+        "sourceTime": 34.46,
+        "sourceEnd": 42.11,
+        "time": 34.46,
+        "endTime": 42.11,
+        "tr": "嶄新的日子縱使不去尋找 也依舊常伴身側",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "色々見てきたけれど この瞳は永遠に きらり",
+        "sourceTime": 42.11,
+        "sourceEnd": 50.15,
+        "time": 42.11,
+        "endTime": 50.15,
+        "tr": "即使見過世間百態 這雙眼眸仍永遠閃耀",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれほど生きてきたけど 全ては夢みたい",
+        "sourceTime": 50.15,
+        "sourceEnd": 57.05,
+        "time": 50.15,
+        "endTime": 57.05,
+        "tr": "雖然活了那麼久 卻全都像夢一場",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれもこれも",
+        "sourceTime": 57.05,
+        "sourceEnd": 59.63,
+        "time": 57.05,
+        "endTime": 59.63,
+        "tr": "周遭萬物",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "魅力的でも私は君がいい あぁ",
+        "sourceTime": 59.63,
+        "sourceEnd": 66.58,
+        "time": 59.63,
+        "endTime": 66.58,
+        "tr": "魅力橫溢 但你是我的唯一",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "どこにいたの 探してたよ",
+        "sourceTime": 66.58,
+        "sourceEnd": 70.85,
+        "time": 66.58,
+        "endTime": 70.85,
+        "tr": "你之前身在何處 我找很久了",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "連れてって 連れてって",
+        "sourceTime": 70.85,
+        "sourceEnd": 75.09,
+        "time": 70.85,
+        "endTime": 75.09,
+        "tr": "帶我走吧 帶我走吧",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何もかも 捨ててくよ",
+        "sourceTime": 75.09,
+        "sourceEnd": 79.02,
+        "time": 75.09,
+        "endTime": 79.02,
+        "tr": "我會為你捨棄一切",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "どこまでも どこまでも",
+        "sourceTime": 79.02,
+        "sourceEnd": 83.14,
+        "time": 79.02,
+        "endTime": 83.14,
+        "tr": "隨你到任何地方 隨你到任何地方",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "荒れ狂う 季節の中も 群衆の中も",
+        "sourceTime": 83.14,
+        "sourceEnd": 88.28,
+        "time": 83.14,
+        "endTime": 88.28,
+        "tr": "在暴烈狂亂的季節也好 熙來攘往的群眾中也罷",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "君とならば さらり さらり",
+        "sourceTime": 88.28,
+        "sourceEnd": 91.85,
+        "time": 88.28,
+        "endTime": 91.85,
+        "tr": "只要和你在一起 就輕鬆暢達 心情輕快",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "新しい日々も 拙い過去も",
+        "sourceTime": 91.85,
+        "sourceEnd": 96.23,
+        "time": 91.85,
+        "endTime": 96.23,
+        "tr": "嶄新的日子以及拙劣的過去",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "全てがきらり yeah",
+        "sourceTime": 96.23,
+        "sourceEnd": 103.6,
+        "time": 96.23,
+        "endTime": 103.6,
+        "tr": "全都璀璨閃耀",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "無くしてしまったものを振り返って ほろり",
+        "sourceTime": 118.53,
+        "sourceEnd": 125.88,
+        "time": 118.53,
+        "endTime": 125.88,
+        "tr": "回首過往失去的種種 潸然淚下",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "時には途方に暮れて",
+        "sourceTime": 125.88,
+        "sourceEnd": 129.35,
+        "time": 125.88,
+        "endTime": 129.35,
+        "tr": "有時走投無路",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "ただ風に吹かれて ゆらり",
+        "sourceTime": 129.35,
+        "sourceEnd": 134.65,
+        "time": 129.35,
+        "endTime": 134.65,
+        "tr": "僅能任風吹襲 飄蕩搖晃",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "息せき切ってきたの",
+        "sourceTime": 134.65,
+        "sourceEnd": 136.77,
+        "time": 134.65,
+        "endTime": 136.77,
+        "tr": "氣喘吁吁地奔來",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "行き先は決めたの",
+        "sourceTime": 136.77,
+        "sourceEnd": 138.83,
+        "time": 136.77,
+        "endTime": 138.83,
+        "tr": "決定好目的地",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "迷わずに行きたいけど保証はしないよ",
+        "sourceTime": 138.83,
+        "sourceEnd": 142.71,
+        "time": 138.83,
+        "endTime": 142.71,
+        "tr": "雖說想要毫不猶豫地出發 但也無法保證喲",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何か分かったようで",
+        "sourceTime": 142.71,
+        "sourceEnd": 144.91,
+        "time": 142.71,
+        "endTime": 144.91,
+        "tr": "好像明白了什麼",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "reviewed-cross-paragraph-fragment"
+      },
+      {
+        "jp": "何も分かってなくて",
+        "sourceTime": 144.91,
+        "sourceEnd": 146.94,
+        "time": 144.91,
+        "endTime": 146.94,
+        "tr": "其實還是一頭霧水",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "reviewed-cross-paragraph-fragment"
+      },
+      {
+        "jp": "だけどそれが分かって本当に良かった",
+        "sourceTime": 146.94,
+        "sourceEnd": 151.36,
+        "time": 146.94,
+        "endTime": 151.36,
+        "tr": "不過很慶幸能得知那一點",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "reviewed-cross-paragraph-fragment"
+      },
+      {
+        "jp": "新しい日々は 探さずとも常に ここに",
+        "sourceTime": 151.36,
+        "sourceEnd": 156.72,
+        "time": 151.36,
+        "endTime": 156.72,
+        "tr": "嶄新的日子縱使不去尋找 也依舊常伴身側",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "常にここに ここに あぁ",
+        "sourceTime": 156.72,
+        "sourceEnd": 159.52,
+        "time": 156.72,
+        "endTime": 159.52,
+        "tr": "一直都在 就在身邊",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "色々見てきたけれど この瞳は永遠に きらり",
+        "sourceTime": 159.52,
+        "sourceEnd": 165.53,
+        "time": 159.52,
+        "endTime": 165.53,
+        "tr": "即使見過世間百態 這雙眼眸仍永遠閃耀",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "永遠に きらり あぁ",
+        "sourceTime": 165.53,
+        "sourceEnd": 167.61,
+        "time": 165.53,
+        "endTime": 167.61,
+        "tr": "永遠閃耀 啊",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "あぁ、生きてきたけど全ては夢みたい",
+        "sourceTime": 167.61,
+        "sourceEnd": 174.07,
+        "time": 167.61,
+        "endTime": 174.07,
+        "tr": "雖然活了那麼久 卻全都像夢一場",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "あれもこれも",
+        "sourceTime": 174.07,
+        "sourceEnd": 176.62,
+        "time": 174.07,
+        "endTime": 176.62,
+        "tr": "周遭萬物",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "魅力的でも私は君がいい",
+        "sourceTime": 176.62,
+        "sourceEnd": 182.13,
+        "time": 176.62,
+        "endTime": 182.13,
+        "tr": "魅力橫溢 但你是我的唯一",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "あぁ、あぁ、あぁ、あぁ",
+        "sourceTime": 182.13,
+        "sourceEnd": 189.83,
+        "time": 182.13,
+        "endTime": 189.83
+      },
+      {
+        "jp": "どこにいたの 探してたよ",
+        "sourceTime": 189.83,
+        "sourceEnd": 193.88,
+        "time": 189.83,
+        "endTime": 193.88,
+        "tr": "你之前身在何處 我找很久了",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "連れてって 連れてって",
+        "sourceTime": 193.88,
+        "sourceEnd": 198.05,
+        "time": 193.88,
+        "endTime": 198.05,
+        "tr": "帶我走吧 帶我走吧",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何もかも 捨ててくよ",
+        "sourceTime": 198.05,
+        "sourceEnd": 202.09,
+        "time": 198.05,
+        "endTime": 202.09,
+        "tr": "我會為你捨棄一切",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "どこまでも どこまでも",
+        "sourceTime": 202.09,
+        "sourceEnd": 206.04,
+        "time": 202.09,
+        "endTime": 206.04,
+        "tr": "隨你到任何地方 隨你到任何地方",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "荒れ狂う 季節の中も 群衆の中も",
+        "sourceTime": 206.04,
+        "sourceEnd": 211.49,
+        "time": 206.04,
+        "endTime": 211.49,
+        "tr": "在暴烈狂亂的季節也好 熙來攘往的群眾中也罷",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "君とならば さらり さらり",
+        "sourceTime": 211.49,
+        "sourceEnd": 215.07,
+        "time": 211.49,
+        "endTime": 215.07,
+        "tr": "只要和你在一起 就輕鬆暢達 心情輕快",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "新しい日々も 拙い過去も",
+        "sourceTime": 215.07,
+        "sourceEnd": 219.38,
+        "time": 215.07,
+        "endTime": 219.38,
+        "tr": "嶄新的日子 以及拙劣的過去",
+        "translationRef": [
+          33
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "全てがきらり yeah",
+        "sourceTime": 219.38,
+        "sourceEnd": 224.58,
+        "time": 219.38,
+        "endTime": 224.58,
+        "tr": "全都璀璨閃耀",
+        "translationRef": [
+          33
+        ],
+        "translationMapping": "split-pdf-sentence"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/14510544",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/14510544",
+    "timingPreview": {
+      "youtubeId": "TcLLpZBWsck",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-14o717y7ok",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-14o717y7ok",
+    "translationProvenance": {
+      "file": "(歌詞)きらり.pdf",
+      "sha256": "fcba544c9a35dbbb115821dfc303ffd952bf284a4ce69e39c66405c75fb1ee0b",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "Hana": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "枯れていく",
+        "sourceTime": 15.72,
+        "sourceEnd": 19.85,
+        "time": 15.72,
+        "endTime": 19.85,
+        "tr": "逐漸凋萎",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "今この瞬間も",
+        "sourceTime": 19.85,
+        "sourceEnd": 23.58,
+        "time": 19.85,
+        "endTime": 23.58,
+        "tr": "連此時此刻也不例外",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "咲いている",
+        "sourceTime": 23.58,
+        "sourceEnd": 27.74,
+        "time": 23.58,
+        "endTime": 27.74,
+        "tr": "開得茂盛",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "全ては溶けていく",
+        "sourceTime": 27.74,
+        "sourceEnd": 31.68,
+        "time": 27.74,
+        "endTime": 31.68,
+        "tr": "萬物漸漸交融在一起",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "何が出来るのだろうか",
+        "sourceTime": 31.68,
+        "sourceEnd": 35.54,
+        "time": 31.68,
+        "endTime": 35.54,
+        "tr": "我能做些什麼",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "誰を生きようかな",
+        "sourceTime": 35.54,
+        "sourceEnd": 39.25,
+        "time": 35.54,
+        "endTime": 39.25,
+        "tr": "我該活得像誰",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "みんな儚い",
+        "sourceTime": 39.25,
+        "sourceEnd": 43.29,
+        "time": 39.25,
+        "endTime": 43.29,
+        "tr": "我們的人生苦短",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "みんな尊い",
+        "sourceTime": 43.29,
+        "sourceEnd": 48.09,
+        "time": 43.29,
+        "endTime": 48.09,
+        "tr": "皆為寶貴的存在",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "しわしわに萎れた花束 小わきに抱えて",
+        "sourceTime": 48.09,
+        "sourceEnd": 55.95,
+        "time": 48.09,
+        "endTime": 55.95,
+        "tr": "把一束皺巴巴的枯萎花束夾在手臂下",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "永遠に変わらぬ輝き 探してた",
+        "sourceTime": 55.95,
+        "sourceEnd": 62.64,
+        "time": 55.95,
+        "endTime": 62.64,
+        "tr": "找尋永不黯淡的光輝",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "僕らを信じてみた",
+        "sourceTime": 62.64,
+        "sourceEnd": 66.71,
+        "time": 62.64,
+        "endTime": 66.71,
+        "tr": "選擇相信你和我",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "僕らを感じてた",
+        "sourceTime": 66.71,
+        "sourceEnd": 70.34,
+        "time": 66.71,
+        "endTime": 70.34,
+        "tr": "感受到了你和我",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "咲かせにいくよ 内なる花を",
+        "sourceTime": 70.34,
+        "sourceEnd": 79.57,
+        "time": 70.34,
+        "endTime": 79.57,
+        "tr": "我要動身去綻放 內心的花朵",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "♪",
+        "sourceTime": 79.57,
+        "sourceEnd": 93.96,
+        "time": 79.57,
+        "endTime": 93.96
+      },
+      {
+        "jp": "さりげなく",
+        "sourceTime": 93.96,
+        "sourceEnd": 97.95,
+        "time": 93.96,
+        "endTime": 97.95,
+        "tr": "若無其事地",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "思いを込めてみる",
+        "sourceTime": 97.95,
+        "sourceEnd": 101.75,
+        "time": 97.95,
+        "endTime": 101.75,
+        "tr": "懷抱自己的心願",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "やむを得ず",
+        "sourceTime": 101.75,
+        "sourceEnd": 105.6,
+        "time": 101.75,
+        "endTime": 105.6,
+        "tr": "無可奈何地",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "祈りを込めていく",
+        "sourceTime": 105.6,
+        "sourceEnd": 109.56,
+        "time": 105.6,
+        "endTime": 109.56,
+        "tr": "注入自己的祈願",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "いつまで迷うんだろうか",
+        "sourceTime": 109.56,
+        "sourceEnd": 113.5,
+        "time": 109.56,
+        "endTime": 113.5,
+        "tr": "不知道還會迷失多久",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "いつかは分かるよな",
+        "sourceTime": 113.5,
+        "sourceEnd": 117.49,
+        "time": 113.5,
+        "endTime": 117.49,
+        "tr": "我確信總有一天會得到答案",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "誰もが一人",
+        "sourceTime": 117.49,
+        "sourceEnd": 121.16,
+        "time": 117.49,
+        "endTime": 121.16,
+        "tr": "大家皆是孤身一人",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "全ては一つ ay",
+        "sourceTime": 121.16,
+        "sourceEnd": 126.18,
+        "time": 121.16,
+        "endTime": 126.18,
+        "tr": "全即是一",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "色々な姿や形に惑わされるけど",
+        "sourceTime": 126.18,
+        "sourceEnd": 133.87,
+        "time": 126.18,
+        "endTime": 133.87,
+        "tr": "即使被各種外貌和形狀所迷惑",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "いつの日か 全てがかわいく思えるさ",
+        "sourceTime": 133.87,
+        "sourceEnd": 140.82,
+        "time": 133.87,
+        "endTime": 140.82,
+        "tr": "在未來仍會覺得全都惹人憐愛",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "わたしは何になろうか",
+        "sourceTime": 140.82,
+        "sourceEnd": 144.62,
+        "time": 140.82,
+        "endTime": 144.62,
+        "tr": "我會成為什麼樣子",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "どんな色がいいかな",
+        "sourceTime": 144.62,
+        "sourceEnd": 148.48,
+        "time": 144.62,
+        "endTime": 148.48,
+        "tr": "想染上怎樣的色彩",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "探しにいくよ 内なる花を",
+        "sourceTime": 148.48,
+        "sourceEnd": 158.7,
+        "time": 148.48,
+        "endTime": 158.7,
+        "tr": "我要動身去探尋 內心的花朵",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "♪",
+        "sourceTime": 158.7,
+        "sourceEnd": 172.76,
+        "time": 158.7,
+        "endTime": 172.76
+      },
+      {
+        "jp": "しわしわに萎れた花束 小わきに抱えて",
+        "sourceTime": 172.76,
+        "sourceEnd": 180.84,
+        "time": 172.76,
+        "endTime": 180.84,
+        "tr": "把一束皺巴巴的枯萎花束夾在手臂下",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "永遠に変わらぬ輝き 探してた",
+        "sourceTime": 180.84,
+        "sourceEnd": 187.66,
+        "time": 180.84,
+        "endTime": 187.66,
+        "tr": "找尋永不黯淡的光輝",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "僕らを信じてみた",
+        "sourceTime": 187.66,
+        "sourceEnd": 191.51,
+        "time": 187.66,
+        "endTime": 191.51,
+        "tr": "選擇相信你和我",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "僕らを感じてた",
+        "sourceTime": 191.51,
+        "sourceEnd": 195.46,
+        "time": 191.51,
+        "endTime": 195.46,
+        "tr": "感受到了你和我",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "咲かせにいくよ 内なる花を",
+        "sourceTime": 195.46,
+        "sourceEnd": 203.28,
+        "time": 195.46,
+        "endTime": 203.28,
+        "tr": "我要動身去綻放 內心的花朵",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "探しにいくよ 内なる花を",
+        "sourceTime": 203.28,
+        "sourceEnd": 212.56,
+        "time": 203.28,
+        "endTime": 212.56,
+        "tr": "我要動身去探尋 內心的花朵",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 212.56,
+        "sourceEnd": 216.45,
+        "time": 212.56,
+        "endTime": 216.45,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 216.45,
+        "sourceEnd": 220.33,
+        "time": 216.45,
+        "endTime": 220.33,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 220.33,
+        "sourceEnd": 224.24,
+        "time": 220.33,
+        "endTime": 224.24,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 224.24,
+        "sourceEnd": 228.1,
+        "time": 224.24,
+        "endTime": 228.1,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 228.1,
+        "sourceEnd": 232.08,
+        "time": 228.1,
+        "endTime": 232.08,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 232.08,
+        "sourceEnd": 235.94,
+        "time": 232.08,
+        "endTime": 235.94,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 235.94,
+        "sourceEnd": 239.99,
+        "time": 235.94,
+        "endTime": 239.99,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "My flower's here, my flower's here",
+        "sourceTime": 239.99,
+        "sourceEnd": 243.33,
+        "time": 239.99,
+        "endTime": 243.33,
+        "tr": "我的花朵就在這裡／我的花朵就在這裡",
+        "translationRef": [
+          23,
+          23
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/31183752",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/31183752",
+    "timingPreview": {
+      "youtubeId": "SfPkl7lol7g",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-2go28v63o3",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-2go28v63o3",
+    "translationProvenance": {
+      "file": "(歌詞)花.pdf",
+      "sha256": "abb23dcbb6c8b5ffdbb120f42e8e6860214473e6b3850f980e4737012effad97",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "Garden": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "鳥は春を告げて",
+        "sourceTime": 15.11,
+        "sourceEnd": 18.38,
+        "time": 15.11,
+        "endTime": 18.38,
+        "tr": "鳥兒宣告春天的來臨",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "私は恋をして",
+        "sourceTime": 18.38,
+        "sourceEnd": 21.42,
+        "time": 18.38,
+        "endTime": 21.42,
+        "tr": "我陷入了戀情之中",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "素敵な温度だけ",
+        "sourceTime": 21.42,
+        "sourceEnd": 24.36,
+        "time": 21.42,
+        "endTime": 24.36,
+        "tr": "唯有這份美好的溫暖",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "触れさせて この肌で",
+        "sourceTime": 24.36,
+        "sourceEnd": 28.68,
+        "time": 24.36,
+        "endTime": 28.68,
+        "tr": "務必讓我用肌膚觸碰",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "雲は夏を帯びて",
+        "sourceTime": 28.68,
+        "sourceEnd": 32.09,
+        "time": 28.68,
+        "endTime": 32.09,
+        "tr": "雲朵帶著夏天的氣息",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "私は目を閉じて",
+        "sourceTime": 32.09,
+        "sourceEnd": 35.47,
+        "time": 32.09,
+        "endTime": 35.47,
+        "tr": "我把眼睛給閉上",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "綺麗な時間だけ",
+        "sourceTime": 35.47,
+        "sourceEnd": 38.6,
+        "time": 35.47,
+        "endTime": 38.6,
+        "tr": "只追逐美好的時光",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "追いかけて 尽きるまで",
+        "sourceTime": 38.6,
+        "sourceEnd": 41.84,
+        "time": 38.6,
+        "endTime": 41.84,
+        "tr": "直到最後一刻到來",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "花は咲いては枯れ",
+        "sourceTime": 41.84,
+        "sourceEnd": 44.92,
+        "time": 41.84,
+        "endTime": 44.92,
+        "tr": "花朵會盛開並枯萎",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "あなたに心奪われ",
+        "sourceTime": 44.92,
+        "sourceEnd": 48.32,
+        "time": 44.92,
+        "endTime": 48.32,
+        "tr": "你奪走了我的心",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "それでも守り続けたくて",
+        "sourceTime": 48.32,
+        "sourceEnd": 52.18,
+        "time": 48.32,
+        "endTime": 52.18,
+        "tr": "縱使如此我仍想持續",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私のガーデン 果てるまで",
+        "sourceTime": 52.18,
+        "sourceEnd": 55.7,
+        "time": 52.18,
+        "endTime": 55.7,
+        "tr": "守護我的花園直到生命的盡頭",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "人は出会い別れ",
+        "sourceTime": 55.7,
+        "sourceEnd": 58.75,
+        "time": 55.7,
+        "endTime": 58.75,
+        "tr": "人會相遇並離別",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "なくしてはまた手に入れ",
+        "sourceTime": 58.75,
+        "sourceEnd": 62.66,
+        "time": 58.75,
+        "endTime": 62.66,
+        "tr": "失去後重新尋獲",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "それでも守り続けたくて",
+        "sourceTime": 62.66,
+        "sourceEnd": 66.06,
+        "time": 62.66,
+        "endTime": 66.06,
+        "tr": "縱使如此我仍想持續",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私のガーデン 果てるまで",
+        "sourceTime": 66.06,
+        "sourceEnd": 70.55,
+        "time": 66.06,
+        "endTime": 70.55,
+        "tr": "守護我的花園直到生命的盡頭",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "夜が秋を呼んで",
+        "sourceTime": 70.55,
+        "sourceEnd": 73.98,
+        "time": 70.55,
+        "endTime": 73.98,
+        "tr": "黑夜呼喚秋天來拜訪",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "私は旅に出て",
+        "sourceTime": 73.98,
+        "sourceEnd": 77.42,
+        "time": 73.98,
+        "endTime": 77.42,
+        "tr": "我就此踏上了旅途",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "素敵な出会いだけ",
+        "sourceTime": 77.42,
+        "sourceEnd": 80.53,
+        "time": 77.42,
+        "endTime": 80.53,
+        "tr": "但願等在前方的是美妙邂逅",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "待っていて その日まで",
+        "sourceTime": 80.53,
+        "sourceEnd": 84.23,
+        "time": 80.53,
+        "endTime": 84.23,
+        "tr": "直至那一天為止",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "だから冬よおいで",
+        "sourceTime": 84.23,
+        "sourceEnd": 87.78,
+        "time": 84.23,
+        "endTime": 87.78,
+        "tr": "所以冬天快來我身邊",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "私を抱きしめて",
+        "sourceTime": 87.78,
+        "sourceEnd": 91.14,
+        "time": 87.78,
+        "endTime": 91.14,
+        "tr": "將我緊緊抱在懷裡",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "その手のぬくもりで",
+        "sourceTime": 91.14,
+        "sourceEnd": 93.7,
+        "time": 91.14,
+        "endTime": 93.7,
+        "tr": "用那雙手的溫暖",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "生きさせて 溶けるまで",
+        "sourceTime": 93.7,
+        "sourceEnd": 97.72,
+        "time": 93.7,
+        "endTime": 97.72,
+        "tr": "讓我活下去以至融化",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "花は咲いては枯れ",
+        "sourceTime": 97.72,
+        "sourceEnd": 100.44,
+        "time": 97.72,
+        "endTime": 100.44,
+        "tr": "花朵會盛開並枯萎",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "あなたに心奪われ",
+        "sourceTime": 100.44,
+        "sourceEnd": 103.89,
+        "time": 100.44,
+        "endTime": 103.89,
+        "tr": "你奪走了我的心",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "それでも守り続けたくて",
+        "sourceTime": 103.89,
+        "sourceEnd": 107.87,
+        "time": 103.89,
+        "endTime": 107.87,
+        "tr": "縱使如此我仍想持續",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私のガーデン果てるまで",
+        "sourceTime": 107.87,
+        "sourceEnd": 111.25,
+        "time": 107.87,
+        "endTime": 111.25,
+        "tr": "守護我的花園直到生命的盡頭",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "人は出会い別れ",
+        "sourceTime": 111.25,
+        "sourceEnd": 114.49,
+        "time": 111.25,
+        "endTime": 114.49,
+        "tr": "人會相遇並離別",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "なくしてはまた手に入れ",
+        "sourceTime": 114.49,
+        "sourceEnd": 117.84,
+        "time": 114.49,
+        "endTime": 117.84,
+        "tr": "失去後重新尋獲",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "それでも守り続けたくて",
+        "sourceTime": 117.84,
+        "sourceEnd": 121.78,
+        "time": 117.84,
+        "endTime": 121.78,
+        "tr": "縱使如此我仍想持續",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私のガーデン果てるまで",
+        "sourceTime": 121.78,
+        "sourceEnd": 126.07,
+        "time": 121.78,
+        "endTime": 126.07,
+        "tr": "守護我的花園直到生命的盡頭",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "季節に身を置いて",
+        "sourceTime": 126.07,
+        "sourceEnd": 129.45,
+        "time": 126.07,
+        "endTime": 129.45,
+        "tr": "置身於季節之中",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "流れに身を任せ",
+        "sourceTime": 129.45,
+        "sourceEnd": 132.93,
+        "time": 129.45,
+        "endTime": 132.93,
+        "tr": "選擇順其自然",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "なるようになるだけ",
+        "sourceTime": 132.93,
+        "sourceEnd": 136.06,
+        "time": 132.93,
+        "endTime": 136.06,
+        "tr": "任由事態自然發展",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "受け入れてそのままで",
+        "sourceTime": 136.06,
+        "sourceEnd": 140.04,
+        "time": 136.06,
+        "endTime": 140.04,
+        "tr": "接受一切本來的樣子",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "流した涙だけ",
+        "sourceTime": 140.04,
+        "sourceEnd": 143.41,
+        "time": 140.04,
+        "endTime": 143.41,
+        "tr": "過去流下的淚水",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "振りまいた愛だけ",
+        "sourceTime": 143.41,
+        "sourceEnd": 146.97,
+        "time": 143.41,
+        "endTime": 146.97,
+        "tr": "曾不吝播撒的愛",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "豊かになる庭で",
+        "sourceTime": 146.97,
+        "sourceEnd": 149.37,
+        "time": 146.97,
+        "endTime": 149.37,
+        "tr": "使花園變得生機蓬勃",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "掴んだ手 解き放て 空の果て",
+        "sourceTime": 149.37,
+        "sourceEnd": 156.22,
+        "time": 149.37,
+        "endTime": 156.22,
+        "tr": "放開緊抓的手 並伸向天際",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "花は咲いては枯れ",
+        "sourceTime": 167.32,
+        "sourceEnd": 169.99,
+        "time": 167.32,
+        "endTime": 169.99,
+        "tr": "花朵會盛開並枯萎",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "あなたに心奪われ",
+        "sourceTime": 169.99,
+        "sourceEnd": 173.86,
+        "time": 169.99,
+        "endTime": 173.86,
+        "tr": "你奪走了我的心",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "それでも守り続けたくて",
+        "sourceTime": 173.86,
+        "sourceEnd": 177.52,
+        "time": 173.86,
+        "endTime": 177.52,
+        "tr": "縱使如此我仍想持續",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私のガーデン果てるまで",
+        "sourceTime": 177.52,
+        "sourceEnd": 181.23,
+        "time": 177.52,
+        "endTime": 181.23,
+        "tr": "守護我的花園直到生命的盡頭",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "人は出会い別れ",
+        "sourceTime": 181.23,
+        "sourceEnd": 184.12,
+        "time": 181.23,
+        "endTime": 184.12,
+        "tr": "人會相遇並離別",
+        "translationRef": [
+          27
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "なくしてはまた手に入れ",
+        "sourceTime": 184.12,
+        "sourceEnd": 187.68,
+        "time": 184.12,
+        "endTime": 187.68,
+        "tr": "失去後重新尋獲",
+        "translationRef": [
+          27
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "それでも守り続けたくて",
+        "sourceTime": 187.68,
+        "sourceEnd": 191.39,
+        "time": 187.68,
+        "endTime": 191.39,
+        "tr": "縱使如此我仍想持續",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私のガーデン果てるまで",
+        "sourceTime": 191.39,
+        "sourceEnd": 194.61,
+        "time": 191.39,
+        "endTime": 194.61,
+        "tr": "守護我的花園直到生命的盡頭",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/20946392",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/20946392",
+    "timingPreview": {
+      "youtubeId": "53rIic2lvKc",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-94ogl3p0r0",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-94ogl3p0r0",
+    "translationProvenance": {
+      "file": "(歌詞)ガーデン.pdf",
+      "sha256": "81423b4dad649707619066f8ba74f5991b8014bfbe8aedb3572fc323930f4a13",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "Damn": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "まさかこんなに媚びてまうとは",
+        "sourceTime": 19.09,
+        "sourceEnd": 22.78,
+        "time": 19.09,
+        "endTime": 22.78,
+        "tr": "不曾想過我會如此阿諛奉承",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "まさかこんなに惚れてまうとは",
+        "sourceTime": 22.78,
+        "sourceEnd": 26.43,
+        "time": 22.78,
+        "endTime": 26.43,
+        "tr": "未曾想過我會如此迷戀",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "そいでこんなに拗らせるとはな",
+        "sourceTime": 26.43,
+        "sourceEnd": 33.86,
+        "time": 26.43,
+        "endTime": 33.86,
+        "tr": "而且從未想過會演變得如此錯綜複雜",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "別にどうにでもなりゃいいのに",
+        "sourceTime": 33.86,
+        "sourceEnd": 37.3,
+        "time": 33.86,
+        "endTime": 37.3,
+        "tr": "其實任由事態發展就行",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "別におれにはカンケーないのに",
+        "sourceTime": 37.3,
+        "sourceEnd": 41.17,
+        "time": 37.3,
+        "endTime": 41.17,
+        "tr": "本來跟我毫不相關",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "まさかこんなに捉われるとはな",
+        "sourceTime": 41.17,
+        "sourceEnd": 48.38,
+        "time": 41.17,
+        "endTime": 48.38,
+        "tr": "沒料到會如此念念不忘",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だんだん遠くなったあなたへ (全部全部おれのせい)",
+        "sourceTime": 48.38,
+        "sourceEnd": 56.01,
+        "time": 48.38,
+        "endTime": 56.01,
+        "tr": "獻給漸行漸遠的你 (所有一切都是我的錯)",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だんだん離れてったあなたへ (責めてみても仕方ねえ)",
+        "sourceTime": 56.01,
+        "sourceEnd": 63.27,
+        "time": 56.01,
+        "endTime": 63.27,
+        "tr": "獻給逐步離去的你 (責備別人也無濟於事)",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だんだんバカになったこのおれ",
+        "sourceTime": 63.27,
+        "sourceEnd": 67.3,
+        "time": 63.27,
+        "endTime": 67.3,
+        "tr": "我逐漸變得更加愚蠢",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "どうすりゃいい？どうすればいい？",
+        "sourceTime": 67.3,
+        "sourceEnd": 71.05,
+        "time": 67.3,
+        "endTime": 71.05,
+        "tr": "該如何是好 還能怎麼辦",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あぁ幸せってどんなだったけな",
+        "sourceTime": 71.05,
+        "sourceEnd": 76.14,
+        "time": 71.05,
+        "endTime": 76.14,
+        "tr": "啊 幸福到底是什麼感覺…",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "覚えてないや",
+        "sourceTime": 76.14,
+        "sourceEnd": 80.7,
+        "time": 76.14,
+        "endTime": 80.7,
+        "tr": "我已經不記得了",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "どけ そこどけおれが通る",
+        "sourceTime": 93.15,
+        "sourceEnd": 96.87,
+        "time": 93.15,
+        "endTime": 96.87,
+        "tr": "閃開，從那邊讓開 我想要通過",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "やめ それやめむしず走る",
+        "sourceTime": 96.87,
+        "sourceEnd": 100.57,
+        "time": 96.87,
+        "endTime": 100.57,
+        "tr": "住手，不要那樣做 會讓我反胃",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だめ もうだめぜんぶ終る",
+        "sourceTime": 100.57,
+        "sourceEnd": 105.25,
+        "time": 100.57,
+        "endTime": 105.25,
+        "tr": "不行，實在束手無策 全都完蛋了",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "分かりきったことやん 今さら",
+        "sourceTime": 107.74,
+        "sourceEnd": 111.37,
+        "time": 107.74,
+        "endTime": 111.37,
+        "tr": "事到如今覺得十分顯而易見",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "完ペキとか無理やん ハナから",
+        "sourceTime": 111.37,
+        "sourceEnd": 115.07,
+        "time": 111.37,
+        "endTime": 115.07,
+        "tr": "打從一開始就不可能完美無缺",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "別に何も期待してないけどな",
+        "sourceTime": 115.07,
+        "sourceEnd": 122.18,
+        "time": 115.07,
+        "endTime": 122.18,
+        "tr": "…原先就不抱期待",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だんだん好きになったあなたへ (ヘンな気持ち誰のせい)",
+        "sourceTime": 122.18,
+        "sourceEnd": 129.33,
+        "time": 122.18,
+        "endTime": 129.33,
+        "tr": "獻給越來越喜歡的你 (有這種奇妙心情該怪誰)",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だんだん赤くなった青さへ (責めてみても仕方ねえ)",
+        "sourceTime": 129.33,
+        "sourceEnd": 136.83,
+        "time": 129.33,
+        "endTime": 136.83,
+        "tr": "獻給漸漸轉紅的青澀 (責備別人也無濟於事)",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "だんだんアホになったこのおれ",
+        "sourceTime": 136.83,
+        "sourceEnd": 141.18,
+        "time": 136.83,
+        "endTime": 141.18,
+        "tr": "我逐漸變得更加痴傻",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "どうすりゃいい？どうすればいい？",
+        "sourceTime": 141.18,
+        "sourceEnd": 144.66,
+        "time": 141.18,
+        "endTime": 144.66,
+        "tr": "該如何是好 還能怎麼辦",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あぁ幸せって何色だったけな",
+        "sourceTime": 144.66,
+        "sourceEnd": 149.92,
+        "time": 144.66,
+        "endTime": 149.92,
+        "tr": "啊 幸福是什麼顏色來著…",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "覚えてないや",
+        "sourceTime": 149.92,
+        "sourceEnd": 153.48,
+        "time": 149.92,
+        "endTime": 153.48,
+        "tr": "我已經不記得了",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "全て流すつもりだったのにどうした？",
+        "sourceTime": 166.87,
+        "sourceEnd": 173.82,
+        "time": 166.87,
+        "endTime": 173.82,
+        "tr": "打算諸事放水流 怎麼了?",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何もかも捨ててくと決めてどうした？",
+        "sourceTime": 173.82,
+        "sourceEnd": 181.06,
+        "time": 173.82,
+        "endTime": 181.06,
+        "tr": "決定捨棄一切 怎麼了?",
+        "translationRef": [
+          23
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "明日なんか来ると思わずにどうした？",
+        "sourceTime": 181.06,
+        "sourceEnd": 186.85,
+        "time": 181.06,
+        "endTime": 186.85,
+        "tr": "不想著明天將到來 怎麼了?",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "全部まだまだこれからだから",
+        "sourceTime": 188.9,
+        "sourceEnd": 192.47,
+        "time": 188.9,
+        "endTime": 192.47,
+        "tr": "全都現在才要開始",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "いつかあんたに辿り着くから",
+        "sourceTime": 192.47,
+        "sourceEnd": 195.93,
+        "time": 192.47,
+        "endTime": 195.93,
+        "tr": "總有一天我會追趕上你",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "Damn, damn don't give a damn",
+        "sourceTime": 195.93,
+        "sourceEnd": 198.26,
+        "time": 195.93,
+        "endTime": 198.26
+      },
+      {
+        "jp": "Just love in my head (Hey little father won't you come with me)",
+        "sourceTime": 198.26,
+        "sourceEnd": 203.16,
+        "time": 198.26,
+        "endTime": 203.16
+      },
+      {
+        "jp": "We'll just dancing away",
+        "sourceTime": 203.16,
+        "sourceEnd": 205.61,
+        "time": 203.16,
+        "endTime": 205.61
+      },
+      {
+        "jp": "From bullshits ahead ('Kay it's okay yeah we gotta believe)",
+        "sourceTime": 205.61,
+        "sourceEnd": 210.69,
+        "time": 205.61,
+        "endTime": 210.69
+      },
+      {
+        "jp": "だんだん近くなったわたしへ",
+        "sourceTime": 210.69,
+        "sourceEnd": 214.83,
+        "time": 210.69,
+        "endTime": 214.83,
+        "tr": "獻給慢慢靠近的我",
+        "translationRef": [
+          31
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "どうしようか？どこいこうか？",
+        "sourceTime": 214.83,
+        "sourceEnd": 218.52,
+        "time": 214.83,
+        "endTime": 218.52,
+        "tr": "應該怎麼做 該何去何從",
+        "translationRef": [
+          32
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あぁ幸せってどんなだったけな",
+        "sourceTime": 218.52,
+        "sourceEnd": 224.07,
+        "time": 218.52,
+        "endTime": 224.07,
+        "tr": "啊 幸福到底是什麼感覺",
+        "translationRef": [
+          33
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "思い出そうか",
+        "sourceTime": 224.07,
+        "sourceEnd": 226.32,
+        "time": 224.07,
+        "endTime": 226.32,
+        "tr": "讓我們想起來吧",
+        "translationRef": [
+          33
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "愛してくこの先ずっと",
+        "sourceTime": 226.32,
+        "sourceEnd": 229.63,
+        "time": 226.32,
+        "endTime": 229.63,
+        "tr": "從今以後愛你一輩子",
+        "translationRef": [
+          34
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "守ってく明日もずっと",
+        "sourceTime": 229.63,
+        "sourceEnd": 232.94,
+        "time": 229.63,
+        "endTime": 232.94,
+        "tr": "明日之後也永世守護",
+        "translationRef": [
+          35
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "I love me, and I",
+        "sourceTime": 232.94,
+        "sourceEnd": 234.83,
+        "time": 232.94,
+        "endTime": 234.83
+      },
+      {
+        "jp": "Will keep him in a",
+        "sourceTime": 234.83,
+        "sourceEnd": 236.79,
+        "time": 234.83,
+        "endTime": 236.79
+      },
+      {
+        "jp": "Safest, fairest, happiest place baby",
+        "sourceTime": 236.79,
+        "sourceEnd": 241.75,
+        "time": 236.79,
+        "endTime": 241.75
+      },
+      {
+        "jp": "Damn",
+        "sourceTime": 254.79,
+        "sourceEnd": 255.02,
+        "time": 254.79,
+        "endTime": 255.02
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/11917118",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/11917118",
+    "timingPreview": {
+      "youtubeId": "yP7K2lXr6GA",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-ywn1zkkjr7",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-ywn1zkkjr7",
+    "translationProvenance": {
+      "file": "(歌詞)damn.pdf",
+      "sha256": "ade68a8da4f7e982b1a32e72f006fbb6c1275f365235f6822a9731f66e69e3a4",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "ShinunogaEWa": {
+    "lyricsStatus": "imported",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "Ah-ah",
+        "sourceTime": 6.3,
+        "sourceEnd": 9.35,
+        "time": 6.3,
+        "endTime": 9.35
+      },
+      {
+        "jp": "♪",
+        "sourceTime": 9.35,
+        "sourceEnd": 12.59,
+        "time": 9.35,
+        "endTime": 12.59
+      },
+      {
+        "jp": "♪",
+        "sourceTime": 12.59,
+        "sourceEnd": 24.28,
+        "time": 12.59,
+        "endTime": 24.28
+      },
+      {
+        "jp": "指切りげんまん ほらでも吹いたら",
+        "sourceTime": 24.28,
+        "sourceEnd": 27.43,
+        "providedRomaji": "yubikirigenman horademofuitara",
+        "time": 24.28,
+        "endTime": 27.43,
+        "tr": "打勾勾 我若是誇大其辭",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "針でもなんでも飲ませていただき Monday",
+        "sourceTime": 27.43,
+        "sourceEnd": 32.26,
+        "providedRomaji": "haridemonandemonomaseteitadaki Monday",
+        "time": 27.43,
+        "endTime": 32.26,
+        "tr": "就讓我吞下細針或所有一切 Monday",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "It doesn't matter if it's Sunday",
+        "sourceTime": 32.26,
+        "sourceEnd": 36.41,
+        "time": 32.26,
+        "endTime": 36.41,
+        "tr": "就算是星期天也可以",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "鏡よ鏡よ この世で一番",
+        "sourceTime": 36.41,
+        "sourceEnd": 39.67,
+        "providedRomaji": "kagamiyokagamiyo konoyodeichiban",
+        "time": 36.41,
+        "endTime": 39.67,
+        "tr": "魔鏡啊魔鏡 這世上",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "変わることのない愛をくれるのは誰",
+        "sourceTime": 39.67,
+        "sourceEnd": 44.38,
+        "providedRomaji": "kawarukotononaiaiwokurerunohadare",
+        "time": 39.67,
+        "endTime": 44.38,
+        "tr": "能給我最堅貞不渝愛情的人是誰",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "No need to ask 'cause it's my darling",
+        "sourceTime": 44.38,
+        "sourceEnd": 48.61,
+        "time": 44.38,
+        "endTime": 48.61,
+        "tr": "毫無疑問 是我的darling",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "私の最後はあなたがいい",
+        "sourceTime": 48.61,
+        "sourceEnd": 51.77,
+        "providedRomaji": "watashinosaigohaanatagaii",
+        "time": 48.61,
+        "endTime": 51.77,
+        "tr": "希望你是我的最後一位",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あなたとこのままおさらばするより",
+        "sourceTime": 51.77,
+        "sourceEnd": 54.7,
+        "providedRomaji": "anatatokonomamaosarabasuruyori",
+        "time": 51.77,
+        "endTime": 54.7,
+        "tr": "與其就這樣跟你分手",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ",
+        "sourceTime": 54.7,
+        "sourceEnd": 57.65,
+        "providedRomaji": "shinunogaiiwa",
+        "time": 54.7,
+        "endTime": 57.65,
+        "tr": "我寧可去死",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ",
+        "sourceTime": 57.65,
+        "sourceEnd": 60.84,
+        "providedRomaji": "shinunogaiiwa",
+        "time": 57.65,
+        "endTime": 60.84,
+        "tr": "我寧可去死",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "三度の飯よりあんたがいいのよ",
+        "sourceTime": 60.84,
+        "sourceEnd": 63.85,
+        "providedRomaji": "sandonomeshiyoriantagaiinoyo",
+        "time": 60.84,
+        "endTime": 63.85,
+        "tr": "與其選擇一日三餐我更渴望你",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あんたとこのままおさらばするよか",
+        "sourceTime": 63.85,
+        "sourceEnd": 66.98,
+        "providedRomaji": "antatokonomamaosarabasuruyoka",
+        "time": 63.85,
+        "endTime": 66.98,
+        "tr": "就這樣跟你分手真的好嗎",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ",
+        "sourceTime": 66.98,
+        "sourceEnd": 69.87,
+        "providedRomaji": "shinunogaiiwa",
+        "time": 66.98,
+        "endTime": 69.87,
+        "tr": "我寧可去死",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ",
+        "sourceTime": 69.87,
+        "sourceEnd": 72.84,
+        "providedRomaji": "shinunogaiiwa",
+        "time": 69.87,
+        "endTime": 72.84,
+        "tr": "我寧可去死",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それでも時々浮つく my heart",
+        "sourceTime": 72.84,
+        "sourceEnd": 76.08,
+        "providedRomaji": "soredemotokidokifutsuku my heart",
+        "time": 72.84,
+        "endTime": 76.08,
+        "tr": "儘管如此偶爾還是不忠誠的My heart",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死んでも治らな 直してみせます baby",
+        "sourceTime": 76.08,
+        "sourceEnd": 80.87,
+        "providedRomaji": "shindemonaorana naoshitemisemasu baby",
+        "time": 76.08,
+        "endTime": 80.87,
+        "tr": "就算死都無法治好 我也會治癒給你看 baby",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "Yeah, I ain't nothin' but your baby",
+        "sourceTime": 80.87,
+        "sourceEnd": 85.18,
+        "time": 80.87,
+        "endTime": 85.18,
+        "tr": "我心裡只有你 baby",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "失って初めて気がつくなんて",
+        "sourceTime": 85.18,
+        "sourceEnd": 88.23,
+        "providedRomaji": "utsutehajimetekigatsukunante",
+        "time": 85.18,
+        "endTime": 88.23,
+        "tr": "失去後才第一次懂得珍惜",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "そんなダサいこともうしたないのよ Goodbye",
+        "sourceTime": 88.23,
+        "sourceEnd": 93.13,
+        "providedRomaji": "sonnadasaikotomoushitanainoyo Goodbye",
+        "time": 88.23,
+        "endTime": 93.13,
+        "tr": "再也不想做出如此老掉牙的事 Goodbye",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Oh don't you ever say bye-bye",
+        "sourceTime": 93.13,
+        "sourceEnd": 95.98,
+        "time": 93.13,
+        "endTime": 95.98,
+        "tr": "你永遠不要跟我說拜拜",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "reviewed"
+      },
+      {
+        "jp": "Yeah",
+        "sourceTime": 95.98,
+        "sourceEnd": 97.36,
+        "time": 95.98,
+        "endTime": 97.36
+      },
+      {
+        "jp": "私の最後はあなたがいい",
+        "sourceTime": 97.36,
+        "sourceEnd": 100.42,
+        "providedRomaji": "watashinosaigohaanatagaii",
+        "time": 97.36,
+        "endTime": 100.42,
+        "tr": "希望你是我的最後一位",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あなたとこのままおさらばするより",
+        "sourceTime": 100.42,
+        "sourceEnd": 103.47,
+        "providedRomaji": "anatatokonomamaosarabasuruyori",
+        "time": 100.42,
+        "endTime": 103.47,
+        "tr": "與其就這樣跟你分手",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 103.47,
+        "sourceEnd": 106.32,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 103.47,
+        "endTime": 106.32,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 106.32,
+        "sourceEnd": 109.36,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 106.32,
+        "endTime": 109.36,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "三度の飯よりあんたがいいのよ",
+        "sourceTime": 109.36,
+        "sourceEnd": 112.4,
+        "providedRomaji": "sandonomeshiyoriantagaiinoyo",
+        "time": 109.36,
+        "endTime": 112.4,
+        "tr": "與其選擇一日三餐我更渴望你",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あんたとこのままおさらばするよか",
+        "sourceTime": 112.4,
+        "sourceEnd": 115.47,
+        "providedRomaji": "antatokonomamaosarabasuruyoka",
+        "time": 112.4,
+        "endTime": 115.47,
+        "tr": "就這樣跟你分手真的好嗎",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 115.47,
+        "sourceEnd": 118.43,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 115.47,
+        "endTime": 118.43,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 118.43,
+        "sourceEnd": 122.54,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 118.43,
+        "endTime": 122.54,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "♪",
+        "sourceTime": 122.54,
+        "sourceEnd": 145.96,
+        "time": 122.54,
+        "endTime": 145.96
+      },
+      {
+        "jp": "私の最後はあなたがいい",
+        "sourceTime": 145.96,
+        "sourceEnd": 149.06,
+        "providedRomaji": "watashinosaigohaanatagaii",
+        "time": 145.96,
+        "endTime": 149.06,
+        "tr": "希望你是我的最後一位",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あなたとこのままおさらばするより",
+        "sourceTime": 149.06,
+        "sourceEnd": 151.91,
+        "providedRomaji": "anatatokonomamaosarabasuruyori",
+        "time": 149.06,
+        "endTime": 151.91,
+        "tr": "與其就這樣跟你分手",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 151.91,
+        "sourceEnd": 154.99,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 151.91,
+        "endTime": 154.99,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 154.99,
+        "sourceEnd": 157.94,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 154.99,
+        "endTime": 157.94,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "三度の飯よりあんたがいいのよ",
+        "sourceTime": 157.94,
+        "sourceEnd": 161.12,
+        "providedRomaji": "sandonomeshiyoriantagaiinoyo",
+        "time": 157.94,
+        "endTime": 161.12,
+        "tr": "與其選擇一日三餐我更渴望你",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あんたとこのままおさらばするよか",
+        "sourceTime": 161.12,
+        "sourceEnd": 164.27,
+        "providedRomaji": "antatokonomamaosarabasuruyoka",
+        "time": 161.12,
+        "endTime": 164.27,
+        "tr": "就這樣跟你分手真的好嗎",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 164.27,
+        "sourceEnd": 167.22,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 164.27,
+        "endTime": 167.22,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "死ぬのがいいわ（死ぬのがいいわ）",
+        "sourceTime": 167.22,
+        "sourceEnd": 170.23,
+        "providedRomaji": "shinunogaiiwa（shinunogaiiwa）",
+        "time": 167.22,
+        "endTime": 170.23,
+        "tr": "我寧可去死／我寧可去死",
+        "translationRef": [
+          8,
+          8
+        ],
+        "translationMapping": "repeated-pdf-refrain"
+      },
+      {
+        "jp": "それでも時々浮つく my heart",
+        "sourceTime": 170.23,
+        "sourceEnd": 173.24,
+        "providedRomaji": "soredemotokidokifutsuku my heart",
+        "time": 170.23,
+        "endTime": 173.24,
+        "tr": "儘管如此偶爾還是不忠誠的My heart",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "そんなダサいのはもういらないのよ bye-bye",
+        "sourceTime": 173.24,
+        "sourceEnd": 177.93,
+        "providedRomaji": "sonnadasainohamouiranainoyo bye-bye",
+        "time": 173.24,
+        "endTime": 177.93,
+        "tr": "再也無須繼續如此老掉牙的事 byebye",
+        "translationRef": [
+          38
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      },
+      {
+        "jp": "I'll always stick with you, my baby",
+        "sourceTime": 177.93,
+        "sourceEnd": 180.29,
+        "time": 177.93,
+        "endTime": 180.29,
+        "tr": "我永遠守著你 我的baby",
+        "translationRef": [
+          39
+        ],
+        "translationMapping": "reviewed-spelling-or-vocal-variation"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/21695208",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/21695208",
+    "timingPreview": {
+      "youtubeId": "lRVJuPI5IXI",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-14o71m3dok",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-14o71m3dok",
+    "translationProvenance": {
+      "file": "(歌詞)死ぬのがいいわ.pdf",
+      "sha256": "39500e7fb1c469bbe0b948b46b412b6153a12e5667960beabd3c2e3298d93d6f",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "Tabiji": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "あの日のことは忘れてね",
+        "sourceTime": 27.36,
+        "sourceEnd": 33.56,
+        "time": 27.36,
+        "endTime": 33.56,
+        "tr": "你忘記那一天的事吧",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "幼すぎて知らなかった",
+        "sourceTime": 33.56,
+        "sourceEnd": 39.12,
+        "time": 33.56,
+        "endTime": 39.12,
+        "tr": "當時過於年少而懵懂無知",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "恥ずかしくて消えたいけど",
+        "sourceTime": 39.12,
+        "sourceEnd": 44.85,
+        "time": 39.12,
+        "endTime": 44.85,
+        "tr": "感到羞恥 想就此消失",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "もう大丈夫",
+        "sourceTime": 44.85,
+        "sourceEnd": 47.15,
+        "time": 44.85,
+        "endTime": 47.15,
+        "tr": "但已經沒問題了",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "旅路は続く",
+        "sourceTime": 47.15,
+        "sourceEnd": 50.03,
+        "time": 47.15,
+        "endTime": 50.03,
+        "tr": "旅途依然持續著",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "あの日のことは忘れるね",
+        "sourceTime": 50.03,
+        "sourceEnd": 55.69,
+        "time": 50.03,
+        "endTime": 55.69,
+        "tr": "我會忘卻那一天的事",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "みんなだって彷徨ってた",
+        "sourceTime": 55.69,
+        "sourceEnd": 61.14,
+        "time": 55.69,
+        "endTime": 61.14,
+        "tr": "大家過去也曾經歷過彷徨",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "この宇宙が教室なら",
+        "sourceTime": 61.14,
+        "sourceEnd": 67.1,
+        "time": 61.14,
+        "endTime": 67.1,
+        "tr": "如果這片宇宙是教室",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "隣りどうし",
+        "sourceTime": 67.1,
+        "sourceEnd": 69.43,
+        "time": 67.1,
+        "endTime": 69.43,
+        "tr": "相鄰的我們",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "学びは続く",
+        "sourceTime": 69.43,
+        "sourceEnd": 72.45,
+        "time": 69.43,
+        "endTime": 72.45,
+        "tr": "會繼續學習",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "果てしないと思えても",
+        "sourceTime": 72.45,
+        "sourceEnd": 77.38,
+        "time": 72.45,
+        "endTime": 77.38,
+        "tr": "即使看似永無止境",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "いつか終わりが来ると",
+        "sourceTime": 77.38,
+        "sourceEnd": 82.55,
+        "time": 77.38,
+        "endTime": 82.55,
+        "tr": "遲早會迎來終結",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "知らなかったきのうまでより",
+        "sourceTime": 82.55,
+        "sourceEnd": 88.33,
+        "time": 82.55,
+        "endTime": 88.33,
+        "tr": "比起毫不知情的過去",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "優しくなれる気がした",
+        "sourceTime": 88.33,
+        "sourceEnd": 94.14,
+        "time": 88.33,
+        "endTime": 94.14,
+        "tr": "感覺如今能變得更溫柔",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "僕らはまだ",
+        "sourceTime": 94.14,
+        "sourceEnd": 98.38,
+        "time": 94.14,
+        "endTime": 98.38,
+        "tr": "啊 我們仍然",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "先の長い旅の中で",
+        "sourceTime": 98.38,
+        "sourceEnd": 104.36,
+        "time": 98.38,
+        "endTime": 104.36,
+        "tr": "在漫長旅途之中",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "誰かを愛したり忘れたり",
+        "sourceTime": 104.36,
+        "sourceEnd": 111.75,
+        "time": 104.36,
+        "endTime": 111.75,
+        "tr": "有時愛著某人 有時遺忘某人",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "いろいろあるけど",
+        "sourceTime": 111.75,
+        "sourceEnd": 117.67,
+        "time": 111.75,
+        "endTime": 117.67,
+        "tr": "雖然遭逢各種狀況",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "いつの間にか",
+        "sourceTime": 117.67,
+        "sourceEnd": 120.53,
+        "time": 117.67,
+        "endTime": 120.53,
+        "tr": "啊 在不知不覺間",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "この日さえも懐かしんで",
+        "sourceTime": 120.53,
+        "sourceEnd": 126.71,
+        "time": 120.53,
+        "endTime": 126.71,
+        "tr": "連今天這樣的日子也會令人懷念",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "すべてを笑うだろう",
+        "sourceTime": 126.71,
+        "sourceEnd": 130.91,
+        "time": 126.71,
+        "endTime": 130.91,
+        "tr": "屆時便能笑看世間一切",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "すべてを愛すだろう",
+        "sourceTime": 130.91,
+        "sourceEnd": 147.44,
+        "time": 130.91,
+        "endTime": 147.44,
+        "tr": "愛著周遭的一切吧",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "お元気ですか？",
+        "sourceTime": 147.44,
+        "sourceEnd": 150.96,
+        "time": 147.44,
+        "endTime": 150.96,
+        "tr": "你過得好嗎",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "この町は相変わらず",
+        "sourceTime": 150.96,
+        "sourceEnd": 156.32,
+        "time": 150.96,
+        "endTime": 156.32,
+        "tr": "這座城鎮一如既往",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "青春ですね",
+        "sourceTime": 156.32,
+        "sourceEnd": 158.83,
+        "time": 156.32,
+        "endTime": 158.83,
+        "tr": "青春洋溢",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "誰もがみな走ってます",
+        "sourceTime": 158.83,
+        "sourceEnd": 164.84,
+        "time": 158.83,
+        "endTime": 164.84,
+        "tr": "所有人都在奔跑著",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "まだ見えない",
+        "sourceTime": 164.84,
+        "sourceEnd": 167.01,
+        "time": 164.84,
+        "endTime": 167.01,
+        "tr": "朝向還看不到終點的旅途",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "旅路の先へ",
+        "sourceTime": 167.01,
+        "sourceEnd": 169.98,
+        "time": 167.01,
+        "endTime": 169.98,
+        "tr": "朝向還看不到終點的旅途",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "お元気ですか？",
+        "sourceTime": 169.98,
+        "sourceEnd": 173.12,
+        "time": 169.98,
+        "endTime": 173.12,
+        "tr": "你過得好嗎",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "僕たちはいつになれど少年です",
+        "sourceTime": 173.12,
+        "sourceEnd": 181.34,
+        "time": 173.12,
+        "endTime": 181.34,
+        "tr": "我們無論過多久 都還是少年",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "心の奥底ではいつも",
+        "sourceTime": 181.34,
+        "sourceEnd": 187.44,
+        "time": 181.34,
+        "endTime": 187.44,
+        "tr": "在內心深處",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "永遠を求めています",
+        "sourceTime": 187.44,
+        "sourceEnd": 192.28,
+        "time": 187.44,
+        "endTime": 192.28,
+        "tr": "總是在渴望著永恆",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "果てしないと思ってたものが",
+        "sourceTime": 192.28,
+        "sourceEnd": 198.35,
+        "time": 192.28,
+        "endTime": 198.35,
+        "tr": "曾經認為永無止盡的事物",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "ここにはないけど",
+        "sourceTime": 198.35,
+        "sourceEnd": 202.3,
+        "time": 198.35,
+        "endTime": 202.3,
+        "tr": "即便不存在於此",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "目にしてきた",
+        "sourceTime": 202.3,
+        "sourceEnd": 205.74,
+        "time": 202.3,
+        "endTime": 205.74,
+        "tr": "然而那些親眼瞧見的一切",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "手に触れてきた",
+        "sourceTime": 205.74,
+        "sourceEnd": 208.49,
+        "time": 205.74,
+        "endTime": 208.49,
+        "tr": "親手觸碰的一切",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "すべてに意味はあるから",
+        "sourceTime": 208.49,
+        "sourceEnd": 215.67,
+        "time": 208.49,
+        "endTime": 215.67,
+        "tr": "全都具有意義",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "僕らはまだ",
+        "sourceTime": 215.67,
+        "sourceEnd": 218.29,
+        "time": 215.67,
+        "endTime": 218.29,
+        "tr": "啊 我們仍然",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "先の長い旅の中で",
+        "sourceTime": 218.29,
+        "sourceEnd": 224.18,
+        "time": 218.29,
+        "endTime": 224.18,
+        "tr": "在漫長旅途之中",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "何かを愛したり忘れたり",
+        "sourceTime": 224.18,
+        "sourceEnd": 231.8,
+        "time": 224.18,
+        "endTime": 231.8,
+        "tr": "有時愛著某物 有時遺忘某物",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "いろいろあるけど",
+        "sourceTime": 231.8,
+        "sourceEnd": 237.73,
+        "time": 231.8,
+        "endTime": 237.73,
+        "tr": "雖然遭逢各種狀況",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "これからまた",
+        "sourceTime": 237.73,
+        "sourceEnd": 240.48,
+        "time": 237.73,
+        "endTime": 240.48,
+        "tr": "啊 從今以後",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "いろんな愛を受け取って",
+        "sourceTime": 240.48,
+        "sourceEnd": 246.47,
+        "time": 240.48,
+        "endTime": 246.47,
+        "tr": "我又會得到各式各樣的愛",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "あなたに返すだろう",
+        "sourceTime": 246.47,
+        "sourceEnd": 251.46,
+        "time": 246.47,
+        "endTime": 251.46,
+        "tr": "然後反饋於你吧",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "永遠なる光の中",
+        "sourceTime": 251.46,
+        "sourceEnd": 257.31,
+        "time": 251.46,
+        "endTime": 257.31,
+        "tr": "將在永恆的光芒之中",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "すべてを愛すだろう",
+        "sourceTime": 257.31,
+        "sourceEnd": 266.94,
+        "time": 257.31,
+        "endTime": 266.94,
+        "tr": "愛著周遭的一切吧",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "reviewed"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/35676924",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/35676924",
+    "timingPreview": {
+      "youtubeId": "29p8FvT_puU",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5w758n9",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5w758n9",
+    "translationProvenance": {
+      "file": "(歌詞)旅路.pdf",
+      "sha256": "0cdec5ec5f43b1c0022781b178fdc0ea4777fc50d4bc52cb9a705d29583967eb",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  },
+  "MichiTeyuKu": {
+    "lyricsStatus": "imported",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "lyrics": [
+      {
+        "jp": "走り出した午後も",
+        "sourceTime": 26.58,
+        "sourceEnd": 30.13,
+        "time": 26.58,
+        "endTime": 30.13,
+        "tr": "無論是奔波勞碌的下午",
+        "translationRef": [
+          0
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "重ね合う日々も",
+        "sourceTime": 30.13,
+        "sourceEnd": 33.43,
+        "time": 30.13,
+        "endTime": 33.43,
+        "tr": "還是我們所共度的時日",
+        "translationRef": [
+          1
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "避けがたく全て終わりが来る",
+        "sourceTime": 33.43,
+        "sourceEnd": 39.88,
+        "time": 33.43,
+        "endTime": 39.88,
+        "tr": "全都會面臨不可避免的終結",
+        "translationRef": [
+          2
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あの日のきらめきも",
+        "sourceTime": 39.88,
+        "sourceEnd": 43.46,
+        "time": 39.88,
+        "endTime": 43.46,
+        "tr": "無論是那天的閃耀光輝",
+        "translationRef": [
+          3
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "淡いときめきも",
+        "sourceTime": 43.46,
+        "sourceEnd": 46.92,
+        "time": 43.46,
+        "endTime": 46.92,
+        "tr": "還是曾有過的些許心動",
+        "translationRef": [
+          4
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "あれもこれもどこか置いてくる",
+        "sourceTime": 46.92,
+        "sourceEnd": 53.47,
+        "time": 46.92,
+        "endTime": 53.47,
+        "tr": "通通都會被我們遺留在某處",
+        "translationRef": [
+          5
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "それで良かったと",
+        "sourceTime": 53.47,
+        "sourceEnd": 56.82,
+        "time": 53.47,
+        "endTime": 56.82,
+        "tr": "那樣就行了",
+        "translationRef": [
+          6
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "これで良かったと",
+        "sourceTime": 56.82,
+        "sourceEnd": 60.06,
+        "time": 56.82,
+        "endTime": 60.06,
+        "tr": "這麼做就好",
+        "translationRef": [
+          7
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "健やかに笑い合える日まで",
+        "sourceTime": 60.06,
+        "sourceEnd": 66.91,
+        "time": 60.06,
+        "endTime": 66.91,
+        "tr": "直到活得安康的我們 相視而笑的日子到來",
+        "translationRef": [
+          8
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "明けてゆく空も 暮れてゆく空も",
+        "sourceTime": 66.91,
+        "sourceEnd": 73.77,
+        "time": 66.91,
+        "endTime": 73.77,
+        "tr": "不管天空是迎來黎明或黃昏",
+        "translationRef": [
+          9
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "僕らは超えてゆく",
+        "sourceTime": 73.77,
+        "sourceEnd": 80.23,
+        "time": 73.77,
+        "endTime": 80.23,
+        "tr": "相信我們都能攜手跨越",
+        "translationRef": [
+          10
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "変わりゆくものは仕方がないねと",
+        "sourceTime": 80.23,
+        "sourceEnd": 87.06,
+        "time": 80.23,
+        "endTime": 87.06,
+        "tr": "面對無常之物 正視自身的無能為力",
+        "translationRef": [
+          11
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "手を放す、軽くなる、満ちてゆく",
+        "sourceTime": 87.06,
+        "sourceEnd": 98.58,
+        "time": 87.06,
+        "endTime": 98.58,
+        "tr": "選擇放手，落得一身輕，逐漸被填滿",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "満ちてゆく",
+        "sourceTime": 105.46,
+        "sourceEnd": 116.32,
+        "time": 105.46,
+        "endTime": 116.32,
+        "tr": "逐漸被填滿",
+        "translationRef": [
+          13
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "手にした瞬間に",
+        "sourceTime": 119.91,
+        "sourceEnd": 123.49,
+        "time": 119.91,
+        "endTime": 123.49,
+        "tr": "得到的當下",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "無くなる喜び",
+        "sourceTime": 123.49,
+        "sourceEnd": 126.93,
+        "time": 123.49,
+        "endTime": 126.93,
+        "tr": "喜悅便消失",
+        "translationRef": [
+          14
+        ],
+        "translationMapping": "split-pdf-sentence"
+      },
+      {
+        "jp": "そんなものばかり追いかけては",
+        "sourceTime": 126.93,
+        "sourceEnd": 133.22,
+        "time": 126.93,
+        "endTime": 133.22,
+        "tr": "那卻是我們一昧在追尋的",
+        "translationRef": [
+          15
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "無駄にしてた\"愛\"という言葉",
+        "sourceTime": 133.22,
+        "sourceEnd": 139.67,
+        "time": 133.22,
+        "endTime": 139.67,
+        "tr": "過去誤用了「愛」這個詞彙",
+        "translationRef": [
+          16
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "今なら本当の意味が分かるのかな",
+        "sourceTime": 139.67,
+        "sourceEnd": 146.72,
+        "time": 139.67,
+        "endTime": 146.72,
+        "tr": "如今我們了解它真正的涵義嗎",
+        "translationRef": [
+          17
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "愛される為に",
+        "sourceTime": 146.72,
+        "sourceEnd": 150.13,
+        "time": 146.72,
+        "endTime": 150.13,
+        "tr": "為愛而愛注定是場悲劇",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "愛すのは悲劇",
+        "sourceTime": 150.13,
+        "sourceEnd": 153.35,
+        "time": 150.13,
+        "endTime": 153.35,
+        "tr": "為愛而愛注定是場悲劇",
+        "translationRef": [
+          18
+        ],
+        "translationMapping": "shared-pdf-sentence"
+      },
+      {
+        "jp": "カラカラな心にお恵みを",
+        "sourceTime": 153.35,
+        "sourceEnd": 160.53,
+        "time": 153.35,
+        "endTime": 160.53,
+        "tr": "求恩惠之雨降於乾枯的心上",
+        "translationRef": [
+          19
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "晴れてゆく空も 荒れてゆく空も",
+        "sourceTime": 160.53,
+        "sourceEnd": 167.09,
+        "time": 160.53,
+        "endTime": 167.09,
+        "tr": "不管天上是晴空萬里或狂風暴雨",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "僕らは愛でてゆく",
+        "sourceTime": 167.09,
+        "sourceEnd": 173.69,
+        "time": 167.09,
+        "endTime": 173.69,
+        "tr": "相信我們都能賞景怡情",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何もないけれど全て差し出すよ",
+        "sourceTime": 173.69,
+        "sourceEnd": 180.29,
+        "time": 173.69,
+        "endTime": 180.29,
+        "tr": "即使一無所有 我仍願奉獻一切",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "手を放す、軽くなる、満ちてゆく",
+        "sourceTime": 180.29,
+        "sourceEnd": 192.66,
+        "time": 180.29,
+        "endTime": 192.66,
+        "tr": "選擇放手，落得一身輕，逐漸被填滿",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "開け放つ胸の光",
+        "sourceTime": 213.86,
+        "sourceEnd": 219.16,
+        "time": 213.86,
+        "endTime": 219.16,
+        "tr": "解放心中的光芒",
+        "translationRef": [
+          24
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "闇を照らし道を示す",
+        "sourceTime": 219.16,
+        "sourceEnd": 225.73,
+        "time": 219.16,
+        "endTime": 225.73,
+        "tr": "替我們照亮黑暗並指明道路",
+        "translationRef": [
+          25
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "やがて生死を超えて繋がる",
+        "sourceTime": 225.73,
+        "sourceEnd": 232.34,
+        "time": 225.73,
+        "endTime": 232.34,
+        "tr": "終將超越生死 連結彼此",
+        "translationRef": [
+          26
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "共に手を放す、軽くなる、満ちてゆく",
+        "sourceTime": 232.34,
+        "sourceEnd": 240.34,
+        "time": 232.34,
+        "endTime": 240.34,
+        "tr": "一同選擇放手，落得一身輕，逐漸被填滿",
+        "translationRef": [
+          27
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "晴れてゆく空も 荒れてゆく空も",
+        "sourceTime": 240.34,
+        "sourceEnd": 246.92,
+        "time": 240.34,
+        "endTime": 246.92,
+        "tr": "不管天上是晴空萬里或狂風暴雨",
+        "translationRef": [
+          20
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "僕らは愛でてゆく",
+        "sourceTime": 246.92,
+        "sourceEnd": 253.87,
+        "time": 246.92,
+        "endTime": 253.87,
+        "tr": "相信我們都能賞景怡情",
+        "translationRef": [
+          21
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "何もないけれど全て差し出すよ",
+        "sourceTime": 253.87,
+        "sourceEnd": 260.38,
+        "time": 253.87,
+        "endTime": 260.38,
+        "tr": "即使一無所有 我仍願奉獻一切",
+        "translationRef": [
+          22
+        ],
+        "translationMapping": "exact-source-text"
+      },
+      {
+        "jp": "手を放す、軽くなる、満ちてゆく",
+        "sourceTime": 260.38,
+        "sourceEnd": 269.03,
+        "time": 260.38,
+        "endTime": 269.03,
+        "tr": "選擇放手，落得一身輕，逐漸被填滿",
+        "translationRef": [
+          12
+        ],
+        "translationMapping": "exact-source-text"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/tracks/30423403",
+    "lyricsUsageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
+    "timingSourceUrl": "https://lrclib.net/tracks/30423403",
+    "timingPreview": {
+      "youtubeId": "ptiK8U4WlSc",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "readingsStatus": "pending",
+    "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+    "translationCreditRole": "source",
+    "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-wzrv48xlr3",
+    "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-wzrv48xlr3",
+    "translationProvenance": {
+      "file": "(歌詞)満ちてゆく.pdf",
+      "sha256": "de9b079715e18b9a9739f332b065b34206cb4184bc61f40a60b8c8ae68628f74",
+      "method": "user-provided PDF; original wording retained",
+      "importedAt": "2026-10-30"
+    }
+  }
+};
+export const SONG_LYRICS = SONGS.map(song => ({ ...song, lyrics: [], ...prepared[song.id] }));

@@ -1,47 +1,42 @@
-# HORO Taipei fan guide design
+# Fujii Kaze Kaohsiung fan guide design
 
-## 1. Atmosphere & identity
+## 1. Atmosphere and identity
 
-A compact concert program for use on a phone, including in a dark arena. Official poster photography carries the mood. Information and controls stay quiet and legible around it.
+A compact Traditional Chinese concert guide for Fujii Kaze's Prema World Tour in Kaohsiung on October 31, 2026. Official Kaohsiung poster photography carries the mood. The experience prioritizes finding event information and preparing with released music on a phone, including in a dark venue.
 
-## 2. Color
+The primary home action is the 19-song preparation list. It is album material, not a prediction of the show's songs or their order. This opening-show guide has no spoiler gate, shuffled setlist, or concert-order confirmation.
 
-The home hero keeps the existing deep wine background (`--bg-deep`), cream text (`--cream`), and gold (`--gold`). The guide, playback, and spoiler gate share semantic reading colors (`--ui-bg`, `--ui-surface`, `--ui-raised`, `--ui-text`, `--ui-muted`, `--ui-line`). Light mode uses pale neutral surfaces; dark mode uses charcoal. Follow the device preference until a visitor chooses a mode, then remember that choice. The home poster remains dark in both modes. The chant, clap, wave, jump, and spin colors identify audience actions where the cue itself needs recognition. Avoid red page fills, decorative gradients, and color on every badge.
+## 2. Color and typography
 
-## 3. Typography
+Use dark olive and warm gold around the official poster, with cream text. Reading, playback, and pending-information pages use semantic neutral colors: `--ui-bg`, `--ui-surface`, `--ui-raised`, `--ui-text`, `--ui-muted`, and `--ui-line`. Light mode uses pale neutral surfaces; dark mode uses charcoal. Follow the device preference until the visitor chooses a theme, then remember it. The home poster stays dark in both modes.
 
-The reading and control face uses the Taiwan-common system stack PingFang TC, Microsoft JhengHei, and Noto Sans CJK TC. Japanese lyric text uses Noto Sans JP first, then the Taiwan system stack, so Japanese kanji does not depend on a device's incomplete fallback coverage. In Chinese and Japanese lyrics, keep one half-width space between CJK characters and adjacent half-width Latin letters or digits; treat this as a project-wide lyric formatting rule following [盤古之白](https://www.jkg.tw/p3601/). Use a system monospace face for the large live countdown so every digit occupies the same width. Use tabular numerals for other times and song numbers. Body copy should keep Traditional Chinese phrases together and should not use wide tracking or chromatic shadows.
+Use the Taiwan-common system stack PingFang TC, Microsoft JhengHei, and Noto Sans CJK TC for reading and controls. A restrained serif face may express the Prema title; do not apply it to controls or dense information. Japanese lyric text uses Noto Sans JP first. English originals remain English and do not receive kana or romaji. Label the common lyric switch “原文”.
 
-## 4. Spacing & layout
+In Chinese and Japanese lyrics, keep one half-width space between CJK characters and adjacent half-width Latin letters or digits, following [盤古之白](https://www.jkg.tw/p3601/). Preserve Traditional Chinese phrases, avoid wide body-text tracking, and use monospace tabular digits for the countdown.
 
-The home hero owns its centered narrow column. Guide and setlist content use the existing 640px reading width; song playback retains its existing two-column layout above 900px. Use a 4px rhythm, with 16–20px row insets and 24–32px between separate decisions. Keep 40–44px touch targets for primary controls. Neutral reading surfaces follow the selected theme; the poster remains the expressive image.
+## 3. Layout and components
 
-The control layer uses `--space-1` through `--space-4` (4, 8, 12, 16px), `--control-height` (40px), `--touch-height` (44px), and `--dock-height` (56px). `--radius-pill` belongs to compact controls and the song dock; `--radius-notice` belongs to the install/update notice. `--type-control` and `--type-dock-size` define their type roles, and `--elevation-float` is reserved for floating surfaces. The dock's 6px inset is a deliberate half-step around its 44px controls. Color and highlight variations live in the light/dark theme tokens rather than individual components.
+The home hero owns its centered narrow column. Guide and pending-setlist pages keep the 640px reading width. Playback retains the two-column layout above 900px. Use a 4px rhythm, 16–20px row insets, 24–32px between decisions, and 40–44px touch targets.
 
-## 5. Components
+The control layer uses `--space-1` through `--space-4`, `--control-height`, `--touch-height`, and `--dock-height`. Reserve pill shapes for compact controls and the song dock, and restrained shadows for overlays.
 
-- **Primary action:** solid cream fill, dark text; hover darkens slightly, focus has a visible outline.
-- **Menu row:** one shared dark home surface with dividers between rows; hover is a quiet tonal change, focus is outlined. Existing accordion expansion remains.
-- **Segmented control:** neutral track and one solid selected item; inactive items stay transparent.
-- **Song row:** one theme-matched list surface, with only a hairline between neighboring songs; title first and supporting cues second. Keep cue icons identifiable while making their resting colors quiet.
-- **Lyric row:** the current line stays fully opaque; other lines recede to half opacity while playback has a current line, and regain full opacity on hover or keyboard focus.
-- **Overlay:** a solid theme-matched surface and a restrained shadow only where it separates from underlying content.
-- **Player controls:** a dedicated bottom utility bar takes its own space below the lyric scroller. Previous song, current song picker, and next song share one translucent floating pill below that bar, with a quiet blur and reserved space so neither covers lyrics. The video frame displays a loading message and a useful YouTube fallback when connection or playback fails.
-- **Search field:** the compound field owns one visible focus boundary. Its inner input adds no second ring.
-- **Install notice:** one softly raised, rounded surface without an outline. Keep update and offline notices actionable.
-- **System status:** do not show a persistent success badge for offline lyric caching. Show a message only when connectivity or an update requires action.
-- **Spoiler gate:** keep the setlist absent from the rendered page until the visitor explicitly chooses a viewing mode. Put the safe return action first and require confirmation before switching from shuffled songs to concert order.
+- **Home:** official poster, artist and tour, one show date, entry and start times, then the preparation action and expandable facts.
+- **Information cards:** shared dark surfaces and dividers. Create lazy image content only after expansion. Keep useful booking, map, and official-announcement links; retain source and verification records in documentation rather than repeating audit dates or source footnotes in the home UI.
+- **Song list:** clear album grouping in default order; title first, stable track number and supporting details second. Search stays persistently labelled.
+- **Pending content:** show separate original, translation, and timing status in plain language. Offer an official listening/source link. Pending content is an ordinary state, not a retry error.
+- **Lyrics:** only timed lyrics participate in current-line focus, seeking, or karaoke. Untimed originals remain readable at full opacity. Hide kana/romaji controls for English songs; unavailable controls must not imply completed content.
+- **Player controls:** a dedicated bottom utility bar and previous/current/next dock reserve space so they do not cover lyrics. Show useful loading or failure text and an external official YouTube link.
+- **Pending setlist:** a direct status message and preparation link. Do not put a gate or viewing-mode choice in front of it.
+- **Source identity:** retain “非官方粉絲製作” and program-source credits. Historical artist references belong to provenance or old records, not current event facts.
 
-## 6. Motion & interaction
+No audience-action colors or motion appear without a confirmed cue for the current artist and song. The old Japanese/Korean chant comparison and inherited Vaundy action footage are removed.
 
-Use short color and opacity transitions for feedback. Keep existing motion that explains lyric timing and cheering actions. Remove decorative pulsing and layout movement. Respect reduced-motion preferences.
+## 4. Motion, accessibility, and state
 
-## 7. Depth & surface
+Use short color and opacity transitions, respect reduced-motion preferences, and avoid decorative pulsing or layout movement. Keep visible keyboard focus, readable arena contrast, meaningful icon labels, and phrase-preserving Traditional Chinese wrapping.
 
-Use tonal shifts and spacing for ordinary content. Reserve a hairline for neighboring list rows and a shadow for overlays. Poster images are the one expressive material; no blur or atmospheric gradient stacks over utility pages. The setlist warning photo is desaturated and dimmed to keep the warning legible without turning the whole page red.
+Collapsed information panels and inactive screens stay out of keyboard and screen-reader navigation. Song-picker and notice dialogs move focus inside on open and return it to the trigger on close. Sort controls expose pressed state. Phone search text stays at least 16px.
 
-## 8. Accessibility constraints & accepted debt
+Count down in `Asia/Taipei` even when the device uses another timezone. After 19:00 show “已開演”; do not invent an end time. On the following local date show that the event date has passed.
 
-Keep visible keyboard focus, readable contrast in the arena, meaningful icon labels, and phrase-preserving Traditional Chinese wrapping. The existing large single-file page and its inline SVG illustration remain; restructuring them is outside this visual pass.
-
-The guide and song picker show persistent search labels, with 16px search text on phones. Sort and view controls expose their pressed state as ordinary buttons. Collapsed information cards and inactive screens stay out of keyboard and screen-reader navigation. When a song picker or notice image opens, focus moves into it; closing returns focus to the trigger.
+Theme and lyric preferences remain available across songs. Pending or untimed data must not start synchronization, fetch misleading word timings, or trigger false “all lyrics hidden” messages. Offline notices should explain what remains available and that video playback requires a connection.

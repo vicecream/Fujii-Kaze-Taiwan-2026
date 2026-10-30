@@ -1,0 +1,292 @@
+{
+  "entry": "http://127.0.0.1:4174/#/song/CasketGirl",
+  "songs": [
+    {
+      "id": "CasketGirl",
+      "title": "Casket Girl",
+      "youtubeId": "gFOu5r-OuQ4",
+      "playback": {
+        "time": 1.124628,
+        "duration": 264.021,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=gFOu5r-OuQ4",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "INeedUBack",
+      "title": "I Need U Back",
+      "youtubeId": "ud0lMojStCs",
+      "playback": {
+        "time": 1.125915,
+        "duration": 196.261,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=ud0lMojStCs",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Hachiko",
+      "title": "Hachikō",
+      "youtubeId": "OodEsjZ88TQ",
+      "playback": {
+        "time": 1.133134,
+        "duration": 297.061,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=OodEsjZ88TQ",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "LoveLikeThis",
+      "title": "Love Like This",
+      "youtubeId": "RoY_ZoWe-eI",
+      "playback": {
+        "time": 1.129699,
+        "duration": 268.261,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=RoY_ZoWe-eI",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Prema",
+      "title": "Prema",
+      "youtubeId": "UJgPpzZcxGU",
+      "playback": {
+        "time": 1.126203,
+        "duration": 273.921,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=UJgPpzZcxGU",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "ItAintOver",
+      "title": "It Ain’t Over",
+      "youtubeId": "BKFxq3D_dGU",
+      "playback": {
+        "time": 1.134362,
+        "duration": 312.201,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=BKFxq3D_dGU",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "You",
+      "title": "You",
+      "youtubeId": "s4UW__ysPEM",
+      "playback": {
+        "time": 1.131007,
+        "duration": 298.541,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=s4UW__ysPEM",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "OkayGoodbye",
+      "title": "Okay, Goodbye",
+      "youtubeId": "EAtRDZQLsgk",
+      "playback": {
+        "time": 1.132499,
+        "duration": 230.921,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=EAtRDZQLsgk",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "ForeverYoung",
+      "title": "Forever Young",
+      "youtubeId": "tU953HcYdxU",
+      "playback": {
+        "time": 1.134735,
+        "duration": 353.661,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=tU953HcYdxU",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Matsuri",
+      "title": "まつり (Matsuri)",
+      "youtubeId": "NwOvu-j_WjY",
+      "playback": {
+        "time": 1.124724,
+        "duration": 249.281,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=NwOvu-j_WjY",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "WorkinHard",
+      "title": "Workin’ Hard",
+      "youtubeId": "88wHgiUAKoI",
+      "playback": {
+        "time": 1.128421,
+        "duration": 261.281,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=88wHgiUAKoI",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "NanNan",
+      "title": "何なんw (Nan-Nan)",
+      "youtubeId": "Nt6ZwuVzOS4",
+      "playback": {
+        "time": 1.127083,
+        "duration": 327.341,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=Nt6ZwuVzOS4",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Kirari",
+      "title": "きらり (Kirari)",
+      "youtubeId": "TcLLpZBWsck",
+      "playback": {
+        "time": 1.134043,
+        "duration": 240.441,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=TcLLpZBWsck",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Hana",
+      "title": "花 (Hana)",
+      "youtubeId": "SfPkl7lol7g",
+      "playback": {
+        "time": 1.134778,
+        "duration": 261.781,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=SfPkl7lol7g",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Garden",
+      "title": "ガーデン (Garden)",
+      "youtubeId": "53rIic2lvKc",
+      "playback": {
+        "time": 1.128262,
+        "duration": 229.341,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=53rIic2lvKc",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Damn",
+      "title": "damn",
+      "youtubeId": "yP7K2lXr6GA",
+      "playback": {
+        "time": 1.132125,
+        "duration": 272.421,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=yP7K2lXr6GA",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "ShinunogaEWa",
+      "title": "死ぬのがいいわ (Shinunoga E-Wa)",
+      "youtubeId": "lRVJuPI5IXI",
+      "playback": {
+        "time": 1.128469,
+        "duration": 254.281,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=lRVJuPI5IXI",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "Tabiji",
+      "title": "旅路 (Tabiji)",
+      "youtubeId": "29p8FvT_puU",
+      "playback": {
+        "time": 1.131766,
+        "duration": 290.981,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=29p8FvT_puU",
+      "singleIframe": true,
+      "pass": true
+    },
+    {
+      "id": "MichiTeyuKu",
+      "title": "満ちてゆく (Michi Teyu Ku / Overflowing)",
+      "youtubeId": "ptiK8U4WlSc",
+      "playback": {
+        "time": 1.128421,
+        "duration": 361.761,
+        "paused": false,
+        "readyState": 4
+      },
+      "state": "playing",
+      "titleLink": "https://www.youtube.com/watch?v=ptiK8U4WlSc",
+      "singleIframe": true,
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "redirectedUrl": "http://localhost:4174/#/song/CasketGirl"
+}

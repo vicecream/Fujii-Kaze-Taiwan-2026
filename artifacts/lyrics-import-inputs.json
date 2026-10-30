@@ -1,0 +1,120 @@
+{
+  "mode": "preview",
+  "videoAlignment": "unverified",
+  "files": [
+    {
+      "id": "CasketGirl",
+      "file": "CasketGirl.lrc",
+      "bytes": 2504,
+      "sha256": "f7fe4832a785543bc3cf9eb14a379a9e6493b21958e2ad251e73b5325fa352bc"
+    },
+    {
+      "id": "INeedUBack",
+      "file": "INeedUBack.lrc",
+      "bytes": 1948,
+      "sha256": "a57fe21dff345be29194c8a943d6da5d451c1f9c1f78a0fce54b5f2f9e267585"
+    },
+    {
+      "id": "Hachiko",
+      "file": "Hachiko.lrc",
+      "bytes": 2290,
+      "sha256": "3761ef473f0f4437c276bf07831ff41c3070cfaa6f69d82f48fe2689b2a75688"
+    },
+    {
+      "id": "LoveLikeThis",
+      "file": "LoveLikeThis.lrc",
+      "bytes": 2293,
+      "sha256": "a4d0ec344c8a27054f755fe89fba8e215feeffa2b6ab51847362d984c6869092"
+    },
+    {
+      "id": "Prema",
+      "file": "Prema.lrc",
+      "bytes": 1967,
+      "sha256": "823f2af29540f75cb38579e62abc3a2ba27feb77589f1bb52dcc24071e74c3b4"
+    },
+    {
+      "id": "ItAintOver",
+      "file": "ItAintOver.lrc",
+      "bytes": 1332,
+      "sha256": "5228fd9b90a868c357a20c5074da86ecf6eb67dc6bb82764b73db40f53148b65"
+    },
+    {
+      "id": "You",
+      "file": "You.lrc",
+      "bytes": 2604,
+      "sha256": "f8e55f3974ca5b52436a6e7e3a88f425fc53777fa0109f9fd500cceb1cd1bd02"
+    },
+    {
+      "id": "OkayGoodbye",
+      "file": "OkayGoodbye.lrc",
+      "bytes": 2663,
+      "sha256": "c7460f59f092d1bc16631f5aff1884596b3e2ac7fd7f4e342055873b9582a265"
+    },
+    {
+      "id": "ForeverYoung",
+      "file": "ForeverYoung.lrc",
+      "bytes": 2356,
+      "sha256": "3173ee3a654774bb41ba89ac65cfd68649d4389773d507dc694c0d4922810f49"
+    },
+    {
+      "id": "Matsuri",
+      "file": "Matsuri.lrc",
+      "bytes": 2419,
+      "sha256": "f8aca5e8a3458013a4277d629b1212c1fccf61a963506149129a83701643d79b"
+    },
+    {
+      "id": "WorkinHard",
+      "file": "WorkinHard.lrc",
+      "bytes": 3269,
+      "sha256": "cc0665b1a53cc465b3e94c548017ac0ed06bbedb608ec658faf169bdd2d66155"
+    },
+    {
+      "id": "NanNan",
+      "file": "NanNan.lrc",
+      "bytes": 2451,
+      "sha256": "7159886d6dc7bf57c9a2fbae1ffe2c98338df2482934f453d5d56eb2afdc4853"
+    },
+    {
+      "id": "Kirari",
+      "file": "Kirari.lrc",
+      "bytes": 2227,
+      "sha256": "3f46b478acedaf84148aca9cd2bc4581ac8cefe574e6361b461e3e143e3b206c"
+    },
+    {
+      "id": "Hana",
+      "file": "Hana.lrc",
+      "bytes": 1726,
+      "sha256": "7843b4462b5f2dec3429179efb01756f07d854ff5774419e527199e6121c6005"
+    },
+    {
+      "id": "Garden",
+      "file": "Garden.lrc",
+      "bytes": 1934,
+      "sha256": "a22e1c0db477d32e8affdc996fd0fcc0c97a5bf79bbd35eb429f489f93864a9b"
+    },
+    {
+      "id": "Damn",
+      "file": "Damn.lrc",
+      "bytes": 2369,
+      "sha256": "e2b5ce390ba0de5763513249867340a4ad8dcedc75df2cb9503fd3d0dede87ba"
+    },
+    {
+      "id": "ShinunogaEWa",
+      "file": "ShinunogaEWa.lrc",
+      "bytes": 3770,
+      "sha256": "2deaa650ecbb2e524b475c72cca17c3bcf8a6fa3f5fe579817787d015673ffb6"
+    },
+    {
+      "id": "Tabiji",
+      "file": "Tabiji.lrc",
+      "bytes": 1791,
+      "sha256": "b2808b7ea45940d279cc2bf13c68b5266c10fb74a9506397dface0dbecfb92cd"
+    },
+    {
+      "id": "MichiTeyuKu",
+      "file": "MichiTeyuKu.lrc",
+      "bytes": 1598,
+      "sha256": "43c668862c4526f355964360562a960d48bfe957825abfa002b0a26efb1fbec7"
+    }
+  ]
+}

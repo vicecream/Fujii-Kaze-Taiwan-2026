@@ -1,0 +1,124 @@
+[
+  {
+    "origin": "http://127.0.0.1:4174",
+    "requests": [
+      {
+        "referrer": "http://127.0.0.1:4174/"
+      }
+    ],
+    "responses": [],
+    "events": [
+      {
+        "error": 150
+      }
+    ],
+    "text": "無法播放這部影片\n無法播放這部影片\n在 YouTube 上觀看",
+    "media": [
+      {
+        "time": 0,
+        "paused": true,
+        "readyState": 0,
+        "duration": null
+      }
+    ]
+  },
+  {
+    "origin": "http://localhost:4174",
+    "requests": [
+      {
+        "referrer": "http://localhost:4174/"
+      }
+    ],
+    "responses": [
+      {
+        "status": "OK"
+      }
+    ],
+    "events": [
+      {
+        "state": -1
+      },
+      {
+        "state": 3
+      },
+      {
+        "state": 1
+      }
+    ],
+    "text": "",
+    "media": [
+      {
+        "time": 4.628406,
+        "paused": false,
+        "readyState": 4,
+        "duration": 361.761
+      }
+    ]
+  },
+  {
+    "origin": "http://guide.test",
+    "requests": [
+      {
+        "referrer": "http://guide.test/"
+      }
+    ],
+    "responses": [
+      {
+        "status": "OK"
+      }
+    ],
+    "events": [
+      {
+        "state": -1
+      },
+      {
+        "state": 3
+      },
+      {
+        "state": 1
+      }
+    ],
+    "text": "",
+    "media": [
+      {
+        "time": 4.698957,
+        "paused": false,
+        "readyState": 4,
+        "duration": 361.761
+      }
+    ]
+  },
+  {
+    "origin": "https://guide.test",
+    "requests": [
+      {
+        "referrer": "https://guide.test/"
+      }
+    ],
+    "responses": [
+      {
+        "status": "OK"
+      }
+    ],
+    "events": [
+      {
+        "state": -1
+      },
+      {
+        "state": 3
+      },
+      {
+        "state": 1
+      }
+    ],
+    "text": "",
+    "media": [
+      {
+        "time": 4.688689,
+        "paused": false,
+        "readyState": 4,
+        "duration": 361.761
+      }
+    ]
+  }
+]
