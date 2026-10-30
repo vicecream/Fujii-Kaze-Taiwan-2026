@@ -1,0 +1,182 @@
+{
+  "songs": [
+    {
+      "id": "CasketGirl",
+      "file": "CasketGirl.zh.txt",
+      "providedAt": "2026-10-30",
+      "scope": "Verse 1 and Pre-Chorus",
+      "translationCredit": "使用者提供（譯者未註明）",
+      "translationCreditRole": "source",
+      "entries": [
+        {
+          "index": 1,
+          "jp": "Oh, wake up bro, she'll come alive",
+          "time": 31.99,
+          "tr": "哦，醒醒吧兄弟，她要活過來了"
+        },
+        {
+          "index": 2,
+          "jp": "You better watch out, baby",
+          "time": 35.47,
+          "tr": "你最好小心點，寶貝"
+        },
+        {
+          "index": 3,
+          "jp": "You better watch out, baby",
+          "time": 38.72,
+          "tr": "你最好小心點，寶貝"
+        },
+        {
+          "index": 4,
+          "jp": "Oh, she's about to wreck your life",
+          "time": 40.24,
+          "tr": "哦，她快要把你的人生給毀了"
+        },
+        {
+          "index": 5,
+          "jp": "You better watch out, baby",
+          "time": 43.36,
+          "tr": "你最好小心點，寶貝"
+        },
+        {
+          "index": 6,
+          "jp": "You better watch out, buddy",
+          "time": 45.61,
+          "tr": "你最好小心點，夥計"
+        },
+        {
+          "index": 7,
+          "jp": "I just wanted to be free",
+          "time": 48.02,
+          "tr": "我只是想獲得自由"
+        },
+        {
+          "index": 8,
+          "jp": "And be happy endlessly",
+          "time": 53.25,
+          "tr": "想要永無止境地快樂"
+        },
+        {
+          "index": 9,
+          "jp": "Somethin' always drags me down",
+          "time": 56.31,
+          "tr": "但總有什麼把我在往下拉"
+        },
+        {
+          "index": 10,
+          "jp": "Wanna run away, but I can't",
+          "time": 60.54,
+          "tr": "想要逃跑，卻又做不到"
+        }
+      ]
+    },
+    {
+      "id": "ForeverYoung",
+      "file": "ForeverYoung.zh.txt",
+      "providedAt": "2026-10-30",
+      "scope": "Verse 1, Verse 2, Pre-Chorus and first Chorus",
+      "translationCredit": "使用者提供（譯者未註明）",
+      "translationCreditRole": "source",
+      "source": "user-provided chat excerpt",
+      "note": "使用者提供 18 句中譯，僅對齊現有索引 0–15 的 16 個字幕列；索引 10 將 Come on over 與 Let's go higher 的原譯句以「／」合併，索引 12 將 Don't you be scared 與 We're together 的原譯句以「／」合併。保留原譯句措辭與標點、現有原文與時間，不延伸至後續重複段落；未提供外部來源網址與譯者。",
+      "entries": [
+        {
+          "index": 0,
+          "jp": "Baby, this night, I'll remember",
+          "time": 57.75,
+          "tr": "親愛的，我會永遠記得這個夜晚。"
+        },
+        {
+          "index": 1,
+          "jp": "You gave me all the light when I surrendered",
+          "time": 61.41,
+          "tr": "當我放棄抵抗、選擇臣服時，是你帶給我所有的光芒。"
+        },
+        {
+          "index": 2,
+          "jp": "You let me know",
+          "time": 65.58,
+          "tr": "是你讓我明白，"
+        },
+        {
+          "index": 3,
+          "jp": "That I know nothing at all",
+          "time": 68.51,
+          "tr": "原來我其實什麼都不懂。"
+        },
+        {
+          "index": 4,
+          "jp": "Summer has come, worry's over",
+          "time": 73.37,
+          "tr": "夏天已經到來，煩惱也終於煙消雲散。"
+        },
+        {
+          "index": 5,
+          "jp": "It took a long time, but I got wiser",
+          "time": 77.09,
+          "tr": "雖然花了很長一段時間，但我終於變得更加成熟、明智。"
+        },
+        {
+          "index": 6,
+          "jp": "I'll take you home",
+          "time": 81.3,
+          "tr": "我會帶你回家。"
+        },
+        {
+          "index": 7,
+          "jp": "Life feels so incredible",
+          "time": 84.18,
+          "tr": "此刻，生命是如此不可思議而美好。"
+        },
+        {
+          "index": 8,
+          "jp": "We were children, oh, so long ago",
+          "time": 89.21,
+          "tr": "很久很久以前，我們都曾是孩子。"
+        },
+        {
+          "index": 9,
+          "jp": "But we still got a long, long way to go",
+          "time": 93.04,
+          "tr": "但未來的道路，依然還有好長好長的一段要走。"
+        },
+        {
+          "index": 10,
+          "jp": "Come on over, let's go higher",
+          "time": 96.92,
+          "tr": "來吧，到我身邊。／讓我們一起走向更高的地方。"
+        },
+        {
+          "index": 11,
+          "jp": "Takes forever just to learn who we are",
+          "time": 101.01,
+          "tr": "光是要真正認識自己，就彷彿得花上一輩子的時間。"
+        },
+        {
+          "index": 12,
+          "jp": "Don't you be scared, we're together",
+          "time": 104.68,
+          "tr": "別害怕。／因為我們會一直在一起。"
+        },
+        {
+          "index": 13,
+          "jp": "39, 60 or whatever",
+          "time": 108.51,
+          "tr": "不管是三十九歲、六十歲，還是任何年紀。"
+        },
+        {
+          "index": 14,
+          "jp": "As long as we're here",
+          "time": 112.26,
+          "tr": "只要我們依然在這裡，"
+        },
+        {
+          "index": 15,
+          "jp": "We're forever young (young)",
+          "time": 115.36,
+          "tr": "我們就永遠年輕。（年輕）"
+        }
+      ]
+    }
+  ]
+}

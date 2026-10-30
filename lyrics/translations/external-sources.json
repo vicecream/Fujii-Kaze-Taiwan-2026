@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-30",
+  "note": "Source metadata only; article translations have not been supplied for import.",
+  "songs": [
+    {
+      "id": "You",
+      "title": "〈You 你〉歌詞翻譯",
+      "sourceUrl": "https://vocus.cc/article/68ccd735fd897800018757ad",
+      "author": "Vince",
+      "authorUrl": "https://vocus.cc/user/@vinceverse",
+      "publishedAt": "2025-09-20",
+      "updatedAt": "2025-09-20",
+      "file": "You.zh.txt",
+      "status": "awaiting-provided-text"
+    },
+    {
+      "id": "OkayGoodbye",
+      "title": "〈Okay, Goodbye 就這樣吧〉歌詞翻譯",
+      "sourceUrl": "https://vocus.cc/article/68c6eb64fd89780001188c3c",
+      "author": "Vince",
+      "authorUrl": "https://vocus.cc/user/@vinceverse",
+      "publishedAt": "2025-09-16",
+      "updatedAt": "2025-09-19",
+      "file": "OkayGoodbye.zh.txt",
+      "status": "awaiting-provided-text"
+    }
+  ]
+}

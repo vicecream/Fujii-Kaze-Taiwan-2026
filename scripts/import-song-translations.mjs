@@ -29,6 +29,35 @@ export function applyTranslationAlignment(song, alignment, evidence) {
   return { ...song, lyrics, translationStatus: lyrics.every(line => line.tr?.trim()) ? "ready" : lyrics.some(line => line.tr?.trim()) ? "partial" : "pending" };
 }
 
+export function applyUserProvidedTranslation(song, entry, text) {
+  requireValue(song && song.id === entry.id, "User-provided translation song ID mismatch");
+  requireValue(Array.isArray(entry.entries) && entry.entries.length, `${entry.id}: missing supplied translation rows`);
+  requireValue(entry.translationCredit && entry.translationCreditRole === "source", `${entry.id}: record the supplied text's source without assuming its author`);
+  const seen = new Set();
+  const lyrics = song.lyrics.map(line => ({ ...line }));
+  for (const [sourceIndex, row] of entry.entries.entries()) {
+    requireValue(Number.isInteger(row.index) && !seen.has(row.index), `${entry.id}: invalid or duplicate row index`);
+    seen.add(row.index);
+    const line = lyrics[row.index];
+    requireValue(line && row.jp === line.jp && row.time === line.time, `${entry.id}#${row.index}: original text or timeline changed`);
+    requireValue(typeof row.tr === "string" && row.tr.trim() && !/[<>]/.test(row.tr), `${entry.id}#${row.index}: translation must be plain text`);
+    requireValue(row.tr.split("／").every(fragment => normalise(text).includes(normalise(fragment))), `${entry.id}#${row.index}: translation differs from the supplied excerpt`);
+    Object.assign(line, { tr: row.tr, translationUserRef: sourceIndex, translationMapping: "user-provided-excerpt" });
+  }
+  const updated = {
+    ...song, lyrics,
+    translationStatus: lyrics.every(line => line.tr?.trim()) ? "ready" : "partial",
+    translationCredit: entry.translationCredit, translationCreditRole: entry.translationCreditRole,
+    translationProvenance: { method: "user-provided chat excerpt", file: entry.file, providedAt: entry.providedAt, scope: entry.scope,
+      sha256: crypto.createHash("sha256").update(text).digest("hex") },
+  };
+  for (const field of ["translationCreditUrl", "translationSourceUrl"]) {
+    if (entry[field]) updated[field] = entry[field];
+    else delete updated[field];
+  }
+  return updated;
+}
+
 export async function importTranslations({ write = false, root = new URL("../", import.meta.url) } = {}) {
   const directory = new URL("lyrics/translations/", root);
   const sources = JSON.parse(await fs.readFile(new URL("sources.json", directory), "utf8"));
@@ -67,6 +96,23 @@ export async function importTranslations({ write = false, root = new URL("../", 
   }
   report.translatedLines = report.songs.reduce((sum, song) => sum + song.translatedLines, 0);
   report.pendingLines = report.songs.reduce((sum, song) => sum + song.pending.length, 0);
+  let supplied = { songs: [] };
+  try { supplied = JSON.parse(await fs.readFile(new URL("user-supplied.json", directory), "utf8")); }
+  catch (error) { if (error.code !== "ENOENT") throw error; }
+  report.userProvidedSongs = [];
+  for (const entry of supplied.songs) {
+    requireValue(!updates.has(entry.id), `${entry.id}: separate PDF and excerpt source credits before combining them`);
+    requireValue(/^[\w.-]+\.txt$/.test(entry.file), `${entry.id}: invalid supplied text filename`);
+    const text = await fs.readFile(new URL(entry.file, directory), "utf8");
+    const song = applyUserProvidedTranslation(SONG_LYRICS.find(song => song.id === entry.id), entry, text);
+    updates.set(entry.id, song);
+    const translatedLines = song.lyrics.filter(line => line.tr?.trim()).length;
+    report.userProvidedSongs.push({ id: entry.id, file: entry.file, totalLines: song.lyrics.length, translatedLines,
+      status: song.translationStatus, providedAt: entry.providedAt, scope: entry.scope, sha256: song.translationProvenance.sha256 });
+    console.log(`${entry.id}: ${translatedLines}/${song.lyrics.length} lines; directly supplied excerpt`);
+  }
+  report.userProvidedTranslatedLines = report.userProvidedSongs.reduce((sum, song) => sum + song.translatedLines, 0);
+  report.totalTranslatedLines = report.translatedLines + report.userProvidedTranslatedLines;
   if (!write) { console.log("Preview only. Add --write to import the aligned translations."); return report; }
   const stableFields = new Set(SONGS.flatMap(song => Object.keys(song)).filter(key => !key.endsWith("Status")));
   const prepared = Object.fromEntries(SONG_LYRICS.map(song => {

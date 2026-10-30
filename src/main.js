@@ -1837,8 +1837,8 @@ function renderSong(song){
   if (lyricsCredit) {
     const hasCredit = Boolean(song.translationCredit);
     if (hasCredit) {
-      const creditUrl = song.translationCreditUrl || song.sourceUrl;
-      const creditLink = `<a href="${creditUrl}" target="_blank" rel="noopener">${escapeHtml(song.translationCredit)}</a>`;
+      const creditUrl = song.translationCreditUrl || song.translationSourceUrl;
+      const creditLink = creditUrl ? `<a href="${creditUrl}" target="_blank" rel="noopener">${escapeHtml(song.translationCredit)}</a>` : escapeHtml(song.translationCredit);
       const sourceLink = song.translationSourceUrl && song.translationSourceUrl !== creditUrl
         ? ` · <a href="${song.translationSourceUrl}" target="_blank" rel="noopener">出處</a>`
         : "";

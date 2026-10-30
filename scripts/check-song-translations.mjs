@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import crypto from "node:crypto";
 import { SONG_LYRICS } from "../src/song-lyrics.js";
-import { applyTranslationAlignment } from "./import-song-translations.mjs";
+import { applyTranslationAlignment, applyUserProvidedTranslation } from "./import-song-translations.mjs";
 
 const readJson = async file => JSON.parse(await fs.readFile(new URL(`../${file}`, import.meta.url), "utf8"));
 const baseline = await readJson("artifacts/translations-timing-baseline.json");
@@ -36,7 +36,23 @@ assert.throws(() => applyTranslationAlignment(song, shifted, proof), /timeline c
 const invented = structuredClone(sample);
 invented.lines[0].tr = "This fixture text is absent from the PDF";
 assert.throws(() => applyTranslationAlignment(song, invented, proof), /differs from the supplied PDF/);
-for (const pendingId of ["CasketGirl", "You", "OkayGoodbye", "ForeverYoung"]) {
+const supplied = await readJson("lyrics/translations/user-supplied.json");
+let suppliedCount = 0;
+for (const entry of supplied.songs) {
+  const song = SONG_LYRICS.find(song => song.id === entry.id);
+  const text = await fs.readFile(new URL(`../lyrics/translations/${entry.file}`, import.meta.url), "utf8");
+  assert.deepEqual(applyUserProvidedTranslation(song, entry, text), song, `${entry.id}: supplied excerpt must match the subtitle data`);
+  assert.equal(song.translationStatus, "partial");
+  assert.equal(song.lyrics.filter(line => line.tr).length, entry.entries.length, "Do not apply a supplied verse to later repetitions");
+  suppliedCount += entry.entries.length;
+  const shiftedExcerpt = structuredClone(entry);
+  shiftedExcerpt.entries[0].time += 1;
+  assert.throws(() => applyUserProvidedTranslation(song, shiftedExcerpt, text), /timeline changed/);
+}
+assert.equal(suppliedCount, report.userProvidedTranslatedLines);
+assert.equal(count + suppliedCount, report.totalTranslatedLines);
+assert.equal(SONG_LYRICS.reduce((sum, song) => sum + song.lyrics.filter(line => line.tr).length, 0), report.totalTranslatedLines);
+for (const pendingId of ["You", "OkayGoodbye"]) {
   assert.equal(SONG_LYRICS.find(song => song.id === pendingId).lyrics.some(line => line.tr), false, `${pendingId}: no translation was supplied`);
 }
-console.log(`PASS ${alignment.songs.length} PDF translations / ${count} translated subtitle rows; 29 source gaps retained; all original lyrics and timestamps unchanged.`);
+console.log(`PASS ${alignment.songs.length} PDFs / ${count} translated rows plus ${suppliedCount} supplied excerpt rows; original lyrics and timestamps unchanged.`);

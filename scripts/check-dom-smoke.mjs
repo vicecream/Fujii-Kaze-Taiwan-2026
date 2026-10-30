@@ -161,7 +161,11 @@ assert.equal(document.getElementById("reading-btn").hidden, true, "English hides
 assert.match(document.getElementById("song-content-status").textContent, /原文歌詞已匯入/);
 assert.match(document.getElementById("song-content-status").textContent, /LRC 時間試播・待校正/);
 assert.equal(document.getElementById("japanese-toggle").disabled, false);
-assert.equal(document.getElementById("chinese-toggle").disabled, true);
+assert.equal(document.getElementById("chinese-toggle").disabled, false, "The supplied Casket Girl excerpt enables Chinese");
+assert.match(document.getElementById("song-content-status").textContent, /繁中翻譯部分整理/);
+assert.match(document.getElementById("lyrics-credit").textContent, /使用者提供/);
+assert.equal(document.getElementById("lyrics-credit").querySelector("a"), null, "An unverified excerpt must not be linked to the official album as its source");
+assert.equal(document.querySelector('.lyric-line[data-idx="1"] .lyric-zh').textContent, "哦，醒醒吧兄弟，她要活過來了");
 assert.equal(document.getElementById("karaoke-btn").disabled, false, "Timed LRC previews allow line-level karaoke");
 assert.equal(document.getElementById("autoscroll-btn").disabled, false);
 assert.equal(document.getElementById("watch-on-yt").getAttribute("href"), "https://www.youtube.com/watch?v=gFOu5r-OuQ4");

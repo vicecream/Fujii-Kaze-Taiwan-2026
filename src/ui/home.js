@@ -77,7 +77,7 @@ export function homeHtml(build, themeToggle = `<button class="theme-toggle home-
         </figure>
         <p class="way-note">場地圖列有：${ONSITE.facilities.join("、")}。票務台與服務台位於場館東南側外圍；接駁車乘車處在世運大道、往捷運世運站方向，請循現場指標。</p>
         <p class="way-note">場地寬闊、人潮較多，可利用主辦標示的公共藝術「火焰」、「和平啟示」、「無限奔馳」作為親友集合地標。</p>
-        <div class="info-book-links">${link("https://www.instagram.com/kklivetw/", "KKLIVE Instagram")}${link("https://www.facebook.com/KKLIVETW/", "KKLIVE Facebook")}</div>
+        <div class="info-book-links">${link("https://www.instagram.com/kklive_tw/", "KKLIVE Instagram")}${link("https://www.facebook.com/KKLIVETW/", "KKLIVE Facebook")}</div>
       `)}
       ${card("seat", "舞台與座位配置", SEAT_SVG, `
         <p class="way-note">高雄場官方配置圖。點擊可開啟原圖查看票區與票價。</p>

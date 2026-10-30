@@ -3,7 +3,7 @@ import { SONGS } from "./song-metadata.js";
 const prepared = {
   "CasketGirl": {
     "lyricsStatus": "imported",
-    "translationStatus": "pending",
+    "translationStatus": "partial",
     "timingStatus": "preview",
     "lyrics": [
       {
@@ -18,70 +18,100 @@ const prepared = {
         "sourceTime": 31.99,
         "sourceEnd": 35.47,
         "time": 31.99,
-        "endTime": 35.47
+        "endTime": 35.47,
+        "tr": "哦，醒醒吧兄弟，她要活過來了",
+        "translationUserRef": 0,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "You better watch out, baby",
         "sourceTime": 35.47,
         "sourceEnd": 38.72,
         "time": 35.47,
-        "endTime": 38.72
+        "endTime": 38.72,
+        "tr": "你最好小心點，寶貝",
+        "translationUserRef": 1,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "You better watch out, baby",
         "sourceTime": 38.72,
         "sourceEnd": 40.24,
         "time": 38.72,
-        "endTime": 40.24
+        "endTime": 40.24,
+        "tr": "你最好小心點，寶貝",
+        "translationUserRef": 2,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Oh, she's about to wreck your life",
         "sourceTime": 40.24,
         "sourceEnd": 43.36,
         "time": 40.24,
-        "endTime": 43.36
+        "endTime": 43.36,
+        "tr": "哦，她快要把你的人生給毀了",
+        "translationUserRef": 3,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "You better watch out, baby",
         "sourceTime": 43.36,
         "sourceEnd": 45.61,
         "time": 43.36,
-        "endTime": 45.61
+        "endTime": 45.61,
+        "tr": "你最好小心點，寶貝",
+        "translationUserRef": 4,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "You better watch out, buddy",
         "sourceTime": 45.61,
         "sourceEnd": 48.02,
         "time": 45.61,
-        "endTime": 48.02
+        "endTime": 48.02,
+        "tr": "你最好小心點，夥計",
+        "translationUserRef": 5,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "I just wanted to be free",
         "sourceTime": 48.02,
         "sourceEnd": 53.25,
         "time": 48.02,
-        "endTime": 53.25
+        "endTime": 53.25,
+        "tr": "我只是想獲得自由",
+        "translationUserRef": 6,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "And be happy endlessly",
         "sourceTime": 53.25,
         "sourceEnd": 56.31,
         "time": 53.25,
-        "endTime": 56.31
+        "endTime": 56.31,
+        "tr": "想要永無止境地快樂",
+        "translationUserRef": 7,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Somethin' always drags me down",
         "sourceTime": 56.31,
         "sourceEnd": 60.54,
         "time": 56.31,
-        "endTime": 60.54
+        "endTime": 60.54,
+        "tr": "但總有什麼把我在往下拉",
+        "translationUserRef": 8,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Wanna run away, but I can't",
         "sourceTime": 60.54,
         "sourceEnd": 63.92,
         "time": 60.54,
-        "endTime": 63.92
+        "endTime": 63.92,
+        "tr": "想要逃跑，卻又做不到",
+        "translationUserRef": 9,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Casket girl, you came to lay my body down",
@@ -400,7 +430,16 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "not-applicable"
+    "readingsStatus": "not-applicable",
+    "translationCredit": "使用者提供（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided chat excerpt",
+      "file": "CasketGirl.zh.txt",
+      "providedAt": "2026-10-30",
+      "scope": "Verse 1 and Pre-Chorus",
+      "sha256": "5ef158d0418a73c0bc6b3089346949dd8a21e2994853d80da097893bb5afd1f5"
+    }
   },
   "INeedUBack": {
     "lyricsStatus": "imported",
@@ -4196,7 +4235,7 @@ const prepared = {
   },
   "ForeverYoung": {
     "lyricsStatus": "imported",
-    "translationStatus": "pending",
+    "translationStatus": "partial",
     "timingStatus": "preview",
     "lyrics": [
       {
@@ -4204,112 +4243,160 @@ const prepared = {
         "sourceTime": 57.75,
         "sourceEnd": 61.41,
         "time": 57.75,
-        "endTime": 61.41
+        "endTime": 61.41,
+        "tr": "親愛的，我會永遠記得這個夜晚。",
+        "translationUserRef": 0,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "You gave me all the light when I surrendered",
         "sourceTime": 61.41,
         "sourceEnd": 65.58,
         "time": 61.41,
-        "endTime": 65.58
+        "endTime": 65.58,
+        "tr": "當我放棄抵抗、選擇臣服時，是你帶給我所有的光芒。",
+        "translationUserRef": 1,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "You let me know",
         "sourceTime": 65.58,
         "sourceEnd": 68.51,
         "time": 65.58,
-        "endTime": 68.51
+        "endTime": 68.51,
+        "tr": "是你讓我明白，",
+        "translationUserRef": 2,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "That I know nothing at all",
         "sourceTime": 68.51,
         "sourceEnd": 73.37,
         "time": 68.51,
-        "endTime": 73.37
+        "endTime": 73.37,
+        "tr": "原來我其實什麼都不懂。",
+        "translationUserRef": 3,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Summer has come, worry's over",
         "sourceTime": 73.37,
         "sourceEnd": 77.09,
         "time": 73.37,
-        "endTime": 77.09
+        "endTime": 77.09,
+        "tr": "夏天已經到來，煩惱也終於煙消雲散。",
+        "translationUserRef": 4,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "It took a long time, but I got wiser",
         "sourceTime": 77.09,
         "sourceEnd": 81.3,
         "time": 77.09,
-        "endTime": 81.3
+        "endTime": 81.3,
+        "tr": "雖然花了很長一段時間，但我終於變得更加成熟、明智。",
+        "translationUserRef": 5,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "I'll take you home",
         "sourceTime": 81.3,
         "sourceEnd": 84.18,
         "time": 81.3,
-        "endTime": 84.18
+        "endTime": 84.18,
+        "tr": "我會帶你回家。",
+        "translationUserRef": 6,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Life feels so incredible",
         "sourceTime": 84.18,
         "sourceEnd": 89.21,
         "time": 84.18,
-        "endTime": 89.21
+        "endTime": 89.21,
+        "tr": "此刻，生命是如此不可思議而美好。",
+        "translationUserRef": 7,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "We were children, oh, so long ago",
         "sourceTime": 89.21,
         "sourceEnd": 93.04,
         "time": 89.21,
-        "endTime": 93.04
+        "endTime": 93.04,
+        "tr": "很久很久以前，我們都曾是孩子。",
+        "translationUserRef": 8,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "But we still got a long, long way to go",
         "sourceTime": 93.04,
         "sourceEnd": 96.92,
         "time": 93.04,
-        "endTime": 96.92
+        "endTime": 96.92,
+        "tr": "但未來的道路，依然還有好長好長的一段要走。",
+        "translationUserRef": 9,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Come on over, let's go higher",
         "sourceTime": 96.92,
         "sourceEnd": 101.01,
         "time": 96.92,
-        "endTime": 101.01
+        "endTime": 101.01,
+        "tr": "來吧，到我身邊。／讓我們一起走向更高的地方。",
+        "translationUserRef": 10,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Takes forever just to learn who we are",
         "sourceTime": 101.01,
         "sourceEnd": 104.68,
         "time": 101.01,
-        "endTime": 104.68
+        "endTime": 104.68,
+        "tr": "光是要真正認識自己，就彷彿得花上一輩子的時間。",
+        "translationUserRef": 11,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "Don't you be scared, we're together",
         "sourceTime": 104.68,
         "sourceEnd": 108.51,
         "time": 104.68,
-        "endTime": 108.51
+        "endTime": 108.51,
+        "tr": "別害怕。／因為我們會一直在一起。",
+        "translationUserRef": 12,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "39, 60 or whatever",
         "sourceTime": 108.51,
         "sourceEnd": 112.26,
         "time": 108.51,
-        "endTime": 112.26
+        "endTime": 112.26,
+        "tr": "不管是三十九歲、六十歲，還是任何年紀。",
+        "translationUserRef": 13,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "As long as we're here",
         "sourceTime": 112.26,
         "sourceEnd": 115.36,
         "time": 112.26,
-        "endTime": 115.36
+        "endTime": 115.36,
+        "tr": "只要我們依然在這裡，",
+        "translationUserRef": 14,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "We're forever young (young)",
         "sourceTime": 115.36,
         "sourceEnd": 120.15,
         "time": 115.36,
-        "endTime": 120.15
+        "endTime": 120.15,
+        "tr": "我們就永遠年輕。（年輕）",
+        "translationUserRef": 15,
+        "translationMapping": "user-provided-excerpt"
       },
       {
         "jp": "We can be born again and again",
@@ -4565,7 +4652,16 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "not-applicable"
+    "readingsStatus": "not-applicable",
+    "translationCredit": "使用者提供（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided chat excerpt",
+      "file": "ForeverYoung.zh.txt",
+      "providedAt": "2026-10-30",
+      "scope": "Verse 1, Verse 2, Pre-Chorus and first Chorus",
+      "sha256": "d8b9f3975d6043dc5173a9921a4cba59f236668065e6b95e027d7906a94a3081"
+    }
   },
   "Matsuri": {
     "lyricsStatus": "imported",

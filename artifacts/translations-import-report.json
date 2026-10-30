@@ -347,5 +347,29 @@
     }
   ],
   "translatedLines": 672,
-  "pendingLines": 29
+  "pendingLines": 29,
+  "userProvidedSongs": [
+    {
+      "id": "CasketGirl",
+      "file": "CasketGirl.zh.txt",
+      "totalLines": 55,
+      "translatedLines": 10,
+      "status": "partial",
+      "providedAt": "2026-10-30",
+      "scope": "Verse 1 and Pre-Chorus",
+      "sha256": "5ef158d0418a73c0bc6b3089346949dd8a21e2994853d80da097893bb5afd1f5"
+    },
+    {
+      "id": "ForeverYoung",
+      "file": "ForeverYoung.zh.txt",
+      "totalLines": 51,
+      "translatedLines": 16,
+      "status": "partial",
+      "providedAt": "2026-10-30",
+      "scope": "Verse 1, Verse 2, Pre-Chorus and first Chorus",
+      "sha256": "d8b9f3975d6043dc5173a9921a4cba59f236668065e6b95e027d7906a94a3081"
+    }
+  ],
+  "userProvidedTranslatedLines": 26,
+  "totalTranslatedLines": 698
 }
