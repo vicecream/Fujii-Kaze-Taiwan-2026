@@ -1,6 +1,6 @@
 # 內容來源紀錄
 
-查核日期：基本演出、曲目與影片資訊為 **2026-10-27**；現場公告圖由使用者於 **2026-10-29** 直接提供並人工核對。此文件記錄指南的資訊與資產出處；網站為非官方粉絲製作，後續變更仍以高雄場主辦單位公告為準。
+查核日期：基本演出、原有曲目與影片資訊為 **2026-10-27**；新增四首曲目與官方影片於 **2026-10-30** 核對；現場公告圖由使用者於 **2026-10-29** 直接提供並人工核對。此文件記錄指南的資訊與資產出處；網站為非官方粉絲製作，後續變更仍以高雄場主辦單位公告為準。
 
 ## 演出與交通
 
@@ -34,10 +34,24 @@
 
 - [Prema 官方專輯頁](https://fujiikaze.com/music/prema/)：9 首英文曲目，按官方專輯順序整理。
 - [Best of Fujii Kaze 2020–2024 官方專輯頁](https://fujiikaze.com/music/best_of_fujii_kaze_2020-2024/)：10 首代表曲，按官方精選輯順序整理。
+- [Pre: Prema 官方專輯頁](https://fujiikaze.com/music/pre_prema/)：新增〈It's Alright〉與〈真っ白〉，依專輯中的先後順序排列。
+- [HELP EVER HURT NEVER 官方專輯頁](https://fujiikaze.com/music/help-ever-hurt-never/)：新增〈もうええわ〉與〈帰ろう〉，依專輯中的先後順序排列。
 - [藤井風官方影片頁](https://fujiikaze.com/video/)：核對已收錄 MV 的歌曲及影片 ID。
-- 未列在影片頁的官方音源，直接核對藝人官方 YouTube 頻道：[Okay, Goodbye](https://www.youtube.com/watch?v=EAtRDZQLsgk)、[Forever Young](https://www.youtube.com/watch?v=tU953HcYdxU)、[Garden](https://www.youtube.com/watch?v=53rIic2lvKc)；[死ぬのがいいわ官方武道館演出](https://www.youtube.com/watch?v=lRVJuPI5IXI) 使用其現場版本。
+- 未列在影片頁的官方音源，直接核對藝人官方 YouTube 頻道：[Okay, Goodbye](https://www.youtube.com/watch?v=EAtRDZQLsgk)、[Forever Young](https://www.youtube.com/watch?v=tU953HcYdxU)、[Garden](https://www.youtube.com/watch?v=53rIic2lvKc)。
+- 〈死ぬのがいいわ〉於 2026-10-30 依使用者指定改用 [YouTube 影片](https://www.youtube.com/watch?v=3zh9Wb1KuW8)；LRC 時間仍為待校正的逐行試播。
 
-19 首僅為預習曲庫，並非高雄正式歌單。不同影片版本須各自校對同步時間，不將錄音室版本時間直接套用現場影片。
+23 首僅為預習曲庫，並非高雄正式歌單。原有 19 首的編號保留，新增四首接續排列。不同影片版本須各自校對同步時間，不將錄音室版本時間直接套用現場影片。
+
+### 10/30 新增預習曲目
+
+| 曲目 | 官方播放來源 | 內容狀態 |
+|---|---|---|
+| 〈It's Alright〉 | [官方 MV](https://www.youtube.com/watch?v=HA3WzXw8vM8) | LRC 43 行，中文 38 列；逐行時間試播、讀音待整理 |
+| 〈真っ白〉 | [官方音源](https://www.youtube.com/watch?v=XwgL4C2WaU8) | 無時間碼原文 34 行、中文 28 列；六行哼唱無對應中譯，時間碼及讀音待整理 |
+| 〈もうええわ〉 | [官方 MV](https://www.youtube.com/watch?v=y4FYCJRjHBg) | LRC 與中文各 51 列；逐行時間試播、讀音待整理 |
+| 〈帰ろう〉 | [官方 MV](https://www.youtube.com/watch?v=goU1Ei8I8uk) | LRC 與中文各 47 列；逐行時間試播、讀音待整理 |
+
+新增曲目的影片 ID 與標題依官方 YouTube 搜尋結果及官方曲目頁交叉核對。使用者後續直接提供四份 LRC 與四份 marumaru PDF；〈真っ白.lrc〉初次內容為〈まつり〉並已排除，後續由使用者更新為正確原文；目前沒有時間碼，依最新原文與 PDF 中文提供閱讀。其餘三首使用原始 LRC 時間試播，沒有宣稱已核對影片同步。四首新增 175 行原文、164 列中文，完整逐列映射與 PDF 雜湊見 [中文匯入紀錄](translation-import.md)。
 
 ## 圖片與圖示
 
@@ -55,7 +69,11 @@
 
 不帶入原 Vaundy 歌詞、翻譯、讀音、同步時間、應援標記或動作影片。使用者於 2026-10-29 將 19 首 LRC 直接放入 `lyrics/`，並要求先依時間碼試播，以便找出不同步的位置；目前已匯入 936 行原文。這是使用者直接提供內容的格式整理，未代為擷取第三方全文。
 
-使用者於 2026-10-30 另提供 15 份 marumaru 歌詞 PDF，放在 `lyrics/translations/`。已依其中的雙語對照加入 672 列中文，原譯文與來源註記保留；PDF 只有「MARUMARU 提供」，未列個別譯者，因此網站標示提供來源。29 列因原 PDF 無對應中文而保留空白，其餘四首未提供中文 PDF；不新增自譯補齊。原文與時間線保持原值，日文讀音仍待整理。抽取段落、PDF 雜湊與字幕映射均保留，詳見 [匯入紀錄](translation-import.md)。
+使用者於 2026-10-30 另提供 15 份 marumaru 歌詞 PDF，放在 `lyrics/translations/`。已依其中的雙語對照加入 672 列中文，原譯文與來源註記保留；PDF 只有「MARUMARU 提供」，未列個別譯者，因此網站標示提供來源。29 列因原 PDF 無對應中文而保留空白，其餘四首未提供中文 PDF；不新增自譯補齊。原文與時間線保持原值，日文讀音進度另見 [讀音整理](furigana.md)。抽取段落、PDF 雜湊與字幕映射均保留，詳見 [匯入紀錄](translation-import.md)。
+
+同日後續由使用者直接貼出〈Casket Girl〉全曲與〈Forever Young〉部分雙語內容，分別匯入 55 列及 16 列中譯，目前合計 743 列。最新〈Casket Girl〉全曲取代先前節錄，68 組提供譯句全部保留；〈Forever Young〉仍只限已提供的範圍。兩首譯者未註明，來源標示為使用者供稿，並保存文字檔、逐列映射與雜湊；不將提供者推定為作者。既有原文、時間與日文讀音不變。
+
+兩個 Vocus 連結分別為〈You〉與〈Okay, Goodbye〉，作者為 Vince；文章與作者頁、日期已記錄在 `lyrics/translations/external-sources.json`。目前只核對來源資訊，譯文尚未直接提供，因此沒有匯入，也不作為〈Casket Girl〉或〈Forever Young〉的出處。
 
 原始 LRC 保留於 `lyrics/`；匯入時的檔案 SHA-256 記錄於 `artifacts/lyrics-import-inputs.json`。來源網址沿用候選清單，不能推定每個本機檔案的下載出處或授權已查證。`sourceTime`、`sourceEnd` 保留原檔的行時間與下一時間標記；試播 `time` 採相同起始秒數，`timingStatus: "preview"` 明示尚未對照影片。〈死ぬのがいいわ〉同時間的羅馬字對照列保存在 `providedRomaji`，不重複作為演唱句顯示。
 

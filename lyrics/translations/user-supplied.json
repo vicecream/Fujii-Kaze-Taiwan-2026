@@ -4,71 +4,346 @@
       "id": "CasketGirl",
       "file": "CasketGirl.zh.txt",
       "providedAt": "2026-10-30",
-      "scope": "Verse 1 and Pre-Chorus",
+      "scope": "Complete song supplied by user",
       "translationCredit": "使用者提供（譯者未註明）",
       "translationCreditRole": "source",
+      "providedExcerptComplete": true,
       "entries": [
+        {
+          "index": 0,
+          "jp": "Mm-hmm, mm-hmm",
+          "time": 24.52,
+          "tr": "嗯哼。／嗯哼。"
+        },
         {
           "index": 1,
           "jp": "Oh, wake up bro, she'll come alive",
           "time": 31.99,
-          "tr": "哦，醒醒吧兄弟，她要活過來了"
+          "tr": "嘿，兄弟，醒醒吧，她就要甦醒了。"
         },
         {
           "index": 2,
           "jp": "You better watch out, baby",
           "time": 35.47,
-          "tr": "你最好小心點，寶貝"
+          "tr": "（你最好小心點，寶貝。）"
         },
         {
           "index": 3,
           "jp": "You better watch out, baby",
           "time": 38.72,
-          "tr": "你最好小心點，寶貝"
+          "tr": "（你最好小心點，寶貝。）"
         },
         {
           "index": 4,
           "jp": "Oh, she's about to wreck your life",
           "time": 40.24,
-          "tr": "哦，她快要把你的人生給毀了"
+          "tr": "噢，她就快要毀掉你的人生了。"
         },
         {
           "index": 5,
           "jp": "You better watch out, baby",
           "time": 43.36,
-          "tr": "你最好小心點，寶貝"
+          "tr": "（你最好小心點，寶貝。）"
         },
         {
           "index": 6,
           "jp": "You better watch out, buddy",
           "time": 45.61,
-          "tr": "你最好小心點，夥計"
+          "tr": "（你最好小心點，老兄。）"
         },
         {
           "index": 7,
           "jp": "I just wanted to be free",
           "time": 48.02,
-          "tr": "我只是想獲得自由"
+          "tr": "我只是想要自由。"
         },
         {
           "index": 8,
           "jp": "And be happy endlessly",
           "time": 53.25,
-          "tr": "想要永無止境地快樂"
+          "tr": "想要永遠幸福快樂。"
         },
         {
           "index": 9,
           "jp": "Somethin' always drags me down",
           "time": 56.31,
-          "tr": "但總有什麼把我在往下拉"
+          "tr": "但總有些事情不斷將我拖入低谷。"
         },
         {
           "index": 10,
           "jp": "Wanna run away, but I can't",
           "time": 60.54,
-          "tr": "想要逃跑，卻又做不到"
+          "tr": "我想逃離，卻怎麼也逃不掉。"
+        },
+        {
+          "index": 11,
+          "jp": "Casket girl, you came to lay my body down",
+          "time": 63.92,
+          "tr": "棺木女孩。／妳的到來，是為了讓我長眠。"
+        },
+        {
+          "index": 12,
+          "jp": "There's nothin' you can do, you're already dead",
+          "time": 69.07,
+          "tr": "（你已經無能為力了，因為你早就死了。）"
+        },
+        {
+          "index": 13,
+          "jp": "Fast or slow, just so you know them gorgeous eyes",
+          "time": 71.81,
+          "tr": "無論來得快或慢，我只想讓妳知道。／妳那雙迷人的眼睛，"
+        },
+        {
+          "index": 14,
+          "jp": "Are my demise",
+          "time": 77.24,
+          "tr": "終將成為我的毀滅。"
+        },
+        {
+          "index": 15,
+          "jp": "Casket girl, you came to make me go insane",
+          "time": 79.63,
+          "tr": "棺木女孩。／妳的出現，讓我逐漸失去理智。"
+        },
+        {
+          "index": 16,
+          "jp": "How can we not survive? It's such a shame",
+          "time": 84.14,
+          "tr": "（我們怎麼會走到無法繼續下去的地步？真令人遺憾。）"
+        },
+        {
+          "index": 17,
+          "jp": "Use me up, can't get enough of all her lies",
+          "time": 87.61,
+          "tr": "儘管把我消耗殆盡吧。／即使全是她的謊言，我卻仍然深陷其中、無法滿足。"
+        },
+        {
+          "index": 18,
+          "jp": "It can't be right",
+          "time": 93.15,
+          "tr": "這樣下去一定不對。"
+        },
+        {
+          "index": 19,
+          "jp": "Oh, casket girl (oh, lookin' for this girl)",
+          "time": 94.89,
+          "tr": "噢，棺木女孩。／我正在尋找這個女孩。"
+        },
+        {
+          "index": 20,
+          "jp": "Casket girl (ay, lookin' for a this girl)",
+          "time": 98.9,
+          "tr": "棺木女孩。／我正在尋找這個女孩。"
+        },
+        {
+          "index": 21,
+          "jp": "Casket girl (oh, lookin' for this girl)",
+          "time": 102.89,
+          "tr": "棺木女孩。／我正在尋找這個女孩。"
+        },
+        {
+          "index": 22,
+          "jp": "Oh, casket girl (ay, lookin' for a this girl)",
+          "time": 106.59,
+          "tr": "噢，棺木女孩。／我正在尋找這個女孩。"
+        },
+        {
+          "index": 23,
+          "jp": "Oh, wake up bro, it's just a dream",
+          "time": 110.16,
+          "tr": "嘿，兄弟，醒醒吧，這只是一場夢。"
+        },
+        {
+          "index": 24,
+          "jp": "You better watch out, baby",
+          "time": 114.04,
+          "tr": "（你最好小心點，寶貝。）"
+        },
+        {
+          "index": 25,
+          "jp": "You better watch out, baby",
+          "time": 116.6,
+          "tr": "（你最好小心點，寶貝。）"
+        },
+        {
+          "index": 26,
+          "jp": "Life is a game, we play it as a team",
+          "time": 118.65,
+          "tr": "人生就像一場遊戲，而我們是同一隊的夥伴。"
+        },
+        {
+          "index": 27,
+          "jp": "We gotta make it, baby",
+          "time": 122.52,
+          "tr": "（我們一定要撐過去，寶貝。）"
+        },
+        {
+          "index": 28,
+          "jp": "We gotta make it 'til the end",
+          "time": 124.7,
+          "tr": "（我們一定要堅持到最後。）"
+        },
+        {
+          "index": 29,
+          "jp": "Just when I see the sunrise",
+          "time": 127.36,
+          "tr": "每當我看見日出，"
+        },
+        {
+          "index": 30,
+          "jp": "And lie around at midnight (ooh)",
+          "time": 132.22,
+          "tr": "或是在午夜時分靜靜躺著，"
+        },
+        {
+          "index": 31,
+          "jp": "You'll come back at any time",
+          "time": 135.72,
+          "tr": "妳總會在某個時刻再次出現。"
+        },
+        {
+          "index": 32,
+          "jp": "I'll be cryin', fightin' for my life",
+          "time": 139.85,
+          "tr": "而我只能一邊哭泣，一邊拼命為自己的人生掙扎。"
+        },
+        {
+          "index": 33,
+          "jp": "Casket girl, you came to lay my body down",
+          "time": 142.18,
+          "tr": "棺木女孩。／妳的到來，是為了讓我長眠。"
+        },
+        {
+          "index": 34,
+          "jp": "There's nothin' you can do, you're already dead",
+          "time": 147.25,
+          "tr": "（你已經無能為力了，因為你早就死了。）"
+        },
+        {
+          "index": 35,
+          "jp": "Fast or slow, just so you know them gorgeous eyes",
+          "time": 150.49,
+          "tr": "無論來得快或慢，我只想讓妳知道。／妳那雙迷人的眼睛，"
+        },
+        {
+          "index": 36,
+          "jp": "Are my demise",
+          "time": 155.65,
+          "tr": "終將成為我的毀滅。"
+        },
+        {
+          "index": 37,
+          "jp": "Casket girl, you came to make me go insane",
+          "time": 157.84,
+          "tr": "棺木女孩。／妳的出現，讓我逐漸失去理智。"
+        },
+        {
+          "index": 38,
+          "jp": "How can we not survive? It's such a shame",
+          "time": 162.99,
+          "tr": "（我們怎麼會走到無法繼續下去的地步？真令人遺憾。）"
+        },
+        {
+          "index": 39,
+          "jp": "Use me up, can't get enough of all her lies",
+          "time": 166.1,
+          "tr": "儘管把我消耗殆盡吧。／即使全是她的謊言，我卻仍然深陷其中、無法滿足。"
+        },
+        {
+          "index": 40,
+          "jp": "It can't be right",
+          "time": 171.35,
+          "tr": "這樣下去一定不對。"
+        },
+        {
+          "index": 41,
+          "jp": "There's gotta be a way to make it better (ah)",
+          "time": 173.24,
+          "tr": "一定有什麼方法，可以讓一切變得更好。"
+        },
+        {
+          "index": 42,
+          "jp": "Try a little love and grow together (ah)",
+          "time": 176.62,
+          "tr": "試著付出一點愛，讓我們一起成長。"
+        },
+        {
+          "index": 43,
+          "jp": "Whoa, whoa",
+          "time": 180.54,
+          "tr": "噢，噢。"
+        },
+        {
+          "index": 44,
+          "jp": "'Nough of delusion",
+          "time": 184.27,
+          "tr": "別再沉溺於幻想之中了。"
+        },
+        {
+          "index": 45,
+          "jp": "Let's get out of the hole and find a way",
+          "time": 186.46,
+          "tr": "讓我們一起走出這個困境。"
+        },
+        {
+          "index": 46,
+          "jp": "To make it better",
+          "time": 190.06,
+          "tr": "找到讓一切好轉的方法。"
+        },
+        {
+          "index": 47,
+          "jp": "Try a little love yourself together",
+          "time": 192.31,
+          "tr": "試著多愛自己一點，也一起學會愛。"
+        },
+        {
+          "index": 48,
+          "jp": "Whoa, whoa",
+          "time": 195.86,
+          "tr": "噢，噢。"
+        },
+        {
+          "index": 49,
+          "jp": "High time for freedom",
+          "time": 200.01,
+          "tr": "現在正是追尋自由的時候。"
+        },
+        {
+          "index": 50,
+          "jp": "Why don't we both come outta, casket girl?",
+          "time": 202.8,
+          "tr": "棺木女孩，何不讓我們一起走出這副棺木呢？"
+        },
+        {
+          "index": 51,
+          "jp": "Casket girl, we got some kinda freedom",
+          "time": 205.87,
+          "tr": "棺木女孩，我們終於獲得了某種自由。"
+        },
+        {
+          "index": 52,
+          "jp": "Casket girl, we got some kinda freedom",
+          "time": 209.18,
+          "tr": "棺木女孩，我們終於獲得了某種自由。（自由。）"
+        },
+        {
+          "index": 53,
+          "jp": "Casket girl, we got some kinda freedom",
+          "time": 212.67,
+          "tr": "棺木女孩，我們終於獲得了某種自由。"
+        },
+        {
+          "index": 54,
+          "jp": "Ho-o-ow about we both come outta, casket girl?",
+          "time": 216.52,
+          "tr": "棺木女孩，不如我們一起走出這副棺木吧？"
         }
-      ]
+      ],
+      "translationTitle": "棺木女孩",
+      "source": "user-provided chat excerpt",
+      "complete": true,
+      "note": "使用者最新提供的全曲新版完整取代先前節錄，共 68 組雙語句對齊現有 55 個 LRC 字幕列；同一字幕列涵蓋多個來源句時，以「／」連接原譯句，保留措辭、標點與全形括號。Intro 索引 0 合併兩句「嗯哼。」；副歌的稱呼與後句、Fast or slow 與 Them gorgeous eyes、Use me up 與 Can't get enough，以及 Post-Chorus 的稱呼與尋找女孩句皆按現有 LRC 分句合併。來源 Let's get out of the whole 與 And find a way to make it better 跨現有索引 45–46：索引 45 保留「讓我們一起走出這個困境。」，索引 46 完整保留「找到讓一切好轉的方法。」；後一句英文從索引 45 的 and find a way 延續至索引 46 的 To make it better，不拆改中文或重複整句。索引 52 來源比 LRC 原文多出 backing vocal freedom，保留使用者提供的「（自由。）」；未提供中譯的 oh、ah、ooh 等聲音不另行翻譯。所有原文與時間沿用現有 LRC；未提供外部來源網址與譯者。"
     },
     {
       "id": "ForeverYoung",

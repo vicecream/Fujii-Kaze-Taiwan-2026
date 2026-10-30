@@ -37,6 +37,12 @@ assert.throws(() => prepareSong({ ...alignedEntry, alignment: { ...alignedEntry.
 assert.throws(() => prepareSong(entry, "[offset:500]\n" + text, song), /offset/);
 assert.throws(() => prepareSong(entry, "[00:01.00]<script>Example</script>", song), /plain text/);
 assert.throws(() => prepareSong(entry, "No timestamps", song), /synced LRC/);
+const untimed = prepareSong({ ...entry, format: "plain-text" }, "First original line\n\nSecond original line", song);
+assert.deepEqual(untimed.lyrics, [{ jp: "First original line" }, { jp: "Second original line" }]);
+assert.equal(untimed.timingStatus, "pending", "An explicitly untimed original must not invent timestamps");
+assert.equal(untimed.timingSourceUrl, undefined);
+assert.throws(() => prepareSong({ ...entry, format: "plain-text", timingMode: "preview" }, "Example", song), /no synchronization timestamps/);
+assert.throws(() => prepareSong({ ...entry, format: "plain-text" }, text, song), /must not contain LRC timestamps/);
 const provider = prepareSong({ ...entry, file: "sample.json" }, JSON.stringify({ syncedLyrics: text }), song);
 assert.deepEqual(provider.lyrics.map(({ sourceEnd, ...line }) => line), reading.lyrics.map(({ sourceEnd, ...line }) => line));
 

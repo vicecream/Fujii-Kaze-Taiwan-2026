@@ -14,12 +14,31 @@ function check(label, run){
 }
 
 check("catalog and listening sources", () => {
-  assert.equal(SONGS.length, 19);
-  assert.equal(new Set(SONGS.map(song => song.id)).size, 19);
+  assert.equal(SONGS.length, 23);
+  assert.equal(new Set(SONGS.map(song => song.id)).size, 23);
   assert.equal(SONGS.filter(song => song.album === "prema").length, 9);
   assert.equal(SONGS.filter(song => song.album === "best").length, 10);
   assert.deepEqual(SONGS.slice(0, 9).map(song => song.language), Array(9).fill("en"));
-  assert.deepEqual(SONGS.slice(9).map(song => song.language), Array(10).fill("ja"));
+  assert.equal(SONGS.filter(song => song.album === "prePrema").length, 2);
+  assert.equal(SONGS.filter(song => song.album === "hehn").length, 2);
+  assert.deepEqual(SONGS.slice(9).map(song => song.language), Array(14).fill("ja"));
+  assert.deepEqual(SONGS.slice(19).map(song => song.id), ["ItsAlright", "Masshiro", "MoEhWa", "Kaerou"]);
+  const additional = { ItsAlright: [43, 38], Masshiro: [34, 28], MoEhWa: [51, 51], Kaerou: [47, 47] };
+  for (const song of SONG_LYRICS.slice(19)){
+    const [originals, translated] = additional[song.id];
+    assert.equal(song.lyrics.length, originals, song.id);
+    assert.equal(song.lyrics.filter(line => line.tr?.trim()).length, translated, song.id);
+    assert.equal(song.lyricsStatus, "imported", song.id);
+    assert.equal(song.translationStatus, translated === originals ? "ready" : "partial", song.id);
+    assert.equal(song.timingStatus, song.id === "Masshiro" ? "pending" : "preview", song.id);
+    assert.equal(song.readingsStatus, "pending", song.id);
+    assert.equal(songCapabilities(song).timed, song.id !== "Masshiro", song.id);
+    assert.equal(songCapabilities(song).readings, false, song.id);
+    if (song.id === "Masshiro"){
+      assert.ok(song.lyrics.some(line => line.jp === "真っ白な心に惹かれ"));
+      assert.ok(song.lyrics.every(line => line.time === undefined && line.sourceTime === undefined), "The supplied plain text has no timeline");
+    }
+  }
   for (const song of SONGS){
     assert.equal(song.artist, "Fujii Kaze", song.id);
     assert.ok(ALBUMS[song.album], song.id);
@@ -177,7 +196,7 @@ check("homepage content, lazy panels, sources and removal of spoiler UI", () => 
   const home = homeHtml("v2.0.0");
   assert.match(home, /藤井風/);
   assert.match(home, /高雄國家體育場/);
-  assert.match(home, /19 首歌曲預習/);
+  assert.match(home, /23 首歌曲預習/);
   assert.match(home, /非官方粉絲製作/);
   assert.match(home, /並非高雄正式歌單/);
   assert.match(home, /16:00/);

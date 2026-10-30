@@ -1,0 +1,36 @@
+{
+  "songs": [
+    {
+      "id": "ItsAlright",
+      "file": "It's Alright.lrc",
+      "sourceUrl": "https://lrclib.net/tracks/38050371",
+      "usageBasis": "User supplied this local LRC on 2026-10-30 for import and timeline preview; the candidate source URL is a reference, not a verified download origin.",
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "MoEhWa",
+      "file": "もうええわ.lrc",
+      "sourceUrl": "https://lrclib.net/tracks/8346844",
+      "usageBasis": "User supplied this local LRC on 2026-10-30 for import and timeline preview; the candidate source URL is a reference, not a verified download origin.",
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "Kaerou",
+      "file": "帰ろう.lrc",
+      "sourceUrl": "https://lrclib.net/tracks/8346849",
+      "usageBasis": "User supplied this local LRC on 2026-10-30 for import and timeline preview; the candidate source URL is a reference, not a verified download origin.",
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "Masshiro",
+      "file": "真っ白.lrc",
+      "format": "plain-text",
+      "sourceUrl": "https://lrclib.net/tracks/33296576",
+      "usageBasis": "User supplied an updated Masshiro original text file on 2026-10-30. Despite the .lrc extension, it has no timestamps and is imported for untimed reading only; the source URL is a reference, not a verified download origin.",
+      "allowPendingReadings": true
+    }
+  ]
+}

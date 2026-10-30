@@ -3673,5 +3673,837 @@
         "page": 3
       }
     ]
+  },
+  {
+    "id": "ItsAlright",
+    "pdf": "(歌詞)It's+Alright.pdf",
+    "sha256": "04bae1bbb7702428fd71e2d91c053af21d359f2f8641d5e0792fc3fc2903860b",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "母なる大地は私の愛し子",
+        "translation": "大地之母是我的愛子",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "父なる太陽は私のまなこ",
+        "translation": "太陽之父是我的雙眼",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "この世は私の思わく通りに",
+        "translation": "這世界如我所願",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "今日とて可愛く回っています",
+        "translation": "不停可愛地運轉",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "Come, cry ur heart, cry ur heart out",
+        "translation": "來吧，大哭一場，哭個痛快",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "Here in my arms, in my arms like",
+        "translation": "在我懷裡，在我懷裡就像",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "Ah ah ah ah ah ah ah ah",
+        "translation": "啊…",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "God is inside, is inside us",
+        "translation": "神在心中，在我們心中",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "This is our time, is our time, thus",
+        "translation": "這是我們的時代，我們的時代，所以",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "Sooner or later, we better know that",
+        "translation": "我們遲早都要明白",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "Everything is gonna be alright",
+        "translation": "一切都會好起來",
+        "page": 1
+      },
+      {
+        "index": 11,
+        "original": "It's alright…",
+        "translation": "一切都好…",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "It's all, right",
+        "translation": "一切，都好",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "Give it up, kama",
+        "translation": "放手吧，業力",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "Bring it on, Prema",
+        "translation": "來吧，純愛",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "母なる大地は私の愛し子",
+        "translation": "大地之母是我的愛子",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "父なる太陽は私のまなこ",
+        "translation": "太陽之父是我的雙眼",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "この世は私の思わく通りに",
+        "translation": "這世界如我所願",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "今日とて可愛く回っています",
+        "translation": "不停可愛地運轉",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "Come, cry ur heart, cry ur heart out",
+        "translation": "來吧，大哭一場，哭個痛快",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "Here in my arms, in my arms like",
+        "translation": "在我懷裡，在我懷裡就像",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "Ah ah ah ah ah ah ah ah",
+        "translation": "啊…",
+        "page": 2
+      },
+      {
+        "index": 22,
+        "original": "God is inside, is inside us",
+        "translation": "神在心中，在我們心中",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "This is our time, is our time, thus",
+        "translation": "這是我們的時代，我們的時代，所以",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "Sooner or later, we better know that",
+        "translation": "我們遲早都要明白",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "Everything is gonna be alright",
+        "translation": "一切都會好起來",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "It's alright…",
+        "translation": "一切都好…",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "It's all, right",
+        "translation": "一切，都好",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "Give it up, kama",
+        "translation": "放手吧，業力",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "Bring it on, Prema",
+        "translation": "來吧，純愛",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "Masshiro",
+    "pdf": "(歌詞)真っ白.pdf",
+    "sha256": "7d46bc5a28775e2a7542617b95bf93938c84272a1f43836599aa59fc3f447a26",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "真っ白な心に惹かれ",
+        "translation": "我嚮往一顆純白之心",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "真実をさまよえば",
+        "translation": "繞著真理徘徊",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "真っ黑なところはぶち抜かれ",
+        "translation": "黑暗被驅散",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "真新しい風にまた抱かれた",
+        "translation": "我投入了 全新風中的懷抱",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "好きだよ 好きだけど",
+        "translation": "我愛你 真的愛你 但是",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "離れなくちゃ 置いてかなきゃ",
+        "translation": "但我必須離開 把你拋在腦後",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "好きだよ 知らんけど",
+        "translation": "我愛你 但我不知道",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "私たちもう そんな頃よ",
+        "translation": "好像已經是時候了",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "先にさよならするわ",
+        "translation": "我先說再見",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "悪いのはそうよいつも私でいいの",
+        "translation": "這麼說吧 錯的永遠是我",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "先に進まなければゴールできぬゲームなのよ",
+        "translation": "我必須繼續前進 只有這樣才能完成遊戲",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "真っ白な心に惹かれ",
+        "translation": "我嚮往一顆純白之心",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "真実をさまよえば",
+        "translation": "繞著真理徘徊",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "真っ黑なところはぶち抜かれ",
+        "translation": "黑暗被驅散",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "真新しい風にまた抱かれた",
+        "translation": "我投入了 全新風中的懷抱",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "先にさよならするわ",
+        "translation": "我先說再見",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "悪いのはそうよいつも私でいいの",
+        "translation": "這麼說吧 錯的永遠是我",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "先に進まなければゴールできぬゲームなのよ",
+        "translation": "我必須繼續前進 只有這樣才能完成遊戲",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "真っ白な心に惹かれ",
+        "translation": "我嚮往一顆純白之心",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "真実をさまよえば",
+        "translation": "繞著真理徘徊",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "真っ黑なところはぶち抜かれ",
+        "translation": "黑暗被驅散",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "真新しい風にまた抱かれた",
+        "translation": "我投入了 全新風中的懷抱",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "好きだよ 好きだけど",
+        "translation": "我愛你 真的愛你 但是",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "離れなくちゃ 置いてかなきゃ",
+        "translation": "我必須離開 把你拋在腦後",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "好きだよ 知らんけど",
+        "translation": "我愛你 但我不知道",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "私たちもう そんな頃よ",
+        "translation": "好像已經是時候了",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "id": "MoEhWa",
+    "pdf": "(歌詞)もうええわ.pdf",
+    "sha256": "a7a7a475743c9983bee278063a5908c947111feb0fc2e23c82bfd31143dac817",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "さぁ羽のばして ここから",
+        "translation": "從此開始張開翅膀吧",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "捉われてばっか だったから",
+        "translation": "畢竟總是被困住",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "行き詰った悦び手放す時は今",
+        "translation": "現在該放下走到盡頭的喜悅",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "心軽くして これから",
+        "translation": "讓內心更輕盈 從今以後",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "自由に歩いて みたいなら",
+        "translation": "如果想試著自由行走",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "すれ違った人だって過去だって怖くない",
+        "translation": "即使是擦身而過的行人或過去 也都無須畏懼",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "みんな 先が見えない夜道を",
+        "translation": "大家在看不清前方的夜路",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "共に 迷い歩く夜更け時",
+        "translation": "於深夜時分一併步行並迷失",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "うつむかないで 怯えないで",
+        "translation": "別低下頭 別感到膽怯",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "閉ざした扉 叩いて",
+        "translation": "敲響緊閉的門扉",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "もうええわ 言われる前に先に言わして",
+        "translation": "夠了吧 在你說出口前 讓我搶先說",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "もうええわ やれるだけやって後は任して",
+        "translation": "夠了吧 盡己所能後選擇託付",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "もうええわ 自由になるわ",
+        "translation": "夠了吧 我要變得自由自在",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "泣くくらいじゃったら笑ったるわ アハハ…",
+        "translation": "與其哭泣不如一笑置之 啊哈哈…",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "傷口はいつかカサブタ",
+        "translation": "傷口終有一天會結痂",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "すぐ剥がれ落ちてサヨナラ",
+        "translation": "很快便會剝落 再也不見",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "心だってそんな風に癒えたらいいのにな",
+        "translation": "若人心也能那樣痊癒該有多好",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "巻き込まんとって泥沼",
+        "translation": "別拖我陷入泥沼",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "意味もなくただ傷付けられそして傷付け",
+        "translation": "毫無意義地負傷並傷害對方",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "繰り返すだけ",
+        "translation": "一次又一次地反覆上演",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "ぬけた 阿呆なゲームいちぬけた",
+        "translation": "我已離開 從愚蠢的遊戲中脫身",
+        "page": 3
+      },
+      {
+        "index": 21,
+        "original": "夜が 冷めた風に吹かれてた",
+        "translation": "冷冽寒風吹入夜晚",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "ふらつかないで 踏みしめて",
+        "translation": "切莫步履蹣跚 堅定前行",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "内なる風に吹かれて",
+        "translation": "任憑自己內心的風吹拂",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "もうええわ 言われる前に先に言わして",
+        "translation": "夠了吧 在你說出口前 讓我搶先說",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "もうええわ 付き合ってあげれんでごめんね",
+        "translation": "夠了吧 我無法奉陪了 真是抱歉",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "もうええわ 自由になるわ",
+        "translation": "夠了吧 我要變得自由自在",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "泣くくらいじゃったら笑ったるわ",
+        "translation": "與其哭泣不如一笑置之",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "夜が更けて 朝の光が顔を出して",
+        "translation": "夜幕漸深 換早晨曙光露面",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "もうええわ 甘い夢ばっか見させんといて",
+        "translation": "夠了吧 別讓我一再做美夢",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "もうええわ 要らんことばっか聞かせんといて",
+        "translation": "夠了吧 別讓我一再聽廢話",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "もうええわ 手放したいもの今全て この空に捨てて",
+        "translation": "夠了吧 現在就把所有想捨棄的事物 全都往這片天空扔去",
+        "page": 4
+      },
+      {
+        "index": 32,
+        "original": "もうええわ 何が大切なん? よう選んで",
+        "translation": "夠了吧 什麼才是重要的? 做出明智選擇",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "もうええわ そう思うならサッサ手放して",
+        "translation": "夠了吧 要是那麼想 就早點放手",
+        "page": 4
+      },
+      {
+        "index": 34,
+        "original": "もうええわ 自由になるわ",
+        "translation": "夠了吧 我要變得自由自在",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "泣くくらいじゃったら笑ったるわ アハハ…",
+        "translation": "與其哭泣不如一笑置之 啊哈哈…",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "id": "Kaerou",
+    "pdf": "(歌詞)帰ろう.pdf",
+    "sha256": "fbbf45572c1572db73b52bc2296f1e4191ab9ea3a674dd559c740b93b191ac0a",
+    "pairs": [
+      {
+        "index": 0,
+        "original": "あなたは夕日に溶けて わたしは夜明に消えて",
+        "translation": "你消融於夕陽景象 我消逝於黎明破曉",
+        "page": 1
+      },
+      {
+        "index": 1,
+        "original": "もう二度と 交わらないのなら それが運命だね",
+        "translation": "如果餘生無法再次相會 那便是命中注定",
+        "page": 1
+      },
+      {
+        "index": 2,
+        "original": "あなたは灯ともして わたしは光もとめて",
+        "translation": "你點亮一盞明燈 我追尋那道光芒",
+        "page": 1
+      },
+      {
+        "index": 3,
+        "original": "怖くはない 失うものなどない",
+        "translation": "無須害怕 沒什麼可失去的",
+        "page": 1
+      },
+      {
+        "index": 4,
+        "original": "最初から何も持ってない",
+        "translation": "從一開始便是一無所有",
+        "page": 1
+      },
+      {
+        "index": 5,
+        "original": "それじゃ それじゃ またね",
+        "translation": "再見 那麼就此道別",
+        "page": 1
+      },
+      {
+        "index": 6,
+        "original": "少年の瞳は汚れ",
+        "translation": "少年的眼瞳沾染汙濁",
+        "page": 1
+      },
+      {
+        "index": 7,
+        "original": "五時の鐘は鳴り響けど もう聞こえない",
+        "translation": "五點的鐘聲響徹 卻無法再聽見",
+        "page": 1
+      },
+      {
+        "index": 8,
+        "original": "それじゃ それじゃ まるで",
+        "translation": "那樣 那樣簡直表明了",
+        "page": 1
+      },
+      {
+        "index": 9,
+        "original": "全部 終わったみたいだね",
+        "translation": "全都已徹底結束",
+        "page": 1
+      },
+      {
+        "index": 10,
+        "original": "大間違い 先は長い 忘れないから",
+        "translation": "大錯特錯 來日方長 我不會遺忘",
+        "page": 2
+      },
+      {
+        "index": 11,
+        "original": "ああ 全て忘れて帰ろう",
+        "translation": "啊 淡忘所有事後回去吧",
+        "page": 2
+      },
+      {
+        "index": 12,
+        "original": "ああ 全て流して帰ろう",
+        "translation": "啊 諸事放水流後回去吧",
+        "page": 2
+      },
+      {
+        "index": 13,
+        "original": "あの傷は疼けど この渇き癒えねど",
+        "translation": "儘管那道傷口隱隱作痛 這份飢渴也尚未消除",
+        "page": 2
+      },
+      {
+        "index": 14,
+        "original": "もうどうでもいいの 吹き飛ばそう",
+        "translation": "已經不重要了 讓其隨風而去",
+        "page": 2
+      },
+      {
+        "index": 15,
+        "original": "さわやかな風と帰ろう",
+        "translation": "與涼爽清風一起回去吧",
+        "page": 2
+      },
+      {
+        "index": 16,
+        "original": "やさしく降る雨と帰ろう",
+        "translation": "伴降下的輕柔細雨回去吧",
+        "page": 2
+      },
+      {
+        "index": 17,
+        "original": "憎みあいの果てに何が生まれるの",
+        "translation": "互相怨恨 最後又能帶來什麼",
+        "page": 2
+      },
+      {
+        "index": 18,
+        "original": "わたし、わたしが先に 忘れよう",
+        "translation": "就讓我、讓我先忘卻這些事",
+        "page": 2
+      },
+      {
+        "index": 19,
+        "original": "あなたは弱音を吐いて わたしは未練こぼして",
+        "translation": "你傾吐喪氣話 我流露不捨之情",
+        "page": 2
+      },
+      {
+        "index": 20,
+        "original": "最後くらい 神様でいさせて",
+        "translation": "至少在最後一刻 讓我作為神明存在",
+        "page": 2
+      },
+      {
+        "index": 21,
+        "original": "だって これじゃ人間だ",
+        "translation": "因為這樣終究是凡人",
+        "page": 3
+      },
+      {
+        "index": 22,
+        "original": "わたしのいない世界を 上から眺めていても",
+        "translation": "縱使從高處俯瞰 我不存在的世界",
+        "page": 3
+      },
+      {
+        "index": 23,
+        "original": "何一つ 変わらず回るから",
+        "translation": "世事依舊不變 持續運轉",
+        "page": 3
+      },
+      {
+        "index": 24,
+        "original": "少し背中が軽くなった",
+        "translation": "背上的重擔減輕了一些",
+        "page": 3
+      },
+      {
+        "index": 25,
+        "original": "それじゃ それじゃ またね",
+        "translation": "再見 那麼就此道別",
+        "page": 3
+      },
+      {
+        "index": 26,
+        "original": "国道沿い前で別れ",
+        "translation": "在國道沿路前分別",
+        "page": 3
+      },
+      {
+        "index": 27,
+        "original": "続く町の喧騒 後目に一人行く",
+        "translation": "一瞥城鎮不止息的喧鬧 獨自前行",
+        "page": 3
+      },
+      {
+        "index": 28,
+        "original": "ください ください ばっかで",
+        "translation": "盡是向別人一昧索取",
+        "page": 3
+      },
+      {
+        "index": 29,
+        "original": "何も あげられなかったね",
+        "translation": "卻什麼也給不了",
+        "page": 3
+      },
+      {
+        "index": 30,
+        "original": "生きてきた 意味なんか 分からないまま",
+        "translation": "絲毫不知道活到現在的意義為何",
+        "page": 3
+      },
+      {
+        "index": 31,
+        "original": "ああ 全て与えて帰ろう",
+        "translation": "啊 將一切給予他人後回去吧",
+        "page": 4
+      },
+      {
+        "index": 32,
+        "original": "ああ 何も持たずに帰ろう",
+        "translation": "啊 就這樣兩手空空地回去吧",
+        "page": 4
+      },
+      {
+        "index": 33,
+        "original": "与えられるものこそ 与えられたもの",
+        "translation": "能賦予別人的正是曾經獲得的",
+        "page": 4
+      },
+      {
+        "index": 34,
+        "original": "ありがとう、って胸をはろう",
+        "translation": "要對此心懷感激且挺起胸膛",
+        "page": 4
+      },
+      {
+        "index": 35,
+        "original": "待ってるからさ、もう帰ろう",
+        "translation": "正在等著你 所以回去吧",
+        "page": 4
+      },
+      {
+        "index": 36,
+        "original": "幸せ絶えぬ場所、帰ろう",
+        "translation": "回到幸福永不消失的地方",
+        "page": 4
+      },
+      {
+        "index": 37,
+        "original": "去り際の時に 何が持っていけるの",
+        "translation": "離開之際 又能帶走何物",
+        "page": 4
+      },
+      {
+        "index": 38,
+        "original": "一つ一つ 荷物 手放そう",
+        "translation": "放下一個又一個包袱",
+        "page": 4
+      },
+      {
+        "index": 39,
+        "original": "憎み合いの果てに何が生まれるの",
+        "translation": "互相怨恨 最後又能帶來什麼",
+        "page": 4
+      },
+      {
+        "index": 40,
+        "original": "わたし、わたしが先に 忘れよう",
+        "translation": "就讓我、讓我先忘卻這些事",
+        "page": 4
+      },
+      {
+        "index": 41,
+        "original": "あぁ今日からどう生きてこう",
+        "translation": "啊 從今天起該如何活下去",
+        "page": 4
+      }
+    ]
   }
 ]

@@ -2,7 +2,7 @@
 export const SITE = Object.freeze({
   name: "藤井風高雄演唱會指南",
   title: "Fujii Kaze Prema World Tour — 高雄演唱會指南",
-  description: "藤井風 10/31 高雄演唱會非官方指南：演出資訊、交通與 19 首歌曲預習。",
+  description: "藤井風 10/31 高雄演唱會非官方指南：演出資訊、交通與 23 首歌曲預習。",
   url: "https://kaze.tiaui.co/",
   repoUrl: "https://github.com/watain666/Vaundy-Taiwan-2026",
   officialUrl: "https://fujiikaze.com/",

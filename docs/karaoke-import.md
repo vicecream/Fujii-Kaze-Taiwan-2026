@@ -2,7 +2,7 @@
 
 沿用 [原專案 karaoke-sources.js](https://github.com/watain666/Vaundy-Taiwan-2026/blob/main/karaoke-sources.js) 的資料轉換與來源架構：原文由本地維護，外部時間依序由聚合服務、AMLL、LRCLIB 補充。搜尋到來源候選不代表已完成全文匯入或目前 YouTube 影片的時間核對。
 
-## 搜尋這 19 首的來源
+## 搜尋這 23 首的來源
 
 ```bash
 node scripts/find-karaoke-sources.mjs
@@ -52,11 +52,23 @@ AMLL 的 19 首搜尋均未取得相符候選。LRCLIB 第一輪有 10 首找到
 | 旅路 | 有同步候選 |
 | 満ちてゆく | 有同步候選 |
 
-使用者已直接提供這 19 首 LRC；目前已匯入 936 行原文，依使用者要求先啟用逐行時間試播，保留原檔時間供校正。另提供的 15 份 PDF 已加入 672 列中文，詳見 [中文匯入紀錄](translation-import.md)。尚未核對影片同步，日文讀音及未提供的中文維持待整理。
+使用者已直接提供這 19 首 LRC；目前已匯入 936 行原文，依使用者要求先啟用逐行時間試播，保留原檔時間供校正。中文包含 15 份 PDF 的 672 列，以及〈Casket Girl〉全曲 55 列、〈Forever Young〉節錄 16 列，共 743 列，詳見 [中文匯入紀錄](translation-import.md)。尚未核對影片同步，未提供的中文維持待整理。
 
-逐首 LRCLIB 候選、使用者指定的四筆 ID 與 marumaru 參考連結，另整理於 [19 首 LRC 來源清單](lyric-sources.md)。
+逐首 LRCLIB 候選、使用者指定的四筆 ID 與 marumaru 參考連結，另整理於 [23 首 LRC 與中文來源清單](lyric-sources.md)。
+
+### 2026-10-30 新增四首搜尋結果
+
+〈真っ白〉、〈もうええわ〉、〈帰ろう〉與〈It's Alright〉皆找到 LRCLIB 同步候選及 marumaru 中文對照頁；AMLL 未取得候選。既有 19 首來源紀錄保留，只在 JSON 報告追加四首。此次只整理來源中繼資料，沒有下載歌詞或譯文全文，未建立新 LRC，也未核對目前影片同步。各首仍維持原文、翻譯、讀音與同步待整理。
 
 ## 匯入自行提供的本機檔案
+
+### 10/30 新增四首的本機檔案
+
+`lyrics/additional-import-manifest.json` 對應使用者提供的四首原文。`It's Alright.lrc`、`もうええわ.lrc`、`帰ろう.lrc` 共 141 行，採逐行時間試播；`真っ白.lrc` 已更新為正確的 34 行原文，但沒有時間碼，明示 `format: "plain-text"` 後僅供閱讀。純文字模式不接受同步設定或 LRC 時間標記，不會自動估算時間；四首讀音仍待整理。
+
+三份 LRC 與一份純文字原文的 SHA-256 記錄於 `artifacts/lyrics-import-inputs.json`；初次誤放〈まつり〉的舊雜湊保存在 `previousInputs`，不代表目前檔案。四首重新預覽可執行 `node scripts/import-song-lyrics.mjs lyrics/additional-import-manifest.json`；所有字幕與中文來源映射見 [中文匯入紀錄](translation-import.md)。
+
+### 原有 19 首的本機匯入設定
 
 本次 `lyrics/import-manifest.json` 已設定 `timingMode: "preview"`，原始時間保存在 `sourceTime`／`sourceEnd`，播放起點先沿用來源時間。歌曲頁顯示時間與待校正狀態，可點句跳轉、逐行跟隨；逐字高亮維持關閉，也不連線套用其他提供者時間。`allowPendingReadings: true` 表示先處理原文與時間線，日文讀音未備妥時停用讀音控制，不填入推測讀法。〈死ぬのがいいわ〉另以 `pairedRomaji: true` 將同時間羅馬字列保存在 `providedRomaji`，避免重複顯示。
 

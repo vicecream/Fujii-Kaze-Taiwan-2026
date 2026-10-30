@@ -4,7 +4,7 @@
 
 A compact Traditional Chinese concert guide for Fujii Kaze's Prema World Tour in Kaohsiung on October 31, 2026. Official Kaohsiung poster photography carries the mood. The experience prioritizes finding event information and preparing with released music on a phone, including in a dark venue.
 
-The primary home action is the 19-song preparation list. It is album material, not a prediction of the show's songs or their order. This opening-show guide has no spoiler gate, shuffled setlist, or concert-order confirmation.
+The primary home action is the 23-song preparation list. It is album material, not a prediction of the show's songs or their order. This opening-show guide has no spoiler gate, shuffled setlist, or concert-order confirmation.
 
 ## 2. Color and typography
 

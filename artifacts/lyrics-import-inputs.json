@@ -115,6 +115,44 @@
       "file": "MichiTeyuKu.lrc",
       "bytes": 1598,
       "sha256": "43c668862c4526f355964360562a960d48bfe957825abfa002b0a26efb1fbec7"
+    },
+    {
+      "id": "ItsAlright",
+      "file": "It's Alright.lrc",
+      "bytes": 1804,
+      "sha256": "0de5bc640fe75976442a05f20b8f6b5c72dfb2d8b18369acd7437d7d412b5e5b"
+    },
+    {
+      "id": "MoEhWa",
+      "file": "もうええわ.lrc",
+      "bytes": 2247,
+      "sha256": "9688b2e8b25c1f1ec517e397170a7e1b54ea738030f73ba981c583220cdeebe6"
+    },
+    {
+      "id": "Kaerou",
+      "file": "帰ろう.lrc",
+      "bytes": 2305,
+      "sha256": "61bda248a16ed1bfb405654227542dd625c25b21b79a1b831d738bcda80a0e7a"
+    }
+  ],
+  "previousInputs": [
+    {
+      "id": "Masshiro",
+      "file": "真っ白.lrc",
+      "reason": "Historical input contained Matsuri and was not imported. The user replaced it with correct Masshiro plain text without timestamps.",
+      "sha256": "f8aca5e8a3458013a4277d629b1212c1fccf61a963506149129a83701643d79b",
+      "detectedSong": "Matsuri",
+      "status": "replaced-by-user"
+    }
+  ],
+  "untimedFiles": [
+    {
+      "id": "Masshiro",
+      "file": "真っ白.lrc",
+      "bytes": 1263,
+      "sha256": "cd42025f20f927eee575e063daf99d6b55538ce11ac0cea422f5d32c00bf3c99",
+      "format": "plain-text",
+      "timing": "pending"
     }
   ]
 }

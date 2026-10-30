@@ -780,7 +780,7 @@ function renderGuide(){
   app.innerHTML = `<div class="guide-page">
     <div class="song-topbar"><button class="back-btn" id="back-btn" aria-label="返回首頁">${BACK_SVG}</button>${themeToggleHtml()}</div>
     <section class="songs-section">
-      <div class="songs-head"><h1>歌曲預習</h1><p>19 首 · Prema ＋ 代表曲精選</p>
+      <div class="songs-head"><h1>歌曲預習</h1><p>${SONGS.length} 首 · Prema ＋ 代表曲精選</p>
         <p class="prep-disclaimer">依專輯分組，並非高雄場演出曲目或順序。<br>歌詞、翻譯與同步時間將分批補齊。</p></div>
       <div class="song-search"><label class="search-label" for="song-search-input">搜尋歌曲</label><div class="song-search-box">
         <input id="song-search-input" type="search" autocomplete="off" placeholder="搜尋歌名・羅馬字・編號">
@@ -788,7 +788,7 @@ function renderGuide(){
       <div class="song-sorts" role="group" aria-label="歌曲清單排序"><button class="song-sort" type="button" data-sort="default">依專輯</button><button class="song-sort" type="button" data-sort="title" id="sort-title">名稱</button></div>
       <div class="song-search-meta"><span id="song-count">共 ${SONGS.length} 首</span></div>
       <p class="song-empty" id="song-empty" hidden>找不到歌曲，請輸入部分歌名或編號。</p><ul class="song-list" id="song-list"></ul>
-      <p class="catalog-sources">曲目來源：<a href="${ALBUMS.prema.url}" target="_blank" rel="noopener">Prema</a> · <a href="${ALBUMS.best.url}" target="_blank" rel="noopener">Best of Fujii Kaze 2020–2024</a><br>查核：${EVENT.checkedAt}</p>
+      <p class="catalog-sources">曲目來源：${Object.values(ALBUMS).map(album => `<a href="${album.url}" target="_blank" rel="noopener">${album.title}</a>`).join(" · ")}<br>原曲目查核：${EVENT.checkedAt} · 新增曲目查核：${ALBUMS.prePrema.checkedAt}</p>
     </section>${siteFooterHtml(BUILD)}</div>`;
   document.getElementById("back-btn").addEventListener("click", ()=>{ location.hash = "#/"; });
   app.querySelectorAll(".song-sort").forEach(button => button.addEventListener("click", ()=>{
@@ -808,7 +808,7 @@ function renderSetlist(){
   app.innerHTML = `<div class="guide-page"><div class="song-topbar"><button class="back-btn" id="pending-back" aria-label="返回首頁">${BACK_SVG}</button>${themeToggleHtml()}</div>
     <section class="songs-section pending-page"><h1>高雄場歌單待確認</h1>
     <p>本場為 Prema World Tour 首站，尚無已核實的本場演出歌單。</p><p>預習清單來自已發行專輯，不代表演出曲目或順序。</p>
-    <a class="info-book-link" href="#/guide">前往 19 首歌曲預習 →</a>
+    <a class="info-book-link" href="#/guide">前往 ${SONGS.length} 首歌曲預習 →</a>
     <p class="catalog-sources"><a href="${EVENT.ticketUrl}" target="_blank" rel="noopener">官方活動資訊 ↗</a> · 查核：${EVENT.checkedAt}</p>
     </section>${siteFooterHtml(BUILD)}</div>`;
   document.getElementById("pending-back").addEventListener("click", ()=>{ location.hash = "#/"; });
@@ -949,11 +949,11 @@ function paintSongList({ eager = false } = {}){
   const renderChunk = ({ filter = true, includeMarks = true } = {}) => {
     if (renderToken !== songListRenderToken || !ul.isConnected) return;
     const end = Math.min(nextIndex + 4, songs.length);
-    const markup = songs.slice(nextIndex, end).map(s=>`
+    const markup = songs.slice(nextIndex, end).map((s, index)=>`
       <li data-no="${songNo(s)}">
         <button class="song-row" data-id="${escapeHtml(s.id)}">
           <span class="song-num">${pad(songNo(s))}</span>
-          <span class="song-title">${songSort === "default" && (songNo(s) === 1 || songNo(s) === 10) ? `<span class="song-album-label">${ALBUMS[s.album].title}</span>` : ""}${renderSongTitle(s.title)}</span>
+          <span class="song-title">${songSort === "default" && songs[nextIndex + index - 1]?.album !== s.album ? `<span class="song-album-label">${ALBUMS[s.album].title}</span>` : ""}${renderSongTitle(s.title)}</span>
           ${includeMarks ? songMarksHtml(s) : '<span class="song-marks song-marks-placeholder" aria-hidden="true"></span>'}
         </button>
       </li>`).join("");
@@ -1291,9 +1291,9 @@ function buildSongShell(){
           </div>
 
           <div class="lyrics-scroll">
-            <div class="song-content-status" id="song-content-status" role="status"></div>
             <p class="lyrics-hidden-message" role="status" aria-live="polite" hidden>歌詞已隱藏</p>
             <ul class="lyrics-list" id="lyrics-list"></ul>
+            <div class="song-content-status" id="song-content-status" role="status"></div>
           </div>
         </div>
       </div>

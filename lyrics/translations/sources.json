@@ -209,6 +209,62 @@
       "sha256": "de9b079715e18b9a9739f332b065b34206cb4184bc61f40a60b8c8ae68628f74",
       "translationCreditRole": "source",
       "translatedLines": 34
+    },
+    {
+      "id": "ItsAlright",
+      "title": "It's Alright",
+      "file": "ItsAlright.zh.txt",
+      "referenceUrl": "https://www.marumaru-x.com/japanese-song/play-y7okw6yvoq",
+      "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+      "translationCreditRole": "source",
+      "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-y7okw6yvoq",
+      "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-y7okw6yvoq",
+      "pdf": "(歌詞)It's+Alright.pdf",
+      "sha256": "04bae1bbb7702428fd71e2d91c053af21d359f2f8641d5e0792fc3fc2903860b",
+      "status": "partial",
+      "translatedLines": 38
+    },
+    {
+      "id": "Masshiro",
+      "title": "真っ白",
+      "file": "Masshiro.zh.txt",
+      "referenceUrl": "https://www.marumaru-x.com/japanese-song/play-lkrz5qk6re",
+      "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+      "translationCreditRole": "source",
+      "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-lkrz5qk6re",
+      "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-lkrz5qk6re",
+      "pdf": "(歌詞)真っ白.pdf",
+      "sha256": "7d46bc5a28775e2a7542617b95bf93938c84272a1f43836599aa59fc3f447a26",
+      "status": "partial",
+      "translatedLines": 28
+    },
+    {
+      "id": "MoEhWa",
+      "title": "もうええわ (Mo-Eh-Wa)",
+      "file": "MoEhWa.zh.txt",
+      "referenceUrl": "https://www.marumaru-x.com/japanese-song/play-g9r059j0nv",
+      "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+      "translationCreditRole": "source",
+      "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-g9r059j0nv",
+      "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-g9r059j0nv",
+      "pdf": "(歌詞)もうええわ.pdf",
+      "sha256": "a7a7a475743c9983bee278063a5908c947111feb0fc2e23c82bfd31143dac817",
+      "status": "ready",
+      "translatedLines": 51
+    },
+    {
+      "id": "Kaerou",
+      "title": "帰ろう (Kaerou)",
+      "file": "Kaerou.zh.txt",
+      "referenceUrl": "https://www.marumaru-x.com/japanese-song/play-evr849dxnm",
+      "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
+      "translationCreditRole": "source",
+      "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-evr849dxnm",
+      "translationSourceUrl": "https://www.marumaru-x.com/japanese-song/play-evr849dxnm",
+      "pdf": "(歌詞)帰ろう.pdf",
+      "sha256": "fbbf45572c1572db73b52bc2296f1e4191ab9ea3a674dd559c740b93b191ac0a",
+      "status": "ready",
+      "translatedLines": 47
     }
   ]
 }

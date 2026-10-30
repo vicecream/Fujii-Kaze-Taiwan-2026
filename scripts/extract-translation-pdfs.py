@@ -22,7 +22,7 @@ def normalise_title(text):
 def normalise_glyphs(text):
     # Repair compatibility radicals from PDF fonts, preserving punctuation.
     text = "".join(unicodedata.normalize("NFKC", char) if "\u2f00" <= char <= "\u2fdf" else char for char in text)
-    for radical, character in {"⻑": "長", "⻘": "青", "⻄": "西", "⻭": "歯"}.items():
+    for radical, character in {"⻑": "長", "⻘": "青", "⻄": "西", "⻭": "歯", "⺟": "母"}.items():
         text = text.replace(radical, character)
     return text.strip()
 

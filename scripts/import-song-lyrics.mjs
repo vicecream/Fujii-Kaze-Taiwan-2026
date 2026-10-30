@@ -22,9 +22,14 @@ export function prepareSong(entry, text, song) {
   requireValue(typeof entry.sourceUrl === "string" && /^https?:\/\//.test(entry.sourceUrl), `${entry.id}: sourceUrl is required`);
   requireValue(typeof entry.usageBasis === "string" && entry.usageBasis.trim(), `${entry.id}: usageBasis is required`);
   requireValue(!/^\s*\[offset:\s*(?!0\s*\])[^\]]+\]/im.test(text), `${entry.id}: normalize the LRC offset before import`);
+  const plainText = entry.format === "plain-text";
   let timed;
   let boundaries = [];
-  if (entry.file.endsWith(".lrc")) {
+  if (plainText) {
+    requireValue(!entry.alignment && entry.timingMode !== "preview", `${entry.id}: plain text has no synchronization timestamps`);
+    requireValue(!/^\s*\[\d+:/m.test(text), `${entry.id}: plain text must not contain LRC timestamps`);
+    timed = { lines: text.split(/\r?\n/).map(line => line.trim()).filter(Boolean).map(text => ({ text })) };
+  } else if (entry.file.endsWith(".lrc")) {
     // The local display model stores line anchors; inline word stamps stay in the provider adapter.
     timed = karaoke.parseLrclibSyncedLyrics(text.replace(/<\d+:\d+(?:[.:]\d+)?>/g, ""));
     boundaries = [...text.matchAll(/^\s*\[(\d+):(\d{1,2}(?:\.\d+)?)\]/gm)]
@@ -55,9 +60,10 @@ export function prepareSong(entry, text, song) {
     requireValue(/^\d{4}-\d{2}-\d{2}$/.test(alignment.checkedAt || ""), `${entry.id}: alignment.checkedAt is required`);
   }
   const lyrics = timed.lines.map(line => {
-    requireValue(Number.isFinite(line.start) && line.start >= 0, `${entry.id}: invalid line timestamp`);
     const jp = line.text || line.words.map(word => word.text).join("");
     requireValue(jp.trim() && !/[<>]/.test(jp), `${entry.id}: lyric text must be plain text`);
+    if (plainText) return { jp };
+    requireValue(Number.isFinite(line.start) && line.start >= 0, `${entry.id}: invalid line timestamp`);
     const nextRawBoundary = boundaries.find(value => value > line.start);
     const nextBoundary = nextRawBoundary === undefined ? undefined : Math.round(nextRawBoundary * 1000) / 1000;
     const sourceTime = Math.round(line.start * 1000) / 1000;
@@ -81,7 +87,7 @@ export function prepareSong(entry, text, song) {
     timingStatus: preview ? "preview" : alignment ? "ready" : "pending",
     lyricsSourceUrl: entry.sourceUrl,
     lyricsUsageBasis: entry.usageBasis,
-    timingSourceUrl: entry.sourceUrl,
+    ...(!plainText ? { timingSourceUrl: entry.sourceUrl } : {}),
     ...(alignment ? { timingAlignment: alignment } : {}),
     ...(preview ? { timingPreview: { youtubeId: song.youtubeId, offsetSeconds: 0, source: "user-provided LRC" } } : {}),
   };

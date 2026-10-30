@@ -1,6 +1,6 @@
 {
   "checkedAt": "2026-10-30",
-  "note": "Source metadata only; article translations have not been supplied for import.",
+  "note": "Source metadata and links only; translations have not been supplied for import. A page's declared translation source is recorded as attribution, not independent verification of authorship.",
   "songs": [
     {
       "id": "You",
@@ -23,6 +23,54 @@
       "updatedAt": "2025-09-19",
       "file": "OkayGoodbye.zh.txt",
       "status": "awaiting-provided-text"
+    },
+    {
+      "id": "Masshiro",
+      "title": "真っ白 - 藤井風",
+      "sourceUrl": "https://www.marumaru-x.com/japanese-song/play-lkrz5qk6re",
+      "provider": "marumaru",
+      "declaredTranslationSourceUrl": "https://www.youtube.com/watch?v=XwgL4C2WaU8",
+      "checkedAt": "2026-10-30",
+      "status": "provided-pdf",
+      "file": "Masshiro.zh.txt",
+      "pdf": "(歌詞)真っ白.pdf",
+      "providedAt": "2026-10-30"
+    },
+    {
+      "id": "MoEhWa",
+      "title": "もうええわ - 藤井風",
+      "sourceUrl": "https://www.marumaru-x.com/japanese-song/play-g9r059j0nv",
+      "provider": "marumaru",
+      "declaredTranslationSourceUrl": "https://www.youtube.com/watch?v=y4FYCJRjHBg",
+      "checkedAt": "2026-10-30",
+      "status": "provided-pdf",
+      "file": "MoEhWa.zh.txt",
+      "pdf": "(歌詞)もうええわ.pdf",
+      "providedAt": "2026-10-30"
+    },
+    {
+      "id": "Kaerou",
+      "title": "帰ろう - 藤井風",
+      "sourceUrl": "https://www.marumaru-x.com/japanese-song/play-evr849dxnm",
+      "provider": "marumaru",
+      "declaredTranslationSourceUrl": "https://www.youtube.com/watch?v=goU1Ei8I8uk",
+      "checkedAt": "2026-10-30",
+      "status": "provided-pdf",
+      "file": "Kaerou.zh.txt",
+      "pdf": "(歌詞)帰ろう.pdf",
+      "providedAt": "2026-10-30"
+    },
+    {
+      "id": "ItsAlright",
+      "title": "It's Alright - 藤井風",
+      "sourceUrl": "https://www.marumaru-x.com/japanese-song/play-y7okw6yvoq",
+      "provider": "marumaru",
+      "declaredTranslationSourceUrl": "https://www.youtube.com/watch?v=HA3WzXw8vM8",
+      "checkedAt": "2026-10-30",
+      "status": "provided-pdf",
+      "file": "ItsAlright.zh.txt",
+      "pdf": "(歌詞)It's+Alright.pdf",
+      "providedAt": "2026-10-30"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-29T08:40:20.287Z",
+  "checkedAt": "2026-10-30T10:35:57.290Z",
   "architecture": "https://github.com/watain666/Vaundy-Taiwan-2026/blob/main/karaoke-sources.js",
   "note": "Source candidates only. No lyric text is saved. Video alignment and permission to use text remain unverified.",
   "songs": [
@@ -1751,6 +1751,240 @@
             }
           ],
           "checkedAt": "2026-10-29T08:40:39.429Z"
+        }
+      }
+    },
+    {
+      "id": "ItsAlright",
+      "title": "It's Alright",
+      "youtubeId": "HA3WzXw8vM8",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-30T10:35:58.730Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34222603,
+              "title": "It's Alright",
+              "artist": "Fujii Kaze",
+              "album": "觀看次數：392萬次",
+              "duration": 200,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34222603"
+            },
+            {
+              "id": 33079783,
+              "title": "It's Alright",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 203,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33079783"
+            },
+            {
+              "id": 33152486,
+              "title": "It's Alright",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 202,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33152486"
+            },
+            {
+              "id": 38050371,
+              "title": "It's Alright",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 200,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38050371"
+            }
+          ],
+          "checkedAt": "2026-10-30T10:35:58.730Z"
+        }
+      }
+    },
+    {
+      "id": "Masshiro",
+      "title": "真っ白 (masshiro / pure white)",
+      "youtubeId": "XwgL4C2WaU8",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-30T10:36:01.341Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 35278852,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro (pure white) - Single",
+              "duration": 294,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/35278852"
+            },
+            {
+              "id": 33446025,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro (EP)",
+              "duration": 294,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33446025"
+            },
+            {
+              "id": 18033226,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro",
+              "duration": 297,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/18033226"
+            },
+            {
+              "id": 19485876,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro (EP)",
+              "duration": 262.9875,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/19485876"
+            },
+            {
+              "id": 17643422,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro (pure white)",
+              "duration": 294,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/17643422"
+            },
+            {
+              "id": 22483726,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro (EP)",
+              "duration": 296.7875,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/22483726"
+            },
+            {
+              "id": 26320540,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro (EP)",
+              "duration": 272,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/26320540"
+            },
+            {
+              "id": 29421327,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "Prema",
+              "duration": 296,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/29421327"
+            },
+            {
+              "id": 33140164,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "masshiro",
+              "duration": 294,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33140164"
+            },
+            {
+              "id": 33296576,
+              "title": "masshiro (pure white)",
+              "artist": "Fujii Kaze",
+              "album": "Pre: Prema",
+              "duration": 296,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33296576"
+            }
+          ],
+          "checkedAt": "2026-10-30T10:36:01.341Z"
+        }
+      }
+    },
+    {
+      "id": "MoEhWa",
+      "title": "もうええわ (Mo-Eh-Wa)",
+      "youtubeId": "y4FYCJRjHBg",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-30T10:36:02.442Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34311520,
+              "title": "もうええわ",
+              "artist": "Fujii Kaze",
+              "album": "もうええわ",
+              "duration": 301,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34311520"
+            },
+            {
+              "id": 8346844,
+              "title": "もうええわ",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 302,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8346844"
+            }
+          ],
+          "checkedAt": "2026-10-30T10:36:02.442Z"
+        }
+      }
+    },
+    {
+      "id": "Kaerou",
+      "title": "帰ろう (Kaerou)",
+      "youtubeId": "goU1Ei8I8uk",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": [],
+          "checkedAt": "2026-10-30T10:36:03.619Z"
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 34395360,
+              "title": "帰ろう",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 311,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34395360"
+            },
+            {
+              "id": 8346849,
+              "title": "帰ろう",
+              "artist": "Fujii Kaze",
+              "album": "HELP EVER HURT NEVER",
+              "duration": 284,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8346849"
+            }
+          ],
+          "checkedAt": "2026-10-30T10:36:03.619Z"
         }
       }
     }

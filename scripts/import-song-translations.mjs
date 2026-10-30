@@ -14,7 +14,8 @@ export function applyTranslationAlignment(song, alignment, evidence) {
   requireValue(alignment.sha256 === evidence.sha256, `${song.id}: translation evidence changed`);
   const lyrics = song.lyrics.map((line, index) => {
     const row = alignment.lines[index];
-    requireValue(row.index === index && row.jp === line.jp && row.time === line.time, `${song.id}#${index}: original text or timeline changed`);
+    const originalTime = song.timingStatus === "preview" ? line.sourceTime : line.time;
+    requireValue(row.index === index && row.jp === line.jp && row.time === originalTime, `${song.id}#${index}: original text or timeline changed`);
     if (!row.tr) return { ...line };
     requireValue(typeof row.tr === "string" && !/[<>]/.test(row.tr), `${song.id}#${index}: translation must be plain text`);
     requireValue(Array.isArray(row.sourcePairs) && row.sourcePairs.length, `${song.id}#${index}: missing PDF evidence`);
@@ -39,17 +40,20 @@ export function applyUserProvidedTranslation(song, entry, text) {
     requireValue(Number.isInteger(row.index) && !seen.has(row.index), `${entry.id}: invalid or duplicate row index`);
     seen.add(row.index);
     const line = lyrics[row.index];
-    requireValue(line && row.jp === line.jp && row.time === line.time, `${entry.id}#${row.index}: original text or timeline changed`);
+    const originalTime = song.timingStatus === "preview" ? line?.sourceTime : line?.time;
+    requireValue(line && row.jp === line.jp && row.time === originalTime, `${entry.id}#${row.index}: original text or timeline changed`);
     requireValue(typeof row.tr === "string" && row.tr.trim() && !/[<>]/.test(row.tr), `${entry.id}#${row.index}: translation must be plain text`);
     requireValue(row.tr.split("／").every(fragment => normalise(text).includes(normalise(fragment))), `${entry.id}#${row.index}: translation differs from the supplied excerpt`);
     Object.assign(line, { tr: row.tr, translationUserRef: sourceIndex, translationMapping: "user-provided-excerpt" });
   }
+  requireValue(!entry.complete || seen.size === song.lyrics.length, `${entry.id}: a complete translation must cover every subtitle row`);
   const updated = {
     ...song, lyrics,
     translationStatus: lyrics.every(line => line.tr?.trim()) ? "ready" : "partial",
     translationCredit: entry.translationCredit, translationCreditRole: entry.translationCreditRole,
-    translationProvenance: { method: "user-provided chat excerpt", file: entry.file, providedAt: entry.providedAt, scope: entry.scope,
+    translationProvenance: { method: "user-provided chat text", file: entry.file, providedAt: entry.providedAt, scope: entry.scope, complete: entry.complete === true,
       sha256: crypto.createHash("sha256").update(text).digest("hex") },
+    ...(entry.translationTitle ? { translationTitle: entry.translationTitle } : {}),
   };
   for (const field of ["translationCreditUrl", "translationSourceUrl"]) {
     if (entry[field]) updated[field] = entry[field];

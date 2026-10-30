@@ -93,5 +93,25 @@
     "id": "MichiTeyuKu",
     "lines": 34,
     "sha256": "950f9f63542cfb60fa7c9382b803739e7de0f9824bf34b4dfc704be5ab32e6ce"
+  },
+  {
+    "id": "ItsAlright",
+    "lines": 43,
+    "sha256": "1a7873612ce8c3da8a6809db10b92a696c0b845e75442283741eb4c5d1aaf7f4"
+  },
+  {
+    "id": "Masshiro",
+    "lines": 34,
+    "sha256": "6c5343b189ec1ebe3ddb797e0538944da786e27d0b5102b0313efebe240b01b9"
+  },
+  {
+    "id": "MoEhWa",
+    "lines": 51,
+    "sha256": "dc278f5b0e2fe6664052986e958b0f98a5487e15622da405ccfbfc5e43483d9b"
+  },
+  {
+    "id": "Kaerou",
+    "lines": 47,
+    "sha256": "6dc376e94a88699b668f37c74ae70424646a48634818becedba814bcfc121184"
   }
 ]

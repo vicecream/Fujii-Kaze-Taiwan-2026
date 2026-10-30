@@ -6,8 +6,9 @@ import fs from "node:fs";
 import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { EVENT, ONSITE } from "../src/data.js";
+import { EVENT, ONSITE, ALBUMS } from "../src/data.js";
 import { SONG_LYRICS } from "../src/song-lyrics.js";
+import { songCapabilities } from "../src/song-content.js";
 
 if (!process.argv[2]) throw new Error("Pass the installed linkedom ESM entry path; no project dependency is required.");
 const { parseHTML } = await import(pathToFileURL(path.resolve(process.argv[2])).href);
@@ -153,8 +154,8 @@ for (const [time, activeLabel] of [["11:00", "官方周邊"], ["16:00", "開放�
 main.namespace.updateTodayCard(Date.parse("2026-11-01T00:00:00+08:00"));
 assert.equal(document.getElementById("today-card").hidden, true, "The full-day road closure does not create a second show day");
 await route("#/guide");
-assert.equal(document.querySelectorAll(".song-row").length, 19);
-assert.equal(document.querySelectorAll(".song-album-label").length, 2);
+assert.equal(document.querySelectorAll(".song-row").length, 23);
+assert.deepEqual([...document.querySelectorAll(".song-album-label")].map(label => label.textContent), Object.values(ALBUMS).map(album => album.title));
 assert.equal(document.querySelectorAll("[data-chant-version-toggle]").length, 0);
 await route("#/song/CasketGirl");
 assert.equal(document.getElementById("reading-btn").hidden, true, "English hides Japanese readings");
@@ -162,10 +163,11 @@ assert.match(document.getElementById("song-content-status").textContent, /原文
 assert.match(document.getElementById("song-content-status").textContent, /LRC 時間試播・待校正/);
 assert.equal(document.getElementById("japanese-toggle").disabled, false);
 assert.equal(document.getElementById("chinese-toggle").disabled, false, "The supplied Casket Girl excerpt enables Chinese");
-assert.match(document.getElementById("song-content-status").textContent, /繁中翻譯部分整理/);
+assert.match(document.getElementById("song-content-status").textContent, /繁中翻譯已整理/);
 assert.match(document.getElementById("lyrics-credit").textContent, /使用者提供/);
 assert.equal(document.getElementById("lyrics-credit").querySelector("a"), null, "An unverified excerpt must not be linked to the official album as its source");
-assert.equal(document.querySelector('.lyric-line[data-idx="1"] .lyric-zh').textContent, "哦，醒醒吧兄弟，她要活過來了");
+assert.equal(document.querySelector('.lyric-line[data-idx="1"] .lyric-zh').textContent, "嘿，兄弟，醒醒吧，她就要甦醒了。");
+assert.equal(document.querySelector('.lyric-line[data-idx="2"] .lyric-zh').textContent, "（你最好小心點，寶貝。）");
 assert.equal(document.getElementById("karaoke-btn").disabled, false, "Timed LRC previews allow line-level karaoke");
 assert.equal(document.getElementById("autoscroll-btn").disabled, false);
 assert.equal(document.getElementById("watch-on-yt").getAttribute("href"), "https://www.youtube.com/watch?v=gFOu5r-OuQ4");
@@ -223,16 +225,35 @@ for (const song of SONG_LYRICS){
   await route(`#/song/${song.id}`);
   const japanese = song.language === "ja";
   assert.equal(document.getElementById("reading-btn").hidden, !japanese, `${song.id}: language controls reading visibility`);
+  if (!song.lyrics.length){
+    assert.equal(document.getElementById("reading-btn").disabled, true, `${song.id}: readings stay pending`);
+    assert.equal(document.getElementById("chinese-toggle").disabled, true, `${song.id}: translation stays pending`);
+    assert.equal(document.getElementById("karaoke-btn").disabled, true, `${song.id}: synchronization stays pending`);
+    assert.equal(document.getElementById("autoscroll-btn").disabled, true, `${song.id}: no timed lines`);
+    assert.equal(document.querySelectorAll(".lyric-line").length, 0, `${song.id}: do not invent lyric rows`);
+    assert.match(document.getElementById("song-content-status").textContent, /原文歌詞整理中.*繁中翻譯整理中.*同步時間整理中/);
+    assert.equal(document.getElementById("watch-on-yt").getAttribute("href"), song.listenUrl, `${song.id}: official listening is available`);
+    continue;
+  }
   if (japanese){
-    assert.equal(document.getElementById("reading-btn").disabled, false, `${song.id}: readings are ready`);
-    assert.ok(document.querySelector(".lyric-jp ruby rt"), `${song.id}: show furigana`);
+    const readings = songCapabilities(song).readings;
+    assert.equal(document.getElementById("reading-btn").disabled, !readings, `${song.id}: only prepared readings enable the control`);
+    assert.equal(Boolean(document.querySelector(".lyric-jp ruby rt")), readings, `${song.id}: only prepared readings show furigana`);
   } else {
     assert.equal(document.querySelectorAll(".lyric-jp ruby").length, 0, `${song.id}: English has no furigana`);
     assert.equal(document.getElementById("song-page").classList.contains("reading-both"), false);
     assert.deepEqual([...document.querySelectorAll(".lyric-jp")].map(line => line.textContent), song.lyrics.map(line => line.jp), `${song.id}: preserve English originals`);
   }
-  assert.equal(document.getElementById("karaoke-btn").disabled, false, `${song.id}: timed LRC previews allow line-level karaoke`);
-  assert.deepEqual([...document.querySelectorAll(".lyric-line")].map(line => Number(line.dataset.time)), song.lyrics.map(line => line.sourceTime), `${song.id}: readings preserve every timestamp`);
+  const timed = songCapabilities(song).timed;
+  assert.equal(document.getElementById("karaoke-btn").disabled, !timed, `${song.id}: only timed lyrics allow karaoke`);
+  assert.equal(document.getElementById("autoscroll-btn").disabled, !timed, `${song.id}: only timed lyrics allow automatic scrolling`);
+  if (timed){
+    assert.deepEqual([...document.querySelectorAll(".lyric-line")].map(line => Number(line.dataset.time)), song.lyrics.map(line => line.time), `${song.id}: readings preserve every video timestamp`);
+  } else {
+    assert.ok([...document.querySelectorAll(".lyric-line")].every(line => line.tagName === "DIV" && line.dataset.time === ""), `${song.id}: untimed PDF originals are readable without seek targets`);
+    assert.equal(document.querySelectorAll(".lyric-timestamp").length, 0, `${song.id}: do not display invented timestamps`);
+    assert.equal(document.getElementById("chinese-toggle").disabled, false, `${song.id}: supplied PDF translation remains available`);
+  }
 }
 main.namespace.renderSong({ ...main.namespace.currentSong, language: "en", timingStatus: "pending", lyrics: [{ jp: "Example original line" }] });
 assert.equal(document.querySelector(".lyric-line").tagName, "DIV", "Untimed text is readable and does not pretend to be a seek control");
@@ -252,4 +273,4 @@ await route("#/song/KaijuNoHanauta");
 assert.match(document.getElementById("app").textContent, /本指南已轉換/);
 await route("#/song/%E0%A4%A");
 assert.match(document.getElementById("app").textContent, /本指南已轉換/);
-console.log("PASS DOM routes and organizer notices: home cards, hours, entry routes, one-way transport, rules, live timeline, grouped guide, all 19 reading states, kana/romaji switching, LRC timestamps, pending players and legacy links.");
+console.log("PASS DOM routes and organizer notices: home cards, hours, entry routes, one-way transport, rules, live timeline, grouped guide, all 23 content states, kana/romaji switching, LRC timestamps, pending players and legacy links.");

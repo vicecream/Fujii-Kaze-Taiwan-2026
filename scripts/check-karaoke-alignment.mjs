@@ -203,8 +203,16 @@ for (const song of SONGS) {
   for (const [index, line] of (song.lyrics || []).entries()) {
     lineCount += 1;
     if (song.timingStatus === "preview") {
-      assert(Number.isFinite(line.sourceTime) && line.sourceTime >= 0 && line.time === line.sourceTime,
-        `${song.id}#${index}: preview must preserve the supplied LRC timestamp`);
+      const offset = song.timingPreview?.offsetSeconds;
+      assert(Number.isFinite(offset), `${song.id}: preview must declare a finite offset`);
+      assert(Number.isFinite(line.sourceTime) && line.sourceTime >= 0 && line.time >= 0
+        && line.time === Math.round((line.sourceTime + offset) * 1000) / 1000,
+        `${song.id}#${index}: preview start must match the supplied LRC timestamp plus its offset`);
+      if (line.sourceEnd !== undefined) {
+        assert(Number.isFinite(line.sourceEnd) && line.endTime >= line.time
+          && line.endTime === Math.round((line.sourceEnd + offset) * 1000) / 1000,
+          `${song.id}#${index}: preview end must match the supplied LRC timestamp plus its offset`);
+      }
       assert(index === 0 || line.time >= song.lyrics[index - 1].time, `${song.id}: preview timestamps must be monotonic`);
       assert(!song.timingAlignment, `${song.id}: preview must not claim verified video alignment`);
     }

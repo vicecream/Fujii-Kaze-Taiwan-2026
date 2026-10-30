@@ -1,6 +1,8 @@
 export const ALBUMS = Object.freeze({
   prema: { title: "Prema", url: "https://fujiikaze.com/music/prema/", language: "en" },
   best: { title: "Best of Fujii Kaze 2020–2024", url: "https://fujiikaze.com/music/best_of_fujii_kaze_2020-2024/", language: "ja" },
+  prePrema: { title: "Pre: Prema", url: "https://fujiikaze.com/music/pre_prema/", language: "ja", checkedAt: "2026-10-30" },
+  hehn: { title: "HELP EVER HURT NEVER", url: "https://fujiikaze.com/music/help-ever-hurt-never/", language: "ja", checkedAt: "2026-10-30" },
 });
 // Album order is for preparation, never the show order.
 // IDs checked against the official archive / artist channel on 2026-10-27.
@@ -21,9 +23,14 @@ const tracks = [
   ["Hana", "花 (Hana)", "best", "SfPkl7lol7g"],
   ["Garden", "ガーデン (Garden)", "best", "53rIic2lvKc"],
   ["Damn", "damn", "best", "yP7K2lXr6GA"],
-  ["ShinunogaEWa", "死ぬのがいいわ (Shinunoga E-Wa)", "best", "lRVJuPI5IXI"],
+  ["ShinunogaEWa", "死ぬのがいいわ (Shinunoga E-Wa)", "best", "3zh9Wb1KuW8"],
   ["Tabiji", "旅路 (Tabiji)", "best", "29p8FvT_puU"],
   ["MichiTeyuKu", "満ちてゆく (Michi Teyu Ku / Overflowing)", "best", "ptiK8U4WlSc"],
+  // Added on 2026-10-30; preserve the original 19 track numbers.
+  ["ItsAlright", "It's Alright", "prePrema", "HA3WzXw8vM8"],
+  ["Masshiro", "真っ白 (masshiro / pure white)", "prePrema", "XwgL4C2WaU8"],
+  ["MoEhWa", "もうええわ (Mo-Eh-Wa)", "hehn", "y4FYCJRjHBg"],
+  ["Kaerou", "帰ろう (Kaerou)", "hehn", "goU1Ei8I8uk"],
 ];
 // Provider spellings are separate from the titles shown in the guide.
 const KARAOKE_TITLES = {
@@ -39,6 +46,10 @@ const KARAOKE_TITLES = {
   ShinunogaEWa: ["死ぬのがいいわ", "Shinunoga E-Wa"],
   Tabiji: ["旅路", "Tabiji"],
   MichiTeyuKu: ["満ちてゆく", "Michi Teyu Ku (Overflowing)", "Michi Teyu Ku", "Overflowing"],
+  ItsAlright: ["It's Alright", "It’s Alright"],
+  Masshiro: ["真っ白", "masshiro (pure white)", "masshiro", "pure white"],
+  MoEhWa: ["もうええわ", "Mo-Eh-Wa", "Mo Eh Wa"],
+  Kaerou: ["帰ろう", "Kaerou"],
 };
 export const SONGS = tracks.map(([id, title, album, youtubeId]) => ({
   id, title, album, youtubeId, artist: "Fujii Kaze",
@@ -49,4 +60,5 @@ export const SONGS = tracks.map(([id, title, album, youtubeId]) => ({
   videoSourceUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
   listenUrl: `https://www.youtube.com/watch?v=${youtubeId}`,
   lyricsStatus: "pending", translationStatus: "pending", timingStatus: "pending",
+  ...(ALBUMS[album].language === "ja" ? { readingsStatus: "pending" } : {}),
 }));

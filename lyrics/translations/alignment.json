@@ -7090,6 +7090,1729 @@
           "method": "repeated-pdf-refrain"
         }
       ]
+    },
+    {
+      "id": "ItsAlright",
+      "pdf": "(歌詞)It's+Alright.pdf",
+      "sha256": "04bae1bbb7702428fd71e2d91c053af21d359f2f8641d5e0792fc3fc2903860b",
+      "lines": [
+        {
+          "index": 0,
+          "jp": "Ay, ay, ay, ay, ay",
+          "time": 6.4,
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 1,
+          "jp": "母なる大地は私の愛し子",
+          "time": 8.99,
+          "tr": "大地之母是我的愛子",
+          "sourcePairs": [
+            0
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 2,
+          "jp": "父なる太陽は私のまなこ",
+          "time": 15.72,
+          "tr": "太陽之父是我的雙眼",
+          "sourcePairs": [
+            1
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 3,
+          "jp": "この世は私の思わく通りに",
+          "time": 22.38,
+          "tr": "這世界如我所願",
+          "sourcePairs": [
+            2
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 4,
+          "jp": "今日とて可愛く回っています",
+          "time": 29.05,
+          "tr": "不停可愛地運轉",
+          "sourcePairs": [
+            3
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 5,
+          "jp": "Come, cry your heart, cry your heart out",
+          "time": 35.72,
+          "tr": "來吧，大哭一場，哭個痛快",
+          "sourcePairs": [
+            4
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 6,
+          "jp": "Here in my arms, in my arms like",
+          "time": 38.91,
+          "tr": "在我懷裡，在我懷裡就像",
+          "sourcePairs": [
+            5
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 7,
+          "jp": "Ah, ah, ah, ah",
+          "time": 42.22,
+          "tr": "啊…",
+          "sourcePairs": [
+            6
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 8,
+          "jp": "Ah, ah, ah, ah",
+          "time": 45.69,
+          "tr": "啊…",
+          "sourcePairs": [
+            6
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 9,
+          "jp": "God is inside, is inside us",
+          "time": 49.07,
+          "tr": "神在心中，在我們心中",
+          "sourcePairs": [
+            7
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 10,
+          "jp": "This is our time, is our time, thus",
+          "time": 52.45,
+          "tr": "這是我們的時代，我們的時代，所以",
+          "sourcePairs": [
+            8
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 11,
+          "jp": "Sooner or later we better know that",
+          "time": 55.54,
+          "tr": "我們遲早都要明白",
+          "sourcePairs": [
+            9
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 12,
+          "jp": "Everything is gonna be alright",
+          "time": 59.01,
+          "tr": "一切都會好起來",
+          "sourcePairs": [
+            10
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 13,
+          "jp": "It's alright, it's alright",
+          "time": 62.75,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            11
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 14,
+          "jp": "It's alright",
+          "time": 66,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            11
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 15,
+          "jp": "It's alright, it's alright",
+          "time": 74.48,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            11
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 16,
+          "jp": "It's alright, it's alright (ay, ay)",
+          "time": 77.86,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            11
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 17,
+          "jp": "It's al-",
+          "time": 87.78,
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 18,
+          "jp": "Ay, ay, ay, ay",
+          "time": 89.04,
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 19,
+          "jp": "Give it up, give it up, give it up, give it up",
+          "time": 92.38,
+          "tr": "放手吧，",
+          "sourcePairs": [
+            13
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 20,
+          "jp": "Kama, kama, kama, kama, kama",
+          "time": 95.62,
+          "tr": "業力",
+          "sourcePairs": [
+            13
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 21,
+          "jp": "Bring it on, bring it on, Prema, Prema, Prema",
+          "time": 99.15,
+          "tr": "來吧，純愛",
+          "sourcePairs": [
+            14
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 22,
+          "jp": "母なる大地は私の愛し子",
+          "time": 102.46,
+          "tr": "大地之母是我的愛子",
+          "sourcePairs": [
+            15
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 23,
+          "jp": "父なる太陽は私のまなこ（私のまなこ）",
+          "time": 109.01,
+          "tr": "太陽之父是我的雙眼",
+          "sourcePairs": [
+            16
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 24,
+          "jp": "この世は私の思わく通りに",
+          "time": 115.75,
+          "tr": "這世界如我所願",
+          "sourcePairs": [
+            17
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 25,
+          "jp": "今日とて可愛く回っています（回っています）",
+          "time": 122.35,
+          "tr": "不停可愛地運轉",
+          "sourcePairs": [
+            18
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 26,
+          "jp": "Come, cry your heart, cry your heart out",
+          "time": 128.94,
+          "tr": "來吧，大哭一場，哭個痛快",
+          "sourcePairs": [
+            19
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 27,
+          "jp": "Here in my arms, in my arms like",
+          "time": 132.38,
+          "tr": "在我懷裡，在我懷裡就像",
+          "sourcePairs": [
+            20
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 28,
+          "jp": "Ah, ah, ah, ah",
+          "time": 135.75,
+          "tr": "啊…",
+          "sourcePairs": [
+            21
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 29,
+          "jp": "Ah, ah, ah, ah",
+          "time": 139.09,
+          "tr": "啊…",
+          "sourcePairs": [
+            21
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 30,
+          "jp": "God is inside, is inside us",
+          "time": 142.32,
+          "tr": "神在心中，在我們心中",
+          "sourcePairs": [
+            22
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 31,
+          "jp": "This is our time, is our time, thus",
+          "time": 145.65,
+          "tr": "這是我們的時代，我們的時代，所以",
+          "sourcePairs": [
+            23
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 32,
+          "jp": "Sooner or later, we better know that",
+          "time": 149.08,
+          "tr": "我們遲早都要明白",
+          "sourcePairs": [
+            24
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 33,
+          "jp": "Everything is gonna be alright",
+          "time": 152.45,
+          "tr": "一切都會好起來",
+          "sourcePairs": [
+            25
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 34,
+          "jp": "It's alright, it's alright",
+          "time": 156.13,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            26
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 35,
+          "jp": "It's alright",
+          "time": 159.44,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            26
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 36,
+          "jp": "It's alright, it's alright",
+          "time": 167.88,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            26
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 37,
+          "jp": "It's alright, it's alright, right",
+          "time": 171.15,
+          "tr": "一切都好…",
+          "sourcePairs": [
+            26
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 38,
+          "jp": "It's al-",
+          "time": 181.15,
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 39,
+          "jp": "Ay, ay, ay, ay",
+          "time": 182.37,
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 40,
+          "jp": "Give it up, give it up, give it up, give it up",
+          "time": 185.62,
+          "tr": "放手吧，",
+          "sourcePairs": [
+            28
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 41,
+          "jp": "Kama, kama, kama, kama, kama",
+          "time": 189.01,
+          "tr": "業力",
+          "sourcePairs": [
+            28
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 42,
+          "jp": "Bring it on, bring it on, Prema, Prema, Prema",
+          "time": 192.51,
+          "tr": "來吧，純愛",
+          "sourcePairs": [
+            29
+          ],
+          "method": "reviewed-source-variant"
+        }
+      ]
+    },
+    {
+      "id": "Masshiro",
+      "pdf": "(歌詞)真っ白.pdf",
+      "sha256": "7d46bc5a28775e2a7542617b95bf93938c84272a1f43836599aa59fc3f447a26",
+      "lines": [
+        {
+          "index": 0,
+          "jp": "Hmm, hmm, hmm",
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 1,
+          "jp": "Hmm, hmm, hmm",
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 2,
+          "jp": "真っ白な心に惹かれ",
+          "tr": "我嚮往一顆純白之心",
+          "sourcePairs": [
+            0
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 3,
+          "jp": "真実をさまよえば",
+          "tr": "繞著真理徘徊",
+          "sourcePairs": [
+            1
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 4,
+          "jp": "真っ黒なところはぶち抜かれ",
+          "tr": "黑暗被驅散",
+          "sourcePairs": [
+            2
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 5,
+          "jp": "真新しい風にまた抱かれた",
+          "tr": "我投入了 全新風中的懷抱",
+          "sourcePairs": [
+            3
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 6,
+          "jp": "好きだよ 好きだけど",
+          "tr": "我愛你 真的愛你 但是",
+          "sourcePairs": [
+            4
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 7,
+          "jp": "離れなくちゃ 置いてかなきゃ",
+          "tr": "但我必須離開 把你拋在腦後",
+          "sourcePairs": [
+            5
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 8,
+          "jp": "好きだよ 知らんけど",
+          "tr": "我愛你 但我不知道",
+          "sourcePairs": [
+            6
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 9,
+          "jp": "私たちもう そんな頃よ",
+          "tr": "好像已經是時候了",
+          "sourcePairs": [
+            7
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 10,
+          "jp": "先にさよならするわ",
+          "tr": "我先說再見",
+          "sourcePairs": [
+            8
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 11,
+          "jp": "悪いのはそうよいつも私でいいの",
+          "tr": "這麼說吧 錯的永遠是我",
+          "sourcePairs": [
+            9
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 12,
+          "jp": "先に進まなければゴール",
+          "tr": "我必須繼續前進",
+          "sourcePairs": [
+            10
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 13,
+          "jp": "できぬゲームなのよ",
+          "tr": "只有這樣才能完成遊戲",
+          "sourcePairs": [
+            10
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 14,
+          "jp": "真っ白な心に惹かれ",
+          "tr": "我嚮往一顆純白之心",
+          "sourcePairs": [
+            11
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 15,
+          "jp": "真実をさまよえば",
+          "tr": "繞著真理徘徊",
+          "sourcePairs": [
+            12
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 16,
+          "jp": "真っ黒なところはぶち抜かれ (ぶち抜かれ)",
+          "tr": "黑暗被驅散",
+          "sourcePairs": [
+            13
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 17,
+          "jp": "真新しい風にまた抱かれた",
+          "tr": "我投入了 全新風中的懷抱",
+          "sourcePairs": [
+            14
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 18,
+          "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 19,
+          "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 20,
+          "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 21,
+          "jp": "Aah, aah",
+          "tr": "",
+          "sourcePairs": [],
+          "method": "pending-no-pdf-translation"
+        },
+        {
+          "index": 22,
+          "jp": "先にさよならするわ (するわ)",
+          "tr": "我先說再見",
+          "sourcePairs": [
+            15
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 23,
+          "jp": "悪いのはそうよいつも私でいいの (いいの)",
+          "tr": "這麼說吧 錯的永遠是我",
+          "sourcePairs": [
+            16
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 24,
+          "jp": "先に進まなければ (ければ) ゴール",
+          "tr": "我必須繼續前進",
+          "sourcePairs": [
+            17
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 25,
+          "jp": "できぬゲームなのよ",
+          "tr": "只有這樣才能完成遊戲",
+          "sourcePairs": [
+            17
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 26,
+          "jp": "真っ白な心に惹かれ (Ah, ah, aah)",
+          "tr": "我嚮往一顆純白之心",
+          "sourcePairs": [
+            18
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 27,
+          "jp": "真実をさまよえば (Ah, ah, aah)",
+          "tr": "繞著真理徘徊",
+          "sourcePairs": [
+            19
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 28,
+          "jp": "真っ黒な (真っ黒な) ところはぶち抜かれ (ぶち抜かれ)",
+          "tr": "黑暗被驅散",
+          "sourcePairs": [
+            20
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 29,
+          "jp": "真新しい風にまた抱かれた",
+          "tr": "我投入了 全新風中的懷抱",
+          "sourcePairs": [
+            21
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 30,
+          "jp": "好きだよ 好きだけど (Ahh)",
+          "tr": "我愛你 真的愛你 但是",
+          "sourcePairs": [
+            22
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 31,
+          "jp": "離れなくちゃ 置いてかなきゃ (Yeah)",
+          "tr": "我必須離開 把你拋在腦後",
+          "sourcePairs": [
+            23
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 32,
+          "jp": "好きだよ 知らんけど (Ayy, ye, ayy)",
+          "tr": "我愛你 但我不知道",
+          "sourcePairs": [
+            24
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 33,
+          "jp": "私たちもう そんな頃よ (Yeah, ay, hey)",
+          "tr": "好像已經是時候了",
+          "sourcePairs": [
+            25
+          ],
+          "method": "reviewed-source-variant"
+        }
+      ]
+    },
+    {
+      "id": "MoEhWa",
+      "pdf": "(歌詞)もうええわ.pdf",
+      "sha256": "a7a7a475743c9983bee278063a5908c947111feb0fc2e23c82bfd31143dac817",
+      "lines": [
+        {
+          "index": 0,
+          "jp": "さぁ羽のばして ここから",
+          "time": 13.1,
+          "tr": "從此開始張開翅膀吧",
+          "sourcePairs": [
+            0
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 1,
+          "jp": "捉われてばっか だったから",
+          "time": 16.14,
+          "tr": "畢竟總是被困住",
+          "sourcePairs": [
+            1
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 2,
+          "jp": "行き詰った悦び手放す時は今",
+          "time": 18.62,
+          "tr": "現在該放下走到盡頭的喜悅",
+          "sourcePairs": [
+            2
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 3,
+          "jp": "心軽くして これから",
+          "time": 24.87,
+          "tr": "讓內心更輕盈 從今以後",
+          "sourcePairs": [
+            3
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 4,
+          "jp": "自由に歩いて みたいなら",
+          "time": 27.61,
+          "tr": "如果想試著自由行走",
+          "sourcePairs": [
+            4
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 5,
+          "jp": "すれ違った人だって過去だって怖くない",
+          "time": 30.43,
+          "tr": "即使是擦身而過的行人或過去 也都無須畏懼",
+          "sourcePairs": [
+            5
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 6,
+          "jp": "みんな先が見えない夜道を",
+          "time": 36.82,
+          "tr": "大家在看不清前方的夜路",
+          "sourcePairs": [
+            6
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 7,
+          "jp": "共に迷い歩く夜更け時",
+          "time": 42.73,
+          "tr": "於深夜時分一併步行並迷失",
+          "sourcePairs": [
+            7
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 8,
+          "jp": "うつむかないで 怯えないで",
+          "time": 48.71,
+          "tr": "別低下頭 別感到膽怯",
+          "sourcePairs": [
+            8
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 9,
+          "jp": "閉ざした扉 叩いて",
+          "time": 55.34,
+          "tr": "敲響緊閉的門扉",
+          "sourcePairs": [
+            9
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 10,
+          "jp": "もうええわ",
+          "time": 59.68,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            10
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 11,
+          "jp": "言われる前に先に言わして",
+          "time": 62,
+          "tr": "在你說出口前 讓我搶先說",
+          "sourcePairs": [
+            10
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 12,
+          "jp": "もうええわ",
+          "time": 65.68,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            11
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 13,
+          "jp": "やれるだけやって後は任して",
+          "time": 67.98,
+          "tr": "盡己所能後選擇託付",
+          "sourcePairs": [
+            11
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 14,
+          "jp": "もうええわ",
+          "time": 71.45,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            12
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 15,
+          "jp": "自由になるわ",
+          "time": 73.95,
+          "tr": "我要變得自由自在",
+          "sourcePairs": [
+            12
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 16,
+          "jp": "泣くくらいじゃったら笑ったるわ",
+          "time": 77.49,
+          "tr": "與其哭泣不如一笑置之",
+          "sourcePairs": [
+            13
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 17,
+          "jp": "アハハ...",
+          "time": 82.64,
+          "tr": "啊哈哈…",
+          "sourcePairs": [
+            13
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 18,
+          "jp": "傷口はいつかカサブタ",
+          "time": 100.81,
+          "tr": "傷口終有一天會結痂",
+          "sourcePairs": [
+            14
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 19,
+          "jp": "すぐ剥がれ落ちてサヨナラ",
+          "time": 103.89,
+          "tr": "很快便會剝落 再也不見",
+          "sourcePairs": [
+            15
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 20,
+          "jp": "心だってそんな風に癒えたらいいのにな",
+          "time": 106.65,
+          "tr": "若人心也能那樣痊癒該有多好",
+          "sourcePairs": [
+            16
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 21,
+          "jp": "巻き込まんとって泥沼",
+          "time": 112.52,
+          "tr": "別拖我陷入泥沼",
+          "sourcePairs": [
+            17
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 22,
+          "jp": "意味もなくただ傷付けられ",
+          "time": 115.42,
+          "tr": "毫無意義地負傷",
+          "sourcePairs": [
+            18
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 23,
+          "jp": "そして傷付け 繰り返すだけ",
+          "time": 119.14,
+          "tr": "並傷害對方 一次又一次地反覆上演",
+          "sourcePairs": [
+            18,
+            19
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 24,
+          "jp": "ぬけた阿呆なゲームいちぬけた",
+          "time": 124.78,
+          "tr": "我已離開 從愚蠢的遊戲中脫身",
+          "sourcePairs": [
+            20
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 25,
+          "jp": "夜が冷めた風に吹かれてた",
+          "time": 130.54,
+          "tr": "冷冽寒風吹入夜晚",
+          "sourcePairs": [
+            21
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 26,
+          "jp": "ふらつかないで踏みしめて",
+          "time": 136.48,
+          "tr": "切莫步履蹣跚 堅定前行",
+          "sourcePairs": [
+            22
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 27,
+          "jp": "内なる風に吹かれて",
+          "time": 143.15,
+          "tr": "任憑自己內心的風吹拂",
+          "sourcePairs": [
+            23
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 28,
+          "jp": "もうええわ",
+          "time": 147.44,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            24
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 29,
+          "jp": "言われる前に先に言わして",
+          "time": 149.9,
+          "tr": "在你說出口前 讓我搶先說",
+          "sourcePairs": [
+            24
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 30,
+          "jp": "もうええわ",
+          "time": 153.39,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            25
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 31,
+          "jp": "付き合ってあげれんでごめんね",
+          "time": 155.55,
+          "tr": "我無法奉陪了 真是抱歉",
+          "sourcePairs": [
+            25
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 32,
+          "jp": "もうええわ",
+          "time": 159.14,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            26
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 33,
+          "jp": "自由になるわ",
+          "time": 161.62,
+          "tr": "我要變得自由自在",
+          "sourcePairs": [
+            26
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 34,
+          "jp": "泣くくらいじゃったら笑ったるわ",
+          "time": 165.33,
+          "tr": "與其哭泣不如一笑置之",
+          "sourcePairs": [
+            27
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 35,
+          "jp": "夜が更けて朝の光が顔を出して",
+          "time": 170.46,
+          "tr": "夜幕漸深 換早晨曙光露面",
+          "sourcePairs": [
+            28
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 36,
+          "jp": "もうええわ",
+          "time": 200.15,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            29
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 37,
+          "jp": "甘い夢ばっか見させんといて",
+          "time": 202.45,
+          "tr": "別讓我一再做美夢",
+          "sourcePairs": [
+            29
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 38,
+          "jp": "もうええわ",
+          "time": 206,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            30
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 39,
+          "jp": "要らんことばっか聞かせんといて",
+          "time": 208.36,
+          "tr": "別讓我一再聽廢話",
+          "sourcePairs": [
+            30
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 40,
+          "jp": "もうええわ",
+          "time": 211.8,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            31
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 41,
+          "jp": "手放したいもの今全て",
+          "time": 214.29,
+          "tr": "現在就把所有想捨棄的事物",
+          "sourcePairs": [
+            31
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 42,
+          "jp": "この空に捨てて もうええわ",
+          "time": 220.16,
+          "tr": "全都往這片天空扔去",
+          "sourcePairs": [
+            31
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 43,
+          "jp": "もうええわ",
+          "time": 223.58,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            32
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 44,
+          "jp": "何が大切なん？よう選んで",
+          "time": 225.97,
+          "tr": "什麼才是重要的? 做出明智選擇",
+          "sourcePairs": [
+            32
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 45,
+          "jp": "もうええわ",
+          "time": 229.32,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            33
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 46,
+          "jp": "そう思うならサッサ手放して",
+          "time": 231.72,
+          "tr": "要是那麼想 就早點放手",
+          "sourcePairs": [
+            33
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 47,
+          "jp": "もうええわ",
+          "time": 235.47,
+          "tr": "夠了吧",
+          "sourcePairs": [
+            34
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 48,
+          "jp": "自由になるわ",
+          "time": 237.86,
+          "tr": "我要變得自由自在",
+          "sourcePairs": [
+            34
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 49,
+          "jp": "泣くくらいじゃったら笑ったるわ",
+          "time": 241.24,
+          "tr": "與其哭泣不如一笑置之",
+          "sourcePairs": [
+            35
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 50,
+          "jp": "アハハ...",
+          "time": 246.46,
+          "tr": "啊哈哈…",
+          "sourcePairs": [
+            35
+          ],
+          "method": "reviewed-pdf-fragment"
+        }
+      ]
+    },
+    {
+      "id": "Kaerou",
+      "pdf": "(歌詞)帰ろう.pdf",
+      "sha256": "fbbf45572c1572db73b52bc2296f1e4191ab9ea3a674dd559c740b93b191ac0a",
+      "lines": [
+        {
+          "index": 0,
+          "jp": "あなたは夕日に溶けて",
+          "time": 13.49,
+          "tr": "你消融於夕陽景象",
+          "sourcePairs": [
+            0
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 1,
+          "jp": "わたしは夜明けに消えて",
+          "time": 18.02,
+          "tr": "我消逝於黎明破曉",
+          "sourcePairs": [
+            0
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 2,
+          "jp": "もう二度と 交わらないのなら",
+          "time": 23.36,
+          "tr": "如果餘生無法再次相會",
+          "sourcePairs": [
+            1
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 3,
+          "jp": "それが運命だね",
+          "time": 29.77,
+          "tr": "那便是命中注定",
+          "sourcePairs": [
+            1
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 4,
+          "jp": "あなたは灯ともして",
+          "time": 34.05,
+          "tr": "你點亮一盞明燈",
+          "sourcePairs": [
+            2
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 5,
+          "jp": "わたしは光もとめて",
+          "time": 38.86,
+          "tr": "我追尋那道光芒",
+          "sourcePairs": [
+            2
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 6,
+          "jp": "怖くはない 失うものなどない",
+          "time": 44,
+          "tr": "無須害怕 沒什麼可失去的",
+          "sourcePairs": [
+            3
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 7,
+          "jp": "最初から何も持ってない",
+          "time": 50.57,
+          "tr": "從一開始便是一無所有",
+          "sourcePairs": [
+            4
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 8,
+          "jp": "それじゃ それじゃ またね",
+          "time": 55.03,
+          "tr": "再見 那麼就此道別",
+          "sourcePairs": [
+            5
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 9,
+          "jp": "少年の瞳は汚れ",
+          "time": 57.7,
+          "tr": "少年的眼瞳沾染汙濁",
+          "sourcePairs": [
+            6
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 10,
+          "jp": "5時の鐘は鳴り響けど もう聞こえない",
+          "time": 60.57,
+          "tr": "五點的鐘聲響徹 卻無法再聽見",
+          "sourcePairs": [
+            7
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 11,
+          "jp": "それじゃ それじゃ まるで",
+          "time": 65.85,
+          "tr": "那樣 那樣簡直表明了",
+          "sourcePairs": [
+            8
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 12,
+          "jp": "全部 終わったみたいだね",
+          "time": 68.32,
+          "tr": "全都已徹底結束",
+          "sourcePairs": [
+            9
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 13,
+          "jp": "大間違い 先は長い 忘れないから",
+          "time": 70.81,
+          "tr": "大錯特錯 來日方長 我不會遺忘",
+          "sourcePairs": [
+            10
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 14,
+          "jp": "ああ 全て忘れて帰ろう",
+          "time": 75.55,
+          "tr": "啊 淡忘所有事後回去吧",
+          "sourcePairs": [
+            11
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 15,
+          "jp": "ああ 全て流して帰ろう",
+          "time": 80.52,
+          "tr": "啊 諸事放水流後回去吧",
+          "sourcePairs": [
+            12
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 16,
+          "jp": "あの傷は疼けど この渇き癒えねど",
+          "time": 85.87,
+          "tr": "儘管那道傷口隱隱作痛 這份飢渴也尚未消除",
+          "sourcePairs": [
+            13
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 17,
+          "jp": "もうどうでもいいの 吹き飛ばそう",
+          "time": 91.11,
+          "tr": "已經不重要了 讓其隨風而去",
+          "sourcePairs": [
+            14
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 18,
+          "jp": "さわやかな風と帰ろう",
+          "time": 96.46,
+          "tr": "與涼爽清風一起回去吧",
+          "sourcePairs": [
+            15
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 19,
+          "jp": "やさしく降る雨と帰ろう",
+          "time": 101.58,
+          "tr": "伴降下的輕柔細雨回去吧",
+          "sourcePairs": [
+            16
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 20,
+          "jp": "憎みあいの果てに何が生まれるの",
+          "time": 106.69,
+          "tr": "互相怨恨 最後又能帶來什麼",
+          "sourcePairs": [
+            17
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 21,
+          "jp": "わたし わたしが先に 忘れよう",
+          "time": 112.17,
+          "tr": "就讓我、讓我先忘卻這些事",
+          "sourcePairs": [
+            18
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 22,
+          "jp": "あなたは弱音を吐いて",
+          "time": 132.91,
+          "tr": "你傾吐喪氣話",
+          "sourcePairs": [
+            19
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 23,
+          "jp": "わたしは未練こぼして",
+          "time": 137.94,
+          "tr": "我流露不捨之情",
+          "sourcePairs": [
+            19
+          ],
+          "method": "reviewed-pdf-fragment"
+        },
+        {
+          "index": 24,
+          "jp": "最後くらい 神様でいさせて",
+          "time": 143.21,
+          "tr": "至少在最後一刻 讓我作為神明存在",
+          "sourcePairs": [
+            20
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 25,
+          "jp": "だってこれじゃ人間だ",
+          "time": 149.61,
+          "tr": "因為這樣終究是凡人",
+          "sourcePairs": [
+            21
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 26,
+          "jp": "わたしのいない世界を",
+          "time": 153.98,
+          "tr": "縱使從高處俯瞰 我不存在的世界",
+          "sourcePairs": [
+            22
+          ],
+          "method": "shared-pdf-sentence"
+        },
+        {
+          "index": 27,
+          "jp": "上から眺めていても",
+          "time": 158.9,
+          "tr": "縱使從高處俯瞰 我不存在的世界",
+          "sourcePairs": [
+            22
+          ],
+          "method": "shared-pdf-sentence"
+        },
+        {
+          "index": 28,
+          "jp": "何一つ 変わらず回るから",
+          "time": 164.25,
+          "tr": "世事依舊不變 持續運轉",
+          "sourcePairs": [
+            23
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 29,
+          "jp": "少し背中が軽くなった",
+          "time": 170.65,
+          "tr": "背上的重擔減輕了一些",
+          "sourcePairs": [
+            24
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 30,
+          "jp": "それじゃ それじゃ またね",
+          "time": 175.25,
+          "tr": "再見 那麼就此道別",
+          "sourcePairs": [
+            25
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 31,
+          "jp": "国道沿い前で別れ",
+          "time": 177.75,
+          "tr": "在國道沿路前分別",
+          "sourcePairs": [
+            26
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 32,
+          "jp": "続く町の喧騒 後目に一人行く",
+          "time": 180.58,
+          "tr": "一瞥城鎮不止息的喧鬧 獨自前行",
+          "sourcePairs": [
+            27
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 33,
+          "jp": "ください ください ばっかで",
+          "time": 185.72,
+          "tr": "盡是向別人一昧索取",
+          "sourcePairs": [
+            28
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 34,
+          "jp": "何も あげられなかったね",
+          "time": 188.22,
+          "tr": "卻什麼也給不了",
+          "sourcePairs": [
+            29
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 35,
+          "jp": "生きてきた 意味なんか 分からないまま",
+          "time": 190.73,
+          "tr": "絲毫不知道活到現在的意義為何",
+          "sourcePairs": [
+            30
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 36,
+          "jp": "ああ 全て与えて帰ろう",
+          "time": 195.78,
+          "tr": "啊 將一切給予他人後回去吧",
+          "sourcePairs": [
+            31
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 37,
+          "jp": "ああ 何も持たずに帰ろう",
+          "time": 200.73,
+          "tr": "啊 就這樣兩手空空地回去吧",
+          "sourcePairs": [
+            32
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 38,
+          "jp": "与えられるものこそ 与えられたもの",
+          "time": 205.7,
+          "tr": "能賦予別人的正是曾經獲得的",
+          "sourcePairs": [
+            33
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 39,
+          "jp": "ありがとう って胸をはろう",
+          "time": 211.62,
+          "tr": "要對此心懷感激且挺起胸膛",
+          "sourcePairs": [
+            34
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 40,
+          "jp": "待ってるからさ もう帰ろう",
+          "time": 216.53,
+          "tr": "正在等著你 所以回去吧",
+          "sourcePairs": [
+            35
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 41,
+          "jp": "幸せ絶えぬ場所 帰ろう",
+          "time": 221.58,
+          "tr": "回到幸福永不消失的地方",
+          "sourcePairs": [
+            36
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 42,
+          "jp": "去り際の時に 何が持っていけるの",
+          "time": 226.77,
+          "tr": "離開之際 又能帶走何物",
+          "sourcePairs": [
+            37
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 43,
+          "jp": "一つ一つ 荷物 手放そう",
+          "time": 232.35,
+          "tr": "放下一個又一個包袱",
+          "sourcePairs": [
+            38
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 44,
+          "jp": "憎みあいの果てに何が生まれるの",
+          "time": 237.59,
+          "tr": "互相怨恨 最後又能帶來什麼",
+          "sourcePairs": [
+            39
+          ],
+          "method": "reviewed-source-variant"
+        },
+        {
+          "index": 45,
+          "jp": "わたし わたしが先に 忘れよう",
+          "time": 242.33,
+          "tr": "就讓我、讓我先忘卻這些事",
+          "sourcePairs": [
+            40
+          ],
+          "method": "exact-source-text"
+        },
+        {
+          "index": 46,
+          "jp": "あぁ今日からどう生きていこう",
+          "time": 252.77,
+          "tr": "啊 從今天起該如何活下去",
+          "sourcePairs": [
+            41
+          ],
+          "method": "reviewed-source-variant"
+        }
+      ]
     }
   ]
 }

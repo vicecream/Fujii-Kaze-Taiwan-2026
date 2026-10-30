@@ -1,5 +1,5 @@
 import { INFO_SVG, CHEVRON_SVG, EXT_LINK_SVG, NOTICE_SVG, SEAT_SVG, MAP_SVG, MANNER_SVG, SHARE_SVG, MOON_SVG } from "./icons.js";
-import { SITE, EVENT, ONSITE } from "../data.js";
+import { SITE, EVENT, ONSITE, SONGS } from "../data.js";
 import { siteFooterHtml } from "./footer.js";
 const link = (url, label) => `<a class="info-book-link" href="${url}" target="_blank" rel="noopener">${EXT_LINK_SVG} ${label}</a>`;
 const hours = item => item.end ? `${item.start}–${item.end}` : `${item.start} 起`;
@@ -39,7 +39,7 @@ export function homeHtml(build, themeToggle = `<button class="theme-toggle home-
         <div class="show-venue">${EVENT.venue}</div><p class="show-doors">${EVENT.doors} 入場 · 台灣時間 UTC+8</p>
       </div>
       <div class="today-card" id="today-card" hidden><div class="today-head"><span class="dot"></span><span id="today-title">今日演出</span></div><div class="today-now" id="today-now"></div><ul class="today-list" id="today-list"></ul></div>
-      <nav class="main-menu" aria-label="主要導覽"><button class="menu-btn" id="guide-btn" type="button"><span class="menu-btn-label">19 首歌曲預習</span></button><p class="prep-note">Prema ＋ 代表曲精選 · 並非高雄正式歌單</p></nav>
+      <nav class="main-menu" aria-label="主要導覽"><button class="menu-btn" id="guide-btn" type="button"><span class="menu-btn-label">${SONGS.length} 首歌曲預習</span></button><p class="prep-note">Prema ＋ 代表曲精選 · 並非高雄正式歌單</p></nav>
       <aside class="home-update" aria-labelledby="home-update-title">
         <h2 id="home-update-title">最新演出資訊</h2>
         <a class="announcement-source" href="${ONSITE.sourceUrl}" target="_blank" rel="noopener">主辦公告 ↗</a>

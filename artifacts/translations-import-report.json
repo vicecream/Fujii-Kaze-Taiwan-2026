@@ -344,20 +344,125 @@
           "reason": "No corresponding Chinese translation in the supplied PDF"
         }
       ]
+    },
+    {
+      "id": "ItsAlright",
+      "pdf": "(歌詞)It's+Alright.pdf",
+      "sha256": "04bae1bbb7702428fd71e2d91c053af21d359f2f8641d5e0792fc3fc2903860b",
+      "totalLines": 43,
+      "translatedLines": 38,
+      "status": "partial",
+      "sharedLines": [],
+      "pending": [
+        {
+          "index": 0,
+          "time": 6.4,
+          "original": "Ay, ay, ay, ay, ay",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 17,
+          "time": 87.78,
+          "original": "It's al-",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 18,
+          "time": 89.04,
+          "original": "Ay, ay, ay, ay",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 38,
+          "time": 181.15,
+          "original": "It's al-",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 39,
+          "time": 182.37,
+          "original": "Ay, ay, ay, ay",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        }
+      ]
+    },
+    {
+      "id": "Masshiro",
+      "pdf": "(歌詞)真っ白.pdf",
+      "sha256": "7d46bc5a28775e2a7542617b95bf93938c84272a1f43836599aa59fc3f447a26",
+      "totalLines": 34,
+      "translatedLines": 28,
+      "status": "partial",
+      "sharedLines": [],
+      "pending": [
+        {
+          "index": 0,
+          "original": "Hmm, hmm, hmm",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 1,
+          "original": "Hmm, hmm, hmm",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 18,
+          "original": "Aah (Ta-ta-tarara, ra-ta-tara)",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 19,
+          "original": "Aah (Ta-ta-tarara, ra-ta-tara)",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 20,
+          "original": "Aah (Ta-ta-tarara, ra-ta-tara)",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        },
+        {
+          "index": 21,
+          "original": "Aah, aah",
+          "reason": "No corresponding Chinese translation in the supplied PDF"
+        }
+      ]
+    },
+    {
+      "id": "MoEhWa",
+      "pdf": "(歌詞)もうええわ.pdf",
+      "sha256": "a7a7a475743c9983bee278063a5908c947111feb0fc2e23c82bfd31143dac817",
+      "totalLines": 51,
+      "translatedLines": 51,
+      "status": "ready",
+      "sharedLines": [],
+      "pending": []
+    },
+    {
+      "id": "Kaerou",
+      "pdf": "(歌詞)帰ろう.pdf",
+      "sha256": "fbbf45572c1572db73b52bc2296f1e4191ab9ea3a674dd559c740b93b191ac0a",
+      "totalLines": 47,
+      "translatedLines": 47,
+      "status": "ready",
+      "sharedLines": [
+        26,
+        27
+      ],
+      "pending": []
     }
   ],
-  "translatedLines": 672,
-  "pendingLines": 29,
+  "translatedLines": 836,
+  "pendingLines": 40,
   "userProvidedSongs": [
     {
       "id": "CasketGirl",
       "file": "CasketGirl.zh.txt",
       "totalLines": 55,
-      "translatedLines": 10,
-      "status": "partial",
+      "translatedLines": 55,
+      "status": "ready",
       "providedAt": "2026-10-30",
-      "scope": "Verse 1 and Pre-Chorus",
-      "sha256": "5ef158d0418a73c0bc6b3089346949dd8a21e2994853d80da097893bb5afd1f5"
+      "scope": "Complete song supplied by user",
+      "sha256": "15b6528384dc19e8baecec169bb1f8cfc3911eaaf2a774d3a30d2d9d795e78fc"
     },
     {
       "id": "ForeverYoung",
@@ -370,6 +475,6 @@
       "sha256": "d8b9f3975d6043dc5173a9921a4cba59f236668065e6b95e027d7906a94a3081"
     }
   ],
-  "userProvidedTranslatedLines": 26,
-  "totalTranslatedLines": 698
+  "userProvidedTranslatedLines": 71,
+  "totalTranslatedLines": 907
 }
