@@ -5,9 +5,12 @@ import { homeHtml } from "./src/ui/home.js";
 import { SITE } from "./src/data.js";
 
 function deploymentSiteUrl(){
-  const url = new URL(process.env.SITE_URL || process.env.CF_PAGES_URL || SITE.url);
+  const defaultPagesUrl = process.env.CF_PAGES_BRANCH === "main"
+    ? "https://fujii-kaze-taiwan-2026.pages.dev/"
+    : process.env.CF_PAGES_URL;
+  const url = new URL(process.env.SITE_URL || defaultPagesUrl || SITE.url);
   if (url.protocol !== "https:" || url.username || url.password || url.search || url.hash || url.pathname !== "/"){
-    throw new Error("SITE_URL / CF_PAGES_URL must be an HTTPS site root without credentials, query or hash.");
+    throw new Error("SITE_URL / Cloudflare Pages URL must be an HTTPS site root without credentials, query or hash.");
   }
   return url.href;
 }
