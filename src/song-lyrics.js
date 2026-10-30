@@ -5249,7 +5249,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5wx0wn9",
@@ -6044,7 +6044,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-lvnw1950o7",
@@ -6647,7 +6647,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-wzrv4zxwr3",
@@ -7208,7 +7208,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-14o717y7ok",
@@ -7736,7 +7736,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-2go28v63o3",
@@ -8338,7 +8338,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-94ogl3p0r0",
@@ -8840,7 +8840,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-ywn1zkkjr7",
@@ -9411,7 +9411,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-14o71m3dok",
@@ -9989,7 +9989,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-vxn5w758n9",
@@ -10423,7 +10423,7 @@ const prepared = {
       "offsetSeconds": 0,
       "source": "user-provided LRC"
     },
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
     "translationCreditRole": "source",
     "translationCreditUrl": "https://www.marumaru-x.com/japanese-song/play-wzrv48xlr3",

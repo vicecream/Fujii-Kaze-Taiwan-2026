@@ -7,6 +7,7 @@ import path from "node:path";
 import vm from "node:vm";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { EVENT, ONSITE } from "../src/data.js";
+import { SONG_LYRICS } from "../src/song-lyrics.js";
 
 if (!process.argv[2]) throw new Error("Pass the installed linkedom ESM entry path; no project dependency is required.");
 const { parseHTML } = await import(pathToFileURL(path.resolve(process.argv[2])).href);
@@ -161,7 +162,7 @@ assert.match(document.getElementById("song-content-status").textContent, /原文
 assert.match(document.getElementById("song-content-status").textContent, /LRC 時間試播・待校正/);
 assert.equal(document.getElementById("japanese-toggle").disabled, false);
 assert.equal(document.getElementById("chinese-toggle").disabled, true);
-assert.equal(document.getElementById("karaoke-btn").disabled, true);
+assert.equal(document.getElementById("karaoke-btn").disabled, false, "Timed LRC previews allow line-level karaoke");
 assert.equal(document.getElementById("autoscroll-btn").disabled, false);
 assert.equal(document.getElementById("watch-on-yt").getAttribute("href"), "https://www.youtube.com/watch?v=gFOu5r-OuQ4");
 assert.equal(document.querySelectorAll(".lyric-line").length, main.namespace.currentSong.lyrics.length);
@@ -177,6 +178,12 @@ assert.equal(document.querySelectorAll(".lyric-line.active").length, 0, "Preview
 clock.time = originalLines[0].time;
 main.namespace.updateLyricsSync(true);
 assert.equal(document.querySelector(".lyric-line.active"), firstLine, "Preview follows the supplied line boundary");
+const karaokeButton = document.getElementById("karaoke-btn");
+karaokeButton.dispatchEvent(new window.Event("click", { bubbles:true }));
+assert.equal(karaokeButton.getAttribute("aria-pressed"), "true", "Line-level karaoke can be enabled during LRC preview");
+assert.ok(firstLine.classList.contains("karaoke-line-preview"), "LRC preview highlights the current lyric line");
+karaokeButton.dispatchEvent(new window.Event("click", { bubbles:true }));
+assert.equal(firstLine.classList.contains("karaoke-line-preview"), false, "Disabling karaoke clears the preview highlight");
 clock.time = originalLines.at(-1).time;
 main.namespace.updateLyricsSync(true);
 assert.equal(document.querySelectorAll(".lyric-line.active").length, 1);
@@ -189,10 +196,40 @@ assert.equal(document.querySelectorAll(".lyric-line.active").length, 0, "Seeking
 assert.equal(document.getElementById("chant-btn").hidden, true);
 await route("#/song/Matsuri");
 assert.equal(document.getElementById("reading-btn").hidden, false, "Japanese retains readings control");
-assert.equal(document.getElementById("reading-btn").disabled, true, "Readings wait for prepared text");
+assert.equal(document.getElementById("reading-btn").disabled, false, "Prepared Japanese readings enable the control");
+assert.ok(document.querySelectorAll(".lyric-jp ruby rt").length > 0, "Kana mode renders furigana after lazy loading");
+assert.doesNotMatch(document.getElementById("song-content-status").textContent, /日文讀音待整理/);
 assert.equal(document.getElementById("chinese-toggle").disabled, false, "Supplied PDF translations enable Chinese subtitles");
 assert.match(document.getElementById("lyrics-credit").textContent, /中文譯詞來源.*MARUMARU/);
 assert.ok([...document.querySelectorAll(".lyric-zh")].some(line => line.textContent.trim()), "Chinese is present on the timed lyric rows");
+const readingButton = document.getElementById("reading-btn");
+const translatedBeforeReadings = [...document.querySelectorAll(".lyric-zh")].map(line => line.textContent);
+readingButton.dispatchEvent(new window.Event("click", { bubbles: true }));
+assert.match(readingButton.getAttribute("aria-label"), /羅馬字/);
+assert.equal(document.querySelectorAll(".lyric-jp ruby").length, 0);
+assert.match(document.querySelectorAll(".lyric-jp")[1].textContent, /ai shika kanjitaku mo nai/);
+readingButton.dispatchEvent(new window.Event("click", { bubbles: true }));
+assert.ok(document.getElementById("song-page").classList.contains("reading-both"));
+assert.ok(document.querySelector(".lyric-jp ruby rt"));
+assert.match(document.querySelectorAll(".lyric-romaji")[1].textContent, /ai shika kanjitaku mo nai/);
+assert.deepEqual([...document.querySelectorAll(".lyric-zh")].map(line => line.textContent), translatedBeforeReadings);
+readingButton.dispatchEvent(new window.Event("click", { bubbles: true }));
+assert.equal(document.getElementById("song-page").classList.contains("reading-both"), false);
+for (const song of SONG_LYRICS){
+  await route(`#/song/${song.id}`);
+  const japanese = song.language === "ja";
+  assert.equal(document.getElementById("reading-btn").hidden, !japanese, `${song.id}: language controls reading visibility`);
+  if (japanese){
+    assert.equal(document.getElementById("reading-btn").disabled, false, `${song.id}: readings are ready`);
+    assert.ok(document.querySelector(".lyric-jp ruby rt"), `${song.id}: show furigana`);
+  } else {
+    assert.equal(document.querySelectorAll(".lyric-jp ruby").length, 0, `${song.id}: English has no furigana`);
+    assert.equal(document.getElementById("song-page").classList.contains("reading-both"), false);
+    assert.deepEqual([...document.querySelectorAll(".lyric-jp")].map(line => line.textContent), song.lyrics.map(line => line.jp), `${song.id}: preserve English originals`);
+  }
+  assert.equal(document.getElementById("karaoke-btn").disabled, false, `${song.id}: timed LRC previews allow line-level karaoke`);
+  assert.deepEqual([...document.querySelectorAll(".lyric-line")].map(line => Number(line.dataset.time)), song.lyrics.map(line => line.sourceTime), `${song.id}: readings preserve every timestamp`);
+}
 main.namespace.renderSong({ ...main.namespace.currentSong, language: "en", timingStatus: "pending", lyrics: [{ jp: "Example original line" }] });
 assert.equal(document.querySelector(".lyric-line").tagName, "DIV", "Untimed text is readable and does not pretend to be a seek control");
 assert.equal(document.getElementById("reading-btn").hidden, true);
@@ -211,4 +248,4 @@ await route("#/song/KaijuNoHanauta");
 assert.match(document.getElementById("app").textContent, /本指南已轉換/);
 await route("#/song/%E0%A4%A");
 assert.match(document.getElementById("app").textContent, /本指南已轉換/);
-console.log("PASS DOM routes and organizer notices: home cards, hours, entry routes, one-way transport, rules, live timeline, grouped guide, pending players and legacy links.");
+console.log("PASS DOM routes and organizer notices: home cards, hours, entry routes, one-way transport, rules, live timeline, grouped guide, all 19 reading states, kana/romaji switching, LRC timestamps, pending players and legacy links.");

@@ -1756,7 +1756,7 @@ function updateSongContentUi(song){
   page.classList.toggle("untimed-lyrics", !caps.timed);
   const status = document.getElementById("song-content-status");
   const preview = song.timingStatus === "preview";
-  status.innerHTML = `<p>${caps.hasOriginal ? (song.lyricsStatus === "partial" ? "原文歌詞部分整理" : song.lyricsStatus === "imported" ? "原文歌詞已匯入" : "原文歌詞已整理") : "原文歌詞整理中"} · ${caps.translationComplete ? "繁中翻譯已整理" : caps.hasTranslation ? "繁中翻譯部分整理" : "繁中翻譯整理中"}<br>${preview && caps.timed ? "LRC 時間試播・待校正" : caps.timed ? "同步時間已整理" : "同步時間整理中"}${song.readingsStatus === "pending" ? " · 日文讀音待整理" : ""}</p>
+  status.innerHTML = `<p>${caps.hasOriginal ? (song.lyricsStatus === "partial" ? "原文歌詞部分整理" : song.lyricsStatus === "imported" ? "原文歌詞已匯入" : "原文歌詞已整理") : "原文歌詞整理中"} · ${caps.translationComplete ? "繁中翻譯已整理" : caps.hasTranslation ? "繁中翻譯部分整理" : "繁中翻譯整理中"}<br>${preview && caps.timed ? "LRC 時間試播・待校正" : caps.timed ? "同步時間已整理" : "同步時間整理中"}${song.readingsStatus === "pending" ? " · 日文讀音待整理" : song.readingsStatus === "partial" ? " · 日文讀音部分整理" : ""}</p>
     ${!caps.hasOriginal ? "<p>先聆聽官方影片，歌詞將分批補齊。</p>" : ""}
     <a href="${song.sourceUrl}" target="_blank" rel="noopener">官方專輯與曲目資訊 ↗</a>`;
   const notes = document.querySelector(".lyrics-note-copy");
@@ -2043,9 +2043,10 @@ function updateLyricDisplayUi(){
 }
 
 function updateKaraokeUi(){
-  const effectiveKaraoke = karaokeEnabled && songCapabilities(currentSong).timed && currentSong?.timingStatus !== "preview";
+  const lineTimedPreview = currentSong?.timingStatus === "preview" && songCapabilities(currentSong).timed;
+  const effectiveKaraoke = karaokeEnabled && songCapabilities(currentSong).timed;
   const timingButton = document.getElementById("karaoke-btn");
-  if (timingButton) timingButton.disabled = !songCapabilities(currentSong).timed || currentSong?.timingStatus === "preview";
+  if (timingButton) timingButton.disabled = !songCapabilities(currentSong).timed;
   const page = document.getElementById("song-page");
   if (!page) return;
   page.classList.toggle("karaoke-off", !effectiveKaraoke);
@@ -2054,10 +2055,12 @@ function updateKaraokeUi(){
   if (btn){
     btn.classList.toggle("active", effectiveKaraoke);
     btn.setAttribute("aria-pressed", effectiveKaraoke ? "true" : "false");
-    btn.setAttribute("aria-label", `切換逐字卡拉OK高亮：目前${effectiveKaraoke ? "開啟" : "關閉"}`);
+    const label = lineTimedPreview ? "逐行卡拉OK" : "逐字卡拉OK";
+    btn.setAttribute("aria-label", `切換${label}高亮：目前${effectiveKaraoke ? "開啟" : "關閉"}`);
   }
 
   if (!karaokeEnabled){
+    karaokeActiveLine?.classList.remove("karaoke-line-preview");
     clearKaraokeLine(karaokeActiveLine);
     karaokeActiveLine = null;
   }
@@ -3180,7 +3183,13 @@ function clearKaraokeLine(line){
 }
 
 function updateKaraokeProgress(line, time){
-  if (!karaokeEnabled || currentSong?.timingStatus === "preview"){
+  if (currentSong?.timingStatus === "preview"){
+    if (karaokeActiveLine && karaokeActiveLine !== line) karaokeActiveLine.classList.remove("karaoke-line-preview");
+    karaokeActiveLine = line || null;
+    karaokeActiveLine?.classList.toggle("karaoke-line-preview", karaokeEnabled && !!line);
+    return;
+  }
+  if (!karaokeEnabled){
     clearKaraokeLine(karaokeActiveLine);
     karaokeActiveLine = null;
     return;
