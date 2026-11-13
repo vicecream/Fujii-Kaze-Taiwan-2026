@@ -99,6 +99,7 @@
     {
       "id": "Kirari",
       "file": "Kirari.lrc",
+      "previewOffsetSeconds": -0.1,
       "sourceUrl": "https://lrclib.net/tracks/14510544",
       "usageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
       "timingMode": "preview",

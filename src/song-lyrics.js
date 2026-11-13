@@ -1,5 +1,6 @@
 // Imported from user-supplied local files; source and alignment are recorded per song.
 import { SONGS } from "./song-metadata.js";
+import { withPhotoTranslations } from "./photo-translations.js";
 const prepared = {
   "CasketGirl": {
     "lyricsStatus": "imported",
@@ -6903,8 +6904,8 @@ const prepared = {
         "jp": "荒れ狂う 季節の中を",
         "sourceTime": 0.98,
         "sourceEnd": 4.16,
-        "time": 0.98,
-        "endTime": 4.16,
+        "time": 0.88,
+        "endTime": 4.06,
         "tr": "在暴烈狂亂的季節",
         "translationRef": [
           0
@@ -6915,8 +6916,8 @@ const prepared = {
         "jp": "二人は一人きり さらり",
         "sourceTime": 4.16,
         "sourceEnd": 9.18,
-        "time": 4.16,
-        "endTime": 9.18,
+        "time": 4.06,
+        "endTime": 9.08,
         "tr": "兩人都是單獨的個體 乾脆爽快",
         "translationRef": [
           0
@@ -6927,8 +6928,8 @@ const prepared = {
         "jp": "明け行く夕日の中を",
         "sourceTime": 9.18,
         "sourceEnd": 12.24,
-        "time": 9.18,
-        "endTime": 12.24,
+        "time": 9.08,
+        "endTime": 12.14,
         "tr": "在逐漸破曉的夕陽餘暉",
         "translationRef": [
           1
@@ -6939,8 +6940,8 @@ const prepared = {
         "jp": "今夜も昼下がり さらり",
         "sourceTime": 12.24,
         "sourceEnd": 17.28,
-        "time": 12.24,
-        "endTime": 17.28,
+        "time": 12.14,
+        "endTime": 17.18,
         "tr": "今晚也轉為過午時分 毫無停滯",
         "translationRef": [
           1
@@ -6951,8 +6952,8 @@ const prepared = {
         "jp": "どれほど朽ち果てようと 最後にゃ笑いたい",
         "sourceTime": 17.28,
         "sourceEnd": 24.12,
-        "time": 17.28,
-        "endTime": 24.12,
+        "time": 17.18,
+        "endTime": 24.02,
         "tr": "即便再怎麼腐朽消逝 都希望在最後露出笑容",
         "translationRef": [
           2
@@ -6963,8 +6964,8 @@ const prepared = {
         "jp": "何のために",
         "sourceTime": 24.12,
         "sourceEnd": 26.55,
-        "time": 24.12,
-        "endTime": 26.55,
+        "time": 24.02,
+        "endTime": 26.45,
         "tr": "無論是為了什麼而戰",
         "translationRef": [
           3
@@ -6975,8 +6976,8 @@ const prepared = {
         "jp": "戦おうとも動機は愛がいい あぁ",
         "sourceTime": 26.55,
         "sourceEnd": 34.46,
-        "time": 26.55,
-        "endTime": 34.46,
+        "time": 26.45,
+        "endTime": 34.36,
         "tr": "都希望背後的動機是愛",
         "translationRef": [
           3
@@ -6987,8 +6988,8 @@ const prepared = {
         "jp": "新しい日々は 探さずとも常に ここに（ここに）",
         "sourceTime": 34.46,
         "sourceEnd": 42.11,
-        "time": 34.46,
-        "endTime": 42.11,
+        "time": 34.36,
+        "endTime": 42.01,
         "tr": "嶄新的日子縱使不去尋找 也依舊常伴身側",
         "translationRef": [
           4
@@ -6999,8 +7000,8 @@ const prepared = {
         "jp": "色々見てきたけれど この瞳は永遠に きらり",
         "sourceTime": 42.11,
         "sourceEnd": 50.15,
-        "time": 42.11,
-        "endTime": 50.15,
+        "time": 42.01,
+        "endTime": 50.05,
         "tr": "即使見過世間百態 這雙眼眸仍永遠閃耀",
         "translationRef": [
           5
@@ -7011,8 +7012,8 @@ const prepared = {
         "jp": "あれほど生きてきたけど 全ては夢みたい",
         "sourceTime": 50.15,
         "sourceEnd": 57.05,
-        "time": 50.15,
-        "endTime": 57.05,
+        "time": 50.05,
+        "endTime": 56.95,
         "tr": "雖然活了那麼久 卻全都像夢一場",
         "translationRef": [
           6
@@ -7023,8 +7024,8 @@ const prepared = {
         "jp": "あれもこれも",
         "sourceTime": 57.05,
         "sourceEnd": 59.63,
-        "time": 57.05,
-        "endTime": 59.63,
+        "time": 56.95,
+        "endTime": 59.53,
         "tr": "周遭萬物",
         "translationRef": [
           7
@@ -7035,8 +7036,8 @@ const prepared = {
         "jp": "魅力的でも私は君がいい あぁ",
         "sourceTime": 59.63,
         "sourceEnd": 66.58,
-        "time": 59.63,
-        "endTime": 66.58,
+        "time": 59.53,
+        "endTime": 66.48,
         "tr": "魅力橫溢 但你是我的唯一",
         "translationRef": [
           7
@@ -7047,8 +7048,8 @@ const prepared = {
         "jp": "どこにいたの 探してたよ",
         "sourceTime": 66.58,
         "sourceEnd": 70.85,
-        "time": 66.58,
-        "endTime": 70.85,
+        "time": 66.48,
+        "endTime": 70.75,
         "tr": "你之前身在何處 我找很久了",
         "translationRef": [
           8
@@ -7059,8 +7060,8 @@ const prepared = {
         "jp": "連れてって 連れてって",
         "sourceTime": 70.85,
         "sourceEnd": 75.09,
-        "time": 70.85,
-        "endTime": 75.09,
+        "time": 70.75,
+        "endTime": 74.99,
         "tr": "帶我走吧 帶我走吧",
         "translationRef": [
           9
@@ -7071,8 +7072,8 @@ const prepared = {
         "jp": "何もかも 捨ててくよ",
         "sourceTime": 75.09,
         "sourceEnd": 79.02,
-        "time": 75.09,
-        "endTime": 79.02,
+        "time": 74.99,
+        "endTime": 78.92,
         "tr": "我會為你捨棄一切",
         "translationRef": [
           10
@@ -7083,8 +7084,8 @@ const prepared = {
         "jp": "どこまでも どこまでも",
         "sourceTime": 79.02,
         "sourceEnd": 83.14,
-        "time": 79.02,
-        "endTime": 83.14,
+        "time": 78.92,
+        "endTime": 83.04,
         "tr": "隨你到任何地方 隨你到任何地方",
         "translationRef": [
           11
@@ -7095,8 +7096,8 @@ const prepared = {
         "jp": "荒れ狂う 季節の中も 群衆の中も",
         "sourceTime": 83.14,
         "sourceEnd": 88.28,
-        "time": 83.14,
-        "endTime": 88.28,
+        "time": 83.04,
+        "endTime": 88.18,
         "tr": "在暴烈狂亂的季節也好 熙來攘往的群眾中也罷",
         "translationRef": [
           12
@@ -7107,8 +7108,8 @@ const prepared = {
         "jp": "君とならば さらり さらり",
         "sourceTime": 88.28,
         "sourceEnd": 91.85,
-        "time": 88.28,
-        "endTime": 91.85,
+        "time": 88.18,
+        "endTime": 91.75,
         "tr": "只要和你在一起 就輕鬆暢達 心情輕快",
         "translationRef": [
           13
@@ -7119,8 +7120,8 @@ const prepared = {
         "jp": "新しい日々も 拙い過去も",
         "sourceTime": 91.85,
         "sourceEnd": 96.23,
-        "time": 91.85,
-        "endTime": 96.23,
+        "time": 91.75,
+        "endTime": 96.13,
         "tr": "嶄新的日子以及拙劣的過去",
         "translationRef": [
           14
@@ -7131,8 +7132,8 @@ const prepared = {
         "jp": "全てがきらり yeah",
         "sourceTime": 96.23,
         "sourceEnd": 103.6,
-        "time": 96.23,
-        "endTime": 103.6,
+        "time": 96.13,
+        "endTime": 103.5,
         "tr": "全都璀璨閃耀",
         "translationRef": [
           14
@@ -7143,8 +7144,8 @@ const prepared = {
         "jp": "無くしてしまったものを振り返って ほろり",
         "sourceTime": 118.53,
         "sourceEnd": 125.88,
-        "time": 118.53,
-        "endTime": 125.88,
+        "time": 118.43,
+        "endTime": 125.78,
         "tr": "回首過往失去的種種 潸然淚下",
         "translationRef": [
           15
@@ -7155,8 +7156,8 @@ const prepared = {
         "jp": "時には途方に暮れて",
         "sourceTime": 125.88,
         "sourceEnd": 129.35,
-        "time": 125.88,
-        "endTime": 129.35,
+        "time": 125.78,
+        "endTime": 129.25,
         "tr": "有時走投無路",
         "translationRef": [
           16
@@ -7167,8 +7168,8 @@ const prepared = {
         "jp": "ただ風に吹かれて ゆらり",
         "sourceTime": 129.35,
         "sourceEnd": 134.65,
-        "time": 129.35,
-        "endTime": 134.65,
+        "time": 129.25,
+        "endTime": 134.55,
         "tr": "僅能任風吹襲 飄蕩搖晃",
         "translationRef": [
           16
@@ -7179,8 +7180,8 @@ const prepared = {
         "jp": "息せき切ってきたの",
         "sourceTime": 134.65,
         "sourceEnd": 136.77,
-        "time": 134.65,
-        "endTime": 136.77,
+        "time": 134.55,
+        "endTime": 136.67,
         "tr": "氣喘吁吁地奔來",
         "translationRef": [
           17
@@ -7191,8 +7192,8 @@ const prepared = {
         "jp": "行き先は決めたの",
         "sourceTime": 136.77,
         "sourceEnd": 138.83,
-        "time": 136.77,
-        "endTime": 138.83,
+        "time": 136.67,
+        "endTime": 138.73,
         "tr": "決定好目的地",
         "translationRef": [
           17
@@ -7203,8 +7204,8 @@ const prepared = {
         "jp": "迷わずに行きたいけど保証はしないよ",
         "sourceTime": 138.83,
         "sourceEnd": 142.71,
-        "time": 138.83,
-        "endTime": 142.71,
+        "time": 138.73,
+        "endTime": 142.61,
         "tr": "雖說想要毫不猶豫地出發 但也無法保證喲",
         "translationRef": [
           18
@@ -7215,8 +7216,8 @@ const prepared = {
         "jp": "何か分かったようで",
         "sourceTime": 142.71,
         "sourceEnd": 144.91,
-        "time": 142.71,
-        "endTime": 144.91,
+        "time": 142.61,
+        "endTime": 144.81,
         "tr": "好像明白了什麼",
         "translationRef": [
           19
@@ -7227,8 +7228,8 @@ const prepared = {
         "jp": "何も分かってなくて",
         "sourceTime": 144.91,
         "sourceEnd": 146.94,
-        "time": 144.91,
-        "endTime": 146.94,
+        "time": 144.81,
+        "endTime": 146.84,
         "tr": "其實還是一頭霧水",
         "translationRef": [
           20
@@ -7239,8 +7240,8 @@ const prepared = {
         "jp": "だけどそれが分かって本当に良かった",
         "sourceTime": 146.94,
         "sourceEnd": 151.36,
-        "time": 146.94,
-        "endTime": 151.36,
+        "time": 146.84,
+        "endTime": 151.26,
         "tr": "不過很慶幸能得知那一點",
         "translationRef": [
           20
@@ -7251,8 +7252,8 @@ const prepared = {
         "jp": "新しい日々は 探さずとも常に ここに",
         "sourceTime": 151.36,
         "sourceEnd": 156.72,
-        "time": 151.36,
-        "endTime": 156.72,
+        "time": 151.26,
+        "endTime": 156.62,
         "tr": "嶄新的日子縱使不去尋找 也依舊常伴身側",
         "translationRef": [
           4
@@ -7263,8 +7264,8 @@ const prepared = {
         "jp": "常にここに ここに あぁ",
         "sourceTime": 156.72,
         "sourceEnd": 159.52,
-        "time": 156.72,
-        "endTime": 159.52,
+        "time": 156.62,
+        "endTime": 159.42,
         "tr": "一直都在 就在身邊",
         "translationRef": [
           22
@@ -7275,8 +7276,8 @@ const prepared = {
         "jp": "色々見てきたけれど この瞳は永遠に きらり",
         "sourceTime": 159.52,
         "sourceEnd": 165.53,
-        "time": 159.52,
-        "endTime": 165.53,
+        "time": 159.42,
+        "endTime": 165.43,
         "tr": "即使見過世間百態 這雙眼眸仍永遠閃耀",
         "translationRef": [
           5
@@ -7287,8 +7288,8 @@ const prepared = {
         "jp": "永遠に きらり あぁ",
         "sourceTime": 165.53,
         "sourceEnd": 167.61,
-        "time": 165.53,
-        "endTime": 167.61,
+        "time": 165.43,
+        "endTime": 167.51,
         "tr": "永遠閃耀 啊",
         "translationRef": [
           24
@@ -7299,8 +7300,8 @@ const prepared = {
         "jp": "あぁ、生きてきたけど全ては夢みたい",
         "sourceTime": 167.61,
         "sourceEnd": 174.07,
-        "time": 167.61,
-        "endTime": 174.07,
+        "time": 167.51,
+        "endTime": 173.97,
         "tr": "雖然活了那麼久 卻全都像夢一場",
         "translationRef": [
           25
@@ -7311,8 +7312,8 @@ const prepared = {
         "jp": "あれもこれも",
         "sourceTime": 174.07,
         "sourceEnd": 176.62,
-        "time": 174.07,
-        "endTime": 176.62,
+        "time": 173.97,
+        "endTime": 176.52,
         "tr": "周遭萬物",
         "translationRef": [
           26
@@ -7323,8 +7324,8 @@ const prepared = {
         "jp": "魅力的でも私は君がいい",
         "sourceTime": 176.62,
         "sourceEnd": 182.13,
-        "time": 176.62,
-        "endTime": 182.13,
+        "time": 176.52,
+        "endTime": 182.03,
         "tr": "魅力橫溢 但你是我的唯一",
         "translationRef": [
           26
@@ -7335,15 +7336,15 @@ const prepared = {
         "jp": "あぁ、あぁ、あぁ、あぁ",
         "sourceTime": 182.13,
         "sourceEnd": 189.83,
-        "time": 182.13,
-        "endTime": 189.83
+        "time": 182.03,
+        "endTime": 189.73
       },
       {
         "jp": "どこにいたの 探してたよ",
         "sourceTime": 189.83,
         "sourceEnd": 193.88,
-        "time": 189.83,
-        "endTime": 193.88,
+        "time": 189.73,
+        "endTime": 193.78,
         "tr": "你之前身在何處 我找很久了",
         "translationRef": [
           8
@@ -7354,8 +7355,8 @@ const prepared = {
         "jp": "連れてって 連れてって",
         "sourceTime": 193.88,
         "sourceEnd": 198.05,
-        "time": 193.88,
-        "endTime": 198.05,
+        "time": 193.78,
+        "endTime": 197.95,
         "tr": "帶我走吧 帶我走吧",
         "translationRef": [
           9
@@ -7366,8 +7367,8 @@ const prepared = {
         "jp": "何もかも 捨ててくよ",
         "sourceTime": 198.05,
         "sourceEnd": 202.09,
-        "time": 198.05,
-        "endTime": 202.09,
+        "time": 197.95,
+        "endTime": 201.99,
         "tr": "我會為你捨棄一切",
         "translationRef": [
           10
@@ -7378,8 +7379,8 @@ const prepared = {
         "jp": "どこまでも どこまでも",
         "sourceTime": 202.09,
         "sourceEnd": 206.04,
-        "time": 202.09,
-        "endTime": 206.04,
+        "time": 201.99,
+        "endTime": 205.94,
         "tr": "隨你到任何地方 隨你到任何地方",
         "translationRef": [
           11
@@ -7390,8 +7391,8 @@ const prepared = {
         "jp": "荒れ狂う 季節の中も 群衆の中も",
         "sourceTime": 206.04,
         "sourceEnd": 211.49,
-        "time": 206.04,
-        "endTime": 211.49,
+        "time": 205.94,
+        "endTime": 211.39,
         "tr": "在暴烈狂亂的季節也好 熙來攘往的群眾中也罷",
         "translationRef": [
           12
@@ -7402,8 +7403,8 @@ const prepared = {
         "jp": "君とならば さらり さらり",
         "sourceTime": 211.49,
         "sourceEnd": 215.07,
-        "time": 211.49,
-        "endTime": 215.07,
+        "time": 211.39,
+        "endTime": 214.97,
         "tr": "只要和你在一起 就輕鬆暢達 心情輕快",
         "translationRef": [
           13
@@ -7414,8 +7415,8 @@ const prepared = {
         "jp": "新しい日々も 拙い過去も",
         "sourceTime": 215.07,
         "sourceEnd": 219.38,
-        "time": 215.07,
-        "endTime": 219.38,
+        "time": 214.97,
+        "endTime": 219.28,
         "tr": "嶄新的日子 以及拙劣的過去",
         "translationRef": [
           33
@@ -7426,8 +7427,8 @@ const prepared = {
         "jp": "全てがきらり yeah",
         "sourceTime": 219.38,
         "sourceEnd": 224.58,
-        "time": 219.38,
-        "endTime": 224.58,
+        "time": 219.28,
+        "endTime": 224.48,
         "tr": "全都璀璨閃耀",
         "translationRef": [
           33
@@ -7440,7 +7441,7 @@ const prepared = {
     "timingSourceUrl": "https://lrclib.net/tracks/14510544",
     "timingPreview": {
       "youtubeId": "TcLLpZBWsck",
-      "offsetSeconds": 0,
+      "offsetSeconds": -0.1,
       "source": "user-provided LRC"
     },
     "translationCredit": "MARUMARU 提供（PDF 未列譯者）",
@@ -10673,7 +10674,7 @@ const prepared = {
     "lyricsStatus": "imported",
     "translationStatus": "partial",
     "timingStatus": "preview",
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "lyrics": [
       {
         "jp": "Ay, ay, ay, ay, ay",
@@ -11189,14 +11190,22 @@ const prepared = {
   "Masshiro": {
     "lyricsStatus": "imported",
     "translationStatus": "partial",
-    "timingStatus": "pending",
-    "readingsStatus": "pending",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
     "lyrics": [
       {
-        "jp": "Hmm, hmm, hmm"
+        "jp": "Hmm, hmm, hmm",
+        "sourceTime": 1.41,
+        "sourceEnd": 5.12,
+        "time": 1.41,
+        "endTime": 5.12
       },
       {
-        "jp": "Hmm, hmm, hmm"
+        "jp": "Hmm, hmm, hmm",
+        "sourceTime": 5.12,
+        "sourceEnd": 15.18,
+        "time": 5.12,
+        "endTime": 15.18
       },
       {
         "jp": "真っ白な心に惹かれ",
@@ -11204,7 +11213,11 @@ const prepared = {
         "translationRef": [
           0
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 15.18,
+        "sourceEnd": 22.84,
+        "time": 15.18,
+        "endTime": 22.84
       },
       {
         "jp": "真実をさまよえば",
@@ -11212,7 +11225,11 @@ const prepared = {
         "translationRef": [
           1
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 22.84,
+        "sourceEnd": 30.56,
+        "time": 22.84,
+        "endTime": 30.56
       },
       {
         "jp": "真っ黒なところはぶち抜かれ",
@@ -11220,7 +11237,11 @@ const prepared = {
         "translationRef": [
           2
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 30.56,
+        "sourceEnd": 38.12,
+        "time": 30.56,
+        "endTime": 38.12
       },
       {
         "jp": "真新しい風にまた抱かれた",
@@ -11228,7 +11249,11 @@ const prepared = {
         "translationRef": [
           3
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 38.12,
+        "sourceEnd": 47.52,
+        "time": 38.12,
+        "endTime": 47.52
       },
       {
         "jp": "好きだよ 好きだけど",
@@ -11236,7 +11261,11 @@ const prepared = {
         "translationRef": [
           4
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 47.52,
+        "sourceEnd": 53.61,
+        "time": 47.52,
+        "endTime": 53.61
       },
       {
         "jp": "離れなくちゃ 置いてかなきゃ",
@@ -11244,7 +11273,11 @@ const prepared = {
         "translationRef": [
           5
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 53.61,
+        "sourceEnd": 63.27,
+        "time": 53.61,
+        "endTime": 63.27
       },
       {
         "jp": "好きだよ 知らんけど",
@@ -11252,7 +11285,11 @@ const prepared = {
         "translationRef": [
           6
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 63.27,
+        "sourceEnd": 68.98,
+        "time": 63.27,
+        "endTime": 68.98
       },
       {
         "jp": "私たちもう そんな頃よ",
@@ -11260,7 +11297,11 @@ const prepared = {
         "translationRef": [
           7
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 68.98,
+        "sourceEnd": 77.81,
+        "time": 68.98,
+        "endTime": 77.81
       },
       {
         "jp": "先にさよならするわ",
@@ -11268,7 +11309,11 @@ const prepared = {
         "translationRef": [
           8
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 77.81,
+        "sourceEnd": 84.62,
+        "time": 77.81,
+        "endTime": 84.62
       },
       {
         "jp": "悪いのはそうよいつも私でいいの",
@@ -11276,7 +11321,11 @@ const prepared = {
         "translationRef": [
           9
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 84.62,
+        "sourceEnd": 93.37,
+        "time": 84.62,
+        "endTime": 93.37
       },
       {
         "jp": "先に進まなければゴール",
@@ -11284,7 +11333,11 @@ const prepared = {
         "translationRef": [
           10
         ],
-        "translationMapping": "reviewed-pdf-fragment"
+        "translationMapping": "reviewed-pdf-fragment",
+        "sourceTime": 93.37,
+        "sourceEnd": 101.8,
+        "time": 93.37,
+        "endTime": 101.8
       },
       {
         "jp": "できぬゲームなのよ",
@@ -11292,7 +11345,11 @@ const prepared = {
         "translationRef": [
           10
         ],
-        "translationMapping": "reviewed-pdf-fragment"
+        "translationMapping": "reviewed-pdf-fragment",
+        "sourceTime": 101.8,
+        "sourceEnd": 107.3,
+        "time": 101.8,
+        "endTime": 107.3
       },
       {
         "jp": "真っ白な心に惹かれ",
@@ -11300,7 +11357,11 @@ const prepared = {
         "translationRef": [
           11
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 107.3,
+        "sourceEnd": 115.09,
+        "time": 107.3,
+        "endTime": 115.09
       },
       {
         "jp": "真実をさまよえば",
@@ -11308,7 +11369,11 @@ const prepared = {
         "translationRef": [
           12
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 115.09,
+        "sourceEnd": 122.47,
+        "time": 115.09,
+        "endTime": 122.47
       },
       {
         "jp": "真っ黒なところはぶち抜かれ (ぶち抜かれ)",
@@ -11316,7 +11381,11 @@ const prepared = {
         "translationRef": [
           13
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 122.47,
+        "sourceEnd": 130.52,
+        "time": 122.47,
+        "endTime": 130.52
       },
       {
         "jp": "真新しい風にまた抱かれた",
@@ -11324,19 +11393,39 @@ const prepared = {
         "translationRef": [
           14
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 130.52,
+        "sourceEnd": 154.48,
+        "time": 130.52,
+        "endTime": 154.48
       },
       {
-        "jp": "Aah (Ta-ta-tarara, ra-ta-tara)"
+        "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
+        "sourceTime": 154.48,
+        "sourceEnd": 157.93,
+        "time": 154.48,
+        "endTime": 157.93
       },
       {
-        "jp": "Aah (Ta-ta-tarara, ra-ta-tara)"
+        "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
+        "sourceTime": 157.93,
+        "sourceEnd": 161.9,
+        "time": 157.93,
+        "endTime": 161.9
       },
       {
-        "jp": "Aah (Ta-ta-tarara, ra-ta-tara)"
+        "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
+        "sourceTime": 161.9,
+        "sourceEnd": 165.95,
+        "time": 161.9,
+        "endTime": 165.95
       },
       {
-        "jp": "Aah, aah"
+        "jp": "Aah, aah",
+        "sourceTime": 165.95,
+        "sourceEnd": 170.74,
+        "time": 165.95,
+        "endTime": 170.74
       },
       {
         "jp": "先にさよならするわ (するわ)",
@@ -11344,7 +11433,11 @@ const prepared = {
         "translationRef": [
           15
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 170.74,
+        "sourceEnd": 176.9,
+        "time": 170.74,
+        "endTime": 176.9
       },
       {
         "jp": "悪いのはそうよいつも私でいいの (いいの)",
@@ -11352,7 +11445,11 @@ const prepared = {
         "translationRef": [
           16
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 176.9,
+        "sourceEnd": 186.1,
+        "time": 176.9,
+        "endTime": 186.1
       },
       {
         "jp": "先に進まなければ (ければ) ゴール",
@@ -11360,7 +11457,11 @@ const prepared = {
         "translationRef": [
           17
         ],
-        "translationMapping": "reviewed-pdf-fragment"
+        "translationMapping": "reviewed-pdf-fragment",
+        "sourceTime": 186.1,
+        "sourceEnd": 194.07,
+        "time": 186.1,
+        "endTime": 194.07
       },
       {
         "jp": "できぬゲームなのよ",
@@ -11368,7 +11469,11 @@ const prepared = {
         "translationRef": [
           17
         ],
-        "translationMapping": "reviewed-pdf-fragment"
+        "translationMapping": "reviewed-pdf-fragment",
+        "sourceTime": 194.07,
+        "sourceEnd": 199.57,
+        "time": 194.07,
+        "endTime": 199.57
       },
       {
         "jp": "真っ白な心に惹かれ (Ah, ah, aah)",
@@ -11376,7 +11481,11 @@ const prepared = {
         "translationRef": [
           18
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 199.57,
+        "sourceEnd": 207.12,
+        "time": 199.57,
+        "endTime": 207.12
       },
       {
         "jp": "真実をさまよえば (Ah, ah, aah)",
@@ -11384,7 +11493,11 @@ const prepared = {
         "translationRef": [
           19
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 207.12,
+        "sourceEnd": 214.65,
+        "time": 207.12,
+        "endTime": 214.65
       },
       {
         "jp": "真っ黒な (真っ黒な) ところはぶち抜かれ (ぶち抜かれ)",
@@ -11392,7 +11505,11 @@ const prepared = {
         "translationRef": [
           20
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 214.65,
+        "sourceEnd": 222.66,
+        "time": 214.65,
+        "endTime": 222.66
       },
       {
         "jp": "真新しい風にまた抱かれた",
@@ -11400,7 +11517,11 @@ const prepared = {
         "translationRef": [
           21
         ],
-        "translationMapping": "exact-source-text"
+        "translationMapping": "exact-source-text",
+        "sourceTime": 222.66,
+        "sourceEnd": 232.19,
+        "time": 222.66,
+        "endTime": 232.19
       },
       {
         "jp": "好きだよ 好きだけど (Ahh)",
@@ -11408,7 +11529,11 @@ const prepared = {
         "translationRef": [
           22
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 232.19,
+        "sourceEnd": 238.02,
+        "time": 232.19,
+        "endTime": 238.02
       },
       {
         "jp": "離れなくちゃ 置いてかなきゃ (Yeah)",
@@ -11416,7 +11541,11 @@ const prepared = {
         "translationRef": [
           23
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 238.02,
+        "sourceEnd": 247.46,
+        "time": 238.02,
+        "endTime": 247.46
       },
       {
         "jp": "好きだよ 知らんけど (Ayy, ye, ayy)",
@@ -11424,7 +11553,11 @@ const prepared = {
         "translationRef": [
           24
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 247.46,
+        "sourceEnd": 253.19,
+        "time": 247.46,
+        "endTime": 253.19
       },
       {
         "jp": "私たちもう そんな頃よ (Yeah, ay, hey)",
@@ -11432,11 +11565,13 @@ const prepared = {
         "translationRef": [
           25
         ],
-        "translationMapping": "reviewed-source-variant"
+        "translationMapping": "reviewed-source-variant",
+        "sourceTime": 253.19,
+        "time": 253.19
       }
     ],
     "lyricsSourceUrl": "https://lrclib.net/tracks/33296576",
-    "lyricsUsageBasis": "User supplied an updated Masshiro original text file on 2026-10-30. Despite the .lrc extension, it has no timestamps and is imported for untimed reading only; the source URL is a reference, not a verified download origin.",
+    "lyricsUsageBasis": "User supplied updated Masshiro LRC timestamps on 2026-11-14 for timeline preview; the original text and existing translations are retained. The source URL is a reference, not a verified download origin.",
     "lyricsProvenance": {
       "method": "user-provided plain text",
       "file": "真っ白.lrc",
@@ -11453,13 +11588,19 @@ const prepared = {
       "sha256": "7d46bc5a28775e2a7542617b95bf93938c84272a1f43836599aa59fc3f447a26",
       "method": "user-provided PDF; original wording retained",
       "importedAt": "2026-10-30"
+    },
+    "timingSourceUrl": "https://lrclib.net/tracks/33296576",
+    "timingPreview": {
+      "youtubeId": "XwgL4C2WaU8",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
     }
   },
   "MoEhWa": {
     "lyricsStatus": "imported",
     "translationStatus": "ready",
     "timingStatus": "preview",
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "lyrics": [
       {
         "jp": "さぁ羽のばして ここから",
@@ -12098,7 +12239,7 @@ const prepared = {
     "lyricsStatus": "imported",
     "translationStatus": "ready",
     "timingStatus": "preview",
-    "readingsStatus": "pending",
+    "readingsStatus": "ready",
     "lyrics": [
       {
         "jp": "あなたは夕日に溶けて",
@@ -12683,6 +12824,3238 @@ const prepared = {
       "method": "user-provided PDF; original wording retained",
       "importedAt": "2026-10-30"
     }
+  },
+  "HedemoNeYoLasa": {
+    "lyricsStatus": "ready",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
+    "lyrics": [
+      {
+        "jp": "野菜ばっかの生活しょんのに",
+        "sourceTime": 27.81,
+        "sourceEnd": 30.59,
+        "time": 27.81,
+        "endTime": 30.59,
+        "tr": "明明過著多吃蔬菜的生活",
+        "translationPhotoRef": [
+          0
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "腹が立つことちょっくらあんのは",
+        "sourceTime": 30.59,
+        "sourceEnd": 33.21,
+        "time": 30.59,
+        "endTime": 33.21,
+        "tr": "但有些事仍讓我火大",
+        "translationPhotoRef": [
+          1
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "カルシウムちと不足しとんじゃわ",
+        "sourceTime": 33.21,
+        "sourceEnd": 36.02,
+        "time": 33.21,
+        "endTime": 36.02,
+        "tr": "是因為鈣質稍微攝取不足",
+        "translationPhotoRef": [
+          2
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "おどれ おどれ おどれ おどれ",
+        "sourceTime": 36.02,
+        "sourceEnd": 38.61,
+        "time": 36.02,
+        "endTime": 38.61,
+        "tr": "該死啊(怒)",
+        "translationPhotoRef": [
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "慎ましやかに生きていきょんのに",
+        "sourceTime": 38.61,
+        "sourceEnd": 41.33,
+        "time": 38.61,
+        "endTime": 41.33,
+        "tr": "即使已經謙虛謹慎地活著",
+        "translationPhotoRef": [
+          4
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつもなんかが邪魔をするんじゃわ",
+        "sourceTime": 41.33,
+        "sourceEnd": 44.15,
+        "time": 41.33,
+        "endTime": 44.15,
+        "tr": "但總是遭某些事阻撓",
+        "translationPhotoRef": [
+          5
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "こんな時ゃ人目もはばからずに",
+        "sourceTime": 44.15,
+        "sourceEnd": 46.9,
+        "time": 44.15,
+        "endTime": 46.9,
+        "tr": "這種時候就別顧忌他人目光",
+        "translationPhotoRef": [
+          6
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "おどれ おどれ おどれ おどれ",
+        "sourceTime": 46.9,
+        "sourceEnd": 50.12,
+        "time": 46.9,
+        "endTime": 50.12,
+        "tr": "起舞吧",
+        "translationPhotoRef": [
+          7
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "かと思いきや正反対",
+        "sourceTime": 50.12,
+        "sourceEnd": 52.92,
+        "time": 50.12,
+        "endTime": 52.92,
+        "tr": "然而情景卻恰恰相反",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "とても平穏な新世界",
+        "sourceTime": 52.92,
+        "sourceEnd": 55.56,
+        "time": 52.92,
+        "endTime": 55.56,
+        "tr": "十分和平且安穩的新世界",
+        "translationPhotoRef": [
+          9
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "願うはここへずっと居たい",
+        "sourceTime": 55.56,
+        "sourceEnd": 59.72,
+        "time": 55.56,
+        "endTime": 59.72,
+        "tr": "希望自己可以永久停留此處",
+        "translationPhotoRef": [
+          10
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう限界",
+        "sourceTime": 59.72,
+        "sourceEnd": 61.06,
+        "time": 59.72,
+        "endTime": 61.06,
+        "tr": "我已瀕臨極限",
+        "translationPhotoRef": [
+          11
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "神様、力をちょうだい",
+        "sourceTime": 61.06,
+        "sourceEnd": 63.7,
+        "time": 61.06,
+        "endTime": 63.7,
+        "tr": "神啊，請賦予我力量",
+        "translationPhotoRef": [
+          12
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたがいれば無問題",
+        "sourceTime": 63.7,
+        "sourceEnd": 66.49,
+        "time": 63.7,
+        "endTime": 66.49,
+        "tr": "如果有你在，我一定沒問題",
+        "translationPhotoRef": [
+          13
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "変わらぬものにしがみついてたい",
+        "sourceTime": 66.49,
+        "sourceEnd": 71.25,
+        "time": 66.49,
+        "endTime": 71.25,
+        "tr": "多想深深依賴永恆不變的事物",
+        "translationPhotoRef": [
+          14
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃキック へでもねーよ",
+        "sourceTime": 71.25,
+        "sourceEnd": 73.98,
+        "time": 71.25,
+        "endTime": 73.98,
+        "tr": "你弱到不行的一踢，連屁都不是",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃパンチ へでもねーよ",
+        "sourceTime": 73.98,
+        "sourceEnd": 76.69,
+        "time": 73.98,
+        "endTime": 76.69,
+        "tr": "你弱到不行的一拳，連屁都不是",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃブロウ へでもねーよ",
+        "sourceTime": 76.69,
+        "sourceEnd": 79.46,
+        "time": 76.69,
+        "endTime": 79.46,
+        "tr": "你弱到不行的一擊，連屁都不是",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "へでもねーよ バカじゃねーよ",
+        "sourceTime": 79.46,
+        "sourceEnd": 82.14,
+        "time": 79.46,
+        "endTime": 82.14,
+        "tr": "連屁都不是 我又不是蠢蛋",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃディス へでもねーよ",
+        "sourceTime": 82.14,
+        "sourceEnd": 84.84,
+        "time": 82.14,
+        "endTime": 84.84,
+        "tr": "你弱到不行的詆毀，連屁都不是",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃヘイト へでもねーよ",
+        "sourceTime": 84.84,
+        "sourceEnd": 87.65,
+        "time": 84.84,
+        "endTime": 87.65,
+        "tr": "你弱到不行的厭惡，連屁都不是",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃマウント へでもねーよ",
+        "sourceTime": 87.65,
+        "sourceEnd": 90.44,
+        "time": 87.65,
+        "endTime": 90.44,
+        "tr": "你弱到不行的優越感，連屁都不是",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "へでもねーよ それでえーの？",
+        "sourceTime": 90.44,
+        "sourceEnd": 93.91,
+        "time": 90.44,
+        "endTime": 93.91,
+        "tr": "連屁都不是 那樣你就滿意了？",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "帰れ うちへ帰れ",
+        "sourceTime": 98.88,
+        "sourceEnd": 101.64,
+        "time": 98.88,
+        "endTime": 101.64,
+        "tr": "回去，給我滾回家",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "黙れ しばし黙れ",
+        "sourceTime": 101.64,
+        "sourceEnd": 104.21,
+        "time": 101.64,
+        "endTime": 104.21,
+        "tr": "閉嘴，暫時閉上嘴",
+        "translationPhotoRef": [
+          24
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "騒げ よそで騒げ",
+        "sourceTime": 104.21,
+        "sourceEnd": 106.78,
+        "time": 104.21,
+        "endTime": 106.78,
+        "tr": "吵鬧，去別處吵鬧",
+        "translationPhotoRef": [
+          25
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "騒げ 騒げ 騒げ 騒げ",
+        "sourceTime": 106.78,
+        "sourceEnd": 109.72,
+        "time": 106.78,
+        "endTime": 109.72,
+        "tr": "吵吵鬧鬧",
+        "translationPhotoRef": [
+          26
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "帰れ うちへ帰れ",
+        "sourceTime": 109.72,
+        "sourceEnd": 112.52,
+        "time": 109.72,
+        "endTime": 112.52,
+        "tr": "回去，給我滾回家",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "黙れ しばし黙れ",
+        "sourceTime": 112.52,
+        "sourceEnd": 115.14,
+        "time": 112.52,
+        "endTime": 115.14,
+        "tr": "閉嘴，暫時閉上嘴",
+        "translationPhotoRef": [
+          24
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "騒げ よそで騒げ",
+        "sourceTime": 115.14,
+        "sourceEnd": 117.66,
+        "time": 115.14,
+        "endTime": 117.66,
+        "tr": "吵鬧，去別處吵鬧",
+        "translationPhotoRef": [
+          25
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "騒げ 騒げ 騒げ 騒げ",
+        "sourceTime": 117.66,
+        "sourceEnd": 120.97,
+        "time": 117.66,
+        "endTime": 120.97,
+        "tr": "吵吵鬧鬧",
+        "translationPhotoRef": [
+          26
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "かと思いきや急展開",
+        "sourceTime": 120.97,
+        "sourceEnd": 123.79,
+        "time": 120.97,
+        "endTime": 123.79,
+        "tr": "然而事態忽然有意外發展",
+        "translationPhotoRef": [
+          27
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "自分次第で別世界",
+        "sourceTime": 123.79,
+        "sourceEnd": 126.58,
+        "time": 123.79,
+        "endTime": 126.58,
+        "tr": "似乎憑自身想法",
+        "translationPhotoRef": [
+          28
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "作り変えられるみたい",
+        "sourceTime": 126.58,
+        "sourceEnd": 130.62,
+        "time": 126.58,
+        "endTime": 130.62,
+        "tr": "即可重新創造出全新的世界",
+        "translationPhotoRef": [
+          29
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "信じたい",
+        "sourceTime": 130.62,
+        "sourceEnd": 132.12,
+        "time": 130.62,
+        "endTime": 132.12,
+        "tr": "但願如此",
+        "translationPhotoRef": [
+          30
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "神様、力をちょうだい",
+        "sourceTime": 132.12,
+        "sourceEnd": 134.68,
+        "time": 132.12,
+        "endTime": 134.68,
+        "tr": "神啊，請賦予我力量",
+        "translationPhotoRef": [
+          31
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "一人じゃ何も出来ない",
+        "sourceTime": 134.68,
+        "sourceEnd": 137.48,
+        "time": 134.68,
+        "endTime": 137.48,
+        "tr": "只有我一人，什麼都辦不到",
+        "translationPhotoRef": [
+          32
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "確かなものにしがみついてたい",
+        "sourceTime": 137.48,
+        "sourceEnd": 142.2,
+        "time": 137.48,
+        "endTime": 142.2,
+        "tr": "多想深深依賴明確可靠的事物",
+        "translationPhotoRef": [
+          33
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃキック へでもねーよ",
+        "sourceTime": 142.2,
+        "sourceEnd": 144.8,
+        "time": 142.2,
+        "endTime": 144.8,
+        "tr": "你弱到不行的一踢，連屁都不是",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃパンチ へでもねーよ",
+        "sourceTime": 144.8,
+        "sourceEnd": 147.46,
+        "time": 144.8,
+        "endTime": 147.46,
+        "tr": "你弱到不行的一拳，連屁都不是",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃブロウ へでもねーよ",
+        "sourceTime": 147.46,
+        "sourceEnd": 150.33,
+        "time": 147.46,
+        "endTime": 150.33,
+        "tr": "你弱到不行的一擊，連屁都不是",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "へでもねーよ バカじゃねーよ",
+        "sourceTime": 150.33,
+        "sourceEnd": 152.97,
+        "time": 150.33,
+        "endTime": 152.97,
+        "tr": "連屁都不是 我又不是蠢蛋",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃディス へでもねーよ",
+        "sourceTime": 152.97,
+        "sourceEnd": 155.72,
+        "time": 152.97,
+        "endTime": 155.72,
+        "tr": "你弱到不行的詆毀，連屁都不是",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃヘイト へでもねーよ",
+        "sourceTime": 155.72,
+        "sourceEnd": 158.55,
+        "time": 155.72,
+        "endTime": 158.55,
+        "tr": "你弱到不行的厭惡，連屁都不是",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃマウント へでもねーよ",
+        "sourceTime": 158.55,
+        "sourceEnd": 160.16,
+        "time": 158.55,
+        "endTime": 160.16,
+        "tr": "你弱到不行的優越感，連屁都不是",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "へでもねーよ それでえーの？",
+        "sourceTime": 160.16,
+        "sourceEnd": 163.98,
+        "time": 160.16,
+        "endTime": 163.98,
+        "tr": "連屁都不是 那樣你就滿意了？",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃキック",
+        "sourceTime": 163.98,
+        "sourceEnd": 166.77,
+        "time": 163.98,
+        "endTime": 166.77,
+        "tr": "你弱到不行的一踢",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 15,
+            "text": "你弱到不行的一踢"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃパンチ",
+        "sourceTime": 166.77,
+        "sourceEnd": 169.26,
+        "time": 166.77,
+        "endTime": 169.26,
+        "tr": "你弱到不行的一拳",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 16,
+            "text": "你弱到不行的一拳"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃブロウ",
+        "sourceTime": 169.26,
+        "sourceEnd": 174.77,
+        "time": 169.26,
+        "endTime": 174.77,
+        "tr": "你弱到不行的一擊",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 17,
+            "text": "你弱到不行的一擊"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃディス",
+        "sourceTime": 174.77,
+        "sourceEnd": 177.66,
+        "time": 174.77,
+        "endTime": 177.66,
+        "tr": "你弱到不行的詆毀",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 19,
+            "text": "你弱到不行的詆毀"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃヘイト",
+        "sourceTime": 177.66,
+        "sourceEnd": 180.43,
+        "time": 177.66,
+        "endTime": 180.43,
+        "tr": "你弱到不行的厭惡",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 20,
+            "text": "你弱到不行的厭惡"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あんたの軽ぃマウント",
+        "sourceTime": 180.43,
+        "sourceEnd": 184.61,
+        "time": 180.43,
+        "endTime": 184.61,
+        "tr": "你弱到不行的優越感",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 21,
+            "text": "你弱到不行的優越感"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "へでもねーよ",
+        "sourceTime": 184.61,
+        "sourceEnd": 188.05,
+        "time": 184.61,
+        "endTime": 188.05,
+        "tr": "連屁都不是",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 21,
+            "text": "連屁都不是"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/api/get/4046740",
+    "lyricsUsageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+    "timingSourceUrl": "https://lrclib.net/api/get/4046740",
+    "timingPreview": {
+      "youtubeId": "MsGDkuzrKCU",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "translationCredit": "使用者提供的專輯中文歌詞照片（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided photos; manually reviewed LRC line alignment",
+      "file": "lyrics/translations/lasa-alignment.json",
+      "photos": [
+        "PXL_20261113_180511229.jpg",
+        "PXL_20261113_162300353.jpg"
+      ],
+      "photoSha256": "369759b92dd85f5bfac4ffb6478d27624417ed31a4bce4d0b479609923232ab9",
+      "lrcSha256": "f1833a92ebecdd4662b8971dd269595e5b183ad3bcbbd012f377fc782a3fdcd2",
+      "importedAt": "2026-11-14"
+    }
+  },
+  "Yaba": {
+    "lyricsStatus": "ready",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
+    "lyrics": [
+      {
+        "jp": "気づいてほしい 認めてほしい",
+        "sourceTime": 19.55,
+        "sourceEnd": 23.5,
+        "time": 19.55,
+        "endTime": 23.5,
+        "tr": "希望被注意，希望被認可",
+        "translationPhotoRef": [
+          0
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "それだけの行為だった",
+        "sourceTime": 23.5,
+        "sourceEnd": 27.32,
+        "time": 23.5,
+        "endTime": 27.32,
+        "tr": "那麼做的意圖僅止於此",
+        "translationPhotoRef": [
+          1
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "返してほしい 愛してほしい",
+        "sourceTime": 27.32,
+        "sourceEnd": 31.02,
+        "time": 27.32,
+        "endTime": 31.02,
+        "tr": "想要得到回報，想要被人愛著",
+        "translationPhotoRef": [
+          2
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "そんなの愛じゃなかった",
+        "sourceTime": 31.02,
+        "sourceEnd": 35.15,
+        "time": 31.02,
+        "endTime": 35.15,
+        "tr": "那根本就不是愛",
+        "translationPhotoRef": [
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "求めて 探して 見つけて 失ったけど",
+        "sourceTime": 35.15,
+        "sourceEnd": 42.82,
+        "time": 35.15,
+        "endTime": 42.82,
+        "tr": "當初渴望並探尋，在找到後又失去",
+        "translationPhotoRef": [
+          4
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "追いかけ続ける あの絵空事",
+        "sourceTime": 42.82,
+        "sourceEnd": 49.76,
+        "time": 42.82,
+        "endTime": 49.76,
+        "tr": "不過我仍會持續追逐那場白日夢",
+        "translationPhotoRef": [
+          5
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "さっさと行こうか",
+        "sourceTime": 49.76,
+        "sourceEnd": 52.1,
+        "time": 49.76,
+        "endTime": 52.1,
+        "tr": "趕緊出發吧",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 6,
+            "text": "趕緊出發吧"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もっと遠くへ 高いとこまで",
+        "sourceTime": 52.1,
+        "sourceEnd": 58.09,
+        "time": 52.1,
+        "endTime": 58.09,
+        "tr": "往遠方去／直到抵達高處",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 6,
+            "text": "往遠方去"
+          },
+          7
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "その目を覚まして どこまでも",
+        "sourceTime": 58.09,
+        "sourceEnd": 62.55,
+        "time": 58.09,
+        "endTime": 62.55,
+        "tr": "睜開你的雙眼 直至天涯海角",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "どこまでも",
+        "sourceTime": 62.55,
+        "sourceEnd": 64.68,
+        "time": 62.55,
+        "endTime": 64.68,
+        "tr": "直至天涯海角",
+        "translationPhotoRef": [
+          9
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何度も何度も墓まで行って",
+        "sourceTime": 64.68,
+        "sourceEnd": 68.49,
+        "time": 64.68,
+        "endTime": 68.49,
+        "tr": "到過墳墓的次數數不清",
+        "translationPhotoRef": [
+          10
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何度も何度もその手合わして",
+        "sourceTime": 68.49,
+        "sourceEnd": 72.65,
+        "time": 68.49,
+        "endTime": 72.65,
+        "tr": "雙手合十無數遍",
+        "translationPhotoRef": [
+          11
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "やば やば やば やば",
+        "sourceTime": 72.65,
+        "sourceEnd": 76.14,
+        "time": 72.65,
+        "endTime": 76.14,
+        "tr": "糟了、糟了、糟了、糟了",
+        "translationPhotoRef": [
+          12
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "傷付けないでよ",
+        "sourceTime": 76.14,
+        "sourceEnd": 78.24,
+        "time": 76.14,
+        "endTime": 78.24,
+        "tr": "不要傷害我",
+        "translationPhotoRef": [
+          13
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "裏切らないでよ",
+        "sourceTime": 78.24,
+        "sourceEnd": 79.94,
+        "time": 78.24,
+        "endTime": 79.94,
+        "tr": "不要背叛我",
+        "translationPhotoRef": [
+          14
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "愛した日々は確かだっけ？",
+        "sourceTime": 79.94,
+        "sourceEnd": 83.74,
+        "time": 79.94,
+        "endTime": 83.74,
+        "tr": "過去相愛的日子是否真實？",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もうそれ以上何も言わないで",
+        "sourceTime": 83.74,
+        "sourceEnd": 91.48,
+        "time": 83.74,
+        "endTime": 91.48,
+        "tr": "什麼都別再說了",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "傷付けないから",
+        "sourceTime": 91.48,
+        "sourceEnd": 93.54,
+        "time": 91.48,
+        "endTime": 93.54,
+        "tr": "我不會傷害你",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "裏切らないから",
+        "sourceTime": 93.54,
+        "sourceEnd": 95.61,
+        "time": 93.54,
+        "endTime": 95.61,
+        "tr": "我不會背叛你",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう もう もう もう",
+        "sourceTime": 95.61,
+        "sourceEnd": 103.27,
+        "time": 95.61,
+        "endTime": 103.27,
+        "tr": "再也不會",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう もう もう もう",
+        "sourceTime": 103.27,
+        "sourceEnd": 111.32,
+        "time": 103.27,
+        "endTime": 111.32,
+        "tr": "再也不會",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "今さら何言ったって",
+        "sourceTime": 111.32,
+        "sourceEnd": 115.02,
+        "time": 111.32,
+        "endTime": 115.02,
+        "tr": "不管現在說什麼",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "既には手遅れでって",
+        "sourceTime": 115.02,
+        "sourceEnd": 120.74,
+        "time": 115.02,
+        "endTime": 120.74,
+        "tr": "都太遲了",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "言われないと思ってたでしょ",
+        "sourceTime": 120.74,
+        "sourceEnd": 126.76,
+        "time": 120.74,
+        "endTime": 126.76,
+        "tr": "你沒想到我會這麼說吧？",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "同じことが何度も",
+        "sourceTime": 126.76,
+        "sourceEnd": 130.47,
+        "time": 126.76,
+        "endTime": 130.47,
+        "tr": "以為只會有相同情景",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ただ繰り返されるだろうと",
+        "sourceTime": 130.47,
+        "sourceEnd": 136.09,
+        "time": 130.47,
+        "endTime": 136.09,
+        "tr": "不停重演",
+        "translationPhotoRef": [
+          24
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "安い夢を生きてたでしょ",
+        "sourceTime": 136.09,
+        "sourceEnd": 141.48,
+        "time": 136.09,
+        "endTime": 141.48,
+        "tr": "你至今都活在廉價美夢中吧？",
+        "translationPhotoRef": [
+          25
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "一緒に行こうか",
+        "sourceTime": 141.48,
+        "sourceEnd": 143.62,
+        "time": 141.48,
+        "endTime": 143.62,
+        "tr": "一起走吧",
+        "translationPhotoRef": [
+          26
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "誰も見捨てたりしないから",
+        "sourceTime": 143.62,
+        "sourceEnd": 149.32,
+        "time": 143.62,
+        "endTime": 149.32,
+        "tr": "我不會拋下任何人",
+        "translationPhotoRef": [
+          27
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "君が望むまで いつまでも",
+        "sourceTime": 149.32,
+        "sourceEnd": 154.08,
+        "time": 149.32,
+        "endTime": 154.08,
+        "tr": "只要你如此希望",
+        "translationPhotoRef": [
+          28
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつまでも ああ",
+        "sourceTime": 154.08,
+        "sourceEnd": 156.08,
+        "time": 154.08,
+        "endTime": 156.08,
+        "tr": "我會永遠伴你身側",
+        "translationPhotoRef": [
+          29
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何度も何度も墓まで行って",
+        "sourceTime": 156.08,
+        "sourceEnd": 159.8,
+        "time": 156.08,
+        "endTime": 159.8,
+        "tr": "到過墳墓的次數數不清",
+        "translationPhotoRef": [
+          30
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何度も何度もその手合わして",
+        "sourceTime": 159.8,
+        "sourceEnd": 164.1,
+        "time": 159.8,
+        "endTime": 164.1,
+        "tr": "雙手合十無數遍",
+        "translationPhotoRef": [
+          31
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "やば やば やば やば",
+        "sourceTime": 164.1,
+        "sourceEnd": 167.86,
+        "time": 164.1,
+        "endTime": 167.86,
+        "tr": "糟了、糟了、糟了、糟了",
+        "translationPhotoRef": [
+          32
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "傷付けないでよ",
+        "sourceTime": 167.86,
+        "sourceEnd": 169.63,
+        "time": 167.86,
+        "endTime": 169.63,
+        "tr": "不要傷害我",
+        "translationPhotoRef": [
+          33
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "裏切らないでよ",
+        "sourceTime": 169.63,
+        "sourceEnd": 171.56,
+        "time": 169.63,
+        "endTime": 171.56,
+        "tr": "不要背叛我",
+        "translationPhotoRef": [
+          34
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "愛した日々は確かだっけ？",
+        "sourceTime": 171.56,
+        "sourceEnd": 175.22,
+        "time": 171.56,
+        "endTime": 175.22,
+        "tr": "過去相愛的日子是否真實？",
+        "translationPhotoRef": [
+          35
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もうそれ以上何も言わないで yeah",
+        "sourceTime": 175.22,
+        "sourceEnd": 183.05,
+        "time": 175.22,
+        "endTime": 183.05,
+        "tr": "什麼都別再說了",
+        "translationPhotoRef": [
+          36
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "傷付けないから",
+        "sourceTime": 183.05,
+        "sourceEnd": 184.85,
+        "time": 183.05,
+        "endTime": 184.85,
+        "tr": "我不會傷害你",
+        "translationPhotoRef": [
+          37
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "裏切らないから",
+        "sourceTime": 184.85,
+        "sourceEnd": 192.58,
+        "time": 184.85,
+        "endTime": 192.58,
+        "tr": "我不會背叛你",
+        "translationPhotoRef": [
+          38
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう もう もう もう",
+        "sourceTime": 192.58,
+        "sourceEnd": 202.07,
+        "time": 192.58,
+        "endTime": 202.07,
+        "tr": "再也不會",
+        "translationPhotoRef": [
+          39
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう もう ah",
+        "sourceTime": 202.07,
+        "sourceEnd": 209.86,
+        "time": 202.07,
+        "endTime": 209.86,
+        "tr": "再也不會。",
+        "translationPhotoRef": [
+          40
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう もう もう もう",
+        "sourceTime": 209.86,
+        "sourceEnd": 218.67,
+        "time": 209.86,
+        "endTime": 218.67,
+        "tr": "再也不會",
+        "translationPhotoRef": [
+          39
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/api/get/4046742",
+    "lyricsUsageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+    "timingSourceUrl": "https://lrclib.net/api/get/4046742",
+    "timingPreview": {
+      "youtubeId": "7xbokCesviM",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "translationCredit": "使用者提供的專輯中文歌詞照片（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided photos; manually reviewed LRC line alignment",
+      "file": "lyrics/translations/lasa-alignment.json",
+      "photos": [
+        "PXL_20261113_162300353.jpg",
+        "PXL_20261113_162306026.jpg"
+      ],
+      "photoSha256": "9ad760f6e869e6549ca119d7adbedf679764a1de505b10442bee80098b892e43",
+      "lrcSha256": "45dab987a397a395fd37ad26efa3326fef64185d1a5348ea55d69124473c8508",
+      "importedAt": "2026-11-14"
+    }
+  },
+  "MoEhYo": {
+    "lyricsStatus": "ready",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
+    "lyrics": [
+      {
+        "jp": "しょげた顔をひっさげて",
+        "sourceTime": 8.28,
+        "sourceEnd": 15.37,
+        "time": 8.28,
+        "endTime": 15.37,
+        "tr": "你擺出一副沮喪的表情",
+        "translationPhotoRef": [
+          0
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "石ころを蹴っ飛ばして",
+        "sourceTime": 15.37,
+        "sourceEnd": 22.29,
+        "time": 15.37,
+        "endTime": 22.29,
+        "tr": "踢飛路邊的小石子",
+        "translationPhotoRef": [
+          1
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "太陽が泣いてるよ",
+        "sourceTime": 22.29,
+        "sourceEnd": 29.01,
+        "time": 22.29,
+        "endTime": 29.01,
+        "tr": "太陽正在哭泣",
+        "translationPhotoRef": [
+          2
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ほら見上げてみて",
+        "sourceTime": 29.01,
+        "sourceEnd": 36,
+        "time": 29.01,
+        "endTime": 36,
+        "tr": "抬起你的頭仰望吧",
+        "translationPhotoRef": [
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ほんとは君の中で",
+        "sourceTime": 36,
+        "sourceEnd": 43.12,
+        "time": 36,
+        "endTime": 43.12,
+        "tr": "其實在你的心中",
+        "translationPhotoRef": [
+          4
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "くすぶる熱い光",
+        "sourceTime": 43.12,
+        "sourceEnd": 50.09,
+        "time": 43.12,
+        "endTime": 50.09,
+        "tr": "炙熱光芒在悶燒",
+        "translationPhotoRef": [
+          5
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "太陽に叫ぼうよ",
+        "sourceTime": 50.09,
+        "sourceEnd": 56.86,
+        "time": 50.09,
+        "endTime": 56.86,
+        "tr": "面向太陽呼喊",
+        "translationPhotoRef": [
+          6
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ほら見上げてみて",
+        "sourceTime": 56.86,
+        "sourceEnd": 63.02,
+        "time": 56.86,
+        "endTime": 63.02,
+        "tr": "抬起你的頭仰望吧",
+        "translationPhotoRef": [
+          7
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "燃えよ",
+        "sourceTime": 63.02,
+        "sourceEnd": 65.43,
+        "time": 63.02,
+        "endTime": 65.43,
+        "tr": "燃燒吧",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あの空に燃えよ",
+        "sourceTime": 65.43,
+        "sourceEnd": 68.75,
+        "time": 65.43,
+        "endTime": 68.75,
+        "tr": "朝著那片天空燃燒吧",
+        "translationPhotoRef": [
+          9
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "明日なんか来ると思わずに燃えよ",
+        "sourceTime": 68.75,
+        "sourceEnd": 75.5,
+        "time": 68.75,
+        "endTime": 75.5,
+        "tr": "別想著明天將到來，盡情燃燒吧",
+        "translationPhotoRef": [
+          10
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "クールなフリ もうええよ",
+        "sourceTime": 75.5,
+        "sourceEnd": 79.31,
+        "time": 75.5,
+        "endTime": 79.31,
+        "tr": "不必裝作冷酷的樣子",
+        "translationPhotoRef": [
+          11
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "強がりも もうええよ",
+        "sourceTime": 79.31,
+        "sourceEnd": 82.44,
+        "time": 79.31,
+        "endTime": 82.44,
+        "tr": "也不須故作堅強",
+        "translationPhotoRef": [
+          12
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "汗かいてもええよ",
+        "sourceTime": 82.44,
+        "sourceEnd": 85.9,
+        "time": 82.44,
+        "endTime": 85.9,
+        "tr": "可以縱情揮灑汗水",
+        "translationPhotoRef": [
+          13
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "恥かいてもええよ",
+        "sourceTime": 85.9,
+        "sourceEnd": 90.73,
+        "time": 85.9,
+        "endTime": 90.73,
+        "tr": "即使出糗也無妨",
+        "translationPhotoRef": [
+          14
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "簡単じゃないかもね",
+        "sourceTime": 98.74,
+        "sourceEnd": 105.62,
+        "time": 98.74,
+        "endTime": 105.62,
+        "tr": "這或許並不簡單",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "でも難しくはない",
+        "sourceTime": 105.62,
+        "sourceEnd": 112.57,
+        "time": 105.62,
+        "endTime": 112.57,
+        "tr": "卻也沒那麼艱難",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "迷いながら探すの",
+        "sourceTime": 112.57,
+        "sourceEnd": 119.31,
+        "time": 112.57,
+        "endTime": 119.31,
+        "tr": "一邊迷惘一邊尋找",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "それはみんな同じ",
+        "sourceTime": 119.31,
+        "sourceEnd": 125.63,
+        "time": 119.31,
+        "endTime": 125.63,
+        "tr": "大家都是那麼做",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "燃えよ",
+        "sourceTime": 125.63,
+        "sourceEnd": 128.12,
+        "time": 125.63,
+        "endTime": 128.12,
+        "tr": "燃燒吧",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あの空に燃えよ",
+        "sourceTime": 128.12,
+        "sourceEnd": 131.43,
+        "time": 128.12,
+        "endTime": 131.43,
+        "tr": "朝著那片天空燃燒吧",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "明日なんか来ると思わずに燃えよ",
+        "sourceTime": 131.43,
+        "sourceEnd": 138.01,
+        "time": 131.43,
+        "endTime": 138.01,
+        "tr": "別想著明天將到來，盡情燃燒吧",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "クールなフリ もうええよ",
+        "sourceTime": 138.01,
+        "sourceEnd": 141.95,
+        "time": 138.01,
+        "endTime": 141.95,
+        "tr": "不必裝作冷酷的樣子",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "強がりも もうええよ",
+        "sourceTime": 141.95,
+        "sourceEnd": 145.18,
+        "time": 141.95,
+        "endTime": 145.18,
+        "tr": "也不須故作堅強",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "汗かいてもええよ",
+        "sourceTime": 145.18,
+        "sourceEnd": 148.4,
+        "time": 145.18,
+        "endTime": 148.4,
+        "tr": "可以縱情揮灑汗水",
+        "translationPhotoRef": [
+          24
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "恥かいてもええよ",
+        "sourceTime": 148.4,
+        "sourceEnd": 154.23,
+        "time": 148.4,
+        "endTime": 154.23,
+        "tr": "即使出糗也無妨",
+        "translationPhotoRef": [
+          25
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "確かなものには Keep, hold on",
+        "sourceTime": 181.28,
+        "sourceEnd": 184.58,
+        "time": 181.28,
+        "endTime": 184.58,
+        "tr": "對於明確的事物 Keep, hold on",
+        "translationPhotoRef": [
+          26
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "なら明日のことなど No, no baby",
+        "sourceTime": 184.58,
+        "sourceEnd": 188.35,
+        "time": 184.58,
+        "endTime": 188.35,
+        "tr": "那麼針對明天的事情 No, no baby",
+        "translationPhotoRef": [
+          27
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "今日だけ見つめて Please stay strong",
+        "sourceTime": 188.35,
+        "sourceEnd": 191.44,
+        "time": 188.35,
+        "endTime": 191.44,
+        "tr": "只凝望著今天 Please stay strong",
+        "translationPhotoRef": [
+          28
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "毎日が Birthday, we are babies",
+        "sourceTime": 191.44,
+        "sourceEnd": 196.09,
+        "time": 191.44,
+        "endTime": 196.09,
+        "tr": "每天都會是 Birthday, we are babies",
+        "translationPhotoRef": [
+          29
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あぁ マジで何も怖くない",
+        "sourceTime": 196.09,
+        "sourceEnd": 202.24,
+        "time": 196.09,
+        "endTime": 202.24,
+        "tr": "啊，真的沒什麼好怕的",
+        "translationPhotoRef": [
+          30
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "この風のって進め先へ",
+        "sourceTime": 202.24,
+        "sourceEnd": 209.21,
+        "time": 202.24,
+        "endTime": 209.21,
+        "tr": "乘著這陣風邁向前方吧",
+        "translationPhotoRef": [
+          31
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "燃えよ",
+        "sourceTime": 209.21,
+        "sourceEnd": 211.59,
+        "time": 209.21,
+        "endTime": 211.59,
+        "tr": "燃燒吧",
+        "translationPhotoRef": [
+          32
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あの空に燃えよ",
+        "sourceTime": 211.59,
+        "sourceEnd": 214.75,
+        "time": 211.59,
+        "endTime": 214.75,
+        "tr": "朝著那片天空燃燒吧",
+        "translationPhotoRef": [
+          33
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "明日なんか来ると思わずに燃えよ",
+        "sourceTime": 214.75,
+        "sourceEnd": 221.92,
+        "time": 214.75,
+        "endTime": 221.92,
+        "tr": "別想著明天將到來，盡情燃燒吧",
+        "translationPhotoRef": [
+          34
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "クールなフリ もうええよ",
+        "sourceTime": 221.92,
+        "sourceEnd": 225.52,
+        "time": 221.92,
+        "endTime": 225.52,
+        "tr": "不必裝作冷酷的樣子",
+        "translationPhotoRef": [
+          35
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "強がりも もうええよ",
+        "sourceTime": 225.52,
+        "sourceEnd": 228.74,
+        "time": 225.52,
+        "endTime": 228.74,
+        "tr": "也不須故作堅強",
+        "translationPhotoRef": [
+          36
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "汗かいてもええよ",
+        "sourceTime": 228.74,
+        "sourceEnd": 232.08,
+        "time": 228.74,
+        "endTime": 232.08,
+        "tr": "可以縱情揮灑汗水",
+        "translationPhotoRef": [
+          37
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "恥かいてもええよ",
+        "sourceTime": 232.08,
+        "sourceEnd": 236.04,
+        "time": 232.08,
+        "endTime": 236.04,
+        "tr": "即使出糗也無妨",
+        "translationPhotoRef": [
+          38
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あの空に燃えよ",
+        "sourceTime": 236.04,
+        "sourceEnd": 240.58,
+        "time": 236.04,
+        "endTime": 240.58,
+        "tr": "朝著那片天空燃燒吧",
+        "translationPhotoRef": [
+          39
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "燃えよ 燃えよ 燃えよ",
+        "sourceTime": 240.58,
+        "sourceEnd": 250.94,
+        "time": 240.58,
+        "endTime": 250.94,
+        "tr": "燃燒吧／燃燒吧／燃燒吧",
+        "translationPhotoRef": [
+          8,
+          8,
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "燃えよ 燃えよ 燃えよ",
+        "sourceTime": 250.94,
+        "sourceEnd": 261.34,
+        "time": 250.94,
+        "endTime": 261.34,
+        "tr": "燃燒吧／燃燒吧／燃燒吧",
+        "translationPhotoRef": [
+          8,
+          8,
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "燃えよ",
+        "sourceTime": 261.34,
+        "sourceEnd": 263.49,
+        "time": 261.34,
+        "endTime": 263.49,
+        "tr": "燃燒吧",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/api/get/8512511",
+    "lyricsUsageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+    "timingSourceUrl": "https://lrclib.net/api/get/8512511",
+    "timingPreview": {
+      "youtubeId": "rZxR9bpsYLU",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "translationCredit": "使用者提供的專輯中文歌詞照片（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided photos; manually reviewed LRC line alignment",
+      "file": "lyrics/translations/lasa-alignment.json",
+      "photos": [
+        "PXL_20261113_162312051.jpg",
+        "PXL_20261113_162315495.jpg"
+      ],
+      "photoSha256": "573df376f680e426419f00d7562cfd08ab049ac7a35765260fd955b7fb320ca3",
+      "lrcSha256": "0ea298d0e2206bf010952145c09d08f5970101b612bf8c438f9e4cdc769cf2f0",
+      "importedAt": "2026-11-14"
+    }
+  },
+  "LonelyRhapsody": {
+    "lyricsStatus": "ready",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
+    "lyrics": [
+      {
+        "jp": "探しても 寄り添う肩はなく",
+        "sourceTime": 17.55,
+        "sourceEnd": 22.64,
+        "time": 17.55,
+        "endTime": 22.64,
+        "tr": "到處探尋都沒找到能依偎的肩膀",
+        "translationPhotoRef": [
+          0
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ただ単に 飲まれてく",
+        "sourceTime": 22.64,
+        "sourceEnd": 26.4,
+        "time": 22.64,
+        "endTime": 26.4,
+        "tr": "只能任由自己被吞沒",
+        "translationPhotoRef": [
+          1
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "空っぽな人波に 溶けてゆく",
+        "sourceTime": 26.4,
+        "sourceEnd": 36.79,
+        "time": 26.4,
+        "endTime": 36.79,
+        "tr": "融進那空虛的人潮",
+        "translationPhotoRef": [
+          2
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "見つめても みんなおんなじ顔",
+        "sourceTime": 36.79,
+        "sourceEnd": 41.85,
+        "time": 36.79,
+        "endTime": 41.85,
+        "tr": "即便仔細凝視 每個人也都是相同面孔",
+        "translationPhotoRef": [
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "私もそう 入れ物が",
+        "sourceTime": 41.85,
+        "sourceEnd": 45.54,
+        "time": 41.85,
+        "endTime": 45.54,
+        "tr": "連我自己也一樣",
+        "translationPhotoRef": [
+          4
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ぱっと見ちがうだけ 溶けてゆく",
+        "sourceTime": 45.54,
+        "sourceEnd": 51.21,
+        "time": 45.54,
+        "endTime": 51.21,
+        "tr": "只不過乍看之下是不同的容器 逐漸消融",
+        "translationPhotoRef": [
+          5
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "溶けてゆく",
+        "sourceTime": 51.21,
+        "sourceEnd": 54.33,
+        "time": 51.21,
+        "endTime": 54.33,
+        "tr": "逐漸消融…",
+        "translationPhotoRef": [
+          6
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "溶けてゆく",
+        "sourceTime": 54.33,
+        "sourceEnd": 57.56,
+        "time": 54.33,
+        "endTime": 57.56,
+        "tr": "逐漸消融…",
+        "translationPhotoRef": [
+          7
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "目を覚ます",
+        "sourceTime": 57.56,
+        "sourceEnd": 62.66,
+        "time": 57.56,
+        "endTime": 62.66,
+        "tr": "然後睜眼醒過來…",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "孤独なんて幻想",
+        "sourceTime": 62.66,
+        "sourceEnd": 65.85,
+        "time": 62.66,
+        "endTime": 65.85,
+        "tr": "…孤獨僅是幻想",
+        "translationPhotoRef": [
+          9
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "気にしなきゃいいの",
+        "sourceTime": 65.85,
+        "sourceEnd": 69,
+        "time": 65.85,
+        "endTime": 69,
+        "tr": "根本無需在意",
+        "translationPhotoRef": [
+          10
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "みんな同じ星",
+        "sourceTime": 69,
+        "sourceEnd": 72.27,
+        "time": 69,
+        "endTime": 72.27,
+        "tr": "我們都在同一片星空下",
+        "translationPhotoRef": [
+          11
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "みんな同じ呼吸",
+        "sourceTime": 72.27,
+        "sourceEnd": 78.37,
+        "time": 72.27,
+        "endTime": 78.37,
+        "tr": "大家都呼吸著相同的空氣…",
+        "translationPhotoRef": [
+          12
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何をしたの 何もしてないよ",
+        "sourceTime": 85.81,
+        "sourceEnd": 91.99,
+        "time": 85.81,
+        "endTime": 91.99,
+        "tr": "你做了什麼？我什麼都沒做",
+        "translationPhotoRef": [
+          14
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "君は誰なの 僕は僕だよ",
+        "sourceTime": 91.99,
+        "sourceEnd": 98.36,
+        "time": 91.99,
+        "endTime": 98.36,
+        "tr": "你是誰？我就是我",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あなたもそうでしょ？",
+        "sourceTime": 98.36,
+        "sourceEnd": 101.58,
+        "time": 98.36,
+        "endTime": 101.58,
+        "tr": "你不也是嗎？",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "なんで泣いてるの 何が悲しいの",
+        "sourceTime": 101.58,
+        "sourceEnd": 107.97,
+        "time": 101.58,
+        "endTime": 107.97,
+        "tr": "為何在哭泣？是什麼讓你感到悲傷？",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう分からないよ",
+        "sourceTime": 107.97,
+        "sourceEnd": 113.12,
+        "time": 107.97,
+        "endTime": 113.12,
+        "tr": "我已經搞不懂了",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ああ",
+        "sourceTime": 113.12,
+        "sourceEnd": 115.62,
+        "time": 113.12,
+        "endTime": 115.62,
+        "tr": "啊",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ため息は過ぎ去り",
+        "sourceTime": 115.62,
+        "sourceEnd": 120.98,
+        "time": 115.62,
+        "endTime": 120.98,
+        "tr": "嘆息就此消逝…",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう歌えない ロンリーラプソディ",
+        "sourceTime": 120.98,
+        "sourceEnd": 128.42,
+        "time": 120.98,
+        "endTime": 128.42,
+        "tr": "已無法再歌唱的孤獨狂想曲",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ここはどこ みんな何してるの",
+        "sourceTime": 139.37,
+        "sourceEnd": 144.15,
+        "time": 139.37,
+        "endTime": 144.15,
+        "tr": "這裡是哪裡？大家在做什麼？",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "同じ時 生きてても",
+        "sourceTime": 144.15,
+        "sourceEnd": 147.86,
+        "time": 144.15,
+        "endTime": 147.86,
+        "tr": "既然都活在相同的時間中",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "なぜ誰もいないの 泣いてやろう",
+        "sourceTime": 147.86,
+        "sourceEnd": 160.11,
+        "time": 147.86,
+        "endTime": 160.11,
+        "tr": "為什麼還空無一人？我要放聲大哭…",
+        "translationPhotoRef": [
+          24
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "笑ったろう",
+        "sourceTime": 160.11,
+        "sourceEnd": 164.96,
+        "time": 160.11,
+        "endTime": 164.96,
+        "tr": "我要縱情大笑…",
+        "translationPhotoRef": [
+          25
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "孤独なんてゲーム",
+        "sourceTime": 164.96,
+        "sourceEnd": 168.39,
+        "time": 164.96,
+        "endTime": 168.39,
+        "tr": "孤獨不過是場遊戲",
+        "translationPhotoRef": [
+          26
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "楽しめばいいの",
+        "sourceTime": 168.39,
+        "sourceEnd": 171.56,
+        "time": 168.39,
+        "endTime": 171.56,
+        "tr": "盡情享受就好",
+        "translationPhotoRef": [
+          27
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "みんな一人でしょ",
+        "sourceTime": 171.56,
+        "sourceEnd": 174.75,
+        "time": 171.56,
+        "endTime": 174.75,
+        "tr": "我們都是孤身一人",
+        "translationPhotoRef": [
+          28
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "みんな一つでしょ",
+        "sourceTime": 174.75,
+        "sourceEnd": 180.84,
+        "time": 174.75,
+        "endTime": 180.84,
+        "tr": "大家都是一心同體",
+        "translationPhotoRef": [
+          29
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何をしたの 何もしてないよ",
+        "sourceTime": 188.33,
+        "sourceEnd": 194.14,
+        "time": 188.33,
+        "endTime": 194.14,
+        "tr": "你做了什麼？我什麼都沒做",
+        "translationPhotoRef": [
+          30
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "君は誰なの 僕は君だよ",
+        "sourceTime": 194.14,
+        "sourceEnd": 200.5,
+        "time": 194.14,
+        "endTime": 200.5,
+        "translationPendingReason": "LRC 為『君は誰なの 僕は君だよ』（我是你），照片卻印『你是誰？我就是我』；意思不同，中文暫留白待確認。"
+      },
+      {
+        "jp": "何も違わないよ",
+        "sourceTime": 200.5,
+        "sourceEnd": 203.98,
+        "time": 200.5,
+        "endTime": 203.98,
+        "tr": "沒有任何不同",
+        "translationPhotoRef": [
+          32
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "なんで泣いてるの 何が悲しいの",
+        "sourceTime": 203.98,
+        "sourceEnd": 210.14,
+        "time": 203.98,
+        "endTime": 210.14,
+        "tr": "為何在哭泣？是什麼讓你感到悲傷？",
+        "translationPhotoRef": [
+          33
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう分からないよ",
+        "sourceTime": 210.14,
+        "sourceEnd": 215.5,
+        "time": 210.14,
+        "endTime": 215.5,
+        "tr": "我已經搞不懂了",
+        "translationPhotoRef": [
+          34
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ああ",
+        "sourceTime": 215.5,
+        "sourceEnd": 217.84,
+        "time": 215.5,
+        "endTime": 217.84,
+        "tr": "啊",
+        "translationPhotoRef": [
+          35
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ため息は幻",
+        "sourceTime": 217.84,
+        "sourceEnd": 223.48,
+        "time": 217.84,
+        "endTime": 223.48,
+        "tr": "嘆息化為幻影…",
+        "translationPhotoRef": [
+          36
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう聴こえない ロンリーラプソディ",
+        "sourceTime": 223.48,
+        "sourceEnd": 232.91,
+        "time": 223.48,
+        "endTime": 232.91,
+        "tr": "已無法再聽到的孤獨狂想曲",
+        "translationPhotoRef": [
+          37
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ロンリーラプソディ",
+        "sourceTime": 232.91,
+        "sourceEnd": 239.37,
+        "time": 232.91,
+        "endTime": 239.37,
+        "tr": "孤獨狂想曲",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 37,
+            "text": "孤獨狂想曲"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ロンリーラプソディ",
+        "sourceTime": 239.37,
+        "sourceEnd": 245.79,
+        "time": 239.37,
+        "endTime": 245.79,
+        "tr": "孤獨狂想曲",
+        "translationPhotoRef": [
+          {
+            "sourceLine": 37,
+            "text": "孤獨狂想曲"
+          }
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もう聴こえない ロンリーラプソディ",
+        "sourceTime": 257.25,
+        "sourceEnd": 263.76,
+        "time": 257.25,
+        "endTime": 263.76,
+        "tr": "已無法再聽到的孤獨狂想曲",
+        "translationPhotoRef": [
+          38
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "時代遅れのロンリーラプソディ",
+        "sourceTime": 263.76,
+        "sourceEnd": 267.92,
+        "time": 263.76,
+        "endTime": 267.92,
+        "tr": "跟不上時代的孤獨狂想曲",
+        "translationPhotoRef": [
+          39
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/api/get/4046743",
+    "lyricsUsageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+    "timingSourceUrl": "https://lrclib.net/api/get/4046743",
+    "timingPreview": {
+      "youtubeId": "I3oUsW9bXvQ",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "translationCredit": "使用者提供的專輯中文歌詞照片（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided photos; manually reviewed LRC line alignment",
+      "file": "lyrics/translations/lasa-alignment.json",
+      "photos": [
+        "PXL_20261113_162338434.jpg",
+        "PXL_20261113_162341532.jpg"
+      ],
+      "photoSha256": "2e596ba6ed28b377f2b7bf9789a04ee2139a788c8981918a109bf045f952f7e9",
+      "lrcSha256": "6acd1667650babf87843a4827dd61e7287b9526c31a6bbcee6f1b636157e65be",
+      "importedAt": "2026-11-14"
+    }
+  },
+  "ByeForNow": {
+    "lyricsStatus": "ready",
+    "translationStatus": "ready",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
+    "lyrics": [
+      {
+        "jp": "あたたかな日差しに",
+        "sourceTime": 26.9,
+        "sourceEnd": 35.06,
+        "time": 26.9,
+        "endTime": 35.06,
+        "tr": "當我在溫暖的陽光下",
+        "translationPhotoRef": [
+          0
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ひれ伏すとき",
+        "sourceTime": 35.06,
+        "sourceEnd": 38.66,
+        "time": 35.06,
+        "endTime": 38.66,
+        "tr": "跪地趴伏",
+        "translationPhotoRef": [
+          1
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "あなたは揺らめく",
+        "sourceTime": 38.66,
+        "sourceEnd": 43.75,
+        "time": 38.66,
+        "endTime": 43.75,
+        "tr": "你引導了方向／給搖擺不定的我",
+        "translationPhotoRef": [
+          2,
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "わたしを導いた",
+        "sourceTime": 43.75,
+        "sourceEnd": 51.16,
+        "time": 43.75,
+        "endTime": 51.16,
+        "tr": "你引導了方向／給搖擺不定的我",
+        "translationPhotoRef": [
+          2,
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "なにもない荒野は",
+        "sourceTime": 51.16,
+        "sourceEnd": 58.49,
+        "time": 51.16,
+        "endTime": 58.49,
+        "tr": "在空無一物的荒野",
+        "translationPhotoRef": [
+          4
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "このわたしは",
+        "sourceTime": 58.49,
+        "sourceEnd": 61.43,
+        "time": 58.49,
+        "endTime": 61.43,
+        "tr": "這樣的我",
+        "translationPhotoRef": [
+          5
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ありあまるほどの",
+        "sourceTime": 61.43,
+        "sourceEnd": 67.23,
+        "time": 61.43,
+        "endTime": 67.23,
+        "tr": "將不可勝數的",
+        "translationPhotoRef": [
+          6
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "果実に口づけた",
+        "sourceTime": 67.23,
+        "sourceEnd": 74.24,
+        "time": 67.23,
+        "endTime": 74.24,
+        "tr": "果實貼近唇邊",
+        "translationPhotoRef": [
+          7
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "愛がただ",
+        "sourceTime": 74.24,
+        "sourceEnd": 79.38,
+        "time": 74.24,
+        "endTime": 79.38,
+        "tr": "愛只是一味地",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "大きなその手を広げ待つ丘は",
+        "sourceTime": 79.38,
+        "sourceEnd": 88.94,
+        "time": 79.38,
+        "endTime": 88.94,
+        "tr": "在那山丘上張開大手等待",
+        "translationPhotoRef": [
+          9
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "まだまだ",
+        "sourceTime": 88.94,
+        "sourceEnd": 91.61,
+        "time": 88.94,
+        "endTime": 91.61,
+        "tr": "儘管現在",
+        "translationPhotoRef": [
+          10
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "靄が邪魔をするけれど",
+        "sourceTime": 91.61,
+        "sourceEnd": 103.03,
+        "time": 91.61,
+        "endTime": 103.03,
+        "tr": "我的視線仍被薄霧所遮擋",
+        "translationPhotoRef": [
+          11
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "秋風が",
+        "sourceTime": 103.03,
+        "sourceEnd": 107.24,
+        "time": 103.03,
+        "endTime": 107.24,
+        "tr": "秋季的風",
+        "translationPhotoRef": [
+          12
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "雪にかき消されて",
+        "sourceTime": 107.24,
+        "sourceEnd": 113.69,
+        "time": 107.24,
+        "endTime": 113.69,
+        "tr": "被雪給抹去",
+        "translationPhotoRef": [
+          13
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "荒んだこの地に",
+        "sourceTime": 113.69,
+        "sourceEnd": 118.78,
+        "time": 113.69,
+        "endTime": 118.78,
+        "tr": "在這片荒蕪的大地上",
+        "translationPhotoRef": [
+          14
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "もうすぐ春が来る",
+        "sourceTime": 118.78,
+        "sourceEnd": 129.4,
+        "time": 118.78,
+        "endTime": 129.4,
+        "tr": "春天即將就會到來",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "真っ直ぐな小径",
+        "sourceTime": 151.65,
+        "sourceEnd": 156.9,
+        "time": 151.65,
+        "endTime": 156.9,
+        "tr": "筆直的小徑",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "曲がりくねった坂道",
+        "sourceTime": 156.9,
+        "sourceEnd": 163.13,
+        "time": 156.9,
+        "endTime": 163.13,
+        "tr": "蜿蜒的坡道",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつか行き着く",
+        "sourceTime": 163.13,
+        "sourceEnd": 167.17,
+        "time": 163.13,
+        "endTime": 167.17,
+        "tr": "未來總有一天會抵達",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "場所はたった一つだけ",
+        "sourceTime": 167.17,
+        "sourceEnd": 178.56,
+        "time": 167.17,
+        "endTime": 178.56,
+        "tr": "那唯一的場所",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "会いに行く",
+        "sourceTime": 178.56,
+        "sourceEnd": 182.96,
+        "time": 178.56,
+        "endTime": 182.96,
+        "tr": "我會去見你",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "幾重の闇を超えて",
+        "sourceTime": 182.96,
+        "sourceEnd": 189.23,
+        "time": 182.96,
+        "endTime": 189.23,
+        "tr": "跨過數不清的黑夜",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "微笑み湛えて",
+        "sourceTime": 189.23,
+        "sourceEnd": 195.16,
+        "time": 189.23,
+        "endTime": 195.16,
+        "tr": "臉上帶著微笑",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "それでは、お元気で",
+        "sourceTime": 195.16,
+        "sourceEnd": 204.54,
+        "time": 195.16,
+        "endTime": 204.54,
+        "tr": "來日再會，請你保重",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/api/get/4046739",
+    "lyricsUsageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+    "timingSourceUrl": "https://lrclib.net/api/get/4046739",
+    "timingPreview": {
+      "youtubeId": "1cXlo7vkxhE",
+      "offsetSeconds": 0,
+      "source": "user-provided LRC"
+    },
+    "translationCredit": "使用者提供的專輯中文歌詞照片（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided photos; manually reviewed LRC line alignment",
+      "file": "lyrics/translations/lasa-alignment.json",
+      "photos": [
+        "PXL_20261113_162341532.jpg",
+        "PXL_20261113_162344569.jpg"
+      ],
+      "photoSha256": "f6fd580354bcb168b10f94f52b98c47034665fdd6696a2d919294c8fcd520d38",
+      "lrcSha256": "8a1f832b55ffa4e743f4dc017ad404bd61080dea4f8731db07abaf3575254615",
+      "importedAt": "2026-11-14"
+    }
+  },
+  "SeishunSick": {
+    "lyricsStatus": "ready",
+    "translationStatus": "partial",
+    "timingStatus": "preview",
+    "readingsStatus": "ready",
+    "lyrics": [
+      {
+        "jp": "青春の病に侵され",
+        "sourceTime": 2.05,
+        "sourceEnd": 6.11,
+        "time": 4.05,
+        "endTime": 8.11,
+        "tr": "受青春病所侵噬",
+        "translationPhotoRef": [
+          0
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "儚いものばかり求めて",
+        "sourceTime": 6.11,
+        "sourceEnd": 10.34,
+        "time": 8.11,
+        "endTime": 12.34,
+        "tr": "往往追求虛無縹緲的事物",
+        "translationPhotoRef": [
+          1
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつの日か粉になって散るだけ",
+        "sourceTime": 10.34,
+        "sourceEnd": 14.95,
+        "time": 12.34,
+        "endTime": 16.95,
+        "tr": "總有一天會化為塵土消散殆盡",
+        "translationPhotoRef": [
+          2
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "青春はどどめ色",
+        "sourceTime": 14.95,
+        "sourceEnd": 18.84,
+        "time": 16.95,
+        "endTime": 20.84,
+        "tr": "青春是靛藍色",
+        "translationPhotoRef": [
+          3
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "青春にサヨナラを",
+        "sourceTime": 18.84,
+        "sourceEnd": 39.72,
+        "time": 20.84,
+        "endTime": 41.72,
+        "tr": "告別青春",
+        "translationPhotoRef": [
+          4
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ヤメた あんなことあの日でもうヤメた",
+        "sourceTime": 39.72,
+        "sourceEnd": 46.89,
+        "time": 41.72,
+        "endTime": 48.89,
+        "tr": "放棄了，自那天就放棄做那種事",
+        "translationPhotoRef": [
+          5
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "と思ってた でも違った",
+        "sourceTime": 46.89,
+        "sourceEnd": 51.58,
+        "time": 48.89,
+        "endTime": 53.58,
+        "tr": "過去曾這麼想，不過我錯了",
+        "translationPhotoRef": [
+          6
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "僕は 自分が思うほど強くはなかった",
+        "sourceTime": 51.58,
+        "sourceEnd": 57.96,
+        "time": 53.58,
+        "endTime": 59.96,
+        "tr": "我並不如自己想的那麼堅強",
+        "translationPhotoRef": [
+          7
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ムリだ 絶ち切ってしまうなんてムリだ",
+        "sourceTime": 57.96,
+        "sourceEnd": 63.57,
+        "time": 59.96,
+        "endTime": 65.57,
+        "tr": "不可能，怎麼可能做到徹底斷絕",
+        "translationPhotoRef": [
+          8
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "と思ってた でも違った",
+        "sourceTime": 63.57,
+        "sourceEnd": 69.51,
+        "time": 65.57,
+        "endTime": 71.51,
+        "tr": "過去曾這麼想，不過我錯了",
+        "translationPhotoRef": [
+          9
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "僕は 自分が思うほど弱くはなかった",
+        "sourceTime": 69.51,
+        "sourceEnd": 75.36,
+        "time": 71.51,
+        "endTime": 77.36,
+        "tr": "我並不如自己想的那麼軟弱",
+        "translationPhotoRef": [
+          10
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "君の声が 君の声が",
+        "sourceTime": 75.36,
+        "sourceEnd": 80.34,
+        "time": 77.36,
+        "endTime": 82.34,
+        "tr": "你的聲音、你的聲音",
+        "translationPhotoRef": [
+          11
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "頭かすめては焦る",
+        "sourceTime": 80.34,
+        "sourceEnd": 84.98,
+        "time": 82.34,
+        "endTime": 86.98,
+        "tr": "在腦海掠過，使我焦躁不已",
+        "translationPhotoRef": [
+          12
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "こんなままじゃ こんなままじゃ",
+        "sourceTime": 84.98,
+        "sourceEnd": 89.64,
+        "time": 86.98,
+        "endTime": 91.64,
+        "tr": "再這樣下去、再這樣下去",
+        "translationPhotoRef": [
+          13
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "僕はここで息絶える",
+        "sourceTime": 89.64,
+        "sourceEnd": 93.77,
+        "time": 91.64,
+        "endTime": 95.77,
+        "tr": "我會在此氣絕身亡",
+        "translationPhotoRef": [
+          14
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "止まることなく走り続けてきた",
+        "sourceTime": 93.77,
+        "sourceEnd": 97.7,
+        "time": 95.77,
+        "endTime": 99.7,
+        "tr": "我不停奔馳，毫不停歇",
+        "translationPhotoRef": [
+          15
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "本当はそんな風に思いたいだけだった",
+        "sourceTime": 97.7,
+        "sourceEnd": 101.81,
+        "time": 99.7,
+        "endTime": 103.81,
+        "tr": "其實只是想要那麼認為罷了",
+        "translationPhotoRef": [
+          16
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ちょっと進んでまたちょっと下がっては",
+        "sourceTime": 101.81,
+        "sourceEnd": 106.64,
+        "time": 103.81,
+        "endTime": 108.64,
+        "tr": "稍微前進，再後退幾步",
+        "translationPhotoRef": [
+          17
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "気付けばもう暗い空",
+        "sourceTime": 106.64,
+        "sourceEnd": 112.48,
+        "time": 108.64,
+        "endTime": 114.48,
+        "tr": "回過神之後發現天色已暗",
+        "translationPhotoRef": [
+          18
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "青春の病に侵され",
+        "sourceTime": 112.48,
+        "sourceEnd": 117.31,
+        "time": 114.48,
+        "endTime": 119.31,
+        "tr": "受青春病所侵噬",
+        "translationPhotoRef": [
+          19
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "儚いものばかり求めて",
+        "sourceTime": 117.31,
+        "sourceEnd": 121.73,
+        "time": 119.31,
+        "endTime": 123.73,
+        "tr": "往往追求虛無縹緲的事物",
+        "translationPhotoRef": [
+          20
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつの日か粉になって散るだけ",
+        "sourceTime": 121.73,
+        "sourceEnd": 126.36,
+        "time": 123.73,
+        "endTime": 128.36,
+        "tr": "總有一天會化為塵土消散殆盡",
+        "translationPhotoRef": [
+          21
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "青春はどどめ色",
+        "sourceTime": 126.36,
+        "sourceEnd": 130.84,
+        "time": 128.36,
+        "endTime": 132.84,
+        "tr": "青春是靛藍色",
+        "translationPhotoRef": [
+          22
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "青春にサヨナラを",
+        "sourceTime": 130.84,
+        "sourceEnd": 142.49,
+        "time": 132.84,
+        "endTime": 144.49,
+        "tr": "告別青春",
+        "translationPhotoRef": [
+          23
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "そうか 結局は皆つながってるから",
+        "sourceTime": 142.49,
+        "sourceEnd": 148.25,
+        "time": 144.49,
+        "endTime": 150.25,
+        "tr": "瞭解了，原來大家終究緊密相連",
+        "translationPhotoRef": [
+          24
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "寂しいよね 苦しいよね",
+        "sourceTime": 148.25,
+        "sourceEnd": 153.99,
+        "time": 150.25,
+        "endTime": 155.99,
+        "tr": "既孤單又痛苦吧",
+        "translationPhotoRef": [
+          25
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "なんて 自分をなだめてるヒマなんて無かった",
+        "sourceTime": 153.99,
+        "sourceEnd": 160.84,
+        "time": 155.99,
+        "endTime": 162.84,
+        "tr": "根本無暇撫慰自己",
+        "translationPhotoRef": [
+          26
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "君の声が 君の声が",
+        "sourceTime": 160.84,
+        "sourceEnd": 164.9,
+        "time": 162.84,
+        "endTime": 166.9,
+        "tr": "你的聲音、你的聲音",
+        "translationPhotoRef": [
+          27
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "僕の中で叫び出す",
+        "sourceTime": 164.9,
+        "sourceEnd": 169.6,
+        "time": 166.9,
+        "endTime": 171.6,
+        "tr": "在我心中大聲吶喊",
+        "translationPhotoRef": [
+          28
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "耳すませば 耳すませば",
+        "sourceTime": 169.6,
+        "sourceEnd": 173.7,
+        "time": 171.6,
+        "endTime": 175.7,
+        "tr": "傾耳細聽、傾耳細聽",
+        "translationPhotoRef": [
+          29
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何もかもがよみがえる",
+        "sourceTime": 173.7,
+        "sourceEnd": 178.27,
+        "time": 175.7,
+        "endTime": 180.27,
+        "tr": "一切都將再次復甦",
+        "translationPhotoRef": [
+          30
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "止まることなく走り続けてゆけ",
+        "sourceTime": 178.27,
+        "sourceEnd": 182.49,
+        "time": 180.27,
+        "endTime": 184.49,
+        "tr": "「要不停奔馳，毫不停歇」",
+        "translationPhotoRef": [
+          31
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "何かが僕にいつでも急かすけど",
+        "sourceTime": 182.49,
+        "sourceEnd": 186.68,
+        "time": 184.49,
+        "endTime": 188.68,
+        "tr": "有一道聲音總是在催促著自己",
+        "translationPhotoRef": [
+          32
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "どこへ向かって走り続けんだっけ",
+        "sourceTime": 186.68,
+        "sourceEnd": 191.21,
+        "time": 188.68,
+        "endTime": 193.21,
+        "tr": "但我該朝向何處跑來著？",
+        "translationPhotoRef": [
+          33
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "気付けばまた明ける空",
+        "sourceTime": 191.21,
+        "sourceEnd": 197.47,
+        "time": 193.21,
+        "endTime": 199.47,
+        "tr": "回過神之後發現再度天亮",
+        "translationPhotoRef": [
+          34
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "無常の水面が波立てば",
+        "sourceTime": 197.47,
+        "sourceEnd": 201.71,
+        "time": 199.47,
+        "endTime": 203.71,
+        "tr": "當變化無常的水面波濤洶湧",
+        "translationPhotoRef": [
+          35
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "ため息混じりの朝焼けが",
+        "sourceTime": 201.71,
+        "sourceEnd": 206.43,
+        "time": 203.71,
+        "endTime": 208.43,
+        "tr": "早霞摻雜嘆息",
+        "translationPhotoRef": [
+          36
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつかは消えゆく身であれば",
+        "sourceTime": 206.43,
+        "sourceEnd": 210.52,
+        "time": 208.43,
+        "endTime": 212.52,
+        "tr": "若此身來日便會消失",
+        "translationPhotoRef": [
+          37
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "こだわらせるな罰当たりが",
+        "sourceTime": 210.52,
+        "sourceEnd": 215.78,
+        "time": 212.52,
+        "endTime": 217.78,
+        "tr": "切勿過於拘泥，否則遭報應",
+        "translationPhotoRef": [
+          38
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "切れど切れど纏わりつく泥の渦に生きてる",
+        "sourceTime": 215.78,
+        "sourceEnd": 224.07,
+        "time": 217.78,
+        "endTime": 226.07,
+        "tr": "活在怎麼拂去都無法掙脫的泥渦之中",
+        "translationPhotoRef": [
+          39
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "この体は先も見えぬ熱を持て余してる",
+        "sourceTime": 224.07,
+        "sourceEnd": 232.93,
+        "time": 226.07,
+        "endTime": 234.93,
+        "tr": "這副身軀持有無法預知的熱忱",
+        "translationPhotoRef": [
+          40
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "野ざらしにされた場所でただ漂う獣に",
+        "sourceTime": 232.93,
+        "sourceEnd": 241.7,
+        "time": 234.93,
+        "endTime": 243.7,
+        "tr": "對於曝露在荒野之地的漂蕩野獸",
+        "translationPhotoRef": [
+          41
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "心奪われたことなど一度たりと無いのに",
+        "sourceTime": 241.7,
+        "sourceEnd": 251.32,
+        "time": 243.7,
+        "endTime": 253.32,
+        "tr": "我明明未曾被奪去心神",
+        "translationPhotoRef": [
+          42
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "青春のきらめきの中に",
+        "sourceTime": 251.32,
+        "sourceEnd": 255.05,
+        "time": 253.32,
+        "endTime": 257.05,
+        "tr": "在青春的光輝中",
+        "translationPhotoRef": [
+          43
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "永遠の光を見ないで",
+        "sourceTime": 255.05,
+        "sourceEnd": 259.36,
+        "time": 257.05,
+        "endTime": 261.36,
+        "tr": "別去注視永恆的光芒",
+        "translationPhotoRef": [
+          44
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "いつの日か粉になって知るだけ",
+        "sourceTime": 259.36,
+        "sourceEnd": 263.91,
+        "time": 261.36,
+        "endTime": 265.91,
+        "translationPendingReason": "LRC 此處為『いつの日か粉になって知るだけ』，與前段『散るだけ』及照片『化為塵土消散殆盡』不同，保留原檔文字，中文暫留白待確認。"
+      },
+      {
+        "jp": "青春の儚さを",
+        "sourceTime": 263.91,
+        "sourceEnd": 268.05,
+        "time": 265.91,
+        "endTime": 270.05,
+        "tr": "青春是如此虛無縹緲…",
+        "translationPhotoRef": [
+          46
+        ],
+        "translationMapping": "reviewed-photo-lrc-alignment"
+      },
+      {
+        "jp": "Oh oh oh oh oh oh",
+        "sourceTime": 268.05,
+        "sourceEnd": 282.38,
+        "time": 270.05,
+        "endTime": 284.38,
+        "translationPendingReason": "照片未提供此段 Oh 哼唱的中文。"
+      },
+      {
+        "jp": "Ah ah ah",
+        "sourceTime": 282.38,
+        "time": 284.38,
+        "translationPendingReason": "照片未提供此段 Ah 哼唱的中文。"
+      }
+    ],
+    "lyricsSourceUrl": "https://lrclib.net/api/get/3429379",
+    "lyricsUsageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+    "timingSourceUrl": "https://lrclib.net/api/get/3429379",
+    "timingPreview": {
+      "youtubeId": "kQvT37OzkP8",
+      "offsetSeconds": 2,
+      "source": "user-provided LRC"
+    },
+    "translationCredit": "使用者提供的專輯中文歌詞照片（譯者未註明）",
+    "translationCreditRole": "source",
+    "translationProvenance": {
+      "method": "user-provided photos; manually reviewed LRC line alignment",
+      "file": "lyrics/translations/lasa-alignment.json",
+      "photos": [
+        "PXL_20261113_162344569.jpg",
+        "PXL_20261113_162350320.jpg"
+      ],
+      "photoSha256": "0b3a53c0c1070cf2881e3b5223a878a157df2c69c6e859322e9f5ac36cc340e3",
+      "lrcSha256": "7f2e63f5cb69ffb0bb7a5f86d9413162b323a2390c3eacec02f0d9271a6ef658",
+      "importedAt": "2026-11-14"
+    }
   }
 };
-export const SONG_LYRICS = SONGS.map(song => ({ ...song, lyrics: [], ...prepared[song.id] }));
+export const SONG_LYRICS = SONGS.map(song => withPhotoTranslations({ ...song, lyrics: [], ...prepared[song.id] }));

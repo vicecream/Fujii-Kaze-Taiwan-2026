@@ -1,5 +1,6 @@
 export const ALBUMS = Object.freeze({
   prema: { title: "Prema", url: "https://fujiikaze.com/music/prema/", language: "en" },
+  lasa: { title: "LOVE ALL SERVE ALL", url: "https://fujiikaze.com/music/love_all_serve_all/", language: "ja", checkedAt: "2026-11-14" },
   best: { title: "Best of Fujii Kaze 2020–2024", url: "https://fujiikaze.com/music/best_of_fujii_kaze_2020-2024/", language: "ja" },
   prePrema: { title: "Pre: Prema", url: "https://fujiikaze.com/music/pre_prema/", language: "ja", checkedAt: "2026-10-30" },
   hehn: { title: "HELP EVER HURT NEVER", url: "https://fujiikaze.com/music/help-ever-hurt-never/", language: "ja", checkedAt: "2026-10-30" },
@@ -16,22 +17,33 @@ const tracks = [
   ["You", "You", "prema", "s4UW__ysPEM"],
   ["OkayGoodbye", "Okay, Goodbye", "prema", "EAtRDZQLsgk"],
   ["ForeverYoung", "Forever Young", "prema", "tU953HcYdxU"],
-  ["Matsuri", "まつり (Matsuri)", "best", "NwOvu-j_WjY"],
+  ["Matsuri", "まつり (Matsuri)", "lasa", "NwOvu-j_WjY"],
   ["WorkinHard", "Workin’ Hard", "best", "88wHgiUAKoI"],
   ["NanNan", "何なんw (Nan-Nan)", "best", "Nt6ZwuVzOS4"],
-  ["Kirari", "きらり (Kirari)", "best", "TcLLpZBWsck"],
+  ["Kirari", "きらり (Kirari)", "lasa", "TcLLpZBWsck"],
   ["Hana", "花 (Hana)", "best", "SfPkl7lol7g"],
-  ["Garden", "ガーデン (Garden)", "best", "53rIic2lvKc"],
-  ["Damn", "damn", "best", "yP7K2lXr6GA"],
+  ["Garden", "ガーデン (Garden)", "lasa", "53rIic2lvKc"],
+  ["Damn", "damn", "lasa", "yP7K2lXr6GA"],
   ["ShinunogaEWa", "死ぬのがいいわ (Shinunoga E-Wa)", "best", "3zh9Wb1KuW8"],
-  ["Tabiji", "旅路 (Tabiji)", "best", "29p8FvT_puU"],
+  ["Tabiji", "旅路 (Tabiji)", "lasa", "29p8FvT_puU"],
   ["MichiTeyuKu", "満ちてゆく (Michi Teyu Ku / Overflowing)", "best", "ptiK8U4WlSc"],
   // Added on 2026-10-30; preserve the original 19 track numbers.
   ["ItsAlright", "It's Alright", "prePrema", "HA3WzXw8vM8"],
   ["Masshiro", "真っ白 (masshiro / pure white)", "prePrema", "XwgL4C2WaU8"],
   ["MoEhWa", "もうええわ (Mo-Eh-Wa)", "hehn", "y4FYCJRjHBg"],
   ["Kaerou", "帰ろう (Kaerou)", "hehn", "goU1Ei8I8uk"],
+  // Append new IDs so the original 23 song numbers and routes remain stable.
+  ["HedemoNeYoLasa", "へでもねーよ (LASA edit / Hedemo Ne-Yo)", "lasa", "MsGDkuzrKCU"],
+  ["Yaba", "やば。 (YABA)", "lasa", "7xbokCesviM"],
+  ["MoEhYo", "燃えよ (MO-EH-YO / Ignite)", "lasa", "rZxR9bpsYLU"],
+  ["LonelyRhapsody", "ロンリーラプソディ (Lonely Rhapsody)", "lasa", "I3oUsW9bXvQ"],
+  ["ByeForNow", "それでは、 (Bye for now,)", "lasa", "1cXlo7vkxhE"],
+  ["SeishunSick", "青春病 (Seishun Sick)", "lasa", "kQvT37OzkP8"],
 ];
+export const LOVE_ALL_SERVE_ALL_TRACKS = Object.freeze([
+  "Kirari", "Matsuri", "HedemoNeYoLasa", "Yaba", "MoEhYo", "Garden",
+  "Damn", "LonelyRhapsody", "ByeForNow", "SeishunSick", "Tabiji",
+]);
 // Provider spellings are separate from the titles shown in the guide.
 const KARAOKE_TITLES = {
   Hachiko: ["Hachikō", "Hachiko"],
@@ -50,9 +62,16 @@ const KARAOKE_TITLES = {
   Masshiro: ["真っ白", "masshiro (pure white)", "masshiro", "pure white"],
   MoEhWa: ["もうええわ", "Mo-Eh-Wa", "Mo Eh Wa"],
   Kaerou: ["帰ろう", "Kaerou"],
+  HedemoNeYoLasa: ["へでもねーよ (LASA edit)", "Hedemo Ne-Yo (LASA edit)", "Hedemo Ne-Yo - LASA edit"],
+  Yaba: ["やば。", "YABA", "Yaba"],
+  MoEhYo: ["燃えよ", "MO-EH-YO (Ignite)", "MO-EH-YO"],
+  LonelyRhapsody: ["ロンリーラプソディ", "Lonely Rhapsody"],
+  ByeForNow: ["それでは、", "Bye for now,", "Bye for now"],
+  SeishunSick: ["青春病", "Seishun Sick"],
 };
 export const SONGS = tracks.map(([id, title, album, youtubeId]) => ({
   id, title, album, youtubeId, artist: "Fujii Kaze",
+  albumTrack: album === "lasa" ? LOVE_ALL_SERVE_ALL_TRACKS.indexOf(id) + 1 : undefined,
   language: ALBUMS[album].language, sourceUrl: ALBUMS[album].url,
   karaokeTitle: id === "MichiTeyuKu" ? "Michi Teyu Ku (Overflowing)" : undefined,
   karaokeTitles: KARAOKE_TITLES[id] || [title],

@@ -2970,3 +2970,14 @@
   line-height: 1.5;
   font-variant-numeric: tabular-nums;
 }
+.photo-translation {
+  margin: 24px 20px;
+  padding: 16px;
+  border: 1px solid var(--ui-line);
+  border-radius: 12px;
+  color: var(--ui-text);
+  line-height: 1.8;
+}
+.photo-translation summary { cursor: pointer; min-height: 40px; }
+.photo-translation p { margin: 16px 0; }
+.photo-translation-credit { color: var(--ui-muted); font-size: 0.85rem; }

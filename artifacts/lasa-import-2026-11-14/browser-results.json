@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": "desktop",
+    "passed": true,
+    "songs": 29,
+    "photoOnlyChinese": true,
+    "partialNotice": true,
+    "existingTimedLyrics": true,
+    "pageErrors": [],
+    "mediaPlayback": "not tested; external requests blocked"
+  },
+  {
+    "viewport": "mobile",
+    "passed": true,
+    "songs": 29,
+    "photoOnlyChinese": true,
+    "partialNotice": true,
+    "existingTimedLyrics": true,
+    "pageErrors": [],
+    "mediaPlayback": "not tested; external requests blocked"
+  }
+]

@@ -1,0 +1,2386 @@
+{
+  "reviewedAt": "2026-11-14",
+  "timing": "Supplied LRC anchors retained; YouTube offset remains unverified.",
+  "songs": [
+    {
+      "id": "HedemoNeYoLasa",
+      "lrcFile": "へでもねーよ (LASA edit).lrc",
+      "lrcSha256": "f1833a92ebecdd4662b8971dd269595e5b183ad3bcbbd012f377fc782a3fdcd2",
+      "photoSha256": "369759b92dd85f5bfac4ffb6478d27624417ed31a4bce4d0b479609923232ab9",
+      "notes": [
+        "新增照片補齊前段 21 行，53 個 LRC 句皆有中譯。",
+        "前段『おどれ』兩次分別對應照片的『該死啊(怒)』與『起舞吧』，不因日文字面相同而混用語境。",
+        "副歌重複沿用相同譯詞；末段只含短句時取照片中的原有片語。"
+      ],
+      "lines": [
+        {
+          "index": 0,
+          "jp": "野菜ばっかの生活しょんのに",
+          "sourceTime": 27.81,
+          "sourceEnd": 30.59,
+          "parts": [
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "jp": "腹が立つことちょっくらあんのは",
+          "sourceTime": 30.59,
+          "sourceEnd": 33.21,
+          "parts": [
+            1
+          ]
+        },
+        {
+          "index": 2,
+          "jp": "カルシウムちと不足しとんじゃわ",
+          "sourceTime": 33.21,
+          "sourceEnd": 36.02,
+          "parts": [
+            2
+          ]
+        },
+        {
+          "index": 3,
+          "jp": "おどれ おどれ おどれ おどれ",
+          "sourceTime": 36.02,
+          "sourceEnd": 38.61,
+          "parts": [
+            3
+          ]
+        },
+        {
+          "index": 4,
+          "jp": "慎ましやかに生きていきょんのに",
+          "sourceTime": 38.61,
+          "sourceEnd": 41.33,
+          "parts": [
+            4
+          ]
+        },
+        {
+          "index": 5,
+          "jp": "いつもなんかが邪魔をするんじゃわ",
+          "sourceTime": 41.33,
+          "sourceEnd": 44.15,
+          "parts": [
+            5
+          ]
+        },
+        {
+          "index": 6,
+          "jp": "こんな時ゃ人目もはばからずに",
+          "sourceTime": 44.15,
+          "sourceEnd": 46.9,
+          "parts": [
+            6
+          ]
+        },
+        {
+          "index": 7,
+          "jp": "おどれ おどれ おどれ おどれ",
+          "sourceTime": 46.9,
+          "sourceEnd": 50.12,
+          "parts": [
+            7
+          ]
+        },
+        {
+          "index": 8,
+          "jp": "かと思いきや正反対",
+          "sourceTime": 50.12,
+          "sourceEnd": 52.92,
+          "parts": [
+            8
+          ]
+        },
+        {
+          "index": 9,
+          "jp": "とても平穏な新世界",
+          "sourceTime": 52.92,
+          "sourceEnd": 55.56,
+          "parts": [
+            9
+          ]
+        },
+        {
+          "index": 10,
+          "jp": "願うはここへずっと居たい",
+          "sourceTime": 55.56,
+          "sourceEnd": 59.72,
+          "parts": [
+            10
+          ]
+        },
+        {
+          "index": 11,
+          "jp": "もう限界",
+          "sourceTime": 59.72,
+          "sourceEnd": 61.06,
+          "parts": [
+            11
+          ]
+        },
+        {
+          "index": 12,
+          "jp": "神様、力をちょうだい",
+          "sourceTime": 61.06,
+          "sourceEnd": 63.7,
+          "parts": [
+            12
+          ]
+        },
+        {
+          "index": 13,
+          "jp": "あんたがいれば無問題",
+          "sourceTime": 63.7,
+          "sourceEnd": 66.49,
+          "parts": [
+            13
+          ]
+        },
+        {
+          "index": 14,
+          "jp": "変わらぬものにしがみついてたい",
+          "sourceTime": 66.49,
+          "sourceEnd": 71.25,
+          "parts": [
+            14
+          ]
+        },
+        {
+          "index": 15,
+          "jp": "あんたの軽ぃキック へでもねーよ",
+          "sourceTime": 71.25,
+          "sourceEnd": 73.98,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 16,
+          "jp": "あんたの軽ぃパンチ へでもねーよ",
+          "sourceTime": 73.98,
+          "sourceEnd": 76.69,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 17,
+          "jp": "あんたの軽ぃブロウ へでもねーよ",
+          "sourceTime": 76.69,
+          "sourceEnd": 79.46,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 18,
+          "jp": "へでもねーよ バカじゃねーよ",
+          "sourceTime": 79.46,
+          "sourceEnd": 82.14,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 19,
+          "jp": "あんたの軽ぃディス へでもねーよ",
+          "sourceTime": 82.14,
+          "sourceEnd": 84.84,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 20,
+          "jp": "あんたの軽ぃヘイト へでもねーよ",
+          "sourceTime": 84.84,
+          "sourceEnd": 87.65,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 21,
+          "jp": "あんたの軽ぃマウント へでもねーよ",
+          "sourceTime": 87.65,
+          "sourceEnd": 90.44,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 22,
+          "jp": "へでもねーよ それでえーの？",
+          "sourceTime": 90.44,
+          "sourceEnd": 93.91,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 23,
+          "jp": "帰れ うちへ帰れ",
+          "sourceTime": 98.88,
+          "sourceEnd": 101.64,
+          "parts": [
+            23
+          ]
+        },
+        {
+          "index": 24,
+          "jp": "黙れ しばし黙れ",
+          "sourceTime": 101.64,
+          "sourceEnd": 104.21,
+          "parts": [
+            24
+          ]
+        },
+        {
+          "index": 25,
+          "jp": "騒げ よそで騒げ",
+          "sourceTime": 104.21,
+          "sourceEnd": 106.78,
+          "parts": [
+            25
+          ]
+        },
+        {
+          "index": 26,
+          "jp": "騒げ 騒げ 騒げ 騒げ",
+          "sourceTime": 106.78,
+          "sourceEnd": 109.72,
+          "parts": [
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "jp": "帰れ うちへ帰れ",
+          "sourceTime": 109.72,
+          "sourceEnd": 112.52,
+          "parts": [
+            23
+          ]
+        },
+        {
+          "index": 28,
+          "jp": "黙れ しばし黙れ",
+          "sourceTime": 112.52,
+          "sourceEnd": 115.14,
+          "parts": [
+            24
+          ]
+        },
+        {
+          "index": 29,
+          "jp": "騒げ よそで騒げ",
+          "sourceTime": 115.14,
+          "sourceEnd": 117.66,
+          "parts": [
+            25
+          ]
+        },
+        {
+          "index": 30,
+          "jp": "騒げ 騒げ 騒げ 騒げ",
+          "sourceTime": 117.66,
+          "sourceEnd": 120.97,
+          "parts": [
+            26
+          ]
+        },
+        {
+          "index": 31,
+          "jp": "かと思いきや急展開",
+          "sourceTime": 120.97,
+          "sourceEnd": 123.79,
+          "parts": [
+            27
+          ]
+        },
+        {
+          "index": 32,
+          "jp": "自分次第で別世界",
+          "sourceTime": 123.79,
+          "sourceEnd": 126.58,
+          "parts": [
+            28
+          ]
+        },
+        {
+          "index": 33,
+          "jp": "作り変えられるみたい",
+          "sourceTime": 126.58,
+          "sourceEnd": 130.62,
+          "parts": [
+            29
+          ]
+        },
+        {
+          "index": 34,
+          "jp": "信じたい",
+          "sourceTime": 130.62,
+          "sourceEnd": 132.12,
+          "parts": [
+            30
+          ]
+        },
+        {
+          "index": 35,
+          "jp": "神様、力をちょうだい",
+          "sourceTime": 132.12,
+          "sourceEnd": 134.68,
+          "parts": [
+            31
+          ]
+        },
+        {
+          "index": 36,
+          "jp": "一人じゃ何も出来ない",
+          "sourceTime": 134.68,
+          "sourceEnd": 137.48,
+          "parts": [
+            32
+          ]
+        },
+        {
+          "index": 37,
+          "jp": "確かなものにしがみついてたい",
+          "sourceTime": 137.48,
+          "sourceEnd": 142.2,
+          "parts": [
+            33
+          ]
+        },
+        {
+          "index": 38,
+          "jp": "あんたの軽ぃキック へでもねーよ",
+          "sourceTime": 142.2,
+          "sourceEnd": 144.8,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 39,
+          "jp": "あんたの軽ぃパンチ へでもねーよ",
+          "sourceTime": 144.8,
+          "sourceEnd": 147.46,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 40,
+          "jp": "あんたの軽ぃブロウ へでもねーよ",
+          "sourceTime": 147.46,
+          "sourceEnd": 150.33,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 41,
+          "jp": "へでもねーよ バカじゃねーよ",
+          "sourceTime": 150.33,
+          "sourceEnd": 152.97,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 42,
+          "jp": "あんたの軽ぃディス へでもねーよ",
+          "sourceTime": 152.97,
+          "sourceEnd": 155.72,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 43,
+          "jp": "あんたの軽ぃヘイト へでもねーよ",
+          "sourceTime": 155.72,
+          "sourceEnd": 158.55,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 44,
+          "jp": "あんたの軽ぃマウント へでもねーよ",
+          "sourceTime": 158.55,
+          "sourceEnd": 160.16,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 45,
+          "jp": "へでもねーよ それでえーの？",
+          "sourceTime": 160.16,
+          "sourceEnd": 163.98,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 46,
+          "jp": "あんたの軽ぃキック",
+          "sourceTime": 163.98,
+          "sourceEnd": 166.77,
+          "parts": [
+            {
+              "sourceLine": 15,
+              "text": "你弱到不行的一踢"
+            }
+          ]
+        },
+        {
+          "index": 47,
+          "jp": "あんたの軽ぃパンチ",
+          "sourceTime": 166.77,
+          "sourceEnd": 169.26,
+          "parts": [
+            {
+              "sourceLine": 16,
+              "text": "你弱到不行的一拳"
+            }
+          ]
+        },
+        {
+          "index": 48,
+          "jp": "あんたの軽ぃブロウ",
+          "sourceTime": 169.26,
+          "sourceEnd": 174.77,
+          "parts": [
+            {
+              "sourceLine": 17,
+              "text": "你弱到不行的一擊"
+            }
+          ]
+        },
+        {
+          "index": 49,
+          "jp": "あんたの軽ぃディス",
+          "sourceTime": 174.77,
+          "sourceEnd": 177.66,
+          "parts": [
+            {
+              "sourceLine": 19,
+              "text": "你弱到不行的詆毀"
+            }
+          ]
+        },
+        {
+          "index": 50,
+          "jp": "あんたの軽ぃヘイト",
+          "sourceTime": 177.66,
+          "sourceEnd": 180.43,
+          "parts": [
+            {
+              "sourceLine": 20,
+              "text": "你弱到不行的厭惡"
+            }
+          ]
+        },
+        {
+          "index": 51,
+          "jp": "あんたの軽ぃマウント",
+          "sourceTime": 180.43,
+          "sourceEnd": 184.61,
+          "parts": [
+            {
+              "sourceLine": 21,
+              "text": "你弱到不行的優越感"
+            }
+          ]
+        },
+        {
+          "index": 52,
+          "jp": "へでもねーよ",
+          "sourceTime": 184.61,
+          "sourceEnd": 188.05,
+          "parts": [
+            {
+              "sourceLine": 21,
+              "text": "連屁都不是"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Yaba",
+      "lrcFile": "やば。.lrc",
+      "lrcSha256": "45dab987a397a395fd37ad26efa3326fef64185d1a5348ea55d69124473c8508",
+      "photoSha256": "9ad760f6e869e6549ca119d7adbedf679764a1de505b10442bee80098b892e43",
+      "notes": [
+        "照片第 6 行按原有標點拆分，再將往遠方去與抵達高處合併對應同一個 LRC 句。",
+        "照片省寫的『もう』重複段落沿用照片『再也不會』，不補寫 ah 或 yeah。"
+      ],
+      "lines": [
+        {
+          "index": 0,
+          "jp": "気づいてほしい 認めてほしい",
+          "sourceTime": 19.55,
+          "sourceEnd": 23.5,
+          "parts": [
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "jp": "それだけの行為だった",
+          "sourceTime": 23.5,
+          "sourceEnd": 27.32,
+          "parts": [
+            1
+          ]
+        },
+        {
+          "index": 2,
+          "jp": "返してほしい 愛してほしい",
+          "sourceTime": 27.32,
+          "sourceEnd": 31.02,
+          "parts": [
+            2
+          ]
+        },
+        {
+          "index": 3,
+          "jp": "そんなの愛じゃなかった",
+          "sourceTime": 31.02,
+          "sourceEnd": 35.15,
+          "parts": [
+            3
+          ]
+        },
+        {
+          "index": 4,
+          "jp": "求めて 探して 見つけて 失ったけど",
+          "sourceTime": 35.15,
+          "sourceEnd": 42.82,
+          "parts": [
+            4
+          ]
+        },
+        {
+          "index": 5,
+          "jp": "追いかけ続ける あの絵空事",
+          "sourceTime": 42.82,
+          "sourceEnd": 49.76,
+          "parts": [
+            5
+          ]
+        },
+        {
+          "index": 6,
+          "jp": "さっさと行こうか",
+          "sourceTime": 49.76,
+          "sourceEnd": 52.1,
+          "parts": [
+            {
+              "sourceLine": 6,
+              "text": "趕緊出發吧"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "jp": "もっと遠くへ 高いとこまで",
+          "sourceTime": 52.1,
+          "sourceEnd": 58.09,
+          "parts": [
+            {
+              "sourceLine": 6,
+              "text": "往遠方去"
+            },
+            7
+          ]
+        },
+        {
+          "index": 8,
+          "jp": "その目を覚まして どこまでも",
+          "sourceTime": 58.09,
+          "sourceEnd": 62.55,
+          "parts": [
+            8
+          ]
+        },
+        {
+          "index": 9,
+          "jp": "どこまでも",
+          "sourceTime": 62.55,
+          "sourceEnd": 64.68,
+          "parts": [
+            9
+          ]
+        },
+        {
+          "index": 10,
+          "jp": "何度も何度も墓まで行って",
+          "sourceTime": 64.68,
+          "sourceEnd": 68.49,
+          "parts": [
+            10
+          ]
+        },
+        {
+          "index": 11,
+          "jp": "何度も何度もその手合わして",
+          "sourceTime": 68.49,
+          "sourceEnd": 72.65,
+          "parts": [
+            11
+          ]
+        },
+        {
+          "index": 12,
+          "jp": "やば やば やば やば",
+          "sourceTime": 72.65,
+          "sourceEnd": 76.14,
+          "parts": [
+            12
+          ]
+        },
+        {
+          "index": 13,
+          "jp": "傷付けないでよ",
+          "sourceTime": 76.14,
+          "sourceEnd": 78.24,
+          "parts": [
+            13
+          ]
+        },
+        {
+          "index": 14,
+          "jp": "裏切らないでよ",
+          "sourceTime": 78.24,
+          "sourceEnd": 79.94,
+          "parts": [
+            14
+          ]
+        },
+        {
+          "index": 15,
+          "jp": "愛した日々は確かだっけ？",
+          "sourceTime": 79.94,
+          "sourceEnd": 83.74,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 16,
+          "jp": "もうそれ以上何も言わないで",
+          "sourceTime": 83.74,
+          "sourceEnd": 91.48,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 17,
+          "jp": "傷付けないから",
+          "sourceTime": 91.48,
+          "sourceEnd": 93.54,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 18,
+          "jp": "裏切らないから",
+          "sourceTime": 93.54,
+          "sourceEnd": 95.61,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 19,
+          "jp": "もう もう もう もう",
+          "sourceTime": 95.61,
+          "sourceEnd": 103.27,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 20,
+          "jp": "もう もう もう もう",
+          "sourceTime": 103.27,
+          "sourceEnd": 111.32,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 21,
+          "jp": "今さら何言ったって",
+          "sourceTime": 111.32,
+          "sourceEnd": 115.02,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 22,
+          "jp": "既には手遅れでって",
+          "sourceTime": 115.02,
+          "sourceEnd": 120.74,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 23,
+          "jp": "言われないと思ってたでしょ",
+          "sourceTime": 120.74,
+          "sourceEnd": 126.76,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 24,
+          "jp": "同じことが何度も",
+          "sourceTime": 126.76,
+          "sourceEnd": 130.47,
+          "parts": [
+            23
+          ]
+        },
+        {
+          "index": 25,
+          "jp": "ただ繰り返されるだろうと",
+          "sourceTime": 130.47,
+          "sourceEnd": 136.09,
+          "parts": [
+            24
+          ]
+        },
+        {
+          "index": 26,
+          "jp": "安い夢を生きてたでしょ",
+          "sourceTime": 136.09,
+          "sourceEnd": 141.48,
+          "parts": [
+            25
+          ]
+        },
+        {
+          "index": 27,
+          "jp": "一緒に行こうか",
+          "sourceTime": 141.48,
+          "sourceEnd": 143.62,
+          "parts": [
+            26
+          ]
+        },
+        {
+          "index": 28,
+          "jp": "誰も見捨てたりしないから",
+          "sourceTime": 143.62,
+          "sourceEnd": 149.32,
+          "parts": [
+            27
+          ]
+        },
+        {
+          "index": 29,
+          "jp": "君が望むまで いつまでも",
+          "sourceTime": 149.32,
+          "sourceEnd": 154.08,
+          "parts": [
+            28
+          ]
+        },
+        {
+          "index": 30,
+          "jp": "いつまでも ああ",
+          "sourceTime": 154.08,
+          "sourceEnd": 156.08,
+          "parts": [
+            29
+          ]
+        },
+        {
+          "index": 31,
+          "jp": "何度も何度も墓まで行って",
+          "sourceTime": 156.08,
+          "sourceEnd": 159.8,
+          "parts": [
+            30
+          ]
+        },
+        {
+          "index": 32,
+          "jp": "何度も何度もその手合わして",
+          "sourceTime": 159.8,
+          "sourceEnd": 164.1,
+          "parts": [
+            31
+          ]
+        },
+        {
+          "index": 33,
+          "jp": "やば やば やば やば",
+          "sourceTime": 164.1,
+          "sourceEnd": 167.86,
+          "parts": [
+            32
+          ]
+        },
+        {
+          "index": 34,
+          "jp": "傷付けないでよ",
+          "sourceTime": 167.86,
+          "sourceEnd": 169.63,
+          "parts": [
+            33
+          ]
+        },
+        {
+          "index": 35,
+          "jp": "裏切らないでよ",
+          "sourceTime": 169.63,
+          "sourceEnd": 171.56,
+          "parts": [
+            34
+          ]
+        },
+        {
+          "index": 36,
+          "jp": "愛した日々は確かだっけ？",
+          "sourceTime": 171.56,
+          "sourceEnd": 175.22,
+          "parts": [
+            35
+          ]
+        },
+        {
+          "index": 37,
+          "jp": "もうそれ以上何も言わないで yeah",
+          "sourceTime": 175.22,
+          "sourceEnd": 183.05,
+          "parts": [
+            36
+          ]
+        },
+        {
+          "index": 38,
+          "jp": "傷付けないから",
+          "sourceTime": 183.05,
+          "sourceEnd": 184.85,
+          "parts": [
+            37
+          ]
+        },
+        {
+          "index": 39,
+          "jp": "裏切らないから",
+          "sourceTime": 184.85,
+          "sourceEnd": 192.58,
+          "parts": [
+            38
+          ]
+        },
+        {
+          "index": 40,
+          "jp": "もう もう もう もう",
+          "sourceTime": 192.58,
+          "sourceEnd": 202.07,
+          "parts": [
+            39
+          ]
+        },
+        {
+          "index": 41,
+          "jp": "もう もう ah",
+          "sourceTime": 202.07,
+          "sourceEnd": 209.86,
+          "parts": [
+            40
+          ]
+        },
+        {
+          "index": 42,
+          "jp": "もう もう もう もう",
+          "sourceTime": 209.86,
+          "sourceEnd": 218.67,
+          "parts": [
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "id": "MoEhYo",
+      "lrcFile": "燃えよ.lrc",
+      "lrcSha256": "0ea298d0e2206bf010952145c09d08f5970101b612bf8c438f9e4cdc769cf2f0",
+      "photoSha256": "573df376f680e426419f00d7562cfd08ab049ac7a35765260fd955b7fb320ca3",
+      "notes": [
+        "LRC 尾段重複『燃えよ』，依同一個已提供譯詞『燃燒吧』保留實際重複次數。"
+      ],
+      "lines": [
+        {
+          "index": 0,
+          "jp": "しょげた顔をひっさげて",
+          "sourceTime": 8.28,
+          "sourceEnd": 15.37,
+          "parts": [
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "jp": "石ころを蹴っ飛ばして",
+          "sourceTime": 15.37,
+          "sourceEnd": 22.29,
+          "parts": [
+            1
+          ]
+        },
+        {
+          "index": 2,
+          "jp": "太陽が泣いてるよ",
+          "sourceTime": 22.29,
+          "sourceEnd": 29.01,
+          "parts": [
+            2
+          ]
+        },
+        {
+          "index": 3,
+          "jp": "ほら見上げてみて",
+          "sourceTime": 29.01,
+          "sourceEnd": 36,
+          "parts": [
+            3
+          ]
+        },
+        {
+          "index": 4,
+          "jp": "ほんとは君の中で",
+          "sourceTime": 36,
+          "sourceEnd": 43.12,
+          "parts": [
+            4
+          ]
+        },
+        {
+          "index": 5,
+          "jp": "くすぶる熱い光",
+          "sourceTime": 43.12,
+          "sourceEnd": 50.09,
+          "parts": [
+            5
+          ]
+        },
+        {
+          "index": 6,
+          "jp": "太陽に叫ぼうよ",
+          "sourceTime": 50.09,
+          "sourceEnd": 56.86,
+          "parts": [
+            6
+          ]
+        },
+        {
+          "index": 7,
+          "jp": "ほら見上げてみて",
+          "sourceTime": 56.86,
+          "sourceEnd": 63.02,
+          "parts": [
+            7
+          ]
+        },
+        {
+          "index": 8,
+          "jp": "燃えよ",
+          "sourceTime": 63.02,
+          "sourceEnd": 65.43,
+          "parts": [
+            8
+          ]
+        },
+        {
+          "index": 9,
+          "jp": "あの空に燃えよ",
+          "sourceTime": 65.43,
+          "sourceEnd": 68.75,
+          "parts": [
+            9
+          ]
+        },
+        {
+          "index": 10,
+          "jp": "明日なんか来ると思わずに燃えよ",
+          "sourceTime": 68.75,
+          "sourceEnd": 75.5,
+          "parts": [
+            10
+          ]
+        },
+        {
+          "index": 11,
+          "jp": "クールなフリ もうええよ",
+          "sourceTime": 75.5,
+          "sourceEnd": 79.31,
+          "parts": [
+            11
+          ]
+        },
+        {
+          "index": 12,
+          "jp": "強がりも もうええよ",
+          "sourceTime": 79.31,
+          "sourceEnd": 82.44,
+          "parts": [
+            12
+          ]
+        },
+        {
+          "index": 13,
+          "jp": "汗かいてもええよ",
+          "sourceTime": 82.44,
+          "sourceEnd": 85.9,
+          "parts": [
+            13
+          ]
+        },
+        {
+          "index": 14,
+          "jp": "恥かいてもええよ",
+          "sourceTime": 85.9,
+          "sourceEnd": 90.73,
+          "parts": [
+            14
+          ]
+        },
+        {
+          "index": 15,
+          "jp": "簡単じゃないかもね",
+          "sourceTime": 98.74,
+          "sourceEnd": 105.62,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 16,
+          "jp": "でも難しくはない",
+          "sourceTime": 105.62,
+          "sourceEnd": 112.57,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 17,
+          "jp": "迷いながら探すの",
+          "sourceTime": 112.57,
+          "sourceEnd": 119.31,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 18,
+          "jp": "それはみんな同じ",
+          "sourceTime": 119.31,
+          "sourceEnd": 125.63,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 19,
+          "jp": "燃えよ",
+          "sourceTime": 125.63,
+          "sourceEnd": 128.12,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 20,
+          "jp": "あの空に燃えよ",
+          "sourceTime": 128.12,
+          "sourceEnd": 131.43,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 21,
+          "jp": "明日なんか来ると思わずに燃えよ",
+          "sourceTime": 131.43,
+          "sourceEnd": 138.01,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 22,
+          "jp": "クールなフリ もうええよ",
+          "sourceTime": 138.01,
+          "sourceEnd": 141.95,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 23,
+          "jp": "強がりも もうええよ",
+          "sourceTime": 141.95,
+          "sourceEnd": 145.18,
+          "parts": [
+            23
+          ]
+        },
+        {
+          "index": 24,
+          "jp": "汗かいてもええよ",
+          "sourceTime": 145.18,
+          "sourceEnd": 148.4,
+          "parts": [
+            24
+          ]
+        },
+        {
+          "index": 25,
+          "jp": "恥かいてもええよ",
+          "sourceTime": 148.4,
+          "sourceEnd": 154.23,
+          "parts": [
+            25
+          ]
+        },
+        {
+          "index": 26,
+          "jp": "確かなものには Keep, hold on",
+          "sourceTime": 181.28,
+          "sourceEnd": 184.58,
+          "parts": [
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "jp": "なら明日のことなど No, no baby",
+          "sourceTime": 184.58,
+          "sourceEnd": 188.35,
+          "parts": [
+            27
+          ]
+        },
+        {
+          "index": 28,
+          "jp": "今日だけ見つめて Please stay strong",
+          "sourceTime": 188.35,
+          "sourceEnd": 191.44,
+          "parts": [
+            28
+          ]
+        },
+        {
+          "index": 29,
+          "jp": "毎日が Birthday, we are babies",
+          "sourceTime": 191.44,
+          "sourceEnd": 196.09,
+          "parts": [
+            29
+          ]
+        },
+        {
+          "index": 30,
+          "jp": "あぁ マジで何も怖くない",
+          "sourceTime": 196.09,
+          "sourceEnd": 202.24,
+          "parts": [
+            30
+          ]
+        },
+        {
+          "index": 31,
+          "jp": "この風のって進め先へ",
+          "sourceTime": 202.24,
+          "sourceEnd": 209.21,
+          "parts": [
+            31
+          ]
+        },
+        {
+          "index": 32,
+          "jp": "燃えよ",
+          "sourceTime": 209.21,
+          "sourceEnd": 211.59,
+          "parts": [
+            32
+          ]
+        },
+        {
+          "index": 33,
+          "jp": "あの空に燃えよ",
+          "sourceTime": 211.59,
+          "sourceEnd": 214.75,
+          "parts": [
+            33
+          ]
+        },
+        {
+          "index": 34,
+          "jp": "明日なんか来ると思わずに燃えよ",
+          "sourceTime": 214.75,
+          "sourceEnd": 221.92,
+          "parts": [
+            34
+          ]
+        },
+        {
+          "index": 35,
+          "jp": "クールなフリ もうええよ",
+          "sourceTime": 221.92,
+          "sourceEnd": 225.52,
+          "parts": [
+            35
+          ]
+        },
+        {
+          "index": 36,
+          "jp": "強がりも もうええよ",
+          "sourceTime": 225.52,
+          "sourceEnd": 228.74,
+          "parts": [
+            36
+          ]
+        },
+        {
+          "index": 37,
+          "jp": "汗かいてもええよ",
+          "sourceTime": 228.74,
+          "sourceEnd": 232.08,
+          "parts": [
+            37
+          ]
+        },
+        {
+          "index": 38,
+          "jp": "恥かいてもええよ",
+          "sourceTime": 232.08,
+          "sourceEnd": 236.04,
+          "parts": [
+            38
+          ]
+        },
+        {
+          "index": 39,
+          "jp": "あの空に燃えよ",
+          "sourceTime": 236.04,
+          "sourceEnd": 240.58,
+          "parts": [
+            39
+          ]
+        },
+        {
+          "index": 40,
+          "jp": "燃えよ 燃えよ 燃えよ",
+          "sourceTime": 240.58,
+          "sourceEnd": 250.94,
+          "parts": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "index": 41,
+          "jp": "燃えよ 燃えよ 燃えよ",
+          "sourceTime": 250.94,
+          "sourceEnd": 261.34,
+          "parts": [
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "index": 42,
+          "jp": "燃えよ",
+          "sourceTime": 261.34,
+          "sourceEnd": 263.49,
+          "parts": [
+            8
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LonelyRhapsody",
+      "lrcFile": "ロンリーラプソディ.lrc",
+      "lrcSha256": "6acd1667650babf87843a4827dd61e7287b9526c31a6bbcee6f1b636157e65be",
+      "photoSha256": "2e596ba6ed28b377f2b7bf9789a04ee2139a788c8981918a109bf045f952f7e9",
+      "notes": [
+        "照片『呼哈』沒有對應的非空 LRC 句，不把空白時間標記改成新歌詞。",
+        "兩個只唱曲名的尾段只取照片中的『孤獨狂想曲』片語。"
+      ],
+      "lines": [
+        {
+          "index": 0,
+          "jp": "探しても 寄り添う肩はなく",
+          "sourceTime": 17.55,
+          "sourceEnd": 22.64,
+          "parts": [
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "jp": "ただ単に 飲まれてく",
+          "sourceTime": 22.64,
+          "sourceEnd": 26.4,
+          "parts": [
+            1
+          ]
+        },
+        {
+          "index": 2,
+          "jp": "空っぽな人波に 溶けてゆく",
+          "sourceTime": 26.4,
+          "sourceEnd": 36.79,
+          "parts": [
+            2
+          ]
+        },
+        {
+          "index": 3,
+          "jp": "見つめても みんなおんなじ顔",
+          "sourceTime": 36.79,
+          "sourceEnd": 41.85,
+          "parts": [
+            3
+          ]
+        },
+        {
+          "index": 4,
+          "jp": "私もそう 入れ物が",
+          "sourceTime": 41.85,
+          "sourceEnd": 45.54,
+          "parts": [
+            4
+          ]
+        },
+        {
+          "index": 5,
+          "jp": "ぱっと見ちがうだけ 溶けてゆく",
+          "sourceTime": 45.54,
+          "sourceEnd": 51.21,
+          "parts": [
+            5
+          ]
+        },
+        {
+          "index": 6,
+          "jp": "溶けてゆく",
+          "sourceTime": 51.21,
+          "sourceEnd": 54.33,
+          "parts": [
+            6
+          ]
+        },
+        {
+          "index": 7,
+          "jp": "溶けてゆく",
+          "sourceTime": 54.33,
+          "sourceEnd": 57.56,
+          "parts": [
+            7
+          ]
+        },
+        {
+          "index": 8,
+          "jp": "目を覚ます",
+          "sourceTime": 57.56,
+          "sourceEnd": 62.66,
+          "parts": [
+            8
+          ]
+        },
+        {
+          "index": 9,
+          "jp": "孤独なんて幻想",
+          "sourceTime": 62.66,
+          "sourceEnd": 65.85,
+          "parts": [
+            9
+          ]
+        },
+        {
+          "index": 10,
+          "jp": "気にしなきゃいいの",
+          "sourceTime": 65.85,
+          "sourceEnd": 69,
+          "parts": [
+            10
+          ]
+        },
+        {
+          "index": 11,
+          "jp": "みんな同じ星",
+          "sourceTime": 69,
+          "sourceEnd": 72.27,
+          "parts": [
+            11
+          ]
+        },
+        {
+          "index": 12,
+          "jp": "みんな同じ呼吸",
+          "sourceTime": 72.27,
+          "sourceEnd": 78.37,
+          "parts": [
+            12
+          ]
+        },
+        {
+          "index": 13,
+          "jp": "何をしたの 何もしてないよ",
+          "sourceTime": 85.81,
+          "sourceEnd": 91.99,
+          "parts": [
+            14
+          ]
+        },
+        {
+          "index": 14,
+          "jp": "君は誰なの 僕は僕だよ",
+          "sourceTime": 91.99,
+          "sourceEnd": 98.36,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 15,
+          "jp": "あなたもそうでしょ？",
+          "sourceTime": 98.36,
+          "sourceEnd": 101.58,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 16,
+          "jp": "なんで泣いてるの 何が悲しいの",
+          "sourceTime": 101.58,
+          "sourceEnd": 107.97,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 17,
+          "jp": "もう分からないよ",
+          "sourceTime": 107.97,
+          "sourceEnd": 113.12,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 18,
+          "jp": "ああ",
+          "sourceTime": 113.12,
+          "sourceEnd": 115.62,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 19,
+          "jp": "ため息は過ぎ去り",
+          "sourceTime": 115.62,
+          "sourceEnd": 120.98,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 20,
+          "jp": "もう歌えない ロンリーラプソディ",
+          "sourceTime": 120.98,
+          "sourceEnd": 128.42,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 21,
+          "jp": "ここはどこ みんな何してるの",
+          "sourceTime": 139.37,
+          "sourceEnd": 144.15,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 22,
+          "jp": "同じ時 生きてても",
+          "sourceTime": 144.15,
+          "sourceEnd": 147.86,
+          "parts": [
+            23
+          ]
+        },
+        {
+          "index": 23,
+          "jp": "なぜ誰もいないの 泣いてやろう",
+          "sourceTime": 147.86,
+          "sourceEnd": 160.11,
+          "parts": [
+            24
+          ]
+        },
+        {
+          "index": 24,
+          "jp": "笑ったろう",
+          "sourceTime": 160.11,
+          "sourceEnd": 164.96,
+          "parts": [
+            25
+          ]
+        },
+        {
+          "index": 25,
+          "jp": "孤独なんてゲーム",
+          "sourceTime": 164.96,
+          "sourceEnd": 168.39,
+          "parts": [
+            26
+          ]
+        },
+        {
+          "index": 26,
+          "jp": "楽しめばいいの",
+          "sourceTime": 168.39,
+          "sourceEnd": 171.56,
+          "parts": [
+            27
+          ]
+        },
+        {
+          "index": 27,
+          "jp": "みんな一人でしょ",
+          "sourceTime": 171.56,
+          "sourceEnd": 174.75,
+          "parts": [
+            28
+          ]
+        },
+        {
+          "index": 28,
+          "jp": "みんな一つでしょ",
+          "sourceTime": 174.75,
+          "sourceEnd": 180.84,
+          "parts": [
+            29
+          ]
+        },
+        {
+          "index": 29,
+          "jp": "何をしたの 何もしてないよ",
+          "sourceTime": 188.33,
+          "sourceEnd": 194.14,
+          "parts": [
+            30
+          ]
+        },
+        {
+          "index": 30,
+          "jp": "君は誰なの 僕は君だよ",
+          "sourceTime": 194.14,
+          "sourceEnd": 200.5,
+          "parts": [],
+          "pendingReason": "LRC 為『君は誰なの 僕は君だよ』（我是你），照片卻印『你是誰？我就是我』；意思不同，中文暫留白待確認。"
+        },
+        {
+          "index": 31,
+          "jp": "何も違わないよ",
+          "sourceTime": 200.5,
+          "sourceEnd": 203.98,
+          "parts": [
+            32
+          ]
+        },
+        {
+          "index": 32,
+          "jp": "なんで泣いてるの 何が悲しいの",
+          "sourceTime": 203.98,
+          "sourceEnd": 210.14,
+          "parts": [
+            33
+          ]
+        },
+        {
+          "index": 33,
+          "jp": "もう分からないよ",
+          "sourceTime": 210.14,
+          "sourceEnd": 215.5,
+          "parts": [
+            34
+          ]
+        },
+        {
+          "index": 34,
+          "jp": "ああ",
+          "sourceTime": 215.5,
+          "sourceEnd": 217.84,
+          "parts": [
+            35
+          ]
+        },
+        {
+          "index": 35,
+          "jp": "ため息は幻",
+          "sourceTime": 217.84,
+          "sourceEnd": 223.48,
+          "parts": [
+            36
+          ]
+        },
+        {
+          "index": 36,
+          "jp": "もう聴こえない ロンリーラプソディ",
+          "sourceTime": 223.48,
+          "sourceEnd": 232.91,
+          "parts": [
+            37
+          ]
+        },
+        {
+          "index": 37,
+          "jp": "ロンリーラプソディ",
+          "sourceTime": 232.91,
+          "sourceEnd": 239.37,
+          "parts": [
+            {
+              "sourceLine": 37,
+              "text": "孤獨狂想曲"
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "jp": "ロンリーラプソディ",
+          "sourceTime": 239.37,
+          "sourceEnd": 245.79,
+          "parts": [
+            {
+              "sourceLine": 37,
+              "text": "孤獨狂想曲"
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "jp": "もう聴こえない ロンリーラプソディ",
+          "sourceTime": 257.25,
+          "sourceEnd": 263.76,
+          "parts": [
+            38
+          ]
+        },
+        {
+          "index": 40,
+          "jp": "時代遅れのロンリーラプソディ",
+          "sourceTime": 263.76,
+          "sourceEnd": 267.92,
+          "parts": [
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ByeForNow",
+      "lrcFile": "../docs/それでは、 .lrc",
+      "lrcSha256": "8a1f832b55ffa4e743f4dc017ad404bd61080dea4f8731db07abaf3575254615",
+      "photoSha256": "f6fd580354bcb168b10f94f52b98c47034665fdd6696a2d919294c8fcd520d38",
+      "notes": [
+        "第 2–3 句因中日語序不同，共用『你引導了方向／給搖擺不定的我』，避免顛倒原譯文或將揺らめく錯配為你在搖擺。"
+      ],
+      "lines": [
+        {
+          "index": 0,
+          "jp": "あたたかな日差しに",
+          "sourceTime": 26.9,
+          "sourceEnd": 35.06,
+          "parts": [
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "jp": "ひれ伏すとき",
+          "sourceTime": 35.06,
+          "sourceEnd": 38.66,
+          "parts": [
+            1
+          ]
+        },
+        {
+          "index": 2,
+          "jp": "あなたは揺らめく",
+          "sourceTime": 38.66,
+          "sourceEnd": 43.75,
+          "parts": [
+            2,
+            3
+          ]
+        },
+        {
+          "index": 3,
+          "jp": "わたしを導いた",
+          "sourceTime": 43.75,
+          "sourceEnd": 51.16,
+          "parts": [
+            2,
+            3
+          ]
+        },
+        {
+          "index": 4,
+          "jp": "なにもない荒野は",
+          "sourceTime": 51.16,
+          "sourceEnd": 58.49,
+          "parts": [
+            4
+          ]
+        },
+        {
+          "index": 5,
+          "jp": "このわたしは",
+          "sourceTime": 58.49,
+          "sourceEnd": 61.43,
+          "parts": [
+            5
+          ]
+        },
+        {
+          "index": 6,
+          "jp": "ありあまるほどの",
+          "sourceTime": 61.43,
+          "sourceEnd": 67.23,
+          "parts": [
+            6
+          ]
+        },
+        {
+          "index": 7,
+          "jp": "果実に口づけた",
+          "sourceTime": 67.23,
+          "sourceEnd": 74.24,
+          "parts": [
+            7
+          ]
+        },
+        {
+          "index": 8,
+          "jp": "愛がただ",
+          "sourceTime": 74.24,
+          "sourceEnd": 79.38,
+          "parts": [
+            8
+          ]
+        },
+        {
+          "index": 9,
+          "jp": "大きなその手を広げ待つ丘は",
+          "sourceTime": 79.38,
+          "sourceEnd": 88.94,
+          "parts": [
+            9
+          ]
+        },
+        {
+          "index": 10,
+          "jp": "まだまだ",
+          "sourceTime": 88.94,
+          "sourceEnd": 91.61,
+          "parts": [
+            10
+          ]
+        },
+        {
+          "index": 11,
+          "jp": "靄が邪魔をするけれど",
+          "sourceTime": 91.61,
+          "sourceEnd": 103.03,
+          "parts": [
+            11
+          ]
+        },
+        {
+          "index": 12,
+          "jp": "秋風が",
+          "sourceTime": 103.03,
+          "sourceEnd": 107.24,
+          "parts": [
+            12
+          ]
+        },
+        {
+          "index": 13,
+          "jp": "雪にかき消されて",
+          "sourceTime": 107.24,
+          "sourceEnd": 113.69,
+          "parts": [
+            13
+          ]
+        },
+        {
+          "index": 14,
+          "jp": "荒んだこの地に",
+          "sourceTime": 113.69,
+          "sourceEnd": 118.78,
+          "parts": [
+            14
+          ]
+        },
+        {
+          "index": 15,
+          "jp": "もうすぐ春が来る",
+          "sourceTime": 118.78,
+          "sourceEnd": 129.4,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 16,
+          "jp": "真っ直ぐな小径",
+          "sourceTime": 151.65,
+          "sourceEnd": 156.9,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 17,
+          "jp": "曲がりくねった坂道",
+          "sourceTime": 156.9,
+          "sourceEnd": 163.13,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 18,
+          "jp": "いつか行き着く",
+          "sourceTime": 163.13,
+          "sourceEnd": 167.17,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 19,
+          "jp": "場所はたった一つだけ",
+          "sourceTime": 167.17,
+          "sourceEnd": 178.56,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 20,
+          "jp": "会いに行く",
+          "sourceTime": 178.56,
+          "sourceEnd": 182.96,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 21,
+          "jp": "幾重の闇を超えて",
+          "sourceTime": 182.96,
+          "sourceEnd": 189.23,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 22,
+          "jp": "微笑み湛えて",
+          "sourceTime": 189.23,
+          "sourceEnd": 195.16,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 23,
+          "jp": "それでは、お元気で",
+          "sourceTime": 195.16,
+          "sourceEnd": 204.54,
+          "parts": [
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "id": "SeishunSick",
+      "lrcFile": "青春病.lrc",
+      "lrcSha256": "7f2e63f5cb69ffb0bb7a5f86d9413162b323a2390c3eacec02f0d9271a6ef658",
+      "photoSha256": "0b3a53c0c1070cf2881e3b5223a878a157df2c69c6e859322e9f5ac36cc340e3",
+      "notes": [],
+      "lines": [
+        {
+          "index": 0,
+          "jp": "青春の病に侵され",
+          "sourceTime": 2.05,
+          "sourceEnd": 6.11,
+          "parts": [
+            0
+          ]
+        },
+        {
+          "index": 1,
+          "jp": "儚いものばかり求めて",
+          "sourceTime": 6.11,
+          "sourceEnd": 10.34,
+          "parts": [
+            1
+          ]
+        },
+        {
+          "index": 2,
+          "jp": "いつの日か粉になって散るだけ",
+          "sourceTime": 10.34,
+          "sourceEnd": 14.95,
+          "parts": [
+            2
+          ]
+        },
+        {
+          "index": 3,
+          "jp": "青春はどどめ色",
+          "sourceTime": 14.95,
+          "sourceEnd": 18.84,
+          "parts": [
+            3
+          ]
+        },
+        {
+          "index": 4,
+          "jp": "青春にサヨナラを",
+          "sourceTime": 18.84,
+          "sourceEnd": 39.72,
+          "parts": [
+            4
+          ]
+        },
+        {
+          "index": 5,
+          "jp": "ヤメた あんなことあの日でもうヤメた",
+          "sourceTime": 39.72,
+          "sourceEnd": 46.89,
+          "parts": [
+            5
+          ]
+        },
+        {
+          "index": 6,
+          "jp": "と思ってた でも違った",
+          "sourceTime": 46.89,
+          "sourceEnd": 51.58,
+          "parts": [
+            6
+          ]
+        },
+        {
+          "index": 7,
+          "jp": "僕は 自分が思うほど強くはなかった",
+          "sourceTime": 51.58,
+          "sourceEnd": 57.96,
+          "parts": [
+            7
+          ]
+        },
+        {
+          "index": 8,
+          "jp": "ムリだ 絶ち切ってしまうなんてムリだ",
+          "sourceTime": 57.96,
+          "sourceEnd": 63.57,
+          "parts": [
+            8
+          ]
+        },
+        {
+          "index": 9,
+          "jp": "と思ってた でも違った",
+          "sourceTime": 63.57,
+          "sourceEnd": 69.51,
+          "parts": [
+            9
+          ]
+        },
+        {
+          "index": 10,
+          "jp": "僕は 自分が思うほど弱くはなかった",
+          "sourceTime": 69.51,
+          "sourceEnd": 75.36,
+          "parts": [
+            10
+          ]
+        },
+        {
+          "index": 11,
+          "jp": "君の声が 君の声が",
+          "sourceTime": 75.36,
+          "sourceEnd": 80.34,
+          "parts": [
+            11
+          ]
+        },
+        {
+          "index": 12,
+          "jp": "頭かすめては焦る",
+          "sourceTime": 80.34,
+          "sourceEnd": 84.98,
+          "parts": [
+            12
+          ]
+        },
+        {
+          "index": 13,
+          "jp": "こんなままじゃ こんなままじゃ",
+          "sourceTime": 84.98,
+          "sourceEnd": 89.64,
+          "parts": [
+            13
+          ]
+        },
+        {
+          "index": 14,
+          "jp": "僕はここで息絶える",
+          "sourceTime": 89.64,
+          "sourceEnd": 93.77,
+          "parts": [
+            14
+          ]
+        },
+        {
+          "index": 15,
+          "jp": "止まることなく走り続けてきた",
+          "sourceTime": 93.77,
+          "sourceEnd": 97.7,
+          "parts": [
+            15
+          ]
+        },
+        {
+          "index": 16,
+          "jp": "本当はそんな風に思いたいだけだった",
+          "sourceTime": 97.7,
+          "sourceEnd": 101.81,
+          "parts": [
+            16
+          ]
+        },
+        {
+          "index": 17,
+          "jp": "ちょっと進んでまたちょっと下がっては",
+          "sourceTime": 101.81,
+          "sourceEnd": 106.64,
+          "parts": [
+            17
+          ]
+        },
+        {
+          "index": 18,
+          "jp": "気付けばもう暗い空",
+          "sourceTime": 106.64,
+          "sourceEnd": 112.48,
+          "parts": [
+            18
+          ]
+        },
+        {
+          "index": 19,
+          "jp": "青春の病に侵され",
+          "sourceTime": 112.48,
+          "sourceEnd": 117.31,
+          "parts": [
+            19
+          ]
+        },
+        {
+          "index": 20,
+          "jp": "儚いものばかり求めて",
+          "sourceTime": 117.31,
+          "sourceEnd": 121.73,
+          "parts": [
+            20
+          ]
+        },
+        {
+          "index": 21,
+          "jp": "いつの日か粉になって散るだけ",
+          "sourceTime": 121.73,
+          "sourceEnd": 126.36,
+          "parts": [
+            21
+          ]
+        },
+        {
+          "index": 22,
+          "jp": "青春はどどめ色",
+          "sourceTime": 126.36,
+          "sourceEnd": 130.84,
+          "parts": [
+            22
+          ]
+        },
+        {
+          "index": 23,
+          "jp": "青春にサヨナラを",
+          "sourceTime": 130.84,
+          "sourceEnd": 142.49,
+          "parts": [
+            23
+          ]
+        },
+        {
+          "index": 24,
+          "jp": "そうか 結局は皆つながってるから",
+          "sourceTime": 142.49,
+          "sourceEnd": 148.25,
+          "parts": [
+            24
+          ]
+        },
+        {
+          "index": 25,
+          "jp": "寂しいよね 苦しいよね",
+          "sourceTime": 148.25,
+          "sourceEnd": 153.99,
+          "parts": [
+            25
+          ]
+        },
+        {
+          "index": 26,
+          "jp": "なんて 自分をなだめてるヒマなんて無かった",
+          "sourceTime": 153.99,
+          "sourceEnd": 160.84,
+          "parts": [
+            26
+          ]
+        },
+        {
+          "index": 27,
+          "jp": "君の声が 君の声が",
+          "sourceTime": 160.84,
+          "sourceEnd": 164.9,
+          "parts": [
+            27
+          ]
+        },
+        {
+          "index": 28,
+          "jp": "僕の中で叫び出す",
+          "sourceTime": 164.9,
+          "sourceEnd": 169.6,
+          "parts": [
+            28
+          ]
+        },
+        {
+          "index": 29,
+          "jp": "耳すませば 耳すませば",
+          "sourceTime": 169.6,
+          "sourceEnd": 173.7,
+          "parts": [
+            29
+          ]
+        },
+        {
+          "index": 30,
+          "jp": "何もかもがよみがえる",
+          "sourceTime": 173.7,
+          "sourceEnd": 178.27,
+          "parts": [
+            30
+          ]
+        },
+        {
+          "index": 31,
+          "jp": "止まることなく走り続けてゆけ",
+          "sourceTime": 178.27,
+          "sourceEnd": 182.49,
+          "parts": [
+            31
+          ]
+        },
+        {
+          "index": 32,
+          "jp": "何かが僕にいつでも急かすけど",
+          "sourceTime": 182.49,
+          "sourceEnd": 186.68,
+          "parts": [
+            32
+          ]
+        },
+        {
+          "index": 33,
+          "jp": "どこへ向かって走り続けんだっけ",
+          "sourceTime": 186.68,
+          "sourceEnd": 191.21,
+          "parts": [
+            33
+          ]
+        },
+        {
+          "index": 34,
+          "jp": "気付けばまた明ける空",
+          "sourceTime": 191.21,
+          "sourceEnd": 197.47,
+          "parts": [
+            34
+          ]
+        },
+        {
+          "index": 35,
+          "jp": "無常の水面が波立てば",
+          "sourceTime": 197.47,
+          "sourceEnd": 201.71,
+          "parts": [
+            35
+          ]
+        },
+        {
+          "index": 36,
+          "jp": "ため息混じりの朝焼けが",
+          "sourceTime": 201.71,
+          "sourceEnd": 206.43,
+          "parts": [
+            36
+          ]
+        },
+        {
+          "index": 37,
+          "jp": "いつかは消えゆく身であれば",
+          "sourceTime": 206.43,
+          "sourceEnd": 210.52,
+          "parts": [
+            37
+          ]
+        },
+        {
+          "index": 38,
+          "jp": "こだわらせるな罰当たりが",
+          "sourceTime": 210.52,
+          "sourceEnd": 215.78,
+          "parts": [
+            38
+          ]
+        },
+        {
+          "index": 39,
+          "jp": "切れど切れど纏わりつく泥の渦に生きてる",
+          "sourceTime": 215.78,
+          "sourceEnd": 224.07,
+          "parts": [
+            39
+          ]
+        },
+        {
+          "index": 40,
+          "jp": "この体は先も見えぬ熱を持て余してる",
+          "sourceTime": 224.07,
+          "sourceEnd": 232.93,
+          "parts": [
+            40
+          ]
+        },
+        {
+          "index": 41,
+          "jp": "野ざらしにされた場所でただ漂う獣に",
+          "sourceTime": 232.93,
+          "sourceEnd": 241.7,
+          "parts": [
+            41
+          ]
+        },
+        {
+          "index": 42,
+          "jp": "心奪われたことなど一度たりと無いのに",
+          "sourceTime": 241.7,
+          "sourceEnd": 251.32,
+          "parts": [
+            42
+          ]
+        },
+        {
+          "index": 43,
+          "jp": "青春のきらめきの中に",
+          "sourceTime": 251.32,
+          "sourceEnd": 255.05,
+          "parts": [
+            43
+          ]
+        },
+        {
+          "index": 44,
+          "jp": "永遠の光を見ないで",
+          "sourceTime": 255.05,
+          "sourceEnd": 259.36,
+          "parts": [
+            44
+          ]
+        },
+        {
+          "index": 45,
+          "jp": "いつの日か粉になって知るだけ",
+          "sourceTime": 259.36,
+          "sourceEnd": 263.91,
+          "parts": [],
+          "pendingReason": "LRC 此處為『いつの日か粉になって知るだけ』，與前段『散るだけ』及照片『化為塵土消散殆盡』不同，保留原檔文字，中文暫留白待確認。"
+        },
+        {
+          "index": 46,
+          "jp": "青春の儚さを",
+          "sourceTime": 263.91,
+          "sourceEnd": 268.05,
+          "parts": [
+            46
+          ]
+        },
+        {
+          "index": 47,
+          "jp": "Oh oh oh oh oh oh",
+          "sourceTime": 268.05,
+          "sourceEnd": 282.38,
+          "parts": [],
+          "pendingReason": "照片未提供此段 Oh 哼唱的中文。"
+        },
+        {
+          "index": 48,
+          "jp": "Ah ah ah",
+          "sourceTime": 282.38,
+          "parts": [],
+          "pendingReason": "照片未提供此段 Ah 哼唱的中文。"
+        }
+      ]
+    }
+  ]
+}

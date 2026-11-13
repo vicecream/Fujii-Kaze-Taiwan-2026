@@ -1,0 +1,34 @@
+[
+  {
+    "viewport": "desktop",
+    "passed": true,
+    "songs": 6,
+    "japaneseRowsWithReadings": 251,
+    "uniqueReadingLines": 194,
+    "hedemoChinese": "53/53",
+    "modes": [
+      "kana",
+      "romaji",
+      "both"
+    ],
+    "chineseAndTimesUnchanged": true,
+    "pageErrors": [],
+    "mediaPlayback": "not tested; external requests blocked"
+  },
+  {
+    "viewport": "mobile",
+    "passed": true,
+    "songs": 6,
+    "japaneseRowsWithReadings": 251,
+    "uniqueReadingLines": 194,
+    "hedemoChinese": "53/53",
+    "modes": [
+      "kana",
+      "romaji",
+      "both"
+    ],
+    "chineseAndTimesUnchanged": true,
+    "pageErrors": [],
+    "mediaPlayback": "not tested; external requests blocked"
+  }
+]

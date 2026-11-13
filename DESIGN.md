@@ -4,7 +4,7 @@
 
 A compact Traditional Chinese concert guide for Fujii Kaze's Prema World Tour in Kaohsiung on October 31, 2026. Official Kaohsiung poster photography carries the mood. The experience prioritizes finding event information and preparing with released music on a phone, including in a dark venue.
 
-The primary home action is the 23-song preparation list. It is album material, not a prediction of the show's songs or their order. This opening-show guide has no spoiler gate, shuffled setlist, or concert-order confirmation.
+The primary home action is the 29-song preparation list, including all 11 LOVE ALL SERVE ALL tracks in album order. It is album material, not a prediction of the show's songs or their order. This opening-show guide has no spoiler gate, shuffled setlist, or concert-order confirmation.
 
 ## 2. Color and typography
 
@@ -25,6 +25,7 @@ The control layer uses `--space-1` through `--space-4`, `--control-height`, `--t
 - **Song list:** clear album grouping in default order; title first, stable track number and supporting details second. Search stays persistently labelled.
 - **Pending content:** show separate original, translation, and timing status in plain language. Offer an official listening/source link. Pending content is an ordinary state, not a retry error.
 - **Lyrics:** only timed lyrics participate in current-line focus, seeking, or karaoke. LRC previews allow line-level karaoke, with word-level progress gated on aligned timing. Untimed originals remain readable at full opacity. Hide kana/romaji controls for English songs; unavailable controls must not imply completed content.
+- **Photo translations:** Chinese-only text remains readable without invented Japanese or timing. Clearly label partial photographs. Existing bilingual subtitles keep their own source and timing; the album photo version is available in a separate expandable section.
 - **Player controls:** a dedicated bottom utility bar and previous/current/next dock reserve space so they do not cover lyrics. Show useful loading or failure text and an external official YouTube link.
 - **Pending setlist:** a direct status message and preparation link. Do not put a gate or viewing-mode choice in front of it.
 - **Source identity:** retain “非官方粉絲製作” and program-source credits. Historical artist references belong to provenance or old records, not current event facts.

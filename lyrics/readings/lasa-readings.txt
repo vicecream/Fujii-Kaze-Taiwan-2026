@@ -1,0 +1,209 @@
+# Manually prepared from the user-supplied Japanese LRC text.
+# Format: ruby markup preserving the original text | spaced Hepburn romaji
+# Standard readings and supplied dialect spelling are retained; this is not an artist-approved phonetic transcription.
+
+# HedemoNeYoLasa
+<ruby>野菜<rt>やさい</rt></ruby>ばっかの<ruby>生活<rt>せいかつ</rt></ruby>しょんのに | yasai bakka no seikatsu shon no ni
+<ruby>腹<rt>はら</rt></ruby>が<ruby>立<rt>た</rt></ruby>つことちょっくらあんのは | hara ga tatsu koto chokkura an no wa
+カルシウムちと<ruby>不足<rt>ふそく</rt></ruby>しとんじゃわ | karushiumu chito fusoku shiton ja wa
+おどれ おどれ おどれ おどれ | odore odore odore odore
+<ruby>慎<rt>つつ</rt></ruby>ましやかに<ruby>生<rt>い</rt></ruby>きていきょんのに | tsutsumashiyaka ni ikite ikyon no ni
+いつもなんかが<ruby>邪魔<rt>じゃま</rt></ruby>をするんじゃわ | itsumo nanka ga jama o surun ja wa
+こんな<ruby>時<rt>とき</rt></ruby>ゃ<ruby>人目<rt>ひとめ</rt></ruby>もはばからずに | konna tokya hitome mo habakarazu ni
+かと<ruby>思<rt>おも</rt></ruby>いきや<ruby>正反対<rt>せいはんたい</rt></ruby> | ka to omoikiya seihantai
+とても<ruby>平穏<rt>へいおん</rt></ruby>な<ruby>新世界<rt>しんせかい</rt></ruby> | totemo heion na shinsekai
+<ruby>願<rt>ねが</rt></ruby>うはここへずっと<ruby>居<rt>い</rt></ruby>たい | negau wa koko e zutto itai
+もう<ruby>限界<rt>げんかい</rt></ruby> | mou genkai
+<ruby>神様<rt>かみさま</rt></ruby>、<ruby>力<rt>ちから</rt></ruby>をちょうだい | kamisama chikara o choudai
+あんたがいれば<ruby>無問題<rt>むもんだい</rt></ruby> | anta ga ireba mumondai
+<ruby>変<rt>か</rt></ruby>わらぬものにしがみついてたい | kawaranu mono ni shigamitsuitetai
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃキック へでもねーよ | anta no karui kikku he demo nee yo
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃパンチ へでもねーよ | anta no karui panchi he demo nee yo
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃブロウ へでもねーよ | anta no karui burou he demo nee yo
+へでもねーよ バカじゃねーよ | he demo nee yo baka ja nee yo
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃディス へでもねーよ | anta no karui disu he demo nee yo
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃヘイト へでもねーよ | anta no karui heito he demo nee yo
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃマウント へでもねーよ | anta no karui maunto he demo nee yo
+へでもねーよ それでえーの？ | he demo nee yo sore de ee no
+<ruby>帰<rt>かえ</rt></ruby>れ うちへ<ruby>帰<rt>かえ</rt></ruby>れ | kaere uchi e kaere
+<ruby>黙<rt>だま</rt></ruby>れ しばし<ruby>黙<rt>だま</rt></ruby>れ | damare shibashi damare
+<ruby>騒<rt>さわ</rt></ruby>げ よそで<ruby>騒<rt>さわ</rt></ruby>げ | sawage yoso de sawage
+<ruby>騒<rt>さわ</rt></ruby>げ <ruby>騒<rt>さわ</rt></ruby>げ <ruby>騒<rt>さわ</rt></ruby>げ <ruby>騒<rt>さわ</rt></ruby>げ | sawage sawage sawage sawage
+かと<ruby>思<rt>おも</rt></ruby>いきや<ruby>急展開<rt>きゅうてんかい</rt></ruby> | ka to omoikiya kyuutenkai
+<ruby>自分次第<rt>じぶんしだい</rt></ruby>で<ruby>別世界<rt>べっせかい</rt></ruby> | jibun shidai de bessekai
+<ruby>作<rt>つく</rt></ruby>り<ruby>変<rt>か</rt></ruby>えられるみたい | tsukurikaerareru mitai
+<ruby>信<rt>しん</rt></ruby>じたい | shinjitai
+<ruby>一人<rt>ひとり</rt></ruby>じゃ<ruby>何<rt>なに</rt></ruby>も<ruby>出来<rt>でき</rt></ruby>ない | hitori ja nani mo dekinai
+<ruby>確<rt>たし</rt></ruby>かなものにしがみついてたい | tashika na mono ni shigamitsuitetai
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃキック | anta no karui kikku
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃパンチ | anta no karui panchi
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃブロウ | anta no karui burou
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃディス | anta no karui disu
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃヘイト | anta no karui heito
+あんたの<ruby>軽<rt>かる</rt></ruby>ぃマウント | anta no karui maunto
+へでもねーよ | he demo nee yo
+
+# Yaba
+<ruby>気<rt>き</rt></ruby>づいてほしい <ruby>認<rt>みと</rt></ruby>めてほしい | kizuite hoshii mitomete hoshii
+それだけの<ruby>行為<rt>こうい</rt></ruby>だった | sore dake no koui datta
+<ruby>返<rt>かえ</rt></ruby>してほしい <ruby>愛<rt>あい</rt></ruby>してほしい | kaeshite hoshii aishite hoshii
+そんなの<ruby>愛<rt>あい</rt></ruby>じゃなかった | sonna no ai ja nakatta
+<ruby>求<rt>もと</rt></ruby>めて <ruby>探<rt>さが</rt></ruby>して <ruby>見<rt>み</rt></ruby>つけて <ruby>失<rt>うしな</rt></ruby>ったけど | motomete sagashite mitsukete ushinatta kedo
+<ruby>追<rt>お</rt></ruby>いかけ<ruby>続<rt>つづ</rt></ruby>ける あの<ruby>絵空事<rt>えそらごと</rt></ruby> | oikake tsuzukeru ano esoragoto
+さっさと<ruby>行<rt>い</rt></ruby>こうか | sassato ikou ka
+もっと<ruby>遠<rt>とお</rt></ruby>くへ <ruby>高<rt>たか</rt></ruby>いとこまで | motto tooku e takai toko made
+その<ruby>目<rt>め</rt></ruby>を<ruby>覚<rt>さ</rt></ruby>まして どこまでも | sono me o samashite doko made mo
+どこまでも | doko made mo
+<ruby>何度<rt>なんど</rt></ruby>も<ruby>何度<rt>なんど</rt></ruby>も<ruby>墓<rt>はか</rt></ruby>まで<ruby>行<rt>い</rt></ruby>って | nando mo nando mo haka made itte
+<ruby>何度<rt>なんど</rt></ruby>も<ruby>何度<rt>なんど</rt></ruby>もその<ruby>手<rt>て</rt></ruby><ruby>合<rt>あ</rt></ruby>わして | nando mo nando mo sono te awashite
+やば やば やば やば | yaba yaba yaba yaba
+<ruby>傷付<rt>きずつ</rt></ruby>けないでよ | kizutsukenaide yo
+<ruby>裏切<rt>うらぎ</rt></ruby>らないでよ | uragiranaide yo
+<ruby>愛<rt>あい</rt></ruby>した<ruby>日々<rt>ひび</rt></ruby>は<ruby>確<rt>たし</rt></ruby>かだっけ？ | aishita hibi wa tashika dakke
+もうそれ<ruby>以上<rt>いじょう</rt></ruby><ruby>何<rt>なに</rt></ruby>も<ruby>言<rt>い</rt></ruby>わないで | mou sore ijou nani mo iwanaide
+<ruby>傷付<rt>きずつ</rt></ruby>けないから | kizutsukenai kara
+<ruby>裏切<rt>うらぎ</rt></ruby>らないから | uragiranai kara
+もう もう もう もう | mou mou mou mou
+<ruby>今<rt>いま</rt></ruby>さら<ruby>何<rt>なに</rt></ruby><ruby>言<rt>い</rt></ruby>ったって | imasara nani ittatte
+<ruby>既<rt>すで</rt></ruby>には<ruby>手遅<rt>ておく</rt></ruby>れでって | sude ni wa teokure dette
+<ruby>言<rt>い</rt></ruby>われないと<ruby>思<rt>おも</rt></ruby>ってたでしょ | iwarenai to omotteta desho
+<ruby>同<rt>おな</rt></ruby>じことが<ruby>何度<rt>なんど</rt></ruby>も | onaji koto ga nando mo
+ただ<ruby>繰<rt>く</rt></ruby>り<ruby>返<rt>かえ</rt></ruby>されるだろうと | tada kurikaesareru darou to
+<ruby>安<rt>やす</rt></ruby>い<ruby>夢<rt>ゆめ</rt></ruby>を<ruby>生<rt>い</rt></ruby>きてたでしょ | yasui yume o ikiteta desho
+<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行<rt>い</rt></ruby>こうか | issho ni ikou ka
+<ruby>誰<rt>だれ</rt></ruby>も<ruby>見捨<rt>みす</rt></ruby>てたりしないから | dare mo misutetari shinai kara
+<ruby>君<rt>きみ</rt></ruby>が<ruby>望<rt>のぞ</rt></ruby>むまで いつまでも | kimi ga nozomu made itsu made mo
+いつまでも ああ | itsu made mo aa
+もうそれ<ruby>以上<rt>いじょう</rt></ruby><ruby>何<rt>なに</rt></ruby>も<ruby>言<rt>い</rt></ruby>わないで yeah | mou sore ijou nani mo iwanaide yeah
+もう もう ah | mou mou ah
+
+# MoEhYo
+しょげた<ruby>顔<rt>かお</rt></ruby>をひっさげて | shogeta kao o hissagete
+<ruby>石<rt>いし</rt></ruby>ころを<ruby>蹴<rt>け</rt></ruby>っ<ruby>飛<rt>と</rt></ruby>ばして | ishikoro o kettobashite
+<ruby>太陽<rt>たいよう</rt></ruby>が<ruby>泣<rt>な</rt></ruby>いてるよ | taiyou ga naiteru yo
+ほら<ruby>見上<rt>みあ</rt></ruby>げてみて | hora miagete mite
+ほんとは<ruby>君<rt>きみ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で | honto wa kimi no naka de
+くすぶる<ruby>熱<rt>あつ</rt></ruby>い<ruby>光<rt>ひかり</rt></ruby> | kusuburu atsui hikari
+<ruby>太陽<rt>たいよう</rt></ruby>に<ruby>叫<rt>さけ</rt></ruby>ぼうよ | taiyou ni sakebou yo
+<ruby>燃<rt>も</rt></ruby>えよ | moe yo
+あの<ruby>空<rt>そら</rt></ruby>に<ruby>燃<rt>も</rt></ruby>えよ | ano sora ni moe yo
+<ruby>明日<rt>あした</rt></ruby>なんか<ruby>来<rt>く</rt></ruby>ると<ruby>思<rt>おも</rt></ruby>わずに<ruby>燃<rt>も</rt></ruby>えよ | ashita nanka kuru to omowazu ni moe yo
+クールなフリ もうええよ | kuuru na furi mou ee yo
+<ruby>強<rt>つよ</rt></ruby>がりも もうええよ | tsuyogari mo mou ee yo
+<ruby>汗<rt>あせ</rt></ruby>かいてもええよ | ase kaitemo ee yo
+<ruby>恥<rt>はじ</rt></ruby>かいてもええよ | haji kaitemo ee yo
+<ruby>簡単<rt>かんたん</rt></ruby>じゃないかもね | kantan ja nai kamo ne
+でも<ruby>難<rt>むずか</rt></ruby>しくはない | demo muzukashiku wa nai
+<ruby>迷<rt>まよ</rt></ruby>いながら<ruby>探<rt>さが</rt></ruby>すの | mayoi nagara sagasu no
+それはみんな<ruby>同<rt>おな</rt></ruby>じ | sore wa minna onaji
+<ruby>確<rt>たし</rt></ruby>かなものには Keep, hold on | tashika na mono ni wa Keep, hold on
+なら<ruby>明日<rt>あした</rt></ruby>のことなど No, no baby | nara ashita no koto nado No, no baby
+<ruby>今日<rt>きょう</rt></ruby>だけ<ruby>見<rt>み</rt></ruby>つめて Please stay strong | kyou dake mitsumete Please stay strong
+<ruby>毎日<rt>まいにち</rt></ruby>が Birthday, we are babies | mainichi ga Birthday, we are babies
+あぁ マジで<ruby>何<rt>なに</rt></ruby>も<ruby>怖<rt>こわ</rt></ruby>くない | aa maji de nani mo kowakunai
+この<ruby>風<rt>かぜ</rt></ruby>のって<ruby>進<rt>すす</rt></ruby>め<ruby>先<rt>さき</rt></ruby>へ | kono kaze notte susume saki e
+<ruby>燃<rt>も</rt></ruby>えよ <ruby>燃<rt>も</rt></ruby>えよ <ruby>燃<rt>も</rt></ruby>えよ | moe yo moe yo moe yo
+
+# LonelyRhapsody
+<ruby>探<rt>さが</rt></ruby>しても <ruby>寄<rt>よ</rt></ruby>り<ruby>添<rt>そ</rt></ruby>う<ruby>肩<rt>かた</rt></ruby>はなく | sagashitemo yorisou kata wa naku
+ただ<ruby>単<rt>たん</rt></ruby>に <ruby>飲<rt>の</rt></ruby>まれてく | tada tan ni nomareteku
+<ruby>空<rt>から</rt></ruby>っぽな<ruby>人波<rt>ひとなみ</rt></ruby>に <ruby>溶<rt>と</rt></ruby>けてゆく | karappo na hitonami ni toketeyuku
+<ruby>見<rt>み</rt></ruby>つめても みんなおんなじ<ruby>顔<rt>かお</rt></ruby> | mitsumetemo minna onnaji kao
+<ruby>私<rt>わたし</rt></ruby>もそう <ruby>入<rt>い</rt></ruby>れ<ruby>物<rt>もの</rt></ruby>が | watashi mo sou iremono ga
+ぱっと<ruby>見<rt>み</rt></ruby>ちがうだけ <ruby>溶<rt>と</rt></ruby>けてゆく | patto mi chigau dake toketeyuku
+<ruby>溶<rt>と</rt></ruby>けてゆく | toketeyuku
+<ruby>目<rt>め</rt></ruby>を<ruby>覚<rt>さ</rt></ruby>ます | me o samasu
+<ruby>孤独<rt>こどく</rt></ruby>なんて<ruby>幻想<rt>げんそう</rt></ruby> | kodoku nante gensou
+<ruby>気<rt>き</rt></ruby>にしなきゃいいの | ki ni shinakya ii no
+みんな<ruby>同<rt>おな</rt></ruby>じ<ruby>星<rt>ほし</rt></ruby> | minna onaji hoshi
+みんな<ruby>同<rt>おな</rt></ruby>じ<ruby>呼吸<rt>こきゅう</rt></ruby> | minna onaji kokyuu
+<ruby>何<rt>なに</rt></ruby>をしたの <ruby>何<rt>なに</rt></ruby>もしてないよ | nani o shita no nani mo shitenai yo
+<ruby>君<rt>きみ</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>なの <ruby>僕<rt>ぼく</rt></ruby>は<ruby>僕<rt>ぼく</rt></ruby>だよ | kimi wa dare na no boku wa boku da yo
+あなたもそうでしょ？ | anata mo sou desho
+なんで<ruby>泣<rt>な</rt></ruby>いてるの <ruby>何<rt>なに</rt></ruby>が<ruby>悲<rt>かな</rt></ruby>しいの | nande naiteru no nani ga kanashii no
+もう<ruby>分<rt>わ</rt></ruby>からないよ | mou wakaranai yo
+ああ | aa
+ため<ruby>息<rt>いき</rt></ruby>は<ruby>過<rt>す</rt></ruby>ぎ<ruby>去<rt>さ</rt></ruby>り | tameiki wa sugisari
+もう<ruby>歌<rt>うた</rt></ruby>えない ロンリーラプソディ | mou utaenai ronrii rapusodi
+ここはどこ みんな<ruby>何<rt>なに</rt></ruby>してるの | koko wa doko minna nani shiteru no
+<ruby>同<rt>おな</rt></ruby>じ<ruby>時<rt>とき</rt></ruby> <ruby>生<rt>い</rt></ruby>きてても | onaji toki ikitetemo
+なぜ<ruby>誰<rt>だれ</rt></ruby>もいないの <ruby>泣<rt>な</rt></ruby>いてやろう | naze dare mo inai no naite yarou
+<ruby>笑<rt>わら</rt></ruby>ったろう | warattarou
+<ruby>孤独<rt>こどく</rt></ruby>なんてゲーム | kodoku nante geemu
+<ruby>楽<rt>たの</rt></ruby>しめばいいの | tanoshimeba ii no
+みんな<ruby>一人<rt>ひとり</rt></ruby>でしょ | minna hitori desho
+みんな<ruby>一<rt>ひと</rt></ruby>つでしょ | minna hitotsu desho
+<ruby>君<rt>きみ</rt></ruby>は<ruby>誰<rt>だれ</rt></ruby>なの <ruby>僕<rt>ぼく</rt></ruby>は<ruby>君<rt>きみ</rt></ruby>だよ | kimi wa dare na no boku wa kimi da yo
+<ruby>何<rt>なに</rt></ruby>も<ruby>違<rt>ちが</rt></ruby>わないよ | nani mo chigawanai yo
+ため<ruby>息<rt>いき</rt></ruby>は<ruby>幻<rt>まぼろし</rt></ruby> | tameiki wa maboroshi
+もう<ruby>聴<rt>き</rt></ruby>こえない ロンリーラプソディ | mou kikoenai ronrii rapusodi
+ロンリーラプソディ | ronrii rapusodi
+<ruby>時代遅<rt>じだいおく</rt></ruby>れのロンリーラプソディ | jidai okure no ronrii rapusodi
+
+# ByeForNow
+あたたかな<ruby>日差<rt>ひざ</rt></ruby>しに | atataka na hizashi ni
+ひれ<ruby>伏<rt>ふ</rt></ruby>すとき | hirefusu toki
+あなたは<ruby>揺<rt>ゆ</rt></ruby>らめく | anata wa yurameku
+わたしを<ruby>導<rt>みちび</rt></ruby>いた | watashi o michibiita
+なにもない<ruby>荒野<rt>こうや</rt></ruby>は | nani mo nai kouya wa
+このわたしは | kono watashi wa
+ありあまるほどの | ariamaru hodo no
+<ruby>果実<rt>かじつ</rt></ruby>に<ruby>口<rt>くち</rt></ruby>づけた | kajitsu ni kuchizuketa
+<ruby>愛<rt>あい</rt></ruby>がただ | ai ga tada
+<ruby>大<rt>おお</rt></ruby>きなその<ruby>手<rt>て</rt></ruby>を<ruby>広<rt>ひろ</rt></ruby>げ<ruby>待<rt>ま</rt></ruby>つ<ruby>丘<rt>おか</rt></ruby>は | ooki na sono te o hiroge matsu oka wa
+まだまだ | mada mada
+<ruby>靄<rt>もや</rt></ruby>が<ruby>邪魔<rt>じゃま</rt></ruby>をするけれど | moya ga jama o suru keredo
+<ruby>秋風<rt>あきかぜ</rt></ruby>が | akikaze ga
+<ruby>雪<rt>ゆき</rt></ruby>にかき<ruby>消<rt>け</rt></ruby>されて | yuki ni kakikesarete
+<ruby>荒<rt>すさ</rt></ruby>んだこの<ruby>地<rt>ち</rt></ruby>に | susanda kono chi ni
+もうすぐ<ruby>春<rt>はる</rt></ruby>が<ruby>来<rt>く</rt></ruby>る | mou sugu haru ga kuru
+<ruby>真<rt>ま</rt></ruby>っ<ruby>直<rt>す</rt></ruby>ぐな<ruby>小径<rt>こみち</rt></ruby> | massugu na komichi
+<ruby>曲<rt>ま</rt></ruby>がりくねった<ruby>坂道<rt>さかみち</rt></ruby> | magarikunetta sakamichi
+いつか<ruby>行<rt>い</rt></ruby>き<ruby>着<rt>つ</rt></ruby>く | itsuka ikitsuku
+<ruby>場所<rt>ばしょ</rt></ruby>はたった<ruby>一<rt>ひと</rt></ruby>つだけ | basho wa tatta hitotsu dake
+<ruby>会<rt>あ</rt></ruby>いに<ruby>行<rt>い</rt></ruby>く | ai ni iku
+<ruby>幾重<rt>いくえ</rt></ruby>の<ruby>闇<rt>やみ</rt></ruby>を<ruby>超<rt>こ</rt></ruby>えて | ikue no yami o koete
+<ruby>微笑<rt>ほほえ</rt></ruby>み<ruby>湛<rt>たた</rt></ruby>えて | hohoemi tataete
+それでは、お<ruby>元気<rt>げんき</rt></ruby>で | sore de wa ogenki de
+
+# SeishunSick
+<ruby>青春<rt>せいしゅん</rt></ruby>の<ruby>病<rt>やまい</rt></ruby>に<ruby>侵<rt>おか</rt></ruby>され | seishun no yamai ni okasare
+<ruby>儚<rt>はかな</rt></ruby>いものばかり<ruby>求<rt>もと</rt></ruby>めて | hakanai mono bakari motomete
+いつの<ruby>日<rt>ひ</rt></ruby>か<ruby>粉<rt>こな</rt></ruby>になって<ruby>散<rt>ち</rt></ruby>るだけ | itsu no hi ka kona ni natte chiru dake
+<ruby>青春<rt>せいしゅん</rt></ruby>はどどめ<ruby>色<rt>いろ</rt></ruby> | seishun wa dodomeiro
+<ruby>青春<rt>せいしゅん</rt></ruby>にサヨナラを | seishun ni sayonara o
+ヤメた あんなことあの<ruby>日<rt>ひ</rt></ruby>でもうヤメた | yameta anna koto ano hi de mou yameta
+と<ruby>思<rt>おも</rt></ruby>ってた でも<ruby>違<rt>ちが</rt></ruby>った | to omotteta demo chigatta
+<ruby>僕<rt>ぼく</rt></ruby>は <ruby>自分<rt>じぶん</rt></ruby>が<ruby>思<rt>おも</rt></ruby>うほど<ruby>強<rt>つよ</rt></ruby>くはなかった | boku wa jibun ga omou hodo tsuyoku wa nakatta
+ムリだ <ruby>絶<rt>た</rt></ruby>ち<ruby>切<rt>き</rt></ruby>ってしまうなんてムリだ | muri da tachikitte shimau nante muri da
+<ruby>僕<rt>ぼく</rt></ruby>は <ruby>自分<rt>じぶん</rt></ruby>が<ruby>思<rt>おも</rt></ruby>うほど<ruby>弱<rt>よわ</rt></ruby>くはなかった | boku wa jibun ga omou hodo yowaku wa nakatta
+<ruby>君<rt>きみ</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>が <ruby>君<rt>きみ</rt></ruby>の<ruby>声<rt>こえ</rt></ruby>が | kimi no koe ga kimi no koe ga
+<ruby>頭<rt>あたま</rt></ruby>かすめては<ruby>焦<rt>あせ</rt></ruby>る | atama kasumete wa aseru
+こんなままじゃ こんなままじゃ | konna mama ja konna mama ja
+<ruby>僕<rt>ぼく</rt></ruby>はここで<ruby>息絶<rt>いきた</rt></ruby>える | boku wa koko de ikitaeru
+<ruby>止<rt>と</rt></ruby>まることなく<ruby>走<rt>はし</rt></ruby>り<ruby>続<rt>つづ</rt></ruby>けてきた | tomaru koto naku hashiri tsuzukete kita
+<ruby>本当<rt>ほんとう</rt></ruby>はそんな<ruby>風<rt>ふう</rt></ruby>に<ruby>思<rt>おも</rt></ruby>いたいだけだった | hontou wa sonna fuu ni omoitai dake datta
+ちょっと<ruby>進<rt>すす</rt></ruby>んでまたちょっと<ruby>下<rt>さ</rt></ruby>がっては | chotto susunde mata chotto sagatte wa
+<ruby>気付<rt>きづ</rt></ruby>けばもう<ruby>暗<rt>くら</rt></ruby>い<ruby>空<rt>そら</rt></ruby> | kizukeba mou kurai sora
+そうか <ruby>結局<rt>けっきょく</rt></ruby>は<ruby>皆<rt>みんな</rt></ruby>つながってるから | sou ka kekkyoku wa minna tsunagatteru kara
+<ruby>寂<rt>さび</rt></ruby>しいよね <ruby>苦<rt>くる</rt></ruby>しいよね | sabishii yo ne kurushii yo ne
+なんて <ruby>自分<rt>じぶん</rt></ruby>をなだめてるヒマなんて<ruby>無<rt>な</rt></ruby>かった | nante jibun o nadameteru hima nante nakatta
+<ruby>僕<rt>ぼく</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>叫<rt>さけ</rt></ruby>び<ruby>出<rt>だ</rt></ruby>す | boku no naka de sakebidasu
+<ruby>耳<rt>みみ</rt></ruby>すませば <ruby>耳<rt>みみ</rt></ruby>すませば | mimi sumaseba mimi sumaseba
+<ruby>何<rt>なに</rt></ruby>もかもがよみがえる | nani mo kamo ga yomigaeru
+<ruby>止<rt>と</rt></ruby>まることなく<ruby>走<rt>はし</rt></ruby>り<ruby>続<rt>つづ</rt></ruby>けてゆけ | tomaru koto naku hashiri tsuzukete yuke
+<ruby>何<rt>なに</rt></ruby>かが<ruby>僕<rt>ぼく</rt></ruby>にいつでも<ruby>急<rt>せ</rt></ruby>かすけど | nani ka ga boku ni itsu demo sekasu kedo
+どこへ<ruby>向<rt>む</rt></ruby>かって<ruby>走<rt>はし</rt></ruby>り<ruby>続<rt>つづ</rt></ruby>けんだっけ | doko e mukatte hashiri tsuzuken dakke
+<ruby>気付<rt>きづ</rt></ruby>けばまた<ruby>明<rt>あ</rt></ruby>ける<ruby>空<rt>そら</rt></ruby> | kizukeba mata akeru sora
+<ruby>無常<rt>むじょう</rt></ruby>の<ruby>水面<rt>みなも</rt></ruby>が<ruby>波立<rt>なみだ</rt></ruby>てば | mujou no minamo ga namidateba
+ため<ruby>息<rt>いき</rt></ruby><ruby>混<rt>ま</rt></ruby>じりの<ruby>朝焼<rt>あさや</rt></ruby>けが | tameiki majiri no asayake ga
+いつかは<ruby>消<rt>き</rt></ruby>えゆく<ruby>身<rt>み</rt></ruby>であれば | itsuka wa kieyuku mi de areba
+こだわらせるな<ruby>罰当<rt>ばちあ</rt></ruby>たりが | kodawaraseru na bachi atari ga
+<ruby>切<rt>き</rt></ruby>れど<ruby>切<rt>き</rt></ruby>れど<ruby>纏<rt>まと</rt></ruby>わりつく<ruby>泥<rt>どろ</rt></ruby>の<ruby>渦<rt>うず</rt></ruby>に<ruby>生<rt>い</rt></ruby>きてる | kiredo kiredo matowaritsuku doro no uzu ni ikiteru
+この<ruby>体<rt>からだ</rt></ruby>は<ruby>先<rt>さき</rt></ruby>も<ruby>見<rt>み</rt></ruby>えぬ<ruby>熱<rt>ねつ</rt></ruby>を<ruby>持<rt>も</rt></ruby>て<ruby>余<rt>あま</rt></ruby>してる | kono karada wa saki mo mienu netsu o moteamashiteru
+<ruby>野<rt>の</rt></ruby>ざらしにされた<ruby>場所<rt>ばしょ</rt></ruby>でただ<ruby>漂<rt>ただよ</rt></ruby>う<ruby>獣<rt>けもの</rt></ruby>に | nozarashi ni sareta basho de tada tadayou kemono ni
+<ruby>心<rt>こころ</rt></ruby><ruby>奪<rt>うば</rt></ruby>われたことなど<ruby>一度<rt>いちど</rt></ruby>たりと<ruby>無<rt>な</rt></ruby>いのに | kokoro ubawareta koto nado ichido tari to nai no ni
+<ruby>青春<rt>せいしゅん</rt></ruby>のきらめきの<ruby>中<rt>なか</rt></ruby>に | seishun no kirameki no naka ni
+<ruby>永遠<rt>えいえん</rt></ruby>の<ruby>光<rt>ひかり</rt></ruby>を<ruby>見<rt>み</rt></ruby>ないで | eien no hikari o minaide
+いつの<ruby>日<rt>ひ</rt></ruby>か<ruby>粉<rt>こな</rt></ruby>になって<ruby>知<rt>し</rt></ruby>るだけ | itsu no hi ka kona ni natte shiru dake
+<ruby>青春<rt>せいしゅん</rt></ruby>の<ruby>儚<rt>はかな</rt></ruby>さを | seishun no hakanasa o

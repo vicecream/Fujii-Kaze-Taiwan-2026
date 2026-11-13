@@ -54,6 +54,9 @@ export function prepareSong(entry, text, song) {
   const alignment = entry.alignment;
   const preview = entry.timingMode === "preview";
   requireValue(!preview || !alignment, `${entry.id}: preview and verified alignment must be separate`);
+  const previewOffset = entry.previewOffsetSeconds ?? 0;
+  requireValue(entry.previewOffsetSeconds === undefined || preview, `${entry.id}: previewOffsetSeconds requires preview mode`);
+  requireValue(typeof previewOffset === "number" && Number.isFinite(previewOffset), `${entry.id}: a finite previewOffsetSeconds is required`);
   if (alignment) {
     requireValue(alignment.youtubeId === song.youtubeId, `${entry.id}: alignment must use the guide's YouTube version`);
     requireValue(typeof alignment.offsetSeconds === "number" && Number.isFinite(alignment.offsetSeconds), `${entry.id}: a verified numeric offsetSeconds is required`);
@@ -73,7 +76,7 @@ export function prepareSong(entry, text, song) {
       ...(line.providedRomaji ? { providedRomaji: line.providedRomaji } : {}),
     };
     if (!alignment && !preview) return source;
-    const offset = alignment ? alignment.offsetSeconds : 0;
+    const offset = alignment ? alignment.offsetSeconds : previewOffset;
     const time = sourceTime + offset;
     requireValue(time >= 0, `${entry.id}: video alignment puts a lyric before zero`);
     return { ...source, time: Math.round(time * 1000) / 1000,
@@ -89,7 +92,7 @@ export function prepareSong(entry, text, song) {
     lyricsUsageBasis: entry.usageBasis,
     ...(!plainText ? { timingSourceUrl: entry.sourceUrl } : {}),
     ...(alignment ? { timingAlignment: alignment } : {}),
-    ...(preview ? { timingPreview: { youtubeId: song.youtubeId, offsetSeconds: 0, source: "user-provided LRC" } } : {}),
+    ...(preview ? { timingPreview: { youtubeId: song.youtubeId, offsetSeconds: previewOffset, source: "user-provided LRC" } } : {}),
   };
 }
 
@@ -100,8 +103,8 @@ export async function importSongs(manifestPath, { write = false, root = new URL(
   const furigana = { ...FURIGANA_CORRECTIONS };
   const romaji = { ...ROMAJI_CORRECTIONS };
   const stableFields = new Set(SONGS.flatMap(song => Object.keys(song)).filter(key => !key.endsWith("Status")));
-  const prepared = Object.fromEntries(SONG_LYRICS.filter(song => song.lyrics.length).map(song => [song.id,
-    Object.fromEntries(Object.entries(song).filter(([key]) => !stableFields.has(key)))]));
+  const prepared = Object.fromEntries(SONG_LYRICS.filter(song => song.lyrics.some(line => line.jp)).map(song => [song.id,
+    Object.fromEntries(Object.entries(song).filter(([key]) => key !== "photoTranslation" && !stableFields.has(key)))]));
   for (const entry of manifest.songs) {
     requireValue(!seen.has(entry.id), `Duplicate import: ${entry.id}`);
     seen.add(entry.id);
@@ -143,7 +146,7 @@ export async function importSongs(manifestPath, { write = false, root = new URL(
   }
   const serialize = value => JSON.stringify(value, null, 2).replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
   await fs.writeFile(new URL("src/song-lyrics.js", root),
-    `// Imported from user-supplied local files; source and alignment are recorded per song.\nimport { SONGS } from "./song-metadata.js";\nconst prepared = ${serialize(prepared)};\nexport const SONG_LYRICS = SONGS.map(song => ({ ...song, lyrics: [], ...prepared[song.id] }));\n`, "utf8");
+    `// Imported from user-supplied local files; source and alignment are recorded per song.\nimport { SONGS } from "./song-metadata.js";\nimport { withPhotoTranslations } from "./photo-translations.js";\nconst prepared = ${serialize(prepared)};\nexport const SONG_LYRICS = SONGS.map(song => withPhotoTranslations({ ...song, lyrics: [], ...prepared[song.id] }));\n`, "utf8");
   if (manifest.songs.some(entry => entry.readings)) {
     await fs.writeFile(new URL("src/furigana-corrections.js", root),
       `export const FURIGANA_CORRECTIONS = ${serialize(furigana)};\nexport const ROMAJI_CORRECTIONS = ${serialize(romaji)};\n`, "utf8");

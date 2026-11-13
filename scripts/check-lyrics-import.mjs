@@ -26,6 +26,18 @@ assert.deepEqual(preview.lyrics.map(line => line.time), [1, 3.5]);
 assert.deepEqual(preview.lyrics.map(line => line.endTime), [3.5, 5]);
 assert.equal(preview.timingAlignment, undefined);
 assert.equal(preview.timingPreview.youtubeId, song.youtubeId);
+for (const offset of [-0.1, 2]) {
+  const shifted = prepareSong({ ...entry, timingMode: "preview", previewOffsetSeconds: offset }, text + "\n[00:05.00] ", song);
+  assert.deepEqual(shifted.lyrics.map(line => line.sourceTime), [1, 3.5]);
+  assert.deepEqual(shifted.lyrics.map(line => line.sourceEnd), [3.5, 5]);
+  assert.deepEqual(shifted.lyrics.map(line => line.time), [1 + offset, 3.5 + offset]);
+  assert.deepEqual(shifted.lyrics.map(line => line.endTime), [3.5 + offset, 5 + offset]);
+  assert.equal(shifted.timingPreview.offsetSeconds, offset);
+  assert.equal(shifted.timingStatus, "preview");
+}
+assert.throws(() => prepareSong({ ...entry, timingMode: "preview", previewOffsetSeconds: -2 }, text, song), /before zero/);
+assert.throws(() => prepareSong({ ...entry, timingMode: "preview", previewOffsetSeconds: NaN }, text, song), /finite previewOffsetSeconds/);
+assert.throws(() => prepareSong({ ...entry, previewOffsetSeconds: 2 }, text, song), /requires preview mode/);
 assert.throws(() => prepareSong({ ...alignedEntry, timingMode: "preview" }, text, song), /separate/);
 const paired = prepareSong({ ...entry, pairedRomaji: true, timingMode: "preview" }, "[00:01]日本語\n[00:01]nihongo\n[00:03]Example", song);
 assert.equal(paired.lyrics.length, 2);

@@ -10,7 +10,8 @@ const alignment = await readJson("lyrics/translations/alignment.json");
 const evidence = await readJson("lyrics/translations/extracted-pairs.json");
 const report = await readJson("artifacts/translations-import-report.json");
 // Translation alignment follows the supplied source, independent of video offsets.
-const originalTimeline = SONG_LYRICS.map(song => ({ id: song.id, lyrics: song.lyrics.map(({ jp, time, endTime, sourceTime, sourceEnd }) => ({ jp,
+const baselineSongs = SONG_LYRICS.filter(song => baseline.some(entry => entry.id === song.id));
+const originalTimeline = baselineSongs.map(song => ({ id: song.id, lyrics: song.lyrics.map(({ jp, time, endTime, sourceTime, sourceEnd }) => ({ jp,
   time: song.timingStatus === "preview" ? sourceTime : time,
   endTime: song.timingStatus === "preview" ? sourceEnd : endTime, sourceTime, sourceEnd })) }));
 const timingHashes = originalTimeline.filter(song => song.lyrics.length || baseline.some(entry => entry.id === song.id)).map(song => ({ id: song.id, lines: song.lyrics.length,
@@ -24,7 +25,7 @@ for (const entry of alignment.songs) {
   const validated = applyTranslationAlignment(song, entry, proof);
   assert.deepEqual(validated.lyrics, song.lyrics, `${song.id}: imported text must match the reviewed PDF alignment`);
   assert.equal(song.translationCreditRole, "source", "The PDF provider must not be represented as an identified translator");
-  assert.equal(song.timingStatus, entry.id === "Masshiro" ? "pending" : "preview", "Chinese alignment must not certify video timing");
+  assert.equal(song.timingStatus, "preview", "Chinese alignment must not certify video timing");
   count += song.lyrics.filter(line => line.tr?.trim()).length;
 }
 assert.equal(count, report.translatedLines);
@@ -59,7 +60,7 @@ for (const entry of supplied.songs) {
 }
 assert.equal(suppliedCount, report.userProvidedTranslatedLines);
 assert.equal(count + suppliedCount, report.totalTranslatedLines);
-assert.equal(SONG_LYRICS.reduce((sum, song) => sum + song.lyrics.filter(line => line.tr).length, 0), report.totalTranslatedLines);
+assert.equal(baselineSongs.reduce((sum, song) => sum + song.lyrics.filter(line => line.tr).length, 0), report.totalTranslatedLines);
 const casketEntry = supplied.songs.find(song => song.id === "CasketGirl");
 const casketText = await fs.readFile(new URL(`../lyrics/translations/${casketEntry.file}`, import.meta.url), "utf8");
 const providedChinese = casketText.split(/\r?\n/).filter(line => /[\u3400-\u9fff]/u.test(line) && !/^#|^歌名：/.test(line));

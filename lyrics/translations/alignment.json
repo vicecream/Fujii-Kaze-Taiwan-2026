@@ -7528,14 +7528,16 @@
           "jp": "Hmm, hmm, hmm",
           "tr": "",
           "sourcePairs": [],
-          "method": "pending-no-pdf-translation"
+          "method": "pending-no-pdf-translation",
+          "time": 1.41
         },
         {
           "index": 1,
           "jp": "Hmm, hmm, hmm",
           "tr": "",
           "sourcePairs": [],
-          "method": "pending-no-pdf-translation"
+          "method": "pending-no-pdf-translation",
+          "time": 5.12
         },
         {
           "index": 2,
@@ -7544,7 +7546,8 @@
           "sourcePairs": [
             0
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 15.18
         },
         {
           "index": 3,
@@ -7553,7 +7556,8 @@
           "sourcePairs": [
             1
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 22.84
         },
         {
           "index": 4,
@@ -7562,7 +7566,8 @@
           "sourcePairs": [
             2
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 30.56
         },
         {
           "index": 5,
@@ -7571,7 +7576,8 @@
           "sourcePairs": [
             3
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 38.12
         },
         {
           "index": 6,
@@ -7580,7 +7586,8 @@
           "sourcePairs": [
             4
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 47.52
         },
         {
           "index": 7,
@@ -7589,7 +7596,8 @@
           "sourcePairs": [
             5
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 53.61
         },
         {
           "index": 8,
@@ -7598,7 +7606,8 @@
           "sourcePairs": [
             6
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 63.27
         },
         {
           "index": 9,
@@ -7607,7 +7616,8 @@
           "sourcePairs": [
             7
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 68.98
         },
         {
           "index": 10,
@@ -7616,7 +7626,8 @@
           "sourcePairs": [
             8
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 77.81
         },
         {
           "index": 11,
@@ -7625,7 +7636,8 @@
           "sourcePairs": [
             9
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 84.62
         },
         {
           "index": 12,
@@ -7634,7 +7646,8 @@
           "sourcePairs": [
             10
           ],
-          "method": "reviewed-pdf-fragment"
+          "method": "reviewed-pdf-fragment",
+          "time": 93.37
         },
         {
           "index": 13,
@@ -7643,7 +7656,8 @@
           "sourcePairs": [
             10
           ],
-          "method": "reviewed-pdf-fragment"
+          "method": "reviewed-pdf-fragment",
+          "time": 101.8
         },
         {
           "index": 14,
@@ -7652,7 +7666,8 @@
           "sourcePairs": [
             11
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 107.3
         },
         {
           "index": 15,
@@ -7661,7 +7676,8 @@
           "sourcePairs": [
             12
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 115.09
         },
         {
           "index": 16,
@@ -7670,7 +7686,8 @@
           "sourcePairs": [
             13
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 122.47
         },
         {
           "index": 17,
@@ -7679,35 +7696,40 @@
           "sourcePairs": [
             14
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 130.52
         },
         {
           "index": 18,
           "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
           "tr": "",
           "sourcePairs": [],
-          "method": "pending-no-pdf-translation"
+          "method": "pending-no-pdf-translation",
+          "time": 154.48
         },
         {
           "index": 19,
           "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
           "tr": "",
           "sourcePairs": [],
-          "method": "pending-no-pdf-translation"
+          "method": "pending-no-pdf-translation",
+          "time": 157.93
         },
         {
           "index": 20,
           "jp": "Aah (Ta-ta-tarara, ra-ta-tara)",
           "tr": "",
           "sourcePairs": [],
-          "method": "pending-no-pdf-translation"
+          "method": "pending-no-pdf-translation",
+          "time": 161.9
         },
         {
           "index": 21,
           "jp": "Aah, aah",
           "tr": "",
           "sourcePairs": [],
-          "method": "pending-no-pdf-translation"
+          "method": "pending-no-pdf-translation",
+          "time": 165.95
         },
         {
           "index": 22,
@@ -7716,7 +7738,8 @@
           "sourcePairs": [
             15
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 170.74
         },
         {
           "index": 23,
@@ -7725,7 +7748,8 @@
           "sourcePairs": [
             16
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 176.9
         },
         {
           "index": 24,
@@ -7734,7 +7758,8 @@
           "sourcePairs": [
             17
           ],
-          "method": "reviewed-pdf-fragment"
+          "method": "reviewed-pdf-fragment",
+          "time": 186.1
         },
         {
           "index": 25,
@@ -7743,7 +7768,8 @@
           "sourcePairs": [
             17
           ],
-          "method": "reviewed-pdf-fragment"
+          "method": "reviewed-pdf-fragment",
+          "time": 194.07
         },
         {
           "index": 26,
@@ -7752,7 +7778,8 @@
           "sourcePairs": [
             18
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 199.57
         },
         {
           "index": 27,
@@ -7761,7 +7788,8 @@
           "sourcePairs": [
             19
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 207.12
         },
         {
           "index": 28,
@@ -7770,7 +7798,8 @@
           "sourcePairs": [
             20
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 214.65
         },
         {
           "index": 29,
@@ -7779,7 +7808,8 @@
           "sourcePairs": [
             21
           ],
-          "method": "exact-source-text"
+          "method": "exact-source-text",
+          "time": 222.66
         },
         {
           "index": 30,
@@ -7788,7 +7818,8 @@
           "sourcePairs": [
             22
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 232.19
         },
         {
           "index": 31,
@@ -7797,7 +7828,8 @@
           "sourcePairs": [
             23
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 238.02
         },
         {
           "index": 32,
@@ -7806,7 +7838,8 @@
           "sourcePairs": [
             24
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 247.46
         },
         {
           "index": 33,
@@ -7815,7 +7848,8 @@
           "sourcePairs": [
             25
           ],
-          "method": "reviewed-source-variant"
+          "method": "reviewed-source-variant",
+          "time": 253.19
         }
       ]
     },

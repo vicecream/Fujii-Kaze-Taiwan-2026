@@ -1,0 +1,103 @@
+{
+  "importedAt": "2026-11-14",
+  "timing": "Supplied LRC anchors retained; YouTube offset remains unverified.",
+  "songs": [
+    {
+      "id": "HedemoNeYoLasa",
+      "file": "へでもねーよ (LASA edit).lrc",
+      "lrcSha256": "f1833a92ebecdd4662b8971dd269595e5b183ad3bcbbd012f377fc782a3fdcd2",
+      "totalLines": 53,
+      "translatedLines": 53,
+      "pending": [],
+      "notes": [
+        "新增照片補齊前段 21 行，53 個 LRC 句皆有中譯。",
+        "前段『おどれ』兩次分別對應照片的『該死啊(怒)』與『起舞吧』，不因日文字面相同而混用語境。",
+        "副歌重複沿用相同譯詞；末段只含短句時取照片中的原有片語。"
+      ]
+    },
+    {
+      "id": "Yaba",
+      "file": "やば。.lrc",
+      "lrcSha256": "45dab987a397a395fd37ad26efa3326fef64185d1a5348ea55d69124473c8508",
+      "totalLines": 43,
+      "translatedLines": 43,
+      "pending": [],
+      "notes": [
+        "照片第 6 行按原有標點拆分，再將往遠方去與抵達高處合併對應同一個 LRC 句。",
+        "照片省寫的『もう』重複段落沿用照片『再也不會』，不補寫 ah 或 yeah。"
+      ]
+    },
+    {
+      "id": "MoEhYo",
+      "file": "燃えよ.lrc",
+      "lrcSha256": "0ea298d0e2206bf010952145c09d08f5970101b612bf8c438f9e4cdc769cf2f0",
+      "totalLines": 43,
+      "translatedLines": 43,
+      "pending": [],
+      "notes": [
+        "LRC 尾段重複『燃えよ』，依同一個已提供譯詞『燃燒吧』保留實際重複次數。"
+      ]
+    },
+    {
+      "id": "LonelyRhapsody",
+      "file": "ロンリーラプソディ.lrc",
+      "lrcSha256": "6acd1667650babf87843a4827dd61e7287b9526c31a6bbcee6f1b636157e65be",
+      "totalLines": 41,
+      "translatedLines": 40,
+      "pending": [
+        {
+          "index": 30,
+          "time": 194.14,
+          "original": "君は誰なの 僕は君だよ",
+          "reason": "LRC 為『君は誰なの 僕は君だよ』（我是你），照片卻印『你是誰？我就是我』；意思不同，中文暫留白待確認。"
+        }
+      ],
+      "notes": [
+        "照片『呼哈』沒有對應的非空 LRC 句，不把空白時間標記改成新歌詞。",
+        "兩個只唱曲名的尾段只取照片中的『孤獨狂想曲』片語。"
+      ]
+    },
+    {
+      "id": "ByeForNow",
+      "file": "../docs/それでは、 .lrc",
+      "lrcSha256": "8a1f832b55ffa4e743f4dc017ad404bd61080dea4f8731db07abaf3575254615",
+      "totalLines": 24,
+      "translatedLines": 24,
+      "pending": [],
+      "notes": [
+        "第 2–3 句因中日語序不同，共用『你引導了方向／給搖擺不定的我』，避免顛倒原譯文或將揺らめく錯配為你在搖擺。"
+      ]
+    },
+    {
+      "id": "SeishunSick",
+      "file": "青春病.lrc",
+      "lrcSha256": "7f2e63f5cb69ffb0bb7a5f86d9413162b323a2390c3eacec02f0d9271a6ef658",
+      "totalLines": 49,
+      "translatedLines": 46,
+      "pending": [
+        {
+          "index": 45,
+          "time": 259.36,
+          "original": "いつの日か粉になって知るだけ",
+          "reason": "LRC 此處為『いつの日か粉になって知るだけ』，與前段『散るだけ』及照片『化為塵土消散殆盡』不同，保留原檔文字，中文暫留白待確認。"
+        },
+        {
+          "index": 47,
+          "time": 268.05,
+          "original": "Oh oh oh oh oh oh",
+          "reason": "照片未提供此段 Oh 哼唱的中文。"
+        },
+        {
+          "index": 48,
+          "time": 282.38,
+          "original": "Ah ah ah",
+          "reason": "照片未提供此段 Ah 哼唱的中文。"
+        }
+      ],
+      "notes": []
+    }
+  ],
+  "totalLines": 253,
+  "translatedLines": 249,
+  "pendingLines": 4
+}

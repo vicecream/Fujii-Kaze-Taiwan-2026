@@ -1,7 +1,7 @@
 {
   "name": "fujii-kaze-kaohsiung-2026-guide",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.1.2",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,9 @@
     "check:karaoke": "node scripts/check-karaoke-alignment.mjs",
     "build": "vite build",
     "preview": "vite preview",
-    "check:guide": "node scripts/check-guide.mjs"
+    "check:guide": "node scripts/check-guide.mjs",
+    "check:lasa": "node scripts/check-lasa-alignment.mjs",
+    "check:lasa-readings": "node scripts/check-lasa-readings.mjs"
   },
   "devDependencies": {
     "vite": "^7.1.7"

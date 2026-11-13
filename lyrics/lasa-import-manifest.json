@@ -1,0 +1,59 @@
+{
+  "songs": [
+    {
+      "id": "HedemoNeYoLasa",
+      "file": "へでもねーよ (LASA edit).lrc",
+      "sourceUrl": "https://lrclib.net/api/get/4046740",
+      "usageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+      "complete": true,
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "Yaba",
+      "file": "やば。.lrc",
+      "sourceUrl": "https://lrclib.net/api/get/4046742",
+      "usageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+      "complete": true,
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "MoEhYo",
+      "file": "燃えよ.lrc",
+      "sourceUrl": "https://lrclib.net/api/get/8512511",
+      "usageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+      "complete": true,
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "LonelyRhapsody",
+      "file": "ロンリーラプソディ.lrc",
+      "sourceUrl": "https://lrclib.net/api/get/4046743",
+      "usageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+      "complete": true,
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "ByeForNow",
+      "file": "../docs/それでは、 .lrc",
+      "sourceUrl": "https://lrclib.net/api/get/4046739",
+      "usageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+      "complete": true,
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    },
+    {
+      "id": "SeishunSick",
+      "file": "青春病.lrc",
+      "previewOffsetSeconds": 2,
+      "sourceUrl": "https://lrclib.net/api/get/3429379",
+      "usageBasis": "User supplied the full Japanese LRC locally and requested matching their supplied photo translations on 2026-11-14; the provider URL is a candidate reference, not proof of file origin.",
+      "complete": true,
+      "timingMode": "preview",
+      "allowPendingReadings": true
+    }
+  ]
+}

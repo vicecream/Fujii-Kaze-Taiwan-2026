@@ -119,13 +119,13 @@ export async function importTranslations({ write = false, root = new URL("../", 
   report.totalTranslatedLines = report.translatedLines + report.userProvidedTranslatedLines;
   if (!write) { console.log("Preview only. Add --write to import the aligned translations."); return report; }
   const stableFields = new Set(SONGS.flatMap(song => Object.keys(song)).filter(key => !key.endsWith("Status")));
-  const prepared = Object.fromEntries(SONG_LYRICS.map(song => {
+  const prepared = Object.fromEntries(SONG_LYRICS.filter(song => song.lyrics.some(line => line.jp)).map(song => {
     const updated = updates.get(song.id) || song;
-    return [song.id, Object.fromEntries(Object.entries(updated).filter(([key]) => !stableFields.has(key)))];
+    return [song.id, Object.fromEntries(Object.entries(updated).filter(([key]) => key !== "photoTranslation" && !stableFields.has(key)))];
   }));
   const serialize = value => JSON.stringify(value, null, 2).replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
   await fs.writeFile(new URL("src/song-lyrics.js", root),
-    `// Imported from user-supplied local files; source and alignment are recorded per song.\nimport { SONGS } from "./song-metadata.js";\nconst prepared = ${serialize(prepared)};\nexport const SONG_LYRICS = SONGS.map(song => ({ ...song, lyrics: [], ...prepared[song.id] }));\n`, "utf8");
+    `// Imported from user-supplied local files; source and alignment are recorded per song.\nimport { SONGS } from "./song-metadata.js";\nimport { withPhotoTranslations } from "./photo-translations.js";\nconst prepared = ${serialize(prepared)};\nexport const SONG_LYRICS = SONGS.map(song => withPhotoTranslations({ ...song, lyrics: [], ...prepared[song.id] }));\n`, "utf8");
   await fs.writeFile(new URL("sources.json", directory), serialize(sources) + "\n", "utf8");
   await fs.writeFile(new URL("artifacts/translations-import-report.json", root), serialize(report) + "\n", "utf8");
   return report;

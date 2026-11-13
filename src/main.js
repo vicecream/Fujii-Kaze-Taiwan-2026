@@ -78,7 +78,7 @@ const SYNC_INTERVAL_MS   = 100;
 /* 지금 폰에 깔려 있는 화면이 몇 번째 판인지 알려 주는 표시.
    새로 올렸는데 화면이 그대로일 때, 옛 판이 남아 있는지 바로 확인할 수 있다.
    sw.js 의 CACHE_VERSION 과 같이 올려 주세요. */
-const BUILD = "v2.0.0";
+const BUILD = "v2.1.2";
 
 const CC_BY_NC_SA_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 
@@ -780,7 +780,7 @@ function renderGuide(){
   app.innerHTML = `<div class="guide-page">
     <div class="song-topbar"><button class="back-btn" id="back-btn" aria-label="返回首頁">${BACK_SVG}</button>${themeToggleHtml()}</div>
     <section class="songs-section">
-      <div class="songs-head"><h1>歌曲預習</h1><p>${SONGS.length} 首 · Prema ＋ 代表曲精選</p>
+      <div class="songs-head"><h1>歌曲預習</h1><p>${SONGS.length} 首 · Prema ＋ LOVE ALL SERVE ALL ＋ 代表曲精選</p>
         <p class="prep-disclaimer">依專輯分組，並非高雄場演出曲目或順序。<br>歌詞、翻譯與同步時間將分批補齊。</p></div>
       <div class="song-search"><label class="search-label" for="song-search-input">搜尋歌曲</label><div class="song-search-box">
         <input id="song-search-input" type="search" autocomplete="off" placeholder="搜尋歌名・羅馬字・編號">
@@ -788,7 +788,7 @@ function renderGuide(){
       <div class="song-sorts" role="group" aria-label="歌曲清單排序"><button class="song-sort" type="button" data-sort="default">依專輯</button><button class="song-sort" type="button" data-sort="title" id="sort-title">名稱</button></div>
       <div class="song-search-meta"><span id="song-count">共 ${SONGS.length} 首</span></div>
       <p class="song-empty" id="song-empty" hidden>找不到歌曲，請輸入部分歌名或編號。</p><ul class="song-list" id="song-list"></ul>
-      <p class="catalog-sources">曲目來源：${Object.values(ALBUMS).map(album => `<a href="${album.url}" target="_blank" rel="noopener">${album.title}</a>`).join(" · ")}<br>原曲目查核：${EVENT.checkedAt} · 新增曲目查核：${ALBUMS.prePrema.checkedAt}</p>
+      <p class="catalog-sources">曲目來源：${Object.values(ALBUMS).map(album => `<a href="${album.url}" target="_blank" rel="noopener">${album.title}</a>`).join(" · ")}<br>原曲目查核：${EVENT.checkedAt} · 新增曲目查核：${ALBUMS.lasa.checkedAt}</p>
     </section>${siteFooterHtml(BUILD)}</div>`;
   document.getElementById("back-btn").addEventListener("click", ()=>{ location.hash = "#/"; });
   app.querySelectorAll(".song-sort").forEach(button => button.addEventListener("click", ()=>{
@@ -1293,6 +1293,7 @@ function buildSongShell(){
           <div class="lyrics-scroll">
             <p class="lyrics-hidden-message" role="status" aria-live="polite" hidden>歌詞已隱藏</p>
             <ul class="lyrics-list" id="lyrics-list"></ul>
+            <details class="photo-translation" id="photo-translation" hidden></details>
             <div class="song-content-status" id="song-content-status" role="status"></div>
           </div>
         </div>
@@ -1752,19 +1753,27 @@ function showSongLyricsLoadIssue(renderToken, message){
 
 function updateSongContentUi(song){
   const caps = songCapabilities(song);
+  const photoOnly = !caps.hasOriginal && caps.hasTranslation && song.photoTranslation;
   const page = document.getElementById("song-page");
   page.classList.toggle("untimed-lyrics", !caps.timed);
   const status = document.getElementById("song-content-status");
   const preview = song.timingStatus === "preview";
-  status.innerHTML = `<p>${caps.hasOriginal ? (song.lyricsStatus === "partial" ? "原文歌詞部分整理" : song.lyricsStatus === "imported" ? "原文歌詞已匯入" : "原文歌詞已整理") : "原文歌詞整理中"} · ${caps.translationComplete ? "繁中翻譯已整理" : caps.hasTranslation ? "繁中翻譯部分整理" : "繁中翻譯整理中"}<br>${preview && caps.timed ? "LRC 時間試播・待校正" : caps.timed ? "同步時間已整理" : "同步時間整理中"}${song.readingsStatus === "pending" ? " · 日文讀音待整理" : song.readingsStatus === "partial" ? " · 日文讀音部分整理" : ""}</p>
-    ${!caps.hasOriginal ? "<p>先聆聽官方影片，歌詞將分批補齊。</p>" : ""}
+  status.innerHTML = `<p>${caps.hasOriginal ? (song.lyricsStatus === "partial" ? "原文歌詞部分整理" : song.lyricsStatus === "imported" ? "原文歌詞已匯入" : "原文歌詞已整理") : "原文歌詞整理中"} · ${photoOnly ? (song.photoTranslation.complete ? "照片中文已整理（尚未對齊原文）" : "照片中文部分整理（尚未對齊原文）") : caps.translationComplete ? "繁中翻譯已整理" : caps.hasTranslation ? "繁中翻譯部分整理" : "繁中翻譯整理中"}<br>${preview && caps.timed ? "LRC 時間試播・待校正" : caps.timed ? "同步時間已整理" : "同步時間整理中"}${song.readingsStatus === "pending" ? " · 日文讀音待整理" : song.readingsStatus === "partial" ? " · 日文讀音部分整理" : ""}</p>
+    ${photoOnly ? `<p>目前提供專輯照片中的中文閱讀，日文原文與 LRC 時間待補。${escapeHtml(song.photoTranslation.note || "")}</p>` : !caps.hasOriginal ? "<p>先聆聽官方影片，歌詞將分批補齊。</p>" : ""}
     <a href="${song.sourceUrl}" target="_blank" rel="noopener">官方專輯與曲目資訊 ↗</a>`;
   const notes = document.querySelector(".lyrics-note-copy");
-  if (notes) notes.textContent = preview && caps.timed ? "依 LRC 時間逐句試播；點歌詞跳轉，記下不同步的歌名與時間。" : caps.timed ? "點選歌詞跳至影片位置，歌詞隨影片同步。" : caps.hasOriginal ? "目前提供原文閱讀，同步時間整理中。" : "歌詞整理中，可先聆聽官方影片。";
+  if (notes) notes.textContent = preview && caps.timed ? "依 LRC 時間逐句試播；點歌詞跳轉，記下不同步的歌名與時間。" : caps.timed ? "點選歌詞跳至影片位置，歌詞隨影片同步。" : photoOnly ? "目前提供照片中文閱讀，原文與同步時間待補。" : caps.hasOriginal ? "目前提供原文閱讀，同步時間整理中。" : "歌詞整理中，可先聆聽官方影片。";
   document.getElementById("watch-on-yt").href = song.listenUrl;
   document.querySelector(".lyrics-legend").hidden = !chantGuideFor(song);
   document.getElementById("chant-btn").hidden = !chantGuideFor(song);
   document.getElementById("autoscroll-btn").disabled = !caps.timed;
+  const photoDetails = document.getElementById("photo-translation");
+  photoDetails.hidden = !caps.hasOriginal || !song.photoTranslation;
+  photoDetails.open = false;
+  photoDetails.innerHTML = photoDetails.hidden ? "" : `<summary>專輯照片中的中文譯詞</summary>
+    <p>此為專輯照片版本，與上方同步字幕分開呈現。${escapeHtml(song.photoTranslation.note || "")}</p>
+    ${song.photoTranslation.paragraphs.map(paragraph => `<p lang="zh-Hant">${escapeHtml(paragraph).replaceAll("\n", "<br>")}</p>`).join("")}
+    <p class="photo-translation-credit">${escapeHtml(song.photoTranslation.credit)}</p>`;
 }
 
 function renderSong(song){
@@ -2018,11 +2027,13 @@ function updateReadingUi(){
 function updateLyricDisplayUi(){
   const page = document.getElementById("song-page");
   if (!page) return;
-  page.classList.toggle("hide-japanese", !showJapanese);
-  page.classList.toggle("hide-chinese", !showChinese);
-  page.classList.toggle("lyrics-hidden", !showJapanese && !showChinese);
+  const caps = songCapabilities(currentSong);
+  const anyVisible = (showJapanese && caps.hasOriginal) || (showChinese && caps.hasTranslation);
+  page.classList.toggle("hide-japanese", !showJapanese || !caps.hasOriginal);
+  page.classList.toggle("hide-chinese", !showChinese || !caps.hasTranslation);
+  page.classList.toggle("lyrics-hidden", !anyVisible);
   const hiddenMessage = page.querySelector(".lyrics-hidden-message");
-  if (hiddenMessage) hiddenMessage.hidden = showJapanese || showChinese;
+  if (hiddenMessage) hiddenMessage.hidden = anyVisible || (!caps.hasOriginal && !caps.hasTranslation);
 
   const japaneseBtn = document.getElementById("japanese-toggle");
   if (japaneseBtn){
@@ -2782,7 +2793,8 @@ function buildDocumentPipViewModel(activeIdx = lastActiveIdx){
     readingMode,
     karaokeEnabled,
     iconBeatDuration: beatDuration,
-    status: !songCapabilities(currentSong).hasOriginal ? "歌詞整理中，可先聆聽官方影片。"
+    status: !songCapabilities(currentSong).hasOriginal && songCapabilities(currentSong).hasTranslation ? "目前提供照片中文閱讀，原文與同步時間待補。"
+      : !songCapabilities(currentSong).hasOriginal ? "歌詞整理中，可先聆聽官方影片。"
       : !songCapabilities(currentSong).timed ? "同步時間整理中，目前提供原文閱讀。"
       : currentSong?.timingStatus === "preview" ? "LRC 時間試播・待校正"
       : playerReady ? "" : "正在等待影片播放器…"
@@ -2871,7 +2883,7 @@ async function loadKaraokeTiming(song){
   if (!songCapabilities(song).timed){
     ++karaokeLoadSeq;
     karaokeTiming = null;
-    setKaraokeSourceStatus("pending", "同步時間整理中；目前提供官方影片與歌曲資訊。");
+    setKaraokeSourceStatus("pending", songCapabilities(song).hasTranslation && !songCapabilities(song).hasOriginal ? "照片中文僅供閱讀；日文原文與 LRC 時間待補。" : "同步時間整理中；目前提供官方影片與歌曲資訊。");
     return;
   }
   const seq = ++karaokeLoadSeq;
@@ -3480,7 +3492,9 @@ function sortedSongs(){
   if (songSort === "title-desc") return list.sort((a,b)=> byTitle(b,a));
   if (songSort === "chant-desc") return list.sort((a,b)=> songMarks(b).chant - songMarks(a).chant || byTitle(a,b));
   if (songSort === "chant-asc")  return list.sort((a,b)=> songMarks(a).chant - songMarks(b).chant || byTitle(a,b));
-  return list;
+  const albumOrder = Object.keys(ALBUMS);
+  return list.sort((a,b) => albumOrder.indexOf(a.album) - albumOrder.indexOf(b.album)
+    || (a.albumTrack || songNo(a)) - (b.albumTrack || songNo(b)));
 }
 
 /* 곡 목록 한 줄의 오른쪽에 붙는 배지들.

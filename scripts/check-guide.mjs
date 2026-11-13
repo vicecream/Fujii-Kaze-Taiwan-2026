@@ -1,11 +1,14 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import vm from "node:vm";
+import crypto from "node:crypto";
 import { SITE, EVENT, ONSITE, SHOW_SCHEDULE, SHOW_TIMELINE, SONGS, ALBUMS } from "../src/data.js";
 import { SONG_LYRICS } from "../src/song-lyrics.js";
 import { showState, taipeiDateKey, todayTimeline } from "../src/show-time.js";
 import { songCapabilities } from "../src/song-content.js";
 import { homeHtml } from "../src/ui/home.js";
+import { prepareSong } from "./import-song-lyrics.mjs";
+import { FURIGANA_CORRECTIONS, ROMAJI_CORRECTIONS } from "../src/furigana-corrections.js";
 
 const groups = [];
 function check(label, run){
@@ -14,30 +17,60 @@ function check(label, run){
 }
 
 check("catalog and listening sources", () => {
-  assert.equal(SONGS.length, 23);
-  assert.equal(new Set(SONGS.map(song => song.id)).size, 23);
+  assert.equal(SONGS.length, 29);
+  assert.equal(new Set(SONGS.map(song => song.id)).size, 29);
   assert.equal(SONGS.filter(song => song.album === "prema").length, 9);
-  assert.equal(SONGS.filter(song => song.album === "best").length, 10);
+  assert.equal(SONGS.filter(song => song.album === "best").length, 5);
+  assert.equal(SONGS.filter(song => song.album === "lasa").length, 11);
   assert.deepEqual(SONGS.slice(0, 9).map(song => song.language), Array(9).fill("en"));
   assert.equal(SONGS.filter(song => song.album === "prePrema").length, 2);
   assert.equal(SONGS.filter(song => song.album === "hehn").length, 2);
-  assert.deepEqual(SONGS.slice(9).map(song => song.language), Array(14).fill("ja"));
-  assert.deepEqual(SONGS.slice(19).map(song => song.id), ["ItsAlright", "Masshiro", "MoEhWa", "Kaerou"]);
+  assert.deepEqual(SONGS.slice(9).map(song => song.language), Array(20).fill("ja"));
+  assert.deepEqual(SONGS.slice(19, 23).map(song => song.id), ["ItsAlright", "Masshiro", "MoEhWa", "Kaerou"]);
   const additional = { ItsAlright: [43, 38], Masshiro: [34, 28], MoEhWa: [51, 51], Kaerou: [47, 47] };
-  for (const song of SONG_LYRICS.slice(19)){
+  for (const song of SONG_LYRICS.slice(19, 23)){
     const [originals, translated] = additional[song.id];
     assert.equal(song.lyrics.length, originals, song.id);
     assert.equal(song.lyrics.filter(line => line.tr?.trim()).length, translated, song.id);
     assert.equal(song.lyricsStatus, "imported", song.id);
     assert.equal(song.translationStatus, translated === originals ? "ready" : "partial", song.id);
-    assert.equal(song.timingStatus, song.id === "Masshiro" ? "pending" : "preview", song.id);
-    assert.equal(song.readingsStatus, "pending", song.id);
-    assert.equal(songCapabilities(song).timed, song.id !== "Masshiro", song.id);
-    assert.equal(songCapabilities(song).readings, false, song.id);
+    assert.equal(song.timingStatus, "preview", song.id);
+    assert.equal(song.readingsStatus, "ready", song.id);
+    assert.equal(songCapabilities(song).timed, true, song.id);
+    assert.equal(songCapabilities(song).readings, true, song.id);
     if (song.id === "Masshiro"){
       assert.ok(song.lyrics.some(line => line.jp === "真っ白な心に惹かれ"));
-      assert.ok(song.lyrics.every(line => line.time === undefined && line.sourceTime === undefined), "The supplied plain text has no timeline");
+      assert.equal(song.lyrics[0].time, 1.41);
+      assert.equal(song.lyrics.at(-1).time, 253.19);
     }
+  }
+  const readingManifest = JSON.parse(fs.readFileSync(new URL("../lyrics/additional-import-manifest.json", import.meta.url), "utf8"));
+  let additionalReadingLines = 0;
+  for (const entry of readingManifest.songs) {
+    const song = SONG_LYRICS.find(song => song.id === entry.id);
+    const { source, furigana, romaji } = entry.readings;
+    const pdf = fs.readFileSync(new URL(`../lyrics/${source.file}`, import.meta.url));
+    assert.equal(crypto.createHash("sha256").update(pdf).digest("hex"), source.sha256, `${song.id}: reviewed reading source must match the supplied PDF`);
+    for (const line of song.lyrics.filter(line => /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u.test(line.jp))) {
+      assert.ok(furigana[line.jp] && romaji[line.jp], `${song.id}: every Japanese line needs both readings`);
+      assert.equal(FURIGANA_CORRECTIONS[line.jp], furigana[line.jp]);
+      assert.equal(ROMAJI_CORRECTIONS[line.jp], romaji[line.jp]);
+      additionalReadingLines++;
+    }
+  }
+  assert.equal(additionalReadingLines, 134);
+  for (const song of SONG_LYRICS.filter(song => song.language === "ja")) {
+    assert.equal(song.readingsStatus, "ready", `${song.id}: all current Japanese songs must have complete readings`);
+    assert.equal(songCapabilities(song).readings, true, song.id);
+  }
+  for (const [id, manifestFile, offset] of [["Masshiro", "additional-import-manifest.json", 0], ["Kirari", "import-manifest.json", -0.1], ["SeishunSick", "lasa-import-manifest.json", 2]]) {
+    const manifest = JSON.parse(fs.readFileSync(new URL(`../lyrics/${manifestFile}`, import.meta.url), "utf8"));
+    const entry = manifest.songs.find(song => song.id === id);
+    const song = SONG_LYRICS.find(song => song.id === id);
+    const supplied = prepareSong(entry, fs.readFileSync(new URL(`../lyrics/${entry.file}`, import.meta.url), "utf8"), song);
+    const timeline = lyrics => lyrics.map(({ jp, sourceTime, sourceEnd, time, endTime }) => ({ jp, sourceTime, sourceEnd, time, endTime }));
+    assert.equal(song.timingPreview.offsetSeconds, offset, id);
+    assert.deepEqual(timeline(song.lyrics), timeline(supplied.lyrics), `${id}: every playback boundary must match the supplied LRC plus its requested offset`);
   }
   for (const song of SONGS){
     assert.equal(song.artist, "Fujii Kaze", song.id);
@@ -196,7 +229,7 @@ check("homepage content, lazy panels, sources and removal of spoiler UI", () => 
   const home = homeHtml("v2.0.0");
   assert.match(home, /藤井風/);
   assert.match(home, /高雄國家體育場/);
-  assert.match(home, /23 首歌曲預習/);
+  assert.match(home, /29 首歌曲預習/);
   assert.match(home, /非官方粉絲製作/);
   assert.match(home, /並非高雄正式歌單/);
   assert.match(home, /16:00/);
@@ -236,11 +269,11 @@ check("version and site identity markers", () => {
   const manifest = JSON.parse(read("manifest.json"));
   const pkg = JSON.parse(read("package.json"));
   const lock = JSON.parse(read("package-lock.json"));
-  assert.equal(pkg.version, "2.0.0");
+  assert.equal(pkg.version, "2.1.2");
   assert.equal(lock.version, pkg.version);
   assert.equal(lock.packages[""].version, pkg.version);
-  assert.match(read("src/main.js"), /const BUILD = "v2\.0\.0"/);
-  assert.match(read("sw.js"), /const CACHE_VERSION = "v2\.0\.0"/);
+  assert.match(read("src/main.js"), /const BUILD = "v2\.1\.2"/);
+  assert.match(read("sw.js"), /const CACHE_VERSION = "v2\.1\.2"/);
   assert.match(manifest.name, /藤井風/);
   assert.equal(read("CNAME").trim(), "kaze.tiaui.co");
   for (const file of ["index.html", "sitemap.xml", "robots.txt"]){
@@ -298,13 +331,13 @@ check("version and site identity markers", () => {
   stores.set("unrelated-app-cache", new Map());
   await dispatchLifecycle("install");
   assert.equal(skipped, true);
-  const workerCache = await caches.open("kaze-guide-v2.0.0");
+  const workerCache = await caches.open("kaze-guide-v2.1.2");
   for (const path of ["./", "./index.html", "./manifest.json", EVENT.poster, EVENT.seatMap, EVENT.venueMap, "./icon-192.png"]){
     assert.ok(await workerCache.match(path), `Precache ${path}`);
   }
   await dispatchLifecycle("activate");
   assert.equal(claimed, true);
-  assert.deepEqual(await caches.keys(), ["unrelated-app-cache", "kaze-guide-v2.0.0"]);
+  assert.deepEqual(await caches.keys(), ["unrelated-app-cache", "kaze-guide-v2.1.2"]);
   offline = true;
   const dispatchFetch = request => {
     let response;

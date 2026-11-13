@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": "desktop",
+    "passed": true,
+    "songs": 6,
+    "originalCues": 253,
+    "translatedCues": 218,
+    "pending": 35,
+    "pageErrors": [],
+    "mediaPlayback": "not tested; external requests blocked; seek/highlight tested separately with a DOM clock fixture"
+  },
+  {
+    "viewport": "mobile",
+    "passed": true,
+    "songs": 6,
+    "originalCues": 253,
+    "translatedCues": 218,
+    "pending": 35,
+    "pageErrors": [],
+    "mediaPlayback": "not tested; external requests blocked; seek/highlight tested separately with a DOM clock fixture"
+  }
+]

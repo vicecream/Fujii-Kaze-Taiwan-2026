@@ -133,6 +133,12 @@
       "file": "帰ろう.lrc",
       "bytes": 2305,
       "sha256": "61bda248a16ed1bfb405654227542dd625c25b21b79a1b831d738bcda80a0e7a"
+    },
+    {
+      "id": "Masshiro",
+      "file": "真っ白.lrc",
+      "bytes": 1561,
+      "sha256": "b9fd518fd8a2c62ccf09c365aa251da3b870523966b6262a2be7e9acdcc4fa4b"
     }
   ],
   "previousInputs": [
@@ -143,16 +149,17 @@
       "sha256": "f8aca5e8a3458013a4277d629b1212c1fccf61a963506149129a83701643d79b",
       "detectedSong": "Matsuri",
       "status": "replaced-by-user"
-    }
-  ],
-  "untimedFiles": [
+    },
     {
       "id": "Masshiro",
       "file": "真っ白.lrc",
       "bytes": 1263,
       "sha256": "cd42025f20f927eee575e063daf99d6b55538ce11ac0cea422f5d32c00bf3c99",
       "format": "plain-text",
-      "timing": "pending"
+      "timing": "pending",
+      "reason": "Untimed original superseded by user-provided LRC timestamps on 2026-11-14.",
+      "status": "replaced-by-user"
     }
-  ]
+  ],
+  "untimedFiles": []
 }

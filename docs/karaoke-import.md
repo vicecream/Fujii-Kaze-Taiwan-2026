@@ -64,13 +64,15 @@ AMLL 的 19 首搜尋均未取得相符候選。LRCLIB 第一輪有 10 首找到
 
 ### 10/30 新增四首的本機檔案
 
-`lyrics/additional-import-manifest.json` 對應使用者提供的四首原文。`It's Alright.lrc`、`もうええわ.lrc`、`帰ろう.lrc` 共 141 行，採逐行時間試播；`真っ白.lrc` 已更新為正確的 34 行原文，但沒有時間碼，明示 `format: "plain-text"` 後僅供閱讀。純文字模式不接受同步設定或 LRC 時間標記，不會自動估算時間；四首讀音仍待整理。
+`lyrics/additional-import-manifest.json` 對應使用者提供的四首原文。`It's Alright.lrc`、`もうええわ.lrc`、`帰ろう.lrc` 共 141 行；`真っ白.lrc` 於 2026-11-14 補上 34 行時間碼，四首均採逐行時間試播。〈真っ白〉原文與既有 28 行中文完整保留；四首 134 行日文已依使用者 PDF 補齊兩種讀音，維護於 manifest 的 `readings`，重新匯入可一併更新讀音對照及就緒狀態。匯入器仍支援 `format: "plain-text"` 的無時間碼閱讀模式，該模式不接受同步設定或 LRC 時間標記。
 
-三份 LRC 與一份純文字原文的 SHA-256 記錄於 `artifacts/lyrics-import-inputs.json`；初次誤放〈まつり〉的舊雜湊保存在 `previousInputs`，不代表目前檔案。四首重新預覽可執行 `node scripts/import-song-lyrics.mjs lyrics/additional-import-manifest.json`；所有字幕與中文來源映射見 [中文匯入紀錄](translation-import.md)。
+四份 LRC 的 SHA-256 記錄於 `artifacts/lyrics-import-inputs.json`；〈真っ白〉初次誤放〈まつり〉及後續無時間碼原文的舊雜湊保存在 `previousInputs`，不代表目前檔案。四首重新預覽可執行 `node scripts/import-song-lyrics.mjs lyrics/additional-import-manifest.json`；所有字幕與中文來源映射見 [中文匯入紀錄](translation-import.md)。
 
 ### 原有 19 首的本機匯入設定
 
 本次 `lyrics/import-manifest.json` 已設定 `timingMode: "preview"`，原始時間保存在 `sourceTime`／`sourceEnd`，播放起點先沿用來源時間。歌曲頁顯示時間與待校正狀態，可點句跳轉、逐行跟隨；逐字高亮維持關閉，也不連線套用其他提供者時間。`allowPendingReadings: true` 表示先處理原文與時間線，日文讀音未備妥時停用讀音控制，不填入推測讀法。〈死ぬのがいいわ〉另以 `pairedRomaji: true` 將同時間羅馬字列保存在 `providedRomaji`，避免重複顯示。
+
+試播模式可用 `previewOffsetSeconds` 保存播放偏移，計算方式為「來源秒數 + 偏移 = 播放秒數」，同時調整每句起點與終點，不更動 `sourceTime`／`sourceEnd`。2026-11-14 依使用者要求，〈きらり〉設為 `-0.1`（提前 0.1 秒），〈青春病〉設為 `2`（延後 2 秒），分別記錄於原有與 LASA 的 manifest；重新匯入仍會套用這些設定，狀態維持時間試播。
 
 匯入器不連線下載全文，讀取本機 `.lrc`，或既有轉換器支援的 LRCLIB／Beautiful Lyrics `.json`。維持 `{ jp, tr, time }` 的原顯示結構，不產生翻譯。檔案路徑相對於 manifest 所在目錄；以 `src/song-metadata.js` 的歌曲 ID 對應，不改動影片與專輯資料。
 

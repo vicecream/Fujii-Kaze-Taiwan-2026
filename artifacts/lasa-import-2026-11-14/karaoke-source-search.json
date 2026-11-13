@@ -1,0 +1,264 @@
+{
+  "checkedAt": "2026-11-14",
+  "note": "Metadata candidates only. No external lyric text was saved or imported. Sync remains unverified.",
+  "songs": [
+    {
+      "id": "HedemoNeYoLasa",
+      "title": "へでもねーよ (LASA edit / Hedemo Ne-Yo)",
+      "youtubeId": "MsGDkuzrKCU",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": []
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 4046740,
+              "title": "へでもねーよ - LASA edit",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 189,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046740"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "Yaba",
+      "title": "やば。 (YABA)",
+      "youtubeId": "7xbokCesviM",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": []
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 4046742,
+              "title": "やば。",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 252,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046742"
+            },
+            {
+              "id": 33926737,
+              "title": "やば",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 252,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/33926737"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "MoEhYo",
+      "title": "燃えよ (MO-EH-YO / Ignite)",
+      "youtubeId": "rZxR9bpsYLU",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": []
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 8512511,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "燃えよ",
+              "duration": 280,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8512511"
+            },
+            {
+              "id": 8512508,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 277,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/8512508"
+            },
+            {
+              "id": 32549538,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 280,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/32549538"
+            },
+            {
+              "id": 24520713,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 338,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520713"
+            },
+            {
+              "id": 36883618,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live “Feelin' Good”",
+              "duration": 338,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/36883618"
+            },
+            {
+              "id": 34037233,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 302,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34037233"
+            },
+            {
+              "id": 38918171,
+              "title": "燃えよ",
+              "artist": "Fujii Kaze",
+              "album": "燃えよ - Single",
+              "duration": 280,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38918171"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "LonelyRhapsody",
+      "title": "ロンリーラプソディ (Lonely Rhapsody)",
+      "youtubeId": "I3oUsW9bXvQ",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": []
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 4046743,
+              "title": "ロンリーラプソディ",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 287,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046743"
+            },
+            {
+              "id": 24520777,
+              "title": "ロンリーラプソディ",
+              "artist": "Fujii Kaze",
+              "album": "Fujii Kaze Stadium Live \"Feelin' Good\"",
+              "duration": 307,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/24520777"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "ByeForNow",
+      "title": "それでは、 (Bye for now,)",
+      "youtubeId": "1cXlo7vkxhE",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": []
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 4046739,
+              "title": "それでは、",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 231,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/4046739"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "SeishunSick",
+      "title": "青春病 (Seishun Sick)",
+      "youtubeId": "kQvT37OzkP8",
+      "sources": {
+        "amll": {
+          "state": "miss",
+          "candidates": []
+        },
+        "lrclib": {
+          "state": "found",
+          "candidates": [
+            {
+              "id": 3429379,
+              "title": "青春病",
+              "artist": "Fujii Kaze",
+              "album": "青春病",
+              "duration": 321,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/3429379"
+            },
+            {
+              "id": 30778579,
+              "title": "'青春病'",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 324,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/30778579"
+            },
+            {
+              "id": 11508675,
+              "title": "“青春病”",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 324,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/11508675"
+            },
+            {
+              "id": 34436873,
+              "title": "青春病",
+              "artist": "Fujii Kaze",
+              "album": "LOVE ALL SERVE ALL",
+              "duration": 478,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/34436873"
+            },
+            {
+              "id": 38420057,
+              "title": "青春病",
+              "artist": "Fujii Kaze",
+              "album": "青春病 EP",
+              "duration": 320,
+              "hasSyncedLyrics": true,
+              "url": "https://lrclib.net/api/get/38420057"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

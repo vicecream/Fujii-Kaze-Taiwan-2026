@@ -1,0 +1,34 @@
+{
+  "preparedAt": "2026-11-14",
+  "sourceFile": "lyrics/readings/lasa-readings.txt",
+  "sha256": "6b78b963799408430aabce96c54c74865d6f90f821e6215ce61fb82b5acb6963",
+  "method": "Manually annotated supplied LRC text; standard readings and supplied dialect spelling retained. Not an artist-approved phonetic transcript.",
+  "uniqueLines": 194,
+  "japaneseLyricRows": 251,
+  "songs": [
+    {
+      "id": "HedemoNeYoLasa",
+      "japaneseLines": 53
+    },
+    {
+      "id": "Yaba",
+      "japaneseLines": 43
+    },
+    {
+      "id": "MoEhYo",
+      "japaneseLines": 43
+    },
+    {
+      "id": "LonelyRhapsody",
+      "japaneseLines": 41
+    },
+    {
+      "id": "ByeForNow",
+      "japaneseLines": 24
+    },
+    {
+      "id": "SeishunSick",
+      "japaneseLines": 47
+    }
+  ]
+}
