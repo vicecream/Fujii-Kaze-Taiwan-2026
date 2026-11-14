@@ -1,6 +1,6 @@
 # 放入 marumaru 中文譯詞
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 這裡保存你提供的 19 份 PDF，並已抽取為同名歌曲 ID 的 `.zh.txt` 雙語對照，例如 `Prema.zh.txt`、`Matsuri.zh.txt`。中文已加入目前字幕，共 836 列；PDF 未提供對應中文的部分保留待補。完整結果與待補時間見 [匯入紀錄](../../docs/translation-import.md)。
 

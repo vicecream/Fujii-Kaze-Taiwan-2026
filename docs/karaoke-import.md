@@ -1,6 +1,6 @@
 # 同步歌詞來源搜尋與本機匯入
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 目前維護的 [karaoke-sources.js](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/blob/main/karaoke-sources.js) 沿用原專案的資料轉換與來源架構：原文由本地維護，外部時間依序由聚合服務、AMLL、LRCLIB 補充。原作者與程式來源署名保留於指南頁尾。搜尋到來源候選不代表已完成全文匯入或目前 YouTube 影片的時間核對。
 

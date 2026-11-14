@@ -1,8 +1,8 @@
 # Cloudflare Pages 部署指南
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
-目標儲存庫為 [vicecream/Fujii-Kaze-Taiwan-2026](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026)，規劃使用免費 Pages 與 GitHub Integration。程式與資料已上傳至 [main](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)；**正式網站網址與 Cloudflare 部署結果尚未驗證**。預定專案名稱是否可用，以 Cloudflare 建立時的結果為準。
+網站入口為 [藤井風高雄演唱會指南](https://fujii-kaze-taiwan-2026.pages.dev/)，歌曲預習入口為 [/#/guide](https://fujii-kaze-taiwan-2026.pages.dev/#/guide)。2026-11-14 已確認首頁回應 HTTP 200 並顯示正確標題。目標儲存庫為 [vicecream/Fujii-Kaze-Taiwan-2026](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026)，更新來源分支為 [main](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)；Cloudflare 各次建置結果可在專案的 Deployments 查閱。
 
 操作入口：[Cloudflare 控制台](https://dash.cloudflare.com/) · [GitHub 儲存庫設定](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/settings) · [GitHub Actions 紀錄](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/actions) · [最新提交](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commits/main)。
 
@@ -11,7 +11,7 @@
 - Vite 7＋原生 JavaScript／CSS，沒有 React、Vue、後端或資料庫。
 - 入口為 `index.html`；`npm run build` 產生 `dist/`，不要直接編輯輸出。
 - `vite.config.js` 已設定 `base: "./"`，並保留首頁預先產生、根目錄靜態檔複製與 Service Worker 資源清單外掛。
-- 使用 Hash 路由，例如 `/#/guide`、`/#/song/Prema`；歌曲路由不會傳送到伺服器，因此重新整理仍請求網站根目錄，不必新增 `_redirects`。
+- 使用 Hash 路由，例如 [歌曲預習](https://fujii-kaze-taiwan-2026.pages.dev/#/guide)、[Prema 歌曲頁](https://fujii-kaze-taiwan-2026.pages.dev/#/song/Prema)；歌曲路由不會傳送到伺服器，因此重新整理仍請求網站根目錄，不必新增 `_redirects`。
 - 既有 `.github/workflows/pages.yml` 是 GitHub Pages 流程，本次保留；Cloudflare 自行監聽 GitHub，不必新增 Actions。推送目標儲存庫的 `main` 仍可能觸發既有流程，請在目標儲存庫確認 Pages 設定與執行結果。
 - PWA 已有 `manifest.json`、`sw.js` 與圖示；`start_url`、`scope`、圖示及 SW 註冊均使用相對路徑。正式版載入約 8 秒後才開始註冊 SW。
 - 目前有 29 首預習歌曲，保留既有歌詞、翻譯、讀音、時間軸、YouTube、應援提示、深淺色及播放器功能。預習清單不代表正式演出歌單。
@@ -24,13 +24,14 @@
 | --- | --- |
 | 產品 | Workers & Pages → Pages → 連接 Git 儲存庫 |
 | GitHub Repository | `vicecream/Fujii-Kaze-Taiwan-2026` |
-| Project name | `fujii-kaze-taiwan-2026`，建立時確認是否可用 |
+| Project name | `fujii-kaze-taiwan-2026`，對應目前的正式網站入口 |
 | Production branch | `main`，已由遠端 HEAD 確認 |
 | Framework preset | `None`，手動填寫以下 Vite 指令；不是 React／Vue 專案 |
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 | Root directory | 留空，使用儲存庫根目錄 |
 | Node.js | `.node-version` 指定 `24.16.0`；若控制台另設 `NODE_VERSION`，須與檔案一致 |
+| Production environment variable | `SITE_URL=https://fujii-kaze-taiwan-2026.pages.dev/` |
 | Runtime bindings／Functions | 不需要 |
 | 付費方案／自訂網域 | 不需要 |
 
@@ -46,13 +47,15 @@ Pages 在建置前安裝 npm 相依套件；請一併提交 `package-lock.json`�
 
 建置會同步處理 `index.html` 的 canonical、Open Graph 網址／圖示、`robots.txt` 與 `sitemap.xml`。網址必須為 HTTPS 網站根目錄，不含帳密、查詢參數或 hash。不要把 Token 填入這些欄位。
 
-第一次建立時可先不設定 `SITE_URL`，讓 Pages 提供當次實際網址。成功建立後，從專案 Overview 複製穩定的正式網址，在 Production 環境設定 `SITE_URL` 並重新部署，讓分享及搜尋資訊採用正式網址。Preview 環境可以不設 `SITE_URL`，沿用各次部署網址；不要手動覆寫 `CF_PAGES_URL`。
+目前正式網址為 `https://fujii-kaze-taiwan-2026.pages.dev/`，在 Production 環境將 `SITE_URL` 設為此值並重新部署，讓分享及搜尋資訊採用正式網址。Preview 環境可以不設 `SITE_URL`，沿用各次部署網址；不要手動覆寫 `CF_PAGES_URL`。此處記錄設定值，實際環境變數由 Cloudflare 控制台管理。
 
-預定的 `fujii-kaze-taiwan-2026.pages.dev` **尚未取得或驗證**。不要把預定名稱當成已發布網址。
+[fujii-kaze-taiwan-2026.pages.dev](https://fujii-kaze-taiwan-2026.pages.dev/) 已由使用者確認為網站入口，本次亦完成首頁 HTTP 與標題檢查。
 
 原始 `CNAME`、規劃網域與 GitHub Pages workflow 保留相容性。Cloudflare 建置（`CF_PAGES=1`）不複製 `CNAME`；本站不會替該網域設定 DNS 或購買服務。
 
 ## 3. 連接 GitHub 與首次發布
+
+目前網站已有可開啟的入口；下列流程供重新建立或連接專案時參考，日常更新見第 4 節。
 
 1. 先在本機執行 `git status --short --branch`、`git remote -v`，確認操作的是目標儲存庫。此工作目錄原有未提交的讀音、歌詞及文件變更，應分別檢視，不要用 `git add .` 全部納入本次部署。
 2. 將本次部署檔案透過目標儲存庫的 PR／發版流程合併至 `main`。正式發版的 PR 歸屬、SemVer、版本標記及 changelog 連結仍須依 `AGENTS.md` 處理，但發布儲存庫以本次指定的 `vicecream/Fujii-Kaze-Taiwan-2026` 為準，不推送原作者儲存庫。
@@ -63,7 +66,7 @@ Pages 在建置前安裝 npm 相依套件；請一併提交 `package-lock.json`�
 7. 從 Cloudflare 專案 Overview／正式部署紀錄複製實際 `pages.dev` 網址，以 HTTPS 開啟首頁、預習清單及歌曲頁，並重新整理歌曲頁。
 8. 設定正式環境的 `SITE_URL` 後重新部署，檢查網頁原始碼、`robots.txt` 與 `sitemap.xml` 都採用正式網址。
 
-本次環境沒有可用的 Cloudflare 連線或 CLI 認證，因此以上控制台步驟尚未執行。不需要在聊天中提供密碼或 API Token，也不要把登入憑證提交到 GitHub。
+本次僅更新文件與確認網站首頁，未操作 Cloudflare 控制台設定。控制台步驟可由專案管理者依需要執行；登入憑證不應提交到 GitHub。
 
 官方說明：[Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/)、[建置設定與內建環境變數](https://developers.cloudflare.com/pages/configuration/build-configuration/)、[Node 版本設定](https://developers.cloudflare.com/pages/configuration/build-image/)。
 
@@ -149,7 +152,7 @@ SW 的建置清單包含目前所有 Vite 輸出的延後載入區塊；舊的 `
 ### 2026-11-14 資料同步
 
 - 歌詞、29 首曲庫、776 行日文讀音與 LASA 來源資料已同步至目標儲存庫，見 [資料更新提交 31dc700](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commit/31dc7004acd0dfc63361582ff1a5bf27b491f215)。後續內容以 [main 的最新提交](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commits/main) 為準。
-- `check:guide`、歌詞、卡拉 OK、翻譯、LASA、讀音模式與正式建置已完成本機檢查；正式網站入口、Cloudflare 建置及線上驗收仍須依上文另行確認。
+- `check:guide`、歌詞、卡拉 OK、翻譯、LASA、讀音模式與正式建置已完成本機檢查。網站入口已補為 [https://fujii-kaze-taiwan-2026.pages.dev/](https://fujii-kaze-taiwan-2026.pages.dev/)，首頁 HTTP 200 與指南標題已確認；Cloudflare 建置紀錄及完整線上驗收依上文檢查。
 
 ### 2026-10-30 部署準備紀錄（Asia/Taipei）
 
@@ -164,7 +167,7 @@ SW 的建置清單包含目前所有 Vite 輸出的延後載入區塊；舊的 `
 - 靜態掃描 50 個程式／設定檔，未發現常見憑證格式或 HTTP 載入資源；此結果不等同完整安全稽核。
 - 響應式 CSS 已靜態檢視，包含手機斷點、900px 雙欄、影片比例、歌詞換行及安全區留白。五種 viewport 的實際渲染、Safari／Android、影音、真實離線與線上安全標頭尚未驗證。
 
-以上為 10/30 當時的部署準備結果；GitHub 資料已於 11/14 更新。Pages 建立、名稱可用性及線上發布仍須另行驗證，目前文件未記載已確認的正式網站網址。
+以上為 10/30 當時的部署準備結果。GitHub 資料與正式網站入口已於 11/14 更新；目前請由 [線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) 開啟網站，並依第 6 節完成各裝置、影音及離線驗收。
 
 ## 10. 未來的自訂網域
 

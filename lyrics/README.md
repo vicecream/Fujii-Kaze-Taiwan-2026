@@ -1,8 +1,8 @@
 # 歌詞檔案與匯入引導
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
-目前曲庫收錄 29 首。請使用 UTF-8 編碼維護各首原文與 `.lrc` 時間碼，保留既有檔名、歌曲 ID 與來源註記。線上檔案入口為 [main 的 lyrics 資料夾](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main/lyrics)。
+目前曲庫收錄 29 首，可由 [線上歌曲預習](https://fujii-kaze-taiwan-2026.pages.dev/#/guide) 開啟播放器。請使用 UTF-8 編碼維護各首原文與 `.lrc` 時間碼，保留既有檔名、歌曲 ID 與來源註記。線上檔案入口為 [main 的 lyrics 資料夾](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main/lyrics)。
 
 | 歌曲範圍 | 匯入設定 | 操作與來源 |
 |---|---|---|

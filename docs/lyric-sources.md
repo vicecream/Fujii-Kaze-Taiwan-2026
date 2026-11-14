@@ -1,6 +1,6 @@
 # 23 首 LRC 與中文來源清單
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 整理日期：2026-10-29（Asia/Taipei）。19 首皆以 LRCLIB 作為 LRC 搜尋來源；另保留使用者提供的 marumaru 參考連結。這是歌曲預習目錄的來源候選，不代表演唱會歌單。
 

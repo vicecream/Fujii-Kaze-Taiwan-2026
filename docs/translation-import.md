@@ -1,6 +1,6 @@
 # 中文譯詞匯入紀錄
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 2026-10-30（Asia/Taipei）整理。原有 23 首共 **907 列中文**：使用者直接提供的 19 份 PDF 對應 836 列，另貼出的〈Casket Girl〉全曲對應 55 列、〈Forever Young〉節錄對應 16 列。原有 19 首、936 行原文及來源時間均保留；新增四首共 175 行原文，這 23 首合計 1,111 行。2026-11-14 同步〈真っ白〉新增的 34 行時間碼後，23 首均可逐行 LRC 試播；影片同步尚未宣稱已校正。
 

@@ -1,12 +1,12 @@
 # CHANGELOG
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 本檔案依 Git 歷史整理，使用版本提交作為每一段的邊界。
 
 ## v2.1.2（尚未發佈）
 
-2026-11-14 本機內容更新，尚未部署。
+2026-11-14 內容更新紀錄。線上入口已補為 [藤井風高雄演唱會指南](https://fujii-kaze-taiwan-2026.pages.dev/)；正式版本發佈提交依專案發版流程另行記錄。
 
 - 同步〈真っ白〉34 行最新 LRC 時間碼，保留既有中文；〈きらり〉播放時間提前 0.1 秒、〈青春病〉延後 2 秒，並保存可重複匯入的偏移設定。
 - 補齊〈It's Alright〉、〈真っ白〉、〈もうええわ〉與〈帰ろう〉共 134 行日文讀音，全 20 首含日文歌曲的 776 行均有振り仮名與羅馬拼音，並驗證假名／羅馬字／並列切換。

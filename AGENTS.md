@@ -1,6 +1,6 @@
 # Project instructions
 
-[Repository](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [Documentation](README.md#文件導覽) · [Current source](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[Live guide](https://fujii-kaze-taiwan-2026.pages.dev/) · [Repository](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [Documentation](README.md#文件導覽) · [Current source](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 This is a Vite static PWA for a non-official Fujii Kaze Prema World Tour Kaohsiung fan guide. The show is on October 31, 2026; all event times use `Asia/Taipei`. Work from source files; `dist/` is generated output. Preserve existing user changes and keep each patch limited to the requested scope. Historical Vaundy references belong only to provenance, version history, or retained deployment-compatibility assets.
 

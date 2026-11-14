@@ -1,8 +1,8 @@
 # LOVE ALL SERVE ALL 曲目與照片譯詞匯入
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
-2026-11-14（Asia/Taipei）整理。本機版本 v2.1.2，尚未部署。
+2026-11-14（Asia/Taipei）整理。資料版本 v2.1.2；線上入口：[指南首頁](https://fujii-kaze-taiwan-2026.pages.dev/) · [歌曲預習](https://fujii-kaze-taiwan-2026.pages.dev/#/guide)。
 
 依 [藤井風官方專輯頁](https://fujiikaze.com/music/love_all_serve_all/) 收錄通常盤 11 首，未包含《LOVE ALL COVER ALL》翻唱附碟。原網站已有 5 首，新增 6 首後合計 29 首，沒有重複歌曲。原有 23 首 ID、歌曲編號、原文、字幕時間及中譯保留；5 首移至 LASA 分組，畫面依官方專輯曲序排列。
 

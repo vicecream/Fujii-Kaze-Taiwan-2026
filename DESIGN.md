@@ -1,6 +1,6 @@
 # Fujii Kaze Kaohsiung fan guide design
 
-[Repository](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [Documentation](README.md#文件導覽) · [Current source](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[Live guide](https://fujii-kaze-taiwan-2026.pages.dev/) · [Repository](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [Documentation](README.md#文件導覽) · [Current source](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 ## 1. Atmosphere and identity
 

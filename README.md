@@ -4,12 +4,13 @@ Fujii Kaze Prema World Tour 高雄站的繁體中文非官方粉絲指南。演�
 
 專案入口：[vicecream/Fujii-Kaze-Taiwan-2026](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main) · [提交紀錄](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commits/main) · [建置紀錄](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/actions) · [問題回報](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/issues)。保留原專案 Git 歷史與程式來源署名。
 
-正式網站網址尚未確認；`kaze.tiaui.co` 與 `fujii-kaze-taiwan-2026.pages.dev` 都只是規劃名稱。網站部署並驗證成功後，再將實際 HTTPS 網址填入此處；目前可先使用下列文件與本機預覽入口。
+正式網站：[藤井風高雄演唱會指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [29 首歌曲預習](https://fujii-kaze-taiwan-2026.pages.dev/#/guide)。網址由使用者提供，已於 2026-11-14 確認首頁回應 HTTP 200 並顯示正確指南標題。
 
 ## 文件導覽
 
 | 要做的事 | 引導文件或資料入口 |
 |---|---|
+| 開啟線上指南與歌曲預習 | [指南首頁](https://fujii-kaze-taiwan-2026.pages.dev/) · [歌曲預習](https://fujii-kaze-taiwan-2026.pages.dev/#/guide) |
 | 更新原文與 LRC 時間碼 | [歌詞資料夾說明](lyrics/README.md) · [歌詞檔案](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main/lyrics) · [匯入步驟](docs/karaoke-import.md) |
 | 查詢原有 23 首的來源 | [LRC 與中文來源清單](docs/lyric-sources.md) |
 | 更新中文譯詞 | [中文供稿說明](lyrics/translations/README.md) · [匯入與對齊紀錄](docs/translation-import.md) |
@@ -127,7 +128,7 @@ git diff --check
 
 ## 5. 發佈
 
-程式與資料已上傳至本專案的 `main`；網站是否部署成功須另行驗證。準備上線時依 [Cloudflare Pages 部署指南](CLOUDFLARE_DEPLOY.md) 設定，再從平台複製實際網址並驗證 HTTPS；正式發版依 [AGENTS.md](AGENTS.md) 處理 PR 歸屬、版本提交與 changelog 連結。
+程式與資料已上傳至本專案的 `main`，網站入口為 [https://fujii-kaze-taiwan-2026.pages.dev/](https://fujii-kaze-taiwan-2026.pages.dev/)。後續更新依 [Cloudflare Pages 部署指南](CLOUDFLARE_DEPLOY.md) 檢查部署紀錄；Production 的 `SITE_URL` 使用此正式網址。正式發版依 [AGENTS.md](AGENTS.md) 處理 PR 歸屬、版本提交與 changelog 連結。
 
 上傳與發佈目標均為 [vicecream/Fujii-Kaze-Taiwan-2026](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026)。操作前以 `git remote -v` 核對實際 URL，使用指向此儲存庫的 remote；不要只依 `origin`、`personal` 或 `upstream` 的名稱判斷。推送 `main` 會觸發既有 [GitHub Actions](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/actions)，執行結果與 Cloudflare 發布結果須分別確認。
 

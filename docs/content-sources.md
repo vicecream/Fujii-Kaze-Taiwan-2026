@@ -1,6 +1,6 @@
 # 內容來源紀錄
 
-[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+[線上指南](https://fujii-kaze-taiwan-2026.pages.dev/) · [專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
 查核日期：基本演出、原有曲目與影片資訊為 **2026-10-27**；新增四首曲目與官方影片於 **2026-10-30** 核對；現場公告圖由使用者於 **2026-10-29** 直接提供並人工核對。此文件記錄指南的資訊與資產出處；網站為非官方粉絲製作，後續變更仍以高雄場主辦單位公告為準。
 
