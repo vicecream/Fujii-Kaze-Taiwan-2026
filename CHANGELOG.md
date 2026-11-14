@@ -1,5 +1,7 @@
 # CHANGELOG
 
+[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+
 本檔案依 Git 歷史整理，使用版本提交作為每一段的邊界。
 
 ## v2.1.2（尚未發佈）

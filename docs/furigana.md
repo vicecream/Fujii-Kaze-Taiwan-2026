@@ -1,5 +1,7 @@
 # 日文讀音整理
 
+[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+
 ## 2026-11-14 補齊其餘四首
 
 〈It's Alright〉、〈真っ白〉、〈もうええわ〉與〈帰ろう〉的 134 行含日文歌詞已補齊兩種讀音，對應 107 組不重複句。全曲庫 29 首中，20 首含日文歌曲的 **776 行均有振り仮名與羅馬拼音**，`readingsStatus` 均為 `ready`，可切換假名、羅馬字及並列；其餘 9 首為英文歌曲。

@@ -2,7 +2,22 @@
 
 Fujii Kaze Prema World Tour 高雄站的繁體中文非官方粉絲指南。演出日期為 **2026/10/31（六）**，地點為高雄國家體育場（世運主場館），**16:00 入場、19:00 開演**；時間採 `Asia/Taipei`。散場時間與尚未確認的現場安排不自行推算。
 
-規劃網址：<https://kaze.tiaui.co/>。目前更新程式與內容，尚未設定 DNS、部署或正式發佈。更新資料上傳至 <https://github.com/vicecream/Fujii-Kaze-Taiwan-2026>，保留原專案 Git 歷史與程式來源署名。
+專案入口：[vicecream/Fujii-Kaze-Taiwan-2026](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main) · [提交紀錄](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commits/main) · [建置紀錄](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/actions) · [問題回報](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/issues)。保留原專案 Git 歷史與程式來源署名。
+
+正式網站網址尚未確認；`kaze.tiaui.co` 與 `fujii-kaze-taiwan-2026.pages.dev` 都只是規劃名稱。網站部署並驗證成功後，再將實際 HTTPS 網址填入此處；目前可先使用下列文件與本機預覽入口。
+
+## 文件導覽
+
+| 要做的事 | 引導文件或資料入口 |
+|---|---|
+| 更新原文與 LRC 時間碼 | [歌詞資料夾說明](lyrics/README.md) · [歌詞檔案](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main/lyrics) · [匯入步驟](docs/karaoke-import.md) |
+| 查詢原有 23 首的來源 | [LRC 與中文來源清單](docs/lyric-sources.md) |
+| 更新中文譯詞 | [中文供稿說明](lyrics/translations/README.md) · [匯入與對齊紀錄](docs/translation-import.md) |
+| 維護假名與羅馬字 | [日文讀音整理](docs/furigana.md) |
+| 查看 LASA 新增六首與照片譯詞 | [LOVE ALL SERVE ALL 匯入紀錄](docs/love-all-serve-all.md) |
+| 查詢活動與交通依據 | [內容來源紀錄](docs/content-sources.md) |
+| 部署與設定正式網站網址 | [Cloudflare Pages 部署指南](CLOUDFLARE_DEPLOY.md) |
+| 查看版本、維護與設計規範 | [更新紀錄](CHANGELOG.md) · [專案操作規範](AGENTS.md) · [設計規範](DESIGN.md) |
 
 ## 1. 本機開發與驗證
 
@@ -108,12 +123,12 @@ git diff --check
 
 `public/assets/` 保留近期舊首頁引用的雜湊 JavaScript，供 CDN／HTML 更新交錯時使用；不可在轉換時一併刪除。
 
-目前轉換版為 **2.0.0**，因原歌曲網址與內容已不再相容。後續選定版本後，必須同步更新套件版本、鎖檔兩個根版本、`BUILD`、`CACHE_VERSION` 與更新日誌。
+目前資料版本為 **2.1.2**，更新內容見 [CHANGELOG.md](CHANGELOG.md)。正式發版時，必須同步更新套件版本、鎖檔兩個根版本、`BUILD`、`CACHE_VERSION` 與更新日誌。
 
 ## 5. 發佈
 
-本次未發佈。準備上線時先確認 `kaze.tiaui.co` 的 DNS、GitHub Pages 自訂網域及 HTTPS 設定，再依 [AGENTS.md](AGENTS.md) 的明確發佈流程處理 PR 歸屬、版本提交與 changelog 連結。
+程式與資料已上傳至本專案的 `main`；網站是否部署成功須另行驗證。準備上線時依 [Cloudflare Pages 部署指南](CLOUDFLARE_DEPLOY.md) 設定，再從平台複製實際網址並驗證 HTTPS；正式發版依 [AGENTS.md](AGENTS.md) 處理 PR 歸屬、版本提交與 changelog 連結。
 
-`origin` 仍是本指南的發佈儲存庫；`upstream` 僅保留原程式來源，不作為發佈目標。推送 `main` 會觸發既有 GitHub Pages workflow，因此不要把本機內容轉換當作已授權的部署。
+上傳與發佈目標均為 [vicecream/Fujii-Kaze-Taiwan-2026](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026)。操作前以 `git remote -v` 核對實際 URL，使用指向此儲存庫的 remote；不要只依 `origin`、`personal` 或 `upstream` 的名稱判斷。推送 `main` 會觸發既有 [GitHub Actions](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/actions)，執行結果與 Cloudflare 發布結果須分別確認。
 
 程式來源與原作者署名保留於頁尾；舊版內容僅保存在 Git 歷史、歷史更新日誌及相容資產。

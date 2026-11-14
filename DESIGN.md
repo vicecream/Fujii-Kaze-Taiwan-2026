@@ -1,5 +1,7 @@
 # Fujii Kaze Kaohsiung fan guide design
 
+[Repository](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026) · [Documentation](README.md#文件導覽) · [Current source](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
+
 ## 1. Atmosphere and identity
 
 A compact Traditional Chinese concert guide for Fujii Kaze's Prema World Tour in Kaohsiung on October 31, 2026. Official Kaohsiung poster photography carries the mood. The experience prioritizes finding event information and preparing with released music on a phone, including in a dark venue.

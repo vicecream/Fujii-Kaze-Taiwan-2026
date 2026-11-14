@@ -1,11 +1,17 @@
-# 放入這 19 首 LRC 的位置
+# 歌詞檔案與匯入引導
 
-把各首完整 LRC 內容貼進同名檔案，或用下載好的 LRC 覆蓋對應空白檔。請使用 UTF-8 編碼，保留 `.lrc` 副檔名，例如 `CasketGirl.lrc`、`INeedUBack.lrc`；注意不要存成 `.lrc.txt`。
+[專案首頁](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026#readme) · [文件導覽](../README.md#文件導覽) · [最新程式碼](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main)
 
-19 個檔名依 `src/song-metadata.js` 的歌曲 ID 建立，歌名與候選來源可對照 [19 首 LRC 來源清單](../docs/lyric-sources.md)。檔案起初完全空白，可一次放齊，也可以分批提供。
+目前曲庫收錄 29 首。請使用 UTF-8 編碼維護各首原文與 `.lrc` 時間碼，保留既有檔名、歌曲 ID 與來源註記。線上檔案入口為 [main 的 lyrics 資料夾](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/tree/main/lyrics)。
 
-放好後告訴我「LRC 已放好」，我會檢查內容、時間碼與影片版本，再處理匯入。
+| 歌曲範圍 | 匯入設定 | 操作與來源 |
+|---|---|---|
+| 原有 19 首 | [import-manifest.json](import-manifest.json) | [匯入步驟](../docs/karaoke-import.md) · [來源清單](../docs/lyric-sources.md) |
+| It's Alright、真っ白、もうええわ、帰ろう | [additional-import-manifest.json](additional-import-manifest.json) | [四首匯入說明](../docs/karaoke-import.md#1030-新增四首的本機檔案) · [讀音對照](../docs/furigana.md) |
+| LASA 新增六首 | [lasa-import-manifest.json](lasa-import-manifest.json) | [LOVE ALL SERVE ALL 匯入紀錄](../docs/love-all-serve-all.md) |
 
-`import-manifest.json` 已預填 19 首的檔名與候選來源，供後續匯入使用；來源說明與完整狀態留待檔案提供後確認，現在只要填入 LRC 即可。若實際來源不同，匯入時一併更新。操作細節見 [匯入說明](../docs/karaoke-import.md)。
+更新檔案後，先依對應 manifest 預覽，再確認是否寫入；完整指令與驗證方式見 [同步歌詞匯入說明](../docs/karaoke-import.md)。影片播放偏移與原始 LRC 時間分開保存，重新匯入前須確認各首既有偏移設定，避免覆蓋已校正的播放時間。
 
-要保留 marumaru 的中文譯詞時，請將中文或雙語對照貼入 [translations 資料夾](translations/README.md) 裡對應的 `.zh.txt` 檔；15 首空白檔與來源對照已備妥，不必自行填入時間碼。
+〈真っ白〉已有 34 行時間碼；全 20 首含日文歌曲的 776 行均已提供假名及羅馬字。四首新增歌曲的讀音維護於 `additional-import-manifest.json` 的 `readings`，LASA 六首維護於 [lasa-readings.txt](readings/lasa-readings.txt)，詳見 [日文讀音整理](../docs/furigana.md)。
+
+中文或雙語對照請依 [中文供稿說明](translations/README.md) 放入對應檔案，保留譯者與來源註記。前端整合資料由匯入流程更新至 [src/song-lyrics.js](../src/song-lyrics.js)，不要直接修改 `dist/`。
