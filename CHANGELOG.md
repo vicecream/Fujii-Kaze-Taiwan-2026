@@ -4,7 +4,7 @@
 
 本檔案依 Git 歷史整理，使用版本提交作為每一段的邊界。
 
-## v2.2.0
+## [**v2.2.0**](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commit/6046fc9a3ef74c0655fdea933fc08d435d3141ed)
 
 2026-11-19 發布。
 
