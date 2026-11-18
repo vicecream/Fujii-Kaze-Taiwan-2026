@@ -1,0 +1,322 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "INeedUBack",
+  "youtubeId": "ud0lMojStCs",
+  "sourceFingerprint": "f30a8c9fac32fb7036370801503e9991d772cf75c0f78081c999c98ef79a7468",
+  "lrcSha256": "83e40e37415f3f1a283352adc0fcbe563e9673b95fd11a28f5f64987e13b41c4",
+  "audioSha256": "f3050f0dfe0f4eb62b79e40e58ebc2849e9af70bfd5c542fa019f3f29c7532ce",
+  "alignmentAudioSha256": "8abd5f5c15dbae5bd725ee65ff871a9f917e299ce348d9850c7caa2b6e22b208",
+  "candidateSha256": "2f1164d55c6d8f8d4ee7704181b26f987f96c1fae00737ca478a067fb6d2d342",
+  "lineCount": 41,
+  "unitCount": 319,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "en": {
+      "id": "facebook/wav2vec2-base-960h",
+      "revision": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T16:05:12.235833+00:00",
+    "scriptSha256": "3c479121a9b0ee25ebdc75fbab427b18810d7458adc10c69644edba92d12a2d2",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T16:08:16.205821+00:00",
+    "elapsedSeconds": 183.97
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "harmony-parenthesis-listen"
+      ]
+    },
+    {
+      "index": 1,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "harmony-parenthesis-listen"
+      ]
+    },
+    {
+      "index": 4,
+      "reasons": [
+        "harmony-parenthesis-listen"
+      ]
+    },
+    {
+      "index": 5,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 7,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 8,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 38,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

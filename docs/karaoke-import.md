@@ -74,7 +74,7 @@ AMLL 的 19 首搜尋均未取得相符候選。LRCLIB 第一輪有 10 首找到
 
 本次 `lyrics/import-manifest.json` 已設定 `timingMode: "preview"`，原始時間保存在 `sourceTime`／`sourceEnd`，播放起點先沿用來源時間。歌曲頁顯示時間與待校正狀態，可點句跳轉、逐行跟隨；逐字高亮維持關閉，也不連線套用其他提供者時間。`allowPendingReadings: true` 表示先處理原文與時間線，日文讀音未備妥時停用讀音控制，不填入推測讀法。〈死ぬのがいいわ〉另以 `pairedRomaji: true` 將同時間羅馬字列保存在 `providedRomaji`，避免重複顯示。
 
-試播模式可用 `previewOffsetSeconds` 保存播放偏移，計算方式為「來源秒數 + 偏移 = 播放秒數」，同時調整每句起點與終點，不更動 `sourceTime`／`sourceEnd`。2026-11-14 依使用者要求，〈きらり〉設為 `-0.1`（提前 0.1 秒），〈青春病〉設為 `2`（延後 2 秒），分別記錄於原有與 LASA 的 manifest；重新匯入仍會套用這些設定，狀態維持時間試播。
+試播模式可用 `previewOffsetSeconds` 保存播放偏移，計算方式為「來源秒數 + 偏移 = 播放秒數」，同時調整每句起點與終點，不更動 `sourceTime`／`sourceEnd`。2026-11-14 已保存〈You〉`4`、〈何なんw〉`5.33`、〈満ちてゆく〉`13.42`、〈きらり〉`-0.1` 與〈青春病〉`2` 秒至各自 manifest；重新匯入仍會套用這些設定，狀態維持時間試播。`check:word-timing` 會逐首比對重匯入結果。
 
 匯入器不連線下載全文，讀取本機 `.lrc`，或既有轉換器支援的 LRCLIB／Beautiful Lyrics `.json`。維持 `{ jp, tr, time }` 的原顯示結構，不產生翻譯。檔案路徑相對於 manifest 所在目錄；以 `src/song-metadata.js` 的歌曲 ID 對應，不改動影片與專輯資料。
 
@@ -125,3 +125,7 @@ npm run check:karaoke
 npm run build
 git diff --check
 ```
+
+## 已聽校逐字時間
+
+逐字時間與逐行試播狀態分開：只載入具有來源指紋與聽校紀錄的本機資料，未通過句子保留逐行。2026-11-19 已驗證並匯入〈Hachikō〉1 句、〈Prema〉1 句、〈It's Alright〉8 句，共 10 句；其餘句子保留逐行。29 首分批進度、外部校對頁、修正 JSON 匯入及清理方式見 [逐字同步實作與聽校交接](karaoke-word-timing.md)。

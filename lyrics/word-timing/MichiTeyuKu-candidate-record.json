@@ -1,0 +1,206 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "MichiTeyuKu",
+  "youtubeId": "ptiK8U4WlSc",
+  "sourceFingerprint": "cce5daa3a6ee4e87581599fd85d2c2c5efd755b7eb8ab4ca3193191ab7fe076d",
+  "lrcSha256": "6668f7cb41981a6247b66ad871bd63c5e2758109dcbb60f5cce905c9f2b60d3a",
+  "audioSha256": "418b104ca8baf60836d98ed7cd492455d09f510df6b54db8a680edce3c66ad1a",
+  "alignmentAudioSha256": "9484b8cf95ed0942c8ebc2d3371d4bae0392288f61d59042c10599a7f29f667a",
+  "candidateSha256": "5f7657143a2a0e4c4bdafe2f67475ac9cfeceabf079f6de59868809ac7fc74b8",
+  "lineCount": 34,
+  "unitCount": 328,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T15:49:40.644496+00:00",
+    "scriptSha256": "3c479121a9b0ee25ebdc75fbab427b18810d7458adc10c69644edba92d12a2d2",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T15:52:00.472211+00:00",
+    "elapsedSeconds": 139.83
+  },
+  "anomalies": [
+    {
+      "index": 3,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 5,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 7,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": [
+    {
+      "indices": [
+        11
+      ],
+      "method": "CTC sample-grid clock removes floating-point rounding overlap; listening pending.",
+      "processing": {
+        "startedAt": "2026-11-17T16:37:41.596387+00:00",
+        "scriptSha256": "8af0717771169d9f02e6b048033789e042548b77594e5724108cc8d0b20d15df",
+        "fromLine": 11,
+        "toLine": 12,
+        "completedAt": "2026-11-17T16:37:49.858330+00:00",
+        "elapsedSeconds": 8.26
+      }
+    }
+  ]
+}

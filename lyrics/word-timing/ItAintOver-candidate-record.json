@@ -1,0 +1,185 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "ItAintOver",
+  "youtubeId": "BKFxq3D_dGU",
+  "sourceFingerprint": "25da7e3a303917b8128c5253c83ec40943cf10447e4dd01a1a96a7f5e0aa09ec",
+  "lrcSha256": "a40e1f13a707c0cac818521cb7ad845bdf39b7b0e6c4db994899da4ecd32af6b",
+  "audioSha256": "20279824ac618029b7753c8e6e7dbc59a99dfa16504766b3afbe441b887f302b",
+  "alignmentAudioSha256": "bcd7d76a87e4ac90a1bcd9bdc1e3de09de441421cb61a03fdfd49225ce0ad621",
+  "candidateSha256": "c62695b0ad94a382ef8d37c79d7811ea2d39867a32569e7ad0794b6fcbb52c92",
+  "lineCount": 38,
+  "unitCount": 173,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "en": {
+      "id": "facebook/wav2vec2-base-960h",
+      "revision": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T16:22:19.760849+00:00",
+    "scriptSha256": "3c479121a9b0ee25ebdc75fbab427b18810d7458adc10c69644edba92d12a2d2",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T16:24:45.690780+00:00",
+    "elapsedSeconds": 145.93
+  },
+  "anomalies": [
+    {
+      "index": 8,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

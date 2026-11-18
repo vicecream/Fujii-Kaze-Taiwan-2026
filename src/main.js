@@ -23,6 +23,7 @@ import {
 
 import { SITE, EVENT, NOTICES, PICS, SONGS, ALBUMS, SONG_BPM } from "./data.js";
 import { JP_CHANT_GUIDES } from "./chant-guide.js";
+import { validateReviewedTiming } from "./karaoke-timing.js";
 import { showState, todayTimeline } from "./show-time.js";
 import { songCapabilities } from "./song-content.js";
 import { SONG_MARKS } from "./song-mark-metadata.js";
@@ -70,15 +71,14 @@ window.addEventListener("load", ()=> window.setTimeout(attachManifest, 8000), { 
 
 /* ── 가사 넘어가는 속도 조절값 (이 세 값만 바꾸면 됨) ──────────────
    SYNC_INTERVAL_MS : 재생 위치를 확인하는 주기(ms). 작을수록 빨리 반응.
-   LYRIC_LEAD_SEC   : 가사를 실제 타이밍보다 몇 초 먼저 넘길지.
-                      떼창은 미리 보여야 따라 부르기 쉬우므로 살짝 앞당김.
+   LYRIC_LEAD_SEC   : 預捲動的提前量；實際高亮與 PiP 使用影片原始秒數。
    SCROLL_DURATION_MS : 스크롤 애니메이션 길이(ms). 작을수록 빠르게 이동. */
 const SYNC_INTERVAL_MS   = 100;
 
 /* 지금 폰에 깔려 있는 화면이 몇 번째 판인지 알려 주는 표시.
    새로 올렸는데 화면이 그대로일 때, 옛 판이 남아 있는지 바로 확인할 수 있다.
    sw.js 의 CACHE_VERSION 과 같이 올려 주세요. */
-const BUILD = "v2.1.2";
+const BUILD = "v2.2.0";
 
 const CC_BY_NC_SA_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 
@@ -169,8 +169,6 @@ function setupDebugBadge(){
 }
 const LYRIC_LEAD_SEC     = 0.35;
 const SCROLL_DURATION_MS = 260;
-const KARAOKE_TAIL_SEC   = 0.08;
-const KARAOKE_UNIT_BEATS  = 0.65;
 const PLAYBACK_RATE_OPTIONS = Object.freeze([0.25, 0.5, 0.75, 1, 1.25, 1.5, 2]);
 const PLAYBACK_RATE_STORAGE_KEY = "kaze-playback-rate";
 const storedPlaybackRate = Number(store(PLAYBACK_RATE_STORAGE_KEY));
@@ -1647,14 +1645,14 @@ function chantOnlyTick(cur){
   const blocks = currentChantBlocks();
   if (!blocks.length) return false;
 
-  const t = cur - LYRIC_LEAD_SEC;                 // 실제 재생 위치
+  const t = cur;                 // 실제 재생 위치
 
   // 옮겨 달라고 한 자리에 아직 도착하지 않았으면 기다린다
   if (chantWantSec !== null){
     if (Math.abs(t - chantWantSec) < 1.6 || Date.now() > chantWaitUntil) chantWantSec = null;
     else return false;
   }
-  const inside = blocks.findIndex(b => t >= b.start - 0.35 && t <= b.end);
+  const inside = blocks.findIndex(b => t >= b.start && t <= b.end);
   if (inside >= 0){
     if (inside !== chantIdx || chantDone){ chantIdx = inside; chantDone = false; paintChantBar(); }
     return false;
@@ -1890,7 +1888,7 @@ function renderSong(song){
     markLyricChantSegments(line, song.lyrics[Number(line.dataset.idx)]);
   });
   if (capabilities.timed) decorateKaraokeLines(song);
-  setKaraokeSourceStatus("loading", "歌詞逐字時間：正在尋找開源時間碼…");
+  setKaraokeSourceStatus("loading", "正在載入已核對逐字時間…");
 
   document.getElementById("song-sheet-list").innerHTML = sheetSongs().map((s, i)=>`
     <li data-no="${songNo(s)}">
@@ -2751,7 +2749,10 @@ function nextDocumentPipLineIndex(song, index){
   const lines = song && Array.isArray(song.lyrics) ? song.lyrics : [];
   const start = Number.isInteger(index) ? index + 1 : 0;
   for (let i = start; i < lines.length; i++){
-    if (hasDisplayedLyricText(lines[i])) return i;
+    if (!hasDisplayedLyricText(lines[i])) continue;
+    const time = getPlayerTime();
+    if (index < 0 && time !== null && playbackTimeForLine(song, i) <= time) continue;
+    return i;
   }
   return -1;
 }
@@ -2796,6 +2797,7 @@ function buildDocumentPipViewModel(activeIdx = lastActiveIdx){
     status: !songCapabilities(currentSong).hasOriginal && songCapabilities(currentSong).hasTranslation ? "目前提供照片中文閱讀，原文與同步時間待補。"
       : !songCapabilities(currentSong).hasOriginal ? "歌詞整理中，可先聆聽官方影片。"
       : !songCapabilities(currentSong).timed ? "同步時間整理中，目前提供原文閱讀。"
+      : karaokeTiming?.matchedLines ? `逐字聽校 ${karaokeTiming.matchedLines}/${currentSong.lyrics.length} 行；其餘沿用逐行時間。`
       : currentSong?.timingStatus === "preview" ? "LRC 時間試播・待校正"
       : playerReady ? "" : "正在等待影片播放器…"
   };
@@ -2835,6 +2837,8 @@ function applyKaraokeTimingToDom(song){
     const timed = karaokeLineTiming(song, index);
     const range = karaokeRange(song, index);
     line.dataset.time = String(playbackTimeForLine(song, index));
+    const timestamp = line.querySelector(".lyric-timestamp");
+    if (timestamp) timestamp.textContent = formatPlaybackTime(playbackTimeForLine(song, index));
     if (range){
       line.dataset.karaokeStart = String(range.start);
       line.dataset.karaokeEnd = String(range.end);
@@ -2864,70 +2868,42 @@ function hasDisplayedLyricText(line){
 
 function nextDisplayedLyricTime(song, index){
   const lines = song && Array.isArray(song.lyrics) ? song.lyrics : [];
-  const current = Number(lines[index] && lines[index].time);
+  const current = playbackTimeForLine(song, index);
   for (let i = index + 1; i < lines.length; i++){
     if (!hasDisplayedLyricText(lines[i])) continue;
-    const time = Number(lines[i] && lines[i].time);
+    const time = playbackTimeForLine(song, i);
     if (Number.isFinite(time) && (!Number.isFinite(current) || time > current)) return time;
   }
   return null;
 }
 
 async function loadKaraokeTiming(song){
-  if (song?.timingStatus === "preview") {
-    ++karaokeLoadSeq;
-    karaokeTiming = null;
-    setKaraokeSourceStatus("preview", "LRC 逐行時間試播；影片待校正，尚無逐字時間。");
-    return;
-  }
-  if (!songCapabilities(song).timed){
-    ++karaokeLoadSeq;
-    karaokeTiming = null;
-    setKaraokeSourceStatus("pending", songCapabilities(song).hasTranslation && !songCapabilities(song).hasOriginal ? "照片中文僅供閱讀；日文原文與 LRC 時間待補。" : "同步時間整理中；目前提供官方影片與歌曲資訊。");
-    return;
-  }
   const seq = ++karaokeLoadSeq;
   karaokeTiming = null;
-  setKaraokeSourceStatus("loading", "歌詞逐字時間：正在尋找開源時間碼…");
-
-  const api = await loadKaraokeSources();
-  if (!api || typeof api.load !== "function" || typeof api.alignToLocalLyrics !== "function"){
-    setKaraokeSourceStatus("miss", "歌詞逐字時間：目前使用本地估算同步");
+  if (!songCapabilities(song).timed){
+    setKaraokeSourceStatus("pending", "同步時間整理中；目前提供官方影片與歌曲資訊。");
     return;
   }
-
-  let duration = getPlayerDuration();
-  let timed = null;
+  setKaraokeSourceStatus("loading", "正在載入已核對逐字時間…");
+  let aligned = null;
+  let invalid = false;
   try {
-    timed = await api.load(song, {
-      duration,
-      onStatus: event => {
-        if (seq !== karaokeLoadSeq || !event) return;
-        if (event.state === "cache") setKaraokeSourceStatus("loading", "歌詞逐字時間：已讀取本機快取，正在校正影片偏移…");
-        else if (event.state === "fallback") setKaraokeSourceStatus("fallback", `歌詞逐字時間：前順位來源沒有結果，改查${event.source || "下一順位來源"}…`);
-        else if (event.state === "offline") setKaraokeSourceStatus("miss", "歌詞逐字時間：離線且沒有快取，使用本地估算同步");
-      }
-    });
+    const [, { SONG_WORD_TIMING }] = await Promise.all([
+      loadKaraokeSources(), import("./song-word-timing.js")
+    ]);
+    if (SONG_WORD_TIMING[song.id]) aligned = await validateReviewedTiming(song, SONG_WORD_TIMING[song.id]);
   } catch (error) {
-    timed = null;
+    invalid = true;
+    console.warn("Reviewed lyric timing rejected", error);
   }
-  if (seq !== karaokeLoadSeq || !song || currentSong !== song) return;
-
-  if (!timed){
-    setKaraokeSourceStatus("miss", "歌詞逐字時間：找不到可用來源，使用本地估算同步");
-    return;
-  }
-  const aligned = api.alignToLocalLyrics(timed, song.lyrics);
-  if (!aligned){
-    setKaraokeSourceStatus("miss", "歌詞逐字時間：來源歌詞與本頁不相符，使用本地估算同步");
-    return;
-  }
-  aligned.songId = song.id;
+  if (seq !== karaokeLoadSeq || currentSong !== song) return;
   karaokeTiming = aligned;
   applyKaraokeTimingToDom(song);
-  const cachedHint = timed.source && timed.source.indexOf("開源多來源") >= 0 ? "開源多來源" : (timed.source || "開源來源");
-  const timingLabel = timed.granularity === "line" ? "歌詞逐行時間" : "歌詞逐字時間";
-  setKaraokeSourceStatus("ready", `${timingLabel}：${cachedHint}（已對齊 ${aligned.matchedLines}/${aligned.totalLines}行，偏移${aligned.offset.toFixed(2)}秒）`);
+  const count = aligned?.matchedLines || 0;
+  setKaraokeSourceStatus(count ? "ready" : "preview", count
+    ? `逐字聽校通過 ${count}/${song.lyrics.length} 行；其餘沿用逐行時間。`
+    : invalid ? "逐字來源已變更或資料無效，沿用逐行時間。"
+    : "LRC 逐行時間試播；逐字時間待聽校。");
   updateLyricsSync(true);
 }
 
@@ -2936,32 +2912,16 @@ function karaokeRange(song, index){
   const line = lines[index];
   const start = Number(line && line.time);
   if (!Number.isFinite(start)) return null;
-  if (song.timingStatus === "preview" && Number.isFinite(line.endTime) && line.endTime > start) {
-    return { start, end: line.endTime };
-  }
-
   const timed = karaokeLineTiming(song, index);
   if (timed){
     return {
       start: Number(timed.start),
-      end: Math.max(Number(timed.start) + 0.04, Number(timed.end))
+      end: Number(timed.end)
     };
   }
 
-  // 歌詞錨點之間常常包含前奏／間奏，不能把整段空白也平均塗成歌詞。
-  // 以歌曲 BPM 與本句字數估出「唱完本句」的上限；若下一句更早，
-  // 仍以現有人工錨點為準。這只決定句內高亮的收尾，不會改動原始 time。
-  const source = String(line.jp || "").replace(ICON_TOKEN_RE, "");
-  const weight = karaokeUnitWeight(source) || 1;
-  const bpm = Number(SONG_BPM[song.id]) || 120;
-  const estimatedDuration = Math.max(0.8, Math.min(12, weight * (60 / bpm) * KARAOKE_UNIT_BEATS));
-
   const next = nextDisplayedLyricTime(song, index);
-  // 最後一句沒有下一個錨點，留一個依句長估出的收尾時間。
-  const end = next === null
-    ? start + estimatedDuration
-    : Math.min(start + estimatedDuration,
-        Math.max(start + 0.25, next - KARAOKE_TAIL_SEC));
+  const end = Number.isFinite(line.endTime) ? Math.min(line.endTime, next ?? Infinity) : next;
   return { start, end };
 }
 
@@ -3087,86 +3047,41 @@ function kanaReferenceForLine(line){
 
 function assignKaraokeLineTiming(line, timedLine){
   if (!line) return;
-  const displayTargets = [...line.querySelectorAll(".lyric-jp, .lyric-romaji")]
-    .filter(target => (target.textContent || "").trim());
-  const referenceTarget = kanaReferenceForLine(line);
-  const targets = [...new Set([
-    referenceTarget,
-    ...displayTargets,
-  ].filter(Boolean))];
-  const referenceUnits = referenceTarget && referenceTarget._karaokeUnits
-    ? referenceTarget._karaokeUnits
-    : [];
-  const referenceSourceTexts = referenceUnits.map(karaokeUnitSourceText);
-  const referenceTexts = referenceUnits.map(karaokeUnitReadingText);
-  const sourceApi = window.KARAOKE_SOURCES || {};
-  const timedStart = timedLine ? Number(timedLine.start) : NaN;
-  const timedEnd = timedLine ? Number(timedLine.end) : NaN;
-  const lineStart = Number.isFinite(timedStart)
-    ? timedStart
-    : Number(line.dataset.karaokeStart);
-  const lineEndValue = Number.isFinite(timedEnd)
-    ? timedEnd
-    : Number(line.dataset.karaokeEnd);
-  const start = Number.isFinite(lineStart) ? lineStart : 0;
-  const end = Number.isFinite(lineEndValue) && lineEndValue > start
-    ? lineEndValue
-    : start + 0.04;
-  const allocate = typeof sourceApi.allocateUnitTimings === "function"
-    ? sourceApi.allocateUnitTimings(referenceSourceTexts, start, end)
-    : [];
-  let referenceTimings = allocate;
-  let hasWordTiming = false;
-
-  if (timedLine && timedLine.granularity !== "line"
-    && Array.isArray(timedLine.words) && timedLine.words.length
-    && typeof sourceApi.mapUnitsToWords === "function"){
-    const mappedReference = sourceApi.mapUnitsToWords(referenceSourceTexts, timedLine.words);
-    const enoughTextMatches = mappedReference.total > 0
-      && mappedReference.matched / mappedReference.total >= 0.6;
-    if (enoughTextMatches){
-      referenceTimings = mappedReference.timings.map((timing, index) =>
-        timing || allocate[index] || null
-      );
-      hasWordTiming = true;
-    }
-  }
-
-  let sourceKind = hasWordTiming ? "word" : "line-proportional";
-  targets.forEach(target => {
+  const reference = kanaReferenceForLine(line);
+  const targets = [...new Set([reference, ...line.querySelectorAll(".lyric-jp, .lyric-romaji")].filter(Boolean))];
+  line.dataset.karaokeSource = "line";
+  targets.forEach(target => (target._karaokeUnits || []).forEach(unit => {
+    unit.start = null;
+    unit.end = null;
+    delete unit.el.dataset.karaokeStart;
+    delete unit.el.dataset.karaokeEnd;
+  }));
+  if (!timedLine?.reviewed || !timedLine.words?.length) return;
+  const api = window.KARAOKE_SOURCES;
+  if (!api?.mapUnitsToWords || !api?.mapUnitsToReferenceTimings) return;
+  const referenceUnits = reference?._karaokeUnits || [];
+  const mapped = api.mapUnitsToWords(referenceUnits.map(karaokeUnitSourceText), timedLine.words, { strict: true });
+  if (!mapped.complete || !mapped.total) return;
+  const assignments = [];
+  for (const target of targets){
     const units = target._karaokeUnits || [];
-    units.forEach(unit => {
-      unit.start = null;
-      unit.end = null;
-      delete unit.el.dataset.karaokeStart;
-      delete unit.el.dataset.karaokeEnd;
-    });
-    const isReference = target === referenceTarget;
-    const texts = units.map(karaokeUnitSourceText);
-    let timings = isReference ? referenceTimings : [];
-    if (!isReference && typeof sourceApi.mapUnitsToReferenceTimings === "function"){
-      const mapped = sourceApi.mapUnitsToReferenceTimings(texts, referenceTexts, referenceTimings);
-      timings = mapped.timings;
-      if (!mapped.complete && hasWordTiming) sourceKind = "word-reference-fallback";
-    } else if (!isReference && typeof sourceApi.allocateUnitTimings === "function"){
-      /* This is only a compatibility fallback for an older cached script;
-         the normal path always maps romaji onto the Japanese timing array. */
-      timings = sourceApi.allocateUnitTimings(texts, start, end);
-    }
-
-    units.forEach((unit, index) => {
-      const timing = timings[index];
-      if (!timing || !Number.isFinite(Number(timing.start)) || !Number.isFinite(Number(timing.end))) return;
-      unit.start = Number(timing.start);
-      unit.end = Math.max(unit.start + 0.02, Number(timing.end));
-      /* Keep the timing on the element too.  Reading-mode changes replace
-         the inner HTML, and a DOM-backed value makes the romaji fallback
-         survive browser rendering/isolation differences just like kana. */
-      unit.el.dataset.karaokeStart = String(unit.start);
-      unit.el.dataset.karaokeEnd = String(unit.end);
-    });
-  });
-  line.dataset.karaokeSource = sourceKind;
+    if (!units.length) continue;
+    const reading = target === reference ? mapped : api.mapUnitsToReferenceTimings(
+      units.map(karaokeUnitSourceText), referenceUnits.map(karaokeUnitReadingText), mapped.timings, { strict: true }
+    );
+    // An incomplete reading falls back as a whole line; never fill missing words.
+    if (!reading.complete) return;
+    assignments.push({ units, timings: reading.timings });
+  }
+  assignments.forEach(({ units, timings }) => units.forEach((unit, index) => {
+    const timing = timings[index];
+    if (!timing) return; // punctuation has no sung clock
+    unit.start = timing.start;
+    unit.end = timing.end;
+    unit.el.dataset.karaokeStart = String(timing.start);
+    unit.el.dataset.karaokeEnd = String(timing.end);
+  }));
+  line.dataset.karaokeSource = "word-reviewed";
 }
 
 function decorateKaraokeLines(song){
@@ -3175,6 +3090,7 @@ function decorateKaraokeLines(song){
   if (!list || !song) return;
   list.querySelectorAll(".lyric-line").forEach(line => {
     const index = Number(line.dataset.idx);
+    line.dataset.time = String(playbackTimeForLine(song, index));
     const range = karaokeRange(song, index);
     if (range){
       line.dataset.karaokeStart = String(range.start);
@@ -3195,64 +3111,25 @@ function clearKaraokeLine(line){
 }
 
 function updateKaraokeProgress(line, time){
-  if (currentSong?.timingStatus === "preview"){
-    if (karaokeActiveLine && karaokeActiveLine !== line) karaokeActiveLine.classList.remove("karaoke-line-preview");
-    karaokeActiveLine = line || null;
-    karaokeActiveLine?.classList.toggle("karaoke-line-preview", karaokeEnabled && !!line);
-    return;
-  }
-  if (!karaokeEnabled){
+  if (karaokeActiveLine && karaokeActiveLine !== line){
     clearKaraokeLine(karaokeActiveLine);
-    karaokeActiveLine = null;
+    karaokeActiveLine.classList.remove("karaoke-line-preview");
+  }
+  karaokeActiveLine = line || null;
+  if (!line) return;
+  const wordTiming = line.dataset.karaokeSource === "word-reviewed";
+  line.classList.toggle("karaoke-line-preview", karaokeEnabled && !wordTiming);
+  if (!karaokeEnabled || !wordTiming || !Number.isFinite(time)){
+    clearKaraokeLine(line);
     return;
   }
-  if (karaokeActiveLine && karaokeActiveLine !== line) clearKaraokeLine(karaokeActiveLine);
-  karaokeActiveLine = line || null;
-  if (!line || !Number.isFinite(time)) return;
-
-  const start = Number(line.dataset.karaokeStart);
-  const end = Number(line.dataset.karaokeEnd);
-  if (!Number.isFinite(start) || !Number.isFinite(end)) return;
-
   line.querySelectorAll(".lyric-jp, .lyric-romaji").forEach(target => {
-    const units = target._karaokeUnits || [];
-    if (!units.length) return;
-
-    const hasRealWordTiming = units.some(unit =>
-      (Number.isFinite(unit.start) && Number.isFinite(unit.end))
-      || (Number.isFinite(Number(unit.el.dataset.karaokeStart))
-        && Number.isFinite(Number(unit.el.dataset.karaokeEnd)))
-    );
-    if (hasRealWordTiming){
-      units.forEach(unit => {
-        const unitStart = Number.isFinite(unit.start)
-          ? Number(unit.start) : Number(unit.el.dataset.karaokeStart);
-        const unitEnd = Number.isFinite(unit.end)
-          ? Number(unit.end) : Number(unit.el.dataset.karaokeEnd);
-        if (!Number.isFinite(unitStart) || !Number.isFinite(unitEnd)){
-          unit.el.classList.remove("karaoke-lit", "karaoke-current");
-          unit.el.style.removeProperty("--karaoke-word-progress");
-          return;
-        }
-        const progress = Math.max(0, Math.min(1, (time - unitStart) / Math.max(0.02, unitEnd - unitStart)));
-        unit.el.classList.toggle("karaoke-lit", progress >= 1);
-        unit.el.classList.toggle("karaoke-current", progress > 0 && progress < 1);
-        unit.el.style.setProperty("--karaoke-word-progress", progress.toFixed(3));
-      });
-      return;
-    }
-
-    const progress = Math.max(0, Math.min(1, (time - start) / Math.max(0.01, end - start)));
-    const total = units.reduce((sum, unit) => sum + unit.weight, 0) || units.length;
-    const reached = progress * total;
-    let passed = 0;
-    units.forEach(unit => {
-      const was = passed;
-      passed += unit.weight;
-      const lit = reached >= passed;
-      const current = !lit && reached > was;
-      unit.el.classList.toggle("karaoke-lit", lit);
-      unit.el.classList.toggle("karaoke-current", current);
+    (target._karaokeUnits || []).forEach(unit => {
+      if (!Number.isFinite(unit.start) || !Number.isFinite(unit.end)) return;
+      const progress = Math.max(0, Math.min(1, (time - unit.start) / (unit.end - unit.start)));
+      unit.el.classList.toggle("karaoke-lit", progress >= 1);
+      unit.el.classList.toggle("karaoke-current", progress > 0 && progress < 1);
+      unit.el.style.setProperty("--karaoke-word-progress", progress.toFixed(3));
     });
   });
 }
@@ -3389,17 +3266,18 @@ function chantBlocks(song){
   if (chantBlockCache.has(cacheKey)) return chantBlockCache.get(cacheKey);
 
   const lines = song.lyrics || [];
-  const lineEnd = (i)=> lines[i + 1] ? playbackTimeForLine(song, i + 1)
-                                     : playbackTimeForLine(song, i) + 8;
+  const lineEnd = i => karaokeRange(song, i)?.end ?? getPlayerDuration();
   const raw = [];
   for (let i = 0; i < lines.length; i++){
     if (!lineIsChant(lines[i], song)) continue;
     let e = i;
     while (e + 1 < lines.length && lineIsChant(lines[e + 1], song)) e++;
+    const end = lineEnd(e);
+    if (!Number.isFinite(end) || end <= playbackTimeForLine(song, e)) { i = e; continue; }
     raw.push({
       from: i, to: e,
       start: Math.max(0, playbackTimeForLine(song, i) - CHANT_LEAD_SEC),
-      end:   lineEnd(e) + CHANT_TAIL_SEC
+      end:   end + CHANT_TAIL_SEC
     });
     i = e;
   }
@@ -3980,9 +3858,8 @@ function updateLyricsSync(force) {
   const lines = list.querySelectorAll(".lyric-line");
 
   const playerTime = getPlayerTime();
-  // 실제 재생 위치보다 조금 앞선 시점을 기준으로 판단해 가사를 먼저 넘김
-  const lyricLead = currentSong?.timingStatus === "preview" ? 0 : LYRIC_LEAD_SEC;
-  const cur = playerTime === null ? null : playerTime + lyricLead;
+  // Active words, line focus and PiP follow the exact video clock.
+  const cur = playerTime;
 
   // 떼창만 듣기 — 구간을 벗어났으면 다음 떼창으로 옮긴다
   chantOnlyTick(cur);
@@ -4001,33 +3878,39 @@ function updateLyricsSync(force) {
       }
       else break;                     // time 순서대로이므로 더 볼 필요 없음
     }
-    const activeLine = currentSong?.lyrics?.[activeIdx];
-    if (currentSong?.timingStatus === "preview" && Number.isFinite(activeLine?.endTime) && cur >= activeLine.endTime) activeIdx = -1;
+    const activeRange = activeIdx >= 0 ? karaokeRange(currentSong, activeIdx) : null;
+    if (Number.isFinite(activeRange?.end) && cur >= activeRange.end) activeIdx = -1;
   }
 
   const target = (activeIdx >= 0 && lines[activeIdx]) ? lines[activeIdx] : null;
   // line-level focus 與逐字 Karaoke 同時更新；後者不能等到 activeIdx 改變才刷新。
-  updateKaraokeProgress(target, cur === null ? null : cur - lyricLead);
+  updateKaraokeProgress(target, cur);
 
   // 재생 위치를 못 읽었어도 군더더기 정리는 반드시 한다
-  if (currentSong?.timingStatus === "preview") lines.forEach(line => line.classList.toggle("active", line === target));
-  else pruneActiveLines(target);
+  lines.forEach(line => line.classList.toggle("active", line === target));
   if (target && !target.classList.contains("active")) target.classList.add("active");
   syncTicks++;
   updateDocumentPip(activeIdx);
 
   if (cur === null) return;           // 재생 위치를 모르면 여기까지
 
+  if (autoScrollEnabled){
+    let scrollIndex = -1;
+    for (let i = 0; i < lines.length; i++){
+      if (cur + LYRIC_LEAD_SEC >= Number(lines[i].dataset.time)
+        && hasDisplayedLyricText(currentSong.lyrics[i])) scrollIndex = i;
+    }
+    if (scrollIndex >= 0 && (list.dataset.scrollIndex !== String(scrollIndex) || force)){
+      list.dataset.scrollIndex = String(scrollIndex);
+      scrollLyricIntoView(lines[scrollIndex]);
+    }
+  }
   // 소절이 그대로면 나머지(짤방·스크롤)는 건드리지 않는다.
   // (매 틱마다 전부 갱신하고 smooth 스크롤을 다시 시작하던 것이 버벅임의 원인)
   if (activeIdx === lastActiveIdx && !force) return;
 
   updateTipPic(activeIdx);          // 짤방도 이 줄에 맞춰 바꿔 준다
   lastActiveIdx = activeIdx;
-
-  if (activeIdx >= 0 && autoScrollEnabled) {
-    scrollLyricIntoView(lines[activeIdx]);
-  }
 }
 
 /* 첫 소절·마지막 소절도 화면 한가운데에 놓이도록 가사 목록의 위아래에

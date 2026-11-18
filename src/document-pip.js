@@ -1,4 +1,5 @@
 import pipStyles from "./document-pip.css?inline";
+import karaokeProgressStyles from "./karaoke-progress.css?inline";
 import {
   BACK_SVG,
   PAUSE_SVG,
@@ -33,7 +34,7 @@ function copyStyles(sourceDocument, targetDocument){
   });
 
   const style = targetDocument.createElement("style");
-  style.textContent = pipStyles;
+  style.textContent = karaokeProgressStyles + "\n" + pipStyles;
   targetDocument.head.appendChild(style);
 }
 

@@ -1,0 +1,4251 @@
+{
+  "format": "karaoke-review-v1",
+  "songId": "Hachiko",
+  "youtubeId": "OodEsjZ88TQ",
+  "sourceFingerprint": "c03132c428aa669cd0f71b7f7fe0886dfc91b2409b9ddda71b9dd3afa1140260",
+  "lrcSha256": "7df8f0f035903991eac5a56823ba78de84f489ce8f5bcfdab0d3e64a660232c0",
+  "audioSha256": "0c3a4fd4b333066b96e494321b5ed03624198e32d36349c539a81788459cc704",
+  "alignmentAudioSha256": "4ead94559ee7ec81abe20f9c59e6cdcd853b9886ce8914dad258e93ae44530fd",
+  "sourceReview": {
+    "reviewer": "CHI",
+    "reviewedAt": "2026-11-18T16:19:32.514Z",
+    "audioSha256": "0c3a4fd4b333066b96e494321b5ed03624198e32d36349c539a81788459cc704",
+    "anchors": [
+      {
+        "position": "start",
+        "time": 39.8,
+        "note": "OK"
+      },
+      {
+        "position": "middle",
+        "time": 152.67,
+        "note": "OK"
+      },
+      {
+        "position": "end",
+        "time": 246.54,
+        "note": "OK"
+      }
+    ]
+  },
+  "lines": [
+    {
+      "index": 0,
+      "lineId": "Hachiko:0:39.8",
+      "text": "Take you anywhere I'm ready",
+      "textSha256": "13c88cb6096544f12d23ef800cb6901ab17b8f61abd4a2f974fb65b81152dd64",
+      "sourceStart": 39.8,
+      "sourceEnd": 44.16,
+      "windowStart": 39.8,
+      "windowEnd": 44.16,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Take",
+          "reading": "Take"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "anywhere",
+          "reading": "anywhere"
+        },
+        {
+          "text": "I'm",
+          "reading": "I'm"
+        },
+        {
+          "text": "ready",
+          "reading": "ready"
+        }
+      ],
+      "words": [
+        {
+          "text": "Take",
+          "start": 39.84,
+          "end": 40.32,
+          "score": 0.1341
+        },
+        {
+          "text": "you",
+          "start": 40.32,
+          "end": 40.6,
+          "score": 0.2209
+        },
+        {
+          "text": "anywhere",
+          "start": 40.6,
+          "end": 41.04,
+          "score": 0.9665
+        },
+        {
+          "text": "I'm",
+          "start": 41.04,
+          "end": 42.04,
+          "score": 0.6918
+        },
+        {
+          "text": "ready",
+          "start": 42.04,
+          "end": 42.56,
+          "score": 0.9787
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 39.84,
+      "end": 42.56,
+      "flags": []
+    },
+    {
+      "index": 1,
+      "lineId": "Hachiko:1:44.16",
+      "text": "Give you anything I'm carefree",
+      "textSha256": "226eb5074059ebbaab4a5d9c0c5253334052e14ffa49d80fa5774e28e9cc41ec",
+      "sourceStart": 44.16,
+      "sourceEnd": 48.56,
+      "windowStart": 44.16,
+      "windowEnd": 48.56,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Give",
+          "reading": "Give"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "anything",
+          "reading": "anything"
+        },
+        {
+          "text": "I'm",
+          "reading": "I'm"
+        },
+        {
+          "text": "carefree",
+          "reading": "carefree"
+        }
+      ],
+      "words": [
+        {
+          "text": "Give",
+          "start": 44.22,
+          "end": 44.62,
+          "score": 0.1439
+        },
+        {
+          "text": "you",
+          "start": 44.62,
+          "end": 44.94,
+          "score": 0.8396
+        },
+        {
+          "text": "anything",
+          "start": 44.94,
+          "end": 45.44,
+          "score": 0.9786
+        },
+        {
+          "text": "I'm",
+          "start": 45.52,
+          "end": 46.24,
+          "score": 0.7342
+        },
+        {
+          "text": "carefree",
+          "start": 46.24,
+          "end": 47.06,
+          "score": 0.6451
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 44.22,
+      "end": 47.06,
+      "flags": []
+    },
+    {
+      "index": 2,
+      "lineId": "Hachiko:2:48.56",
+      "text": "Seems like I'm the only thing that you need",
+      "textSha256": "88cf1896c3420c0ec78c5e67cd30dbecad130a6c583ac7673cc203bba4edb17b",
+      "sourceStart": 48.56,
+      "sourceEnd": 52.11,
+      "windowStart": 48.56,
+      "windowEnd": 52.11,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Seems",
+          "reading": "Seems"
+        },
+        {
+          "text": "like",
+          "reading": "like"
+        },
+        {
+          "text": "I'm",
+          "reading": "I'm"
+        },
+        {
+          "text": "the",
+          "reading": "the"
+        },
+        {
+          "text": "only",
+          "reading": "only"
+        },
+        {
+          "text": "thing",
+          "reading": "thing"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "need",
+          "reading": "need"
+        }
+      ],
+      "words": [
+        {
+          "text": "Seems",
+          "start": 48.66,
+          "end": 48.92,
+          "score": 0.6727
+        },
+        {
+          "text": "like",
+          "start": 48.92,
+          "end": 49.28,
+          "score": 0.9901
+        },
+        {
+          "text": "I'm",
+          "start": 49.28,
+          "end": 49.56,
+          "score": 0.9606
+        },
+        {
+          "text": "the",
+          "start": 49.56,
+          "end": 49.7,
+          "score": 0.9931
+        },
+        {
+          "text": "only",
+          "start": 49.7,
+          "end": 50.18,
+          "score": 0.9903
+        },
+        {
+          "text": "thing",
+          "start": 50.18,
+          "end": 50.84,
+          "score": 0.8212
+        },
+        {
+          "text": "that",
+          "start": 50.84,
+          "end": 51.18,
+          "score": 0.7121
+        },
+        {
+          "text": "you",
+          "start": 51.18,
+          "end": 51.4,
+          "score": 0.4805
+        },
+        {
+          "text": "need",
+          "start": 51.4,
+          "end": 51.84,
+          "score": 0.9967
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 48.66,
+      "end": 51.84,
+      "flags": []
+    },
+    {
+      "index": 3,
+      "lineId": "Hachiko:3:52.11",
+      "text": "It's easy, not so hard to make you happy",
+      "textSha256": "4428f08a100d79982965a15adfd46b037688270be5658968447b93168ad2d9cf",
+      "sourceStart": 52.11,
+      "sourceEnd": 55.69,
+      "windowStart": 52.11,
+      "windowEnd": 55.69,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "easy",
+          "reading": "easy"
+        },
+        {
+          "text": "not",
+          "reading": "not"
+        },
+        {
+          "text": "so",
+          "reading": "so"
+        },
+        {
+          "text": "hard",
+          "reading": "hard"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "make",
+          "reading": "make"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "happy",
+          "reading": "happy"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 52.11,
+          "end": 52.61,
+          "score": 0.8524
+        },
+        {
+          "text": "easy,",
+          "start": 52.61,
+          "end": 53.03,
+          "score": 0.5596
+        },
+        {
+          "text": "not",
+          "start": 53.03,
+          "end": 53.13,
+          "score": 0.9661
+        },
+        {
+          "text": "so",
+          "start": 53.13,
+          "end": 53.53,
+          "score": 0.996
+        },
+        {
+          "text": "hard",
+          "start": 53.53,
+          "end": 53.75,
+          "score": 0.998
+        },
+        {
+          "text": "to",
+          "start": 53.75,
+          "end": 54.09,
+          "score": 0.8144
+        },
+        {
+          "text": "make",
+          "start": 54.09,
+          "end": 54.35,
+          "score": 0.9957
+        },
+        {
+          "text": "you",
+          "start": 54.35,
+          "end": 54.59,
+          "score": 0.002
+        },
+        {
+          "text": "happy",
+          "start": 54.59,
+          "end": 55.43,
+          "score": 0.9639
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 52.11,
+      "end": 55.43,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 4,
+      "lineId": "Hachiko:4:56.63",
+      "text": "While everybody's screamin' shoutin'",
+      "textSha256": "4a08df3cfbb63fa4d7c307747cc5e6a2136c26f0817ed62fa34fed0b34fb6fd2",
+      "sourceStart": 56.63,
+      "sourceEnd": 58.92,
+      "windowStart": 56.63,
+      "windowEnd": 58.92,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "While",
+          "reading": "While"
+        },
+        {
+          "text": "everybody's",
+          "reading": "everybody's"
+        },
+        {
+          "text": "screamin",
+          "reading": "screamin"
+        },
+        {
+          "text": "shoutin",
+          "reading": "shoutin"
+        }
+      ],
+      "words": [
+        {
+          "text": "While",
+          "start": 56.63,
+          "end": 56.97,
+          "score": 0.0001
+        },
+        {
+          "text": "everybody's",
+          "start": 56.97,
+          "end": 57.89,
+          "score": 0.8578
+        },
+        {
+          "text": "screamin'",
+          "start": 57.89,
+          "end": 58.61,
+          "score": 0.6376
+        },
+        {
+          "text": "shoutin'",
+          "start": 58.61,
+          "end": 58.89,
+          "score": 0.3498
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 56.63,
+      "end": 58.89,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 5,
+      "lineId": "Hachiko:5:58.92",
+      "text": "We're so chill out here just vibin'",
+      "textSha256": "438eace4560973cf98898c47d53505057bd493f35f2564668e35101544f1279b",
+      "sourceStart": 58.92,
+      "sourceEnd": 61.11,
+      "windowStart": 58.92,
+      "windowEnd": 61.11,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "We're",
+          "reading": "We're"
+        },
+        {
+          "text": "so",
+          "reading": "so"
+        },
+        {
+          "text": "chill",
+          "reading": "chill"
+        },
+        {
+          "text": "out",
+          "reading": "out"
+        },
+        {
+          "text": "here",
+          "reading": "here"
+        },
+        {
+          "text": "just",
+          "reading": "just"
+        },
+        {
+          "text": "vibin",
+          "reading": "vibin"
+        }
+      ],
+      "words": [
+        {
+          "text": "We're",
+          "start": 58.98,
+          "end": 59.48,
+          "score": 0.3178
+        },
+        {
+          "text": "so",
+          "start": 59.48,
+          "end": 59.52,
+          "score": 0.9436
+        },
+        {
+          "text": "chill",
+          "start": 59.52,
+          "end": 59.78,
+          "score": 0.5177
+        },
+        {
+          "text": "out",
+          "start": 59.78,
+          "end": 59.98,
+          "score": 0.308
+        },
+        {
+          "text": "here",
+          "start": 59.98,
+          "end": 60.28,
+          "score": 0.8037
+        },
+        {
+          "text": "just",
+          "start": 60.28,
+          "end": 60.6,
+          "score": 0.5841
+        },
+        {
+          "text": "vibin'",
+          "start": 60.6,
+          "end": 61.1,
+          "score": 0.455
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 58.98,
+      "end": 61.1,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 6,
+      "lineId": "Hachiko:6:61.11",
+      "text": "Tryin' to spread this peacefulness with y'all",
+      "textSha256": "a6e3b386c029f20d7a8ae1c0eaf2a482a085a88352bd4453dafc30d736a80fd7",
+      "sourceStart": 61.11,
+      "sourceEnd": 64.3,
+      "windowStart": 61.11,
+      "windowEnd": 64.3,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Tryin",
+          "reading": "Tryin"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "spread",
+          "reading": "spread"
+        },
+        {
+          "text": "this",
+          "reading": "this"
+        },
+        {
+          "text": "peacefulness",
+          "reading": "peacefulness"
+        },
+        {
+          "text": "with",
+          "reading": "with"
+        },
+        {
+          "text": "y'all",
+          "reading": "y'all"
+        }
+      ],
+      "words": [
+        {
+          "text": "Tryin'",
+          "start": 61.11,
+          "end": 61.65,
+          "score": 0.3517
+        },
+        {
+          "text": "to",
+          "start": 61.65,
+          "end": 61.69,
+          "score": 0.9701
+        },
+        {
+          "text": "spread",
+          "start": 61.69,
+          "end": 61.91,
+          "score": 0.724
+        },
+        {
+          "text": "this",
+          "start": 61.91,
+          "end": 62.25,
+          "score": 0.6755
+        },
+        {
+          "text": "peacefulness",
+          "start": 62.25,
+          "end": 62.99,
+          "score": 0.5358
+        },
+        {
+          "text": "with",
+          "start": 62.99,
+          "end": 63.29,
+          "score": 0.4641
+        },
+        {
+          "text": "y'all",
+          "start": 63.29,
+          "end": 64.07,
+          "score": 0.5634
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 61.11,
+      "end": 64.07,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 7,
+      "lineId": "Hachiko:7:65.34",
+      "text": "Our holiday's just getting started",
+      "textSha256": "5c379fae8736306d7a33856a6af871b505c88b75431e8c2843aa78363fd640b0",
+      "sourceStart": 65.34,
+      "sourceEnd": 67.63,
+      "windowStart": 65.34,
+      "windowEnd": 67.63,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Our",
+          "reading": "Our"
+        },
+        {
+          "text": "holiday's",
+          "reading": "holiday's"
+        },
+        {
+          "text": "just",
+          "reading": "just"
+        },
+        {
+          "text": "getting",
+          "reading": "getting"
+        },
+        {
+          "text": "started",
+          "reading": "started"
+        }
+      ],
+      "words": [
+        {
+          "text": "Our",
+          "start": 65.34,
+          "end": 65.9,
+          "score": 0.0146
+        },
+        {
+          "text": "holiday's",
+          "start": 65.9,
+          "end": 66.44,
+          "score": 0.1188
+        },
+        {
+          "text": "just",
+          "start": 66.44,
+          "end": 66.62,
+          "score": 0.981
+        },
+        {
+          "text": "getting",
+          "start": 66.62,
+          "end": 66.94,
+          "score": 0.9232
+        },
+        {
+          "text": "started",
+          "start": 66.94,
+          "end": 67.6,
+          "score": 0.9869
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 65.34,
+      "end": 67.6,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 8,
+      "lineId": "Hachiko:8:67.63",
+      "text": "Just be kind and open hearted",
+      "textSha256": "3b050dc731da575b900a4fb12072154d2e152fe69c719088c83587e15b618595",
+      "sourceStart": 67.63,
+      "sourceEnd": 69.81,
+      "windowStart": 67.63,
+      "windowEnd": 69.81,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Just",
+          "reading": "Just"
+        },
+        {
+          "text": "be",
+          "reading": "be"
+        },
+        {
+          "text": "kind",
+          "reading": "kind"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "open",
+          "reading": "open"
+        },
+        {
+          "text": "hearted",
+          "reading": "hearted"
+        }
+      ],
+      "words": [
+        {
+          "text": "Just",
+          "start": 67.65,
+          "end": 68.01,
+          "score": 0.5009
+        },
+        {
+          "text": "be",
+          "start": 68.01,
+          "end": 68.21,
+          "score": 0.9714
+        },
+        {
+          "text": "kind",
+          "start": 68.21,
+          "end": 68.59,
+          "score": 0.9826
+        },
+        {
+          "text": "and",
+          "start": 68.59,
+          "end": 68.91,
+          "score": 0.9568
+        },
+        {
+          "text": "open",
+          "start": 68.91,
+          "end": 69.25,
+          "score": 0.9946
+        },
+        {
+          "text": "hearted",
+          "start": 69.25,
+          "end": 69.79,
+          "score": 0.6701
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 67.65,
+      "end": 69.79,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 9,
+      "lineId": "Hachiko:9:69.81",
+      "text": "Feel the breeze and let God bless us all",
+      "textSha256": "4290ca0ffa8e7cb50d2ff1b2b778a7d1a4f44bc99e937667249b65e90ede7a2b",
+      "sourceStart": 69.81,
+      "sourceEnd": 73.21,
+      "windowStart": 69.81,
+      "windowEnd": 73.21,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Feel",
+          "reading": "Feel"
+        },
+        {
+          "text": "the",
+          "reading": "the"
+        },
+        {
+          "text": "breeze",
+          "reading": "breeze"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "God",
+          "reading": "God"
+        },
+        {
+          "text": "bless",
+          "reading": "bless"
+        },
+        {
+          "text": "us",
+          "reading": "us"
+        },
+        {
+          "text": "all",
+          "reading": "all"
+        }
+      ],
+      "words": [
+        {
+          "text": "Feel",
+          "start": 69.81,
+          "end": 70.23,
+          "score": 0.2869
+        },
+        {
+          "text": "the",
+          "start": 70.23,
+          "end": 70.49,
+          "score": 0.9939
+        },
+        {
+          "text": "breeze",
+          "start": 70.49,
+          "end": 70.77,
+          "score": 0.9018
+        },
+        {
+          "text": "and",
+          "start": 70.77,
+          "end": 71.05,
+          "score": 0.331
+        },
+        {
+          "text": "let",
+          "start": 71.05,
+          "end": 71.19,
+          "score": 0.7917
+        },
+        {
+          "text": "God",
+          "start": 71.19,
+          "end": 71.43,
+          "score": 0.5574
+        },
+        {
+          "text": "bless",
+          "start": 71.43,
+          "end": 71.75,
+          "score": 0.9932
+        },
+        {
+          "text": "us",
+          "start": 71.75,
+          "end": 72.11,
+          "score": 0.3026
+        },
+        {
+          "text": "all",
+          "start": 72.11,
+          "end": 72.53,
+          "score": 0.9221
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 69.81,
+      "end": 72.53,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 10,
+      "lineId": "Hachiko:10:74.26",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 74.26,
+      "sourceEnd": 76.35,
+      "windowStart": 74.26,
+      "windowEnd": 76.35,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 74.26,
+          "end": 74.74,
+          "score": 0.1222
+        },
+        {
+          "text": "ni",
+          "start": 74.74,
+          "end": 74.98,
+          "score": 0.5059
+        },
+        {
+          "text": "ikō",
+          "start": 74.98,
+          "end": 75.56,
+          "score": 0.0123
+        },
+        {
+          "text": "Hachikō",
+          "start": 75.56,
+          "end": 76.16,
+          "score": 0.5469
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 74.26,
+      "end": 76.16,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "lineId": "Hachiko:11:76.35",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 76.35,
+      "sourceEnd": 78.57,
+      "windowStart": 76.35,
+      "windowEnd": 78.57,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 76.45,
+          "end": 76.95,
+          "score": 0.3422
+        },
+        {
+          "text": "ni",
+          "start": 76.95,
+          "end": 77.19,
+          "score": 0.9212
+        },
+        {
+          "text": "ikō",
+          "start": 77.19,
+          "end": 77.77,
+          "score": 0.1005
+        },
+        {
+          "text": "Hachikō",
+          "start": 77.77,
+          "end": 78.35,
+          "score": 0.4983
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 76.45,
+      "end": 78.35,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 12,
+      "lineId": "Hachiko:12:78.57",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 78.57,
+      "sourceEnd": 80.75,
+      "windowStart": 78.57,
+      "windowEnd": 80.75,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 78.63,
+          "end": 79.13,
+          "score": 0.3661
+        },
+        {
+          "text": "ni",
+          "start": 79.13,
+          "end": 79.37,
+          "score": 0.9017
+        },
+        {
+          "text": "ikō",
+          "start": 79.37,
+          "end": 79.97,
+          "score": 0.0924
+        },
+        {
+          "text": "Hachikō",
+          "start": 79.97,
+          "end": 80.53,
+          "score": 0.5087
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 78.63,
+      "end": 80.53,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "lineId": "Hachiko:13:80.75",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 80.75,
+      "sourceEnd": 82.52,
+      "windowStart": 80.75,
+      "windowEnd": 82.52,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 81.21,
+          "end": 81.93,
+          "score": 0.0001
+        },
+        {
+          "text": "ni",
+          "start": 81.93,
+          "end": 82.27,
+          "score": 0
+        },
+        {
+          "text": "ikō",
+          "start": 82.27,
+          "end": 82.35,
+          "score": 0.0001
+        },
+        {
+          "text": "Hachikō",
+          "start": 82.35,
+          "end": 82.49,
+          "score": 0.0841
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 81.21,
+      "end": 82.49,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "lineId": "Hachiko:14:82.87",
+      "text": "You've been patiently waiting for me",
+      "textSha256": "05904db1e3f447b2f874d9daffd3a668590140230205bd1a9b86c2cfa1ba906c",
+      "sourceStart": 82.87,
+      "sourceEnd": 91.69,
+      "windowStart": 82.87,
+      "windowEnd": 91.69,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You've",
+          "reading": "You've"
+        },
+        {
+          "text": "been",
+          "reading": "been"
+        },
+        {
+          "text": "patiently",
+          "reading": "patiently"
+        },
+        {
+          "text": "waiting",
+          "reading": "waiting"
+        },
+        {
+          "text": "for",
+          "reading": "for"
+        },
+        {
+          "text": "me",
+          "reading": "me"
+        }
+      ],
+      "words": [
+        {
+          "text": "You've",
+          "start": 82.93,
+          "end": 83.97,
+          "score": 0.8112
+        },
+        {
+          "text": "been",
+          "start": 83.97,
+          "end": 84.35,
+          "score": 0.993
+        },
+        {
+          "text": "patiently",
+          "start": 84.35,
+          "end": 85.45,
+          "score": 0.9927
+        },
+        {
+          "text": "waiting",
+          "start": 85.45,
+          "end": 86.61,
+          "score": 0.9814
+        },
+        {
+          "text": "for",
+          "start": 86.61,
+          "end": 87.39,
+          "score": 0.9929
+        },
+        {
+          "text": "me",
+          "start": 87.39,
+          "end": 89.39,
+          "score": 0.9943
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 82.93,
+      "end": 89.39,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "lineId": "Hachiko:15:91.69",
+      "text": "You've been patiently waiting for me",
+      "textSha256": "05904db1e3f447b2f874d9daffd3a668590140230205bd1a9b86c2cfa1ba906c",
+      "sourceStart": 91.69,
+      "sourceEnd": 100.39,
+      "windowStart": 91.69,
+      "windowEnd": 100.39,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You've",
+          "reading": "You've"
+        },
+        {
+          "text": "been",
+          "reading": "been"
+        },
+        {
+          "text": "patiently",
+          "reading": "patiently"
+        },
+        {
+          "text": "waiting",
+          "reading": "waiting"
+        },
+        {
+          "text": "for",
+          "reading": "for"
+        },
+        {
+          "text": "me",
+          "reading": "me"
+        }
+      ],
+      "words": [
+        {
+          "text": "You've",
+          "start": 91.69,
+          "end": 92.73,
+          "score": 0.7095
+        },
+        {
+          "text": "been",
+          "start": 92.73,
+          "end": 93.09,
+          "score": 0.9859
+        },
+        {
+          "text": "patiently",
+          "start": 93.09,
+          "end": 94.25,
+          "score": 0.9874
+        },
+        {
+          "text": "waiting",
+          "start": 94.25,
+          "end": 95.27,
+          "score": 0.9475
+        },
+        {
+          "text": "for",
+          "start": 95.27,
+          "end": 96.25,
+          "score": 0.9169
+        },
+        {
+          "text": "me",
+          "start": 96.25,
+          "end": 97.95,
+          "score": 0.959
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 91.69,
+      "end": 97.95,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 16,
+      "lineId": "Hachiko:16:100.39",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 100.39,
+      "sourceEnd": 102.59,
+      "windowStart": 100.39,
+      "windowEnd": 102.59,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 100.45,
+          "end": 100.93,
+          "score": 0.206
+        },
+        {
+          "text": "ni",
+          "start": 100.93,
+          "end": 101.19,
+          "score": 0.1232
+        },
+        {
+          "text": "ikō",
+          "start": 101.19,
+          "end": 101.69,
+          "score": 0.0493
+        },
+        {
+          "text": "Hachikō",
+          "start": 101.69,
+          "end": 102.33,
+          "score": 0.26
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 100.45,
+      "end": 102.33,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "lineId": "Hachiko:17:102.59",
+      "text": "This time I'll never let you go",
+      "textSha256": "523c7305a6d6bb26195ee2ac7a4afd5acc84c3901e9ce93e972a38b5a1bc09cd",
+      "sourceStart": 102.59,
+      "sourceEnd": 104.74,
+      "windowStart": 102.59,
+      "windowEnd": 104.74,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 102.59,
+          "end": 103.03,
+          "score": 0.0801
+        },
+        {
+          "text": "time",
+          "start": 103.03,
+          "end": 103.21,
+          "score": 0.198
+        },
+        {
+          "text": "I'll",
+          "start": 103.21,
+          "end": 103.47,
+          "score": 0.6397
+        },
+        {
+          "text": "never",
+          "start": 103.47,
+          "end": 103.75,
+          "score": 0.8074
+        },
+        {
+          "text": "let",
+          "start": 103.75,
+          "end": 104.19,
+          "score": 0.9809
+        },
+        {
+          "text": "you",
+          "start": 104.19,
+          "end": 104.43,
+          "score": 0.9527
+        },
+        {
+          "text": "go",
+          "start": 104.43,
+          "end": 104.55,
+          "score": 0.9985
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 102.59,
+      "end": 104.55,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "lineId": "Hachiko:18:104.74",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 104.74,
+      "sourceEnd": 106.97,
+      "windowStart": 104.74,
+      "windowEnd": 106.97,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 104.8,
+          "end": 105.32,
+          "score": 0.275
+        },
+        {
+          "text": "ni",
+          "start": 105.32,
+          "end": 105.62,
+          "score": 0.1417
+        },
+        {
+          "text": "ikō",
+          "start": 105.62,
+          "end": 106.18,
+          "score": 0.0078
+        },
+        {
+          "text": "Hachikō",
+          "start": 106.18,
+          "end": 106.84,
+          "score": 0.5194
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 104.8,
+      "end": 106.84,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "lineId": "Hachiko:19:106.97",
+      "text": "This time I'll never let you go",
+      "textSha256": "523c7305a6d6bb26195ee2ac7a4afd5acc84c3901e9ce93e972a38b5a1bc09cd",
+      "sourceStart": 106.97,
+      "sourceEnd": 109.15,
+      "windowStart": 106.97,
+      "windowEnd": 109.15,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 106.97,
+          "end": 107.41,
+          "score": 0.0232
+        },
+        {
+          "text": "time",
+          "start": 107.41,
+          "end": 107.61,
+          "score": 0.0508
+        },
+        {
+          "text": "I'll",
+          "start": 107.61,
+          "end": 107.77,
+          "score": 0.4203
+        },
+        {
+          "text": "never",
+          "start": 107.77,
+          "end": 108.17,
+          "score": 0.9433
+        },
+        {
+          "text": "let",
+          "start": 108.25,
+          "end": 108.51,
+          "score": 0.9773
+        },
+        {
+          "text": "you",
+          "start": 108.51,
+          "end": 108.77,
+          "score": 0.976
+        },
+        {
+          "text": "go",
+          "start": 108.77,
+          "end": 109.05,
+          "score": 0.9879
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 106.97,
+      "end": 109.05,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "lineId": "Hachiko:20:109.15",
+      "text": "You've been patiently waiting for me",
+      "textSha256": "05904db1e3f447b2f874d9daffd3a668590140230205bd1a9b86c2cfa1ba906c",
+      "sourceStart": 109.15,
+      "sourceEnd": 117.79,
+      "windowStart": 109.15,
+      "windowEnd": 117.79,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You've",
+          "reading": "You've"
+        },
+        {
+          "text": "been",
+          "reading": "been"
+        },
+        {
+          "text": "patiently",
+          "reading": "patiently"
+        },
+        {
+          "text": "waiting",
+          "reading": "waiting"
+        },
+        {
+          "text": "for",
+          "reading": "for"
+        },
+        {
+          "text": "me",
+          "reading": "me"
+        }
+      ],
+      "words": [
+        {
+          "text": "You've",
+          "start": 109.15,
+          "end": 110.21,
+          "score": 0.8247
+        },
+        {
+          "text": "been",
+          "start": 110.21,
+          "end": 110.55,
+          "score": 0.9818
+        },
+        {
+          "text": "patiently",
+          "start": 110.55,
+          "end": 111.55,
+          "score": 0.9947
+        },
+        {
+          "text": "waiting",
+          "start": 111.55,
+          "end": 112.69,
+          "score": 0.9741
+        },
+        {
+          "text": "for",
+          "start": 112.69,
+          "end": 113.71,
+          "score": 0.9476
+        },
+        {
+          "text": "me",
+          "start": 113.71,
+          "end": 115.93,
+          "score": 0.9893
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 109.15,
+      "end": 115.93,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 21,
+      "lineId": "Hachiko:21:135.81",
+      "text": "Went through everything to reach you",
+      "textSha256": "8f24dfbd33a8be9b0dbc0d8ce0d189c8bae662579f283d614bde8237634d80a0",
+      "sourceStart": 135.81,
+      "sourceEnd": 140.15,
+      "windowStart": 135.81,
+      "windowEnd": 140.15,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Went",
+          "reading": "Went"
+        },
+        {
+          "text": "through",
+          "reading": "through"
+        },
+        {
+          "text": "everything",
+          "reading": "everything"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "reach",
+          "reading": "reach"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        }
+      ],
+      "words": [
+        {
+          "text": "Went",
+          "start": 135.81,
+          "end": 136.31,
+          "score": 0.6305
+        },
+        {
+          "text": "through",
+          "start": 136.31,
+          "end": 136.71,
+          "score": 0.9737
+        },
+        {
+          "text": "everything",
+          "start": 136.71,
+          "end": 137.11,
+          "score": 0.972
+        },
+        {
+          "text": "to",
+          "start": 137.11,
+          "end": 137.67,
+          "score": 0.9594
+        },
+        {
+          "text": "reach",
+          "start": 137.67,
+          "end": 138.33,
+          "score": 0.8363
+        },
+        {
+          "text": "you",
+          "start": 138.33,
+          "end": 138.61,
+          "score": 0.0284
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 135.81,
+      "end": 138.61,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "lineId": "Hachiko:22:140.15",
+      "text": "There' so many ways to please you",
+      "textSha256": "858f03c7607cf1fd6ae2abb6a9a5ca7d0f11f54fd21618267f59b1240762e560",
+      "sourceStart": 140.15,
+      "sourceEnd": 144.55,
+      "windowStart": 140.15,
+      "windowEnd": 144.55,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "There",
+          "reading": "There"
+        },
+        {
+          "text": "so",
+          "reading": "so"
+        },
+        {
+          "text": "many",
+          "reading": "many"
+        },
+        {
+          "text": "ways",
+          "reading": "ways"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "please",
+          "reading": "please"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        }
+      ],
+      "words": [
+        {
+          "text": "There'",
+          "start": 140.15,
+          "end": 140.17,
+          "score": 0.3608
+        },
+        {
+          "text": "so",
+          "start": 140.57,
+          "end": 140.97,
+          "score": 0.4925
+        },
+        {
+          "text": "many",
+          "start": 140.97,
+          "end": 141.27,
+          "score": 0.9832
+        },
+        {
+          "text": "ways",
+          "start": 141.27,
+          "end": 141.55,
+          "score": 0.8147
+        },
+        {
+          "text": "to",
+          "start": 141.55,
+          "end": 141.89,
+          "score": 0.9896
+        },
+        {
+          "text": "please",
+          "start": 141.89,
+          "end": 142.57,
+          "score": 0.9255
+        },
+        {
+          "text": "you",
+          "start": 142.57,
+          "end": 142.97,
+          "score": 0.0543
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 140.15,
+      "end": 142.97,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 23,
+      "lineId": "Hachiko:23:144.55",
+      "text": "You can pick whatever you'd like to do",
+      "textSha256": "468eb61ffb0f59e71fc7e31054397c74de964e5df1d62119f8b55a22c0fcc30e",
+      "sourceStart": 144.55,
+      "sourceEnd": 148.26,
+      "windowStart": 144.55,
+      "windowEnd": 148.26,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "You",
+          "reading": "You"
+        },
+        {
+          "text": "can",
+          "reading": "can"
+        },
+        {
+          "text": "pick",
+          "reading": "pick"
+        },
+        {
+          "text": "whatever",
+          "reading": "whatever"
+        },
+        {
+          "text": "you'd",
+          "reading": "you'd"
+        },
+        {
+          "text": "like",
+          "reading": "like"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "do",
+          "reading": "do"
+        }
+      ],
+      "words": [
+        {
+          "text": "You",
+          "start": 144.63,
+          "end": 144.89,
+          "score": 0.6893
+        },
+        {
+          "text": "can",
+          "start": 144.89,
+          "end": 145.23,
+          "score": 0.9969
+        },
+        {
+          "text": "pick",
+          "start": 145.23,
+          "end": 145.51,
+          "score": 0.9673
+        },
+        {
+          "text": "whatever",
+          "start": 145.51,
+          "end": 145.91,
+          "score": 0.773
+        },
+        {
+          "text": "you'd",
+          "start": 145.91,
+          "end": 146.99,
+          "score": 0.5728
+        },
+        {
+          "text": "like",
+          "start": 146.99,
+          "end": 147.17,
+          "score": 0.9946
+        },
+        {
+          "text": "to",
+          "start": 147.17,
+          "end": 147.41,
+          "score": 0.9975
+        },
+        {
+          "text": "do",
+          "start": 147.41,
+          "end": 147.93,
+          "score": 0.994
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 144.63,
+      "end": 147.93,
+      "flags": []
+    },
+    {
+      "index": 24,
+      "lineId": "Hachiko:24:148.26",
+      "text": "Anything that satisfies your soul",
+      "textSha256": "d2c2f76067ada1807d895013b28a032220999fc8dd45b43216d70748b66039f7",
+      "sourceStart": 148.26,
+      "sourceEnd": 151.92,
+      "windowStart": 148.26,
+      "windowEnd": 151.92,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Anything",
+          "reading": "Anything"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "satisfies",
+          "reading": "satisfies"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "soul",
+          "reading": "soul"
+        }
+      ],
+      "words": [
+        {
+          "text": "Anything",
+          "start": 148.26,
+          "end": 149.1,
+          "score": 0.7354
+        },
+        {
+          "text": "that",
+          "start": 149.1,
+          "end": 149.64,
+          "score": 0.8406
+        },
+        {
+          "text": "satisfies",
+          "start": 149.64,
+          "end": 150.2,
+          "score": 0.8451
+        },
+        {
+          "text": "your",
+          "start": 150.2,
+          "end": 150.82,
+          "score": 0.9623
+        },
+        {
+          "text": "soul",
+          "start": 150.82,
+          "end": 151.14,
+          "score": 0.9955
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 148.26,
+      "end": 151.14,
+      "flags": []
+    },
+    {
+      "index": 25,
+      "lineId": "Hachiko:25:152.67",
+      "text": "While everybody's screamin' shoutin'",
+      "textSha256": "4a08df3cfbb63fa4d7c307747cc5e6a2136c26f0817ed62fa34fed0b34fb6fd2",
+      "sourceStart": 152.67,
+      "sourceEnd": 154.96,
+      "windowStart": 152.67,
+      "windowEnd": 154.96,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "While",
+          "reading": "While"
+        },
+        {
+          "text": "everybody's",
+          "reading": "everybody's"
+        },
+        {
+          "text": "screamin",
+          "reading": "screamin"
+        },
+        {
+          "text": "shoutin",
+          "reading": "shoutin"
+        }
+      ],
+      "words": [
+        {
+          "text": "While",
+          "start": 152.67,
+          "end": 152.97,
+          "score": 0.0016
+        },
+        {
+          "text": "everybody's",
+          "start": 152.97,
+          "end": 153.91,
+          "score": 0.7201
+        },
+        {
+          "text": "screamin'",
+          "start": 153.91,
+          "end": 154.69,
+          "score": 0.5924
+        },
+        {
+          "text": "shoutin'",
+          "start": 154.69,
+          "end": 154.93,
+          "score": 0.3825
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 152.67,
+      "end": 154.93,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "lineId": "Hachiko:26:154.96",
+      "text": "We're so chill out here just vibin'",
+      "textSha256": "438eace4560973cf98898c47d53505057bd493f35f2564668e35101544f1279b",
+      "sourceStart": 154.96,
+      "sourceEnd": 157.14,
+      "windowStart": 154.96,
+      "windowEnd": 157.14,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "We're",
+          "reading": "We're"
+        },
+        {
+          "text": "so",
+          "reading": "so"
+        },
+        {
+          "text": "chill",
+          "reading": "chill"
+        },
+        {
+          "text": "out",
+          "reading": "out"
+        },
+        {
+          "text": "here",
+          "reading": "here"
+        },
+        {
+          "text": "just",
+          "reading": "just"
+        },
+        {
+          "text": "vibin",
+          "reading": "vibin"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "We're",
+          "start": 155.022,
+          "end": 155.142,
+          "score": 0.0661
+        },
+        {
+          "text": "so",
+          "start": 155.162,
+          "end": 155.282,
+          "score": 0.5088
+        },
+        {
+          "text": "chill",
+          "start": 155.382,
+          "end": 155.662,
+          "score": 0.3032
+        },
+        {
+          "text": "out",
+          "start": 155.823,
+          "end": 155.882,
+          "score": 0.0227
+        },
+        {
+          "text": "here",
+          "start": 156.002,
+          "end": 156.242,
+          "score": 0.5394
+        },
+        {
+          "text": "just",
+          "start": 156.302,
+          "end": 156.462,
+          "score": 0.8254
+        },
+        {
+          "text": "vibin",
+          "start": 156.522,
+          "end": 157.062,
+          "score": 0.4469
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 155.022,
+      "end": 157.062,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 27,
+      "lineId": "Hachiko:27:157.14",
+      "text": "Tryin' to spread this peacefulness with y'all",
+      "textSha256": "a6e3b386c029f20d7a8ae1c0eaf2a482a085a88352bd4453dafc30d736a80fd7",
+      "sourceStart": 157.14,
+      "sourceEnd": 160.19,
+      "windowStart": 157.14,
+      "windowEnd": 160.19,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Tryin",
+          "reading": "Tryin"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "spread",
+          "reading": "spread"
+        },
+        {
+          "text": "this",
+          "reading": "this"
+        },
+        {
+          "text": "peacefulness",
+          "reading": "peacefulness"
+        },
+        {
+          "text": "with",
+          "reading": "with"
+        },
+        {
+          "text": "y'all",
+          "reading": "y'all"
+        }
+      ],
+      "words": [
+        {
+          "text": "Tryin'",
+          "start": 157.14,
+          "end": 157.66,
+          "score": 0.3779
+        },
+        {
+          "text": "to",
+          "start": 157.66,
+          "end": 157.72,
+          "score": 0.9141
+        },
+        {
+          "text": "spread",
+          "start": 157.72,
+          "end": 157.92,
+          "score": 0.9852
+        },
+        {
+          "text": "this",
+          "start": 157.92,
+          "end": 158.28,
+          "score": 0.8309
+        },
+        {
+          "text": "peacefulness",
+          "start": 158.28,
+          "end": 159.08,
+          "score": 0.445
+        },
+        {
+          "text": "with",
+          "start": 159.08,
+          "end": 159.38,
+          "score": 0.072
+        },
+        {
+          "text": "y'all",
+          "start": 159.38,
+          "end": 160,
+          "score": 0.5423
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 157.14,
+      "end": 160,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 28,
+      "lineId": "Hachiko:28:161.43",
+      "text": "Our holiday's just getting started",
+      "textSha256": "5c379fae8736306d7a33856a6af871b505c88b75431e8c2843aa78363fd640b0",
+      "sourceStart": 161.43,
+      "sourceEnd": 163.62,
+      "windowStart": 161.43,
+      "windowEnd": 163.62,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Our",
+          "reading": "Our"
+        },
+        {
+          "text": "holiday's",
+          "reading": "holiday's"
+        },
+        {
+          "text": "just",
+          "reading": "just"
+        },
+        {
+          "text": "getting",
+          "reading": "getting"
+        },
+        {
+          "text": "started",
+          "reading": "started"
+        }
+      ],
+      "words": [
+        {
+          "text": "Our",
+          "start": 161.43,
+          "end": 161.89,
+          "score": 0.0054
+        },
+        {
+          "text": "holiday's",
+          "start": 161.89,
+          "end": 162.35,
+          "score": 0.2506
+        },
+        {
+          "text": "just",
+          "start": 162.35,
+          "end": 162.63,
+          "score": 0.9867
+        },
+        {
+          "text": "getting",
+          "start": 162.63,
+          "end": 162.99,
+          "score": 0.9135
+        },
+        {
+          "text": "started",
+          "start": 162.99,
+          "end": 163.57,
+          "score": 0.9913
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 161.43,
+      "end": 163.57,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "lineId": "Hachiko:29:163.62",
+      "text": "Just be kind and open hearted",
+      "textSha256": "3b050dc731da575b900a4fb12072154d2e152fe69c719088c83587e15b618595",
+      "sourceStart": 163.62,
+      "sourceEnd": 165.81,
+      "windowStart": 163.62,
+      "windowEnd": 165.81,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Just",
+          "reading": "Just"
+        },
+        {
+          "text": "be",
+          "reading": "be"
+        },
+        {
+          "text": "kind",
+          "reading": "kind"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "open",
+          "reading": "open"
+        },
+        {
+          "text": "hearted",
+          "reading": "hearted"
+        }
+      ],
+      "words": [
+        {
+          "text": "Just",
+          "start": 163.66,
+          "end": 163.98,
+          "score": 0.4738
+        },
+        {
+          "text": "be",
+          "start": 163.98,
+          "end": 164.3,
+          "score": 0.9847
+        },
+        {
+          "text": "kind",
+          "start": 164.3,
+          "end": 164.54,
+          "score": 0.9874
+        },
+        {
+          "text": "and",
+          "start": 164.54,
+          "end": 164.9,
+          "score": 0.971
+        },
+        {
+          "text": "open",
+          "start": 164.98,
+          "end": 165.24,
+          "score": 0.9979
+        },
+        {
+          "text": "hearted",
+          "start": 165.24,
+          "end": 165.8,
+          "score": 0.6535
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 163.66,
+      "end": 165.8,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "lineId": "Hachiko:30:165.81",
+      "text": "Feel the breeze and let God bless us all",
+      "textSha256": "4290ca0ffa8e7cb50d2ff1b2b778a7d1a4f44bc99e937667249b65e90ede7a2b",
+      "sourceStart": 165.81,
+      "sourceEnd": 169.67,
+      "windowStart": 165.81,
+      "windowEnd": 169.67,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Feel",
+          "reading": "Feel"
+        },
+        {
+          "text": "the",
+          "reading": "the"
+        },
+        {
+          "text": "breeze",
+          "reading": "breeze"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "God",
+          "reading": "God"
+        },
+        {
+          "text": "bless",
+          "reading": "bless"
+        },
+        {
+          "text": "us",
+          "reading": "us"
+        },
+        {
+          "text": "all",
+          "reading": "all"
+        }
+      ],
+      "words": [
+        {
+          "text": "Feel",
+          "start": 165.91,
+          "end": 166.23,
+          "score": 0.1924
+        },
+        {
+          "text": "the",
+          "start": 166.23,
+          "end": 166.49,
+          "score": 0.9936
+        },
+        {
+          "text": "breeze",
+          "start": 166.49,
+          "end": 166.77,
+          "score": 0.9338
+        },
+        {
+          "text": "and",
+          "start": 166.77,
+          "end": 167.05,
+          "score": 0.0754
+        },
+        {
+          "text": "let",
+          "start": 167.05,
+          "end": 167.17,
+          "score": 0.0981
+        },
+        {
+          "text": "God",
+          "start": 167.17,
+          "end": 167.45,
+          "score": 0.053
+        },
+        {
+          "text": "bless",
+          "start": 167.45,
+          "end": 167.77,
+          "score": 0.8279
+        },
+        {
+          "text": "us",
+          "start": 167.77,
+          "end": 168.27,
+          "score": 0.3946
+        },
+        {
+          "text": "all",
+          "start": 168.27,
+          "end": 168.97,
+          "score": 0.9312
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 165.91,
+      "end": 168.97,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "lineId": "Hachiko:31:170.27",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 170.27,
+      "sourceEnd": 172.41,
+      "windowStart": 170.27,
+      "windowEnd": 172.41,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 170.27,
+          "end": 170.75,
+          "score": 0.0009
+        },
+        {
+          "text": "ni",
+          "start": 170.75,
+          "end": 171.03,
+          "score": 0.5015
+        },
+        {
+          "text": "ikō",
+          "start": 171.03,
+          "end": 171.57,
+          "score": 0.0054
+        },
+        {
+          "text": "Hachikō",
+          "start": 171.57,
+          "end": 172.15,
+          "score": 0.439
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 170.27,
+      "end": 172.15,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "lineId": "Hachiko:32:172.41",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 172.41,
+      "sourceEnd": 174.59,
+      "windowStart": 172.41,
+      "windowEnd": 174.59,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 172.41,
+          "end": 172.91,
+          "score": 0.3084
+        },
+        {
+          "text": "ni",
+          "start": 172.91,
+          "end": 173.23,
+          "score": 0.93
+        },
+        {
+          "text": "ikō",
+          "start": 173.23,
+          "end": 173.75,
+          "score": 0.2454
+        },
+        {
+          "text": "Hachikō",
+          "start": 173.75,
+          "end": 174.31,
+          "score": 0.352
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 172.41,
+      "end": 174.31,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "lineId": "Hachiko:33:174.59",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 174.59,
+      "sourceEnd": 176.78,
+      "windowStart": 174.59,
+      "windowEnd": 176.78,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 174.59,
+          "end": 175.11,
+          "score": 0.4027
+        },
+        {
+          "text": "ni",
+          "start": 175.11,
+          "end": 175.39,
+          "score": 0.8877
+        },
+        {
+          "text": "ikō",
+          "start": 175.39,
+          "end": 175.93,
+          "score": 0.2413
+        },
+        {
+          "text": "Hachikō",
+          "start": 175.93,
+          "end": 176.57,
+          "score": 0.3463
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 174.59,
+      "end": 176.57,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "lineId": "Hachiko:34:176.78",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 176.78,
+      "sourceEnd": 178.68,
+      "windowStart": 176.78,
+      "windowEnd": 178.68,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 176.78,
+          "end": 177.28,
+          "score": 0.1603
+        },
+        {
+          "text": "ni",
+          "start": 177.28,
+          "end": 177.58,
+          "score": 0.6664
+        },
+        {
+          "text": "ikō",
+          "start": 177.58,
+          "end": 178.14,
+          "score": 0.0626
+        },
+        {
+          "text": "Hachikō",
+          "start": 178.14,
+          "end": 178.66,
+          "score": 0.364
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 176.78,
+      "end": 178.66,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "lineId": "Hachiko:35:178.94",
+      "text": "You've been patiently waiting for me",
+      "textSha256": "05904db1e3f447b2f874d9daffd3a668590140230205bd1a9b86c2cfa1ba906c",
+      "sourceStart": 178.94,
+      "sourceEnd": 187.73,
+      "windowStart": 178.94,
+      "windowEnd": 187.73,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You've",
+          "reading": "You've"
+        },
+        {
+          "text": "been",
+          "reading": "been"
+        },
+        {
+          "text": "patiently",
+          "reading": "patiently"
+        },
+        {
+          "text": "waiting",
+          "reading": "waiting"
+        },
+        {
+          "text": "for",
+          "reading": "for"
+        },
+        {
+          "text": "me",
+          "reading": "me"
+        }
+      ],
+      "words": [
+        {
+          "text": "You've",
+          "start": 178.94,
+          "end": 180,
+          "score": 0.7289
+        },
+        {
+          "text": "been",
+          "start": 180.08,
+          "end": 180.32,
+          "score": 0.9932
+        },
+        {
+          "text": "patiently",
+          "start": 180.32,
+          "end": 181.38,
+          "score": 0.9932
+        },
+        {
+          "text": "waiting",
+          "start": 181.38,
+          "end": 182.58,
+          "score": 0.9731
+        },
+        {
+          "text": "for",
+          "start": 182.58,
+          "end": 183.4,
+          "score": 0.9868
+        },
+        {
+          "text": "me",
+          "start": 183.4,
+          "end": 185.32,
+          "score": 0.99
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 178.94,
+      "end": 185.32,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "lineId": "Hachiko:36:187.73",
+      "text": "You've been patiently waiting for me",
+      "textSha256": "05904db1e3f447b2f874d9daffd3a668590140230205bd1a9b86c2cfa1ba906c",
+      "sourceStart": 187.73,
+      "sourceEnd": 196.37,
+      "windowStart": 187.73,
+      "windowEnd": 196.37,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You've",
+          "reading": "You've"
+        },
+        {
+          "text": "been",
+          "reading": "been"
+        },
+        {
+          "text": "patiently",
+          "reading": "patiently"
+        },
+        {
+          "text": "waiting",
+          "reading": "waiting"
+        },
+        {
+          "text": "for",
+          "reading": "for"
+        },
+        {
+          "text": "me",
+          "reading": "me"
+        }
+      ],
+      "words": [
+        {
+          "text": "You've",
+          "start": 187.73,
+          "end": 188.67,
+          "score": 0.8163
+        },
+        {
+          "text": "been",
+          "start": 188.67,
+          "end": 189.13,
+          "score": 0.9939
+        },
+        {
+          "text": "patiently",
+          "start": 189.13,
+          "end": 190.13,
+          "score": 0.9884
+        },
+        {
+          "text": "waiting",
+          "start": 190.13,
+          "end": 191.33,
+          "score": 0.9739
+        },
+        {
+          "text": "for",
+          "start": 191.33,
+          "end": 192.25,
+          "score": 0.9883
+        },
+        {
+          "text": "me",
+          "start": 192.25,
+          "end": 193.29,
+          "score": 0.9866
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 187.73,
+      "end": 193.29,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "lineId": "Hachiko:37:196.37",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 196.37,
+      "sourceEnd": 198.53,
+      "windowStart": 196.37,
+      "windowEnd": 198.53,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 196.37,
+          "end": 196.95,
+          "score": 0.0261
+        },
+        {
+          "text": "ni",
+          "start": 196.95,
+          "end": 197.19,
+          "score": 0.437
+        },
+        {
+          "text": "ikō",
+          "start": 197.19,
+          "end": 197.73,
+          "score": 0.0785
+        },
+        {
+          "text": "Hachikō",
+          "start": 197.73,
+          "end": 198.39,
+          "score": 0.4417
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 196.37,
+      "end": 198.39,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 38,
+      "lineId": "Hachiko:38:198.53",
+      "text": "This time I'll never let you go",
+      "textSha256": "523c7305a6d6bb26195ee2ac7a4afd5acc84c3901e9ce93e972a38b5a1bc09cd",
+      "sourceStart": 198.53,
+      "sourceEnd": 200.71,
+      "windowStart": 198.53,
+      "windowEnd": 200.71,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 198.53,
+          "end": 199.01,
+          "score": 0.0235
+        },
+        {
+          "text": "time",
+          "start": 199.01,
+          "end": 199.25,
+          "score": 0.0441
+        },
+        {
+          "text": "I'll",
+          "start": 199.25,
+          "end": 199.51,
+          "score": 0.3258
+        },
+        {
+          "text": "never",
+          "start": 199.51,
+          "end": 199.79,
+          "score": 0.0134
+        },
+        {
+          "text": "let",
+          "start": 199.79,
+          "end": 200.23,
+          "score": 0.7364
+        },
+        {
+          "text": "you",
+          "start": 200.23,
+          "end": 200.45,
+          "score": 0.7436
+        },
+        {
+          "text": "go",
+          "start": 200.45,
+          "end": 200.57,
+          "score": 0.9844
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 198.53,
+      "end": 200.57,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 39,
+      "lineId": "Hachiko:39:200.71",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 200.71,
+      "sourceEnd": 202.97,
+      "windowStart": 200.71,
+      "windowEnd": 202.97,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 200.81,
+          "end": 201.33,
+          "score": 0.2758
+        },
+        {
+          "text": "ni",
+          "start": 201.33,
+          "end": 201.63,
+          "score": 0.181
+        },
+        {
+          "text": "ikō",
+          "start": 201.63,
+          "end": 202.09,
+          "score": 0.0023
+        },
+        {
+          "text": "Hachikō",
+          "start": 202.09,
+          "end": 202.95,
+          "score": 0.4411
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 200.81,
+      "end": 202.95,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "lineId": "Hachiko:40:202.97",
+      "text": "This time I'll never let you go",
+      "textSha256": "523c7305a6d6bb26195ee2ac7a4afd5acc84c3901e9ce93e972a38b5a1bc09cd",
+      "sourceStart": 202.97,
+      "sourceEnd": 205.12,
+      "windowStart": 202.97,
+      "windowEnd": 205.12,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 202.97,
+          "end": 203.37,
+          "score": 0.0517
+        },
+        {
+          "text": "time",
+          "start": 203.37,
+          "end": 203.59,
+          "score": 0.028
+        },
+        {
+          "text": "I'll",
+          "start": 203.65,
+          "end": 203.79,
+          "score": 0.5226
+        },
+        {
+          "text": "never",
+          "start": 203.79,
+          "end": 204.19,
+          "score": 0.9422
+        },
+        {
+          "text": "let",
+          "start": 204.23,
+          "end": 204.51,
+          "score": 0.9014
+        },
+        {
+          "text": "you",
+          "start": 204.51,
+          "end": 204.77,
+          "score": 0.9455
+        },
+        {
+          "text": "go",
+          "start": 204.77,
+          "end": 204.89,
+          "score": 0.9857
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 202.97,
+      "end": 204.89,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "lineId": "Hachiko:41:205.12",
+      "text": "You've been patiently waiting for me",
+      "textSha256": "05904db1e3f447b2f874d9daffd3a668590140230205bd1a9b86c2cfa1ba906c",
+      "sourceStart": 205.12,
+      "sourceEnd": 213.52,
+      "windowStart": 205.12,
+      "windowEnd": 213.52,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You've",
+          "reading": "You've"
+        },
+        {
+          "text": "been",
+          "reading": "been"
+        },
+        {
+          "text": "patiently",
+          "reading": "patiently"
+        },
+        {
+          "text": "waiting",
+          "reading": "waiting"
+        },
+        {
+          "text": "for",
+          "reading": "for"
+        },
+        {
+          "text": "me",
+          "reading": "me"
+        }
+      ],
+      "words": [
+        {
+          "text": "You've",
+          "start": 205.12,
+          "end": 205.46,
+          "score": 0.7565
+        },
+        {
+          "text": "been",
+          "start": 205.46,
+          "end": 206.56,
+          "score": 0.9923
+        },
+        {
+          "text": "patiently",
+          "start": 206.16,
+          "end": 207.56,
+          "score": 0.9864
+        },
+        {
+          "text": "waiting",
+          "start": 207.56,
+          "end": 208.66,
+          "score": 0.9446
+        },
+        {
+          "text": "for",
+          "start": 208.66,
+          "end": 209.64,
+          "score": 0.9338
+        },
+        {
+          "text": "me",
+          "start": 209.64,
+          "end": 211.84,
+          "score": 0.9852
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:23:44.689Z",
+        "note": "",
+        "timingFingerprint": "d3703016e487d9ad791df271e3835ed2adb064ee12a8b3dd3a11118310471192"
+      },
+      "start": 205.12,
+      "end": 211.84,
+      "flags": [
+        "repeated-occurrence-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 42,
+      "lineId": "Hachiko:42:231.32",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 231.32,
+      "sourceEnd": 233.52,
+      "windowStart": 231.32,
+      "windowEnd": 233.52,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 231.32,
+          "end": 231.82,
+          "score": 0.0025
+        },
+        {
+          "text": "ni",
+          "start": 231.82,
+          "end": 232.1,
+          "score": 0.3493
+        },
+        {
+          "text": "ikō",
+          "start": 232.1,
+          "end": 232.66,
+          "score": 0.019
+        },
+        {
+          "text": "Hachikō",
+          "start": 232.66,
+          "end": 233.4,
+          "score": 0.2657
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 231.32,
+      "end": 233.4,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 43,
+      "lineId": "Hachiko:43:233.52",
+      "text": "This time I'll never let you go",
+      "textSha256": "523c7305a6d6bb26195ee2ac7a4afd5acc84c3901e9ce93e972a38b5a1bc09cd",
+      "sourceStart": 233.52,
+      "sourceEnd": 235.65,
+      "windowStart": 233.52,
+      "windowEnd": 235.65,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "This",
+          "start": 233.543,
+          "end": 233.762,
+          "score": 0.4698
+        },
+        {
+          "text": "time",
+          "start": 233.823,
+          "end": 233.962,
+          "score": 0.221
+        },
+        {
+          "text": "I'll",
+          "start": 234.043,
+          "end": 234.162,
+          "score": 0.0431
+        },
+        {
+          "text": "never",
+          "start": 234.263,
+          "end": 234.662,
+          "score": 0.1272
+        },
+        {
+          "text": "let",
+          "start": 234.782,
+          "end": 234.922,
+          "score": 0.2461
+        },
+        {
+          "text": "you",
+          "start": 235.002,
+          "end": 235.122,
+          "score": 0.0191
+        },
+        {
+          "text": "go",
+          "start": 235.182,
+          "end": 235.342,
+          "score": 0.4529
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 233.543,
+      "end": 235.342,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 44,
+      "lineId": "Hachiko:44:235.65",
+      "text": "We don't need to rush, take it slow",
+      "textSha256": "d5b256026b7ecfe9187de85745d687db57e20f30d588f1a8a586af1b970bb2a3",
+      "sourceStart": 235.65,
+      "sourceEnd": 237.83,
+      "windowStart": 235.65,
+      "windowEnd": 237.83,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "We",
+          "reading": "We"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "need",
+          "reading": "need"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "rush",
+          "reading": "rush"
+        },
+        {
+          "text": "take",
+          "reading": "take"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "slow",
+          "reading": "slow"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "We",
+          "start": 235.752,
+          "end": 235.852,
+          "score": 0.6395
+        },
+        {
+          "text": "don't",
+          "start": 236.013,
+          "end": 236.152,
+          "score": 0.0458
+        },
+        {
+          "text": "need",
+          "start": 236.172,
+          "end": 236.312,
+          "score": 0.3394
+        },
+        {
+          "text": "to",
+          "start": 236.352,
+          "end": 236.512,
+          "score": 0.8001
+        },
+        {
+          "text": "rush",
+          "start": 236.692,
+          "end": 236.912,
+          "score": 0.4651
+        },
+        {
+          "text": "take",
+          "start": 236.953,
+          "end": 237.212,
+          "score": 0.3429
+        },
+        {
+          "text": "it",
+          "start": 237.292,
+          "end": 237.332,
+          "score": 0.0008
+        },
+        {
+          "text": "slow",
+          "start": 237.352,
+          "end": 237.752,
+          "score": 0.3667
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 235.752,
+      "end": 237.752,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 45,
+      "lineId": "Hachiko:45:237.83",
+      "text": "This time, I'll never let you go",
+      "textSha256": "2d71b5fc30451c2935a2861848fa47942d1a54a6871b780de14f1c2d1dcb8d0a",
+      "sourceStart": 237.83,
+      "sourceEnd": 239.92,
+      "windowStart": 237.83,
+      "windowEnd": 239.92,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 237.83,
+          "end": 238.29,
+          "score": 0.1226
+        },
+        {
+          "text": "time,",
+          "start": 238.29,
+          "end": 238.55,
+          "score": 0.1794
+        },
+        {
+          "text": "I'll",
+          "start": 238.55,
+          "end": 238.77,
+          "score": 0.6818
+        },
+        {
+          "text": "never",
+          "start": 238.77,
+          "end": 239.07,
+          "score": 0.0466
+        },
+        {
+          "text": "let",
+          "start": 239.07,
+          "end": 239.53,
+          "score": 0.9892
+        },
+        {
+          "text": "you",
+          "start": 239.53,
+          "end": 239.73,
+          "score": 0.9837
+        },
+        {
+          "text": "go",
+          "start": 239.73,
+          "end": 239.85,
+          "score": 0.9715
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 237.83,
+      "end": 239.85,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 46,
+      "lineId": "Hachiko:46:240.06",
+      "text": "Doko ni ikō Hachikō",
+      "textSha256": "8e04683dc44f3d3732aa22f951872f7e1f66161a5907487cdfbe698df5ffbcb1",
+      "sourceStart": 240.06,
+      "sourceEnd": 242.2,
+      "windowStart": 240.06,
+      "windowEnd": 242.2,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Doko",
+          "reading": "Doko"
+        },
+        {
+          "text": "ni",
+          "reading": "ni"
+        },
+        {
+          "text": "ikō",
+          "reading": "ikō"
+        },
+        {
+          "text": "Hachikō",
+          "reading": "Hachikō"
+        }
+      ],
+      "words": [
+        {
+          "text": "Doko",
+          "start": 240.06,
+          "end": 240.54,
+          "score": 0.0554
+        },
+        {
+          "text": "ni",
+          "start": 240.54,
+          "end": 240.96,
+          "score": 0.4047
+        },
+        {
+          "text": "ikō",
+          "start": 240.96,
+          "end": 241.48,
+          "score": 0.0607
+        },
+        {
+          "text": "Hachikō",
+          "start": 241.48,
+          "end": 242.14,
+          "score": 0.6087
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 240.06,
+      "end": 242.14,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 47,
+      "lineId": "Hachiko:47:242.2",
+      "text": "This time I'll never let you go",
+      "textSha256": "523c7305a6d6bb26195ee2ac7a4afd5acc84c3901e9ce93e972a38b5a1bc09cd",
+      "sourceStart": 242.2,
+      "sourceEnd": 244.38,
+      "windowStart": 242.2,
+      "windowEnd": 244.38,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 242.2,
+          "end": 242.66,
+          "score": 0.0109
+        },
+        {
+          "text": "time",
+          "start": 242.66,
+          "end": 242.88,
+          "score": 0.0273
+        },
+        {
+          "text": "I'll",
+          "start": 242.88,
+          "end": 243.4,
+          "score": 0.4673
+        },
+        {
+          "text": "never",
+          "start": 243.4,
+          "end": 243.46,
+          "score": 0.6165
+        },
+        {
+          "text": "let",
+          "start": 243.46,
+          "end": 243.76,
+          "score": 0.9929
+        },
+        {
+          "text": "you",
+          "start": 243.76,
+          "end": 244.04,
+          "score": 0.9715
+        },
+        {
+          "text": "go",
+          "start": 244.04,
+          "end": 244.2,
+          "score": 0.9937
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 242.2,
+      "end": 244.2,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 48,
+      "lineId": "Hachiko:48:244.38",
+      "text": "We don't need to rush, take it slow",
+      "textSha256": "d5b256026b7ecfe9187de85745d687db57e20f30d588f1a8a586af1b970bb2a3",
+      "sourceStart": 244.38,
+      "sourceEnd": 246.54,
+      "windowStart": 244.38,
+      "windowEnd": 246.54,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "We",
+          "reading": "We"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "need",
+          "reading": "need"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "rush",
+          "reading": "rush"
+        },
+        {
+          "text": "take",
+          "reading": "take"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "slow",
+          "reading": "slow"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "We",
+          "start": 244.482,
+          "end": 244.562,
+          "score": 0.3453
+        },
+        {
+          "text": "don't",
+          "start": 244.642,
+          "end": 244.762,
+          "score": 0.1234
+        },
+        {
+          "text": "need",
+          "start": 244.882,
+          "end": 245.062,
+          "score": 0.2434
+        },
+        {
+          "text": "to",
+          "start": 245.142,
+          "end": 245.242,
+          "score": 0.326
+        },
+        {
+          "text": "rush",
+          "start": 245.402,
+          "end": 245.622,
+          "score": 0.387
+        },
+        {
+          "text": "take",
+          "start": 245.702,
+          "end": 245.882,
+          "score": 0.2361
+        },
+        {
+          "text": "it",
+          "start": 246.042,
+          "end": 246.082,
+          "score": 0.1598
+        },
+        {
+          "text": "slow",
+          "start": 246.122,
+          "end": 246.422,
+          "score": 0.0456
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 244.482,
+      "end": 246.422,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 49,
+      "lineId": "Hachiko:49:246.54",
+      "text": "This time, I'll never let you go",
+      "textSha256": "2d71b5fc30451c2935a2861848fa47942d1a54a6871b780de14f1c2d1dcb8d0a",
+      "sourceStart": 246.54,
+      "sourceEnd": 248.83,
+      "windowStart": 246.54,
+      "windowEnd": 248.83,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "never",
+          "reading": "never"
+        },
+        {
+          "text": "let",
+          "reading": "let"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "go",
+          "reading": "go"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "This",
+          "start": 246.662,
+          "end": 246.842,
+          "score": 0.6891
+        },
+        {
+          "text": "time",
+          "start": 246.882,
+          "end": 247.122,
+          "score": 0.0202
+        },
+        {
+          "text": "I'll",
+          "start": 247.162,
+          "end": 247.262,
+          "score": 0.0203
+        },
+        {
+          "text": "never",
+          "start": 247.342,
+          "end": 247.562,
+          "score": 0.2006
+        },
+        {
+          "text": "let",
+          "start": 247.602,
+          "end": 247.762,
+          "score": 0.1169
+        },
+        {
+          "text": "you",
+          "start": 247.882,
+          "end": 248.002,
+          "score": 0.0969
+        },
+        {
+          "text": "go",
+          "start": 248.122,
+          "end": 248.262,
+          "score": 0.1384
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 246.662,
+      "end": 248.262,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    }
+  ]
+}

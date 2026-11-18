@@ -1,0 +1,237 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "Garden",
+  "youtubeId": "53rIic2lvKc",
+  "sourceFingerprint": "c8cdf374df6c559c33379bdc29d5a29c298482be62ede485222bc2a83fdc3664",
+  "lrcSha256": "6b3be656730bdc2abc6be756079e19a785456d1e06802d84d2f2316c6fc8dc22",
+  "audioSha256": "4bc89131e1145315e83a2e10612ab086bf20585d1e46458127460b6130d64460",
+  "alignmentAudioSha256": "97127fdd2861dbb781f3b16f75ec76b20dcf9240dad959d869c4a72cb39f3de9",
+  "candidateSha256": "52655461dbe1539194fede246296341faf6acf52a878ff34bbee1d6337049f2e",
+  "lineCount": 48,
+  "unitCount": 359,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T15:43:13.681246+00:00",
+    "scriptSha256": "3c479121a9b0ee25ebdc75fbab427b18810d7458adc10c69644edba92d12a2d2",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T15:46:26.539386+00:00",
+    "elapsedSeconds": 192.86
+  },
+  "anomalies": [
+    {
+      "index": 8,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 43,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 44,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 45,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 46,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 47,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

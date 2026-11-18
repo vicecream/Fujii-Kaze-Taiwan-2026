@@ -1,0 +1,25 @@
+/* The clock comes from measured word bounds, including sustained vowels. */
+.lyric-line{
+  --karaoke-fill:var(--clap, #7ecdf7);
+  --karaoke-unlit:rgba(169,154,128,.62);
+}
+.lyric-line.is-chant:not(.chant-partial),
+.lyric-line .seg-chant,
+.lyric-line .chant-segment{
+  --karaoke-fill:var(--chant, #f5942c);
+  --karaoke-unlit:rgba(245,148,44,.72);
+}
+:where(.song-page:not(.karaoke-off), .document-pip:not(.karaoke-off))
+  .lyric-line.active .karaoke-unit.karaoke-current,
+:where(.song-page:not(.karaoke-off), .document-pip:not(.karaoke-off))
+  .lyric-line.active .karaoke-unit.karaoke-current rt{
+  background-image:linear-gradient(to right,
+    var(--karaoke-fill) calc(var(--karaoke-word-progress, 0) * 100%),
+    var(--karaoke-unlit) 0);
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none !important;
+  box-decoration-break:clone;
+  -webkit-box-decoration-break:clone;
+}

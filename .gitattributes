@@ -1,0 +1,2 @@
+# Keep supplied lyric bytes stable for the reviewed source fingerprints.
+lyrics/*.lrc -text

@@ -1,12 +1,13 @@
 {
   "name": "fujii-kaze-kaohsiung-2026-guide",
   "private": true,
-  "version": "2.1.2",
+  "version": "2.2.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "check:lyrics": "node scripts/check-romaji.mjs",
     "check:karaoke": "node scripts/check-karaoke-alignment.mjs",
+    "check:word-timing": "node scripts/check-word-timing.mjs",
     "build": "vite build",
     "preview": "vite preview",
     "check:guide": "node scripts/check-guide.mjs",

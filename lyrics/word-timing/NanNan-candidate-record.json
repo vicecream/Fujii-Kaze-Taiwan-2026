@@ -1,0 +1,303 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "NanNan",
+  "youtubeId": "Nt6ZwuVzOS4",
+  "sourceFingerprint": "f28562ace65a3cb526e6054d9475ff044d9d3cdbf4fc98d5c479d499c481f5d1",
+  "lrcSha256": "efae9fc7feb0564bef5fc61a99a023824d24ba8a0eb5cf0fd83755c5b612b46d",
+  "audioSha256": "19b57375c1f430491f04ff6a7ec9ef8822c3d72c7e505783f7b2703d0312beb5",
+  "alignmentAudioSha256": "8a50c3ac4da038be5640f66b355f141dea33050af76888ecf004102a374f67a8",
+  "candidateSha256": "c2bd15f10d70ae7c8d2e5e9db04b028f0955543488694553adc1301e12151891",
+  "lineCount": 48,
+  "unitCount": 504,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T17:04:04.530935+00:00",
+    "scriptSha256": "a053e6af7d468e76005494dc03c3c1e1a7c86f080a46583570e352a90d8330ab",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T17:09:07.086674+00:00",
+    "elapsedSeconds": 302.56
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 1,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 5,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "low-model-score",
+        "mixed-language-listen"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score",
+        "mixed-language-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "low-model-score",
+        "mixed-language-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 44,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 45,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 46,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 47,
+      "reasons": [
+        "low-model-score"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

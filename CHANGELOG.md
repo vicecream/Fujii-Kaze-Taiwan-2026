@@ -4,6 +4,14 @@
 
 本檔案依 Git 歷史整理，使用版本提交作為每一段的邊界。
 
+## [**v2.2.0**](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/commit/6046fc9a3ef74c0655fdea933fc08d435d3141ed)
+
+2026-11-19 發布。
+
+- [PR #1](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/pull/1)：啟用已聽校逐字同步：〈Hachikō〉1 句、〈Prema〉1 句、〈It's Alright〉8 句，共 10 句；其餘句子保留 LRC 逐行播放。
+- [PR #1](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/pull/1)：字詞可重疊、可同時起唱，依各自時間漸進反白；假名、羅馬字、點句跳轉與 Document PiP 共用影片秒數，0.35 秒提前量只用於預捲動。
+- [PR #1](https://github.com/vicecream/Fujii-Kaze-Taiwan-2026/pull/1)：核對影片、音訊、原文與聽校時間指紋，來源變更時保留逐行；保存〈You〉、〈何なんw〉、〈満ちてゆく〉等五首既有偏移，已核對逐字資料隨網站快取。
+
 ## v2.1.2（尚未發佈）
 
 2026-11-14 內容更新紀錄。線上入口已補為 [藤井風高雄演唱會指南](https://fujii-kaze-taiwan-2026.pages.dev/)；正式版本發佈提交依專案發版流程另行記錄。

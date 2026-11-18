@@ -11,6 +11,7 @@ import { prepareSong } from "./import-song-lyrics.mjs";
 import { FURIGANA_CORRECTIONS, ROMAJI_CORRECTIONS } from "../src/furigana-corrections.js";
 
 const groups = [];
+const releaseVersion = JSON.parse(fs.readFileSync(new URL("../package.json", import.meta.url), "utf8")).version;
 function check(label, run){
   run();
   groups.push(label);
@@ -269,11 +270,11 @@ check("version and site identity markers", () => {
   const manifest = JSON.parse(read("manifest.json"));
   const pkg = JSON.parse(read("package.json"));
   const lock = JSON.parse(read("package-lock.json"));
-  assert.equal(pkg.version, "2.1.2");
+  assert.match(pkg.version, /^\d+\.\d+\.\d+$/);
   assert.equal(lock.version, pkg.version);
   assert.equal(lock.packages[""].version, pkg.version);
-  assert.match(read("src/main.js"), /const BUILD = "v2\.1\.2"/);
-  assert.match(read("sw.js"), /const CACHE_VERSION = "v2\.1\.2"/);
+  assert.ok(read("src/main.js").includes(`const BUILD = "v${pkg.version}";`));
+  assert.ok(read("sw.js").includes(`const CACHE_VERSION = "v${pkg.version}";`));
   assert.match(manifest.name, /藤井風/);
   assert.equal(read("CNAME").trim(), "kaze.tiaui.co");
   for (const file of ["index.html", "sitemap.xml", "robots.txt"]){
@@ -331,13 +332,13 @@ check("version and site identity markers", () => {
   stores.set("unrelated-app-cache", new Map());
   await dispatchLifecycle("install");
   assert.equal(skipped, true);
-  const workerCache = await caches.open("kaze-guide-v2.1.2");
+  const workerCache = await caches.open(`kaze-guide-v${releaseVersion}`);
   for (const path of ["./", "./index.html", "./manifest.json", EVENT.poster, EVENT.seatMap, EVENT.venueMap, "./icon-192.png"]){
     assert.ok(await workerCache.match(path), `Precache ${path}`);
   }
   await dispatchLifecycle("activate");
   assert.equal(claimed, true);
-  assert.deepEqual(await caches.keys(), ["unrelated-app-cache", "kaze-guide-v2.1.2"]);
+  assert.deepEqual(await caches.keys(), ["unrelated-app-cache", `kaze-guide-v${releaseVersion}`]);
   offline = true;
   const dispatchFetch = request => {
     let response;
