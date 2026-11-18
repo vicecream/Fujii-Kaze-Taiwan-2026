@@ -1,0 +1,254 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "Yaba",
+  "youtubeId": "7xbokCesviM",
+  "sourceFingerprint": "cd3a390208a15fd4123b21c1f243f8afc969186dda3566a7379844a10d249629",
+  "lrcSha256": "45dab987a397a395fd37ad26efa3326fef64185d1a5348ea55d69124473c8508",
+  "audioSha256": "9ec1e0eeb7c35416e551ed7ce218ca7a6a1a59fbe1379a6a65fc9f4a523e571e",
+  "alignmentAudioSha256": "50b612be81c49a1b568f9d4cad072835718e87fc0c673afe7ec4f0452493e777",
+  "candidateSha256": "76a0fda24ec127e19e20b90927ece895972ff0714579344e62b13cbfd58476fc",
+  "lineCount": 43,
+  "unitCount": 325,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T17:09:40.794225+00:00",
+    "scriptSha256": "a053e6af7d468e76005494dc03c3c1e1a7c86f080a46583570e352a90d8330ab",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T17:13:35.500678+00:00",
+    "elapsedSeconds": 234.71
+  },
+  "anomalies": [
+    {
+      "index": 1,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 7,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 8,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "mixed-language-listen"
+      ]
+    },
+    {
+      "index": 38,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "low-model-score",
+        "mixed-language-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

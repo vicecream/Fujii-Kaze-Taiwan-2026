@@ -1,0 +1,407 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "OkayGoodbye",
+  "youtubeId": "EAtRDZQLsgk",
+  "sourceFingerprint": "e45095448685059d1082ccdc1daf17316533ba0ed6fae2abf7e3376635b5dc80",
+  "lrcSha256": "1112619976d028ca0e0a66f61fce01e7859beb9a8fded81a716de928e1eac646",
+  "audioSha256": "7935b4e98ae0933d507e2248c49ed36890593f719d6abc043b5604e6a142fea9",
+  "alignmentAudioSha256": "b804f536165273588c5b9422b506102b21f06470af5cf3d40f8f7b09d04146b7",
+  "candidateSha256": "3db854a2ae09df74159f43e5ac37f7f55602e58fac400f5c5d281a6e4b24163c",
+  "lineCount": 66,
+  "unitCount": 376,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "en": {
+      "id": "facebook/wav2vec2-base-960h",
+      "revision": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T16:34:43.732136+00:00",
+    "scriptSha256": "9bb9df4986b2b49cdf528dbbb06c5522d3c3e3a128e03f22ac17cc43905981d7",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T16:50:16.121Z",
+    "completionMethod": "Whisper output interrupted by Windows file lock; remaining occurrences use same-audio CTC candidates; listening pending."
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 8,
+      "reasons": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "low-model-score",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 38,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 43,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 44,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 45,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 46,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 48,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 50,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 53,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 54,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 55,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 56,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 57,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 58,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 59,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 60,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 61,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 62,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 63,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 64,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 65,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": [
+    {
+      "indices": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65
+      ],
+      "method": "Whisper output interrupted by Windows file lock; remaining occurrences use same-audio CTC candidates; listening pending.",
+      "processing": {
+        "startedAt": "2026-11-17T16:34:16.140807+00:00",
+        "scriptSha256": "9bb9df4986b2b49cdf528dbbb06c5522d3c3e3a128e03f22ac17cc43905981d7",
+        "fromLine": 0,
+        "toLine": null,
+        "completedAt": "2026-11-17T16:34:36.062719+00:00",
+        "elapsedSeconds": 19.92
+      }
+    }
+  ]
+}

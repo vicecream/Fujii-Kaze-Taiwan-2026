@@ -1,0 +1,130 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "ByeForNow",
+  "youtubeId": "1cXlo7vkxhE",
+  "sourceFingerprint": "1422e3dcc4521f4846cb2f6ee2acedaac6ab6b6062b1f96781186d17dc21d2f3",
+  "lrcSha256": "8a1f832b55ffa4e743f4dc017ad404bd61080dea4f8731db07abaf3575254615",
+  "audioSha256": "34caf14b897368cc55c96ddc98e5a89bbf13c91e9bcc321afbb0622e6028f0ea",
+  "alignmentAudioSha256": "68015fcc6cd572b4404dccc778170299e91235f8ee1ba9fd5142764e3f3a7960",
+  "candidateSha256": "bcd30ee9349cd74715a0b24d1565ab6cb72e4eec3c657fafe35e035f43a564bd",
+  "lineCount": 24,
+  "unitCount": 153,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T16:46:24.760522+00:00",
+    "scriptSha256": "8af0717771169d9f02e6b048033789e042548b77594e5724108cc8d0b20d15df",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T16:49:02.008153+00:00",
+    "elapsedSeconds": 157.25
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 4,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 5,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

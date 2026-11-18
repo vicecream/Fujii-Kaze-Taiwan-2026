@@ -1,0 +1,3809 @@
+{
+  "format": "karaoke-review-v1",
+  "songId": "Prema",
+  "youtubeId": "UJgPpzZcxGU",
+  "sourceFingerprint": "60af98d400efd95c3203b95e368ac70aa20023e239c567ed7bf7a305901dc9c0",
+  "lrcSha256": "87b587bf8f2b186b384b0484bbe9d14f0df4a955094b7201e54cfbb5626d80f8",
+  "audioSha256": "1aaca790e4f066ae3b1501e4a97ccddc4004320147ef3d5f26d3f66f834943ee",
+  "alignmentAudioSha256": "fe28982f38f85376cc60d7f906ac7a482e0e2844246c58a7e34a58ffd43720bc",
+  "sourceReview": {
+    "reviewer": "chi",
+    "reviewedAt": "2026-11-17T16:53:38.404Z",
+    "audioSha256": "1aaca790e4f066ae3b1501e4a97ccddc4004320147ef3d5f26d3f66f834943ee",
+    "anchors": [
+      {
+        "position": "start",
+        "time": 21.34,
+        "note": "OK"
+      },
+      {
+        "position": "middle",
+        "time": 126.27,
+        "note": "OK"
+      },
+      {
+        "position": "end",
+        "time": 239.88,
+        "note": "OK"
+      }
+    ]
+  },
+  "lines": [
+    {
+      "index": 0,
+      "lineId": "Prema:0:21.34",
+      "text": "Prema, don't you know that you are love itself?",
+      "textSha256": "b7aa3c69ab00e0944281e840b2662840be1199bd9fdc9d8a45d109341c4ffd59",
+      "sourceStart": 21.34,
+      "sourceEnd": 27.55,
+      "windowStart": 21.34,
+      "windowEnd": 27.55,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "know",
+          "reading": "know"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 21.34,
+          "end": 24.04,
+          "score": 0.3218
+        },
+        {
+          "text": "don't",
+          "start": 24.04,
+          "end": 24.38,
+          "score": 0.9382
+        },
+        {
+          "text": "you",
+          "start": 24.38,
+          "end": 24.52,
+          "score": 0.9592
+        },
+        {
+          "text": "know",
+          "start": 24.52,
+          "end": 24.9,
+          "score": 0.997
+        },
+        {
+          "text": "that",
+          "start": 24.9,
+          "end": 25.3,
+          "score": 0.9633
+        },
+        {
+          "text": "you",
+          "start": 25.3,
+          "end": 25.7,
+          "score": 0.9641
+        },
+        {
+          "text": "are",
+          "start": 25.7,
+          "end": 25.96,
+          "score": 0.8233
+        },
+        {
+          "text": "love",
+          "start": 25.96,
+          "end": 26.28,
+          "score": 0.0427
+        },
+        {
+          "text": "itself?",
+          "start": 26.28,
+          "end": 27.2,
+          "score": 0.75
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 21.34,
+      "end": 27.2,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 1,
+      "lineId": "Prema:1:27.55",
+      "text": "You are love itself",
+      "textSha256": "4ee5e98ba1271734abf8fdb684d4413f90a62f3283cc6575818b9e93e18c3157",
+      "sourceStart": 27.55,
+      "sourceEnd": 31.72,
+      "windowStart": 27.55,
+      "windowEnd": 31.72,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You",
+          "reading": "You"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "You",
+          "start": 27.55,
+          "end": 28.01,
+          "score": 0.2641
+        },
+        {
+          "text": "are",
+          "start": 28.01,
+          "end": 28.29,
+          "score": 0.751
+        },
+        {
+          "text": "love",
+          "start": 28.29,
+          "end": 28.63,
+          "score": 0.1333
+        },
+        {
+          "text": "itself",
+          "start": 28.63,
+          "end": 29.99,
+          "score": 0.9925
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 27.55,
+      "end": 29.99,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 2,
+      "lineId": "Prema:2:31.72",
+      "text": "Prema, can't you see that you are god itself?",
+      "textSha256": "e50d3c12ff761bfd1044db7a91550f044b7fe1faaaf960f08ab86a1ddbe39aeb",
+      "sourceStart": 31.72,
+      "sourceEnd": 36.78,
+      "windowStart": 31.72,
+      "windowEnd": 36.78,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "can't",
+          "reading": "can't"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "see",
+          "reading": "see"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "god",
+          "reading": "god"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 31.72,
+          "end": 33.78,
+          "score": 0.0421
+        },
+        {
+          "text": "can't",
+          "start": 33.78,
+          "end": 34.02,
+          "score": 0.9131
+        },
+        {
+          "text": "you",
+          "start": 34.02,
+          "end": 34.18,
+          "score": 0.7918
+        },
+        {
+          "text": "see",
+          "start": 34.18,
+          "end": 34.4,
+          "score": 0.7984
+        },
+        {
+          "text": "that",
+          "start": 34.4,
+          "end": 34.74,
+          "score": 0.9548
+        },
+        {
+          "text": "you",
+          "start": 34.74,
+          "end": 35.12,
+          "score": 0.9659
+        },
+        {
+          "text": "are",
+          "start": 35.12,
+          "end": 35.46,
+          "score": 0.5132
+        },
+        {
+          "text": "god",
+          "start": 35.46,
+          "end": 35.74,
+          "score": 0.0014
+        },
+        {
+          "text": "itself?",
+          "start": 35.74,
+          "end": 36.74,
+          "score": 0.6689
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 31.72,
+      "end": 36.74,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 3,
+      "lineId": "Prema:3:36.78",
+      "text": "You are god itself",
+      "textSha256": "1688193418ec92505727848144ac347103663f115205d88e6001773fdb479993",
+      "sourceStart": 36.78,
+      "sourceEnd": 41.29,
+      "windowStart": 36.78,
+      "windowEnd": 41.29,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You",
+          "reading": "You"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "god",
+          "reading": "god"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "You",
+          "start": 36.98,
+          "end": 37.48,
+          "score": 0.4362
+        },
+        {
+          "text": "are",
+          "start": 37.48,
+          "end": 37.9,
+          "score": 0.8614
+        },
+        {
+          "text": "god",
+          "start": 37.9,
+          "end": 38.22,
+          "score": 0.0001
+        },
+        {
+          "text": "itself",
+          "start": 38.22,
+          "end": 40.22,
+          "score": 0.0427
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 36.98,
+      "end": 40.22,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 4,
+      "lineId": "Prema:4:41.29",
+      "text": "I don't lie, I'm all about the truth and",
+      "textSha256": "fa6fb5e25baf911521c5286aadc6c04e8778cc4978bfefa02645a7f86ba34d4b",
+      "sourceStart": 41.29,
+      "sourceEnd": 45.71,
+      "windowStart": 41.29,
+      "windowEnd": 45.71,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "lie",
+          "reading": "lie"
+        },
+        {
+          "text": "I'm",
+          "reading": "I'm"
+        },
+        {
+          "text": "all",
+          "reading": "all"
+        },
+        {
+          "text": "about",
+          "reading": "about"
+        },
+        {
+          "text": "the",
+          "reading": "the"
+        },
+        {
+          "text": "truth",
+          "reading": "truth"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        }
+      ],
+      "words": [
+        {
+          "text": "I",
+          "start": 41.29,
+          "end": 41.79,
+          "score": 0.526
+        },
+        {
+          "text": "don't",
+          "start": 41.79,
+          "end": 42.03,
+          "score": 0.5936
+        },
+        {
+          "text": "lie,",
+          "start": 42.03,
+          "end": 43.23,
+          "score": 0.737
+        },
+        {
+          "text": "I'm",
+          "start": 43.23,
+          "end": 43.75,
+          "score": 0.8975
+        },
+        {
+          "text": "all",
+          "start": 43.75,
+          "end": 43.97,
+          "score": 0.441
+        },
+        {
+          "text": "about",
+          "start": 43.97,
+          "end": 44.45,
+          "score": 0.9955
+        },
+        {
+          "text": "the",
+          "start": 44.45,
+          "end": 44.87,
+          "score": 0.994
+        },
+        {
+          "text": "truth",
+          "start": 44.87,
+          "end": 45.11,
+          "score": 0.9834
+        },
+        {
+          "text": "and",
+          "start": 45.11,
+          "end": 45.53,
+          "score": 0.7623
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 41.29,
+      "end": 45.53,
+      "flags": []
+    },
+    {
+      "index": 5,
+      "lineId": "Prema:5:45.71",
+      "text": "I don't hide, overwhelmingly I'm open",
+      "textSha256": "4e4def4197a47c84e12fb4de73cc988e1e528520c1e0a2768495f49d7949d929",
+      "sourceStart": 45.71,
+      "sourceEnd": 50.54,
+      "windowStart": 45.71,
+      "windowEnd": 50.54,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "hide",
+          "reading": "hide"
+        },
+        {
+          "text": "overwhelmingly",
+          "reading": "overwhelmingly"
+        },
+        {
+          "text": "I'm",
+          "reading": "I'm"
+        },
+        {
+          "text": "open",
+          "reading": "open"
+        }
+      ],
+      "words": [
+        {
+          "text": "I",
+          "start": 45.85,
+          "end": 46,
+          "score": 0.7747
+        },
+        {
+          "text": "don't",
+          "start": 46,
+          "end": 46.5,
+          "score": 0.9564
+        },
+        {
+          "text": "hide,",
+          "start": 46.5,
+          "end": 47.6,
+          "score": 0.7381
+        },
+        {
+          "text": "overwhelmingly",
+          "start": 47.6,
+          "end": 48.93,
+          "score": 0.9411
+        },
+        {
+          "text": "I'm",
+          "start": 48.93,
+          "end": 49.66,
+          "score": 0.9169
+        },
+        {
+          "text": "open",
+          "start": 49.66,
+          "end": 50.13,
+          "score": 0.9499
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "chi",
+        "reviewedAt": "2026-11-17T16:53:43.134Z",
+        "note": "OK",
+        "timingFingerprint": "f2f626e66ef45f80a7908663f348d3a684d4ef1893e5289ae355399dff5f6854"
+      },
+      "start": 45.85,
+      "end": 50.13,
+      "flags": [],
+      "edited": true
+    },
+    {
+      "index": 6,
+      "lineId": "Prema:6:50.54",
+      "text": "I survived all the crazy things you gave",
+      "textSha256": "a04b0b5ee8ea392d462e90279f7dfeafa74b2957b3abaf1f7b666a2565fd1a8c",
+      "sourceStart": 50.54,
+      "sourceEnd": 53.9,
+      "windowStart": 50.54,
+      "windowEnd": 53.9,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "survived",
+          "reading": "survived"
+        },
+        {
+          "text": "all",
+          "reading": "all"
+        },
+        {
+          "text": "the",
+          "reading": "the"
+        },
+        {
+          "text": "crazy",
+          "reading": "crazy"
+        },
+        {
+          "text": "things",
+          "reading": "things"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "gave",
+          "reading": "gave"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "I",
+          "start": 50.783,
+          "end": 50.802,
+          "score": 0.2788
+        },
+        {
+          "text": "survived",
+          "start": 50.942,
+          "end": 52.082,
+          "score": 0.4394
+        },
+        {
+          "text": "all",
+          "start": 52.603,
+          "end": 52.723,
+          "score": 0.6437
+        },
+        {
+          "text": "the",
+          "start": 52.783,
+          "end": 52.862,
+          "score": 0.7015
+        },
+        {
+          "text": "crazy",
+          "start": 52.923,
+          "end": 53.362,
+          "score": 0.7681
+        },
+        {
+          "text": "things",
+          "start": 53.402,
+          "end": 53.602,
+          "score": 0.1117
+        },
+        {
+          "text": "you",
+          "start": 53.622,
+          "end": 53.682,
+          "score": 0.0035
+        },
+        {
+          "text": "gave",
+          "start": 53.723,
+          "end": 53.882,
+          "score": 0.0191
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 50.783,
+      "end": 53.882,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 7,
+      "lineId": "Prema:7:53.9",
+      "text": "And every mess that was ever made, made",
+      "textSha256": "f08e5d89d5c0a93f95a8c4dea505ab2fe3f3b0a498f4578dfb3cd86e48645029",
+      "sourceStart": 53.9,
+      "sourceEnd": 59.68,
+      "windowStart": 53.9,
+      "windowEnd": 59.68,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "And",
+          "reading": "And"
+        },
+        {
+          "text": "every",
+          "reading": "every"
+        },
+        {
+          "text": "mess",
+          "reading": "mess"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "was",
+          "reading": "was"
+        },
+        {
+          "text": "ever",
+          "reading": "ever"
+        },
+        {
+          "text": "made",
+          "reading": "made"
+        },
+        {
+          "text": "made",
+          "reading": "made"
+        }
+      ],
+      "words": [
+        {
+          "text": "And",
+          "start": 53.9,
+          "end": 54.8,
+          "score": 0.102
+        },
+        {
+          "text": "every",
+          "start": 54.8,
+          "end": 54.86,
+          "score": 0.0003
+        },
+        {
+          "text": "mess",
+          "start": 54.86,
+          "end": 55.66,
+          "score": 0.6763
+        },
+        {
+          "text": "that",
+          "start": 55.7,
+          "end": 56.04,
+          "score": 0.8898
+        },
+        {
+          "text": "was",
+          "start": 56.04,
+          "end": 56.5,
+          "score": 0.9766
+        },
+        {
+          "text": "ever",
+          "start": 56.5,
+          "end": 57.06,
+          "score": 0.9505
+        },
+        {
+          "text": "made,",
+          "start": 57.06,
+          "end": 59.04,
+          "score": 0.5906
+        },
+        {
+          "text": "made",
+          "start": 59.04,
+          "end": 59.24,
+          "score": 0.0382
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 53.9,
+      "end": 59.24,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 8,
+      "lineId": "Prema:8:59.68",
+      "text": "You are mine, I call your name and you will",
+      "textSha256": "de3132aa50d7ef6ee71b2d1c990765ad0df7a1d706e887b02a84322c598dd10c",
+      "sourceStart": 59.68,
+      "sourceEnd": 64.47,
+      "windowStart": 59.68,
+      "windowEnd": 64.47,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "You",
+          "reading": "You"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "mine",
+          "reading": "mine"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "call",
+          "reading": "call"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "name",
+          "reading": "name"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "will",
+          "reading": "will"
+        }
+      ],
+      "words": [
+        {
+          "text": "You",
+          "start": 60.1,
+          "end": 60.44,
+          "score": 0.5989
+        },
+        {
+          "text": "are",
+          "start": 60.44,
+          "end": 60.86,
+          "score": 0.9404
+        },
+        {
+          "text": "mine,",
+          "start": 60.86,
+          "end": 61.44,
+          "score": 0.602
+        },
+        {
+          "text": "I",
+          "start": 61.96,
+          "end": 62.44,
+          "score": 0.9741
+        },
+        {
+          "text": "call",
+          "start": 62.46,
+          "end": 62.86,
+          "score": 0.9784
+        },
+        {
+          "text": "your",
+          "start": 62.86,
+          "end": 63.3,
+          "score": 0.9888
+        },
+        {
+          "text": "name",
+          "start": 63.3,
+          "end": 63.58,
+          "score": 0.998
+        },
+        {
+          "text": "and",
+          "start": 63.58,
+          "end": 63.9,
+          "score": 0.8863
+        },
+        {
+          "text": "you",
+          "start": 63.9,
+          "end": 64.22,
+          "score": 0.9868
+        },
+        {
+          "text": "will",
+          "start": 64.22,
+          "end": 64.46,
+          "score": 0.9614
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 60.1,
+      "end": 64.46,
+      "flags": []
+    },
+    {
+      "index": 9,
+      "lineId": "Prema:9:64.47",
+      "text": "Be on time, living in this small world and its",
+      "textSha256": "ff438814c49cd0d37086ad79dc28824081ff54ad110f08883fa9c821ab9bb495",
+      "sourceStart": 64.47,
+      "sourceEnd": 69.47,
+      "windowStart": 64.47,
+      "windowEnd": 69.47,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Be",
+          "reading": "Be"
+        },
+        {
+          "text": "on",
+          "reading": "on"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "living",
+          "reading": "living"
+        },
+        {
+          "text": "in",
+          "reading": "in"
+        },
+        {
+          "text": "this",
+          "reading": "this"
+        },
+        {
+          "text": "small",
+          "reading": "small"
+        },
+        {
+          "text": "world",
+          "reading": "world"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "its",
+          "reading": "its"
+        }
+      ],
+      "words": [
+        {
+          "text": "Be",
+          "start": 64.47,
+          "end": 65.31,
+          "score": 0.0676
+        },
+        {
+          "text": "on",
+          "start": 65.31,
+          "end": 65.65,
+          "score": 0.646
+        },
+        {
+          "text": "time,",
+          "start": 65.65,
+          "end": 67.21,
+          "score": 0.6205
+        },
+        {
+          "text": "living",
+          "start": 67.21,
+          "end": 67.23,
+          "score": 0.6919
+        },
+        {
+          "text": "in",
+          "start": 67.23,
+          "end": 67.69,
+          "score": 0.971
+        },
+        {
+          "text": "this",
+          "start": 67.69,
+          "end": 67.97,
+          "score": 0.9908
+        },
+        {
+          "text": "small",
+          "start": 67.97,
+          "end": 68.53,
+          "score": 0
+        },
+        {
+          "text": "world",
+          "start": 68.53,
+          "end": 68.79,
+          "score": 0.9203
+        },
+        {
+          "text": "and",
+          "start": 68.79,
+          "end": 69.11,
+          "score": 0.4224
+        },
+        {
+          "text": "its",
+          "start": 69.11,
+          "end": 69.33,
+          "score": 0.0102
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 64.47,
+      "end": 69.33,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 10,
+      "lineId": "Prema:10:69.47",
+      "text": "Future's bright, brighter than my ceiling lights",
+      "textSha256": "411c005110a6d00b26e93940cb6a5b52190066b54e3ca7132ec7857fc4900cb1",
+      "sourceStart": 69.47,
+      "sourceEnd": 73.67,
+      "windowStart": 69.47,
+      "windowEnd": 73.67,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Future's",
+          "reading": "Future's"
+        },
+        {
+          "text": "bright",
+          "reading": "bright"
+        },
+        {
+          "text": "brighter",
+          "reading": "brighter"
+        },
+        {
+          "text": "than",
+          "reading": "than"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "ceiling",
+          "reading": "ceiling"
+        },
+        {
+          "text": "lights",
+          "reading": "lights"
+        }
+      ],
+      "words": [
+        {
+          "text": "Future's",
+          "start": 69.65,
+          "end": 70.51,
+          "score": 0.4826
+        },
+        {
+          "text": "bright,",
+          "start": 70.51,
+          "end": 71.77,
+          "score": 0.6726
+        },
+        {
+          "text": "brighter",
+          "start": 71.77,
+          "end": 71.95,
+          "score": 0.955
+        },
+        {
+          "text": "than",
+          "start": 71.95,
+          "end": 72.35,
+          "score": 0.9842
+        },
+        {
+          "text": "my",
+          "start": 72.35,
+          "end": 72.77,
+          "score": 0.976
+        },
+        {
+          "text": "ceiling",
+          "start": 72.77,
+          "end": 73.19,
+          "score": 0.2297
+        },
+        {
+          "text": "lights",
+          "start": 73.19,
+          "end": 73.57,
+          "score": 0.837
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 69.65,
+      "end": 73.57,
+      "flags": []
+    },
+    {
+      "index": 11,
+      "lineId": "Prema:11:73.67",
+      "text": "And sweeter than my mother's cream pie",
+      "textSha256": "c6381ff0f1cc3f00121526dcc67224358ce4668f77d6af3f081a8c15c35a9f9f",
+      "sourceStart": 73.67,
+      "sourceEnd": 78.73,
+      "windowStart": 73.67,
+      "windowEnd": 78.73,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "And",
+          "reading": "And"
+        },
+        {
+          "text": "sweeter",
+          "reading": "sweeter"
+        },
+        {
+          "text": "than",
+          "reading": "than"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "mother's",
+          "reading": "mother's"
+        },
+        {
+          "text": "cream",
+          "reading": "cream"
+        },
+        {
+          "text": "pie",
+          "reading": "pie"
+        }
+      ],
+      "words": [
+        {
+          "text": "And",
+          "start": 73.67,
+          "end": 74.19,
+          "score": 0.0303
+        },
+        {
+          "text": "sweeter",
+          "start": 74.19,
+          "end": 74.25,
+          "score": 0.0026
+        },
+        {
+          "text": "than",
+          "start": 74.25,
+          "end": 74.75,
+          "score": 0.9849
+        },
+        {
+          "text": "my",
+          "start": 74.75,
+          "end": 75.09,
+          "score": 0.974
+        },
+        {
+          "text": "mother's",
+          "start": 75.09,
+          "end": 75.81,
+          "score": 0.9469
+        },
+        {
+          "text": "cream",
+          "start": 75.81,
+          "end": 76.03,
+          "score": 0.2386
+        },
+        {
+          "text": "pie",
+          "start": 76.03,
+          "end": 77.37,
+          "score": 0.9936
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 73.67,
+      "end": 77.37,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 12,
+      "lineId": "Prema:12:78.73",
+      "text": "Huh, follow my tender heart and I'll win",
+      "textSha256": "36eb89c150b86707246aa15a5845dceea73ff57bd2b60c20388c1589217d536c",
+      "sourceStart": 78.73,
+      "sourceEnd": 84.01,
+      "windowStart": 78.73,
+      "windowEnd": 84.01,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Huh",
+          "reading": "Huh"
+        },
+        {
+          "text": "follow",
+          "reading": "follow"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "tender",
+          "reading": "tender"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "and",
+          "reading": "and"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "win",
+          "reading": "win"
+        }
+      ],
+      "words": [
+        {
+          "text": "Huh,",
+          "start": 78.73,
+          "end": 80.23,
+          "score": 0.0473
+        },
+        {
+          "text": "follow",
+          "start": 80.23,
+          "end": 80.51,
+          "score": 0.3334
+        },
+        {
+          "text": "my",
+          "start": 80.51,
+          "end": 81.15,
+          "score": 0.938
+        },
+        {
+          "text": "tender",
+          "start": 81.15,
+          "end": 82.15,
+          "score": 0.2008
+        },
+        {
+          "text": "heart",
+          "start": 82.15,
+          "end": 82.91,
+          "score": 0.9901
+        },
+        {
+          "text": "and",
+          "start": 82.91,
+          "end": 83.39,
+          "score": 0.7796
+        },
+        {
+          "text": "I'll",
+          "start": 83.39,
+          "end": 83.87,
+          "score": 0.5584
+        },
+        {
+          "text": "win",
+          "start": 83.87,
+          "end": 83.99,
+          "score": 0.5745
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 78.73,
+      "end": 83.99,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 13,
+      "lineId": "Prema:13:84.01",
+      "text": "No matter what pain I am in",
+      "textSha256": "36893856dc3b80bed93141531129c5f452e655dc521ae40735e0dfd989cd8053",
+      "sourceStart": 84.01,
+      "sourceEnd": 88.73,
+      "windowStart": 84.01,
+      "windowEnd": 88.73,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "No",
+          "reading": "No"
+        },
+        {
+          "text": "matter",
+          "reading": "matter"
+        },
+        {
+          "text": "what",
+          "reading": "what"
+        },
+        {
+          "text": "pain",
+          "reading": "pain"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "am",
+          "reading": "am"
+        },
+        {
+          "text": "in",
+          "reading": "in"
+        }
+      ],
+      "words": [
+        {
+          "text": "No",
+          "start": 84.49,
+          "end": 84.99,
+          "score": 0.6627
+        },
+        {
+          "text": "matter",
+          "start": 84.99,
+          "end": 85.69,
+          "score": 0.9094
+        },
+        {
+          "text": "what",
+          "start": 85.69,
+          "end": 86.35,
+          "score": 0.9776
+        },
+        {
+          "text": "pain",
+          "start": 86.35,
+          "end": 86.93,
+          "score": 0.9901
+        },
+        {
+          "text": "I",
+          "start": 86.93,
+          "end": 87.73,
+          "score": 0.9371
+        },
+        {
+          "text": "am",
+          "start": 87.73,
+          "end": 88.09,
+          "score": 0.9229
+        },
+        {
+          "text": "in",
+          "start": 88.09,
+          "end": 88.61,
+          "score": 0.9915
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 84.49,
+      "end": 88.61,
+      "flags": []
+    },
+    {
+      "index": 14,
+      "lineId": "Prema:14:88.73",
+      "text": "With all your blessings I'll arise",
+      "textSha256": "cf466535a4d989c0f387763101afaea5c07958d46d5a4b6027efe952ca0e97e9",
+      "sourceStart": 88.73,
+      "sourceEnd": 94.9,
+      "windowStart": 88.73,
+      "windowEnd": 94.9,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "With",
+          "reading": "With"
+        },
+        {
+          "text": "all",
+          "reading": "all"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "blessings",
+          "reading": "blessings"
+        },
+        {
+          "text": "I'll",
+          "reading": "I'll"
+        },
+        {
+          "text": "arise",
+          "reading": "arise"
+        }
+      ],
+      "words": [
+        {
+          "text": "With",
+          "start": 89.15,
+          "end": 89.89,
+          "score": 0.588
+        },
+        {
+          "text": "all",
+          "start": 89.89,
+          "end": 90.19,
+          "score": 0.6131
+        },
+        {
+          "text": "your",
+          "start": 90.19,
+          "end": 90.71,
+          "score": 0.9602
+        },
+        {
+          "text": "blessings",
+          "start": 90.71,
+          "end": 91.71,
+          "score": 0.382
+        },
+        {
+          "text": "I'll",
+          "start": 91.71,
+          "end": 92.87,
+          "score": 0.5843
+        },
+        {
+          "text": "arise",
+          "start": 92.87,
+          "end": 93.13,
+          "score": 0.016
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 89.15,
+      "end": 93.13,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 15,
+      "lineId": "Prema:15:94.9",
+      "text": "Open up my third eye",
+      "textSha256": "30e2afd16fa116c859cb044717c1e77fd13a7fe9470cfc935d4814258fde03ac",
+      "sourceStart": 94.9,
+      "sourceEnd": 97.22,
+      "windowStart": 94.9,
+      "windowEnd": 97.22,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Open",
+          "reading": "Open"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "third",
+          "reading": "third"
+        },
+        {
+          "text": "eye",
+          "reading": "eye"
+        }
+      ],
+      "words": [
+        {
+          "text": "Open",
+          "start": 95.04,
+          "end": 95.84,
+          "score": 0.373
+        },
+        {
+          "text": "up",
+          "start": 95.72,
+          "end": 96.18,
+          "score": 0.9674
+        },
+        {
+          "text": "my",
+          "start": 96,
+          "end": 96.6,
+          "score": 0.9447
+        },
+        {
+          "text": "third",
+          "start": 96.47,
+          "end": 97.16,
+          "score": 0.002
+        },
+        {
+          "text": "eye",
+          "start": 97.1,
+          "end": 97.2,
+          "score": 0.9805
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending",
+        "note": "OK"
+      },
+      "start": 95.04,
+      "end": 97.2,
+      "flags": [
+        "low-model-score"
+      ],
+      "edited": true
+    },
+    {
+      "index": 16,
+      "lineId": "Prema:16:97.22",
+      "text": "Prema, don't you know that you are love itself?",
+      "textSha256": "b7aa3c69ab00e0944281e840b2662840be1199bd9fdc9d8a45d109341c4ffd59",
+      "sourceStart": 97.22,
+      "sourceEnd": 103.03,
+      "windowStart": 97.22,
+      "windowEnd": 103.03,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "know",
+          "reading": "know"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 97.22,
+          "end": 100.04,
+          "score": 0.0932
+        },
+        {
+          "text": "don't",
+          "start": 100.04,
+          "end": 100.42,
+          "score": 0.945
+        },
+        {
+          "text": "you",
+          "start": 100.42,
+          "end": 100.56,
+          "score": 0.9784
+        },
+        {
+          "text": "know",
+          "start": 100.56,
+          "end": 100.94,
+          "score": 0.9966
+        },
+        {
+          "text": "that",
+          "start": 100.94,
+          "end": 101.3,
+          "score": 0.9694
+        },
+        {
+          "text": "you",
+          "start": 101.3,
+          "end": 101.68,
+          "score": 0.9677
+        },
+        {
+          "text": "are",
+          "start": 101.68,
+          "end": 101.94,
+          "score": 0.0897
+        },
+        {
+          "text": "love",
+          "start": 101.94,
+          "end": 102.2,
+          "score": 0.1559
+        },
+        {
+          "text": "itself?",
+          "start": 102.2,
+          "end": 103,
+          "score": 0.9143
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 97.22,
+      "end": 103,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "lineId": "Prema:17:103.03",
+      "text": "You are love itself",
+      "textSha256": "4ee5e98ba1271734abf8fdb684d4413f90a62f3283cc6575818b9e93e18c3157",
+      "sourceStart": 103.03,
+      "sourceEnd": 107.05,
+      "windowStart": 103.03,
+      "windowEnd": 107.05,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You",
+          "reading": "You"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "You",
+          "start": 103.03,
+          "end": 104.03,
+          "score": 0.5204
+        },
+        {
+          "text": "are",
+          "start": 104.03,
+          "end": 104.39,
+          "score": 0.4871
+        },
+        {
+          "text": "love",
+          "start": 104.39,
+          "end": 104.61,
+          "score": 0.3068
+        },
+        {
+          "text": "itself",
+          "start": 104.61,
+          "end": 105.33,
+          "score": 0.9794
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 103.03,
+      "end": 105.33,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "lineId": "Prema:18:107.05",
+      "text": "Prema, can't you see that you are god itself?",
+      "textSha256": "e50d3c12ff761bfd1044db7a91550f044b7fe1faaaf960f08ab86a1ddbe39aeb",
+      "sourceStart": 107.05,
+      "sourceEnd": 112.55,
+      "windowStart": 107.05,
+      "windowEnd": 112.55,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "can't",
+          "reading": "can't"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "see",
+          "reading": "see"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "god",
+          "reading": "god"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 107.05,
+          "end": 109.63,
+          "score": 0.0676
+        },
+        {
+          "text": "can't",
+          "start": 109.63,
+          "end": 110.21,
+          "score": 0.8872
+        },
+        {
+          "text": "you",
+          "start": 110.21,
+          "end": 110.29,
+          "score": 0.0041
+        },
+        {
+          "text": "see",
+          "start": 110.29,
+          "end": 110.49,
+          "score": 0.5818
+        },
+        {
+          "text": "that",
+          "start": 110.49,
+          "end": 110.79,
+          "score": 0.9171
+        },
+        {
+          "text": "you",
+          "start": 110.79,
+          "end": 111.15,
+          "score": 0.9564
+        },
+        {
+          "text": "are",
+          "start": 111.15,
+          "end": 111.51,
+          "score": 0.3925
+        },
+        {
+          "text": "god",
+          "start": 111.51,
+          "end": 111.73,
+          "score": 0.0002
+        },
+        {
+          "text": "itself?",
+          "start": 111.73,
+          "end": 112.53,
+          "score": 0.6646
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 107.05,
+      "end": 112.53,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "lineId": "Prema:19:112.55",
+      "text": "You are god itself",
+      "textSha256": "1688193418ec92505727848144ac347103663f115205d88e6001773fdb479993",
+      "sourceStart": 112.55,
+      "sourceEnd": 116.92,
+      "windowStart": 112.55,
+      "windowEnd": 116.92,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "You",
+          "reading": "You"
+        },
+        {
+          "text": "are",
+          "reading": "are"
+        },
+        {
+          "text": "god",
+          "reading": "god"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "You",
+          "start": 113.05,
+          "end": 113.53,
+          "score": 0.5834
+        },
+        {
+          "text": "are",
+          "start": 113.53,
+          "end": 113.93,
+          "score": 0.7643
+        },
+        {
+          "text": "god",
+          "start": 113.93,
+          "end": 114.27,
+          "score": 0.0002
+        },
+        {
+          "text": "itself",
+          "start": 114.27,
+          "end": 116.09,
+          "score": 0.2318
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 113.05,
+      "end": 116.09,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "lineId": "Prema:20:116.92",
+      "text": "Prema, ay yeah",
+      "textSha256": "c113b69cbeb97c964dd586e204eba907333ded3c828848eeeb8beb98a2a88613",
+      "sourceStart": 116.92,
+      "sourceEnd": 122.13,
+      "windowStart": 116.92,
+      "windowEnd": 122.13,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "yeah",
+          "reading": "yeah"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 116.92,
+          "end": 119.94,
+          "score": 0.0421
+        },
+        {
+          "text": "ay",
+          "start": 119.94,
+          "end": 120.28,
+          "score": 0.0518
+        },
+        {
+          "text": "yeah",
+          "start": 120.28,
+          "end": 120.72,
+          "score": 0.1861
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 116.92,
+      "end": 120.72,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 21,
+      "lineId": "Prema:21:126.27",
+      "text": "Prema, ay yeah, ooh (ayy)",
+      "textSha256": "0de3282f33220e8784af1763c22476d5cda05a0fc80c900221c7133079950cba",
+      "sourceStart": 126.27,
+      "sourceEnd": 135.38,
+      "windowStart": 126.27,
+      "windowEnd": 135.38,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "yeah",
+          "reading": "yeah"
+        },
+        {
+          "text": "ooh",
+          "reading": "ooh"
+        },
+        {
+          "text": "ayy",
+          "reading": "ayy"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 126.27,
+          "end": 129.49,
+          "score": 0.0916
+        },
+        {
+          "text": "ay",
+          "start": 129.49,
+          "end": 129.85,
+          "score": 0.005
+        },
+        {
+          "text": "yeah,",
+          "start": 129.85,
+          "end": 130.75,
+          "score": 0.2377
+        },
+        {
+          "text": "ooh",
+          "start": 130.75,
+          "end": 131.21,
+          "score": 0.0443
+        },
+        {
+          "text": "(ayy)",
+          "start": 131.21,
+          "end": 131.31,
+          "score": 0.1311
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 126.27,
+      "end": 131.31,
+      "flags": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 22,
+      "lineId": "Prema:22:135.38",
+      "text": "Finalized, we got each other always",
+      "textSha256": "aad5b249e7ad68c36b2eb6d86aea2cde4affa5e9b712bb2daf82a4b62f71d220",
+      "sourceStart": 135.38,
+      "sourceEnd": 140.16,
+      "windowStart": 135.38,
+      "windowEnd": 140.16,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Finalized",
+          "reading": "Finalized"
+        },
+        {
+          "text": "we",
+          "reading": "we"
+        },
+        {
+          "text": "got",
+          "reading": "got"
+        },
+        {
+          "text": "each",
+          "reading": "each"
+        },
+        {
+          "text": "other",
+          "reading": "other"
+        },
+        {
+          "text": "always",
+          "reading": "always"
+        }
+      ],
+      "words": [
+        {
+          "text": "Finalized,",
+          "start": 135.38,
+          "end": 138.44,
+          "score": 0.1809
+        },
+        {
+          "text": "we",
+          "start": 138.5,
+          "end": 138.52,
+          "score": 0.9594
+        },
+        {
+          "text": "got",
+          "start": 138.52,
+          "end": 139.02,
+          "score": 0.8962
+        },
+        {
+          "text": "each",
+          "start": 139.02,
+          "end": 139.38,
+          "score": 0.9902
+        },
+        {
+          "text": "other",
+          "start": 139.38,
+          "end": 139.86,
+          "score": 0.9955
+        },
+        {
+          "text": "always",
+          "start": 139.86,
+          "end": 140.14,
+          "score": 0.5982
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 135.38,
+      "end": 140.14,
+      "flags": []
+    },
+    {
+      "index": 23,
+      "lineId": "Prema:23:140.16",
+      "text": "Fantasized, surely knew we could do it",
+      "textSha256": "77d311061af519279a1fb77ea0352ea5f8a49caab586f5e4fa54a2a9eb614aea",
+      "sourceStart": 140.16,
+      "sourceEnd": 144.79,
+      "windowStart": 140.16,
+      "windowEnd": 144.79,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Fantasized",
+          "reading": "Fantasized"
+        },
+        {
+          "text": "surely",
+          "reading": "surely"
+        },
+        {
+          "text": "knew",
+          "reading": "knew"
+        },
+        {
+          "text": "we",
+          "reading": "we"
+        },
+        {
+          "text": "could",
+          "reading": "could"
+        },
+        {
+          "text": "do",
+          "reading": "do"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "Fantasized",
+          "start": 140.982,
+          "end": 142.142,
+          "score": 0.3969
+        },
+        {
+          "text": "surely",
+          "start": 142.722,
+          "end": 143.422,
+          "score": 0.7634
+        },
+        {
+          "text": "knew",
+          "start": 143.642,
+          "end": 143.962,
+          "score": 0.2647
+        },
+        {
+          "text": "we",
+          "start": 143.982,
+          "end": 144.122,
+          "score": 0.1922
+        },
+        {
+          "text": "could",
+          "start": 144.262,
+          "end": 144.442,
+          "score": 0.3471
+        },
+        {
+          "text": "do",
+          "start": 144.522,
+          "end": 144.602,
+          "score": 0.1623
+        },
+        {
+          "text": "it",
+          "start": 144.742,
+          "end": 144.782,
+          "score": 0.0007
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 140.982,
+      "end": 144.782,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 24,
+      "lineId": "Prema:24:144.79",
+      "text": "I decide every day I meditate",
+      "textSha256": "61ea6520ab68cdfe9eb80fb94b95d8b9445ef66f1b8944924cdd38cbbdf47c37",
+      "sourceStart": 144.79,
+      "sourceEnd": 149.57,
+      "windowStart": 144.79,
+      "windowEnd": 149.57,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "decide",
+          "reading": "decide"
+        },
+        {
+          "text": "every",
+          "reading": "every"
+        },
+        {
+          "text": "day",
+          "reading": "day"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "meditate",
+          "reading": "meditate"
+        }
+      ],
+      "words": [
+        {
+          "text": "I",
+          "start": 144.79,
+          "end": 146.01,
+          "score": 0.3002
+        },
+        {
+          "text": "decide",
+          "start": 146.01,
+          "end": 147.21,
+          "score": 0.9406
+        },
+        {
+          "text": "every",
+          "start": 147.21,
+          "end": 148.15,
+          "score": 0.5431
+        },
+        {
+          "text": "day",
+          "start": 148.15,
+          "end": 148.49,
+          "score": 0.9788
+        },
+        {
+          "text": "I",
+          "start": 148.49,
+          "end": 148.85,
+          "score": 0.737
+        },
+        {
+          "text": "meditate",
+          "start": 148.85,
+          "end": 149.43,
+          "score": 0.9719
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 144.79,
+      "end": 149.43,
+      "flags": []
+    },
+    {
+      "index": 25,
+      "lineId": "Prema:25:149.57",
+      "text": "And make every action a prayer",
+      "textSha256": "fb853cfc968a589474d4f3aaaf0bf1c8257110ae2dfa4d510aae734e7dc5feda",
+      "sourceStart": 149.57,
+      "sourceEnd": 155.66,
+      "windowStart": 149.57,
+      "windowEnd": 155.66,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "And",
+          "reading": "And"
+        },
+        {
+          "text": "make",
+          "reading": "make"
+        },
+        {
+          "text": "every",
+          "reading": "every"
+        },
+        {
+          "text": "action",
+          "reading": "action"
+        },
+        {
+          "text": "a",
+          "reading": "a"
+        },
+        {
+          "text": "prayer",
+          "reading": "prayer"
+        }
+      ],
+      "words": [
+        {
+          "text": "And",
+          "start": 149.57,
+          "end": 150.09,
+          "score": 0.3365
+        },
+        {
+          "text": "make",
+          "start": 150.33,
+          "end": 150.35,
+          "score": 0.9778
+        },
+        {
+          "text": "every",
+          "start": 150.35,
+          "end": 151.13,
+          "score": 0.9866
+        },
+        {
+          "text": "action",
+          "start": 151.13,
+          "end": 151.69,
+          "score": 0.9927
+        },
+        {
+          "text": "a",
+          "start": 151.69,
+          "end": 152.09,
+          "score": 0.916
+        },
+        {
+          "text": "prayer",
+          "start": 152.09,
+          "end": 153.53,
+          "score": 0.9528
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 149.57,
+      "end": 153.53,
+      "flags": []
+    },
+    {
+      "index": 26,
+      "lineId": "Prema:26:155.66",
+      "text": "Filling my heart with your affection",
+      "textSha256": "a43e3201f3943e185348f43a735b4c554495b5b0e41abc916db8aa7f5dc93629",
+      "sourceStart": 155.66,
+      "sourceEnd": 159.99,
+      "windowStart": 155.66,
+      "windowEnd": 159.99,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Filling",
+          "reading": "Filling"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "with",
+          "reading": "with"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "affection",
+          "reading": "affection"
+        }
+      ],
+      "words": [
+        {
+          "text": "Filling",
+          "start": 155.76,
+          "end": 156.54,
+          "score": 0.4774
+        },
+        {
+          "text": "my",
+          "start": 156.54,
+          "end": 157.24,
+          "score": 0.9834
+        },
+        {
+          "text": "heart",
+          "start": 157.24,
+          "end": 157.62,
+          "score": 0.9911
+        },
+        {
+          "text": "with",
+          "start": 157.62,
+          "end": 158.28,
+          "score": 0.971
+        },
+        {
+          "text": "your",
+          "start": 158.28,
+          "end": 159.08,
+          "score": 0.9717
+        },
+        {
+          "text": "affection",
+          "start": 159.08,
+          "end": 159.74,
+          "score": 0.8965
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 155.76,
+      "end": 159.74,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 27,
+      "lineId": "Prema:27:159.99",
+      "text": "Being your best friend is my devotion",
+      "textSha256": "255ec77d2fe601190784a264a55e91a5b668946b66145e32f3c6a6d720d85034",
+      "sourceStart": 159.99,
+      "sourceEnd": 164.84,
+      "windowStart": 159.99,
+      "windowEnd": 164.84,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Being",
+          "reading": "Being"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "best",
+          "reading": "best"
+        },
+        {
+          "text": "friend",
+          "reading": "friend"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "devotion",
+          "reading": "devotion"
+        }
+      ],
+      "words": [
+        {
+          "text": "Being",
+          "start": 159.99,
+          "end": 161.11,
+          "score": 0.0066
+        },
+        {
+          "text": "your",
+          "start": 161.11,
+          "end": 161.63,
+          "score": 0.7752
+        },
+        {
+          "text": "best",
+          "start": 161.63,
+          "end": 162.13,
+          "score": 0.9883
+        },
+        {
+          "text": "friend",
+          "start": 162.13,
+          "end": 162.73,
+          "score": 0.0331
+        },
+        {
+          "text": "is",
+          "start": 162.73,
+          "end": 163.17,
+          "score": 0.8109
+        },
+        {
+          "text": "my",
+          "start": 163.17,
+          "end": 163.63,
+          "score": 0.9377
+        },
+        {
+          "text": "devotion",
+          "start": 163.63,
+          "end": 164.49,
+          "score": 0.9338
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 159.99,
+      "end": 164.49,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 28,
+      "lineId": "Prema:28:164.84",
+      "text": "Calling your name is my surrender",
+      "textSha256": "4b1d5060a5d4ec73447d474ed9641cc1afe57815db6f2ae2bc77b42fc80502bc",
+      "sourceStart": 164.84,
+      "sourceEnd": 170.83,
+      "windowStart": 164.84,
+      "windowEnd": 170.83,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Calling",
+          "reading": "Calling"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "name",
+          "reading": "name"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "surrender",
+          "reading": "surrender"
+        }
+      ],
+      "words": [
+        {
+          "text": "Calling",
+          "start": 164.84,
+          "end": 166,
+          "score": 0.8178
+        },
+        {
+          "text": "your",
+          "start": 166,
+          "end": 166.66,
+          "score": 0.9303
+        },
+        {
+          "text": "name",
+          "start": 166.66,
+          "end": 167.28,
+          "score": 0.9853
+        },
+        {
+          "text": "is",
+          "start": 167.28,
+          "end": 167.96,
+          "score": 0.9569
+        },
+        {
+          "text": "my",
+          "start": 167.96,
+          "end": 168.32,
+          "score": 0.6162
+        },
+        {
+          "text": "surrender",
+          "start": 168.32,
+          "end": 170,
+          "score": 0.9795
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 164.84,
+      "end": 170,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "lineId": "Prema:29:170.83",
+      "text": "Babe, I got your number",
+      "textSha256": "c87540d20fbb99ce44a19a694c5ec7dd99b4b9dfc40a47084e1c0a6ebc0ded37",
+      "sourceStart": 170.83,
+      "sourceEnd": 174.92,
+      "windowStart": 170.83,
+      "windowEnd": 174.92,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Babe",
+          "reading": "Babe"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "got",
+          "reading": "got"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "number",
+          "reading": "number"
+        }
+      ],
+      "words": [
+        {
+          "text": "Babe,",
+          "start": 170.83,
+          "end": 171.85,
+          "score": 0.2709
+        },
+        {
+          "text": "I",
+          "start": 171.85,
+          "end": 171.95,
+          "score": 0.9847
+        },
+        {
+          "text": "got",
+          "start": 171.95,
+          "end": 172.21,
+          "score": 0.8126
+        },
+        {
+          "text": "your",
+          "start": 172.21,
+          "end": 172.67,
+          "score": 0.964
+        },
+        {
+          "text": "number",
+          "start": 172.67,
+          "end": 173.31,
+          "score": 0.9413
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 170.83,
+      "end": 173.31,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "lineId": "Prema:30:182.63",
+      "text": "Hello, can I talk to you now?",
+      "textSha256": "62cadd4729a7522a664b71f57d498dfa7a1aec064efa6917c7aed100ef8a8fc5",
+      "sourceStart": 182.63,
+      "sourceEnd": 185.68,
+      "windowStart": 182.63,
+      "windowEnd": 185.68,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Hello",
+          "reading": "Hello"
+        },
+        {
+          "text": "can",
+          "reading": "can"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "talk",
+          "reading": "talk"
+        },
+        {
+          "text": "to",
+          "reading": "to"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "now",
+          "reading": "now"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "Hello",
+          "start": 182.792,
+          "end": 183.012,
+          "score": 0.8047
+        },
+        {
+          "text": "can",
+          "start": 183.072,
+          "end": 183.132,
+          "score": 0.0009
+        },
+        {
+          "text": "I",
+          "start": 185.232,
+          "end": 185.252,
+          "score": 0.0004
+        },
+        {
+          "text": "talk",
+          "start": 185.272,
+          "end": 185.352,
+          "score": 0.0006
+        },
+        {
+          "text": "to",
+          "start": 185.372,
+          "end": 185.412,
+          "score": 0.0486
+        },
+        {
+          "text": "you",
+          "start": 185.492,
+          "end": 185.552,
+          "score": 0.0021
+        },
+        {
+          "text": "now",
+          "start": 185.572,
+          "end": 185.652,
+          "score": 0.0017
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 182.792,
+      "end": 185.652,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 31,
+      "lineId": "Prema:31:188.88",
+      "text": "Okay, cool",
+      "textSha256": "397795f6b292b531b88d3b664db21e5ce90639ea95cc9884ff2d5fc095d2cc95",
+      "sourceStart": 188.88,
+      "sourceEnd": 190.78,
+      "windowStart": 188.88,
+      "windowEnd": 190.78,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Okay",
+          "reading": "Okay"
+        },
+        {
+          "text": "cool",
+          "reading": "cool"
+        }
+      ],
+      "words": [
+        {
+          "text": "Okay,",
+          "start": 188.88,
+          "end": 188.9,
+          "score": 0.5842
+        },
+        {
+          "text": "cool",
+          "start": 189.6,
+          "end": 189.64,
+          "score": 0.0363
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 188.88,
+      "end": 189.64,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 32,
+      "lineId": "Prema:32:190.78",
+      "text": "I love you, bye",
+      "textSha256": "710e5e7fb587ddbb965f359b1e489b61eafad835419eb32585fed7da79978bed",
+      "sourceStart": 190.78,
+      "sourceEnd": 193.75,
+      "windowStart": 190.78,
+      "windowEnd": 193.75,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "bye",
+          "reading": "bye"
+        }
+      ],
+      "words": [
+        {
+          "text": "I",
+          "start": 191.3,
+          "end": 191.46,
+          "score": 0.8089
+        },
+        {
+          "text": "love",
+          "start": 191.46,
+          "end": 191.68,
+          "score": 0.9701
+        },
+        {
+          "text": "you,",
+          "start": 191.68,
+          "end": 192.12,
+          "score": 0.7497
+        },
+        {
+          "text": "bye",
+          "start": 192.12,
+          "end": 192.32,
+          "score": 0.9647
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 191.3,
+      "end": 192.32,
+      "flags": []
+    },
+    {
+      "index": 33,
+      "lineId": "Prema:33:193.75",
+      "text": "Filling my heart with your affection",
+      "textSha256": "a43e3201f3943e185348f43a735b4c554495b5b0e41abc916db8aa7f5dc93629",
+      "sourceStart": 193.75,
+      "sourceEnd": 198.56,
+      "windowStart": 193.75,
+      "windowEnd": 198.56,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Filling",
+          "reading": "Filling"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "with",
+          "reading": "with"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "affection",
+          "reading": "affection"
+        }
+      ],
+      "words": [
+        {
+          "text": "Filling",
+          "start": 193.79,
+          "end": 194.55,
+          "score": 0.5137
+        },
+        {
+          "text": "my",
+          "start": 194.55,
+          "end": 195.17,
+          "score": 0.9905
+        },
+        {
+          "text": "heart",
+          "start": 195.17,
+          "end": 195.67,
+          "score": 0.9905
+        },
+        {
+          "text": "with",
+          "start": 195.67,
+          "end": 196.41,
+          "score": 0.986
+        },
+        {
+          "text": "your",
+          "start": 196.41,
+          "end": 197.07,
+          "score": 0.9838
+        },
+        {
+          "text": "affection",
+          "start": 197.07,
+          "end": 197.87,
+          "score": 0.976
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 193.79,
+      "end": 197.87,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "lineId": "Prema:34:198.56",
+      "text": "Being your best friend is my devotion",
+      "textSha256": "255ec77d2fe601190784a264a55e91a5b668946b66145e32f3c6a6d720d85034",
+      "sourceStart": 198.56,
+      "sourceEnd": 202.95,
+      "windowStart": 198.56,
+      "windowEnd": 202.95,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Being",
+          "reading": "Being"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "best",
+          "reading": "best"
+        },
+        {
+          "text": "friend",
+          "reading": "friend"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "devotion",
+          "reading": "devotion"
+        }
+      ],
+      "words": [
+        {
+          "text": "Being",
+          "start": 198.56,
+          "end": 199.2,
+          "score": 0.051
+        },
+        {
+          "text": "your",
+          "start": 199.2,
+          "end": 199.58,
+          "score": 0.8773
+        },
+        {
+          "text": "best",
+          "start": 199.58,
+          "end": 199.96,
+          "score": 0.9944
+        },
+        {
+          "text": "friend",
+          "start": 200.1,
+          "end": 200.64,
+          "score": 0.9716
+        },
+        {
+          "text": "is",
+          "start": 200.64,
+          "end": 201.24,
+          "score": 0.9543
+        },
+        {
+          "text": "my",
+          "start": 201.24,
+          "end": 201.66,
+          "score": 0.9439
+        },
+        {
+          "text": "devotion",
+          "start": 201.66,
+          "end": 202.54,
+          "score": 0.4025
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 198.56,
+      "end": 202.54,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "lineId": "Prema:35:202.95",
+      "text": "Calling your name is my surrender",
+      "textSha256": "4b1d5060a5d4ec73447d474ed9641cc1afe57815db6f2ae2bc77b42fc80502bc",
+      "sourceStart": 202.95,
+      "sourceEnd": 208.84,
+      "windowStart": 202.95,
+      "windowEnd": 208.84,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Calling",
+          "reading": "Calling"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "name",
+          "reading": "name"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "surrender",
+          "reading": "surrender"
+        }
+      ],
+      "words": [
+        {
+          "text": "Calling",
+          "start": 203.41,
+          "end": 204.03,
+          "score": 0.7491
+        },
+        {
+          "text": "your",
+          "start": 204.03,
+          "end": 204.71,
+          "score": 0.9518
+        },
+        {
+          "text": "name",
+          "start": 204.71,
+          "end": 205.27,
+          "score": 0.9928
+        },
+        {
+          "text": "is",
+          "start": 205.27,
+          "end": 205.95,
+          "score": 0.9673
+        },
+        {
+          "text": "my",
+          "start": 205.95,
+          "end": 206.41,
+          "score": 0.9944
+        },
+        {
+          "text": "surrender",
+          "start": 206.41,
+          "end": 207.95,
+          "score": 0.994
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 203.41,
+      "end": 207.95,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "lineId": "Prema:36:208.84",
+      "text": "Babe, I got your number",
+      "textSha256": "c87540d20fbb99ce44a19a694c5ec7dd99b4b9dfc40a47084e1c0a6ebc0ded37",
+      "sourceStart": 208.84,
+      "sourceEnd": 211.41,
+      "windowStart": 208.84,
+      "windowEnd": 211.41,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Babe",
+          "reading": "Babe"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "got",
+          "reading": "got"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "number",
+          "reading": "number"
+        }
+      ],
+      "words": [
+        {
+          "text": "Babe,",
+          "start": 208.84,
+          "end": 209.82,
+          "score": 0.239
+        },
+        {
+          "text": "I",
+          "start": 209.82,
+          "end": 210.02,
+          "score": 0.9827
+        },
+        {
+          "text": "got",
+          "start": 210.02,
+          "end": 210.24,
+          "score": 0.9046
+        },
+        {
+          "text": "your",
+          "start": 210.24,
+          "end": 210.64,
+          "score": 0.9718
+        },
+        {
+          "text": "number",
+          "start": 210.64,
+          "end": 211.24,
+          "score": 0.9041
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 208.84,
+      "end": 211.24,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "lineId": "Prema:37:211.41",
+      "text": "Prema, don't you know that I am, love itself",
+      "textSha256": "152fa56394e373eefc854b0268f24962042c435d666cbc7ecd0e14e39ed0addf",
+      "sourceStart": 211.41,
+      "sourceEnd": 217.36,
+      "windowStart": 211.41,
+      "windowEnd": 217.36,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "don't",
+          "reading": "don't"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "know",
+          "reading": "know"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "am",
+          "reading": "am"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 211.41,
+          "end": 214.09,
+          "score": 0.0438
+        },
+        {
+          "text": "don't",
+          "start": 214.09,
+          "end": 214.49,
+          "score": 0.9327
+        },
+        {
+          "text": "you",
+          "start": 214.49,
+          "end": 214.65,
+          "score": 0.9555
+        },
+        {
+          "text": "know",
+          "start": 214.65,
+          "end": 215.03,
+          "score": 0.9956
+        },
+        {
+          "text": "that",
+          "start": 215.03,
+          "end": 215.33,
+          "score": 0.9653
+        },
+        {
+          "text": "I",
+          "start": 215.33,
+          "end": 215.77,
+          "score": 0.9729
+        },
+        {
+          "text": "am,",
+          "start": 215.77,
+          "end": 215.97,
+          "score": 0.4389
+        },
+        {
+          "text": "love",
+          "start": 215.97,
+          "end": 216.23,
+          "score": 0.4684
+        },
+        {
+          "text": "itself",
+          "start": 216.23,
+          "end": 216.73,
+          "score": 0.9464
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 211.41,
+      "end": 216.73,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 38,
+      "lineId": "Prema:38:217.36",
+      "text": "I am, love itself",
+      "textSha256": "d136c4725c41224539fdac2e77d310368aced88d4039b7ae77e69d2a0886a921",
+      "sourceStart": 217.36,
+      "sourceEnd": 221.11,
+      "windowStart": 217.36,
+      "windowEnd": 221.11,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "am",
+          "reading": "am"
+        },
+        {
+          "text": "love",
+          "reading": "love"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "I",
+          "start": 217.62,
+          "end": 218.08,
+          "score": 0.7336
+        },
+        {
+          "text": "am,",
+          "start": 218.08,
+          "end": 218.38,
+          "score": 0.4598
+        },
+        {
+          "text": "love",
+          "start": 218.38,
+          "end": 218.64,
+          "score": 0.5749
+        },
+        {
+          "text": "itself",
+          "start": 218.64,
+          "end": 219.5,
+          "score": 0.8738
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 217.62,
+      "end": 219.5,
+      "flags": []
+    },
+    {
+      "index": 39,
+      "lineId": "Prema:39:221.11",
+      "text": "Prema, can't you see that I am god itself",
+      "textSha256": "5ac0637b81c08897100d6efbda8c39f9cb569dc4d0865e1f80a0d136ff2b9d56",
+      "sourceStart": 221.11,
+      "sourceEnd": 226.57,
+      "windowStart": 221.11,
+      "windowEnd": 226.57,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "can't",
+          "reading": "can't"
+        },
+        {
+          "text": "you",
+          "reading": "you"
+        },
+        {
+          "text": "see",
+          "reading": "see"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        },
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "am",
+          "reading": "am"
+        },
+        {
+          "text": "god",
+          "reading": "god"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 221.11,
+          "end": 223.73,
+          "score": 0.3879
+        },
+        {
+          "text": "can't",
+          "start": 223.73,
+          "end": 224.25,
+          "score": 0.9006
+        },
+        {
+          "text": "you",
+          "start": 224.25,
+          "end": 224.29,
+          "score": 0.0143
+        },
+        {
+          "text": "see",
+          "start": 224.29,
+          "end": 224.49,
+          "score": 0.9859
+        },
+        {
+          "text": "that",
+          "start": 224.49,
+          "end": 224.87,
+          "score": 0.9496
+        },
+        {
+          "text": "I",
+          "start": 224.87,
+          "end": 225.25,
+          "score": 0.9475
+        },
+        {
+          "text": "am",
+          "start": 225.25,
+          "end": 225.61,
+          "score": 0.6966
+        },
+        {
+          "text": "god",
+          "start": 225.61,
+          "end": 225.81,
+          "score": 0.0014
+        },
+        {
+          "text": "itself",
+          "start": 225.81,
+          "end": 226.37,
+          "score": 0.3683
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 221.11,
+      "end": 226.37,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 40,
+      "lineId": "Prema:40:226.57",
+      "text": "I am god itself",
+      "textSha256": "e98511901afec286bc84879b7db1739c781e5c96d2e9848a63f4a8420688a602",
+      "sourceStart": 226.57,
+      "sourceEnd": 230.93,
+      "windowStart": 226.57,
+      "windowEnd": 230.93,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "I",
+          "reading": "I"
+        },
+        {
+          "text": "am",
+          "reading": "am"
+        },
+        {
+          "text": "god",
+          "reading": "god"
+        },
+        {
+          "text": "itself",
+          "reading": "itself"
+        }
+      ],
+      "words": [
+        {
+          "text": "I",
+          "start": 226.57,
+          "end": 227.61,
+          "score": 0.6239
+        },
+        {
+          "text": "am",
+          "start": 227.61,
+          "end": 228.25,
+          "score": 0.8024
+        },
+        {
+          "text": "god",
+          "start": 228.25,
+          "end": 228.53,
+          "score": 0.0121
+        },
+        {
+          "text": "itself",
+          "start": 228.53,
+          "end": 229.41,
+          "score": 0.0182
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 226.57,
+      "end": 229.41,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 41,
+      "lineId": "Prema:41:230.93",
+      "text": "Prema, ay, yeah",
+      "textSha256": "26c5a74f36bc0033b87eafbd9ae8c582807a368ea81e9d98f1f71acada455e3c",
+      "sourceStart": 230.93,
+      "sourceEnd": 237.14,
+      "windowStart": 230.93,
+      "windowEnd": 237.14,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "yeah",
+          "reading": "yeah"
+        }
+      ],
+      "words": [
+        {
+          "text": "Prema,",
+          "start": 230.93,
+          "end": 233.89,
+          "score": 0.0406
+        },
+        {
+          "text": "ay,",
+          "start": 233.89,
+          "end": 234.53,
+          "score": 0.0944
+        },
+        {
+          "text": "yeah",
+          "start": 234.53,
+          "end": 234.77,
+          "score": 0.0555
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 230.93,
+      "end": 234.77,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 42,
+      "lineId": "Prema:42:239.88",
+      "text": "Prema, ay, yeah (ay)",
+      "textSha256": "fdb976b6587f078a347b5ed0f4fe7b5f770f6aa3046efcc80cac1c731c3226fb",
+      "sourceStart": 239.88,
+      "sourceEnd": 243.92,
+      "windowStart": 239.88,
+      "windowEnd": 243.92,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "yeah",
+          "reading": "yeah"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        }
+      ],
+      "fallbackReason": "Missing or zero-duration words",
+      "words": [
+        {
+          "text": "Prema",
+          "start": 240.782,
+          "end": 241.462,
+          "score": 0.2903
+        },
+        {
+          "text": "ay",
+          "start": 241.802,
+          "end": 241.982,
+          "score": 0.4288
+        },
+        {
+          "text": "yeah",
+          "start": 243.162,
+          "end": 243.682,
+          "score": 0.0302
+        },
+        {
+          "text": "ay",
+          "start": 243.862,
+          "end": 243.902,
+          "score": 0.0427
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 240.782,
+      "end": 243.902,
+      "flags": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    }
+  ]
+}

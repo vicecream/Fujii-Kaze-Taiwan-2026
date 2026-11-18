@@ -1,0 +1,317 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "MoEhYo",
+  "youtubeId": "rZxR9bpsYLU",
+  "sourceFingerprint": "06d28f08dc24105c9ff0cb9cc67444f8c4da892dd6b34577b6b850719e53df76",
+  "lrcSha256": "0ea298d0e2206bf010952145c09d08f5970101b612bf8c438f9e4cdc769cf2f0",
+  "audioSha256": "567b71cf692cc411a97df975a5c230f927666b1a5d8943603da2368cb17b222c",
+  "alignmentAudioSha256": "280daf75f92411dd125afcfddbbf20ed8aac1ec8599d1f6f8a54f6d74713a4a1",
+  "candidateSha256": "530dd3e9941e5746062cb829b0b9b9cd47fe16ebf0553e2a752f6885e773547e",
+  "lineCount": 43,
+  "unitCount": 317,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T17:01:15.995138+00:00",
+    "scriptSha256": "a053e6af7d468e76005494dc03c3c1e1a7c86f080a46583570e352a90d8330ab",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T17:05:46.104339+00:00",
+    "elapsedSeconds": 270.11
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 1,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 7,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 8,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 10,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "mixed-language-listen",
+        "no-timing"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "mixed-language-listen",
+        "no-timing"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "mixed-language-listen",
+        "no-timing"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score",
+        "mixed-language-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 32,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 38,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    }
+  ],
+  "structuralIssues": [
+    {
+      "index": 26,
+      "reasons": [
+        "no-timing",
+        "incomplete-text"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "no-timing",
+        "incomplete-text"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "no-timing",
+        "incomplete-text"
+      ]
+    }
+  ],
+  "repairs": []
+}

@@ -1,0 +1,254 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "Prema",
+  "youtubeId": "UJgPpzZcxGU",
+  "sourceFingerprint": "60af98d400efd95c3203b95e368ac70aa20023e239c567ed7bf7a305901dc9c0",
+  "lrcSha256": "87b587bf8f2b186b384b0484bbe9d14f0df4a955094b7201e54cfbb5626d80f8",
+  "audioSha256": "1aaca790e4f066ae3b1501e4a97ccddc4004320147ef3d5f26d3f66f834943ee",
+  "alignmentAudioSha256": "fe28982f38f85376cc60d7f906ac7a482e0e2844246c58a7e34a58ffd43720bc",
+  "candidateSha256": "5930d06117eb1a8afe74f377d5b72f37db0462bc839fa4492de36ade2b07cdbb",
+  "lineCount": 43,
+  "unitCount": 270,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "en": {
+      "id": "facebook/wav2vec2-base-960h",
+      "revision": "22aad52d435eb6dbaf354bdad9b0da84ce7d6156"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T16:16:58.825183+00:00",
+    "scriptSha256": "3c479121a9b0ee25ebdc75fbab427b18810d7458adc10c69644edba92d12a2d2",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T16:19:49.998261+00:00",
+    "elapsedSeconds": 171.17
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 1,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 7,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 33,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "harmony-parenthesis-listen",
+        "low-model-score"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": []
+}

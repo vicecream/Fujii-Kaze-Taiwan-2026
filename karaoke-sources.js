@@ -623,7 +623,7 @@
   /* Map the displayed units (Japanese, ruby-wrapped kana, or romaji words)
      to provider words.  Romaji cannot be text-matched to Japanese, so the
      caller can use the returned match count to choose a proportional fallback. */
-  function mapUnitsToWords(unitTexts, words) {
+  function mapUnitsToWords(unitTexts, words, options = {}) {
     const chars = [];
     (words || []).forEach((word, wordIndex) => {
       Array.from(normaliseText(word.text)).forEach((char) => chars.push({ char, wordIndex, word }));
@@ -639,21 +639,23 @@
         return;
       }
       let position = text.indexOf(wanted, cursor);
-      if (position < 0) position = text.indexOf(wanted);
+      if (position < 0 && !options.strict) position = text.indexOf(wanted);
+      if (options.strict && position !== cursor) position = -1;
       if (position < 0) {
         out.push(null);
         return;
       }
       const first = chars[position];
-      const last = chars[position + wanted.length - 1];
+      const end = Math.max(...chars.slice(position, position + wanted.length).map(entry => Number(entry.word.end)));
       out.push({
         start: first.word.start,
-        end: Math.max(first.word.start + 0.04, last.word.end)
+        end: options.strict ? end : Math.max(first.word.start + 0.04, end)
       });
       cursor = position + wanted.length;
       matched += 1;
     });
-    return { timings: out, matched, total: (unitTexts || []).filter((textValue) => normaliseText(textValue)).length };
+    const total = (unitTexts || []).filter((textValue) => normaliseText(textValue)).length;
+    return { timings: out, matched, total, complete: matched === total && cursor === text.length };
   }
 
   function normaliseRomajiText(value) {
@@ -882,7 +884,7 @@
      reference units.  The readings are kept as separate units while they
      are transliterated as one stream, so さと + っ + て becomes satotte and
      the resulting word spans all three Japanese timings. */
-  function mapUnitsToReferenceTimings(unitTexts, referenceTexts, referenceTimings) {
+  function mapUnitsToReferenceTimings(unitTexts, referenceTexts, referenceTimings, options = {}) {
     const chars = referenceRomajiChars(referenceTexts);
     const text = chars.map(entry => entry.char).join("");
     const out = [];
@@ -896,7 +898,7 @@
       let matchedValue = "";
       for (const variant of variants) {
         const candidate = text.indexOf(variant, cursor);
-        if (candidate < 0) continue;
+        if (candidate < 0 || (options.strict && candidate !== cursor)) continue;
         if (position < 0 || candidate < position
           || (candidate === position && variant.length > matchedValue.length)) {
           position = candidate;
@@ -936,7 +938,9 @@
       const last = chars[match.position + match.matchedValue.length - 1];
       const firstTiming = first && referenceTimings[first.referenceIndex];
       const lastTiming = last && referenceTimings[last.referenceIndex];
-      if (!firstTiming || !lastTiming) {
+      const spanTimings = chars.slice(match.position, match.position + match.matchedValue.length)
+        .map(char => referenceTimings[char.referenceIndex]);
+      if (!firstTiming || !lastTiming || (options.strict && spanTimings.some(timing => !timing))) {
         for (let offset = 0; offset < consumed; offset += 1) {
           out.push(null);
           unmatched.push(unitIndex + offset);
@@ -946,7 +950,8 @@
       }
       const timing = {
         start: Number(firstTiming.start),
-        end: Math.max(Number(firstTiming.start) + 0.04, Number(lastTiming.end)),
+        end: Math.max(...spanTimings.filter(Boolean).map(timing => Number(timing.end)),
+          options.strict ? Number(firstTiming.start) : Number(firstTiming.start) + 0.04),
       };
       out.push(timing);
       if (consumed === 2) out.push({ ...timing });
@@ -955,12 +960,14 @@
       unitIndex += consumed - 1;
     }
 
-    const filled = fillUnmatchedReferenceTimings(unitTexts, out, referenceTimings);
+    const filled = options.strict
+      ? { timings: out, total: (unitTexts || []).filter(textValue => romajiVariants(textValue).length).length }
+      : fillUnmatchedReferenceTimings(unitTexts, out, referenceTimings);
     return {
       timings: filled.timings,
       matched,
       total: filled.total,
-      complete: unmatched.length === 0,
+      complete: unmatched.length === 0 && (!options.strict || cursor === text.length),
       unmatched,
     };
   }

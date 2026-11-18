@@ -54,7 +54,8 @@
       "sourceUrl": "https://lrclib.net/tracks/39063308",
       "usageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
       "timingMode": "preview",
-      "allowPendingReadings": true
+      "allowPendingReadings": true,
+      "previewOffsetSeconds": 4
     },
     {
       "id": "OkayGoodbye",
@@ -94,7 +95,8 @@
       "sourceUrl": "https://lrclib.net/tracks/8346846",
       "usageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
       "timingMode": "preview",
-      "allowPendingReadings": true
+      "allowPendingReadings": true,
+      "previewOffsetSeconds": 5.33
     },
     {
       "id": "Kirari",
@@ -152,7 +154,8 @@
       "sourceUrl": "https://lrclib.net/tracks/30423403",
       "usageBasis": "User supplied this local LRC in the workspace for import and timeline preview; the candidate source URL has not been independently confirmed.",
       "timingMode": "preview",
-      "allowPendingReadings": true
+      "allowPendingReadings": true,
+      "previewOffsetSeconds": 13.42
     }
   ]
 }

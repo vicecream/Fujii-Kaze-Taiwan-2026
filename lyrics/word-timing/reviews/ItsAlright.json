@@ -1,0 +1,4132 @@
+{
+  "format": "karaoke-review-v1",
+  "songId": "ItsAlright",
+  "youtubeId": "HA3WzXw8vM8",
+  "sourceFingerprint": "706f3cd449a698f470413589d8f437db922a0717a2848d975448375d57f9244e",
+  "lrcSha256": "efc1f6dbb5921b086466dcaa66494a3c87350aef024747ee6843a23ca024ca0b",
+  "audioSha256": "fc2323cf9f13f6ba1faccda875f24e2d0c6c76f9ccdd5640c3089a37d21c82ee",
+  "alignmentAudioSha256": "d7eb393514db4b1f0667e5bf240feeac0c92158077f0e2addbfc93ae1d06c36e",
+  "sourceReview": {
+    "reviewer": "CHI",
+    "reviewedAt": "2026-11-18T16:03:02.323Z",
+    "audioSha256": "fc2323cf9f13f6ba1faccda875f24e2d0c6c76f9ccdd5640c3089a37d21c82ee",
+    "anchors": [
+      {
+        "position": "start",
+        "time": 6.4,
+        "note": "OK"
+      },
+      {
+        "position": "middle",
+        "time": 99.15,
+        "note": "OK"
+      },
+      {
+        "position": "end",
+        "time": 192.51,
+        "note": "OK"
+      }
+    ]
+  },
+  "lines": [
+    {
+      "index": 0,
+      "lineId": "ItsAlright:0:6.4",
+      "text": "Ay, ay, ay, ay, ay",
+      "textSha256": "e5abcdd92e42673b79f80f522b0937670d9e8fd2bcce3c561a6e5df83ed27a90",
+      "sourceStart": 6.4,
+      "sourceEnd": 8.99,
+      "windowStart": 6.4,
+      "windowEnd": 8.99,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Ay",
+          "reading": "Ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ay",
+          "start": 6.703,
+          "end": 6.762,
+          "score": 0.0978
+        },
+        {
+          "text": "ay",
+          "start": 6.922,
+          "end": 7.323,
+          "score": 0.1034
+        },
+        {
+          "text": "ay",
+          "start": 7.943,
+          "end": 8.022,
+          "score": 0.0145
+        },
+        {
+          "text": "ay",
+          "start": 8.362,
+          "end": 8.582,
+          "score": 0.1582
+        },
+        {
+          "text": "ay",
+          "start": 8.802,
+          "end": 8.902,
+          "score": 0.2124
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 6.703,
+      "end": 8.902,
+      "flags": [
+        "low-model-score"
+      ],
+      "fallbackReason": "Missing or zero-duration words"
+    },
+    {
+      "index": 1,
+      "lineId": "ItsAlright:1:8.99",
+      "text": "母なる大地は私の愛し子",
+      "textSha256": "9a9f7da2f28c6cc3b57652e3473bd4b8183533af0459c30e7960de8f1de26e95",
+      "sourceStart": 8.99,
+      "sourceEnd": 15.72,
+      "windowStart": 8.99,
+      "windowEnd": 15.72,
+      "language": "ja",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "母",
+          "reading": "はは"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "る",
+          "reading": "る"
+        },
+        {
+          "text": "大地",
+          "reading": "だいち"
+        },
+        {
+          "text": "は",
+          "reading": "は"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "愛",
+          "reading": "いと"
+        },
+        {
+          "text": "し",
+          "reading": "し"
+        },
+        {
+          "text": "子",
+          "reading": "ご"
+        }
+      ],
+      "words": [
+        {
+          "text": "母",
+          "start": 8.99,
+          "end": 9.65,
+          "score": 0.0004
+        },
+        {
+          "text": "なる",
+          "start": 9.65,
+          "end": 10.43,
+          "score": 0.9039
+        },
+        {
+          "text": "大",
+          "start": 10.43,
+          "end": 11.23,
+          "score": 0.8036
+        },
+        {
+          "text": "地",
+          "start": 11.23,
+          "end": 11.63,
+          "score": 0.9796
+        },
+        {
+          "text": "は",
+          "start": 11.63,
+          "end": 12.15,
+          "score": 0.9893
+        },
+        {
+          "text": "私",
+          "start": 12.15,
+          "end": 13.17,
+          "score": 0.378
+        },
+        {
+          "text": "の",
+          "start": 13.17,
+          "end": 13.99,
+          "score": 0.9967
+        },
+        {
+          "text": "愛",
+          "start": 13.99,
+          "end": 14.49,
+          "score": 0.7755
+        },
+        {
+          "text": "し",
+          "start": 14.49,
+          "end": 14.97,
+          "score": 0.4224
+        },
+        {
+          "text": "子",
+          "start": 14.97,
+          "end": 15.37,
+          "score": 0.0148
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 8.99,
+      "end": 15.37,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 2,
+      "lineId": "ItsAlright:2:15.72",
+      "text": "父なる太陽は私のまなこ",
+      "textSha256": "9c7b2e1eeb2f808254c6f6b5b7c89dcdfbbc5576f5c93eca39380c3e12055fa4",
+      "sourceStart": 15.72,
+      "sourceEnd": 22.38,
+      "windowStart": 15.72,
+      "windowEnd": 22.38,
+      "language": "ja",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "父",
+          "reading": "ちち"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "る",
+          "reading": "る"
+        },
+        {
+          "text": "太陽",
+          "reading": "たいよう"
+        },
+        {
+          "text": "は",
+          "reading": "は"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "ま",
+          "reading": "ま"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "こ",
+          "reading": "こ"
+        }
+      ],
+      "words": [
+        {
+          "text": "父",
+          "start": 15.78,
+          "end": 16.22,
+          "score": 0.0053
+        },
+        {
+          "text": "なる",
+          "start": 16.22,
+          "end": 17.02,
+          "score": 0.8853
+        },
+        {
+          "text": "太",
+          "start": 17.02,
+          "end": 17.98,
+          "score": 0.9168
+        },
+        {
+          "text": "陽",
+          "start": 17.98,
+          "end": 18.32,
+          "score": 0.9974
+        },
+        {
+          "text": "は",
+          "start": 18.32,
+          "end": 18.86,
+          "score": 0.9548
+        },
+        {
+          "text": "私",
+          "start": 18.86,
+          "end": 19.32,
+          "score": 0.4643
+        },
+        {
+          "text": "の",
+          "start": 19.32,
+          "end": 19.72,
+          "score": 0.9977
+        },
+        {
+          "text": "ま",
+          "start": 19.72,
+          "end": 20.02,
+          "score": 0.0518
+        },
+        {
+          "text": "な",
+          "start": 20.02,
+          "end": 20.5,
+          "score": 0.046
+        },
+        {
+          "text": "こ",
+          "start": 20.5,
+          "end": 21.4,
+          "score": 0.7969
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 15.78,
+      "end": 21.4,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 3,
+      "lineId": "ItsAlright:3:22.38",
+      "text": "この世は私の思わく通りに",
+      "textSha256": "f9c14edffc8cf1e1a384868be162a965abba7232f684ac32b57452e4ce2c6030",
+      "sourceStart": 22.38,
+      "sourceEnd": 29.05,
+      "windowStart": 22.38,
+      "windowEnd": 29.05,
+      "language": "ja",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "こ",
+          "reading": "こ"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "世",
+          "reading": "よ"
+        },
+        {
+          "text": "は",
+          "reading": "は"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "思",
+          "reading": "おも"
+        },
+        {
+          "text": "わ",
+          "reading": "わ"
+        },
+        {
+          "text": "く",
+          "reading": "く"
+        },
+        {
+          "text": "通",
+          "reading": "どお"
+        },
+        {
+          "text": "り",
+          "reading": "り"
+        },
+        {
+          "text": "に",
+          "reading": "に"
+        }
+      ],
+      "words": [
+        {
+          "text": "この",
+          "start": 22.44,
+          "end": 22.88,
+          "score": 0.001
+        },
+        {
+          "text": "世",
+          "start": 22.88,
+          "end": 23.32,
+          "score": 0.5089
+        },
+        {
+          "text": "は",
+          "start": 23.32,
+          "end": 23.78,
+          "score": 0.9584
+        },
+        {
+          "text": "私",
+          "start": 23.78,
+          "end": 25.02,
+          "score": 0.6134
+        },
+        {
+          "text": "の",
+          "start": 25.02,
+          "end": 25.57,
+          "score": 0.9641
+        },
+        {
+          "text": "思",
+          "start": 25.57,
+          "end": 26.38,
+          "score": 0.7738
+        },
+        {
+          "text": "わ",
+          "start": 26.38,
+          "end": 26.7,
+          "score": 0.1244
+        },
+        {
+          "text": "く",
+          "start": 26.7,
+          "end": 27.26,
+          "score": 0.386
+        },
+        {
+          "text": "通",
+          "start": 27.26,
+          "end": 28,
+          "score": 0.8067
+        },
+        {
+          "text": "り",
+          "start": 28,
+          "end": 28.42,
+          "score": 0.999
+        },
+        {
+          "text": "に",
+          "start": 28.42,
+          "end": 28.72,
+          "score": 0.9902
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:03:16.091Z",
+        "note": "",
+        "timingFingerprint": "3746002660584af55e3bf573df076a55764945cf8d8b5bacaae2be48347ef0cd"
+      },
+      "start": 22.44,
+      "end": 28.72,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 4,
+      "lineId": "ItsAlright:4:29.05",
+      "text": "今日とて可愛く回っています",
+      "textSha256": "92ad5d9e684871d2f7a60ef67c9233adddbe7c3e84b08794a9385eae954327e5",
+      "sourceStart": 29.05,
+      "sourceEnd": 35.72,
+      "windowStart": 29.05,
+      "windowEnd": 35.72,
+      "language": "ja",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "今日",
+          "reading": "きょう"
+        },
+        {
+          "text": "と",
+          "reading": "と"
+        },
+        {
+          "text": "て",
+          "reading": "て"
+        },
+        {
+          "text": "可愛",
+          "reading": "かわい"
+        },
+        {
+          "text": "く",
+          "reading": "く"
+        },
+        {
+          "text": "回",
+          "reading": "まわ"
+        },
+        {
+          "text": "っ",
+          "reading": "っ"
+        },
+        {
+          "text": "て",
+          "reading": "て"
+        },
+        {
+          "text": "い",
+          "reading": "い"
+        },
+        {
+          "text": "ま",
+          "reading": "ま"
+        },
+        {
+          "text": "す",
+          "reading": "す"
+        }
+      ],
+      "words": [
+        {
+          "text": "今日",
+          "start": 29.13,
+          "end": 29.57,
+          "score": 0.0007
+        },
+        {
+          "text": "と",
+          "start": 29.57,
+          "end": 29.97,
+          "score": 0.3943
+        },
+        {
+          "text": "て",
+          "start": 29.97,
+          "end": 30.49,
+          "score": 0.1879
+        },
+        {
+          "text": "可愛",
+          "start": 30.49,
+          "end": 31.29,
+          "score": 0.0122
+        },
+        {
+          "text": "く",
+          "start": 31.29,
+          "end": 32.07,
+          "score": 0.9853
+        },
+        {
+          "text": "回",
+          "start": 32.07,
+          "end": 32.73,
+          "score": 0.5904
+        },
+        {
+          "text": "って",
+          "start": 32.73,
+          "end": 33.07,
+          "score": 0.9854
+        },
+        {
+          "text": "います",
+          "start": 33.07,
+          "end": 33.81,
+          "score": 0.9533
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 29.13,
+      "end": 33.81,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 5,
+      "lineId": "ItsAlright:5:35.72",
+      "text": "Come, cry your heart, cry your heart out",
+      "textSha256": "4c6002821693d9de529ebc00deeb2b923387f1d2d1d0b9d1b6fe4878dd68496d",
+      "sourceStart": 35.72,
+      "sourceEnd": 38.91,
+      "windowStart": 35.72,
+      "windowEnd": 38.91,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Come",
+          "reading": "Come"
+        },
+        {
+          "text": "cry",
+          "reading": "cry"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "cry",
+          "reading": "cry"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "out",
+          "reading": "out"
+        }
+      ],
+      "words": [
+        {
+          "text": "Come",
+          "start": 35.823,
+          "end": 36.442,
+          "score": 0.8998
+        },
+        {
+          "text": "cry",
+          "start": 36.622,
+          "end": 36.842,
+          "score": 0.9333
+        },
+        {
+          "text": "your",
+          "start": 36.942,
+          "end": 37.022,
+          "score": 0.0006
+        },
+        {
+          "text": "heart",
+          "start": 37.063,
+          "end": 37.362,
+          "score": 0.1712
+        },
+        {
+          "text": "cry",
+          "start": 37.482,
+          "end": 37.682,
+          "score": 0.9257
+        },
+        {
+          "text": "your",
+          "start": 37.783,
+          "end": 37.882,
+          "score": 0.0125
+        },
+        {
+          "text": "heart",
+          "start": 37.942,
+          "end": 38.302,
+          "score": 0.2252
+        },
+        {
+          "text": "out",
+          "start": 38.622,
+          "end": 38.822,
+          "score": 0.0672
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 35.823,
+      "end": 38.822,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ],
+      "fallbackReason": "Missing or zero-duration words"
+    },
+    {
+      "index": 6,
+      "lineId": "ItsAlright:6:38.91",
+      "text": "Here in my arms, in my arms like",
+      "textSha256": "bceef2795ac4d5d7688cfc3b4bfc84a4af6965a2dc1235b57af74bcdefcd0635",
+      "sourceStart": 38.91,
+      "sourceEnd": 42.22,
+      "windowStart": 38.91,
+      "windowEnd": 42.22,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Here",
+          "reading": "Here"
+        },
+        {
+          "text": "in",
+          "reading": "in"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "arms",
+          "reading": "arms"
+        },
+        {
+          "text": "in",
+          "reading": "in"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "arms",
+          "reading": "arms"
+        },
+        {
+          "text": "like",
+          "reading": "like"
+        }
+      ],
+      "words": [
+        {
+          "text": "Here",
+          "start": 38.91,
+          "end": 40.09,
+          "score": 0.5118
+        },
+        {
+          "text": "in",
+          "start": 40.09,
+          "end": 40.41,
+          "score": 0.024
+        },
+        {
+          "text": "my",
+          "start": 40.41,
+          "end": 40.71,
+          "score": 0.162
+        },
+        {
+          "text": "arms,",
+          "start": 40.71,
+          "end": 40.95,
+          "score": 0.4383
+        },
+        {
+          "text": "in",
+          "start": 40.95,
+          "end": 41.25,
+          "score": 0.4663
+        },
+        {
+          "text": "my",
+          "start": 41.25,
+          "end": 41.49,
+          "score": 0.9901
+        },
+        {
+          "text": "arms",
+          "start": 41.49,
+          "end": 41.73,
+          "score": 0.9965
+        },
+        {
+          "text": "like",
+          "start": 41.73,
+          "end": 42.13,
+          "score": 0.5365
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 38.91,
+      "end": 42.13,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 7,
+      "lineId": "ItsAlright:7:42.22",
+      "text": "Ah, ah, ah, ah",
+      "textSha256": "a23baeb1fed145855baa23c407e4d4f1bf23d041a91e2c6cac93fcb0adfba756",
+      "sourceStart": 42.22,
+      "sourceEnd": 45.69,
+      "windowStart": 42.22,
+      "windowEnd": 45.69,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Ah",
+          "reading": "Ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ah,",
+          "start": 42.22,
+          "end": 43.46,
+          "score": 0.426
+        },
+        {
+          "text": "ah,",
+          "start": 43.46,
+          "end": 44.26,
+          "score": 0.9343
+        },
+        {
+          "text": "ah,",
+          "start": 44.26,
+          "end": 45.18,
+          "score": 0.9758
+        },
+        {
+          "text": "ah",
+          "start": 45.18,
+          "end": 45.4,
+          "score": 0.9759
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 42.22,
+      "end": 45.4,
+      "flags": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 8,
+      "lineId": "ItsAlright:8:45.69",
+      "text": "Ah, ah, ah, ah",
+      "textSha256": "a23baeb1fed145855baa23c407e4d4f1bf23d041a91e2c6cac93fcb0adfba756",
+      "sourceStart": 45.69,
+      "sourceEnd": 49.07,
+      "windowStart": 45.69,
+      "windowEnd": 49.07,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Ah",
+          "reading": "Ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ah",
+          "start": 46.033,
+          "end": 46.112,
+          "score": 0.5863
+        },
+        {
+          "text": "ah",
+          "start": 46.852,
+          "end": 46.952,
+          "score": 0.6301
+        },
+        {
+          "text": "ah",
+          "start": 47.672,
+          "end": 47.772,
+          "score": 0.6425
+        },
+        {
+          "text": "ah",
+          "start": 48.473,
+          "end": 48.552,
+          "score": 0.5112
+        }
+      ],
+      "alignmentModel": "facebook/wav2vec2-base-960h",
+      "review": {
+        "status": "pending"
+      },
+      "start": 46.033,
+      "end": 48.552,
+      "flags": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ],
+      "fallbackReason": "Missing or zero-duration words"
+    },
+    {
+      "index": 9,
+      "lineId": "ItsAlright:9:49.07",
+      "text": "God is inside, is inside us",
+      "textSha256": "5a604b1f3ae1232c6a5358ab0d9a63776e393249c1721ebb3f0f7370153a4f44",
+      "sourceStart": 49.07,
+      "sourceEnd": 52.45,
+      "windowStart": 49.07,
+      "windowEnd": 52.45,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "God",
+          "reading": "God"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "inside",
+          "reading": "inside"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "inside",
+          "reading": "inside"
+        },
+        {
+          "text": "us",
+          "reading": "us"
+        }
+      ],
+      "words": [
+        {
+          "text": "God",
+          "start": 49.07,
+          "end": 50.05,
+          "score": 0.6016
+        },
+        {
+          "text": "is",
+          "start": 50.05,
+          "end": 50.35,
+          "score": 0.9816
+        },
+        {
+          "text": "inside,",
+          "start": 50.35,
+          "end": 51.03,
+          "score": 0.7768
+        },
+        {
+          "text": "is",
+          "start": 51.03,
+          "end": 51.17,
+          "score": 0.9409
+        },
+        {
+          "text": "inside",
+          "start": 51.17,
+          "end": 51.63,
+          "score": 0.9955
+        },
+        {
+          "text": "us",
+          "start": 51.63,
+          "end": 52.17,
+          "score": 0.9584
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 49.07,
+      "end": 52.17,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 10,
+      "lineId": "ItsAlright:10:52.45",
+      "text": "This is our time, is our time, thus",
+      "textSha256": "c0b97e630f8bc819a3a0d2dd4e2d787690c243b2a13d0f3b909d1fac928ca04b",
+      "sourceStart": 52.45,
+      "sourceEnd": 55.54,
+      "windowStart": 52.45,
+      "windowEnd": 55.54,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "our",
+          "reading": "our"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "our",
+          "reading": "our"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "thus",
+          "reading": "thus"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 52.53,
+          "end": 53.35,
+          "score": 0.6874
+        },
+        {
+          "text": "is",
+          "start": 53.35,
+          "end": 53.65,
+          "score": 0.9447
+        },
+        {
+          "text": "our",
+          "start": 53.65,
+          "end": 53.87,
+          "score": 0.116
+        },
+        {
+          "text": "time,",
+          "start": 53.87,
+          "end": 54.39,
+          "score": 0.8332
+        },
+        {
+          "text": "is",
+          "start": 54.39,
+          "end": 54.49,
+          "score": 0.3481
+        },
+        {
+          "text": "our",
+          "start": 54.49,
+          "end": 54.73,
+          "score": 0.9542
+        },
+        {
+          "text": "time,",
+          "start": 54.73,
+          "end": 55.33,
+          "score": 0.5388
+        },
+        {
+          "text": "thus",
+          "start": 55.33,
+          "end": 55.43,
+          "score": 0.0483
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 52.53,
+      "end": 55.43,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 11,
+      "lineId": "ItsAlright:11:55.54",
+      "text": "Sooner or later we better know that",
+      "textSha256": "8ca2ba4813dae46ff23087f29be5a7972cb207ab7e3f14f73c5f4b5b3ede4e9b",
+      "sourceStart": 55.54,
+      "sourceEnd": 59.01,
+      "windowStart": 55.54,
+      "windowEnd": 59.01,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Sooner",
+          "reading": "Sooner"
+        },
+        {
+          "text": "or",
+          "reading": "or"
+        },
+        {
+          "text": "later",
+          "reading": "later"
+        },
+        {
+          "text": "we",
+          "reading": "we"
+        },
+        {
+          "text": "better",
+          "reading": "better"
+        },
+        {
+          "text": "know",
+          "reading": "know"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        }
+      ],
+      "words": [
+        {
+          "text": "Sooner",
+          "start": 55.66,
+          "end": 56.64,
+          "score": 0.808
+        },
+        {
+          "text": "or",
+          "start": 56.64,
+          "end": 56.84,
+          "score": 0.9667
+        },
+        {
+          "text": "later",
+          "start": 56.84,
+          "end": 57.28,
+          "score": 0.9917
+        },
+        {
+          "text": "we",
+          "start": 57.28,
+          "end": 57.7,
+          "score": 0.2034
+        },
+        {
+          "text": "better",
+          "start": 57.7,
+          "end": 58.14,
+          "score": 0.7593
+        },
+        {
+          "text": "know",
+          "start": 58.14,
+          "end": 58.68,
+          "score": 0.9851
+        },
+        {
+          "text": "that",
+          "start": 58.68,
+          "end": 58.88,
+          "score": 0.9875
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 55.66,
+      "end": 58.88,
+      "flags": []
+    },
+    {
+      "index": 12,
+      "lineId": "ItsAlright:12:59.01",
+      "text": "Everything is gonna be alright",
+      "textSha256": "bfed944dae95694aa7a78ce83b4093fbdaf7797fe09e91246d39a9ce3725bc28",
+      "sourceStart": 59.01,
+      "sourceEnd": 62.75,
+      "windowStart": 59.01,
+      "windowEnd": 62.75,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Everything",
+          "reading": "Everything"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "gonna",
+          "reading": "gonna"
+        },
+        {
+          "text": "be",
+          "reading": "be"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "Everything",
+          "start": 59.01,
+          "end": 60.11,
+          "score": 0.6387
+        },
+        {
+          "text": "is",
+          "start": 60.11,
+          "end": 60.95,
+          "score": 0.9777
+        },
+        {
+          "text": "gonna",
+          "start": 60.95,
+          "end": 61.27,
+          "score": 0.7853
+        },
+        {
+          "text": "be",
+          "start": 61.27,
+          "end": 61.89,
+          "score": 0.5244
+        },
+        {
+          "text": "alright",
+          "start": 61.89,
+          "end": 62.35,
+          "score": 0.8295
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 59.01,
+      "end": 62.35,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "lineId": "ItsAlright:13:62.75",
+      "text": "It's alright, it's alright",
+      "textSha256": "be13fb93d9bbf0c9d4cb73a4202fb4ddd327b2ec3c27bb55ede05467d0697f49",
+      "sourceStart": 62.75,
+      "sourceEnd": 66,
+      "windowStart": 62.75,
+      "windowEnd": 66,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "it's",
+          "reading": "it's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 62.87,
+          "end": 63.65,
+          "score": 0.7374
+        },
+        {
+          "text": "alright,",
+          "start": 63.65,
+          "end": 64.71,
+          "score": 0.5066
+        },
+        {
+          "text": "it's",
+          "start": 64.71,
+          "end": 65.37,
+          "score": 0.8922
+        },
+        {
+          "text": "alright",
+          "start": 65.37,
+          "end": 65.75,
+          "score": 0.9941
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 62.87,
+      "end": 65.75,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 14,
+      "lineId": "ItsAlright:14:66",
+      "text": "It's alright",
+      "textSha256": "702e385157d62777792cf1e66b47dac6f7cdca3d213c7e503dc056b0ffe48443",
+      "sourceStart": 66,
+      "sourceEnd": 74.48,
+      "windowStart": 66,
+      "windowEnd": 74.48,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 66.16,
+          "end": 67.08,
+          "score": 0.769
+        },
+        {
+          "text": "alright",
+          "start": 67.08,
+          "end": 74,
+          "score": 0.5878
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:05:14.614Z",
+        "note": "",
+        "timingFingerprint": "10df108067b3ab15fd05214be577a62ffb6d4cd5c9fff18196ff9c0f5bf38574"
+      },
+      "start": 66.16,
+      "end": 74,
+      "flags": [
+        "repeated-occurrence-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 15,
+      "lineId": "ItsAlright:15:74.48",
+      "text": "It's alright, it's alright",
+      "textSha256": "be13fb93d9bbf0c9d4cb73a4202fb4ddd327b2ec3c27bb55ede05467d0697f49",
+      "sourceStart": 74.48,
+      "sourceEnd": 77.86,
+      "windowStart": 74.48,
+      "windowEnd": 77.86,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "it's",
+          "reading": "it's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 74.48,
+          "end": 75.18,
+          "score": 0.7698
+        },
+        {
+          "text": "alright,",
+          "start": 75.18,
+          "end": 76.48,
+          "score": 0.5068
+        },
+        {
+          "text": "it's",
+          "start": 76.48,
+          "end": 76.9,
+          "score": 0.9151
+        },
+        {
+          "text": "alright",
+          "start": 76.9,
+          "end": 77.38,
+          "score": 0.9872
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 74.48,
+      "end": 77.38,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 16,
+      "lineId": "ItsAlright:16:77.86",
+      "text": "It's alright, it's alright (ay, ay)",
+      "textSha256": "3627a09ccf775d103477e437e8e3e8122952df419581454cc4e97c63c3cfdeff",
+      "sourceStart": 77.86,
+      "sourceEnd": 87.78,
+      "windowStart": 77.86,
+      "windowEnd": 87.78,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "it's",
+          "reading": "it's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 77.86,
+          "end": 78.7,
+          "score": 0.8078
+        },
+        {
+          "text": "alright,",
+          "start": 78.7,
+          "end": 79.8,
+          "score": 0.6889
+        },
+        {
+          "text": "it's",
+          "start": 79.8,
+          "end": 80.36,
+          "score": 0.9476
+        },
+        {
+          "text": "alright",
+          "start": 80.36,
+          "end": 84.13,
+          "score": 0.9417
+        },
+        {
+          "text": "(ay,",
+          "start": 81.38,
+          "end": 82.96,
+          "score": 0.0597
+        },
+        {
+          "text": "ay)",
+          "start": 84.07,
+          "end": 85.82,
+          "score": 0.4201
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:06:40.597Z",
+        "note": "",
+        "timingFingerprint": "80fbe4aa4e78f0960a22a22cc7b98a14ca5830a7ad3eb3c42d5c6277365a87ca"
+      },
+      "start": 77.86,
+      "end": 85.82,
+      "flags": [
+        "low-model-score",
+        "harmony-parenthesis-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 17,
+      "lineId": "ItsAlright:17:87.78",
+      "text": "It's al-",
+      "textSha256": "51fc66fc8dac66d59006dd305caa7cb4a14c7de2396bb36972504545af907326",
+      "sourceStart": 87.78,
+      "sourceEnd": 89.04,
+      "windowStart": 87.78,
+      "windowEnd": 89.04,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "al",
+          "reading": "al"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 87.78,
+          "end": 88.54,
+          "score": 0.4885
+        },
+        {
+          "text": "al-",
+          "start": 88.54,
+          "end": 88.9,
+          "score": 0.1692
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 87.78,
+      "end": 88.9,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "lineId": "ItsAlright:18:89.04",
+      "text": "Ay, ay, ay, ay",
+      "textSha256": "7e833b4ef8850708e6b48d2d3988a16ce5608efde2479718548bd14d31971311",
+      "sourceStart": 89.04,
+      "sourceEnd": 92.38,
+      "windowStart": 89.04,
+      "windowEnd": 92.38,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Ay",
+          "reading": "Ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ay,",
+          "start": 89.04,
+          "end": 89.98,
+          "score": 0.0487
+        },
+        {
+          "text": "ay,",
+          "start": 89.98,
+          "end": 90.92,
+          "score": 0.6237
+        },
+        {
+          "text": "ay,",
+          "start": 90.92,
+          "end": 91.72,
+          "score": 0.9375
+        },
+        {
+          "text": "ay",
+          "start": 91.72,
+          "end": 92,
+          "score": 0.9874
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 89.04,
+      "end": 92,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "lineId": "ItsAlright:19:92.38",
+      "text": "Give it up, give it up, give it up, give it up",
+      "textSha256": "779f6305868a032a436d62f3d57ca1911e6d7e4ffcbd6dff98e1e3cff11055eb",
+      "sourceStart": 92.38,
+      "sourceEnd": 95.62,
+      "windowStart": 92.38,
+      "windowEnd": 95.62,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Give",
+          "reading": "Give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "give",
+          "reading": "give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "give",
+          "reading": "give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "give",
+          "reading": "give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        }
+      ],
+      "words": [
+        {
+          "text": "Give",
+          "start": 92.44,
+          "end": 92.74,
+          "score": 0.0047
+        },
+        {
+          "text": "it",
+          "start": 92.74,
+          "end": 92.84,
+          "score": 0.923
+        },
+        {
+          "text": "up,",
+          "start": 92.84,
+          "end": 93.4,
+          "score": 0.7198
+        },
+        {
+          "text": "give",
+          "start": 93.4,
+          "end": 93.52,
+          "score": 0.8569
+        },
+        {
+          "text": "it",
+          "start": 93.52,
+          "end": 93.66,
+          "score": 0.9991
+        },
+        {
+          "text": "up,",
+          "start": 93.66,
+          "end": 94.26,
+          "score": 0.9661
+        },
+        {
+          "text": "give",
+          "start": 94.26,
+          "end": 94.42,
+          "score": 0.9828
+        },
+        {
+          "text": "it",
+          "start": 94.42,
+          "end": 94.54,
+          "score": 0.9995
+        },
+        {
+          "text": "up,",
+          "start": 94.54,
+          "end": 94.56,
+          "score": 0.9753
+        },
+        {
+          "text": "give",
+          "start": 95.1,
+          "end": 95.18,
+          "score": 0.9885
+        },
+        {
+          "text": "it",
+          "start": 95.18,
+          "end": 95.3,
+          "score": 0.9994
+        },
+        {
+          "text": "up",
+          "start": 95.3,
+          "end": 95.38,
+          "score": 0.9953
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 92.44,
+      "end": 95.38,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "lineId": "ItsAlright:20:95.62",
+      "text": "Kama, kama, kama, kama, kama",
+      "textSha256": "28cf67f513ec575472032b10aa5c430ec382e4f922acbfbcbbb47d562573dd26",
+      "sourceStart": 95.62,
+      "sourceEnd": 99.15,
+      "windowStart": 95.62,
+      "windowEnd": 99.15,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Kama",
+          "reading": "Kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        }
+      ],
+      "words": [
+        {
+          "text": "Kama,",
+          "start": 95.62,
+          "end": 96.72,
+          "score": 0.3136
+        },
+        {
+          "text": "kama,",
+          "start": 96.72,
+          "end": 97.62,
+          "score": 0.6163
+        },
+        {
+          "text": "kama,",
+          "start": 97.62,
+          "end": 98.1,
+          "score": 0.4699
+        },
+        {
+          "text": "kama,",
+          "start": 98.1,
+          "end": 98.26,
+          "score": 0.7678
+        },
+        {
+          "text": "kama",
+          "start": 98.26,
+          "end": 98.62,
+          "score": 0.9247
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 95.62,
+      "end": 98.62,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 21,
+      "lineId": "ItsAlright:21:99.15",
+      "text": "Bring it on, bring it on, Prema, Prema, Prema",
+      "textSha256": "92c0b5b369d22db77f20d1fd9cb7f70b4ed1f7565d457e0a708033c569431023",
+      "sourceStart": 99.15,
+      "sourceEnd": 102.46,
+      "windowStart": 99.15,
+      "windowEnd": 102.46,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Bring",
+          "reading": "Bring"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "on",
+          "reading": "on"
+        },
+        {
+          "text": "bring",
+          "reading": "bring"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "on",
+          "reading": "on"
+        },
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        }
+      ],
+      "words": [
+        {
+          "text": "Bring",
+          "start": 99.15,
+          "end": 99.45,
+          "score": 0.0002
+        },
+        {
+          "text": "it",
+          "start": 99.45,
+          "end": 99.71,
+          "score": 0.6577
+        },
+        {
+          "text": "on,",
+          "start": 99.71,
+          "end": 99.91,
+          "score": 0.517
+        },
+        {
+          "text": "bring",
+          "start": 99.97,
+          "end": 100.31,
+          "score": 0.9362
+        },
+        {
+          "text": "it",
+          "start": 100.31,
+          "end": 100.39,
+          "score": 0.9932
+        },
+        {
+          "text": "on,",
+          "start": 100.39,
+          "end": 100.93,
+          "score": 0.6783
+        },
+        {
+          "text": "Prema,",
+          "start": 100.93,
+          "end": 101.33,
+          "score": 0.1516
+        },
+        {
+          "text": "Prema,",
+          "start": 101.33,
+          "end": 101.75,
+          "score": 0.6467
+        },
+        {
+          "text": "Prema",
+          "start": 101.75,
+          "end": 102.15,
+          "score": 0.9369
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 99.15,
+      "end": 102.15,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 22,
+      "lineId": "ItsAlright:22:102.46",
+      "text": "母なる大地は私の愛し子",
+      "textSha256": "9a9f7da2f28c6cc3b57652e3473bd4b8183533af0459c30e7960de8f1de26e95",
+      "sourceStart": 102.46,
+      "sourceEnd": 109.01,
+      "windowStart": 102.46,
+      "windowEnd": 109.01,
+      "language": "ja",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "母",
+          "reading": "はは"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "る",
+          "reading": "る"
+        },
+        {
+          "text": "大地",
+          "reading": "だいち"
+        },
+        {
+          "text": "は",
+          "reading": "は"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "愛",
+          "reading": "いと"
+        },
+        {
+          "text": "し",
+          "reading": "し"
+        },
+        {
+          "text": "子",
+          "reading": "ご"
+        }
+      ],
+      "words": [
+        {
+          "text": "母",
+          "start": 102.46,
+          "end": 103.04,
+          "score": 0.0036
+        },
+        {
+          "text": "なる",
+          "start": 103.04,
+          "end": 103.78,
+          "score": 0.9368
+        },
+        {
+          "text": "大",
+          "start": 103.78,
+          "end": 104.56,
+          "score": 0.8238
+        },
+        {
+          "text": "地",
+          "start": 104.56,
+          "end": 104.96,
+          "score": 0.6714
+        },
+        {
+          "text": "は",
+          "start": 104.96,
+          "end": 105.44,
+          "score": 0.9916
+        },
+        {
+          "text": "私",
+          "start": 105.44,
+          "end": 106.58,
+          "score": 0.3019
+        },
+        {
+          "text": "の",
+          "start": 106.58,
+          "end": 107.26,
+          "score": 0.9958
+        },
+        {
+          "text": "愛",
+          "start": 107.26,
+          "end": 107.76,
+          "score": 0.6777
+        },
+        {
+          "text": "し",
+          "start": 107.76,
+          "end": 108.18,
+          "score": 0.3893
+        },
+        {
+          "text": "子",
+          "start": 108.18,
+          "end": 108.72,
+          "score": 0.2044
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:09:31.476Z",
+        "note": "",
+        "timingFingerprint": "9be95dffb6c4f5fb3104ee73e6867bb2902312cc96f999e327e078fcfa5fcb20"
+      },
+      "start": 102.46,
+      "end": 108.72,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 23,
+      "lineId": "ItsAlright:23:109.01",
+      "text": "父なる太陽は私のまなこ（私のまなこ）",
+      "textSha256": "52af9224ea0b508370dd297cde9061d3b9d503057c6b4536dba4fc10b6854b8e",
+      "sourceStart": 109.01,
+      "sourceEnd": 115.75,
+      "windowStart": 109.01,
+      "windowEnd": 115.75,
+      "language": "ja",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "父",
+          "reading": "ちち"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "る",
+          "reading": "る"
+        },
+        {
+          "text": "太陽",
+          "reading": "たいよう"
+        },
+        {
+          "text": "は",
+          "reading": "は"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "ま",
+          "reading": "ま"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "こ",
+          "reading": "こ"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "ま",
+          "reading": "ま"
+        },
+        {
+          "text": "な",
+          "reading": "な"
+        },
+        {
+          "text": "こ",
+          "reading": "こ"
+        }
+      ],
+      "words": [
+        {
+          "text": "父",
+          "start": 109.092,
+          "end": 109.612,
+          "score": 0
+        },
+        {
+          "text": "な",
+          "start": 109.612,
+          "end": 109.952,
+          "score": 0.6639
+        },
+        {
+          "text": "る",
+          "start": 109.952,
+          "end": 110.372,
+          "score": 0
+        },
+        {
+          "text": "太",
+          "start": 110.372,
+          "end": 111.012,
+          "score": 0.0001
+        },
+        {
+          "text": "陽",
+          "start": 111.012,
+          "end": 111.6,
+          "score": 0
+        },
+        {
+          "text": "は",
+          "start": 111.6,
+          "end": 112.072,
+          "score": 0.0694
+        },
+        {
+          "text": "私",
+          "start": 112.072,
+          "end": 112.672,
+          "score": 0.0726
+        },
+        {
+          "text": "の",
+          "start": 112.672,
+          "end": 112.932,
+          "score": 0.0019
+        },
+        {
+          "text": "ま",
+          "start": 112.932,
+          "end": 113.292,
+          "score": 0.0013
+        },
+        {
+          "text": "な",
+          "start": 113.292,
+          "end": 113.712,
+          "score": 0.0037
+        },
+        {
+          "text": "こ",
+          "start": 113.712,
+          "end": 113.833,
+          "score": 0.0031
+        },
+        {
+          "text": "私",
+          "start": 113.833,
+          "end": 114.392,
+          "score": 0.004
+        },
+        {
+          "text": "の",
+          "start": 114.392,
+          "end": 114.492,
+          "score": 0.2985
+        },
+        {
+          "text": "ま",
+          "start": 114.492,
+          "end": 114.793,
+          "score": 0.0228
+        },
+        {
+          "text": "な",
+          "start": 114.612,
+          "end": 114.793,
+          "score": 0.0009
+        },
+        {
+          "text": "こ",
+          "start": 114.773,
+          "end": 114.793,
+          "score": 0.0147
+        }
+      ],
+      "alignmentModel": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:13:53.358Z",
+        "note": "",
+        "timingFingerprint": "7d3768d4c346fe8f263fa7cdc4743e50c0500713454fa5e29f436bf8a4ed7a09"
+      },
+      "flags": [
+        "low-model-score",
+        "harmony-parenthesis-listen"
+      ],
+      "fallbackReason": "Whisper missing/zero-duration words; same-audio CTC fallback after excluding unsung parentheses punctuation from CTC groups.",
+      "start": 109.092,
+      "end": 114.793,
+      "edited": true
+    },
+    {
+      "index": 24,
+      "lineId": "ItsAlright:24:115.75",
+      "text": "この世は私の思わく通りに",
+      "textSha256": "f9c14edffc8cf1e1a384868be162a965abba7232f684ac32b57452e4ce2c6030",
+      "sourceStart": 115.75,
+      "sourceEnd": 122.35,
+      "windowStart": 115.75,
+      "windowEnd": 122.35,
+      "language": "ja",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "こ",
+          "reading": "こ"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "世",
+          "reading": "よ"
+        },
+        {
+          "text": "は",
+          "reading": "は"
+        },
+        {
+          "text": "私",
+          "reading": "わたし"
+        },
+        {
+          "text": "の",
+          "reading": "の"
+        },
+        {
+          "text": "思",
+          "reading": "おも"
+        },
+        {
+          "text": "わ",
+          "reading": "わ"
+        },
+        {
+          "text": "く",
+          "reading": "く"
+        },
+        {
+          "text": "通",
+          "reading": "どお"
+        },
+        {
+          "text": "り",
+          "reading": "り"
+        },
+        {
+          "text": "に",
+          "reading": "に"
+        }
+      ],
+      "words": [
+        {
+          "text": "この",
+          "start": 115.75,
+          "end": 116.21,
+          "score": 0.0009
+        },
+        {
+          "text": "世",
+          "start": 116.21,
+          "end": 116.59,
+          "score": 0.8972
+        },
+        {
+          "text": "は",
+          "start": 116.59,
+          "end": 117.09,
+          "score": 0.9801
+        },
+        {
+          "text": "私",
+          "start": 117.09,
+          "end": 118.29,
+          "score": 0.7082
+        },
+        {
+          "text": "の",
+          "start": 118.28,
+          "end": 118.83,
+          "score": 0.9845
+        },
+        {
+          "text": "思",
+          "start": 118.83,
+          "end": 119.69,
+          "score": 0.7974
+        },
+        {
+          "text": "わ",
+          "start": 119.64,
+          "end": 119.99,
+          "score": 0.356
+        },
+        {
+          "text": "く",
+          "start": 119.99,
+          "end": 120.45,
+          "score": 0.455
+        },
+        {
+          "text": "通",
+          "start": 120.45,
+          "end": 121.29,
+          "score": 0.4477
+        },
+        {
+          "text": "り",
+          "start": 121.29,
+          "end": 121.73,
+          "score": 0.9977
+        },
+        {
+          "text": "に",
+          "start": 121.73,
+          "end": 122.07,
+          "score": 0.9933
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:15:13.181Z",
+        "note": "",
+        "timingFingerprint": "ea924b42d33b3370aa7f6ca07ace9fc5f4684ac37374267a3eae05a38dd81ce9"
+      },
+      "start": 115.75,
+      "end": 122.07,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 25,
+      "lineId": "ItsAlright:25:122.35",
+      "text": "今日とて可愛く回っています（回っています）",
+      "textSha256": "19faba2f27b2bea7dc245b6253c58e1b4c930d4d15ea22cfe0be63bbdecc740d",
+      "sourceStart": 122.35,
+      "sourceEnd": 128.94,
+      "windowStart": 122.35,
+      "windowEnd": 128.94,
+      "language": "ja",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "今日",
+          "reading": "きょう"
+        },
+        {
+          "text": "と",
+          "reading": "と"
+        },
+        {
+          "text": "て",
+          "reading": "て"
+        },
+        {
+          "text": "可愛",
+          "reading": "かわい"
+        },
+        {
+          "text": "く",
+          "reading": "く"
+        },
+        {
+          "text": "回",
+          "reading": "まわ"
+        },
+        {
+          "text": "っ",
+          "reading": "っ"
+        },
+        {
+          "text": "て",
+          "reading": "て"
+        },
+        {
+          "text": "い",
+          "reading": "い"
+        },
+        {
+          "text": "ま",
+          "reading": "ま"
+        },
+        {
+          "text": "す",
+          "reading": "す"
+        },
+        {
+          "text": "回",
+          "reading": "まわ"
+        },
+        {
+          "text": "っ",
+          "reading": "っ"
+        },
+        {
+          "text": "て",
+          "reading": "て"
+        },
+        {
+          "text": "い",
+          "reading": "い"
+        },
+        {
+          "text": "ま",
+          "reading": "ま"
+        },
+        {
+          "text": "す",
+          "reading": "す"
+        }
+      ],
+      "words": [
+        {
+          "text": "今",
+          "start": 122.432,
+          "end": 122.452,
+          "score": 0.0568
+        },
+        {
+          "text": "日",
+          "start": 122.512,
+          "end": 122.532,
+          "score": 0.0002
+        },
+        {
+          "text": "と",
+          "start": 123.132,
+          "end": 123.152,
+          "score": 0.0017
+        },
+        {
+          "text": "て",
+          "start": 123.292,
+          "end": 123.312,
+          "score": 0.0069
+        },
+        {
+          "text": "可",
+          "start": 123.712,
+          "end": 123.732,
+          "score": 0.0001
+        },
+        {
+          "text": "愛",
+          "start": 124.592,
+          "end": 124.612,
+          "score": 0
+        },
+        {
+          "text": "く",
+          "start": 125.09,
+          "end": 125.232,
+          "score": 0.0001
+        },
+        {
+          "text": "回",
+          "start": 125.412,
+          "end": 125.432,
+          "score": 0.0001
+        },
+        {
+          "text": "っ",
+          "start": 125.972,
+          "end": 125.992,
+          "score": 0.0626
+        },
+        {
+          "text": "て",
+          "start": 126.012,
+          "end": 126.032,
+          "score": 0.0058
+        },
+        {
+          "text": "い",
+          "start": 126.232,
+          "end": 126.252,
+          "score": 0.0011
+        },
+        {
+          "text": "ま",
+          "start": 126.372,
+          "end": 126.392,
+          "score": 0
+        },
+        {
+          "text": "す",
+          "start": 126.512,
+          "end": 126.532,
+          "score": 0
+        },
+        {
+          "text": "回",
+          "start": 126.672,
+          "end": 126.692,
+          "score": 0.0006
+        },
+        {
+          "text": "っ",
+          "start": 126.772,
+          "end": 126.792,
+          "score": 0.011
+        },
+        {
+          "text": "て",
+          "start": 126.992,
+          "end": 127.012,
+          "score": 0.0001
+        },
+        {
+          "text": "い",
+          "start": 127.112,
+          "end": 127.133,
+          "score": 0.0024
+        },
+        {
+          "text": "ま",
+          "start": 127.292,
+          "end": 127.312,
+          "score": 0.0467
+        },
+        {
+          "text": "す",
+          "start": 127.472,
+          "end": 127.492,
+          "score": 0.0001
+        }
+      ],
+      "alignmentModel": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:16:12.601Z",
+        "note": "",
+        "timingFingerprint": "30bd36fd31a875158d248bc4c7531a102532f1695bdf00f99a2da3d801914d32"
+      },
+      "flags": [
+        "low-model-score",
+        "harmony-parenthesis-listen"
+      ],
+      "fallbackReason": "Whisper missing/zero-duration words; same-audio CTC fallback after excluding unsung parentheses punctuation from CTC groups.",
+      "start": 122.432,
+      "end": 127.492,
+      "edited": true
+    },
+    {
+      "index": 26,
+      "lineId": "ItsAlright:26:128.94",
+      "text": "Come, cry your heart, cry your heart out",
+      "textSha256": "4c6002821693d9de529ebc00deeb2b923387f1d2d1d0b9d1b6fe4878dd68496d",
+      "sourceStart": 128.94,
+      "sourceEnd": 132.38,
+      "windowStart": 128.94,
+      "windowEnd": 132.38,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Come",
+          "reading": "Come"
+        },
+        {
+          "text": "cry",
+          "reading": "cry"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "cry",
+          "reading": "cry"
+        },
+        {
+          "text": "your",
+          "reading": "your"
+        },
+        {
+          "text": "heart",
+          "reading": "heart"
+        },
+        {
+          "text": "out",
+          "reading": "out"
+        }
+      ],
+      "words": [
+        {
+          "text": "Come,",
+          "start": 128.94,
+          "end": 128.96,
+          "score": 0.3504
+        },
+        {
+          "text": "cry",
+          "start": 130.06,
+          "end": 130.38,
+          "score": 0.0435
+        },
+        {
+          "text": "your",
+          "start": 130.38,
+          "end": 130.64,
+          "score": 0.0144
+        },
+        {
+          "text": "heart,",
+          "start": 130.64,
+          "end": 130.94,
+          "score": 0.5955
+        },
+        {
+          "text": "cry",
+          "start": 130.94,
+          "end": 131.22,
+          "score": 0.963
+        },
+        {
+          "text": "your",
+          "start": 131.22,
+          "end": 131.44,
+          "score": 0.8418
+        },
+        {
+          "text": "heart",
+          "start": 131.44,
+          "end": 131.82,
+          "score": 0.939
+        },
+        {
+          "text": "out",
+          "start": 131.82,
+          "end": 132.2,
+          "score": 0.9174
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 128.94,
+      "end": 132.2,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 27,
+      "lineId": "ItsAlright:27:132.38",
+      "text": "Here in my arms, in my arms like",
+      "textSha256": "bceef2795ac4d5d7688cfc3b4bfc84a4af6965a2dc1235b57af74bcdefcd0635",
+      "sourceStart": 132.38,
+      "sourceEnd": 135.75,
+      "windowStart": 132.38,
+      "windowEnd": 135.75,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Here",
+          "reading": "Here"
+        },
+        {
+          "text": "in",
+          "reading": "in"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "arms",
+          "reading": "arms"
+        },
+        {
+          "text": "in",
+          "reading": "in"
+        },
+        {
+          "text": "my",
+          "reading": "my"
+        },
+        {
+          "text": "arms",
+          "reading": "arms"
+        },
+        {
+          "text": "like",
+          "reading": "like"
+        }
+      ],
+      "words": [
+        {
+          "text": "Here",
+          "start": 132.44,
+          "end": 133.42,
+          "score": 0.4774
+        },
+        {
+          "text": "in",
+          "start": 133.42,
+          "end": 133.74,
+          "score": 0.1155
+        },
+        {
+          "text": "my",
+          "start": 133.74,
+          "end": 134.02,
+          "score": 0.2764
+        },
+        {
+          "text": "arms,",
+          "start": 134.02,
+          "end": 134.4,
+          "score": 0.6368
+        },
+        {
+          "text": "in",
+          "start": 134.4,
+          "end": 134.58,
+          "score": 0.4031
+        },
+        {
+          "text": "my",
+          "start": 134.58,
+          "end": 134.84,
+          "score": 0.9927
+        },
+        {
+          "text": "arms",
+          "start": 134.84,
+          "end": 135.06,
+          "score": 0.9178
+        },
+        {
+          "text": "like",
+          "start": 135.06,
+          "end": 135.48,
+          "score": 0.5823
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending",
+        "note": ""
+      },
+      "start": 132.44,
+      "end": 135.48,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 28,
+      "lineId": "ItsAlright:28:135.75",
+      "text": "Ah, ah, ah, ah",
+      "textSha256": "a23baeb1fed145855baa23c407e4d4f1bf23d041a91e2c6cac93fcb0adfba756",
+      "sourceStart": 135.75,
+      "sourceEnd": 139.09,
+      "windowStart": 135.75,
+      "windowEnd": 139.09,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Ah",
+          "reading": "Ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ah,",
+          "start": 135.75,
+          "end": 136.71,
+          "score": 0.2806
+        },
+        {
+          "text": "ah,",
+          "start": 136.71,
+          "end": 137.61,
+          "score": 0.9104
+        },
+        {
+          "text": "ah,",
+          "start": 137.61,
+          "end": 138.47,
+          "score": 0.9678
+        },
+        {
+          "text": "ah",
+          "start": 138.47,
+          "end": 138.73,
+          "score": 0.9876
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 135.75,
+      "end": 138.73,
+      "flags": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "lineId": "ItsAlright:29:139.09",
+      "text": "Ah, ah, ah, ah",
+      "textSha256": "a23baeb1fed145855baa23c407e4d4f1bf23d041a91e2c6cac93fcb0adfba756",
+      "sourceStart": 139.09,
+      "sourceEnd": 142.32,
+      "windowStart": 139.09,
+      "windowEnd": 142.32,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Ah",
+          "reading": "Ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        },
+        {
+          "text": "ah",
+          "reading": "ah"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ah,",
+          "start": 139.09,
+          "end": 140.01,
+          "score": 0.2478
+        },
+        {
+          "text": "ah,",
+          "start": 140.01,
+          "end": 140.74,
+          "score": 0.9295
+        },
+        {
+          "text": "ah,",
+          "start": 140.74,
+          "end": 141.46,
+          "score": 0.9633
+        },
+        {
+          "text": "ah",
+          "start": 141.46,
+          "end": 142.01,
+          "score": 0.9193
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "passed",
+        "reviewer": "CHI",
+        "reviewedAt": "2026-11-18T16:17:59.866Z",
+        "note": "",
+        "timingFingerprint": "ac4d88bb83c97589ee6cb198896bc0992a0630ea7e22cfbd4c8431d99997be79"
+      },
+      "start": 139.09,
+      "end": 142.01,
+      "flags": [
+        "repeated-occurrence-listen",
+        "sustained-vowel-listen"
+      ],
+      "edited": true
+    },
+    {
+      "index": 30,
+      "lineId": "ItsAlright:30:142.32",
+      "text": "God is inside, is inside us",
+      "textSha256": "5a604b1f3ae1232c6a5358ab0d9a63776e393249c1721ebb3f0f7370153a4f44",
+      "sourceStart": 142.32,
+      "sourceEnd": 145.65,
+      "windowStart": 142.32,
+      "windowEnd": 145.65,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "God",
+          "reading": "God"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "inside",
+          "reading": "inside"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "inside",
+          "reading": "inside"
+        },
+        {
+          "text": "us",
+          "reading": "us"
+        }
+      ],
+      "words": [
+        {
+          "text": "God",
+          "start": 142.32,
+          "end": 143.4,
+          "score": 0.5364
+        },
+        {
+          "text": "is",
+          "start": 143.4,
+          "end": 143.68,
+          "score": 0.9295
+        },
+        {
+          "text": "inside,",
+          "start": 143.68,
+          "end": 144.4,
+          "score": 0.5824
+        },
+        {
+          "text": "is",
+          "start": 144.4,
+          "end": 144.48,
+          "score": 0.9215
+        },
+        {
+          "text": "inside",
+          "start": 144.48,
+          "end": 145.02,
+          "score": 0.9968
+        },
+        {
+          "text": "us",
+          "start": 145.02,
+          "end": 145.62,
+          "score": 0.9121
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 142.32,
+      "end": 145.62,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "lineId": "ItsAlright:31:145.65",
+      "text": "This is our time, is our time, thus",
+      "textSha256": "c0b97e630f8bc819a3a0d2dd4e2d787690c243b2a13d0f3b909d1fac928ca04b",
+      "sourceStart": 145.65,
+      "sourceEnd": 149.08,
+      "windowStart": 145.65,
+      "windowEnd": 149.08,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "This",
+          "reading": "This"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "our",
+          "reading": "our"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "our",
+          "reading": "our"
+        },
+        {
+          "text": "time",
+          "reading": "time"
+        },
+        {
+          "text": "thus",
+          "reading": "thus"
+        }
+      ],
+      "words": [
+        {
+          "text": "This",
+          "start": 145.65,
+          "end": 146.57,
+          "score": 0.1018
+        },
+        {
+          "text": "is",
+          "start": 146.57,
+          "end": 146.91,
+          "score": 0.9144
+        },
+        {
+          "text": "our",
+          "start": 146.91,
+          "end": 147.19,
+          "score": 0.0918
+        },
+        {
+          "text": "time,",
+          "start": 147.19,
+          "end": 147.65,
+          "score": 0.7998
+        },
+        {
+          "text": "is",
+          "start": 147.65,
+          "end": 147.79,
+          "score": 0.3143
+        },
+        {
+          "text": "our",
+          "start": 147.79,
+          "end": 148.07,
+          "score": 0.8644
+        },
+        {
+          "text": "time,",
+          "start": 148.07,
+          "end": 148.51,
+          "score": 0.4932
+        },
+        {
+          "text": "thus",
+          "start": 148.51,
+          "end": 148.87,
+          "score": 0.0226
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 145.65,
+      "end": 148.87,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 32,
+      "lineId": "ItsAlright:32:149.08",
+      "text": "Sooner or later, we better know that",
+      "textSha256": "8cb5092c552c3ef13bce9beaaf7bed20dddcbc90d7e5b6fdcf54c8bbcc935730",
+      "sourceStart": 149.08,
+      "sourceEnd": 152.45,
+      "windowStart": 149.08,
+      "windowEnd": 152.45,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "Sooner",
+          "reading": "Sooner"
+        },
+        {
+          "text": "or",
+          "reading": "or"
+        },
+        {
+          "text": "later",
+          "reading": "later"
+        },
+        {
+          "text": "we",
+          "reading": "we"
+        },
+        {
+          "text": "better",
+          "reading": "better"
+        },
+        {
+          "text": "know",
+          "reading": "know"
+        },
+        {
+          "text": "that",
+          "reading": "that"
+        }
+      ],
+      "words": [
+        {
+          "text": "Sooner",
+          "start": 149.08,
+          "end": 150.02,
+          "score": 0.496
+        },
+        {
+          "text": "or",
+          "start": 150.02,
+          "end": 150.26,
+          "score": 0.3428
+        },
+        {
+          "text": "later,",
+          "start": 150.26,
+          "end": 151.04,
+          "score": 0.8149
+        },
+        {
+          "text": "we",
+          "start": 151.04,
+          "end": 151.16,
+          "score": 0.0035
+        },
+        {
+          "text": "better",
+          "start": 151.16,
+          "end": 151.66,
+          "score": 0.1427
+        },
+        {
+          "text": "know",
+          "start": 151.66,
+          "end": 152.04,
+          "score": 0.9356
+        },
+        {
+          "text": "that",
+          "start": 152.04,
+          "end": 152.3,
+          "score": 0.9489
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 149.08,
+      "end": 152.3,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 33,
+      "lineId": "ItsAlright:33:152.45",
+      "text": "Everything is gonna be alright",
+      "textSha256": "bfed944dae95694aa7a78ce83b4093fbdaf7797fe09e91246d39a9ce3725bc28",
+      "sourceStart": 152.45,
+      "sourceEnd": 156.13,
+      "windowStart": 152.45,
+      "windowEnd": 156.13,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Everything",
+          "reading": "Everything"
+        },
+        {
+          "text": "is",
+          "reading": "is"
+        },
+        {
+          "text": "gonna",
+          "reading": "gonna"
+        },
+        {
+          "text": "be",
+          "reading": "be"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "Everything",
+          "start": 152.45,
+          "end": 153.41,
+          "score": 0.5577
+        },
+        {
+          "text": "is",
+          "start": 153.41,
+          "end": 154.23,
+          "score": 0.973
+        },
+        {
+          "text": "gonna",
+          "start": 154.23,
+          "end": 154.55,
+          "score": 0.893
+        },
+        {
+          "text": "be",
+          "start": 154.55,
+          "end": 155.17,
+          "score": 0.9419
+        },
+        {
+          "text": "alright",
+          "start": 155.17,
+          "end": 155.69,
+          "score": 0.8572
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 152.45,
+      "end": 155.69,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 34,
+      "lineId": "ItsAlright:34:156.13",
+      "text": "It's alright, it's alright",
+      "textSha256": "be13fb93d9bbf0c9d4cb73a4202fb4ddd327b2ec3c27bb55ede05467d0697f49",
+      "sourceStart": 156.13,
+      "sourceEnd": 159.44,
+      "windowStart": 156.13,
+      "windowEnd": 159.44,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "it's",
+          "reading": "it's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 156.19,
+          "end": 157.01,
+          "score": 0.8467
+        },
+        {
+          "text": "alright,",
+          "start": 157.01,
+          "end": 158.09,
+          "score": 0.6888
+        },
+        {
+          "text": "it's",
+          "start": 158.17,
+          "end": 158.65,
+          "score": 0.929
+        },
+        {
+          "text": "alright",
+          "start": 158.65,
+          "end": 159.07,
+          "score": 0.9978
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 156.19,
+      "end": 159.07,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 35,
+      "lineId": "ItsAlright:35:159.44",
+      "text": "It's alright",
+      "textSha256": "702e385157d62777792cf1e66b47dac6f7cdca3d213c7e503dc056b0ffe48443",
+      "sourceStart": 159.44,
+      "sourceEnd": 167.88,
+      "windowStart": 159.44,
+      "windowEnd": 167.88,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 159.54,
+          "end": 160.44,
+          "score": 0.8065
+        },
+        {
+          "text": "alright",
+          "start": 160.44,
+          "end": 163.02,
+          "score": 0.635
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 159.54,
+      "end": 163.02,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "lineId": "ItsAlright:36:167.88",
+      "text": "It's alright, it's alright",
+      "textSha256": "be13fb93d9bbf0c9d4cb73a4202fb4ddd327b2ec3c27bb55ede05467d0697f49",
+      "sourceStart": 167.88,
+      "sourceEnd": 171.15,
+      "windowStart": 167.88,
+      "windowEnd": 171.15,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "it's",
+          "reading": "it's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 167.88,
+          "end": 168.56,
+          "score": 0.7611
+        },
+        {
+          "text": "alright,",
+          "start": 168.56,
+          "end": 169.78,
+          "score": 0.5993
+        },
+        {
+          "text": "it's",
+          "start": 169.78,
+          "end": 170.24,
+          "score": 0.9167
+        },
+        {
+          "text": "alright",
+          "start": 170.24,
+          "end": 170.72,
+          "score": 0.9957
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 167.88,
+      "end": 170.72,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 37,
+      "lineId": "ItsAlright:37:171.15",
+      "text": "It's alright, it's alright, right",
+      "textSha256": "3a58d76dc497c1e59d04074f4bcb495e5dbbc4c12c1efb1a2c7fa8c7b8e849b4",
+      "sourceStart": 171.15,
+      "sourceEnd": 181.15,
+      "windowStart": 171.15,
+      "windowEnd": 181.15,
+      "language": "en",
+      "repeated": false,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "it's",
+          "reading": "it's"
+        },
+        {
+          "text": "alright",
+          "reading": "alright"
+        },
+        {
+          "text": "right",
+          "reading": "right"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 171.15,
+          "end": 172.03,
+          "score": 0.7914
+        },
+        {
+          "text": "alright,",
+          "start": 172.03,
+          "end": 173.13,
+          "score": 0.663
+        },
+        {
+          "text": "it's",
+          "start": 173.13,
+          "end": 173.73,
+          "score": 0.9359
+        },
+        {
+          "text": "alright,",
+          "start": 173.73,
+          "end": 174.65,
+          "score": 0.4855
+        },
+        {
+          "text": "right",
+          "start": 174.65,
+          "end": 176.37,
+          "score": 0.0054
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 171.15,
+      "end": 176.37,
+      "flags": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 38,
+      "lineId": "ItsAlright:38:181.15",
+      "text": "It's al-",
+      "textSha256": "51fc66fc8dac66d59006dd305caa7cb4a14c7de2396bb36972504545af907326",
+      "sourceStart": 181.15,
+      "sourceEnd": 182.37,
+      "windowStart": 181.15,
+      "windowEnd": 182.37,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "It's",
+          "reading": "It's"
+        },
+        {
+          "text": "al",
+          "reading": "al"
+        }
+      ],
+      "words": [
+        {
+          "text": "It's",
+          "start": 181.15,
+          "end": 181.95,
+          "score": 0.5325
+        },
+        {
+          "text": "al-",
+          "start": 181.95,
+          "end": 182.33,
+          "score": 0.0626
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 181.15,
+      "end": 182.33,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 39,
+      "lineId": "ItsAlright:39:182.37",
+      "text": "Ay, ay, ay, ay",
+      "textSha256": "7e833b4ef8850708e6b48d2d3988a16ce5608efde2479718548bd14d31971311",
+      "sourceStart": 182.37,
+      "sourceEnd": 185.62,
+      "windowStart": 182.37,
+      "windowEnd": 185.62,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Ay",
+          "reading": "Ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        },
+        {
+          "text": "ay",
+          "reading": "ay"
+        }
+      ],
+      "words": [
+        {
+          "text": "Ay,",
+          "start": 182.37,
+          "end": 183.45,
+          "score": 0.1606
+        },
+        {
+          "text": "ay,",
+          "start": 183.45,
+          "end": 184.27,
+          "score": 0.8971
+        },
+        {
+          "text": "ay,",
+          "start": 184.27,
+          "end": 184.93,
+          "score": 0.9386
+        },
+        {
+          "text": "ay",
+          "start": 184.93,
+          "end": 185.37,
+          "score": 0.9965
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 182.37,
+      "end": 185.37,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "lineId": "ItsAlright:40:185.62",
+      "text": "Give it up, give it up, give it up, give it up",
+      "textSha256": "779f6305868a032a436d62f3d57ca1911e6d7e4ffcbd6dff98e1e3cff11055eb",
+      "sourceStart": 185.62,
+      "sourceEnd": 189.01,
+      "windowStart": 185.62,
+      "windowEnd": 189.01,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Give",
+          "reading": "Give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "give",
+          "reading": "give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "give",
+          "reading": "give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        },
+        {
+          "text": "give",
+          "reading": "give"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "up",
+          "reading": "up"
+        }
+      ],
+      "words": [
+        {
+          "text": "Give",
+          "start": 185.74,
+          "end": 186.04,
+          "score": 0.0039
+        },
+        {
+          "text": "it",
+          "start": 186.04,
+          "end": 186.16,
+          "score": 0.8204
+        },
+        {
+          "text": "up,",
+          "start": 186.16,
+          "end": 186.78,
+          "score": 0.7297
+        },
+        {
+          "text": "give",
+          "start": 186.78,
+          "end": 186.84,
+          "score": 0.9225
+        },
+        {
+          "text": "it",
+          "start": 186.84,
+          "end": 186.96,
+          "score": 0.999
+        },
+        {
+          "text": "up,",
+          "start": 186.96,
+          "end": 187.62,
+          "score": 0.9191
+        },
+        {
+          "text": "give",
+          "start": 187.62,
+          "end": 187.72,
+          "score": 0.9589
+        },
+        {
+          "text": "it",
+          "start": 187.72,
+          "end": 187.82,
+          "score": 0.9991
+        },
+        {
+          "text": "up,",
+          "start": 187.82,
+          "end": 188.46,
+          "score": 0.975
+        },
+        {
+          "text": "give",
+          "start": 188.46,
+          "end": 188.54,
+          "score": 0.9864
+        },
+        {
+          "text": "it",
+          "start": 188.54,
+          "end": 188.7,
+          "score": 0.9981
+        },
+        {
+          "text": "up",
+          "start": 188.7,
+          "end": 188.76,
+          "score": 0.9781
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 185.74,
+      "end": 188.76,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "lineId": "ItsAlright:41:189.01",
+      "text": "Kama, kama, kama, kama, kama",
+      "textSha256": "28cf67f513ec575472032b10aa5c430ec382e4f922acbfbcbbb47d562573dd26",
+      "sourceStart": 189.01,
+      "sourceEnd": 192.51,
+      "windowStart": 189.01,
+      "windowEnd": 192.51,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Kama",
+          "reading": "Kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        },
+        {
+          "text": "kama",
+          "reading": "kama"
+        }
+      ],
+      "words": [
+        {
+          "text": "Kama,",
+          "start": 189.01,
+          "end": 189.99,
+          "score": 0.1309
+        },
+        {
+          "text": "kama,",
+          "start": 189.99,
+          "end": 190.95,
+          "score": 0.64
+        },
+        {
+          "text": "kama,",
+          "start": 190.95,
+          "end": 191.37,
+          "score": 0.7539
+        },
+        {
+          "text": "kama,",
+          "start": 191.37,
+          "end": 191.57,
+          "score": 0.8887
+        },
+        {
+          "text": "kama",
+          "start": 191.57,
+          "end": 191.77,
+          "score": 0.9653
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 189.01,
+      "end": 191.77,
+      "flags": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 42,
+      "lineId": "ItsAlright:42:192.51",
+      "text": "Bring it on, bring it on, Prema, Prema, Prema",
+      "textSha256": "92c0b5b369d22db77f20d1fd9cb7f70b4ed1f7565d457e0a708033c569431023",
+      "sourceStart": 192.51,
+      "sourceEnd": 196.04,
+      "windowStart": 192.51,
+      "windowEnd": 196.04,
+      "language": "en",
+      "repeated": true,
+      "ctcUnits": [
+        {
+          "text": "Bring",
+          "reading": "Bring"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "on",
+          "reading": "on"
+        },
+        {
+          "text": "bring",
+          "reading": "bring"
+        },
+        {
+          "text": "it",
+          "reading": "it"
+        },
+        {
+          "text": "on",
+          "reading": "on"
+        },
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        },
+        {
+          "text": "Prema",
+          "reading": "Prema"
+        }
+      ],
+      "words": [
+        {
+          "text": "Bring",
+          "start": 192.51,
+          "end": 192.69,
+          "score": 0.0001
+        },
+        {
+          "text": "it",
+          "start": 192.69,
+          "end": 192.79,
+          "score": 0.8203
+        },
+        {
+          "text": "on,",
+          "start": 192.79,
+          "end": 193.27,
+          "score": 0.6144
+        },
+        {
+          "text": "bring",
+          "start": 193.31,
+          "end": 193.51,
+          "score": 0.8831
+        },
+        {
+          "text": "it",
+          "start": 193.51,
+          "end": 193.65,
+          "score": 0.9967
+        },
+        {
+          "text": "on,",
+          "start": 193.65,
+          "end": 194.29,
+          "score": 0.6153
+        },
+        {
+          "text": "Prema,",
+          "start": 194.29,
+          "end": 194.61,
+          "score": 0.0326
+        },
+        {
+          "text": "Prema,",
+          "start": 194.61,
+          "end": 194.95,
+          "score": 0.7224
+        },
+        {
+          "text": "Prema",
+          "start": 194.95,
+          "end": 195.21,
+          "score": 0.931
+        }
+      ],
+      "alignmentModel": "openai/whisper-medium",
+      "review": {
+        "status": "pending"
+      },
+      "start": 192.51,
+      "end": 195.21,
+      "flags": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    }
+  ]
+}

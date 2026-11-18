@@ -1,0 +1,240 @@
+{
+  "format": "karaoke-candidate-validation-v1",
+  "checkedAt": "2026-11-18T16:29:25.338Z",
+  "songs": [
+    {
+      "songId": "CasketGirl",
+      "expectedLines": 55,
+      "generatedLines": 55,
+      "units": 364,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "INeedUBack",
+      "expectedLines": 41,
+      "generatedLines": 41,
+      "units": 319,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Hachiko",
+      "expectedLines": 50,
+      "generatedLines": 50,
+      "units": 294,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "LoveLikeThis",
+      "expectedLines": 59,
+      "generatedLines": 59,
+      "units": 297,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Prema",
+      "expectedLines": 43,
+      "generatedLines": 43,
+      "units": 270,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "ItAintOver",
+      "expectedLines": 38,
+      "generatedLines": 38,
+      "units": 173,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "You",
+      "expectedLines": 63,
+      "generatedLines": 63,
+      "units": 380,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "OkayGoodbye",
+      "expectedLines": 66,
+      "generatedLines": 66,
+      "units": 376,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "ForeverYoung",
+      "expectedLines": 51,
+      "generatedLines": 51,
+      "units": 337,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Matsuri",
+      "expectedLines": 56,
+      "generatedLines": 56,
+      "units": 462,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "WorkinHard",
+      "expectedLines": 64,
+      "generatedLines": 64,
+      "units": 513,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "NanNan",
+      "expectedLines": 48,
+      "generatedLines": 48,
+      "units": 504,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Kirari",
+      "expectedLines": 45,
+      "state": "pending"
+    },
+    {
+      "songId": "Hana",
+      "expectedLines": 42,
+      "state": "pending"
+    },
+    {
+      "songId": "Garden",
+      "expectedLines": 48,
+      "generatedLines": 48,
+      "units": 359,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Damn",
+      "expectedLines": 43,
+      "state": "pending"
+    },
+    {
+      "songId": "ShinunogaEWa",
+      "expectedLines": 44,
+      "state": "pending"
+    },
+    {
+      "songId": "Tabiji",
+      "expectedLines": 46,
+      "state": "pending"
+    },
+    {
+      "songId": "MichiTeyuKu",
+      "expectedLines": 34,
+      "generatedLines": 34,
+      "units": 328,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "ItsAlright",
+      "expectedLines": 43,
+      "generatedLines": 43,
+      "units": 295,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Masshiro",
+      "expectedLines": 34,
+      "state": "pending"
+    },
+    {
+      "songId": "MoEhWa",
+      "expectedLines": 51,
+      "state": "pending"
+    },
+    {
+      "songId": "Kaerou",
+      "expectedLines": 47,
+      "state": "pending"
+    },
+    {
+      "songId": "HedemoNeYoLasa",
+      "expectedLines": 53,
+      "generatedLines": 53,
+      "units": 551,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "Yaba",
+      "expectedLines": 43,
+      "generatedLines": 43,
+      "units": 325,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "MoEhYo",
+      "expectedLines": 43,
+      "generatedLines": 43,
+      "units": 317,
+      "state": "generated-unreviewed",
+      "structuralIssues": [
+        {
+          "index": 26,
+          "reasons": [
+            "no-word-timing",
+            "incomplete-text"
+          ]
+        },
+        {
+          "index": 27,
+          "reasons": [
+            "no-word-timing",
+            "incomplete-text"
+          ]
+        },
+        {
+          "index": 28,
+          "reasons": [
+            "no-word-timing",
+            "incomplete-text"
+          ]
+        }
+      ]
+    },
+    {
+      "songId": "LonelyRhapsody",
+      "expectedLines": 41,
+      "generatedLines": 41,
+      "units": 324,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "ByeForNow",
+      "expectedLines": 24,
+      "generatedLines": 24,
+      "units": 153,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    },
+    {
+      "songId": "SeishunSick",
+      "expectedLines": 49,
+      "generatedLines": 49,
+      "units": 494,
+      "state": "generated-unreviewed",
+      "structuralIssues": []
+    }
+  ],
+  "errors": [],
+  "generatedSongs": 21,
+  "generatedLines": 1012,
+  "unresolvedLines": 3
+}

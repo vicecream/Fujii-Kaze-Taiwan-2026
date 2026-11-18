@@ -1,0 +1,448 @@
+{
+  "format": "karaoke-candidate-record-v1",
+  "songId": "HedemoNeYoLasa",
+  "youtubeId": "MsGDkuzrKCU",
+  "sourceFingerprint": "c91c09eaf3adf1c16195e5618c461ec9b1054b21d16dfa7beafc0a6c35c32e0e",
+  "lrcSha256": "f1833a92ebecdd4662b8971dd269595e5b183ad3bcbbd012f377fc782a3fdcd2",
+  "audioSha256": "9ec2f2042a273bf0b358b645a6db7670d75f458da6eabcb142dbba4ada578a78",
+  "alignmentAudioSha256": "c4aae8755fda8ebf3f66ce6edab4568004c9710056ad740c2406b03aa42f9e85",
+  "candidateSha256": "58f02365bf0f5391684c69a8343a25bf6208e3b3a347b7e730b8032d5d3c2572",
+  "lineCount": 53,
+  "unitCount": 551,
+  "status": "awaiting-source-and-line-listening",
+  "listenedLines": 0,
+  "models": {
+    "whisper": {
+      "id": "openai/whisper-medium",
+      "sha256": "345ae4da62f9b3d59415adc60127b97c714f32e89e936602e85993674d08dcb1"
+    },
+    "ja": {
+      "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
+      "revision": "cf031e020336460d15a417eba710bbc5bb43be9a"
+    }
+  },
+  "versions": {
+    "torch": "2.15.0",
+    "transformers": "4.57.6",
+    "stable-ts": "2.19.1",
+    "demucs": "4.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "processing": {
+    "startedAt": "2026-11-17T15:53:55.712969+00:00",
+    "scriptSha256": "3c479121a9b0ee25ebdc75fbab427b18810d7458adc10c69644edba92d12a2d2",
+    "fromLine": 0,
+    "toLine": null,
+    "whisperMode": "known-text windows grouped by language; individual retry on group failure",
+    "completedAt": "2026-11-17T15:57:24.089712+00:00",
+    "elapsedSeconds": 208.38
+  },
+  "anomalies": [
+    {
+      "index": 0,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 1,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 2,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 3,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 4,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 5,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 6,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 7,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 8,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 9,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 11,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 12,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 13,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 14,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 15,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 16,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 17,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 18,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 19,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 20,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 21,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 22,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 23,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 24,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 25,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 26,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 27,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 28,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 29,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 30,
+      "reasons": [
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 31,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 34,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 35,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 36,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 37,
+      "reasons": [
+        "low-model-score"
+      ]
+    },
+    {
+      "index": 38,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 39,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 40,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 41,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 42,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 43,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 44,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 45,
+      "reasons": [
+        "low-model-score",
+        "repeated-occurrence-listen"
+      ]
+    },
+    {
+      "index": 46,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen"
+      ]
+    },
+    {
+      "index": 47,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen"
+      ]
+    },
+    {
+      "index": 48,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen"
+      ]
+    },
+    {
+      "index": 49,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen"
+      ]
+    },
+    {
+      "index": 50,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen"
+      ]
+    },
+    {
+      "index": 51,
+      "reasons": [
+        "low-model-score",
+        "normalized-vowel-listen"
+      ]
+    },
+    {
+      "index": 52,
+      "reasons": [
+        "low-model-score"
+      ]
+    }
+  ],
+  "structuralIssues": [],
+  "repairs": [
+    {
+      "indices": [
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        38,
+        39,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "method": "CTC small-vowel vocabulary normalization; original text preserved",
+      "processing": {
+        "startedAt": "2026-11-17T16:29:56.476627+00:00",
+        "scriptSha256": "9bb9df4986b2b49cdf528dbbb06c5522d3c3e3a128e03f22ac17cc43905981d7",
+        "fromLine": 15,
+        "toLine": 52,
+        "completedAt": "2026-11-17T16:30:28.684614+00:00",
+        "elapsedSeconds": 32.21
+      }
+    },
+    {
+      "indices": [
+        15,
+        16,
+        17,
+        19,
+        20,
+        21,
+        38,
+        39,
+        42,
+        43,
+        44,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ],
+      "method": "CTC small-vowel target normalization and sample-grid clock; original text preserved; listening pending.",
+      "processing": {
+        "startedAt": "2026-11-17T16:36:54.203615+00:00",
+        "scriptSha256": "8af0717771169d9f02e6b048033789e042548b77594e5724108cc8d0b20d15df",
+        "fromLine": 15,
+        "toLine": 52,
+        "completedAt": "2026-11-17T16:37:27.689951+00:00",
+        "elapsedSeconds": 33.49
+      }
+    }
+  ]
+}
